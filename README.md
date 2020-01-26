@@ -52,7 +52,7 @@ Apply gravity to the base block of every column and pull the higher blocks down 
 ## `maxslope <int>`
 
 Computes the base of the schematic (ignores overhangs) and tries to apply on the base (say the roots of a tree) If the base requires shifting higher than the slope value, placement fails. **This does not affect how the object looks, it's just a fail condition**
-> Moderate Performance Impact
+> **High** Performance Impact
 
 ## `hydrophilic`
 
