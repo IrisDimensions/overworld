@@ -60,8 +60,12 @@ Combine this with baseslope such that
 
 ```dockerfile
 # Place a tree with roots on perfectly flat areas only
-baseslope 0 # This tree is perfectly flat on the bottom
-maxslope 0 # Fail if the slope changes when placing the "bottom" onto the terrain
+
+# This tree is perfectly flat on the bottom
+baseslope 0
+
+# Fail if the slope changes when placing the "bottom" onto the terrain
+maxslope 0
 
 ```
 
