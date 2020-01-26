@@ -49,9 +49,22 @@ world radius 128
 Apply gravity to the base block of every column and pull the higher blocks down to the terrain height. Useful for land patches or walls. **NOT SUITABLE FOR OVERHANGS SUCH AS TREES**
 > Moderate Performance Impact
 
+## `baseslope <int>`
+Helps Objects identify their internal base slope. This specifies the thickness of your object base. If a tree's base is flat, baseslope should be `baseslope 0`. However if your roots extend 3 blocks down, set `baseslope 3`
+
 ## `maxslope <int>`
 
 Computes the base of the schematic (ignores overhangs) and tries to apply on the base (say the roots of a tree) If the base requires shifting higher than the slope value, placement fails. **This does not affect how the object looks, it's just a fail condition**
+
+Combine this with baseslope such that
+
+```dockerfile
+# Place a tree with roots on perfectly flat areas only
+baseslope 0 # This tree is perfectly flat on the bottom
+maxslope 0 # Fail if the slope changes when placing the "bottom" onto the terrain
+
+```
+
 > **High** Performance Impact
 
 ## `hydrophilic`
