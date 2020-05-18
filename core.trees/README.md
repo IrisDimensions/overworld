@@ -2,7 +2,7 @@
 
 Represents trees in iris
 
-## Subtypes
+## Attributes Index
 * Natural; Fully burnable  `N`
 * Semi-Natural; Mostly burnable, or just has odd objects like flowers etc...  `SN`
 * Cosmetic; mainly for looks, ignoring resource values or burnability  `C`
