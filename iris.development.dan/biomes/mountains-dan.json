@@ -1,56 +1,65 @@
 {
+    "children": [],
+    "decorators": [],
+    "objects": [],
     "name": "Plains",
-    "auxiliaryGenerators":[
-        {
-            "zoom": 3,
-            "offsetX": 0,
-            "offsetZ": 0,
-            "seed": 1337,
-            "min": 2,
-            "max": 5
-        },
-        {
-            "zoom": 2,
-            "offsetX": 0,
-            "offsetZ": 0,
-            "seed": 1339,
-            "min": 6,
-            "max": 8
-        }
-    ],
     "layers": [
         {
-            "palette": [
-                "GRASS_BLOCK"
-            ]
-        },
-        {
-            "palette": [
-                "DIRT"
-            ]
+            "minHeight": 1,
+            "terrainZoom": 5,
+            "maxHeight": 1,
+            "palette": ["GRASS_BLOCK"],
+            "dispersion": "SCATTER"
         },
         {
             "minHeight": 1,
+            "terrainZoom": 5,
+            "maxHeight": 1,
+            "palette": ["DIRT"],
+            "dispersion": "SCATTER"
+        },
+        {
+            "minHeight": 1,
+            "terrainZoom": 5,
             "maxHeight": 3,
             "palette": [
                 "DIRT",
                 "COARSE_DIRT"
-            ]
+            ],
+            "dispersion": "SCATTER"
         },
         {
             "minHeight": 6,
+            "terrainZoom": 5,
             "maxHeight": 18,
-            "dispersion": "SCATTER",
             "palette": [
                 "STONE",
                 "ANDESITE",
                 "STONE"
-            ]
+            ],
+            "dispersion": "SCATTER"
         }
     ],
+    "childShrinkFactor": 1.5,
     "derivative": "MOUNTAINS",
-    "heightFrequency": 0.2,
-    "heightExponent": 1,
-    "highHeight": 35,
+    "auxiliaryGenerators": [
+        {
+            "offsetX": 0,
+            "offsetZ": 0,
+            "min": 2,
+            "seed": 1337,
+            "max": 5,
+            "zoom": 3
+        },
+        {
+            "offsetX": 0,
+            "offsetZ": 0,
+            "min": 6,
+            "seed": 1339,
+            "max": 8,
+            "zoom": 2
+        }
+    ],
+    "highHeight": 211,
     "lowHeight": 3
 }
