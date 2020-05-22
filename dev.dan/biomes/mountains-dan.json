@@ -1,57 +1,41 @@
 {
-    "children": [],
-    "decorators": [],
-    "objects": [],
     "name": "Mountains",
     "layers": [
         {
-            "minHeight": 1,
-            "terrainZoom": 5,
-            "maxHeight": 1,
-            "palette": ["STONE"], 
-            "dispersion": "SCATTER"
-        },
-        {
-            "minHeight": 1,
-            "terrainZoom": 5,
-            "maxHeight": 1,
-            "palette": ["DIRT"],
-            "dispersion": "SCATTER"
-        },
-        {
-            "minHeight": 1,
-            "terrainZoom": 5,
-            "maxHeight": 3,
             "palette": [
+                "GRASS_BLOCK"
+            ]
+        },
+        {
+            "palette": [
+                "DIRT"
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [ 
                 "DIRT",
                 "COARSE_DIRT"
-            ],
-            "dispersion": "SCATTER"
+            ]
         },
         {
             "minHeight": 6,
-            "terrainZoom": 5,
             "maxHeight": 18,
+            "dispersion": "SCATTER",
             "palette": [
                 "STONE",
                 "ANDESITE",
                 "STONE"
-            ],
-            "dispersion": "SCATTER"
+            ]
         }
     ],
-    "childShrinkFactor": 1.5,
-    "derivative": "MOUNTAINS",
-    "auxiliaryGenerators": [
+    "generators":[
         {
-            "offsetX": 0,
-            "offsetZ": 0,
-            "min": 0,
-            "seed": 1337,
-            "max": 64,
-            "zoom": 3
+            "generator": "plain",
+            "min": 12,
+            "max": 42
         }
     ],
-    "highHeight": 17,
-    "lowHeight": 9
+    "derivative": "MOUNTAINS"
 }
