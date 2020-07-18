@@ -1,0 +1,43 @@
+{
+    "name": "Rainforest",
+    "layers": [
+        {
+            "palette": [
+                "GRASS_BLOCK"
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "palette": [ 
+                "DIRT"
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "dispersion": "SCATTER",
+            "palette": [
+                "STONE",
+                "ANDESITE",
+                "STONE"
+            ]
+        }
+    ],
+    "children":[
+        "tropical-rainforest-hills"
+    ],
+    "generators":[
+        {
+            "generator": "plain",
+            "min": 4,
+            "max": 6
+        },
+        {
+            "generator": "wavy",
+            "min": 2,
+            "max": 5
+        }
+    ],
+    "derivative": "JUNGLE"
+}

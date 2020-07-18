@@ -1,0 +1,48 @@
+{
+    "name": "Rainforest Hills",
+    "layers": [
+        {
+            "palette": [
+                "GRASS_BLOCK"
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "palette": [ 
+                "DIRT"
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "dispersion": "SCATTER",
+            "palette": [
+                "STONE",
+                "ANDESITE",
+                "STONE"
+            ]
+        }
+    ],
+    "generators":[
+        {
+            "generator": "plain",
+            "min": 6,
+            "max": 8
+        },
+        {
+            "generator": "wavy",
+            "min": 12,
+            "max": 15
+        },
+        {
+            "generator": "rough",
+            "min": 0,
+            "max": 4
+        }
+    ],
+    "children":[
+        "tropical-volcanic"
+    ],
+    "derivative": "JUNGLE"
+}

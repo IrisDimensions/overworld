@@ -1,0 +1,43 @@
+{
+    "name": "Desert Hills",
+    "layers": [
+        {
+            "palette": [
+                "SAND"
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 9,
+            "palette": [ 
+                "SANDSTONE"
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "dispersion": "SCATTER",
+            "palette": [
+                "STONE",
+                "ANDESITE",
+                "STONE"
+            ]
+        }
+    ],
+    "children": [
+        "hot-volcanic"
+    ],
+    "generators":[
+        {
+            "generator": "plain",
+            "min": 5,
+            "max": 9
+        },
+        {
+            "generator": "wavy",
+            "min": 4,
+            "max": 8
+        }
+    ],
+    "derivative": "DESERT"
+}
