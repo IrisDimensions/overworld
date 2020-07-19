@@ -1,16 +1,16 @@
 {
-    "name": "Desert Hills",
+    "name": "Desert",
     "layers": [
         {
             "palette": [
-                "SAND"
+                "RED_SAND"
             ]
         },
         {
             "minHeight": 2,
             "maxHeight": 9,
             "palette": [ 
-                "SANDSTONE"
+                "RED_SANDSTONE"
             ]
         },
         {
@@ -25,7 +25,7 @@
         }
     ],
     "children": [
-        "hot-volcanic"
+        "hot-desert-hills"
     ],
     "decorators": [
         {
@@ -35,7 +35,7 @@
             "variance": "SCATTER",
             "stackMin": 1,
             "stackMax": 5,
-            "chance": 0.01,
+            "chance": 0.005,
             "palette": [
                 "CACTUS"
             ]
@@ -52,7 +52,7 @@
         },
         {
             "zoom": 0.3,
-            "chance": 0.062,
+            "chance": 0.092,
             "palette": [
                 "DEAD_BUSH"
             ],
@@ -63,13 +63,13 @@
     "generators":[
         {
             "generator": "plain",
-            "min": 5,
-            "max": 9
+            "min": 4,
+            "max": 6
         },
         {
             "generator": "wavy",
-            "min": 4,
-            "max": 8
+            "min": 2,
+            "max": 5
         }
     ],
     "derivative": "DESERT"

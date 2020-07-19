@@ -2,7 +2,7 @@
     "name": "Volcanic",
     "layers": [
         {
-            "dispersion": "WISPY",
+            "dispersion": "SCATTER",
             "terrainZoom": 0.25,
             "maxHeight": 4,
             "minHeight": 2,
@@ -38,6 +38,18 @@
             "generator": "mountain",
             "min": 8,
             "max": 12
+        }
+    ],
+    "decorators":[
+        {
+            "zoom": 0.3,
+            "chance": 0.04,
+            "palette": [
+                "minecraft:polished_blackstone_button[face=floor,facing=east,powered=false]",
+                "minecraft:polished_blackstone_button[face=floor,facing=south,powered=false]"
+            ],
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
         }
     ],
     "derivative": "DESERT"
