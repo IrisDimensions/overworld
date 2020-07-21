@@ -4,13 +4,16 @@
 {
     "landZoom": 1,
     "regions": [],
+    "caveThickness": 1,
     "seaZoom": 1,
+    "caves": true,
     "biomeZoom": 5,
     "interpolationScale": 63,
     "focus": "",
     "placeObjects": true,
     "shoreZoom": 1,
     "continentZoom": 1,
+    "caveShift": 0,
     "roughnessZoom": 2,
     "interpolationFunction": "BICUBIC",
     "environment": "NORMAL",
@@ -21,7 +24,8 @@
     "fluidHeight": 63,
     "dimensionAngleDeg": 0,
     "regionZoom": 1,
-    "coordFractureDistance": 20
+    "coordFractureDistance": 20,
+    "caveScale": 1
 }
 ```
 
