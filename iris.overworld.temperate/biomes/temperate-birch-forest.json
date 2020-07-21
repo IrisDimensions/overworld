@@ -1,0 +1,108 @@
+{
+    "name": "Birch Forest",
+    "layers": [
+        {
+            "palette": [
+                "GRASS_BLOCK"
+            ]
+        },
+        {
+            "palette": [
+                "DIRT"
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [ 
+                "DIRT",
+                "COARSE_DIRT"
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "dispersion": "SCATTER",
+            "palette": [
+                "STONE",
+                "ANDESITE",
+                "STONE"
+            ]
+        }
+    ],
+    "decorators": [
+        {
+            "zoom": 0.1,
+            "chance": 0.001,
+            "palette": ["GRASS", "ALLIUM", "AZURE_BLUET", "PINK_TULIP", "LILY_OF_THE_VALLEY"],
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        },
+        {
+            "zoom": 0.3,
+            "chance": 0.1,
+            "palette": ["GRASS"],
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        },
+        {
+            "zoom": 0.3,
+            "chance": 0.017,
+            "palette": ["TALL_GRASS"],
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        }
+    ],
+    "objects": [
+        {
+            "chance": 1,
+            "density": 3,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": false
+                },
+                "enabled": false
+            },
+            "place": [
+                "birch/birch1",
+                "birch/birch2",
+                "birch/birch3",
+                "birch/birch4",
+                "birch/birch5",
+                "birch/birch7",
+                "birch/birch8"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        }
+    ],
+    "generators":[
+        {
+            "generator": "plain",
+            "min": 4,
+            "max": 7
+        },
+        {
+            "generator": "wavy",
+            "min": 0,
+            "max": 3
+        }
+    ],
+    "derivative": "PLAINS",
+    "biomeDispersion": "WISPY",
+    "biomeZoom": 60,
+    "biomeScatter": [
+        "FOREST",
+        "PLAINS"
+    ],
+    "biomeSkyScatter": [
+        "FOREST",
+        "JUNGLE"
+    ]
+}
