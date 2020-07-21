@@ -34,7 +34,7 @@
     ],
     "objects": [
         {
-            "chance": 0.225,
+            "chance": 2.9,
             "density": 1,
             "rotation": {
                 "yAxis": {
@@ -71,7 +71,7 @@
             }
         },
         {
-            "chance": 0.035,
+            "chance": 0.135,
             "density": 1,
             "rotation": {
                 "yAxis": {
@@ -122,16 +122,6 @@
     "decorators": [
         {
             "zoom": 0.3,
-            "chance": 0.05,
-            "palette": [
-                "minecraft:stone_button[face=floor,facing=east,powered=false]",
-                "minecraft:stone_button[face=floor,facing=south,powered=false]"
-            ],
-            "dispersion": "SCATTER",
-            "variance": "SCATTER"
-        },
-        {
-            "zoom": 0.3,
             "chance": 0.01,
             "palette": [
                 "DEAD_BUSH"
@@ -156,11 +146,18 @@
             ],
             "dispersion": "SCATTER",
             "variance": "SCATTER"
+        },
+        {
+            "zoom": 0.3,
+            "chance": 0.45,
+            "palette": ["GRASS", "DEAD_BUSH"],
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
         }
     ],
     "generators":[
         {
-            "generator": "swamp",
+            "generator": "plain",
             "min": 4,
             "max": 11
         },
