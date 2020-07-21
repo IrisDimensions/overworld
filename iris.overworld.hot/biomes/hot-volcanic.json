@@ -3,10 +3,14 @@
     "layers": [
         {
             "dispersion": "SCATTER",
-            "terrainZoom": 0.25,
+            "terrainZoom": 0.33,
             "maxHeight": 4,
             "minHeight": 2,
             "palette": [
+                "minecraft:basalt[axis=x]",
+                "minecraft:basalt[axis=y]",
+                "minecraft:basalt[axis=z]",
+                "LAVA",
                 "minecraft:basalt[axis=x]",
                 "minecraft:basalt[axis=y]",
                 "minecraft:basalt[axis=z]"
@@ -23,33 +27,11 @@
             ]
         }
     ],
-    "decorators":[
-        {
-            "zoom": 0.3,
-            "chance": 0.04,
-            "palette": [
-                "minecraft:polished_blackstone_button[face=floor,facing=east,powered=false]",
-                "minecraft:polished_blackstone_button[face=floor,facing=south,powered=false]"
-            ],
-            "dispersion": "SCATTER",
-            "variance": "SCATTER"
-        }
-    ],
     "generators":[
         {
             "generator": "plain",
-            "min": 9,
-            "max": 22
-        },
-        {
-            "generator": "wavy",
-            "min": 22,
-            "max": 35
-        },
-        {
-            "generator": "mountain",
-            "min": 8,
-            "max": 12
+            "min": 3,
+            "max": 5
         }
     ],
     "derivative": "DESERT"
