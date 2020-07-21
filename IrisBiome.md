@@ -2,12 +2,15 @@
 > Represents a biome in iris.
 ```json
 {
+    "seaLayers": [],
     "biomeSkyScatter": [],
+    "objects": [],
+    "biomeZoom": 1,
+    "biomeDispersion": "SCATTER",
+    "derivative": "THE_VOID",
     "children": [],
     "decorators": [],
-    "objects": [],
     "name": "A Biome",
-    "biomeZoom": 1,
     "layers": [{
         "minHeight": 1,
         "terrainZoom": 5,
@@ -21,8 +24,6 @@
         "generator": "default"
     }],
     "childShrinkFactor": 1.5,
-    "biomeDispersion": "SCATTER",
-    "derivative": "THE_VOID",
     "biomeScatter": []
 }
 ```
@@ -52,6 +53,9 @@
 > List any biome names (file names without.json) here as children. Portions of this biome can sometimes morph into their children. Iris supports cyclic relationships such as A > B > A > B. Iris will stop checking 9 biomes down the tree.
 
 ## layers
+> This defines the layers of materials in this biome. Each layer has a palette and min/max height and some other properties. Usually a grassy/sandy layer then a dirt layer then a stone layer. Iris will fill in the remaining blocks below your layers with stone.
+
+## seaLayers
 > This defines the layers of materials in this biome. Each layer has a palette and min/max height and some other properties. Usually a grassy/sandy layer then a dirt layer then a stone layer. Iris will fill in the remaining blocks below your layers with stone.
 
 ## decorators
