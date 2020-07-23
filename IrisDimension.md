@@ -2,60 +2,32 @@
 > Represents a dimension
 ```json
 {
-    "redstoneMinDispersion": 0.17,
-    "diamondMaxDispersion": 0.05,
-    "emeraldMaxDispersion": 0.005,
+    "landZoom": 1,
+    "regions": [],
     "seaZoom": 1,
     "biomeZoom": 5,
     "interpolationScale": 63,
     "focus": "",
-    "goldMaxDispersion": 0.01,
-    "redstoneMaxHeight": 15,
-    "lapisMaxHeight": 33,
     "continentZoom": 1,
-    "diamondMaxHeight": 16,
     "roughnessZoom": 2,
     "interpolationFunction": "BICUBIC",
-    "coalMaxHeight": 100,
-    "coalMinHeight": 5,
-    "lapisMaxDispersion": 0.05,
-    "coordFractureDistance": 20,
-    "emeraldMinHeight": 5,
-    "lapisMinHeight": 13,
-    "caveThickness": 1,
-    "caves": true,
-    "placeObjects": true,
-    "redstoneMinHeight": 5,
-    "shoreZoom": 1,
-    "redstoneMaxDispersion": 0.05,
-    "diamondMinDispersion": 0.1,
-    "roughnessHeight": 3,
-    "name": "A Dimension",
-    "regionZoom": 1,
-    "caveScale": 1,
-    "ironMinHeight": 5,
-    "ironMaxHeight": 65,
-    "landZoom": 1,
-    "regions": [],
     "terrainZoom": 2,
     "coordFractureZoom": 8,
-    "goldMinDispersion": 0.13,
-    "emeraldMinDispersion": 0.07,
     "fluidHeight": 63,
-    "emeraldMaxHeight": 16,
-    "lapisMinDispersion": 0.12,
-    "ores": true,
-    "coalMinDispersion": 0.29,
-    "diamondMinHeight": 5,
-    "ironMaxDispersion": 0.02,
+    "coordFractureDistance": 20,
+    "caveThickness": 1,
+    "caves": true,
     "preventLeafDecay": false,
-    "coalMaxDispersion": 0.02,
-    "ironMinDispersion": 0.26,
+    "placeObjects": true,
+    "shoreZoom": 1,
+    "deposits": [],
     "caveShift": 0,
-    "goldMaxHeight": 34,
     "environment": "NORMAL",
+    "roughnessHeight": 3,
+    "name": "A Dimension",
     "dimensionAngleDeg": 0,
-    "goldMinHeight": 5
+    "regionZoom": 1,
+    "caveScale": 1
 }
 ```
 
@@ -67,6 +39,18 @@
 
 ## interpolationScale
 > The interpolation distance scale. Increase = more smooth, less detail
+
+## caveThickness
+> The Thickness scale of cave veins
+
+## caveScale
+> The cave web scale. Smaller values means scaled up vein networks.
+
+## caveShift
+> Shift the Y value of the cave networks up or down.
+
+## caves
+> Generate caves or not.
 
 ## environment
 > The world environment
@@ -121,4 +105,7 @@
 
 ## preventLeafDecay
 > Prevent Leaf decay as if placed in creative mode
+
+## deposits
+> Define global deposit generators
 

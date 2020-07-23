@@ -8,6 +8,7 @@
     "biomeZoom": 1,
     "biomeDispersion": "SCATTER",
     "derivative": "THE_VOID",
+    "deposits": [],
     "children": [],
     "decorators": [],
     "name": "A Biome",
@@ -66,4 +67,7 @@
 
 ## generators
 > Generators for this biome. Multiple generators with different interpolation sizes will mix with other biomes how you would expect. This defines your biome height relative to the fluid height. Use negative for oceans.
+
+## deposits
+> Define biome deposit generators that add onto the existing regional and global deposit generators
 

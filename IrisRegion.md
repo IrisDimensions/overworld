@@ -12,7 +12,8 @@
     "landBiomes": [],
     "shoreHeightZoom": 3.14,
     "biomeImplosionRatio": 0.4,
-    "seaBiomes": []
+    "seaBiomes": [],
+    "deposits": []
 }
 ```
 
@@ -48,4 +49,7 @@
 
 ## spotBiomes
 > Spot biomes splotch themselves across this region like lakes
+
+## deposits
+> Define regional deposit generators that add onto the global deposit generators
 
