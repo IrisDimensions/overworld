@@ -5,17 +5,22 @@
     "landZoom": 1,
     "regions": [],
     "seaZoom": 1,
+    "mirrorCeiling": false,
     "biomeZoom": 5,
+    "rockPalette": ["STONE"],
     "interpolationScale": 63,
     "focus": "",
     "continentZoom": 1,
+    "rockZoom": 5,
     "roughnessZoom": 2,
     "interpolationFunction": "BICUBIC",
     "terrainZoom": 2,
     "coordFractureZoom": 8,
     "fluidHeight": 63,
     "coordFractureDistance": 20,
+    "ceiling": "",
     "caveThickness": 1,
+    "fluidPalette": ["WATER"],
     "caves": true,
     "preventLeafDecay": false,
     "placeObjects": true,
@@ -27,7 +32,8 @@
     "name": "A Dimension",
     "dimensionAngleDeg": 0,
     "regionZoom": 1,
-    "caveScale": 1
+    "caveScale": 1,
+    "dispersion": "SCATTER"
 }
 ```
 
@@ -51,6 +57,12 @@
 
 ## caves
 > Generate caves or not.
+
+## ceiling
+> The ceiling dimension. Leave blank for normal sky.
+
+## mirrorCeiling
+> Mirrors the generator floor into the ceiling. Think nether but worse...
 
 ## environment
 > The world environment
@@ -108,4 +120,16 @@
 
 ## deposits
 > Define global deposit generators
+
+## dispersion
+> The dispersion of materials for the rock palette
+
+## rockZoom
+> The rock zoom mostly for zooming in on a wispy palette
+
+## rockPalette
+> The palette of blocks for 'stone'
+
+## fluidPalette
+> The palette of blocks for 'water'
 
