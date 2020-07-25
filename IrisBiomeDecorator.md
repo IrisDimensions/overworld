@@ -2,6 +2,7 @@
 > A biome decorator is used for placing flowers, grass, cacti and so on
 ```json
 {
+    "partOf": "NONE",
     "verticalZoom": 1,
     "chance": 0.1,
     "variance": "SCATTER",
@@ -22,6 +23,9 @@
 
 ## verticalVariance
 > If this decorator has a height more than 1 this changes how it picks the height between your maxes. Scatter = random, Wispy = wavy heights
+
+## partOf
+> Tells iris where this decoration is a part of. I.e. SHORE_LINE
 
 ## stackMin
 > The minimum repeat stack height (setting to 3 would stack 3 of <block> on top of each other
