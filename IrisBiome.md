@@ -25,7 +25,8 @@
         "generator": "default"
     }],
     "childShrinkFactor": 1.5,
-    "biomeScatter": []
+    "biomeScatter": [],
+    "rarity": 1
 }
 ```
 
@@ -37,6 +38,9 @@
 
 ## biomeZoom
 > This zooms in the biome colors if multiple derivatives are chosen
+
+## rarity
+> The rarity of this biome (integer)
 
 ## derivative
 > The raw derivative of this biome. This is required or the terrain will not properly generate. Use any vanilla biome type. Look in examples/biome-list.txt

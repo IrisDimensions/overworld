@@ -4,17 +4,16 @@
 {
     "shoreRatio": 0.13,
     "ridgeBiomes": [],
-    "spotBiomes": [],
-    "landBiomes": [],
-    "biomeImplosionRatio": 0.4,
-    "seaBiomes": [],
-    "deposits": [],
-    "caveBiomes": [],
     "shoreHeightMin": 1.2,
     "shoreBiomes": [],
     "name": "A Region",
     "shoreHeightMax": 3.2,
-    "shoreHeightZoom": 3.14
+    "spotBiomes": [],
+    "landBiomes": [],
+    "shoreHeightZoom": 3.14,
+    "biomeImplosionRatio": 0.4,
+    "seaBiomes": [],
+    "deposits": []
 }
 ```
 
@@ -43,9 +42,6 @@
 > A list of root-level biomes in this region. Don't specify child biomes of other biomes here. Just the root parents.
 
 ## shoreBiomes
-> A list of root-level biomes in this region. Don't specify child biomes of other biomes here. Just the root parents.
-
-## caveBiomes
 > A list of root-level biomes in this region. Don't specify child biomes of other biomes here. Just the root parents.
 
 ## ridgeBiomes
