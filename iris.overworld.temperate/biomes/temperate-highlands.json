@@ -1,0 +1,97 @@
+{
+    "name": "Highlands",
+    "layers": [
+        {
+            "dispersion": "WISPY",
+            "terrainZoom": 0.256,
+            "palette": [
+                "GRASS_BLOCK",
+                "GRASS_BLOCK",
+                "GRASS_BLOCK",
+                "PODZOL",
+                "GRASS_BLOCK",
+                "GRASS_BLOCK",
+                "GRASS_BLOCK",
+                "GRASS_BLOCK"
+            ]
+        },
+        {
+            "palette": [
+                "DIRT"
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [ 
+                "DIRT",
+                "COARSE_DIRT"
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "dispersion": "SCATTER",
+            "palette": [
+                "STONE",
+                "ANDESITE",
+                "STONE"
+            ]
+        }
+    ],
+    "decorators": [
+        {
+            "zoom": 0.02,
+            "chance": 0.003,
+            "palette": ["WITHER_ROSE", "OXEYE_DAISY", "PINK_TULIP", "LILY_OF_THE_VALLEY"],
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        },
+        {
+            "zoom": 0.1,
+            "chance": 0.02,
+            "palette": ["SUNFLOWER", "DANDELION", "POPPY", "ROSE_BUSH"],
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        },
+        {
+            "zoom": 0.2,
+            "chance": 0.122,
+            "palette": ["LARGE_FERN", "TALL_GRASS"],
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        },
+        {
+            "zoom": 0.3,
+            "chance": 0.142,
+            "palette": ["GRASS", "FERN"],
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        }
+    ],
+    "generators":[
+        {
+            "generator": "plain",
+            "min": 38,
+            "max": 26
+        },
+        {
+            "generator": "sharp-mild",
+            "min": -2,
+            "max": 4
+        }
+    ],
+    "derivative": "PLAINS",
+    "biomeDispersion": "WISPY",
+    "biomeZoom": 9,
+    "biomeScatter": [
+        "FOREST",
+        "TAIGA",
+        "SWAMP",
+        "TAIGA_HILLS"
+    ],
+    "biomeSkyScatter": [
+        "SWAMP",
+        "DESERT"
+    ]
+}
