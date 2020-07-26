@@ -1,0 +1,172 @@
+{
+    "name": "Honey Dioptra",
+    "layers": [
+        {
+            "minHeight": 3,
+            "maxHeight": 6,
+            "dispersion": "SCATTER",
+            "palette": [
+                "GRASS_PATH",
+                "PODZOL"
+
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "palette": [ 
+                "COARSE_DIRT",
+                "DIRT"
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "dispersion": "SCATTER",
+            "palette": [
+                "ANDESITE",
+                "HONEYCOMB_BLOCK",
+                "STONE"
+            ]
+        }
+    ],
+    "objects": [
+        {
+            "chance": 0.01,
+            "density": 1,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "hive/honey-nest-1",
+                "hive/honey-nest-2",
+                "hive/honey-nest-3",
+                "hive/honey-nest-4",
+                "hive/honey-nest-5",
+                "hive/honey-nest-6",
+                "hive/honey-nest-7",
+                "hive/honey-nest-8",
+                "hive/honey-nest-9",
+                "hive/honey-nest-10"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.3,
+            "density": 3,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "honey-tree/honey-1",
+                "honey-tree/honey-2",
+                "honey-tree/honey-3",
+                "honey-tree/honey-4",
+                "honey-tree/honey-5",
+                "honey-tree/honey-6",
+                "honey-tree/honey-7",
+                "honey-tree/honey-8",
+                "honey-tree/honey-9",
+                "honey-tree/honey-10"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.4,
+            "density": 3,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "honey-tree/honey-11",
+                "honey-tree/honey-12",
+                "honey-tree/honey-13",
+                "honey-tree/honey-14",
+                "honey-tree/honey-15",
+                "honey-tree/honey-16",
+                "honey-tree/honey-17",
+                "honey-tree/honey-18",
+                "honey-tree/honey-19",
+                "honey-tree/honey-20"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            }
+        }
+    ],
+    "generators":[
+        {
+            "generator": "sharp",
+            "min": 4,
+            "max": 10
+        },
+        {
+            "generator": "wavy",
+            "min": 2,
+            "max": 6
+        }
+    ],
+    "decorators":[
+        {
+            "zoom": 10, 
+            "stackMax": 1,
+            "stackMin": 1,
+            "chance": 0.05,
+            "palette": [
+                "SUNFLOWER",
+                "LILAC",
+                "ROSE_BUSH",
+                "PEONY"
+            ],
+            "verticalVarience": "SCATTER",
+            "verticalZoom": 88,
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        },
+        {
+            "zoom": 10, 
+            "stackMax": 1,
+            "stackMin": 1,
+            "chance": 0.3,
+            "palette": [
+                "GRASS"
+            ],
+            "verticalVarience": "SCATTER",
+            "verticalZoom": 88,
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        }
+
+    ],
+    "derivative": "SWAMP",
+    "biomeDispersion": "WISPY",
+    "biomeZoom": 75
+}
