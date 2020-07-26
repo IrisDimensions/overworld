@@ -1,8 +1,8 @@
 {
-    "name": "Volcanic",
+    "name": "Submerged Volcanic",
     "layers": [
         {
-            "dispersion": "SCATTER",
+            "dispersion": "WISPY",
             "terrainZoom": 0.33,
             "maxHeight": 4,
             "minHeight": 2,
@@ -29,10 +29,15 @@
     ],
     "generators":[
         {
-            "generator": "plain",
-            "min": 3,
+            "generator": "sharp",
+            "min": -12,
             "max": 5
+        },
+        {
+            "generator": "plain",
+            "min": -12,
+            "max": -9
         }
     ],
-    "derivative": "DESERT"
+    "derivative": "WARM_OCEAN"
 }
