@@ -2,6 +2,7 @@
 > A spot config
 ```json
 {
+    "as": "DEFER",
     "scale": 1,
     "type": "LAND",
     "shuffle": 128,
@@ -14,6 +15,9 @@
 
 ## type
 > Where this spot overrides. Land sea or shore
+
+## as
+> What type this spot is (i.e. target SEA but as LAND) like an island. Default matches the target type
 
 ## scale
 > The scale of splotches

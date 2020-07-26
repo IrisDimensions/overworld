@@ -2,6 +2,7 @@
 > A ridge config
 ```json
 {
+    "as": "DEFER",
     "chance": 0.75,
     "thickness": 0.125,
     "scale": 5,
@@ -17,6 +18,9 @@
 
 ## type
 > The type this biome should override (land sea or shore)
+
+## as
+> What type this spot is (i.e. target SEA but as LAND) like an island. Default matches the target type
 
 ## chance
 > The chance this biome will be placed in a given spot
