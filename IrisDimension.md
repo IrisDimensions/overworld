@@ -23,7 +23,6 @@
     "fluidPalette": ["WATER"],
     "caves": true,
     "preventLeafDecay": false,
-    "caveBiomeZoom": 1,
     "placeObjects": true,
     "shoreZoom": 1,
     "deposits": [],
@@ -100,9 +99,6 @@
 
 ## landZoom
 > This zooms in the land space
-
-## caveBiomeZoom
-> This zooms in the cave biome space
 
 ## shoreZoom
 > This can zoom the shores
