@@ -9,6 +9,13 @@
     "biomeDispersion": "SCATTER",
     "derivative": "THE_VOID",
     "deposits": [],
+    "slab": {
+        "minHeight": 1,
+        "terrainZoom": 5,
+        "maxHeight": 1,
+        "palette": [],
+        "dispersion": "SCATTER"
+    },
     "children": [],
     "decorators": [],
     "name": "A Biome",
@@ -60,6 +67,9 @@
 
 ## children
 > List any biome names (file names without.json) here as children. Portions of this biome can sometimes morph into their children. Iris supports cyclic relationships such as A > B > A > B. Iris will stop checking 9 biomes down the tree.
+
+## slab
+> The default slab if iris decides to place a slab in this biome. Default is no slab.
 
 ## layers
 > This defines the layers of materials in this biome. Each layer has a palette and min/max height and some other properties. Usually a grassy/sandy layer then a dirt layer then a stone layer. Iris will fill in the remaining blocks below your layers with stone.
