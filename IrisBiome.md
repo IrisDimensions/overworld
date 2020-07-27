@@ -34,6 +34,13 @@
     "childShrinkFactor": 1.5,
     "lockLayers": false,
     "biomeScatter": [],
+    "wall": {
+        "minHeight": 1,
+        "terrainZoom": 5,
+        "maxHeight": 1,
+        "palette": [],
+        "dispersion": "SCATTER"
+    },
     "rarity": 1
 }
 ```
@@ -70,6 +77,9 @@
 
 ## slab
 > The default slab if iris decides to place a slab in this biome. Default is no slab.
+
+## wall
+> The default wall if iris decides to place a wall higher than 2 blocks (steep hills or possibly cliffs)
 
 ## layers
 > This defines the layers of materials in this biome. Each layer has a palette and min/max height and some other properties. Usually a grassy/sandy layer then a dirt layer then a stone layer. Iris will fill in the remaining blocks below your layers with stone.
