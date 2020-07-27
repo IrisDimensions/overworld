@@ -2,6 +2,7 @@
 > Represents a dimension
 ```json
 {
+    "decorate": true,
     "landZoom": 1,
     "regions": [],
     "seaZoom": 1,
@@ -10,6 +11,7 @@
     "rockPalette": ["STONE"],
     "interpolationScale": 63,
     "focus": "",
+    "carving": true,
     "continentZoom": 1,
     "rockZoom": 5,
     "roughnessZoom": 2,
@@ -18,6 +20,7 @@
     "coordFractureZoom": 8,
     "fluidHeight": 63,
     "coordFractureDistance": 20,
+    "postProcess": true,
     "ceiling": "",
     "caveThickness": 1,
     "fluidPalette": ["WATER"],
@@ -58,6 +61,15 @@
 
 ## caves
 > Generate caves or not.
+
+## carving
+> Carve terrain or not
+
+## decorate
+> Generate decorations or not
+
+## postProcess
+> Use post processing features. Usually for production only as there is a gen speed cost.
 
 ## ceiling
 > The ceiling dimension. Leave blank for normal sky.
