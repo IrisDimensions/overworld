@@ -25,6 +25,7 @@
         "generator": "default"
     }],
     "childShrinkFactor": 1.5,
+    "lockLayers": false,
     "biomeScatter": [],
     "rarity": 1
 }
@@ -38,6 +39,9 @@
 
 ## biomeZoom
 > This zooms in the biome colors if multiple derivatives are chosen
+
+## lockLayers
+> Layers no longer descend from the surface block, they descend from the max possible height the biome can produce (constant) creating mesa like layers.
 
 ## rarity
 > The rarity of this biome (integer)
