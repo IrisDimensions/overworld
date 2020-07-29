@@ -22,7 +22,33 @@
 	"caveShift": -13,
     "caves": true,
     "placeObjects": true,
-    "postProcess": true,
+    "postProcessing": true,
+    "postProcessors": [
+        {
+            "phase": 0,
+            "processor": "nib-smoother"
+        },
+        {
+            "phase": 0,
+            "processor": "floating-block-remover"
+        },
+        {
+            "phase": 0,
+            "processor": "pothole-filler"
+        },
+        {
+            "phase": 0,
+            "processor": "wall-painter"
+        },
+        {
+            "phase": 0,
+            "processor": "slabber"
+        },
+        {
+            "phase": 1,
+            "processor": "waterlogger"
+        }
+    ],
     "decorate": true,
     "mirrorCeiling": false,
     "focus": "",
