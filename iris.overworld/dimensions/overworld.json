@@ -1,5 +1,19 @@
 {
     "environment": "NORMAL",
+    "regions": [
+        "temperate",
+        "tundra",
+        "tropical",
+        "hot",
+        "swamp",
+        "frozen"
+    ],
+    "decorate": true,
+    "caves": true,
+    "placeObjects": true,
+    "postProcessing": true,
+    "mirrorCeiling": false,
+    "focus": "",
     "fluidHeight": 99,
     "biomeZoom": 0.97,
     "regionZoom": 3.7,
@@ -20,9 +34,6 @@
     "roughnessZoom": 1,
 	"caveScale": 1,
 	"caveShift": -13,
-    "caves": true,
-    "placeObjects": true,
-    "postProcessing": true,
     "postProcessors": [
         {
             "phase": 0,
@@ -49,9 +60,6 @@
             "processor": "waterlogger"
         }
     ],
-    "decorate": true,
-    "mirrorCeiling": false,
-    "focus": "",
     "deposits": [
         {
             "minHeight": 19,
@@ -187,12 +195,64 @@
             ]
         }
     ],
-    "regions": [
-        "temperate",
-        "tundra",
-        "tropical",
-        "hot",
-        "swamp",
-        "frozen"
+    "mutations":[
+        {
+            "sideA": [
+                "^hot",
+                "!*hot-mesa"
+            ],
+            "sideB": [
+                "*tropical-rainforest"
+            ],
+            "radius": 12,
+            "checks": 1,
+            "objects": [
+               {
+                    "chance": 0.8,
+                    "density": 2,
+                    "rotation": {
+                        "yAxis": {
+                            "min": 0,
+                            "max": 0,
+                            "interval": 90,
+                            "enabled": true
+                        },
+                        "enabled": true
+                    },
+                    "edit": [
+                        {
+                            "find": "JUNGLE_LEAVES",
+                            "replace": "AIR"
+                        },
+                        {
+                            "find": "BIRCH_LEAVES",
+                            "replace": "AIR"
+                        },
+                        {
+                            "find": "JUNGLE_WOOD",
+                            "replace": "STRIPPED_SPRUCE_WOOD"
+                        },
+                        {
+                            "find": "OAK_WOOD",
+                            "replace": "ACACIA_WOOD"
+                        }
+                    ],
+                    "place": [
+                        "jungle-remade/jcoco-2",
+                        "jungle-remade/jcoco-3",
+                        "jungle-remade/jcoco-4",
+                        "jungle-remade/jcoco-5",
+                        "jungle-remade/j6",
+                        "jungle-remade/j7",
+                        "jungle-remade/j8",
+                        "jungle-remade/j9",
+                        "jungle-remade/j11",
+                        "jungle-remade/j12",
+                        "jungle-remade/j13"
+
+                    ]
+                }
+            ]
+        }
     ]
 }
