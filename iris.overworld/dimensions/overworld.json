@@ -63,7 +63,7 @@
     "deposits": [
         {
             "minHeight": 19,
-            "maxHeight": 110,
+            "maxHeight": 150,
             "minSize": 22,
             "maxSize": 35,
             "minPerChunk": 4,
@@ -76,7 +76,7 @@
         },
         {
             "minHeight": 45,
-            "maxHeight": 103,
+            "maxHeight": 140,
             "minSize": 19,
             "maxSize": 24,
             "minPerChunk": 4,
@@ -88,7 +88,7 @@
         },
         {
             "minHeight": 25,
-            "maxHeight": 52,
+            "maxHeight": 95,
             "minSize": 19,
             "maxSize": 24,
             "minPerChunk": 4,
@@ -100,7 +100,7 @@
         },
         {
             "minHeight": 35,
-            "maxHeight": 62,
+            "maxHeight": 100,
             "minSize": 19,
             "maxSize": 24,
             "minPerChunk": 4,
@@ -112,7 +112,7 @@
         },
         {
             "minHeight": 45,
-            "maxHeight": 72,
+            "maxHeight": 115,
             "minSize": 19,
             "maxSize": 24,
             "minPerChunk": 4,
@@ -136,7 +136,7 @@
         },
         {
             "minHeight": 4,
-            "maxHeight": 24,
+            "maxHeight": 40,
             "minSize": 5,
             "maxSize": 9,
             "minPerChunk": 4,
@@ -148,7 +148,7 @@
         },
         {
             "minHeight": 3,
-            "maxHeight": 57,
+            "maxHeight": 67,
             "minSize": 1,
             "maxSize": 2,
             "minPerChunk": 1,
@@ -160,7 +160,7 @@
         },
         {
             "minHeight": 3,
-            "maxHeight": 30,
+            "maxHeight": 45,
             "minSize": 3,
             "maxSize": 8,
             "minPerChunk": 0,
@@ -184,7 +184,7 @@
         },
         {
             "minHeight": 1,
-            "maxHeight": 145,
+            "maxHeight": 175,
             "minSize": 9,
             "maxSize": 12,
             "minPerChunk": 6,
@@ -198,7 +198,7 @@
     "mutations":[
         {
             "sideA": [
-                "swamp-roofed",
+                "*swamp-roofed",
                 "swamp-dark-oak-denmyre"
             ],
             "sideB": [
@@ -232,8 +232,79 @@
                         "dual-tree/corrupted-swamp-8",
                         "dual-tree/corrupted-swamp-9",
                         "dual-tree/corrupted-swamp-10"
-
                     ]
+                }
+            ]
+        },
+        {
+            "sideA": [
+                "tropical-beach",
+                "hot-beach"
+            ],
+            "sideB": [
+                "swamp-mushroom",
+                "swamp-crimson-mushroom",
+                "swamp-warped-mushroom"
+            ],
+            "radius": 12,
+            "checks": 8,
+            "objects": [
+               {
+                    "chance": 0.4,
+                    "density": 1,
+                    "rotation": {
+                        "yAxis": {
+                            "min": 0,
+                            "max": 0,
+                            "interval": 90,
+                            "enabled": true
+                        },
+                        "enabled": true
+                    },
+                    "place": [
+                        "dual-tree/infested-palm-1",
+                        "dual-tree/infested-palm-2",
+                        "dual-tree/infested-palm-3",
+                        "dual-tree/infested-palm-4",
+                        "dual-tree/infested-palm-5"
+                    ]
+                }
+            ]
+        },
+        {
+            "sideA": [
+                "tropical-beach"
+            ],
+            "sideB": [
+                "tropical-rainforest",
+                "tropical-bamboo-forest"
+            ],
+            "radius": 12,
+            "checks": 8,
+            "objects": [
+               {
+                    "chance": 0.4,
+                    "density": 1,
+                    "rotation": {
+                        "yAxis": {
+                            "min": 0,
+                            "max": 0,
+                            "interval": 90,
+                            "enabled": true
+                        },
+                        "enabled": true
+                    },
+                    "place": [
+                        "dual-tree/sandy-jungle-1",
+                        "dual-tree/sandy-jungle-2",
+                        "dual-tree/sandy-jungle-3",
+                        "dual-tree/sandy-jungle-4"
+                    ],
+                    "translate": {
+                        "x": 0,
+                        "y": -2,
+                        "z": 0
+                    }
                 }
             ]
         }
