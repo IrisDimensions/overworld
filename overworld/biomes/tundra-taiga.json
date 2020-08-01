@@ -1,0 +1,186 @@
+{
+    "name": "Cold Tundra",
+    "layers": [
+        {
+            "dispersion": "WISPY",
+            "terrainZoom": 0.92,
+            "palette": [
+                "GRASS_BLOCK",
+                "GRASS_BLOCK",
+                "GRASS_BLOCK",
+                "GRASS_BLOCK",
+                "GRASS_BLOCK",
+                "GRASS_BLOCK",
+                "GRASS_BLOCK",
+                "GRASS_BLOCK",
+                "GRAVEL",
+                "STONE",
+                "ANDESITE",
+                "GRASS_BLOCK",
+                "GRASS_BLOCK",
+                "GRASS_BLOCK",
+                "GRASS_BLOCK",
+                "GRASS_BLOCK",
+                "GRASS_BLOCK",
+                "GRASS_BLOCK",
+                "GRASS_BLOCK"
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "palette": [ 
+                "DIRT",
+                "COARSE_DIRT"
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "dispersion": "SCATTER",
+            "palette": [
+                "STONE",
+                "ANDESITE",
+                "STONE"
+            ]
+        }
+    ],
+    "wall": 
+    {
+        "dispersion": "SCATTER",
+        "palette": [
+            "STONE",
+            "ANDESITE",
+            "STONE"
+        ]
+    },
+    "objects": [
+        {
+            "chance": 0.05,
+            "density": 1,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": false
+                },
+                "enabled": true
+            },
+            "place": [
+                "pine/pine1",
+                "pine/pine2",
+                "pine/pine3",
+                "pine/pine4",
+                "pine/pine5",
+                "pine/pine6",
+                "pine/pine7",
+                "pine/pine8",
+                "pine/pine9",
+                "pine/pine10",
+                "pine/pine11",
+                "pine/pine12"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.0075,
+            "density": 1,
+            "rotation": {
+                "enabled": false
+            },
+            "place": [
+                "stump/stump1",
+                "stump/stump2",
+                "stump/stump3",
+                "stump/stump4",
+                "stump/stump5",
+                "stump/stump6"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.0625,
+            "density": 1,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "xAxis": {
+                    "min": -12,
+                    "max": 12,
+                    "interval": 1,
+                    "enabled": true
+                },
+                "zAxis": {
+                    "min": -12,
+                    "max": 12,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            }
+        }
+    ],
+    "decorators": [
+        {
+            "zoom": 0.3,
+            "chance": 0.009,
+            "palette": [
+                "minecraft:polished_blackstone_button[face=floor,facing=east,powered=false]",
+                "minecraft:polished_blackstone_button[face=floor,facing=south,powered=false]"
+            ],
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        },
+        {
+            "zoom": 0.3,
+            "chance": 0.046,
+            "palette": ["GRASS"],
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        },
+        {
+            "zoom": 0.3,
+            "chance": 0.001,
+            "palette": [
+                "DEAD_BUSH"
+            ],
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        },
+        {
+            "zoom": 0.3,
+            "chance": 0.001,
+            "palette": [
+                "POPPY"
+            ],
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        }
+    ],
+    "generators":[
+        {
+            "generator": "plain",
+            "min": 5,
+            "max": 14
+        },
+        {
+            "generator": "wavy",
+            "min": -2,
+            "max": 7
+        }
+    ],
+    "derivative": "GIANT_TREE_TAIGA"
+}

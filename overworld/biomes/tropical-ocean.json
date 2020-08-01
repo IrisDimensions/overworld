@@ -1,0 +1,106 @@
+{
+    "name": "Tropical Ocean",
+    "layers": [
+        {
+            "minHeight": 2,
+            "maxHeight": 6,
+            "palette": [
+                "SAND"
+            ]
+        },
+        {
+            "palette": [
+                "DIRT"
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                "DIRT",
+                "DIRT",
+                "COARSE_DIRT"
+            ]
+        }
+    ],
+    "children": [
+        "tropical-coral-ocean",
+        "tropical-coral-ocean-cliffs"
+    ],
+    "wall": {
+        "palette": [
+            "TUBE_CORAL_BLOCK",
+            "BRAIN_CORAL_BLOCK",
+            "FIRE_CORAL_BLOCK",
+            "HORN_CORAL_BLOCK",
+            "BUBBLE_CORAL_BLOCK"
+        ],
+        "dispersion": "WISPY",
+        "terrainZoom": 0.1
+    },
+    "slab": {
+        "dispersion": "SCATTER",
+        "terrainZoom": 0.5,
+        "palette": [
+            "minecraft:sandstone_slab[type=bottom,waterlogged=false]",
+            "minecraft:smooth_sandstone_slab[type=bottom,waterlogged=false]",
+            "AIR",
+            "AIR"
+        ]
+    },
+    "decorators":[
+        {
+            "zoom": 20,
+            "chance": 0.3,
+            "palette": [
+                "SEAGRASS"
+            ],
+            "dispersion": "WISPY",
+            "variance": "WISPY"
+        },
+        {
+            "zoom": 20,
+            "chance": 0.001,
+            "palette": [
+                "LILY_PAD"
+            ],
+            "partOf": "SEA_SURFACE",
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        },
+        {
+            "zoom": 20, 
+            "stackMax": 9,
+            "stackMin": 3,
+            "chance": 0.025,
+            "palette": [
+                "KELP_PLANT"
+            ],
+            "verticalVarience": "WISPY",
+            "verticalZoom": 88,
+            "dispersion": "WISPY",
+            "variance": "WISPY"
+        },
+        {
+            "zoom": 1, 
+            "stackMax": 3,
+            "stackMin": 1,
+            "chance": 0.225,
+            "palette": [
+                "KELP_PLANT"
+            ],
+            "verticalVarience": "SCATTER",
+            "verticalZoom": 20,
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        }
+    ],
+    "generators":[
+        {
+            "generator": "plain",
+            "min": -24,
+            "max": -7
+        }
+    ],
+    "derivative": "DEEP_WARM_OCEAN"
+}

@@ -1,0 +1,71 @@
+{
+    "name": "Swamp Ocean",
+    "layers": [
+        {
+            "minHeight": 3,
+            "maxHeight": 6,
+            "dispersion": "WISPY",
+            "palette": [
+                "dirt",
+                "SAND",
+                "CLAY"
+            ]
+        },
+        {
+            "palette": [
+                "DIRT"
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                "DIRT",
+                "DIRT",
+                "COARSE_DIRT"
+            ]
+        }
+    ],
+    "decorators":[
+        {
+            "zoom": 20,
+            "chance": 0.1,
+            "palette": [
+                "SEAGRASS"
+            ],
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        }
+    ],
+    "wall": 
+    {
+        "dispersion": "WISPY",
+        "palette": [
+            "CLAY",
+            "SMOOTH_SANDSTONE",
+            "RED_SAND",
+            "SMOOTH_RED_SANDSTONE",
+            "SMOOTH_SANDSTONE",
+            "SAND",
+            "SMOOTH_RED_SANDSTONE"
+        ]
+    },
+    "slab": {
+        "dispersion": "SCATTER",
+        "terrainZoom": 0.5,
+        "palette": [
+            "minecraft:sandstone_slab[type=bottom,waterlogged=false]",
+            "minecraft:smooth_sandstone_slab[type=bottom,waterlogged=false]",
+            "AIR",
+            "AIR"
+        ]
+    },
+    "generators":[
+        {
+            "generator": "plain",
+            "min": -41,
+            "max": -7
+        }
+    ],
+    "derivative": "SWAMP"
+}

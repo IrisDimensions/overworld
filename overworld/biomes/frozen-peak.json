@@ -1,0 +1,161 @@
+{
+    "name": "Frozen Peaks",
+    "layers": [
+        {
+            "minHeight": 2,
+            "maxHeight": 3,
+            "palette": [
+                "AIR"
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "palette": [
+                "ICE"
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                "ICE"
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "palette": [
+                "PACKED_ICE",
+                "PACKED_ICE",
+                "minecraft:basalt[axis=x]",
+                "BLACKSTONE",
+                "PACKED_ICE",
+                "COBBLESTONE",
+                "minecraft:basalt[axis=x]",
+                "PACKED_ICE",
+                "PACKED_ICE",
+                "minecraft:basalt[axis=x]",
+                "PACKED_ICE",
+                "PACKED_ICE",
+                "OBSIDIAN",
+                "PACKED_ICE",
+                "minecraft:basalt[axis=x]",
+                "PACKED_ICE",
+                "PACKED_ICE",
+                "PACKED_ICE",
+                "PACKED_ICE",
+                "minecraft:basalt[axis=y]",
+                "PACKED_ICE",
+                "PACKED_ICE",
+                "PACKED_ICE",
+                "PACKED_ICE",
+                "minecraft:basalt[axis=z]"
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "dispersion": "SCATTER",
+            "palette": [
+                "STONE",
+                "ANDESITE",
+                "STONE"
+            ]
+        }
+    ],
+    "generators":[
+        {
+            "generator": "plain",
+            "min": 14,
+            "max": 24
+        },
+        {
+            "generator": "sharp",
+            "min": 1,
+            "max": 3
+        },
+        {
+            "generator": "mountain",
+            "min": 56,
+            "max": 96
+        },
+        {
+            "generator": "rough",
+            "min": 1,
+            "max": 2
+        }
+    ],
+    "objects": [
+        {
+            "chance": 0.05,
+            "density": 3,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "snow": 0.35,
+            "place": [
+                "ice-spikes/sp-1",
+                "ice-spikes/sp-2",
+                "ice-spikes/sp-3",
+                "ice-spikes/sp-4",
+                "ice-spikes/sp-5",
+                "ice-spikes/tp-1",
+                "ice-spikes/tp-2",
+                "ice-spikes/tp-3",
+                "ice-spikes/tp-4"
+
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.05,
+            "density": 3,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "snow": 0.35,
+            "place": [
+                "ice-spikes/ice-spec-1",
+                "ice-spikes/ice-spec-2",
+                "ice-spikes/ice-spec-3",
+                "ice-spikes/ice-spec-4",
+                "ice-spikes/ice-spec-5"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        }
+    ],
+    "derivative": "SNOWY_TAIGA_MOUNTAINS",
+    "biomeDispersion": "WISPY",
+    "biomeZoom": 30,
+    "biomeScatter": [
+        "SNOWY_TAIGA_MOUNTAINS",
+        "TAIGA_HILLS",
+        "MOUNTAINS",
+        "ICE_SPIKES"
+    ],
+    "biomeSkyScatter": [
+        "SNOWY_TAIGA",
+        "SNOWY_MOUNTAINS"
+    ]
+}

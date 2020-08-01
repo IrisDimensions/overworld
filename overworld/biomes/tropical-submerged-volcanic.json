@@ -1,0 +1,51 @@
+{
+    "name": "Submerged Volcanic",
+    "layers": [
+        {
+            "dispersion": "WISPY",
+            "terrainZoom": 0.33,
+            "maxHeight": 4,
+            "minHeight": 2,
+            "palette": [
+                "minecraft:basalt[axis=x]",
+                "minecraft:basalt[axis=y]",
+                "minecraft:basalt[axis=z]",
+                "MAGMA_BLOCK",
+                "minecraft:basalt[axis=x]",
+                "minecraft:basalt[axis=y]",
+                "minecraft:basalt[axis=z]"
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "dispersion": "SCATTER",
+            "palette": [
+                "STONE",
+                "ANDESITE",
+                "STONE"
+            ]
+        }
+    ],
+    "slab": {
+        "dispersion": "SCATTER",
+        "terrainZoom": 0.5,
+        "palette": [
+            "minecraft:blackstone_slab[type=bottom,waterlogged=false]",
+            "AIR"
+        ]
+    },
+    "generators":[
+        {
+            "generator": "sharp",
+            "min": -12,
+            "max": 5
+        },
+        {
+            "generator": "plain",
+            "min": -12,
+            "max": -9
+        }
+    ],
+    "derivative": "WARM_OCEAN"
+}

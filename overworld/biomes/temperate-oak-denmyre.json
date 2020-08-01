@@ -1,0 +1,170 @@
+{
+    "name": "Oak Denmyre",
+    "rarity": 2,
+    "layers": [
+        {
+            "dispersion": "WISPY",
+            "terrainZoom": 0.356,
+            "palette": [ 
+                "GRAVEL",
+                "GRASS_BLOCK",
+                "GRASS_BLOCK",
+                "GRASS_BLOCK",
+                "GRASS_BLOCK",
+                "GRASS_BLOCK"
+            ]
+        },
+        {
+            "palette": [
+                "DIRT"
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [ 
+                "COARSE_DIRT"
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "dispersion": "SCATTER",
+            "palette": [
+                "STONE",
+                "ANDESITE",
+                "STONE"
+            ]
+        }
+    ],
+    "decorators": [
+        {
+            "zoom": 0.01,
+            "chance": 0.1,
+            "palette": ["DEAD_BUSH", "BROWN_MUSHROOM"],
+            "dispersion": "WISPY",
+            "variance": "SCATTER"
+        },
+        {
+            "zoom": 0.3,
+            "chance": 0.4,
+            "palette": ["GRASS"],
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        },
+        {
+            "zoom": 0.3,
+            "chance": 0.03,
+            "palette": [
+                "minecraft:stone_button[face=floor,facing=east,powered=false]",
+                "minecraft:stone_button[face=floor,facing=south,powered=false]"
+            ],
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        },
+        {
+            "zoom": 0.3,
+            "chance": 0.017,
+            "palette": ["TALL_GRASS"],
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        }
+    ],
+    "objects": [
+        {
+            "chance": 0.5,
+            "density": 2,
+            "edit": [
+                {
+                    "find": "oak_planks",
+                    "replace": "stripped_oak_wood"
+                }
+
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": false
+                },
+                "enabled": false
+            },
+            "place": [
+
+                "oak-medium/oak-denmyre-1",
+                "oak-medium/oak-denmyre-2",
+                "oak-medium/oak-denmyre-3",
+                "oak-medium/oak-denmyre-4",
+                "oak-medium/oak-denmyre-5",
+                "oak-medium/oak-denmyre-6",
+                "oak-medium/oak-denmyre-7",
+                "oak-medium/oak-denmyre-8",
+                "oak-medium/oak-denmyre-9",
+                "oak-medium/oak-denmyre-10",
+                "oak-medium/oak-denmyre-11",
+                "oak-medium/oak-denmyre-12"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.3,
+            "density": 2,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": false
+                },
+                "enabled": false
+            },
+            "place": [
+
+                "denmyre/oak-denmyre-clutter-1",
+                "denmyre/oak-denmyre-clutter-2",
+                "denmyre/oak-denmyre-clutter-3",
+                "denmyre/oak-denmyre-clutter-4",
+                "denmyre/oak-denmyre-clutter-5",
+                "denmyre/oak-denmyre-clutter-6",
+                "denmyre/oak-denmyre-clutter-7",
+                "denmyre/oak-denmyre-clutter-8",
+                "denmyre/oak-denmyre-clutter-9",
+                "denmyre/oak-denmyre-clutter-10"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            }
+        }
+    ],
+    "wall": 
+    {
+        "dispersion": "SCATTER",
+        "palette": [
+            "STONE",
+            "ANDESITE",
+            "STONE"
+        ]
+    },
+    "generators":[
+        {
+            "generator": "plain",
+            "min": 4,
+            "max": 7
+        },
+        {
+            "generator": "wavy",
+            "min": 0,
+            "max": 3
+        }
+    ],
+    "derivative": "FOREST",
+    "biomeDispersion": "WISPY",
+    "biomeZoom": 60
+}

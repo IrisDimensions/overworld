@@ -1,0 +1,152 @@
+{
+    "name": "Oak Forest",
+    "layers": [
+        {
+            "dispersion": "WISPY",
+            "palette": [
+                "GRASS_BLOCK"
+            ]
+        },
+        {
+            "palette": [
+                "DIRT"
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [ 
+                "DIRT",
+                "COARSE_DIRT"
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "dispersion": "SCATTER",
+            "palette": [
+                "STONE",
+                "ANDESITE",
+                "STONE"
+            ]
+        }
+    ],
+    "children": [
+        "temperate-oak-denmyre"
+    ],
+    "decorators": [
+        {
+            "zoom": 0.1,
+            "chance": 0.09,
+            "palette": ["GRASS", "ALLIUM", "LILY_OF_THE_VALLEY"],
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        },
+        {
+            "zoom": 0.3,
+            "chance": 0.4,
+            "palette": ["GRASS"],
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        },
+        {
+            "zoom": 0.3,
+            "chance": 0.017,
+            "palette": ["TALL_GRASS"],
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        }
+    ],
+    "wall": 
+    {
+        "dispersion": "SCATTER",
+        "palette": [
+            "STONE",
+            "ANDESITE",
+            "STONE"
+        ]
+    },
+    "objects": [
+        {
+            "chance": 0.05,
+            "density": 2,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": false
+                },
+                "enabled": false
+            },
+            "place": [
+                "hazel-oak/hoak-3",
+                "hazel-oak/hoak-4",
+                "hazel-oak/hoak-5",
+                "hazel-oak/hoak-6",
+                "hazel-oak/hoak-7",
+                "hazel-oak/hoak-8",
+                "hazel-oak/hoak-9",
+                "hazel-oak/hoak-1",
+                "hazel-oak/hoak-2"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 1,
+            "density": 3,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": false
+                },
+                "enabled": false
+            },
+            "place": [
+                "hazel-oak/s-hoak-3",
+                "hazel-oak/s-hoak-4",
+                "hazel-oak/s-hoak-5",
+                "hazel-oak/s-hoak-6",
+                "hazel-oak/s-hoak-7",
+                "hazel-oak/s-hoak-8",
+                "hazel-oak/s-hoak-9",
+                "hazel-oak/s-hoak-1",
+                "hazel-oak/s-hoak-2"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        }
+    ],
+    "generators":[
+        {
+            "generator": "plain",
+            "min": 4,
+            "max": 7
+        },
+        {
+            "generator": "wavy",
+            "min": 0,
+            "max": 3
+        }
+    ],
+    "derivative": "DEEP_LUKEWARM_OCEAN",
+    "biomeDispersion": "WISPY",
+    "biomeZoom": 60,
+    "biomeScatter": [
+        "FOREST",
+        "PLAINS"
+    ],
+    "biomeSkyScatter": [
+        "FOREST",
+        "JUNGLE"
+    ]
+}

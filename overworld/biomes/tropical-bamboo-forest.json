@@ -1,0 +1,186 @@
+{
+    "name": "Bamboo Forest",
+    "layers": [
+        {
+            "palette": [
+                "GRASS_BLOCK"
+            ]
+        },
+        {
+            "palette": [
+                "DIRT"
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [ 
+                "DIRT",
+                "COARSE_DIRT"
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "dispersion": "SCATTER",
+            "palette": [
+                "STONE",
+                "ANDESITE",
+                "STONE"
+            ]
+        }
+    ],
+    "objects": [
+        {
+            "chance": 0.5,
+            "density": 1,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+
+                "boulder/boulder1",
+                "boulder/boulder2",
+                "boulder/boulder4",
+                "boulder/boulder5",
+                "boulder/boulder6",
+                "boulder/boulder7",
+                "boulder/boulder8"
+
+            ],
+            "translate": {
+                "x": 0,
+                "y": -2,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.5,
+            "density": 1,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+
+                "jungle-remade/bmbo-1",
+                "jungle-remade/bmbo-2",
+                "jungle-remade/bmbo-3",
+                "jungle-remade/bmbo-4",
+                "jungle-remade/bmbo-5",
+                "jungle-remade/bmbo-6",
+                "jungle-remade/bmbo-7",
+                "jungle-remade/bmbo-8",
+                "jungle-remade/bmbo-9"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -2,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.35,
+            "density": 1,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "jungle-remade/jspire-1",
+                "jungle-remade/jspire-2",
+                "jungle-remade/jspire-3",
+                "jungle-remade/jspire-4",
+                "jungle-remade/jspire-5",
+                "jungle-remade/jspire-6",
+                "jungle-remade/jspire-7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -2,
+                "z": 0
+            }
+        }
+    ],
+    "wall": 
+    {
+        "dispersion": "SCATTER",
+        "palette": [
+            "STONE",
+            "ANDESITE",
+            "STONE"
+        ]
+    },
+    "children":[
+        "temperate-wilds"
+    ],
+    "decorators": [
+        {
+            "zoom": 0.3,
+            "chance": 0.25,
+            "palette": [
+                "GRASS",
+                "GRASS",
+                "GRASS",
+                "TALL_GRASS"
+            ],
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        },
+        {
+            "zoom": 5,
+            "verticalZoom": 5,
+            "chance": 0.18,
+            "stackMin": 3,
+            "stackMax": 19,
+            "palette": [
+                "minecraft:bamboo[age=0,leaves=none,stage=0]",
+                "minecraft:bamboo[age=0,leaves=small,stage=0]",
+                "minecraft:bamboo[age=0,leaves=none,stage=1]",
+                "minecraft:bamboo[age=0,leaves=small,stage=1]",
+                "minecraft:bamboo[age=0,leaves=large,stage=0]"
+            ],
+            "verticalVariance": "WISPY",
+            "dispersion": "WISPY",
+            "variance": "SCATTER"
+        }
+    ],
+    "generators":[
+        {
+            "generator": "plain",
+            "min": 4,
+            "max": 7
+        },
+        {
+            "generator": "wavy",
+            "min": 0,
+            "max": 3
+        }
+    ],
+    "derivative": "DESERT",
+    "biomeDispersion": "WISPY",
+    "biomeZoom": 10,
+    "biomeScatter": [
+        "BAMBOO_JUNGLE",
+        "DESERT"
+    ],
+    "biomeSkyScatter": [
+        "DESERT"
+    ]
+}

@@ -1,0 +1,195 @@
+{
+    "name": "Rainforest Hills",
+    "rarity": 8,
+    "layers": [
+        {
+            "dispersion": "WISPY",
+            "terrainZoom": 0.35,
+            "palette": [
+                "GRASS_BLOCK",
+                "minecraft:jungle_leaves[persistent=true]",
+                "GRASS_BLOCK",
+                "GRASS_BLOCK"
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "palette": [ 
+                "DIRT"
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "dispersion": "SCATTER",
+            "palette": [
+                "STONE",
+                "ANDESITE",
+                "STONE"
+            ]
+        }
+    ],
+    "objects": [
+        {
+            "chance": 0.7,
+            "density": 2,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "jungle-remade/jcoco-2",
+                "jungle-remade/jcoco-3",
+                "jungle-remade/jcoco-4",
+                "jungle-remade/jcoco-5",
+                "jungle-remade/jspire-1",
+                "jungle-remade/jspire-2",
+                "jungle-remade/jspire-3",
+                "jungle-remade/jspire-4",
+                "jungle-remade/jspire-5",
+                "jungle-remade/jspire-6",
+                "jungle-remade/jspire-7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -5,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.3,
+            "density": 1,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+
+                "boulder/boulder1",
+                "boulder/boulder2",
+                "boulder/boulder4",
+                "boulder/boulder5",
+                "boulder/boulder6",
+                "boulder/boulder7",
+                "boulder/boulder8"
+
+            ],
+            "translate": {
+                "x": 0,
+                "y": -2,
+                "z": 0
+            }
+        }, 
+        {
+            "chance": 0.008,
+            "density": 3,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+
+                "jungle-remade/bjungle-1",
+                "jungle-remade/bjungle-2",
+                "jungle-remade/bjungle-3",
+                "jungle-remade/bjungle-4",
+                "jungle-remade/bjungle-5"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -12,
+                "z": 0
+            }
+        }
+    ],
+    "decorators":[
+        {
+            "zoom": 10, 
+            "stackMax": 1,
+            "stackMin": 1,
+            "chance": 0.25,
+            "palette": [
+                "GRASS",
+                "TALL_GRASS"
+                
+            ],
+            "verticalVarience": "SCATTER",
+            "verticalZoom": 88,
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        },
+        {
+            "zoom": 10, 
+            "stackMax": 1,
+            "stackMin": 1,
+            "chance": 0.0001,
+            "palette": [
+                "JUNGLE_SAPLING"
+                
+            ],
+            "verticalVarience": "SCATTER",
+            "verticalZoom": 88,
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        }
+
+    ],
+    "wall": 
+    {
+        "dispersion": "WISPY",
+        "terrinZoom": 0.1,
+        "palette": [
+            "STRIPPED_JUNGLE_WOOD",
+            "minecraft:jungle_leaves[persistent=true]",
+            "STRIPPED_JUNGLE_WOOD",
+            "minecraft:jungle_leaves[persistent=true]",
+            "STRIPPED_JUNGLE_WOOD",
+            "minecraft:jungle_leaves[persistent=true]",
+            "STRIPPED_JUNGLE_WOOD"
+        ]
+    },
+    "generators":[
+        {
+            "generator": "plain-cliffs",
+            "min": 32,
+            "max": 65
+        },
+        {
+            "generator": "wavy",
+            "min": 4,
+            "max": 6
+        },
+        {
+            "generator": "rough",
+            "min": -1,
+            "max": 2
+        }
+    ],
+    "derivative": "JUNGLE",
+    "biomeDispersion": "WISPY",
+    "biomeZoom": 3,
+    "biomeScatter": [
+        "BAMBOO_JUNGLE",
+        "DESERT"
+    ],
+    "biomeSkyScatter": [
+        "BAMBOO_JUNGLE",
+        "JUNGLE"
+    ]
+}
