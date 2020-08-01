@@ -1,31 +1,72 @@
 {
-    "environment": "NORMAL",
-    "fluidHeight": 63,
-    "biomeZoom": 1,
-    "dimensionAngleDeg": 12,
-    "terrainZoom": 1,
-    "interpolationFunction": "BILINEAR",
-    "interpolationScale": 80,
-    "interpolationSurfaceFunction": "BILINEAR",
-    "interpolationSurfaceScale": 40,
-    "roughnessHeight": 1,
-    "coordFractureZoom": 2,
-    "coordFractureDistance": 222,
-    "hermiteTension": 1,
-    "landZoom": 4,
-    "debugFastPregen": true,
-    "seaZoom": 0.3,
-    "continentZoom": 0.2,
-    "hermiteBias": 0.5,
-    "placeObjects": false,
     "decorate": false,
-    "caves": false,
-    "postProcess": false,
-    "caveScale": 1,
+    "landZoom": 1.5,
+    "regions": ["example-region"],
+    "seaZoom": 1,
+    "mirrorCeiling": false,
+    "biomeZoom": 5,
+    "rockPalette": ["STONE"],
+    "interpolationScale": 63,
+    "focus": "",
+    "loadKey": "test",
+    "carving": false,
+    "carvingEnvelope": 0.335,
+    "continentZoom": 1,
+    "rockZoom": 5,
+    "carvingSliverThickness": 5.5,
+    "postProcessing": false,
+    "roughnessZoom": 2,
+    "interpolationFunction": "BICUBIC",
+    "mutations": [],
+    "terrainZoom": 2,
+    "coordFractureZoom": 8,
+    "carvingMin": 115,
+    "fluidHeight": 63,
+    "coordFractureDistance": 20,
+    "carvingMax": 239,
+    "ceiling": "",
+    "postProcessors": [
+        {
+            "phase": 0,
+            "processor": "nib-smoother"
+        },
+        {
+            "phase": 0,
+            "processor": "floating-block-remover"
+        },
+        {
+            "phase": 0,
+            "processor": "pothole-filler"
+        },
+        {
+            "phase": 0,
+            "processor": "wall-painter"
+        },
+        {
+            "phase": 0,
+            "processor": "slabber"
+        },
+        {
+            "phase": 1,
+            "processor": "waterlogger"
+        }
+    ],
     "caveThickness": 1,
+    "fluidPalette": ["WATER"],
+    "caves": false,
+    "carvingRippleThickness": 3,
+    "preventLeafDecay": false,
+    "caveBiomeZoom": 1,
+    "placeObjects": true,
+    "shoreZoom": 1,
+    "deposits": [],
     "caveShift": 0,
-    "roughnessZoom": 1,
-    "regions": [
-        "test"
-    ]
+    "carvingZoom": 3.5,
+    "environment": "NORMAL",
+    "roughnessHeight": 3,
+    "name": "Test",
+    "dimensionAngleDeg": 0,
+    "regionZoom": 1,
+    "caveScale": 1,
+    "dispersion": "SCATTER"
 }
