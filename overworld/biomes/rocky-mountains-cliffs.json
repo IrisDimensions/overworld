@@ -1,0 +1,106 @@
+{
+    "name": "Shattered Rock Mountains",
+    "rarity": 2,
+    "layers": [
+        {
+            "minHeight": 2,
+            "maxHeight": 3,
+            "palette": [
+                "STONE",
+                "ANDESITE",
+                "GRAVEL"
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "dispersion": "SCATTER",
+            "palette": [
+                "STONE",
+                "ANDESITE",
+                "STONE"
+            ]
+        }
+    ],
+    "wall": 
+    {
+        "dispersion": "SCATTER",
+        "palette": [
+            "STONE",
+            "ANDESITE",
+            "STONE"
+        ]
+    },
+    "generators":[
+        {
+            "generator": "plain",
+            "min": 11,
+            "max": 32
+        },
+        {
+            "generator": "mountain-cliffs",
+            "min": 12,
+            "max": 62
+        },
+        {
+            "generator": "rough",
+            "min": 1,
+            "max": 3
+        }
+    ],
+    "decorators": [
+        {
+            "zoom": 0.3,
+            "chance": 0.009,
+            "palette": [
+                "minecraft:stone_button[face=floor,facing=east,powered=false]",
+                "minecraft:stone_button[face=floor,facing=south,powered=false]"
+            ],
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        }
+    ],
+    "objects": [
+        {
+            "chance": 0.5,
+            "density": 1,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "boulder/boulder1",
+                "boulder/boulder2",
+                "boulder/boulder4",
+                "boulder/boulder5",
+                "boulder/boulder6",
+                "boulder/boulder7",
+                "boulder/boulder8"
+
+            ],
+            "translate": {
+                "x": 0,
+                "y": -3,
+                "z": 0
+            }
+        }
+    ],
+    "derivative": "MOUNTAINS",
+    "biomeDispersion": "WISPY",
+    "biomeZoom": 30,
+    "biomeScatter": [
+        "PLAINS",
+        "TAIGA_HILLS",
+        "MOUNTAINS",
+        "SWAMP"
+    ],
+    "biomeSkyScatter": [
+        "SNOWY_TAIGA",
+        "SNOWY_MOUNTAINS"
+    ]
+}

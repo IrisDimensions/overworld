@@ -1,0 +1,73 @@
+{
+    "name": "Coral Cavern",
+    "rarity": 2,
+    "layers": [
+        {
+            "maxHeight": 3,
+            "dispersion": "WISPY",
+            "terrainZoom": 0.1,
+            "minHeight": 2,
+            "palette": [
+                "DEAD_BRAIN_CORAL_BLOCK",
+                "DEAD_BRAIN_CORAL_BLOCK",
+                "DEAD_BRAIN_CORAL_BLOCK",
+                "DEAD_TUBE_CORAL_BLOCK",
+                "DEAD_BRAIN_CORAL_BLOCK",
+                "DEAD_FIRE_CORAL_BLOCK"
+            ]
+        }
+    ],
+    "slab": {
+        "dispersion": "SCATTER",
+        "terrainZoom": 0.5,
+        "palette": [
+            "minecraft:stone_slab[type=bottom,waterlogged=false]",
+            "minecraft:polished_diorite_slab[type=bottom,waterlogged=false]",
+            "AIR"
+        ]
+    },
+    "decorators": [
+        {
+            "zoom": 0.3,
+            "chance": 0.02,
+            "palette": [
+                "minecraft:sea_pickle[pickles=1,waterlogged=false]",
+                "minecraft:sea_pickle[pickles=2,waterlogged=false]", 
+                "minecraft:sea_pickle[pickles=3,waterlogged=false]"
+            ],
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        },
+        {
+            "zoom": 0.3,
+            "chance": 0.21,
+            "palette": [
+                "minecraft:dead_brain_coral[waterlogged=false]",
+                "minecraft:dead_bubble_coral[waterlogged=false]",
+                "minecraft:dead_fire_coral[waterlogged=false]",
+                "minecraft:dead_horn_coral[waterlogged=false]",
+                "minecraft:dead_tube_coral[waterlogged=false]",
+                "minecraft:dead_brain_coral_fan[waterlogged=false]",
+                "minecraft:dead_bubble_coral_fan[waterlogged=false]",
+                "minecraft:dead_fire_coral_fan[waterlogged=false]",
+                "minecraft:dead_horn_coral_fan[waterlogged=false]",
+                "minecraft:dead_tube_coral_fan[waterlogged=false]"
+            ],
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        }
+    ],
+    "generators":[
+        {
+            "generator": "plain",
+            "min": 4,
+            "max": 6
+        },
+        {
+            "generator": "wavy",
+            "min": 2,
+            "max": 5
+        }
+    ],
+    "derivative": "FOREST"
+}

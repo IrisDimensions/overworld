@@ -1,20 +1,21 @@
 {
-    "name": "Shattered Hot Ocean",
-    "rarity": 4,
+    "name": "Rocky Ocean",
+    "rarity": 3,
     "layers": [
         {
             "minHeight": 2,
             "maxHeight": 3,
             "dispersion": "WISPY",
+            "terrainZoom": 0.825,
             "palette": [
-                "SAND",
+                "STONE",
                 "CLAY",
-                "SAND",
+                "COBBLESTONE",
                 "GRAVEL",
-                "SAND",
+                "COBBLESTONE",
                 "DIRT",
-                "SAND",
-                "SAND"
+                "COBBLESTONE",
+                "ANDESITE"
             ]
         },
         {
@@ -37,30 +38,25 @@
         "dispersion": "WISPY",
         "palette": [
             "CLAY",
-            "SMOOTH_SANDSTONE",
-            "RED_SAND",
-            "SMOOTH_RED_SANDSTONE",
-            "SMOOTH_SANDSTONE",
-            "SAND",
-            "SMOOTH_RED_SANDSTONE"
+            "COBBLESTONE",
+            "STONE",
+            "ANDESITE"
         ]
     },
     "slab": {
         "dispersion": "SCATTER",
         "terrainZoom": 0.5,
         "palette": [
-            "minecraft:sandstone_slab[type=bottom,waterlogged=false]",
-            "minecraft:smooth_sandstone_slab[type=bottom,waterlogged=false]",
-            "AIR",
+            "minecraft:cobblestone_slab[type=bottom,waterlogged=false]",
             "AIR"
         ]
     },
     "generators":[
         {
-            "generator": "plain-cliffs-thin",
+            "generator": "plain",
             "min": -41,
             "max": -7
         }
     ],
-    "derivative": "SWAMP"
+    "derivative": "LUKEWARM_OCEAN"
 }
