@@ -1,0 +1,87 @@
+{
+    "name": "Mushroom Ocean",
+    "layers": [
+        {
+            "minHeight": 2,
+            "maxHeight": 3,
+            "dispersion": "WISPY",
+            "terrainZoom": 0.825,
+            "palette": [
+                "SAND",
+                "CLAY",
+                "SAND",
+                "GRAVEL",
+                "SAND",
+                "DIRT",
+                "SAND",
+                "SAND"
+            ]
+        },
+        {
+            "palette": [
+                "DIRT"
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                "DIRT",
+                "DIRT",
+                "COARSE_DIRT"
+            ]
+        }
+    ],
+    "decorators":[
+        {
+            "zoom": 20,
+            "chance": 0.1,
+            "palette": [
+                "SEAGRASS"
+            ],
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        },
+        {
+            "zoom": 2.25,
+            "chance": 0.09,
+            "palette": [
+                "LILY_PAD"
+            ],
+            "partOf": "SEA_SURFACE",
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        }
+    ],
+    "wall": 
+    {
+        "dispersion": "WISPY",
+        "palette": [
+            "CLAY",
+            "SMOOTH_SANDSTONE",
+            "RED_SAND",
+            "SMOOTH_RED_SANDSTONE",
+            "SMOOTH_SANDSTONE",
+            "SAND",
+            "SMOOTH_RED_SANDSTONE"
+        ]
+    },
+    "slab": {
+        "dispersion": "SCATTER",
+        "terrainZoom": 0.5,
+        "palette": [
+            "minecraft:sandstone_slab[type=bottom,waterlogged=false]",
+            "minecraft:smooth_sandstone_slab[type=bottom,waterlogged=false]",
+            "AIR",
+            "AIR"
+        ]
+    },
+    "generators":[
+        {
+            "generator": "plain",
+            "min": -41,
+            "max": -7
+        }
+    ],
+    "derivative": "SWAMP"
+}
