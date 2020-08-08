@@ -182,7 +182,11 @@
                                     "description": "If set to true, air will be placed before the schematic places.",
                                     "type": "boolean"
                                 }
-                            }
+                            },
+                            "required": [
+                                "place",
+                                "chance"
+                            ]
                         },
                         "irispostprocessor": {
                             "description": "Represents a post processor",
@@ -198,7 +202,11 @@
                                     "description": "The processor to use. Take a look at the list of processors in docs.",
                                     "type": "string"
                                 }
-                            }
+                            },
+                            "required": [
+                                "phase",
+                                "processor"
+                            ]
                         },
                         "iriscompatabilityfilter": {
                             "description": "Find and replace object materials for compatability",
@@ -216,7 +224,11 @@
                                     "description": "When iris sees this block, and it's not reconized",
                                     "type": "string"
                                 }
-                            }
+                            },
+                            "required": [
+                                "when",
+                                "supplement"
+                            ]
                         },
                         "irisobjectreplace": {
                             "description": "Find and replace object materials",
@@ -234,7 +246,11 @@
                                     "description": "Exactly match the block data or not",
                                     "type": "boolean"
                                 }
-                            }
+                            },
+                            "required": [
+                                "find",
+                                "replace"
+                            ]
                         },
                         "irisbiomemutation": {
                             "description": "A biome mutation if a condition is met",
@@ -267,7 +283,13 @@
                                     "type": "array",
                                     "items": {"type": "string"}
                                 }
-                            }
+                            },
+                            "required": [
+                                "sideA",
+                                "sideB",
+                                "radius",
+                                "checks"
+                            ]
                         },
                         "irisdepositgenerator": {
                             "description": "Creates ore & other block deposits underground",
@@ -320,7 +342,16 @@
                                     "type": "integer",
                                     "minimum": 1
                                 }
-                            }
+                            },
+                            "required": [
+                                "minHeight",
+                                "maxHeight",
+                                "minSize",
+                                "maxSize",
+                                "maxPerChunk",
+                                "minPerChunk",
+                                "palette"
+                            ]
                         }
                     },
                     "properties": {
@@ -395,16 +426,6 @@
                         "postProcessing": {
                             "description": "Use post processing or not",
                             "type": "boolean"
-                        },
-                        "interpolationFunction": {
-                            "description": "The interpolation function for splicing noise maxes together",
-                            "type": "string",
-                            "enum": [
-                                "NONE",
-                                "BILINEAR",
-                                "BICUBIC",
-                                "HERMITE"
-                            ]
                         },
                         "mutations": {
                             "description": "Define biome mutations for this dimension",
@@ -507,6 +528,14 @@
                             "type": "array",
                             "items": {"$ref": "#/definitions/irisdepositgenerator"}
                         },
+                        "rockDispersion": {
+                            "description": "The dispersion of materials for the rock palette",
+                            "type": "string",
+                            "enum": [
+                                "SCATTER",
+                                "WISPY"
+                            ]
+                        },
                         "vanillaStructures": {
                             "description": "Generate vanilla structures",
                             "type": "boolean"
@@ -556,17 +585,15 @@
                             "description": "The cave web scale. Smaller values means scaled up vein networks.",
                             "type": "number",
                             "minimum": 1.0E-4
-                        },
-                        "dispersion": {
-                            "description": "The dispersion of materials for the rock palette",
-                            "type": "string",
-                            "enum": [
-                                "SCATTER",
-                                "WISPY"
-                            ]
                         }
                     },
-                    "required": [],
+                    "required": [
+                        "name",
+                        "version",
+                        "environment",
+                        "regions",
+                        "fluidHeight"
+                    ],
                     "$id": "http://volmit.com/iris-schema/irisdimension.json"
                 },
                 "fileMatch": ["/dimensions/*.json"]
@@ -747,7 +774,11 @@
                                     "description": "If set to true, air will be placed before the schematic places.",
                                     "type": "boolean"
                                 }
-                            }
+                            },
+                            "required": [
+                                "place",
+                                "chance"
+                            ]
                         },
                         "iriseffect": {
                             "description": "An iris effect",
@@ -1980,7 +2011,11 @@
                                     "type": "integer",
                                     "minimum": 1
                                 }
-                            }
+                            },
+                            "required": [
+                                "interval",
+                                "chance"
+                            ]
                         },
                         "irisbiomedecorator": {
                             "description": "A biome decorator is used for placing flowers, grass, cacti and so on",
@@ -2052,7 +2087,11 @@
                                     "type": "integer",
                                     "minimum": 1
                                 }
-                            }
+                            },
+                            "required": [
+                                "chance",
+                                "palette"
+                            ]
                         },
                         "irisbiomepalettelayer": {
                             "description": "A layer of surface / subsurface material in biomes",
@@ -2088,7 +2127,8 @@
                                         "WISPY"
                                     ]
                                 }
-                            }
+                            },
+                            "required": ["palette"]
                         },
                         "irisstructureplacement": {
                             "description": "Represents a structure placement",
@@ -2125,7 +2165,12 @@
                                     "type": "integer",
                                     "minimum": -1
                                 }
-                            }
+                            },
+                            "required": [
+                                "tileset",
+                                "zoom",
+                                "rarity"
+                            ]
                         },
                         "irisobjectreplace": {
                             "description": "Find and replace object materials",
@@ -2143,7 +2188,11 @@
                                     "description": "Exactly match the block data or not",
                                     "type": "boolean"
                                 }
-                            }
+                            },
+                            "required": [
+                                "find",
+                                "replace"
+                            ]
                         },
                         "irisdepositgenerator": {
                             "description": "Creates ore & other block deposits underground",
@@ -2196,7 +2245,16 @@
                                     "type": "integer",
                                     "minimum": 1
                                 }
-                            }
+                            },
+                            "required": [
+                                "minHeight",
+                                "maxHeight",
+                                "minSize",
+                                "maxSize",
+                                "maxPerChunk",
+                                "minPerChunk",
+                                "palette"
+                            ]
                         },
                         "enumbiome": {
                             "type": "string",
@@ -2302,7 +2360,11 @@
                                     "description": "The generator id",
                                     "type": "string"
                                 }
-                            }
+                            },
+                            "required": [
+                                "min",
+                                "max"
+                            ]
                         }
                     },
                     "properties": {
@@ -2550,7 +2612,12 @@
                             "minimum": 1
                         }
                     },
-                    "required": [],
+                    "required": [
+                        "name",
+                        "derivative",
+                        "layers",
+                        "generators"
+                    ],
                     "$id": "http://volmit.com/iris-schema/irisbiome.json"
                 },
                 "fileMatch": ["/biomes/*.json"]
@@ -3793,7 +3860,11 @@
                                     "type": "integer",
                                     "minimum": 1
                                 }
-                            }
+                            },
+                            "required": [
+                                "interval",
+                                "chance"
+                            ]
                         },
                         "irisstructureplacement": {
                             "description": "Represents a structure placement",
@@ -3830,7 +3901,12 @@
                                     "type": "integer",
                                     "minimum": -1
                                 }
-                            }
+                            },
+                            "required": [
+                                "tileset",
+                                "zoom",
+                                "rarity"
+                            ]
                         },
                         "irisregionridge": {
                             "description": "A ridge config",
@@ -3936,7 +4012,12 @@
                                     "description": "The chance scale (cell chances)",
                                     "type": "number"
                                 }
-                            }
+                            },
+                            "required": [
+                                "biome",
+                                "type",
+                                "chance"
+                            ]
                         },
                         "irisregionspot": {
                             "description": "A spot config",
@@ -4027,7 +4108,12 @@
                                     "type": "number",
                                     "minimum": 1
                                 }
-                            }
+                            },
+                            "required": [
+                                "biome",
+                                "type",
+                                "rarity"
+                            ]
                         },
                         "irisdepositgenerator": {
                             "description": "Creates ore & other block deposits underground",
@@ -4080,7 +4166,16 @@
                                     "type": "integer",
                                     "minimum": 1
                                 }
-                            }
+                            },
+                            "required": [
+                                "minHeight",
+                                "maxHeight",
+                                "minSize",
+                                "maxSize",
+                                "maxPerChunk",
+                                "minPerChunk",
+                                "palette"
+                            ]
                         }
                     },
                     "properties": {
@@ -4212,7 +4307,12 @@
                             "minimum": 1
                         }
                     },
-                    "required": [],
+                    "required": [
+                        "name",
+                        "landBiomes",
+                        "seaBiomes",
+                        "shoreBiomes"
+                    ],
                     "$id": "http://volmit.com/iris-schema/irisregion.json"
                 },
                 "fileMatch": ["/regions/*.json"]
@@ -4291,7 +4391,8 @@
                                 "description": "The exponent noise^EXPONENT",
                                 "type": "number"
                             }
-                        }
+                        },
+                        "required": ["seed"]
                     }},
                     "properties": {
                         "cellPercentSize": {
@@ -4440,7 +4541,11 @@
                             "minimum": 0.001
                         }
                     },
-                    "required": [],
+                    "required": [
+                        "seed",
+                        "interpolationFunction",
+                        "interpolationScale"
+                    ],
                     "$id": "http://volmit.com/iris-schema/irisgenerator.json"
                 },
                 "fileMatch": ["/generators/*.json"]
@@ -4514,7 +4619,16 @@
                                     "NEVER"
                                 ]
                             }
-                        }
+                        },
+                        "required": [
+                            "ceiling",
+                            "floor",
+                            "north",
+                            "south",
+                            "east",
+                            "west",
+                            "objects"
+                        ]
                     }},
                     "properties": {
                         "gridHeight": {
@@ -4555,7 +4669,13 @@
                             "type": "boolean"
                         }
                     },
-                    "required": [],
+                    "required": [
+                        "name",
+                        "gridSize",
+                        "gridHeight",
+                        "wallChance",
+                        "tiles"
+                    ],
                     "$id": "http://volmit.com/iris-schema/irisstructure.json"
                 },
                 "fileMatch": ["/structures/*.json"]
