@@ -1,11 +1,11 @@
 {
-    "name": "Murky Stronghold",
+    "name": "Example Temple",
     "gridSize": 5,
     "gridHeight": 6,
-    "maxLayers": 1,
+    "maxLayers": 4,
     "mergeEdges": false,
-    "wallChanceZoom": 0.25,
-    "wallChance": 0.31,
+    "wallChanceZoom": 1,
+    "wallChance": 0.45,
     "tiles": [
         {
             "ceiling": "REQUIRED",
@@ -18,16 +18,57 @@
                 "structure/murky-stronghold/fc-x-1",
                 "structure/murky-stronghold/fc-x-2",
                 "structure/murky-stronghold/fc-x-3",
-                "structure/murky-stronghold/fc-x-4"
+                "structure/murky-stronghold/fc-x-4",
+                "structure/murky-stronghold/fc-x-5",
+                "structure/murky-stronghold/fc-x-6",
+                "structure/murky-stronghold/fc-x-7",
+                "structure/murky-stronghold/fc-x-8"
             ]
         },
         {
             "ceiling": "REQUIRED",
-            "floor": "REQUIRED",
-            "north": "REQUIRED",
+            "floor": "NEVER",
+            "north": "NEVER",
             "south": "NEVER",
-            "east": "REQUIRED",                 
+            "east": "NEVER",                 
             "west": "NEVER",
+            "objects": [
+                "structure/murky-stronghold/c-x-1",
+                "structure/murky-stronghold/c-x-2",
+                "structure/murky-stronghold/c-x-3",
+                "structure/murky-stronghold/c-x-4",
+                "structure/murky-stronghold/c-x-5",
+                "structure/murky-stronghold/c-x-6"
+            ]
+        },
+        {
+            "ceiling": "NEVER",
+            "floor": "REQUIRED",
+            "north": "NEVER",
+            "south": "NEVER",
+            "east": "NEVER",                 
+            "west": "NEVER",
+            "objects": [
+                "structure/murky-stronghold/f-x-1",
+                "structure/murky-stronghold/f-x-2",
+                "structure/murky-stronghold/f-x-3",
+                "structure/murky-stronghold/f-x-4",
+                "structure/murky-stronghold/f-x-5",
+                "structure/murky-stronghold/f-x-6"
+            ]
+        },
+        
+
+
+
+        
+        {
+            "ceiling": "REQUIRED",
+            "floor": "REQUIRED",
+            "north": "NEVER",
+            "south": "REQUIRED",
+            "east": "NEVER",                 
+            "west": "REQUIRED",
             "objects": [
                 "structure/murky-stronghold/fc-sw-1",
                 "structure/murky-stronghold/fc-sw-2",
@@ -36,40 +77,92 @@
             ]
         },
         {
-            "ceiling": "REQUIRED",
+            "ceiling": "NEVER",
             "floor": "REQUIRED",
             "north": "NEVER",
-            "south": "NEVER",
-            "east": "REQUIRED",                 
-            "west": "NEVER",
-            "objects": [
-                "structure/murky-stronghold/fc-nws-1",
-                "structure/murky-stronghold/fc-nws-2",
-                "structure/murky-stronghold/fc-nws-3",
-                "structure/murky-stronghold/fc-nws-4"
-            ]
-        },
-        {
-            "ceiling": "REQUIRED",
-            "floor": "REQUIRED",
-            "north": "NEVER",
-            "south": "NEVER",
-            "east": "REQUIRED",                 
-            "west": "NEVER",
-            "objects": [
-                "structure/murky-stronghold/fc-nws-1",
-                "structure/murky-stronghold/fc-nws-2",
-                "structure/murky-stronghold/fc-nws-3",
-                "structure/murky-stronghold/fc-nws-4"
-            ]
-        },
-        {
-            "ceiling": "REQUIRED",
-            "floor": "REQUIRED",
-            "north": "NEVER",
-            "south": "NEVER",
-            "east": "REQUIRED",                 
+            "south": "REQUIRED",
+            "east": "NEVER",                 
             "west": "REQUIRED",
+            "objects": [
+                "structure/murky-stronghold/f-sw-1",
+                "structure/murky-stronghold/f-sw-2",
+                "structure/murky-stronghold/f-sw-3",
+                "structure/murky-stronghold/f-sw-4"
+            ]
+        },
+        {
+            "ceiling": "REQUIRED",
+            "floor": "NEVER",
+            "north": "NEVER",
+            "south": "REQUIRED",
+            "east": "NEVER",                 
+            "west": "REQUIRED",
+            "objects": [
+                "structure/murky-stronghold/c-sw-1",
+                "structure/murky-stronghold/c-sw-2",
+                "structure/murky-stronghold/c-sw-3",
+                "structure/murky-stronghold/c-sw-4"
+            ]
+        },
+
+
+
+
+
+        {
+            "ceiling": "REQUIRED",
+            "floor": "REQUIRED",
+            "north": "REQUIRED",
+            "south": "REQUIRED",
+            "east": "NEVER",                 
+            "west": "REQUIRED",
+            "objects": [
+                "structure/murky-stronghold/fc-nsw-1",
+                "structure/murky-stronghold/fc-nsw-2",
+                "structure/murky-stronghold/fc-nsw-3",
+                "structure/murky-stronghold/fc-nsw-4"
+            ]
+        },
+        {
+            "ceiling": "NEVER",
+            "floor": "REQUIRED",
+            "north": "REQUIRED",
+            "south": "REQUIRED",
+            "east": "NEVER",                 
+            "west": "REQUIRED",
+            "objects": [
+                "structure/murky-stronghold/f-nsw-1",
+                "structure/murky-stronghold/f-nsw-2",
+                "structure/murky-stronghold/f-nsw-3",
+                "structure/murky-stronghold/f-nsw-4"
+            ]
+        },
+        {
+            "ceiling": "REQUIRED",
+            "floor": "NEVER",
+            "north": "REQUIRED",
+            "south": "REQUIRED",
+            "east": "NEVER",                 
+            "west": "REQUIRED",
+            "objects": [
+                "structure/murky-stronghold/c-nsw-1",
+                "structure/murky-stronghold/c-nsw-2",
+                "structure/murky-stronghold/c-nsw-3",
+                "structure/murky-stronghold/c-nsw-4"
+            ]
+        },
+
+
+
+
+
+        {
+            "ceiling": "REQUIRED",
+            "floor": "REQUIRED",
+            "north": "REQUIRED",
+            "south": "REQUIRED",
+            "east": "NEVER",                 
+            "west": "NEVER",
             "objects": [
                 "structure/murky-stronghold/fc-ns-1",
                 "structure/murky-stronghold/fc-ns-2",
@@ -79,18 +172,80 @@
         },
         {
             "ceiling": "REQUIRED",
+            "floor": "NEVER",
+            "north": "REQUIRED",
+            "south": "REQUIRED",
+            "east": "NEVER",                 
+            "west": "NEVER",
+            "objects": [
+                "structure/murky-stronghold/c-ns-1",
+                "structure/murky-stronghold/c-ns-2",
+                "structure/murky-stronghold/c-ns-3",
+                "structure/murky-stronghold/c-ns-4"
+            ]
+        },
+        {
+            "ceiling": "REQUIRED",
+            "floor": "NEVER",
+            "north": "REQUIRED",
+            "south": "REQUIRED",
+            "east": "NEVER",                 
+            "west": "NEVER",
+            "objects": [
+                "structure/murky-stronghold/c-ns-1",
+                "structure/murky-stronghold/c-ns-2",
+                "structure/murky-stronghold/c-ns-3",
+                "structure/murky-stronghold/c-ns-4"
+            ]
+        },
+
+
+
+
+
+        {
+            "ceiling": "REQUIRED",
             "floor": "REQUIRED",
             "north": "REQUIRED",
             "south": "NEVER",
             "east": "NEVER",                 
             "west": "NEVER",
             "objects": [
-                "structure/murky-stronghold/fc-esw-1",
-                "structure/murky-stronghold/fc-esw-2",
-                "structure/murky-stronghold/fc-esw-3",
-                "structure/murky-stronghold/fc-esw-4"
+                "structure/murky-stronghold/fc-n-1",
+                "structure/murky-stronghold/fc-n-2",
+                "structure/murky-stronghold/fc-n-3",
+                "structure/murky-stronghold/fc-n-4"
+            ]
+        },
+        {
+            "ceiling": "NEVER",
+            "floor": "REQUIRED",
+            "north": "REQUIRED",
+            "south": "NEVER",
+            "east": "NEVER",                 
+            "west": "NEVER",
+            "objects": [
+                "structure/murky-stronghold/f-n-1",
+                "structure/murky-stronghold/f-n-2",
+                "structure/murky-stronghold/f-n-3",
+                "structure/murky-stronghold/f-n-4"
+            ]
+        },
+        {
+            "ceiling": "REQUIRED",
+            "floor": "NEVER",
+            "north": "REQUIRED",
+            "south": "NEVER",
+            "east": "NEVER",                 
+            "west": "NEVER",
+            "objects": [
+                "structure/murky-stronghold/c-n-1",
+                "structure/murky-stronghold/c-n-2",
+                "structure/murky-stronghold/c-n-3",
+                "structure/murky-stronghold/c-n-4"
             ]
         }
+
     ],
     "dispersion": "WISPY"
 }
