@@ -70,7 +70,7 @@
                                                 },
                                                 "interval": {
                                                     "maximum": 360,
-                                                    "description": "Iris spins the axis but not freely. For example an interval of 90 would mean 4 possible angles (right angles) degrees",
+                                                    "description": "Iris spins the axis but not freely. For example an interval of 90 would mean 4 possible angles (right angles) degrees. \nSetting this to 0 means totally free rotation.\n\nNote that a lot of structures can have issues with non 90 degree intervals because the minecraft block resolution is so low.",
                                                     "type": "number",
                                                     "minimum": 0
                                                 },
@@ -98,7 +98,7 @@
                                                 },
                                                 "interval": {
                                                     "maximum": 360,
-                                                    "description": "Iris spins the axis but not freely. For example an interval of 90 would mean 4 possible angles (right angles) degrees",
+                                                    "description": "Iris spins the axis but not freely. For example an interval of 90 would mean 4 possible angles (right angles) degrees. \nSetting this to 0 means totally free rotation.\n\nNote that a lot of structures can have issues with non 90 degree intervals because the minecraft block resolution is so low.",
                                                     "type": "number",
                                                     "minimum": 0
                                                 },
@@ -126,7 +126,7 @@
                                                 },
                                                 "interval": {
                                                     "maximum": 360,
-                                                    "description": "Iris spins the axis but not freely. For example an interval of 90 would mean 4 possible angles (right angles) degrees",
+                                                    "description": "Iris spins the axis but not freely. For example an interval of 90 would mean 4 possible angles (right angles) degrees. \nSetting this to 0 means totally free rotation.\n\nNote that a lot of structures can have issues with non 90 degree intervals because the minecraft block resolution is so low.",
                                                     "type": "number",
                                                     "minimum": 0
                                                 },
@@ -614,7 +614,7 @@
             {
                 "schema": {
                     "$schema": "http://json-schema.org/draft-07/schema#",
-                    "description": "Represents a biome in iris.",
+                    "description": "Represents a biome in iris. Biomes are placed inside of regions and hold objects.",
                     "title": "Biome",
                     "type": "object",
                     "definitions": {
@@ -675,7 +675,7 @@
                                                 },
                                                 "interval": {
                                                     "maximum": 360,
-                                                    "description": "Iris spins the axis but not freely. For example an interval of 90 would mean 4 possible angles (right angles) degrees",
+                                                    "description": "Iris spins the axis but not freely. For example an interval of 90 would mean 4 possible angles (right angles) degrees. \nSetting this to 0 means totally free rotation.\n\nNote that a lot of structures can have issues with non 90 degree intervals because the minecraft block resolution is so low.",
                                                     "type": "number",
                                                     "minimum": 0
                                                 },
@@ -703,7 +703,7 @@
                                                 },
                                                 "interval": {
                                                     "maximum": 360,
-                                                    "description": "Iris spins the axis but not freely. For example an interval of 90 would mean 4 possible angles (right angles) degrees",
+                                                    "description": "Iris spins the axis but not freely. For example an interval of 90 would mean 4 possible angles (right angles) degrees. \nSetting this to 0 means totally free rotation.\n\nNote that a lot of structures can have issues with non 90 degree intervals because the minecraft block resolution is so low.",
                                                     "type": "number",
                                                     "minimum": 0
                                                 },
@@ -731,7 +731,7 @@
                                                 },
                                                 "interval": {
                                                     "maximum": 360,
-                                                    "description": "Iris spins the axis but not freely. For example an interval of 90 would mean 4 possible angles (right angles) degrees",
+                                                    "description": "Iris spins the axis but not freely. For example an interval of 90 would mean 4 possible angles (right angles) degrees. \nSetting this to 0 means totally free rotation.\n\nNote that a lot of structures can have issues with non 90 degree intervals because the minecraft block resolution is so low.",
                                                     "type": "number",
                                                     "minimum": 0
                                                 },
@@ -2416,7 +2416,7 @@
                             "items": {"$ref": "#/definitions/irisstructureplacement"}
                         },
                         "biomeDispersion": {
-                            "description": "This changes the dispersion of the biome colors if multiple derivatives are chosen",
+                            "description": "This changes the dispersion of the biome colors if multiple derivatives are chosen.",
                             "type": "string",
                             "enum": [
                                 "SCATTER",
@@ -2553,7 +2553,7 @@
                         },
                         "effects": {
                             "minItems": 1,
-                            "description": "The name of the region",
+                            "description": "Effects are ambient effects such as potion effects, random sounds, or even particles around each player. All of these effects are played via packets so two players won't see/hear each others effects.\nDue to performance reasons, effects will play arround the player even if where the effect was played is no longer in the biome the player is in.",
                             "type": "array",
                             "items": {"$ref": "#/definitions/iriseffect"}
                         },
@@ -4332,7 +4332,7 @@
                         },
                         "effects": {
                             "minItems": 1,
-                            "description": "The name of the region",
+                            "description": "Effects are ambient effects such as potion effects, random sounds, or even particles around each player. All of these effects are played via packets so two players won't see/hear each others effects.\nDue to performance reasons, effects will play arround the player even if where the effect was played is no longer in the biome the player is in.",
                             "type": "array",
                             "items": {"$ref": "#/definitions/iriseffect"}
                         },
