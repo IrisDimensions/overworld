@@ -1,0 +1,521 @@
+{
+    "settings": {
+        "files.autoSave": "onFocusChange",
+        "workbench.tips.enabled": false,
+        "workbench.colorTheme": "Monokai",
+        "workbench.preferredDarkColorTheme": "Solarized Dark",
+        "workbench.tree.indent": 24,
+    },
+    "folders": [{"path": "."}],
+    "json.schemas": [
+        {
+            "schema": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "description": "Represents a dimension",
+                "title": "Dimension",
+                "type": "object",
+                "properties": {
+                    "decorate": {
+                        "description": "Generate decorations or not",
+                        "type": "boolean"
+                    },
+                    "landZoom": {
+                        "description": "This zooms in the land space",
+                        "type": "number"
+                    },
+                    "regions": {
+                        "description": "Define all of the regions to include in this dimension. Dimensions -> Regions -> Biomes -> Objects etc",
+                        "type": "array"
+                    },
+                    "seaZoom": {
+                        "description": "This zooms oceanic biomes",
+                        "type": "number"
+                    },
+                    "mirrorCeiling": {
+                        "description": "Mirrors the generator floor into the ceiling. Think nether but worse...",
+                        "type": "boolean"
+                    },
+                    "biomeZoom": {
+                        "description": "Zoom in or out the biome size. Higher = bigger biomes",
+                        "type": "number"
+                    },
+                    "rockPalette": {
+                        "description": "The palette of blocks for 'stone'",
+                        "type": "array"
+                    },
+                    "focus": {
+                        "description": "Keep this either undefined or empty. Setting any biome name into this will force iris to only generate the specified biome. Great for testing.",
+                        "type": "string"
+                    },
+                    "carving": {
+                        "description": "Carve terrain or not",
+                        "type": "boolean"
+                    },
+                    "carvingEnvelope": {
+                        "description": "How much of 3D space is carved out. Higher values make carvings cross into 3d space more often (bigger)",
+                        "type": "number"
+                    },
+                    "continentZoom": {
+                        "description": "Zoom in continents",
+                        "type": "number"
+                    },
+                    "rockZoom": {
+                        "description": "The rock zoom mostly for zooming in on a wispy palette",
+                        "type": "number"
+                    },
+                    "carvingSliverThickness": {
+                        "description": "The thickness of carvings (vertical)",
+                        "type": "number"
+                    },
+                    "postProcessing": {
+                        "description": "Use post processing or not",
+                        "type": "boolean"
+                    },
+                    "interpolationFunction": {
+                        "description": "The interpolation function for splicing noise maxes together",
+                        "type": "string"
+                    },
+                    "mutations": {
+                        "description": "Define biome mutations for this dimension",
+                        "type": "array"
+                    },
+                    "terrainZoom": {
+                        "description": "Zoom in or out the terrain. This stretches the terrain. Due to performance improvements, Higher than 2.0 may cause weird rounding artifacts. Lower = more terrain changes per block. Its a true zoom-out.",
+                        "type": "number"
+                    },
+                    "coordFractureZoom": {
+                        "description": "Coordinate fracturing zoom. Higher = less frequent warping, Lower = more frequent and rapid warping / swirls.",
+                        "type": "number"
+                    },
+                    "carvingMin": {
+                        "description": "Carving starts at this height",
+                        "type": "integer"
+                    },
+                    "fluidHeight": {
+                        "description": "The fluid height for this dimension",
+                        "type": "integer"
+                    },
+                    "regionShuffle": {
+                        "description": "The shuffle of regions",
+                        "type": "number"
+                    },
+                    "coordFractureDistance": {
+                        "description": "Coordinate fracturing applies noise to the input coordinates. This creates the 'iris swirls' and wavy features. The distance pushes these waves further into places they shouldnt be. This is a block value multiplier.",
+                        "type": "number"
+                    },
+                    "carvingMax": {
+                        "description": "The maximum height carving happens at",
+                        "type": "integer"
+                    },
+                    "ceiling": {
+                        "description": "The ceiling dimension. Leave blank for normal sky.",
+                        "type": "string"
+                    },
+                    "postProcessors": {
+                        "description": "Post Processors",
+                        "type": "array"
+                    },
+                    "caveThickness": {
+                        "description": "The Thickness scale of cave veins",
+                        "type": "number"
+                    },
+                    "fluidPalette": {
+                        "description": "The palette of blocks for 'water'",
+                        "type": "array"
+                    },
+                    "caves": {
+                        "description": "Generate caves or not.",
+                        "type": "boolean"
+                    },
+                    "continentalShuffle": {
+                        "description": "The shuffle of land vs sea",
+                        "type": "number"
+                    },
+                    "carvingRippleThickness": {
+                        "description": "The thickness of ripples on carved walls",
+                        "type": "number"
+                    },
+                    "preventLeafDecay": {
+                        "description": "Prevent Leaf decay as if placed in creative mode",
+                        "type": "boolean"
+                    },
+                    "placeObjects": {
+                        "description": "Disable this to stop placing schematics in biomes",
+                        "type": "boolean"
+                    },
+                    "version": {
+                        "description": "The version of this dimension. Changing this will stop users from accidentally upgrading (and breaking their worlds).",
+                        "type": "integer"
+                    },
+                    "deposits": {
+                        "description": "Define global deposit generators",
+                        "type": "array"
+                    },
+                    "vanillaStructures": {
+                        "description": "Generate vanilla structures",
+                        "type": "boolean"
+                    },
+                    "caveShift": {
+                        "description": "Shift the Y value of the cave networks up or down.",
+                        "type": "number"
+                    },
+                    "carvingZoom": {
+                        "description": "Carve terrain or not",
+                        "type": "number"
+                    },
+                    "environment": {
+                        "description": "The world environment",
+                        "type": "string"
+                    },
+                    "compatability": {
+                        "description": "Compatability filters",
+                        "type": "array"
+                    },
+                    "name": {
+                        "description": "The human readable name of this dimension",
+                        "type": "string"
+                    },
+                    "dimensionAngleDeg": {
+                        "description": "You can rotate the input coordinates by an angle. This can make terrain appear more natural (less sharp corners and lines). This literally rotates the entire dimension by an angle. Hint: Try 12 degrees or something not on a 90 or 45 degree angle.",
+                        "type": "number"
+                    },
+                    "regionZoom": {
+                        "description": "Change the size of regions",
+                        "type": "number"
+                    },
+                    "caveScale": {
+                        "description": "The cave web scale. Smaller values means scaled up vein networks.",
+                        "type": "number"
+                    },
+                    "dispersion": {
+                        "description": "The dispersion of materials for the rock palette",
+                        "type": "string"
+                    }
+                },
+                "required": [],
+                "$id": "http://volmit.com/iris-schema/irisdimension.json"
+            },
+            "fileMatch": ["/dimensions/*.json"]
+        },
+        {
+            "schema": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "description": "Represents a biome in iris.",
+                "title": "Biome",
+                "type": "object",
+                "properties": {
+                    "seaLayers": {
+                        "description": "This defines the layers of materials in this biome. Each layer has a palette and min/max height and some other properties. Usually a grassy/sandy layer then a dirt layer then a stone layer. Iris will fill in the remaining blocks below your layers with stone.",
+                        "type": "array"
+                    },
+                    "biomeSkyScatter": {
+                        "description": "Since 1.13 supports 3D biomes, you can add different derivative colors for anything above the terrain. (Think swampy tree leaves with a desert looking grass surface)",
+                        "type": "array"
+                    },
+                    "objects": {
+                        "description": "Objects define what schematics (iob files) iris will place in this biome",
+                        "type": "array"
+                    },
+                    "biomeZoom": {
+                        "description": "This zooms in the biome colors if multiple derivatives are chosen",
+                        "type": "number"
+                    },
+                    "structures": {
+                        "description": "A list of structure tilesets",
+                        "type": "array"
+                    },
+                    "biomeDispersion": {
+                        "description": "This changes the dispersion of the biome colors if multiple derivatives are chosen",
+                        "type": "string"
+                    },
+                    "derivative": {
+                        "description": "The raw derivative of this biome. This is required or the terrain will not properly generate. Use any vanilla biome type. Look in examples/biome-list.txt",
+                        "type": "string"
+                    },
+                    "deposits": {
+                        "description": "Define biome deposit generators that add onto the existing regional and global deposit generators",
+                        "type": "array"
+                    },
+                    "slab": {
+                        "description": "The default slab if iris decides to place a slab in this biome. Default is no slab.",
+                        "type": "object"
+                    },
+                    "effects": {
+                        "description": "The name of the region",
+                        "type": "array"
+                    },
+                    "children": {
+                        "description": "List any biome names (file names without.json) here as children. Portions of this biome can sometimes morph into their children. Iris supports cyclic relationships such as A > B > A > B. Iris will stop checking 9 biomes down the tree.",
+                        "type": "array"
+                    },
+                    "decorators": {
+                        "description": "Decorators are used for things like tall grass, bisected flowers, and even kelp or cactus (random heights)",
+                        "type": "array"
+                    },
+                    "name": {
+                        "description": "This is the human readable name for this biome. This can and should be different than the file name. This is not used for loading biomes in other objects.",
+                        "type": "string"
+                    },
+                    "layers": {
+                        "description": "This defines the layers of materials in this biome. Each layer has a palette and min/max height and some other properties. Usually a grassy/sandy layer then a dirt layer then a stone layer. Iris will fill in the remaining blocks below your layers with stone.",
+                        "type": "array"
+                    },
+                    "generators": {
+                        "description": "Generators for this biome. Multiple generators with different interpolation sizes will mix with other biomes how you would expect. This defines your biome height relative to the fluid height. Use negative for oceans.",
+                        "type": "array"
+                    },
+                    "childShrinkFactor": {
+                        "description": "If this biome has children biomes, and the gen layer chooses one of this biomes children, how much smaller will it be (inside of this biome). Higher values means a smaller biome relative to this biome's size. Set higher than 1.0 and below 3.0 for best results.",
+                        "type": "number"
+                    },
+                    "lockLayers": {
+                        "description": "Layers no longer descend from the surface block, they descend from the max possible height the biome can produce (constant) creating mesa like layers.",
+                        "type": "boolean"
+                    },
+                    "biomeScatter": {
+                        "description": "You can instead specify multiple biome derivatives to randomly scatter colors in this biome",
+                        "type": "array"
+                    },
+                    "wall": {
+                        "description": "The default wall if iris decides to place a wall higher than 2 blocks (steep hills or possibly cliffs)",
+                        "type": "object"
+                    },
+                    "rarity": {
+                        "description": "The rarity of this biome (integer)",
+                        "type": "integer"
+                    }
+                },
+                "required": [],
+                "$id": "http://volmit.com/iris-schema/irisbiome.json"
+            },
+            "fileMatch": ["/biomes/*.json"]
+        },
+        {
+            "schema": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "description": "Represents an iris region",
+                "title": "Region",
+                "type": "object",
+                "properties": {
+                    "islandBiomes": {
+                        "description": "A list of root-level biomes in this region. Don't specify child biomes of other biomes here. Just the root parents.",
+                        "type": "array"
+                    },
+                    "islandBiomeZoom": {
+                        "description": "How large island biomes are in this region",
+                        "type": "number"
+                    },
+                    "spotBiomes": {
+                        "description": "Spot biomes splotch themselves across this region like lakes",
+                        "type": "array"
+                    },
+                    "skylandBiomeZoom": {
+                        "description": "How large skyland biomes are in this region",
+                        "type": "number"
+                    },
+                    "caveBiomes": {
+                        "description": "A list of root-level biomes in this region. Don't specify child biomes of other biomes here. Just the root parents.",
+                        "type": "array"
+                    },
+                    "shoreHeightMin": {
+                        "description": "The min shore height",
+                        "type": "number"
+                    },
+                    "shoreBiomes": {
+                        "description": "A list of root-level biomes in this region. Don't specify child biomes of other biomes here. Just the root parents.",
+                        "type": "array"
+                    },
+                    "skylandBiomes": {
+                        "description": "A list of root-level biomes in this region. Don't specify child biomes of other biomes here. Just the root parents.",
+                        "type": "array"
+                    },
+                    "shoreHeightZoom": {
+                        "description": "The varience of the shore height",
+                        "type": "number"
+                    },
+                    "shoreRatio": {
+                        "description": "The shore ration (How much percent of land should be a shore)",
+                        "type": "number"
+                    },
+                    "ridgeBiomes": {
+                        "description": "Ridge biomes create a vein-like network like rivers through this region",
+                        "type": "array"
+                    },
+                    "biomeShuffle": {
+                        "description": "The scrambling between biomes",
+                        "type": "number"
+                    },
+                    "shoreBiomeZoom": {
+                        "description": "How large shore biomes are in this region",
+                        "type": "number"
+                    },
+                    "structures": {
+                        "description": "A list of structure tilesets",
+                        "type": "array"
+                    },
+                    "caveBiomeZoom": {
+                        "description": "How large cave biomes are in this region",
+                        "type": "number"
+                    },
+                    "landBiomes": {
+                        "description": "A list of root-level biomes in this region. Don't specify child biomes of other biomes here. Just the root parents.",
+                        "type": "array"
+                    },
+                    "seaBiomeZoom": {
+                        "description": "How large sea biomes are in this region",
+                        "type": "number"
+                    },
+                    "biomeImplosionRatio": {
+                        "description": "The biome implosion ratio, how much to implode biomes into children (chance)",
+                        "type": "number"
+                    },
+                    "seaBiomes": {
+                        "description": "A list of root-level biomes in this region. Don't specify child biomes of other biomes here. Just the root parents.",
+                        "type": "array"
+                    },
+                    "deposits": {
+                        "description": "Define regional deposit generators that add onto the global deposit generators",
+                        "type": "array"
+                    },
+                    "landBiomeZoom": {
+                        "description": "How large land biomes are in this region",
+                        "type": "number"
+                    },
+                    "effects": {
+                        "description": "The name of the region",
+                        "type": "array"
+                    },
+                    "name": {
+                        "description": "The name of the region",
+                        "type": "string"
+                    },
+                    "shoreHeightMax": {
+                        "description": "The the max shore height",
+                        "type": "number"
+                    },
+                    "rarity": {
+                        "description": "The rarity of the region",
+                        "type": "integer"
+                    }
+                },
+                "required": [],
+                "$id": "http://volmit.com/iris-schema/irisregion.json"
+            },
+            "fileMatch": ["/regions/*.json"]
+        },
+        {
+            "schema": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "description": "Represents a composite generator of noise gens",
+                "title": "Generator",
+                "type": "object",
+                "properties": {
+                    "cellPercentSize": {
+                        "description": "How big are the cells (X,Z) relative to the veins that touch them. Between 0 and 1. 0.1 means thick veins, small cells.",
+                        "type": "number"
+                    },
+                    "cellFractureHeight": {
+                        "description": "The height of fracture cells. Set to 0 to disable",
+                        "type": "number"
+                    },
+                    "seed": {
+                        "description": "The seed for this generator",
+                        "type": "integer"
+                    },
+                    "interpolationScale": {
+                        "description": "The interpolation distance scale (blocks) when two biomes use different heights but this same generator",
+                        "type": "number"
+                    },
+                    "zoom": {
+                        "description": "The zoom or frequency.",
+                        "type": "number"
+                    },
+                    "cliffHeightMin": {
+                        "description": "Cliff Height Min. Disable with 0 for min and max",
+                        "type": "number"
+                    },
+                    "cliffHeightGenerator": {
+                        "description": "The noise gen for cliff height.",
+                        "type": "object"
+                    },
+                    "offsetX": {
+                        "description": "The offset to shift this noise x",
+                        "type": "number"
+                    },
+                    "offsetZ": {
+                        "description": "The offset to shift this noise z",
+                        "type": "number"
+                    },
+                    "interpolationFunction": {
+                        "description": "The interpolation method when two biomes use different heights but this same generator",
+                        "type": "string"
+                    },
+                    "cellFractureShuffle": {
+                        "description": "Cell Fracture Coordinate Shuffling",
+                        "type": "number"
+                    },
+                    "composite": {
+                        "description": "The list of noise gens this gen contains.",
+                        "type": "array"
+                    },
+                    "opacity": {
+                        "description": "The opacity, essentially a multiplier on the output.",
+                        "type": "number"
+                    },
+                    "cliffHeightMax": {
+                        "description": "Cliff Height Max. Disable with 0 for min and max",
+                        "type": "number"
+                    },
+                    "cellFractureZoom": {
+                        "description": "The size of the cell fractures",
+                        "type": "number"
+                    }
+                },
+                "required": [],
+                "$id": "http://volmit.com/iris-schema/irisgenerator.json"
+            },
+            "fileMatch": ["/generators/*.json"]
+        },
+        {
+            "schema": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "description": "Represents a structure in iris.",
+                "title": "Structure",
+                "type": "object",
+                "properties": {
+                    "gridHeight": {
+                        "description": "This is the y size of each grid cell",
+                        "type": "integer"
+                    },
+                    "tiles": {
+                        "description": "The tiles",
+                        "type": "array"
+                    },
+                    "gridSize": {
+                        "description": "This is the x and z size of each grid cell",
+                        "type": "integer"
+                    },
+                    "wallChance": {
+                        "description": "This is the wall chance. Higher values makes more rooms and less open halls",
+                        "type": "number"
+                    },
+                    "maxLayers": {
+                        "description": "This is the maximum layers iris will generate for (height cells)",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "This is the human readable name for this structure. Such as Red Dungeon or Tropical Village.",
+                        "type": "string"
+                    },
+                    "mergeEdges": {
+                        "description": "Edges of tiles replace each other instead of having their own.",
+                        "type": "boolean"
+                    }
+                },
+                "required": [],
+                "$id": "http://volmit.com/iris-schema/irisstructure.json"
+            },
+            "fileMatch": ["/structures/*.json"]
+        }
+    ]
+}

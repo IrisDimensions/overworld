@@ -14,7 +14,6 @@
                     "type": "object",
                     "definitions": {
                         "irisobjectplacement": {
-                            "description": "Represents an iris object placer. It places objects.",
                             "type": "object",
                             "properties": {
                                 "chance": {
@@ -44,79 +43,7 @@
                                 },
                                 "rotation": {
                                     "description": "Rotate this objects placement",
-                                    "type": "object",
-                                    "properties": {
-                                        "yAxis": {
-                                            "description": "The y axis rotation",
-                                            "type": "object",
-                                            "properties": {
-                                                "min": {
-                                                    "description": "The minimum angle (from) or set this and max to zero for any angle degrees. Set both to the same non-zero value to force it to that angle only",
-                                                    "type": "number"
-                                                },
-                                                "max": {
-                                                    "description": "The maximum angle (to) or set this and min to zero for any angle degrees. Set both to the same non-zero value to force it to that angle only",
-                                                    "type": "number"
-                                                },
-                                                "interval": {
-                                                    "description": "Iris spins the axis but not freely. For example an interval of 90 would mean 4 possible angles (right angles) degrees",
-                                                    "type": "number"
-                                                },
-                                                "enabled": {
-                                                    "description": "Should this axis be rotated at all?",
-                                                    "type": "boolean"
-                                                }
-                                            }
-                                        },
-                                        "xAxis": {
-                                            "description": "The x axis rotation",
-                                            "type": "object",
-                                            "properties": {
-                                                "min": {
-                                                    "description": "The minimum angle (from) or set this and max to zero for any angle degrees. Set both to the same non-zero value to force it to that angle only",
-                                                    "type": "number"
-                                                },
-                                                "max": {
-                                                    "description": "The maximum angle (to) or set this and min to zero for any angle degrees. Set both to the same non-zero value to force it to that angle only",
-                                                    "type": "number"
-                                                },
-                                                "interval": {
-                                                    "description": "Iris spins the axis but not freely. For example an interval of 90 would mean 4 possible angles (right angles) degrees",
-                                                    "type": "number"
-                                                },
-                                                "enabled": {
-                                                    "description": "Should this axis be rotated at all?",
-                                                    "type": "boolean"
-                                                }
-                                            }
-                                        },
-                                        "zAxis": {
-                                            "description": "The z axis rotation",
-                                            "type": "object",
-                                            "properties": {
-                                                "min": {
-                                                    "description": "The minimum angle (from) or set this and max to zero for any angle degrees. Set both to the same non-zero value to force it to that angle only",
-                                                    "type": "number"
-                                                },
-                                                "max": {
-                                                    "description": "The maximum angle (to) or set this and min to zero for any angle degrees. Set both to the same non-zero value to force it to that angle only",
-                                                    "type": "number"
-                                                },
-                                                "interval": {
-                                                    "description": "Iris spins the axis but not freely. For example an interval of 90 would mean 4 possible angles (right angles) degrees",
-                                                    "type": "number"
-                                                },
-                                                "enabled": {
-                                                    "description": "Should this axis be rotated at all?",
-                                                    "type": "boolean"
-                                                }
-                                            }
-                                        },
-                                        "enabled": {
-                                            "description": "If this rotator is enabled or not",
-                                            "type": "boolean"
-                                        }
-                                    }
+                                    "type": "object"
                                 },
                                 "underwater": {
                                     "description": "If set to true, objects will place on the terrain height, ignoring the water surface.",
@@ -133,21 +60,7 @@
                                 },
                                 "translate": {
                                     "description": "Translate this object's placement",
-                                    "type": "object",
-                                    "properties": {
-                                        "x": {
-                                            "description": "The x shift in blocks",
-                                            "type": "integer"
-                                        },
-                                        "y": {
-                                            "description": "The x shift in blocks",
-                                            "type": "integer"
-                                        },
-                                        "z": {
-                                            "description": "The x shift in blocks",
-                                            "type": "integer"
-                                        }
-                                    }
+                                    "type": "object"
                                 },
                                 "bore": {
                                     "description": "If set to true, air will be placed before the schematic places.",
@@ -156,7 +69,6 @@
                             }
                         },
                         "irispostprocessor": {
-                            "description": "Represents a post processor",
                             "type": "object",
                             "properties": {
                                 "phase": {
@@ -170,7 +82,6 @@
                             }
                         },
                         "iriscompatabilityfilter": {
-                            "description": "Find and replace object materials for compatability",
                             "type": "object",
                             "properties": {
                                 "supplement": {
@@ -188,7 +99,6 @@
                             }
                         },
                         "irisobjectreplace": {
-                            "description": "Find and replace object materials",
                             "type": "object",
                             "properties": {
                                 "find": {
@@ -206,7 +116,6 @@
                             }
                         },
                         "irisbiomemutation": {
-                            "description": "A biome mutation if a condition is met",
                             "type": "object",
                             "properties": {
                                 "checks": {
@@ -235,7 +144,6 @@
                             }
                         },
                         "irisdepositgenerator": {
-                            "description": "Creates ore & other block deposits underground",
                             "type": "object",
                             "properties": {
                                 "minHeight": {
@@ -472,7 +380,6 @@
                     "type": "object",
                     "definitions": {
                         "irisobjectplacement": {
-                            "description": "Represents an iris object placer. It places objects.",
                             "type": "object",
                             "properties": {
                                 "chance": {
@@ -502,79 +409,7 @@
                                 },
                                 "rotation": {
                                     "description": "Rotate this objects placement",
-                                    "type": "object",
-                                    "properties": {
-                                        "yAxis": {
-                                            "description": "The y axis rotation",
-                                            "type": "object",
-                                            "properties": {
-                                                "min": {
-                                                    "description": "The minimum angle (from) or set this and max to zero for any angle degrees. Set both to the same non-zero value to force it to that angle only",
-                                                    "type": "number"
-                                                },
-                                                "max": {
-                                                    "description": "The maximum angle (to) or set this and min to zero for any angle degrees. Set both to the same non-zero value to force it to that angle only",
-                                                    "type": "number"
-                                                },
-                                                "interval": {
-                                                    "description": "Iris spins the axis but not freely. For example an interval of 90 would mean 4 possible angles (right angles) degrees",
-                                                    "type": "number"
-                                                },
-                                                "enabled": {
-                                                    "description": "Should this axis be rotated at all?",
-                                                    "type": "boolean"
-                                                }
-                                            }
-                                        },
-                                        "xAxis": {
-                                            "description": "The x axis rotation",
-                                            "type": "object",
-                                            "properties": {
-                                                "min": {
-                                                    "description": "The minimum angle (from) or set this and max to zero for any angle degrees. Set both to the same non-zero value to force it to that angle only",
-                                                    "type": "number"
-                                                },
-                                                "max": {
-                                                    "description": "The maximum angle (to) or set this and min to zero for any angle degrees. Set both to the same non-zero value to force it to that angle only",
-                                                    "type": "number"
-                                                },
-                                                "interval": {
-                                                    "description": "Iris spins the axis but not freely. For example an interval of 90 would mean 4 possible angles (right angles) degrees",
-                                                    "type": "number"
-                                                },
-                                                "enabled": {
-                                                    "description": "Should this axis be rotated at all?",
-                                                    "type": "boolean"
-                                                }
-                                            }
-                                        },
-                                        "zAxis": {
-                                            "description": "The z axis rotation",
-                                            "type": "object",
-                                            "properties": {
-                                                "min": {
-                                                    "description": "The minimum angle (from) or set this and max to zero for any angle degrees. Set both to the same non-zero value to force it to that angle only",
-                                                    "type": "number"
-                                                },
-                                                "max": {
-                                                    "description": "The maximum angle (to) or set this and min to zero for any angle degrees. Set both to the same non-zero value to force it to that angle only",
-                                                    "type": "number"
-                                                },
-                                                "interval": {
-                                                    "description": "Iris spins the axis but not freely. For example an interval of 90 would mean 4 possible angles (right angles) degrees",
-                                                    "type": "number"
-                                                },
-                                                "enabled": {
-                                                    "description": "Should this axis be rotated at all?",
-                                                    "type": "boolean"
-                                                }
-                                            }
-                                        },
-                                        "enabled": {
-                                            "description": "If this rotator is enabled or not",
-                                            "type": "boolean"
-                                        }
-                                    }
+                                    "type": "object"
                                 },
                                 "underwater": {
                                     "description": "If set to true, objects will place on the terrain height, ignoring the water surface.",
@@ -591,21 +426,7 @@
                                 },
                                 "translate": {
                                     "description": "Translate this object's placement",
-                                    "type": "object",
-                                    "properties": {
-                                        "x": {
-                                            "description": "The x shift in blocks",
-                                            "type": "integer"
-                                        },
-                                        "y": {
-                                            "description": "The x shift in blocks",
-                                            "type": "integer"
-                                        },
-                                        "z": {
-                                            "description": "The x shift in blocks",
-                                            "type": "integer"
-                                        }
-                                    }
+                                    "type": "object"
                                 },
                                 "bore": {
                                     "description": "If set to true, air will be placed before the schematic places.",
@@ -614,7 +435,6 @@
                             }
                         },
                         "iriseffect": {
-                            "description": "An iris effect",
                             "type": "object",
                             "properties": {
                                 "particleAltX": {
@@ -716,7 +536,6 @@
                             }
                         },
                         "irisbiomedecorator": {
-                            "description": "A biome decorator is used for placing flowers, grass, cacti and so on",
                             "type": "object",
                             "properties": {
                                 "partOf": {
@@ -763,7 +582,6 @@
                             }
                         },
                         "irisbiomepalettelayer": {
-                            "description": "A layer of surface / subsurface material in biomes",
                             "type": "object",
                             "properties": {
                                 "minHeight": {
@@ -790,7 +608,6 @@
                             }
                         },
                         "irisstructureplacement": {
-                            "description": "Represents a structure placement",
                             "type": "object",
                             "properties": {
                                 "tileset": {
@@ -820,7 +637,6 @@
                             }
                         },
                         "irisobjectreplace": {
-                            "description": "Find and replace object materials",
                             "type": "object",
                             "properties": {
                                 "find": {
@@ -838,7 +654,6 @@
                             }
                         },
                         "irisdepositgenerator": {
-                            "description": "Creates ore & other block deposits underground",
                             "type": "object",
                             "properties": {
                                 "minHeight": {
@@ -877,7 +692,6 @@
                             }
                         },
                         "irisbiomegeneratorlink": {
-                            "description": "This represents a link to a generator for a biome",
                             "type": "object",
                             "properties": {
                                 "min": {
@@ -935,30 +749,7 @@
                         },
                         "slab": {
                             "description": "The default slab if iris decides to place a slab in this biome. Default is no slab.",
-                            "type": "object",
-                            "properties": {
-                                "minHeight": {
-                                    "description": "The min thickness of this layer",
-                                    "type": "integer"
-                                },
-                                "terrainZoom": {
-                                    "description": "The terrain zoom mostly for zooming in on a wispy palette",
-                                    "type": "number"
-                                },
-                                "maxHeight": {
-                                    "description": "The max thickness of this layer",
-                                    "type": "integer"
-                                },
-                                "palette": {
-                                    "description": "The palette of blocks to be used in this layer",
-                                    "type": "array",
-                                    "items": {"type": "string"}
-                                },
-                                "dispersion": {
-                                    "description": "The dispersion of materials from the palette",
-                                    "type": "string"
-                                }
-                            }
+                            "type": "object"
                         },
                         "effects": {
                             "description": "The name of the region",
@@ -1004,30 +795,7 @@
                         },
                         "wall": {
                             "description": "The default wall if iris decides to place a wall higher than 2 blocks (steep hills or possibly cliffs)",
-                            "type": "object",
-                            "properties": {
-                                "minHeight": {
-                                    "description": "The min thickness of this layer",
-                                    "type": "integer"
-                                },
-                                "terrainZoom": {
-                                    "description": "The terrain zoom mostly for zooming in on a wispy palette",
-                                    "type": "number"
-                                },
-                                "maxHeight": {
-                                    "description": "The max thickness of this layer",
-                                    "type": "integer"
-                                },
-                                "palette": {
-                                    "description": "The palette of blocks to be used in this layer",
-                                    "type": "array",
-                                    "items": {"type": "string"}
-                                },
-                                "dispersion": {
-                                    "description": "The dispersion of materials from the palette",
-                                    "type": "string"
-                                }
-                            }
+                            "type": "object"
                         },
                         "rarity": {
                             "description": "The rarity of this biome (integer)",
@@ -1047,7 +815,6 @@
                     "type": "object",
                     "definitions": {
                         "iriseffect": {
-                            "description": "An iris effect",
                             "type": "object",
                             "properties": {
                                 "particleAltX": {
@@ -1149,7 +916,6 @@
                             }
                         },
                         "irisstructureplacement": {
-                            "description": "Represents a structure placement",
                             "type": "object",
                             "properties": {
                                 "tileset": {
@@ -1179,7 +945,6 @@
                             }
                         },
                         "irisregionridge": {
-                            "description": "A ridge config",
                             "type": "object",
                             "properties": {
                                 "as": {
@@ -1208,30 +973,7 @@
                                 },
                                 "air": {
                                     "description": "If the noise multiplier is below zero, what should the air be filled with?",
-                                    "type": "object",
-                                    "properties": {
-                                        "minHeight": {
-                                            "description": "The min thickness of this layer",
-                                            "type": "integer"
-                                        },
-                                        "terrainZoom": {
-                                            "description": "The terrain zoom mostly for zooming in on a wispy palette",
-                                            "type": "number"
-                                        },
-                                        "maxHeight": {
-                                            "description": "The max thickness of this layer",
-                                            "type": "integer"
-                                        },
-                                        "palette": {
-                                            "description": "The palette of blocks to be used in this layer",
-                                            "type": "array",
-                                            "items": {"type": "string"}
-                                        },
-                                        "dispersion": {
-                                            "description": "The dispersion of materials from the palette",
-                                            "type": "string"
-                                        }
-                                    }
+                                    "type": "object"
                                 },
                                 "type": {
                                     "description": "The type this biome should override (land sea or shore)",
@@ -1252,7 +994,6 @@
                             }
                         },
                         "irisregionspot": {
-                            "description": "A spot config",
                             "type": "object",
                             "properties": {
                                 "as": {
@@ -1273,30 +1014,7 @@
                                 },
                                 "air": {
                                     "description": "If the noise multiplier is below zero, what should the air be filled with?",
-                                    "type": "object",
-                                    "properties": {
-                                        "minHeight": {
-                                            "description": "The min thickness of this layer",
-                                            "type": "integer"
-                                        },
-                                        "terrainZoom": {
-                                            "description": "The terrain zoom mostly for zooming in on a wispy palette",
-                                            "type": "number"
-                                        },
-                                        "maxHeight": {
-                                            "description": "The max thickness of this layer",
-                                            "type": "integer"
-                                        },
-                                        "palette": {
-                                            "description": "The palette of blocks to be used in this layer",
-                                            "type": "array",
-                                            "items": {"type": "string"}
-                                        },
-                                        "dispersion": {
-                                            "description": "The dispersion of materials from the palette",
-                                            "type": "string"
-                                        }
-                                    }
+                                    "type": "object"
                                 },
                                 "type": {
                                     "description": "Where this spot overrides. Land sea or shore",
@@ -1313,7 +1031,6 @@
                             }
                         },
                         "irisdepositgenerator": {
-                            "description": "Creates ore & other block deposits underground",
                             "type": "object",
                             "properties": {
                                 "minHeight": {
@@ -1477,7 +1194,6 @@
                     "title": "Generator",
                     "type": "object",
                     "definitions": {"irisnoisegenerator": {
-                        "description": "A noise generator",
                         "type": "object",
                         "properties": {
                             "sinCentered": {
@@ -1570,70 +1286,7 @@
                         },
                         "cliffHeightGenerator": {
                             "description": "The noise gen for cliff height.",
-                            "type": "object",
-                            "properties": {
-                                "sinCentered": {
-                                    "description": "Apply a sin-center curve on the output (0, and 1 = 0 and 0.5 = 1.0 using a sinoid shape.)",
-                                    "type": "boolean"
-                                },
-                                "seed": {
-                                    "description": "The seed",
-                                    "type": "integer"
-                                },
-                                "parametric": {
-                                    "description": "Apply a parametric curve on the output",
-                                    "type": "boolean"
-                                },
-                                "zoom": {
-                                    "description": "The coordinate input zoom",
-                                    "type": "number"
-                                },
-                                "enabled": {
-                                    "description": "Enable / disable. Outputs offsetY if disabled",
-                                    "type": "boolean"
-                                },
-                                "fracture": {
-                                    "description": "Apply a child noise generator to fracture the input coordinates of this generator",
-                                    "type": "array",
-                                    "items": {"$ref": "#/definitions/irisnoisegenerator"}
-                                },
-                                "offsetX": {
-                                    "description": "Coordinate offset x",
-                                    "type": "number"
-                                },
-                                "octaves": {
-                                    "description": "Multiple octaves for multple generators of changing zooms added together",
-                                    "type": "integer"
-                                },
-                                "negative": {
-                                    "description": "Reverse the output. So that noise = -noise + opacity",
-                                    "type": "boolean"
-                                },
-                                "offsetZ": {
-                                    "description": "Coordinate offset z",
-                                    "type": "number"
-                                },
-                                "offsetY": {
-                                    "description": "Height output offset y",
-                                    "type": "number"
-                                },
-                                "irisBased": {
-                                    "description": "If this generator uses the default iris swirly/wispy noise generator. Set to false for pure simplex.",
-                                    "type": "boolean"
-                                },
-                                "opacity": {
-                                    "description": "The output multiplier",
-                                    "type": "number"
-                                },
-                                "bezier": {
-                                    "description": "Apply a bezier curve on the output",
-                                    "type": "boolean"
-                                },
-                                "exponent": {
-                                    "description": "The exponent noise^EXPONENT",
-                                    "type": "number"
-                                }
-                            }
+                            "type": "object"
                         },
                         "offsetX": {
                             "description": "The offset to shift this noise x",
@@ -1681,7 +1334,6 @@
                     "title": "Structure",
                     "type": "object",
                     "definitions": {"irisstructuretile": {
-                        "description": "Represents a structure tile",
                         "type": "object",
                         "properties": {
                             "ceiling": {
