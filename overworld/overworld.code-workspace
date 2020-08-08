@@ -33,6 +33,7 @@
                                     "minimum": 1
                                 },
                                 "edit": {
+                                    "minItems": 1,
                                     "description": "Find and replace blocks",
                                     "type": "array",
                                     "items": {"$ref": "#/definitions/irisobjectreplace"}
@@ -146,6 +147,7 @@
                                     "type": "boolean"
                                 },
                                 "place": {
+                                    "minItems": 1,
                                     "description": "List of objects to place",
                                     "type": "array",
                                     "items": {"type": "string"}
@@ -263,6 +265,7 @@
                                     "minimum": 1
                                 },
                                 "objects": {
+                                    "minItems": 1,
                                     "description": "Objects define what schematics (iob files) iris will place in this biome mutation",
                                     "type": "array",
                                     "items": {"$ref": "#/definitions/irisobjectplacement"}
@@ -274,11 +277,13 @@
                                     "minimum": 1
                                 },
                                 "sideB": {
+                                    "minItems": 1,
                                     "description": "One of The following biomes or regions must show up",
                                     "type": "array",
                                     "items": {"type": "string"}
                                 },
                                 "sideA": {
+                                    "minItems": 1,
                                     "description": "One of The following biomes or regions must show up",
                                     "type": "array",
                                     "items": {"type": "string"}
@@ -332,6 +337,7 @@
                                     "minimum": 1
                                 },
                                 "palette": {
+                                    "minItems": 1,
                                     "description": "The palette of blocks to be used in this deposit generator",
                                     "type": "array",
                                     "items": {"type": "string"}
@@ -366,6 +372,7 @@
                             "minimum": 1.0E-4
                         },
                         "regions": {
+                            "minItems": 1,
                             "description": "Define all of the regions to include in this dimension. Dimensions -> Regions -> Biomes -> Objects etc",
                             "type": "array",
                             "items": {"type": "string"}
@@ -387,6 +394,7 @@
                             "minimum": 1.0E-4
                         },
                         "rockPalette": {
+                            "minItems": 1,
                             "description": "The palette of blocks for 'stone'",
                             "type": "array",
                             "items": {"type": "string"}
@@ -428,6 +436,7 @@
                             "type": "boolean"
                         },
                         "mutations": {
+                            "minItems": 1,
                             "description": "Define biome mutations for this dimension",
                             "type": "array",
                             "items": {"$ref": "#/definitions/irisbiomemutation"}
@@ -479,6 +488,7 @@
                             "type": "string"
                         },
                         "postProcessors": {
+                            "minItems": 1,
                             "description": "Post Processors",
                             "type": "array",
                             "items": {"$ref": "#/definitions/irispostprocessor"}
@@ -490,6 +500,7 @@
                             "minimum": 1.0E-4
                         },
                         "fluidPalette": {
+                            "minItems": 1,
                             "description": "The palette of blocks for 'water'",
                             "type": "array",
                             "items": {"type": "string"}
@@ -524,6 +535,7 @@
                             "minimum": 0
                         },
                         "deposits": {
+                            "minItems": 1,
                             "description": "Define global deposit generators",
                             "type": "array",
                             "items": {"$ref": "#/definitions/irisdepositgenerator"}
@@ -560,6 +572,7 @@
                             ]
                         },
                         "compatability": {
+                            "minItems": 1,
                             "description": "Compatability filters",
                             "type": "array",
                             "items": {"$ref": "#/definitions/iriscompatabilityfilter"}
@@ -625,6 +638,7 @@
                                     "minimum": 1
                                 },
                                 "edit": {
+                                    "minItems": 1,
                                     "description": "Find and replace blocks",
                                     "type": "array",
                                     "items": {"$ref": "#/definitions/irisobjectreplace"}
@@ -738,6 +752,7 @@
                                     "type": "boolean"
                                 },
                                 "place": {
+                                    "minItems": 1,
                                     "description": "List of objects to place",
                                     "type": "array",
                                     "items": {"type": "string"}
@@ -2069,6 +2084,7 @@
                                     "minimum": 1.0E-4
                                 },
                                 "palette": {
+                                    "minItems": 1,
                                     "description": "The palette of blocks to pick from when this decorator needs to place.",
                                     "type": "array",
                                     "items": {"type": "string"}
@@ -2115,6 +2131,7 @@
                                     "minimum": 1
                                 },
                                 "palette": {
+                                    "minItems": 1,
                                     "description": "The palette of blocks to be used in this layer",
                                     "type": "array",
                                     "items": {"type": "string"}
@@ -2235,6 +2252,7 @@
                                     "minimum": 1
                                 },
                                 "palette": {
+                                    "minItems": 1,
                                     "description": "The palette of blocks to be used in this deposit generator",
                                     "type": "array",
                                     "items": {"type": "string"}
@@ -2369,16 +2387,19 @@
                     },
                     "properties": {
                         "seaLayers": {
+                            "minItems": 1,
                             "description": "This defines the layers of materials in this biome. Each layer has a palette and min/max height and some other properties. Usually a grassy/sandy layer then a dirt layer then a stone layer. Iris will fill in the remaining blocks below your layers with stone.",
                             "type": "array",
                             "items": {"$ref": "#/definitions/irisbiomepalettelayer"}
                         },
                         "biomeSkyScatter": {
+                            "minItems": 1,
                             "description": "Since 1.13 supports 3D biomes, you can add different derivative colors for anything above the terrain. (Think swampy tree leaves with a desert looking grass surface)",
                             "type": "array",
                             "items": {"type": "string"}
                         },
                         "objects": {
+                            "minItems": 1,
                             "description": "Objects define what schematics (iob files) iris will place in this biome",
                             "type": "array",
                             "items": {"$ref": "#/definitions/irisobjectplacement"}
@@ -2389,6 +2410,7 @@
                             "minimum": 1.0E-4
                         },
                         "structures": {
+                            "minItems": 1,
                             "description": "A list of structure tilesets",
                             "type": "array",
                             "items": {"$ref": "#/definitions/irisstructureplacement"}
@@ -2487,6 +2509,7 @@
                             ]
                         },
                         "deposits": {
+                            "minItems": 1,
                             "description": "Define biome deposit generators that add onto the existing regional and global deposit generators",
                             "type": "array",
                             "items": {"$ref": "#/definitions/irisdepositgenerator"}
@@ -2513,6 +2536,7 @@
                                     "minimum": 1
                                 },
                                 "palette": {
+                                    "minItems": 1,
                                     "description": "The palette of blocks to be used in this layer",
                                     "type": "array",
                                     "items": {"type": "string"}
@@ -2528,16 +2552,19 @@
                             }
                         },
                         "effects": {
+                            "minItems": 1,
                             "description": "The name of the region",
                             "type": "array",
                             "items": {"$ref": "#/definitions/iriseffect"}
                         },
                         "children": {
+                            "minItems": 1,
                             "description": "List any biome names (file names without.json) here as children. Portions of this biome can sometimes morph into their children. Iris supports cyclic relationships such as A > B > A > B. Iris will stop checking 9 biomes down the tree.",
                             "type": "array",
                             "items": {"type": "string"}
                         },
                         "decorators": {
+                            "minItems": 1,
                             "description": "Decorators are used for things like tall grass, bisected flowers, and even kelp or cactus (random heights)",
                             "type": "array",
                             "items": {"$ref": "#/definitions/irisbiomedecorator"}
@@ -2547,11 +2574,13 @@
                             "type": "string"
                         },
                         "layers": {
+                            "minItems": 1,
                             "description": "This defines the layers of materials in this biome. Each layer has a palette and min/max height and some other properties. Usually a grassy/sandy layer then a dirt layer then a stone layer. Iris will fill in the remaining blocks below your layers with stone.",
                             "type": "array",
                             "items": {"$ref": "#/definitions/irisbiomepalettelayer"}
                         },
                         "generators": {
+                            "minItems": 1,
                             "description": "Generators for this biome. Multiple generators with different interpolation sizes will mix with other biomes how you would expect. This defines your biome height relative to the fluid height. Use negative for oceans.",
                             "type": "array",
                             "items": {"$ref": "#/definitions/irisbiomegeneratorlink"}
@@ -2565,6 +2594,7 @@
                             "type": "boolean"
                         },
                         "biomeScatter": {
+                            "minItems": 1,
                             "description": "You can instead specify multiple biome derivatives to randomly scatter colors in this biome",
                             "type": "array",
                             "items": {"type": "string"}
@@ -2591,6 +2621,7 @@
                                     "minimum": 1
                                 },
                                 "palette": {
+                                    "minItems": 1,
                                     "description": "The palette of blocks to be used in this layer",
                                     "type": "array",
                                     "items": {"type": "string"}
@@ -3971,6 +4002,7 @@
                                             "minimum": 1
                                         },
                                         "palette": {
+                                            "minItems": 1,
                                             "description": "The palette of blocks to be used in this layer",
                                             "type": "array",
                                             "items": {"type": "string"}
@@ -4071,6 +4103,7 @@
                                             "minimum": 1
                                         },
                                         "palette": {
+                                            "minItems": 1,
                                             "description": "The palette of blocks to be used in this layer",
                                             "type": "array",
                                             "items": {"type": "string"}
@@ -4156,6 +4189,7 @@
                                     "minimum": 1
                                 },
                                 "palette": {
+                                    "minItems": 1,
                                     "description": "The palette of blocks to be used in this deposit generator",
                                     "type": "array",
                                     "items": {"type": "string"}
@@ -4180,6 +4214,7 @@
                     },
                     "properties": {
                         "islandBiomes": {
+                            "minItems": 1,
                             "description": "A list of root-level biomes in this region. Don't specify child biomes of other biomes here. Just the root parents.",
                             "type": "array",
                             "items": {"type": "string"}
@@ -4190,6 +4225,7 @@
                             "minimum": 1.0E-4
                         },
                         "spotBiomes": {
+                            "minItems": 1,
                             "description": "Spot biomes splotch themselves across this region like lakes",
                             "type": "array",
                             "items": {"$ref": "#/definitions/irisregionspot"}
@@ -4200,6 +4236,7 @@
                             "minimum": 1.0E-4
                         },
                         "caveBiomes": {
+                            "minItems": 1,
                             "description": "A list of root-level biomes in this region. Don't specify child biomes of other biomes here. Just the root parents.",
                             "type": "array",
                             "items": {"type": "string"}
@@ -4210,11 +4247,13 @@
                             "minimum": 0
                         },
                         "shoreBiomes": {
+                            "minItems": 1,
                             "description": "A list of root-level biomes in this region. Don't specify child biomes of other biomes here. Just the root parents.",
                             "type": "array",
                             "items": {"type": "string"}
                         },
                         "skylandBiomes": {
+                            "minItems": 1,
                             "description": "A list of root-level biomes in this region. Don't specify child biomes of other biomes here. Just the root parents.",
                             "type": "array",
                             "items": {"type": "string"}
@@ -4231,6 +4270,7 @@
                             "minimum": 1.0E-4
                         },
                         "ridgeBiomes": {
+                            "minItems": 1,
                             "description": "Ridge biomes create a vein-like network like rivers through this region",
                             "type": "array",
                             "items": {"$ref": "#/definitions/irisregionridge"}
@@ -4246,6 +4286,7 @@
                             "minimum": 1.0E-4
                         },
                         "structures": {
+                            "minItems": 1,
                             "description": "A list of structure tilesets",
                             "type": "array",
                             "items": {"$ref": "#/definitions/irisstructureplacement"}
@@ -4256,6 +4297,7 @@
                             "minimum": 1.0E-4
                         },
                         "landBiomes": {
+                            "minItems": 1,
                             "description": "A list of root-level biomes in this region. Don't specify child biomes of other biomes here. Just the root parents.",
                             "type": "array",
                             "items": {"type": "string"}
@@ -4272,11 +4314,13 @@
                             "minimum": 1.0E-4
                         },
                         "seaBiomes": {
+                            "minItems": 1,
                             "description": "A list of root-level biomes in this region. Don't specify child biomes of other biomes here. Just the root parents.",
                             "type": "array",
                             "items": {"type": "string"}
                         },
                         "deposits": {
+                            "minItems": 1,
                             "description": "Define regional deposit generators that add onto the global deposit generators",
                             "type": "array",
                             "items": {"$ref": "#/definitions/irisdepositgenerator"}
@@ -4287,6 +4331,7 @@
                             "minimum": 1.0E-4
                         },
                         "effects": {
+                            "minItems": 1,
                             "description": "The name of the region",
                             "type": "array",
                             "items": {"$ref": "#/definitions/iriseffect"}
@@ -4349,6 +4394,7 @@
                                 "type": "boolean"
                             },
                             "fracture": {
+                                "minItems": 1,
                                 "description": "Apply a child noise generator to fracture the input coordinates of this generator",
                                 "type": "array",
                                 "items": {"$ref": "#/definitions/irisnoisegenerator"}
@@ -4452,6 +4498,7 @@
                                     "type": "boolean"
                                 },
                                 "fracture": {
+                                    "minItems": 1,
                                     "description": "Apply a child noise generator to fracture the input coordinates of this generator",
                                     "type": "array",
                                     "items": {"$ref": "#/definitions/irisnoisegenerator"}
@@ -4520,6 +4567,7 @@
                             "minimum": 0
                         },
                         "composite": {
+                            "minItems": 1,
                             "description": "The list of noise gens this gen contains.",
                             "type": "array",
                             "items": {"$ref": "#/definitions/irisnoisegenerator"}
@@ -4597,6 +4645,7 @@
                                 ]
                             },
                             "objects": {
+                                "minItems": 1,
                                 "description": "List of objects to place centered in this tile",
                                 "type": "array",
                                 "items": {"type": "string"}
@@ -4638,6 +4687,7 @@
                             "minimum": 1
                         },
                         "tiles": {
+                            "minItems": 1,
                             "description": "The tiles",
                             "type": "array",
                             "items": {"$ref": "#/definitions/irisstructuretile"}
