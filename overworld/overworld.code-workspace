@@ -10,74 +10,10 @@
                 "schema": {
                     "$schema": "http://json-schema.org/draft-07/schema#",
                     "description": "Represents a dimension",
-                    "title": "Obfuscator",
+                    "title": "Dimension",
                     "type": "object",
                     "definitions": {
-                        "irisdrop": {
-                            "description": "A biome mutation if a condition is met",
-                            "type": "object",
-                            "properties": {
-                                "checks": {
-                                    "maximum": 32,
-                                    "description": "How many tries per chunk to check for this mutation",
-                                    "type": "integer",
-                                    "minimum": 1
-                                },
-                                "objects": {
-                                    "minItems": 1,
-                                    "description": "Objects define what schematics (iob files) iris will place in this biome mutation",
-                                    "type": "array",
-                                    "items": {"$ref": "#/definitions/irisregionfinder"}
-                                },
-                                "radius": {
-                                    "maximum": 1024,
-                                    "description": "The scan radius for placing this mutator",
-                                    "type": "integer",
-                                    "minimum": 1
-                                },
-                                "sideB": {
-                                    "minItems": 1,
-                                    "description": "One of The following biomes or regions must show up",
-                                    "type": "array",
-                                    "items": {"type": "string"}
-                                },
-                                "sideA": {
-                                    "minItems": 1,
-                                    "description": "One of The following biomes or regions must show up",
-                                    "type": "array",
-                                    "items": {"type": "string"}
-                                }
-                            },
-                            "required": [
-                                "sideA",
-                                "sideB",
-                                "radius",
-                                "checks"
-                            ]
-                        },
-                        "irisdataloader": {
-                            "description": "Find and replace object materials",
-                            "type": "object",
-                            "properties": {
-                                "find": {
-                                    "description": "Find this block",
-                                    "type": "string"
-                                },
-                                "replace": {
-                                    "description": "Replace it with this block",
-                                    "type": "string"
-                                },
-                                "exact": {
-                                    "description": "Exactly match the block data or not",
-                                    "type": "boolean"
-                                }
-                            },
-                            "required": [
-                                "find",
-                                "replace"
-                            ]
-                        },
-                        "irisregionfinder": {
+                        "irisobjectplacement": {
                             "description": "Represents an iris object placer. It places objects.",
                             "type": "object",
                             "properties": {
@@ -100,7 +36,7 @@
                                     "minItems": 1,
                                     "description": "Find and replace blocks",
                                     "type": "array",
-                                    "items": {"$ref": "#/definitions/irisdataloader"}
+                                    "items": {"$ref": "#/definitions/irisobjectreplace"}
                                 },
                                 "snow": {
                                     "maximum": 1,
@@ -254,7 +190,7 @@
                                 "chance"
                             ]
                         },
-                        "irisjsonarray": {
+                        "irispostprocessor": {
                             "description": "Represents a post processor",
                             "type": "object",
                             "properties": {
@@ -274,7 +210,7 @@
                                 "processor"
                             ]
                         },
-                        "irisadventure": {
+                        "iriscompatabilityfilter": {
                             "description": "Find and replace object materials for compatability",
                             "type": "object",
                             "properties": {
@@ -296,7 +232,71 @@
                                 "supplement"
                             ]
                         },
-                        "iriseyespy": {
+                        "irisobjectreplace": {
+                            "description": "Find and replace object materials",
+                            "type": "object",
+                            "properties": {
+                                "find": {
+                                    "description": "Find this block",
+                                    "type": "string"
+                                },
+                                "replace": {
+                                    "description": "Replace it with this block",
+                                    "type": "string"
+                                },
+                                "exact": {
+                                    "description": "Exactly match the block data or not",
+                                    "type": "boolean"
+                                }
+                            },
+                            "required": [
+                                "find",
+                                "replace"
+                            ]
+                        },
+                        "irisbiomemutation": {
+                            "description": "A biome mutation if a condition is met",
+                            "type": "object",
+                            "properties": {
+                                "checks": {
+                                    "maximum": 32,
+                                    "description": "How many tries per chunk to check for this mutation",
+                                    "type": "integer",
+                                    "minimum": 1
+                                },
+                                "objects": {
+                                    "minItems": 1,
+                                    "description": "Objects define what schematics (iob files) iris will place in this biome mutation",
+                                    "type": "array",
+                                    "items": {"$ref": "#/definitions/irisobjectplacement"}
+                                },
+                                "radius": {
+                                    "maximum": 1024,
+                                    "description": "The scan radius for placing this mutator",
+                                    "type": "integer",
+                                    "minimum": 1
+                                },
+                                "sideB": {
+                                    "minItems": 1,
+                                    "description": "One of The following biomes or regions must show up",
+                                    "type": "array",
+                                    "items": {"type": "string"}
+                                },
+                                "sideA": {
+                                    "minItems": 1,
+                                    "description": "One of The following biomes or regions must show up",
+                                    "type": "array",
+                                    "items": {"type": "string"}
+                                }
+                            },
+                            "required": [
+                                "sideA",
+                                "sideB",
+                                "radius",
+                                "checks"
+                            ]
+                        },
+                        "irisdepositgenerator": {
                             "description": "Creates ore & other block deposits underground",
                             "type": "object",
                             "properties": {
@@ -439,7 +439,7 @@
                             "minItems": 1,
                             "description": "Define biome mutations for this dimension",
                             "type": "array",
-                            "items": {"$ref": "#/definitions/irisdrop"}
+                            "items": {"$ref": "#/definitions/irisbiomemutation"}
                         },
                         "terrainZoom": {
                             "maximum": 512,
@@ -491,7 +491,7 @@
                             "minItems": 1,
                             "description": "Post Processors",
                             "type": "array",
-                            "items": {"$ref": "#/definitions/irisjsonarray"}
+                            "items": {"$ref": "#/definitions/irispostprocessor"}
                         },
                         "caveThickness": {
                             "maximum": 64,
@@ -538,7 +538,7 @@
                             "minItems": 1,
                             "description": "Define global deposit generators",
                             "type": "array",
-                            "items": {"$ref": "#/definitions/iriseyespy"}
+                            "items": {"$ref": "#/definitions/irisdepositgenerator"}
                         },
                         "rockDispersion": {
                             "description": "The dispersion of materials for the rock palette",
@@ -575,7 +575,7 @@
                             "minItems": 1,
                             "description": "Compatability filters",
                             "type": "array",
-                            "items": {"$ref": "#/definitions/irisadventure"}
+                            "items": {"$ref": "#/definitions/iriscompatabilityfilter"}
                         },
                         "name": {
                             "minLength": 2,
@@ -608,7 +608,7 @@
                         "regions",
                         "fluidHeight"
                     ],
-                    "$id": "http://volmit.com/iris-schema/irisobfuscator.json"
+                    "$id": "http://volmit.com/iris-schema/irisdimension.json"
                 },
                 "fileMatch": ["/dimensions/*.json"]
             },
@@ -616,58 +616,10 @@
                 "schema": {
                     "$schema": "http://json-schema.org/draft-07/schema#",
                     "description": "Represents a biome in iris. Biomes are placed inside of regions and hold objects.",
-                    "title": "Schematic",
+                    "title": "Biome",
                     "type": "object",
                     "definitions": {
-                        "irisdataloader": {
-                            "description": "Find and replace object materials",
-                            "type": "object",
-                            "properties": {
-                                "find": {
-                                    "description": "Find this block",
-                                    "type": "string"
-                                },
-                                "replace": {
-                                    "description": "Replace it with this block",
-                                    "type": "string"
-                                },
-                                "exact": {
-                                    "description": "Exactly match the block data or not",
-                                    "type": "boolean"
-                                }
-                            },
-                            "required": [
-                                "find",
-                                "replace"
-                            ]
-                        },
-                        "irisbiomegrid": {
-                            "description": "This represents a link to a generator for a biome",
-                            "type": "object",
-                            "properties": {
-                                "min": {
-                                    "maximum": 256,
-                                    "description": "The min block value (value + fluidHeight)",
-                                    "type": "integer",
-                                    "minimum": -256
-                                },
-                                "max": {
-                                    "maximum": 256,
-                                    "description": "The max block value (value + fluidHeight)",
-                                    "type": "integer",
-                                    "minimum": -256
-                                },
-                                "generator": {
-                                    "description": "The generator id",
-                                    "type": "string"
-                                }
-                            },
-                            "required": [
-                                "min",
-                                "max"
-                            ]
-                        },
-                        "irisregionfinder": {
+                        "irisobjectplacement": {
                             "description": "Represents an iris object placer. It places objects.",
                             "type": "object",
                             "properties": {
@@ -690,7 +642,7 @@
                                     "minItems": 1,
                                     "description": "Find and replace blocks",
                                     "type": "array",
-                                    "items": {"$ref": "#/definitions/irisdataloader"}
+                                    "items": {"$ref": "#/definitions/irisobjectreplace"}
                                 },
                                 "snow": {
                                     "maximum": 1,
@@ -844,49 +796,7 @@
                                 "chance"
                             ]
                         },
-                        "irisbiomeparser": {
-                            "description": "Represents a structure placement",
-                            "type": "object",
-                            "properties": {
-                                "tileset": {
-                                    "description": "The structure tileset to use",
-                                    "type": "string"
-                                },
-                                "zoom": {
-                                    "description": "The structure chance zoom. Higher = bigger cells, further away",
-                                    "type": "number",
-                                    "minimum": 1.0E-4
-                                },
-                                "shuffle": {
-                                    "description": "The chance cell shuffle (rougher edges)",
-                                    "type": "number",
-                                    "minimum": 0
-                                },
-                                "ratio": {
-                                    "maximum": 1,
-                                    "description": "The ratio. Lower values means cells can get closer to other cells. Negative values means make veins of structures",
-                                    "type": "number",
-                                    "minimum": -1
-                                },
-                                "rarity": {
-                                    "description": "The rarity for this structure",
-                                    "type": "integer",
-                                    "minimum": 1
-                                },
-                                "height": {
-                                    "maximum": 255,
-                                    "description": "The height or -1 for surface",
-                                    "type": "integer",
-                                    "minimum": -1
-                                }
-                            },
-                            "required": [
-                                "tileset",
-                                "zoom",
-                                "rarity"
-                            ]
-                        },
-                        "irisspigot": {
+                        "iriseffect": {
                             "description": "An iris effect",
                             "type": "object",
                             "properties": {
@@ -2123,7 +2033,7 @@
                                 "chance"
                             ]
                         },
-                        "irisgrid": {
+                        "irisbiomedecorator": {
                             "description": "A biome decorator is used for placing flowers, grass, cacti and so on",
                             "type": "object",
                             "properties": {
@@ -2200,7 +2110,7 @@
                                 "palette"
                             ]
                         },
-                        "irisitemdrop": {
+                        "irisbiomepalettelayer": {
                             "description": "A layer of surface / subsurface material in biomes",
                             "type": "object",
                             "properties": {
@@ -2238,7 +2148,71 @@
                             },
                             "required": ["palette"]
                         },
-                        "iriseyespy": {
+                        "irisstructureplacement": {
+                            "description": "Represents a structure placement",
+                            "type": "object",
+                            "properties": {
+                                "tileset": {
+                                    "description": "The structure tileset to use",
+                                    "type": "string"
+                                },
+                                "zoom": {
+                                    "description": "The structure chance zoom. Higher = bigger cells, further away",
+                                    "type": "number",
+                                    "minimum": 1.0E-4
+                                },
+                                "shuffle": {
+                                    "description": "The chance cell shuffle (rougher edges)",
+                                    "type": "number",
+                                    "minimum": 0
+                                },
+                                "ratio": {
+                                    "maximum": 1,
+                                    "description": "The ratio. Lower values means cells can get closer to other cells. Negative values means make veins of structures",
+                                    "type": "number",
+                                    "minimum": -1
+                                },
+                                "rarity": {
+                                    "description": "The rarity for this structure",
+                                    "type": "integer",
+                                    "minimum": 1
+                                },
+                                "height": {
+                                    "maximum": 255,
+                                    "description": "The height or -1 for surface",
+                                    "type": "integer",
+                                    "minimum": -1
+                                }
+                            },
+                            "required": [
+                                "tileset",
+                                "zoom",
+                                "rarity"
+                            ]
+                        },
+                        "irisobjectreplace": {
+                            "description": "Find and replace object materials",
+                            "type": "object",
+                            "properties": {
+                                "find": {
+                                    "description": "Find this block",
+                                    "type": "string"
+                                },
+                                "replace": {
+                                    "description": "Replace it with this block",
+                                    "type": "string"
+                                },
+                                "exact": {
+                                    "description": "Exactly match the block data or not",
+                                    "type": "boolean"
+                                }
+                            },
+                            "required": [
+                                "find",
+                                "replace"
+                            ]
+                        },
+                        "irisdepositgenerator": {
                             "description": "Creates ore & other block deposits underground",
                             "type": "object",
                             "properties": {
@@ -2384,6 +2358,32 @@
                                 "WARPED_FOREST",
                                 "BASALT_DELTAS"
                             ]
+                        },
+                        "irisbiomegeneratorlink": {
+                            "description": "This represents a link to a generator for a biome",
+                            "type": "object",
+                            "properties": {
+                                "min": {
+                                    "maximum": 256,
+                                    "description": "The min block value (value + fluidHeight)",
+                                    "type": "integer",
+                                    "minimum": -256
+                                },
+                                "max": {
+                                    "maximum": 256,
+                                    "description": "The max block value (value + fluidHeight)",
+                                    "type": "integer",
+                                    "minimum": -256
+                                },
+                                "generator": {
+                                    "description": "The generator id",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "min",
+                                "max"
+                            ]
                         }
                     },
                     "properties": {
@@ -2391,7 +2391,7 @@
                             "minItems": 1,
                             "description": "This defines the layers of materials in this biome. Each layer has a palette and min/max height and some other properties. Usually a grassy/sandy layer then a dirt layer then a stone layer. Iris will fill in the remaining blocks below your layers with stone.",
                             "type": "array",
-                            "items": {"$ref": "#/definitions/irisitemdrop"}
+                            "items": {"$ref": "#/definitions/irisbiomepalettelayer"}
                         },
                         "biomeSkyScatter": {
                             "minItems": 1,
@@ -2403,7 +2403,7 @@
                             "minItems": 1,
                             "description": "Objects define what schematics (iob files) iris will place in this biome",
                             "type": "array",
-                            "items": {"$ref": "#/definitions/irisregionfinder"}
+                            "items": {"$ref": "#/definitions/irisobjectplacement"}
                         },
                         "biomeZoom": {
                             "description": "This zooms in the biome colors if multiple derivatives are chosen",
@@ -2414,7 +2414,7 @@
                             "minItems": 1,
                             "description": "A list of structure tilesets",
                             "type": "array",
-                            "items": {"$ref": "#/definitions/irisbiomeparser"}
+                            "items": {"$ref": "#/definitions/irisstructureplacement"}
                         },
                         "biomeDispersion": {
                             "description": "This changes the dispersion of the biome colors if multiple derivatives are chosen.",
@@ -2513,7 +2513,7 @@
                             "minItems": 1,
                             "description": "Define biome deposit generators that add onto the existing regional and global deposit generators",
                             "type": "array",
-                            "items": {"$ref": "#/definitions/iriseyespy"}
+                            "items": {"$ref": "#/definitions/irisdepositgenerator"}
                         },
                         "slab": {
                             "description": "The default slab if iris decides to place a slab in this biome. Default is no slab.",
@@ -2556,7 +2556,7 @@
                             "minItems": 1,
                             "description": "Effects are ambient effects such as potion effects, random sounds, or even particles around each player. All of these effects are played via packets so two players won't see/hear each others effects.\nDue to performance reasons, effects will play arround the player even if where the effect was played is no longer in the biome the player is in.",
                             "type": "array",
-                            "items": {"$ref": "#/definitions/irisspigot"}
+                            "items": {"$ref": "#/definitions/iriseffect"}
                         },
                         "children": {
                             "minItems": 1,
@@ -2568,7 +2568,7 @@
                             "minItems": 1,
                             "description": "Decorators are used for things like tall grass, bisected flowers, and even kelp or cactus (random heights)",
                             "type": "array",
-                            "items": {"$ref": "#/definitions/irisgrid"}
+                            "items": {"$ref": "#/definitions/irisbiomedecorator"}
                         },
                         "name": {
                             "minLength": 2,
@@ -2579,13 +2579,13 @@
                             "minItems": 1,
                             "description": "This defines the layers of materials in this biome. Each layer has a palette and min/max height and some other properties. Usually a grassy/sandy layer then a dirt layer then a stone layer. Iris will fill in the remaining blocks below your layers with stone.",
                             "type": "array",
-                            "items": {"$ref": "#/definitions/irisitemdrop"}
+                            "items": {"$ref": "#/definitions/irisbiomepalettelayer"}
                         },
                         "generators": {
                             "minItems": 1,
                             "description": "Generators for this biome. Multiple generators with different interpolation sizes will mix with other biomes how you would expect. This defines your biome height relative to the fluid height. Use negative for oceans.",
                             "type": "array",
-                            "items": {"$ref": "#/definitions/irisbiomegrid"}
+                            "items": {"$ref": "#/definitions/irisbiomegeneratorlink"}
                         },
                         "childShrinkFactor": {
                             "description": "If this biome has children biomes, and the gen layer chooses one of this biomes children, how much smaller will it be (inside of this biome). Higher values means a smaller biome relative to this biome's size. Set higher than 1.0 and below 3.0 for best results.",
@@ -2651,7 +2651,7 @@
                         "layers",
                         "generators"
                     ],
-                    "$id": "http://volmit.com/iris-schema/irisschematic.json"
+                    "$id": "http://volmit.com/iris-schema/irisbiome.json"
                 },
                 "fileMatch": ["/biomes/*.json"]
             },
@@ -2659,261 +2659,10 @@
                 "schema": {
                     "$schema": "http://json-schema.org/draft-07/schema#",
                     "description": "Represents an iris region",
-                    "title": "JsonObject",
+                    "title": "Region",
                     "type": "object",
                     "definitions": {
-                        "irisjsonvalue": {
-                            "description": "A ridge config",
-                            "type": "object",
-                            "properties": {
-                                "as": {
-                                    "description": "What type this spot is (i.e. target SEA but as LAND) like an island. Default matches the target type",
-                                    "type": "string",
-                                    "enum": [
-                                        "SHORE",
-                                        "LAND",
-                                        "SEA",
-                                        "CAVE",
-                                        "ISLAND",
-                                        "SKYLAND",
-                                        "DEFER"
-                                    ]
-                                },
-                                "chance": {
-                                    "maximum": 1,
-                                    "description": "The chance this biome will be placed in a given spot",
-                                    "type": "number",
-                                    "minimum": 0
-                                },
-                                "thickness": {
-                                    "description": "The thickness of the vein",
-                                    "type": "number",
-                                    "minimum": 0
-                                },
-                                "biome": {
-                                    "description": "The biome name",
-                                    "type": "string"
-                                },
-                                "scale": {
-                                    "description": "The scale of the biome ridge. Higher values = wider veins & bigger connected cells",
-                                    "type": "number",
-                                    "minimum": 0
-                                },
-                                "noiseMultiplier": {
-                                    "description": "Use the distance from cell value to add or remove noise value. (Forces depth or height)",
-                                    "type": "number"
-                                },
-                                "air": {
-                                    "description": "If the noise multiplier is below zero, what should the air be filled with?",
-                                    "type": "object",
-                                    "properties": {
-                                        "minHeight": {
-                                            "maximum": 256,
-                                            "description": "The min thickness of this layer",
-                                            "type": "integer",
-                                            "minimum": 0
-                                        },
-                                        "terrainZoom": {
-                                            "description": "The terrain zoom mostly for zooming in on a wispy palette",
-                                            "type": "number",
-                                            "minimum": 1.0E-4
-                                        },
-                                        "maxHeight": {
-                                            "maximum": 256,
-                                            "description": "The max thickness of this layer",
-                                            "type": "integer",
-                                            "minimum": 1
-                                        },
-                                        "palette": {
-                                            "minItems": 1,
-                                            "description": "The palette of blocks to be used in this layer",
-                                            "type": "array",
-                                            "items": {"type": "string"}
-                                        },
-                                        "dispersion": {
-                                            "description": "The dispersion of materials from the palette",
-                                            "type": "string",
-                                            "enum": [
-                                                "SCATTER",
-                                                "WISPY"
-                                            ]
-                                        }
-                                    }
-                                },
-                                "type": {
-                                    "description": "The type this biome should override (land sea or shore)",
-                                    "type": "string",
-                                    "enum": [
-                                        "SHORE",
-                                        "LAND",
-                                        "SEA",
-                                        "CAVE",
-                                        "ISLAND",
-                                        "SKYLAND",
-                                        "DEFER"
-                                    ]
-                                },
-                                "shuffle": {
-                                    "description": "The shuffle, how 'natural' this looks. Compared to pure polygons",
-                                    "type": "number",
-                                    "minimum": 0
-                                },
-                                "chanceShuffle": {
-                                    "description": "The chance shuffle (polygon cell chances)",
-                                    "type": "number",
-                                    "minimum": 0
-                                },
-                                "chanceScale": {
-                                    "description": "The chance scale (cell chances)",
-                                    "type": "number"
-                                }
-                            },
-                            "required": [
-                                "biome",
-                                "type",
-                                "chance"
-                            ]
-                        },
-                        "irisbiomeparser": {
-                            "description": "Represents a structure placement",
-                            "type": "object",
-                            "properties": {
-                                "tileset": {
-                                    "description": "The structure tileset to use",
-                                    "type": "string"
-                                },
-                                "zoom": {
-                                    "description": "The structure chance zoom. Higher = bigger cells, further away",
-                                    "type": "number",
-                                    "minimum": 1.0E-4
-                                },
-                                "shuffle": {
-                                    "description": "The chance cell shuffle (rougher edges)",
-                                    "type": "number",
-                                    "minimum": 0
-                                },
-                                "ratio": {
-                                    "maximum": 1,
-                                    "description": "The ratio. Lower values means cells can get closer to other cells. Negative values means make veins of structures",
-                                    "type": "number",
-                                    "minimum": -1
-                                },
-                                "rarity": {
-                                    "description": "The rarity for this structure",
-                                    "type": "integer",
-                                    "minimum": 1
-                                },
-                                "height": {
-                                    "maximum": 255,
-                                    "description": "The height or -1 for surface",
-                                    "type": "integer",
-                                    "minimum": -1
-                                }
-                            },
-                            "required": [
-                                "tileset",
-                                "zoom",
-                                "rarity"
-                            ]
-                        },
-                        "irisxmlloader": {
-                            "description": "A spot config",
-                            "type": "object",
-                            "properties": {
-                                "as": {
-                                    "description": "What type this spot is (i.e. target SEA but as LAND) like an island. Default matches the target type",
-                                    "type": "string",
-                                    "enum": [
-                                        "SHORE",
-                                        "LAND",
-                                        "SEA",
-                                        "CAVE",
-                                        "ISLAND",
-                                        "SKYLAND",
-                                        "DEFER"
-                                    ]
-                                },
-                                "biome": {
-                                    "description": "The biome to be placed",
-                                    "type": "string"
-                                },
-                                "scale": {
-                                    "description": "The scale of splotches",
-                                    "type": "number",
-                                    "minimum": 0
-                                },
-                                "noiseMultiplier": {
-                                    "description": "Use the distance from cell value to add or remove noise value. (Forces depth or height)",
-                                    "type": "number"
-                                },
-                                "air": {
-                                    "description": "If the noise multiplier is below zero, what should the air be filled with?",
-                                    "type": "object",
-                                    "properties": {
-                                        "minHeight": {
-                                            "maximum": 256,
-                                            "description": "The min thickness of this layer",
-                                            "type": "integer",
-                                            "minimum": 0
-                                        },
-                                        "terrainZoom": {
-                                            "description": "The terrain zoom mostly for zooming in on a wispy palette",
-                                            "type": "number",
-                                            "minimum": 1.0E-4
-                                        },
-                                        "maxHeight": {
-                                            "maximum": 256,
-                                            "description": "The max thickness of this layer",
-                                            "type": "integer",
-                                            "minimum": 1
-                                        },
-                                        "palette": {
-                                            "minItems": 1,
-                                            "description": "The palette of blocks to be used in this layer",
-                                            "type": "array",
-                                            "items": {"type": "string"}
-                                        },
-                                        "dispersion": {
-                                            "description": "The dispersion of materials from the palette",
-                                            "type": "string",
-                                            "enum": [
-                                                "SCATTER",
-                                                "WISPY"
-                                            ]
-                                        }
-                                    }
-                                },
-                                "type": {
-                                    "description": "Where this spot overrides. Land sea or shore",
-                                    "type": "string",
-                                    "enum": [
-                                        "SHORE",
-                                        "LAND",
-                                        "SEA",
-                                        "CAVE",
-                                        "ISLAND",
-                                        "SKYLAND",
-                                        "DEFER"
-                                    ]
-                                },
-                                "shuffle": {
-                                    "description": "The shuffle or how natural the splotch looks like (anti-polygon)",
-                                    "type": "number",
-                                    "minimum": 0
-                                },
-                                "rarity": {
-                                    "description": "Rarity is how often this splotch appears. higher = less often",
-                                    "type": "number",
-                                    "minimum": 1
-                                }
-                            },
-                            "required": [
-                                "biome",
-                                "type",
-                                "rarity"
-                            ]
-                        },
-                        "irisspigot": {
+                        "iriseffect": {
                             "description": "An iris effect",
                             "type": "object",
                             "properties": {
@@ -4150,7 +3899,258 @@
                                 "chance"
                             ]
                         },
-                        "iriseyespy": {
+                        "irisstructureplacement": {
+                            "description": "Represents a structure placement",
+                            "type": "object",
+                            "properties": {
+                                "tileset": {
+                                    "description": "The structure tileset to use",
+                                    "type": "string"
+                                },
+                                "zoom": {
+                                    "description": "The structure chance zoom. Higher = bigger cells, further away",
+                                    "type": "number",
+                                    "minimum": 1.0E-4
+                                },
+                                "shuffle": {
+                                    "description": "The chance cell shuffle (rougher edges)",
+                                    "type": "number",
+                                    "minimum": 0
+                                },
+                                "ratio": {
+                                    "maximum": 1,
+                                    "description": "The ratio. Lower values means cells can get closer to other cells. Negative values means make veins of structures",
+                                    "type": "number",
+                                    "minimum": -1
+                                },
+                                "rarity": {
+                                    "description": "The rarity for this structure",
+                                    "type": "integer",
+                                    "minimum": 1
+                                },
+                                "height": {
+                                    "maximum": 255,
+                                    "description": "The height or -1 for surface",
+                                    "type": "integer",
+                                    "minimum": -1
+                                }
+                            },
+                            "required": [
+                                "tileset",
+                                "zoom",
+                                "rarity"
+                            ]
+                        },
+                        "irisregionridge": {
+                            "description": "A ridge config",
+                            "type": "object",
+                            "properties": {
+                                "as": {
+                                    "description": "What type this spot is (i.e. target SEA but as LAND) like an island. Default matches the target type",
+                                    "type": "string",
+                                    "enum": [
+                                        "SHORE",
+                                        "LAND",
+                                        "SEA",
+                                        "CAVE",
+                                        "ISLAND",
+                                        "SKYLAND",
+                                        "DEFER"
+                                    ]
+                                },
+                                "chance": {
+                                    "maximum": 1,
+                                    "description": "The chance this biome will be placed in a given spot",
+                                    "type": "number",
+                                    "minimum": 0
+                                },
+                                "thickness": {
+                                    "description": "The thickness of the vein",
+                                    "type": "number",
+                                    "minimum": 0
+                                },
+                                "biome": {
+                                    "description": "The biome name",
+                                    "type": "string"
+                                },
+                                "scale": {
+                                    "description": "The scale of the biome ridge. Higher values = wider veins & bigger connected cells",
+                                    "type": "number",
+                                    "minimum": 0
+                                },
+                                "noiseMultiplier": {
+                                    "description": "Use the distance from cell value to add or remove noise value. (Forces depth or height)",
+                                    "type": "number"
+                                },
+                                "air": {
+                                    "description": "If the noise multiplier is below zero, what should the air be filled with?",
+                                    "type": "object",
+                                    "properties": {
+                                        "minHeight": {
+                                            "maximum": 256,
+                                            "description": "The min thickness of this layer",
+                                            "type": "integer",
+                                            "minimum": 0
+                                        },
+                                        "terrainZoom": {
+                                            "description": "The terrain zoom mostly for zooming in on a wispy palette",
+                                            "type": "number",
+                                            "minimum": 1.0E-4
+                                        },
+                                        "maxHeight": {
+                                            "maximum": 256,
+                                            "description": "The max thickness of this layer",
+                                            "type": "integer",
+                                            "minimum": 1
+                                        },
+                                        "palette": {
+                                            "minItems": 1,
+                                            "description": "The palette of blocks to be used in this layer",
+                                            "type": "array",
+                                            "items": {"type": "string"}
+                                        },
+                                        "dispersion": {
+                                            "description": "The dispersion of materials from the palette",
+                                            "type": "string",
+                                            "enum": [
+                                                "SCATTER",
+                                                "WISPY"
+                                            ]
+                                        }
+                                    }
+                                },
+                                "type": {
+                                    "description": "The type this biome should override (land sea or shore)",
+                                    "type": "string",
+                                    "enum": [
+                                        "SHORE",
+                                        "LAND",
+                                        "SEA",
+                                        "CAVE",
+                                        "ISLAND",
+                                        "SKYLAND",
+                                        "DEFER"
+                                    ]
+                                },
+                                "shuffle": {
+                                    "description": "The shuffle, how 'natural' this looks. Compared to pure polygons",
+                                    "type": "number",
+                                    "minimum": 0
+                                },
+                                "chanceShuffle": {
+                                    "description": "The chance shuffle (polygon cell chances)",
+                                    "type": "number",
+                                    "minimum": 0
+                                },
+                                "chanceScale": {
+                                    "description": "The chance scale (cell chances)",
+                                    "type": "number"
+                                }
+                            },
+                            "required": [
+                                "biome",
+                                "type",
+                                "chance"
+                            ]
+                        },
+                        "irisregionspot": {
+                            "description": "A spot config",
+                            "type": "object",
+                            "properties": {
+                                "as": {
+                                    "description": "What type this spot is (i.e. target SEA but as LAND) like an island. Default matches the target type",
+                                    "type": "string",
+                                    "enum": [
+                                        "SHORE",
+                                        "LAND",
+                                        "SEA",
+                                        "CAVE",
+                                        "ISLAND",
+                                        "SKYLAND",
+                                        "DEFER"
+                                    ]
+                                },
+                                "biome": {
+                                    "description": "The biome to be placed",
+                                    "type": "string"
+                                },
+                                "scale": {
+                                    "description": "The scale of splotches",
+                                    "type": "number",
+                                    "minimum": 0
+                                },
+                                "noiseMultiplier": {
+                                    "description": "Use the distance from cell value to add or remove noise value. (Forces depth or height)",
+                                    "type": "number"
+                                },
+                                "air": {
+                                    "description": "If the noise multiplier is below zero, what should the air be filled with?",
+                                    "type": "object",
+                                    "properties": {
+                                        "minHeight": {
+                                            "maximum": 256,
+                                            "description": "The min thickness of this layer",
+                                            "type": "integer",
+                                            "minimum": 0
+                                        },
+                                        "terrainZoom": {
+                                            "description": "The terrain zoom mostly for zooming in on a wispy palette",
+                                            "type": "number",
+                                            "minimum": 1.0E-4
+                                        },
+                                        "maxHeight": {
+                                            "maximum": 256,
+                                            "description": "The max thickness of this layer",
+                                            "type": "integer",
+                                            "minimum": 1
+                                        },
+                                        "palette": {
+                                            "minItems": 1,
+                                            "description": "The palette of blocks to be used in this layer",
+                                            "type": "array",
+                                            "items": {"type": "string"}
+                                        },
+                                        "dispersion": {
+                                            "description": "The dispersion of materials from the palette",
+                                            "type": "string",
+                                            "enum": [
+                                                "SCATTER",
+                                                "WISPY"
+                                            ]
+                                        }
+                                    }
+                                },
+                                "type": {
+                                    "description": "Where this spot overrides. Land sea or shore",
+                                    "type": "string",
+                                    "enum": [
+                                        "SHORE",
+                                        "LAND",
+                                        "SEA",
+                                        "CAVE",
+                                        "ISLAND",
+                                        "SKYLAND",
+                                        "DEFER"
+                                    ]
+                                },
+                                "shuffle": {
+                                    "description": "The shuffle or how natural the splotch looks like (anti-polygon)",
+                                    "type": "number",
+                                    "minimum": 0
+                                },
+                                "rarity": {
+                                    "description": "Rarity is how often this splotch appears. higher = less often",
+                                    "type": "number",
+                                    "minimum": 1
+                                }
+                            },
+                            "required": [
+                                "biome",
+                                "type",
+                                "rarity"
+                            ]
+                        },
+                        "irisdepositgenerator": {
                             "description": "Creates ore & other block deposits underground",
                             "type": "object",
                             "properties": {
@@ -4230,7 +4230,7 @@
                             "minItems": 1,
                             "description": "Spot biomes splotch themselves across this region like lakes",
                             "type": "array",
-                            "items": {"$ref": "#/definitions/irisxmlloader"}
+                            "items": {"$ref": "#/definitions/irisregionspot"}
                         },
                         "skylandBiomeZoom": {
                             "description": "How large skyland biomes are in this region",
@@ -4275,7 +4275,7 @@
                             "minItems": 1,
                             "description": "Ridge biomes create a vein-like network like rivers through this region",
                             "type": "array",
-                            "items": {"$ref": "#/definitions/irisjsonvalue"}
+                            "items": {"$ref": "#/definitions/irisregionridge"}
                         },
                         "biomeShuffle": {
                             "description": "The scrambling between biomes",
@@ -4291,7 +4291,7 @@
                             "minItems": 1,
                             "description": "A list of structure tilesets",
                             "type": "array",
-                            "items": {"$ref": "#/definitions/irisbiomeparser"}
+                            "items": {"$ref": "#/definitions/irisstructureplacement"}
                         },
                         "caveBiomeZoom": {
                             "description": "How large cave biomes are in this region",
@@ -4325,7 +4325,7 @@
                             "minItems": 1,
                             "description": "Define regional deposit generators that add onto the global deposit generators",
                             "type": "array",
-                            "items": {"$ref": "#/definitions/iriseyespy"}
+                            "items": {"$ref": "#/definitions/irisdepositgenerator"}
                         },
                         "landBiomeZoom": {
                             "description": "How large land biomes are in this region",
@@ -4336,7 +4336,7 @@
                             "minItems": 1,
                             "description": "Effects are ambient effects such as potion effects, random sounds, or even particles around each player. All of these effects are played via packets so two players won't see/hear each others effects.\nDue to performance reasons, effects will play arround the player even if where the effect was played is no longer in the biome the player is in.",
                             "type": "array",
-                            "items": {"$ref": "#/definitions/irisspigot"}
+                            "items": {"$ref": "#/definitions/iriseffect"}
                         },
                         "name": {
                             "minLength": 2,
@@ -4361,7 +4361,7 @@
                         "seaBiomes",
                         "shoreBiomes"
                     ],
-                    "$id": "http://volmit.com/iris-schema/irisjsonobject.json"
+                    "$id": "http://volmit.com/iris-schema/irisregion.json"
                 },
                 "fileMatch": ["/regions/*.json"]
             },
@@ -4369,9 +4369,9 @@
                 "schema": {
                     "$schema": "http://json-schema.org/draft-07/schema#",
                     "description": "Represents a composite generator of noise gens",
-                    "title": "PaperSpigot",
+                    "title": "Generator",
                     "type": "object",
-                    "definitions": {"irisfinder": {
+                    "definitions": {"irisnoisegenerator": {
                         "description": "A noise generator",
                         "type": "object",
                         "properties": {
@@ -4400,7 +4400,7 @@
                                 "minItems": 1,
                                 "description": "Apply a child noise generator to fracture the input coordinates of this generator",
                                 "type": "array",
-                                "items": {"$ref": "#/definitions/irisfinder"}
+                                "items": {"$ref": "#/definitions/irisnoisegenerator"}
                             },
                             "offsetX": {
                                 "description": "Coordinate offset x",
@@ -4504,7 +4504,7 @@
                                     "minItems": 1,
                                     "description": "Apply a child noise generator to fracture the input coordinates of this generator",
                                     "type": "array",
-                                    "items": {"$ref": "#/definitions/irisfinder"}
+                                    "items": {"$ref": "#/definitions/irisnoisegenerator"}
                                 },
                                 "offsetX": {
                                     "description": "Coordinate offset x",
@@ -4573,7 +4573,7 @@
                             "minItems": 1,
                             "description": "The list of noise gens this gen contains.",
                             "type": "array",
-                            "items": {"$ref": "#/definitions/irisfinder"}
+                            "items": {"$ref": "#/definitions/irisnoisegenerator"}
                         },
                         "opacity": {
                             "description": "The opacity, essentially a multiplier on the output.",
@@ -4597,7 +4597,7 @@
                         "interpolationFunction",
                         "interpolationScale"
                     ],
-                    "$id": "http://volmit.com/iris-schema/irispaperspigot.json"
+                    "$id": "http://volmit.com/iris-schema/irisgenerator.json"
                 },
                 "fileMatch": ["/generators/*.json"]
             },
@@ -4605,9 +4605,9 @@
                 "schema": {
                     "$schema": "http://json-schema.org/draft-07/schema#",
                     "description": "Represents a structure in iris.",
-                    "title": "Parser",
+                    "title": "Structure",
                     "type": "object",
-                    "definitions": {"irisbiomeloader": {
+                    "definitions": {"irisstructuretile": {
                         "description": "Represents a structure tile",
                         "type": "object",
                         "properties": {
@@ -4693,7 +4693,7 @@
                             "minItems": 1,
                             "description": "The tiles",
                             "type": "array",
-                            "items": {"$ref": "#/definitions/irisbiomeloader"}
+                            "items": {"$ref": "#/definitions/irisstructuretile"}
                         },
                         "gridSize": {
                             "maximum": 64,
@@ -4730,7 +4730,7 @@
                         "wallChance",
                         "tiles"
                     ],
-                    "$id": "http://volmit.com/iris-schema/irisparser.json"
+                    "$id": "http://volmit.com/iris-schema/irisstructure.json"
                 },
                 "fileMatch": ["/structures/*.json"]
             }
