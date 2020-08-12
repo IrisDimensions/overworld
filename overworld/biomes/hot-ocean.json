@@ -68,8 +68,8 @@
              "z":0
           }
        },
-       {
-        "chance": 0.1,
+    {
+        "chance": 0.01,
         "density": 1,
         "underwater": true,
         "rotation": {
@@ -82,116 +82,13 @@
             "enabled": true
         },
         "place": [
-            "coral-rgb/coral-by-1",
-            "coral-rgb/coral-by-2",
-            "coral-rgb/coral-by-3",
-            "coral-rgb/coral-by-4"
+            "ships/swreck-1",
+            "ships/usd-ship-1",
+            "ships/usd-ship-2"
         ],
         "translate": {
             "x": 0,
-            "y": 0,
-            "z": 0
-        }
-    },
-    {
-        "chance": 0.1,
-        "density": 1,
-        "edit":[
-            {
-                "find":"horn_coral_block",
-                "replace":"fire_coral_block"
-             },
-             {
-                "find":"tube_coral_block",
-                "replace":"brain_coral_block"
-             }
-        ],
-        "rotation": {
-            "yAxis": {
-                "min": 0,
-                "max": 0,
-                "interval": 90,
-                "enabled": true
-            },
-            "enabled": true
-        },
-        "place": [
-            "coral-rgb/coral-by-1",
-            "coral-rgb/coral-by-2",
-            "coral-rgb/coral-by-3",
-            "coral-rgb/coral-by-4"
-        ],
-        "translate": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-        }
-    },
-    {
-        "chance": 0.1,
-        "density": 1,
-        "edit":[
-            {
-                "find":"horn_coral_block",
-                "replace":"brain_coral_block"
-             },
-             {
-                "find":"tube_coral_block",
-                "replace":"bubble_coral_block"
-             }
-        ],
-        "rotation": {
-            "yAxis": {
-                "min": 0,
-                "max": 0,
-                "interval": 90,
-                "enabled": true
-            },
-            "enabled": true
-        },
-        "place": [
-            "coral-rgb/coral-by-1",
-            "coral-rgb/coral-by-2",
-            "coral-rgb/coral-by-3",
-            "coral-rgb/coral-by-4"
-        ],
-        "translate": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-        }
-    },
-    {
-        "chance": 0.1,
-        "density": 1,
-        "edit":[
-            {
-                "find":"horn_coral_block",
-                "replace":"bubble_coral_block"
-             },
-             {
-                "find":"tube_coral_block",
-                "replace":"fire_coral_block"
-             }
-        ],
-        "rotation": {
-            "yAxis": {
-                "min": 0,
-                "max": 0,
-                "interval": 90,
-                "enabled": true
-            },
-            "enabled": true
-        },
-        "place": [
-            "coral-rgb/coral-by-1",
-            "coral-rgb/coral-by-2",
-            "coral-rgb/coral-by-3",
-            "coral-rgb/coral-by-4"
-        ],
-        "translate": {
-            "x": 0,
-            "y": 0,
+            "y": -4,
             "z": 0
         }
     }
@@ -220,6 +117,81 @@
     ],
     "children": [
         "hot-ocean-cliffs"
+    ],
+    "decorators": [
+        {
+            "zoom": 20,
+            "chance": 0.07,
+            "palette": [
+                "SEAGRASS"
+            ],
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        },
+        {
+            "zoom": 1,
+            "chance": 0.0009,
+            "palette": [
+                "SOUL_SAND",
+                "MAGMA_BLOCK"
+            ],
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        },
+        {
+            "zoom": 5,
+            "chance": 0.07,
+            "palette": [
+                "SEAGRASS"
+            ],
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        },
+        {
+            "zoom": 1, 
+            "stackMax": 24,
+            "stackMin": 2,
+            "chance": 0.013,
+            "palette": [
+                "KELP_PLANT"
+            ],
+            "verticalVarience": "WISPY",
+            "verticalZoom": 88,
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        },
+        {
+            "zoom": 1, 
+            "stackMax": 9,
+            "stackMin": 1,
+            "chance": 0.125,
+            "palette": [
+                "KELP_PLANT"
+            ],
+            "verticalVarience": "SCATTER",
+            "verticalZoom": 20,
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        },
+        {
+            "zoom": 1, 
+            "chance": 0.05,
+            "palette": [
+                "FIRE_CORAL",
+                "FIRE_CORAL_FAN"
+            ],
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        },
+        {
+            "zoom": 1, 
+            "chance": 0.001,
+            "palette": [
+                "minecraft:sea_pickle[pickles=1,waterlogged=true]"
+            ],
+            "dispersion": "SCATTER",
+            "variance": "SCATTER"
+        }
     ],
     "generators":[
         {
