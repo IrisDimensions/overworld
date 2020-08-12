@@ -3,7 +3,7 @@
     "rarity": 2,
     "layers": [
         {
-            "dispersion": "WISPY",
+            "dispersion": "IRIS",
             "terrainZoom": 0.356,
             "palette": [ 
                 "GRAVEL",
@@ -29,7 +29,7 @@
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "dispersion": "SCATTER",
+            "dispersion": "STATIC",
             "palette": [
                 "STONE",
                 "ANDESITE",
@@ -42,15 +42,15 @@
             "zoom": 0.01,
             "chance": 0.1,
             "palette": ["DEAD_BUSH", "BROWN_MUSHROOM"],
-            "dispersion": "WISPY",
-            "variance": "SCATTER"
+            "dispersion": "IRIS",
+            "variance": "STATIC"
         },
         {
             "zoom": 0.3,
             "chance": 0.4,
             "palette": ["GRASS"],
-            "dispersion": "SCATTER",
-            "variance": "SCATTER"
+            "dispersion": "STATIC",
+            "variance": "STATIC"
         },
         {
             "zoom": 0.3,
@@ -59,15 +59,15 @@
                 "minecraft:stone_button[face=floor,facing=east,powered=false]",
                 "minecraft:stone_button[face=floor,facing=south,powered=false]"
             ],
-            "dispersion": "SCATTER",
-            "variance": "SCATTER"
+            "dispersion": "STATIC",
+            "variance": "STATIC"
         },
         {
             "zoom": 0.3,
             "chance": 0.017,
             "palette": ["TALL_GRASS"],
-            "dispersion": "SCATTER",
-            "variance": "SCATTER"
+            "dispersion": "STATIC",
+            "variance": "STATIC"
         }
     ],
     "objects": [
@@ -110,24 +110,11 @@
                 "y": -1,
                 "z": 0
             }
-        },
-        {
-            "chance": 0.3,
-            "density": 2,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            }
         }
     ],
     "wall": 
     {
-        "dispersion": "SCATTER",
+        "dispersion": "STATIC",
         "palette": [
             "STONE",
             "ANDESITE",
@@ -147,6 +134,6 @@
         }
     ],
     "derivative": "DESERT",
-    "biomeDispersion": "WISPY",
+    "biomeStyle": "IRIS",
     "biomeZoom": 60
 }
