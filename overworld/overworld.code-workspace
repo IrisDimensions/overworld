@@ -419,32 +419,6 @@
                             "type": "number",
                             "minimum": 1.0E-4
                         },
-                        "rockStyle": {
-                            "description": "The noise style for rock types",
-                            "type": "string",
-                            "enum": [
-                                "STATIC",
-                                "STATIC_FINE",
-                                "STATIC_ULTRA_FINE",
-                                "IRIS",
-                                "SIMPLEX",
-                                "BIOCTAVE_SIMPLEX",
-                                "TRIOCTAVE_SIMPLEX",
-                                "QUADOCTAVE_SIMPLEX",
-                                "QUINTOCTAVE_SIMPLEX",
-                                "SEXOCTAVE_SIMPLEX",
-                                "SEPTOCTAVE_SIMPLEX",
-                                "OCTOCTAVE_SIMPLEX",
-                                "NONOCTAVE_SIMPLEX",
-                                "VIGOCTAVE_SIMPLEX",
-                                "CELLULAR",
-                                "CELLULAR_IRIS",
-                                "PERTERB",
-                                "PERTERB_IRIS",
-                                "VASCULAR",
-                                "VASCULAR_IRIS"
-                            ]
-                        },
                         "rockZoom": {
                             "maximum": 512,
                             "description": "The rock zoom mostly for zooming in on a wispy palette",
@@ -513,32 +487,6 @@
                             "description": "The ceiling dimension. Leave blank for normal sky.",
                             "type": "string"
                         },
-                        "fluidStyle": {
-                            "description": "The noise style for fluid types",
-                            "type": "string",
-                            "enum": [
-                                "STATIC",
-                                "STATIC_FINE",
-                                "STATIC_ULTRA_FINE",
-                                "IRIS",
-                                "SIMPLEX",
-                                "BIOCTAVE_SIMPLEX",
-                                "TRIOCTAVE_SIMPLEX",
-                                "QUADOCTAVE_SIMPLEX",
-                                "QUINTOCTAVE_SIMPLEX",
-                                "SEXOCTAVE_SIMPLEX",
-                                "SEPTOCTAVE_SIMPLEX",
-                                "OCTOCTAVE_SIMPLEX",
-                                "NONOCTAVE_SIMPLEX",
-                                "VIGOCTAVE_SIMPLEX",
-                                "CELLULAR",
-                                "CELLULAR_IRIS",
-                                "PERTERB",
-                                "PERTERB_IRIS",
-                                "VASCULAR",
-                                "VASCULAR_IRIS"
-                            ]
-                        },
                         "postProcessors": {
                             "minItems": 1,
                             "description": "Post Processors",
@@ -591,6 +539,14 @@
                             "description": "Define global deposit generators",
                             "type": "array",
                             "items": {"$ref": "#/definitions/irisdepositgenerator"}
+                        },
+                        "rockDispersion": {
+                            "description": "The dispersion of materials for the rock palette",
+                            "type": "string",
+                            "enum": [
+                                "SCATTER",
+                                "WISPY"
+                            ]
                         },
                         "vanillaStructures": {
                             "description": "Generate vanilla structures",
@@ -2112,26 +2068,16 @@
                                     "description": "The varience dispersion is used when multiple blocks are put in the palette. Scatter scrambles them, Wispy shows streak-looking varience",
                                     "type": "string",
                                     "enum": [
-                                        "STATIC",
-                                        "STATIC_FINE",
-                                        "STATIC_ULTRA_FINE",
-                                        "IRIS",
-                                        "SIMPLEX",
-                                        "BIOCTAVE_SIMPLEX",
-                                        "TRIOCTAVE_SIMPLEX",
-                                        "QUADOCTAVE_SIMPLEX",
-                                        "QUINTOCTAVE_SIMPLEX",
-                                        "SEXOCTAVE_SIMPLEX",
-                                        "SEPTOCTAVE_SIMPLEX",
-                                        "OCTOCTAVE_SIMPLEX",
-                                        "NONOCTAVE_SIMPLEX",
-                                        "VIGOCTAVE_SIMPLEX",
-                                        "CELLULAR",
-                                        "CELLULAR_IRIS",
-                                        "PERTERB",
-                                        "PERTERB_IRIS",
-                                        "VASCULAR",
-                                        "VASCULAR_IRIS"
+                                        "SCATTER",
+                                        "WISPY"
+                                    ]
+                                },
+                                "verticalVariance": {
+                                    "description": "If this decorator has a height more than 1 this changes how it picks the height between your maxes. Scatter = random, Wispy = wavy heights",
+                                    "type": "string",
+                                    "enum": [
+                                        "SCATTER",
+                                        "WISPY"
                                     ]
                                 },
                                 "stackMax": {
@@ -2141,7 +2087,7 @@
                                     "minimum": 1
                                 },
                                 "zoom": {
-                                    "description": "The zoom is for zooming in or out wispy dispersions. Makes patches bigger the higher this zoom value is",
+                                    "description": "The zoom is for zooming in or out wispy dispersions. Makes patches bigger the higher this zoom value is/",
                                     "type": "number",
                                     "minimum": 1.0E-4
                                 },
@@ -2151,62 +2097,13 @@
                                     "type": "array",
                                     "items": {"type": "string"}
                                 },
-                                "heightVariance": {
-                                    "description": "If this decorator has a height more than 1 this changes how it picks the height between your maxes. Scatter = random, Wispy = wavy heights",
-                                    "type": "string",
-                                    "enum": [
-                                        "STATIC",
-                                        "STATIC_FINE",
-                                        "STATIC_ULTRA_FINE",
-                                        "IRIS",
-                                        "SIMPLEX",
-                                        "BIOCTAVE_SIMPLEX",
-                                        "TRIOCTAVE_SIMPLEX",
-                                        "QUADOCTAVE_SIMPLEX",
-                                        "QUINTOCTAVE_SIMPLEX",
-                                        "SEXOCTAVE_SIMPLEX",
-                                        "SEPTOCTAVE_SIMPLEX",
-                                        "OCTOCTAVE_SIMPLEX",
-                                        "NONOCTAVE_SIMPLEX",
-                                        "VIGOCTAVE_SIMPLEX",
-                                        "CELLULAR",
-                                        "CELLULAR_IRIS",
-                                        "PERTERB",
-                                        "PERTERB_IRIS",
-                                        "VASCULAR",
-                                        "VASCULAR_IRIS"
-                                    ]
-                                },
                                 "dispersion": {
                                     "description": "Dispersion is used to pick places to spawn. Scatter randomly places them (vanilla) or Wispy for a streak like patch system.",
                                     "type": "string",
                                     "enum": [
-                                        "STATIC",
-                                        "STATIC_FINE",
-                                        "STATIC_ULTRA_FINE",
-                                        "IRIS",
-                                        "SIMPLEX",
-                                        "BIOCTAVE_SIMPLEX",
-                                        "TRIOCTAVE_SIMPLEX",
-                                        "QUADOCTAVE_SIMPLEX",
-                                        "QUINTOCTAVE_SIMPLEX",
-                                        "SEXOCTAVE_SIMPLEX",
-                                        "SEPTOCTAVE_SIMPLEX",
-                                        "OCTOCTAVE_SIMPLEX",
-                                        "NONOCTAVE_SIMPLEX",
-                                        "VIGOCTAVE_SIMPLEX",
-                                        "CELLULAR",
-                                        "CELLULAR_IRIS",
-                                        "PERTERB",
-                                        "PERTERB_IRIS",
-                                        "VASCULAR",
-                                        "VASCULAR_IRIS"
+                                        "SCATTER",
+                                        "WISPY"
                                     ]
-                                },
-                                "varianceZoom": {
-                                    "description": "The zoom is for zooming in or out variance. Makes patches have more or less of one type.",
-                                    "type": "number",
-                                    "minimum": 1.0E-4
                                 },
                                 "stackMin": {
                                     "maximum": 256,
@@ -2230,48 +2127,30 @@
                                     "type": "integer",
                                     "minimum": 0
                                 },
+                                "terrainZoom": {
+                                    "description": "The terrain zoom mostly for zooming in on a wispy palette",
+                                    "type": "number",
+                                    "minimum": 1.0E-4
+                                },
                                 "maxHeight": {
                                     "maximum": 256,
                                     "description": "The max thickness of this layer",
                                     "type": "integer",
                                     "minimum": 1
                                 },
-                                "style": {
-                                    "description": "The style of noise",
-                                    "type": "string",
-                                    "enum": [
-                                        "STATIC",
-                                        "STATIC_FINE",
-                                        "STATIC_ULTRA_FINE",
-                                        "IRIS",
-                                        "SIMPLEX",
-                                        "BIOCTAVE_SIMPLEX",
-                                        "TRIOCTAVE_SIMPLEX",
-                                        "QUADOCTAVE_SIMPLEX",
-                                        "QUINTOCTAVE_SIMPLEX",
-                                        "SEXOCTAVE_SIMPLEX",
-                                        "SEPTOCTAVE_SIMPLEX",
-                                        "OCTOCTAVE_SIMPLEX",
-                                        "NONOCTAVE_SIMPLEX",
-                                        "VIGOCTAVE_SIMPLEX",
-                                        "CELLULAR",
-                                        "CELLULAR_IRIS",
-                                        "PERTERB",
-                                        "PERTERB_IRIS",
-                                        "VASCULAR",
-                                        "VASCULAR_IRIS"
-                                    ]
-                                },
-                                "zoom": {
-                                    "description": "The terrain zoom mostly for zooming in on a wispy palette",
-                                    "type": "number",
-                                    "minimum": 1.0E-4
-                                },
                                 "palette": {
                                     "minItems": 1,
                                     "description": "The palette of blocks to be used in this layer",
                                     "type": "array",
                                     "items": {"type": "string"}
+                                },
+                                "dispersion": {
+                                    "description": "The dispersion of materials from the palette",
+                                    "type": "string",
+                                    "enum": [
+                                        "SCATTER",
+                                        "WISPY"
+                                    ]
                                 }
                             },
                             "required": ["palette"]
@@ -2544,6 +2423,14 @@
                             "type": "array",
                             "items": {"$ref": "#/definitions/irisstructureplacement"}
                         },
+                        "biomeDispersion": {
+                            "description": "This changes the dispersion of the biome colors if multiple derivatives are chosen.",
+                            "type": "string",
+                            "enum": [
+                                "SCATTER",
+                                "WISPY"
+                            ]
+                        },
                         "derivative": {
                             "description": "The raw derivative of this biome. This is required or the terrain will not properly generate. Use any vanilla biome type. Look in examples/biome-list.txt",
                             "type": "string",
@@ -2629,32 +2516,6 @@
                                 "BASALT_DELTAS"
                             ]
                         },
-                        "biomeStyle": {
-                            "description": "This changes the dispersion of the biome colors if multiple derivatives are chosen.",
-                            "type": "string",
-                            "enum": [
-                                "STATIC",
-                                "STATIC_FINE",
-                                "STATIC_ULTRA_FINE",
-                                "IRIS",
-                                "SIMPLEX",
-                                "BIOCTAVE_SIMPLEX",
-                                "TRIOCTAVE_SIMPLEX",
-                                "QUADOCTAVE_SIMPLEX",
-                                "QUINTOCTAVE_SIMPLEX",
-                                "SEXOCTAVE_SIMPLEX",
-                                "SEPTOCTAVE_SIMPLEX",
-                                "OCTOCTAVE_SIMPLEX",
-                                "NONOCTAVE_SIMPLEX",
-                                "VIGOCTAVE_SIMPLEX",
-                                "CELLULAR",
-                                "CELLULAR_IRIS",
-                                "PERTERB",
-                                "PERTERB_IRIS",
-                                "VASCULAR",
-                                "VASCULAR_IRIS"
-                            ]
-                        },
                         "deposits": {
                             "minItems": 1,
                             "description": "Define biome deposit generators that add onto the existing regional and global deposit generators",
@@ -2671,48 +2532,30 @@
                                     "type": "integer",
                                     "minimum": 0
                                 },
+                                "terrainZoom": {
+                                    "description": "The terrain zoom mostly for zooming in on a wispy palette",
+                                    "type": "number",
+                                    "minimum": 1.0E-4
+                                },
                                 "maxHeight": {
                                     "maximum": 256,
                                     "description": "The max thickness of this layer",
                                     "type": "integer",
                                     "minimum": 1
                                 },
-                                "style": {
-                                    "description": "The style of noise",
-                                    "type": "string",
-                                    "enum": [
-                                        "STATIC",
-                                        "STATIC_FINE",
-                                        "STATIC_ULTRA_FINE",
-                                        "IRIS",
-                                        "SIMPLEX",
-                                        "BIOCTAVE_SIMPLEX",
-                                        "TRIOCTAVE_SIMPLEX",
-                                        "QUADOCTAVE_SIMPLEX",
-                                        "QUINTOCTAVE_SIMPLEX",
-                                        "SEXOCTAVE_SIMPLEX",
-                                        "SEPTOCTAVE_SIMPLEX",
-                                        "OCTOCTAVE_SIMPLEX",
-                                        "NONOCTAVE_SIMPLEX",
-                                        "VIGOCTAVE_SIMPLEX",
-                                        "CELLULAR",
-                                        "CELLULAR_IRIS",
-                                        "PERTERB",
-                                        "PERTERB_IRIS",
-                                        "VASCULAR",
-                                        "VASCULAR_IRIS"
-                                    ]
-                                },
-                                "zoom": {
-                                    "description": "The terrain zoom mostly for zooming in on a wispy palette",
-                                    "type": "number",
-                                    "minimum": 1.0E-4
-                                },
                                 "palette": {
                                     "minItems": 1,
                                     "description": "The palette of blocks to be used in this layer",
                                     "type": "array",
                                     "items": {"type": "string"}
+                                },
+                                "dispersion": {
+                                    "description": "The dispersion of materials from the palette",
+                                    "type": "string",
+                                    "enum": [
+                                        "SCATTER",
+                                        "WISPY"
+                                    ]
                                 }
                             }
                         },
@@ -2775,48 +2618,30 @@
                                     "type": "integer",
                                     "minimum": 0
                                 },
+                                "terrainZoom": {
+                                    "description": "The terrain zoom mostly for zooming in on a wispy palette",
+                                    "type": "number",
+                                    "minimum": 1.0E-4
+                                },
                                 "maxHeight": {
                                     "maximum": 256,
                                     "description": "The max thickness of this layer",
                                     "type": "integer",
                                     "minimum": 1
                                 },
-                                "style": {
-                                    "description": "The style of noise",
-                                    "type": "string",
-                                    "enum": [
-                                        "STATIC",
-                                        "STATIC_FINE",
-                                        "STATIC_ULTRA_FINE",
-                                        "IRIS",
-                                        "SIMPLEX",
-                                        "BIOCTAVE_SIMPLEX",
-                                        "TRIOCTAVE_SIMPLEX",
-                                        "QUADOCTAVE_SIMPLEX",
-                                        "QUINTOCTAVE_SIMPLEX",
-                                        "SEXOCTAVE_SIMPLEX",
-                                        "SEPTOCTAVE_SIMPLEX",
-                                        "OCTOCTAVE_SIMPLEX",
-                                        "NONOCTAVE_SIMPLEX",
-                                        "VIGOCTAVE_SIMPLEX",
-                                        "CELLULAR",
-                                        "CELLULAR_IRIS",
-                                        "PERTERB",
-                                        "PERTERB_IRIS",
-                                        "VASCULAR",
-                                        "VASCULAR_IRIS"
-                                    ]
-                                },
-                                "zoom": {
-                                    "description": "The terrain zoom mostly for zooming in on a wispy palette",
-                                    "type": "number",
-                                    "minimum": 1.0E-4
-                                },
                                 "palette": {
                                     "minItems": 1,
                                     "description": "The palette of blocks to be used in this layer",
                                     "type": "array",
                                     "items": {"type": "string"}
+                                },
+                                "dispersion": {
+                                    "description": "The dispersion of materials from the palette",
+                                    "type": "string",
+                                    "enum": [
+                                        "SCATTER",
+                                        "WISPY"
+                                    ]
                                 }
                             }
                         },
@@ -4181,48 +4006,30 @@
                                             "type": "integer",
                                             "minimum": 0
                                         },
+                                        "terrainZoom": {
+                                            "description": "The terrain zoom mostly for zooming in on a wispy palette",
+                                            "type": "number",
+                                            "minimum": 1.0E-4
+                                        },
                                         "maxHeight": {
                                             "maximum": 256,
                                             "description": "The max thickness of this layer",
                                             "type": "integer",
                                             "minimum": 1
                                         },
-                                        "style": {
-                                            "description": "The style of noise",
-                                            "type": "string",
-                                            "enum": [
-                                                "STATIC",
-                                                "STATIC_FINE",
-                                                "STATIC_ULTRA_FINE",
-                                                "IRIS",
-                                                "SIMPLEX",
-                                                "BIOCTAVE_SIMPLEX",
-                                                "TRIOCTAVE_SIMPLEX",
-                                                "QUADOCTAVE_SIMPLEX",
-                                                "QUINTOCTAVE_SIMPLEX",
-                                                "SEXOCTAVE_SIMPLEX",
-                                                "SEPTOCTAVE_SIMPLEX",
-                                                "OCTOCTAVE_SIMPLEX",
-                                                "NONOCTAVE_SIMPLEX",
-                                                "VIGOCTAVE_SIMPLEX",
-                                                "CELLULAR",
-                                                "CELLULAR_IRIS",
-                                                "PERTERB",
-                                                "PERTERB_IRIS",
-                                                "VASCULAR",
-                                                "VASCULAR_IRIS"
-                                            ]
-                                        },
-                                        "zoom": {
-                                            "description": "The terrain zoom mostly for zooming in on a wispy palette",
-                                            "type": "number",
-                                            "minimum": 1.0E-4
-                                        },
                                         "palette": {
                                             "minItems": 1,
                                             "description": "The palette of blocks to be used in this layer",
                                             "type": "array",
                                             "items": {"type": "string"}
+                                        },
+                                        "dispersion": {
+                                            "description": "The dispersion of materials from the palette",
+                                            "type": "string",
+                                            "enum": [
+                                                "SCATTER",
+                                                "WISPY"
+                                            ]
                                         }
                                     }
                                 },
@@ -4300,48 +4107,30 @@
                                             "type": "integer",
                                             "minimum": 0
                                         },
+                                        "terrainZoom": {
+                                            "description": "The terrain zoom mostly for zooming in on a wispy palette",
+                                            "type": "number",
+                                            "minimum": 1.0E-4
+                                        },
                                         "maxHeight": {
                                             "maximum": 256,
                                             "description": "The max thickness of this layer",
                                             "type": "integer",
                                             "minimum": 1
                                         },
-                                        "style": {
-                                            "description": "The style of noise",
-                                            "type": "string",
-                                            "enum": [
-                                                "STATIC",
-                                                "STATIC_FINE",
-                                                "STATIC_ULTRA_FINE",
-                                                "IRIS",
-                                                "SIMPLEX",
-                                                "BIOCTAVE_SIMPLEX",
-                                                "TRIOCTAVE_SIMPLEX",
-                                                "QUADOCTAVE_SIMPLEX",
-                                                "QUINTOCTAVE_SIMPLEX",
-                                                "SEXOCTAVE_SIMPLEX",
-                                                "SEPTOCTAVE_SIMPLEX",
-                                                "OCTOCTAVE_SIMPLEX",
-                                                "NONOCTAVE_SIMPLEX",
-                                                "VIGOCTAVE_SIMPLEX",
-                                                "CELLULAR",
-                                                "CELLULAR_IRIS",
-                                                "PERTERB",
-                                                "PERTERB_IRIS",
-                                                "VASCULAR",
-                                                "VASCULAR_IRIS"
-                                            ]
-                                        },
-                                        "zoom": {
-                                            "description": "The terrain zoom mostly for zooming in on a wispy palette",
-                                            "type": "number",
-                                            "minimum": 1.0E-4
-                                        },
                                         "palette": {
                                             "minItems": 1,
                                             "description": "The palette of blocks to be used in this layer",
                                             "type": "array",
                                             "items": {"type": "string"}
+                                        },
+                                        "dispersion": {
+                                            "description": "The dispersion of materials from the palette",
+                                            "type": "string",
+                                            "enum": [
+                                                "SCATTER",
+                                                "WISPY"
+                                            ]
                                         }
                                     }
                                 },
@@ -4648,31 +4437,9 @@
                                 "description": "Height output offset y",
                                 "type": "number"
                             },
-                            "style": {
-                                "description": "The Noise Style",
-                                "type": "string",
-                                "enum": [
-                                    "STATIC",
-                                    "STATIC_FINE",
-                                    "STATIC_ULTRA_FINE",
-                                    "IRIS",
-                                    "SIMPLEX",
-                                    "BIOCTAVE_SIMPLEX",
-                                    "TRIOCTAVE_SIMPLEX",
-                                    "QUADOCTAVE_SIMPLEX",
-                                    "QUINTOCTAVE_SIMPLEX",
-                                    "SEXOCTAVE_SIMPLEX",
-                                    "SEPTOCTAVE_SIMPLEX",
-                                    "OCTOCTAVE_SIMPLEX",
-                                    "NONOCTAVE_SIMPLEX",
-                                    "VIGOCTAVE_SIMPLEX",
-                                    "CELLULAR",
-                                    "CELLULAR_IRIS",
-                                    "PERTERB",
-                                    "PERTERB_IRIS",
-                                    "VASCULAR",
-                                    "VASCULAR_IRIS"
-                                ]
+                            "irisBased": {
+                                "description": "If this generator uses the default iris swirly/wispy noise generator. Set to false for pure simplex.",
+                                "type": "boolean"
                             },
                             "opacity": {
                                 "description": "The output multiplier",
@@ -4774,31 +4541,9 @@
                                     "description": "Height output offset y",
                                     "type": "number"
                                 },
-                                "style": {
-                                    "description": "The Noise Style",
-                                    "type": "string",
-                                    "enum": [
-                                        "STATIC",
-                                        "STATIC_FINE",
-                                        "STATIC_ULTRA_FINE",
-                                        "IRIS",
-                                        "SIMPLEX",
-                                        "BIOCTAVE_SIMPLEX",
-                                        "TRIOCTAVE_SIMPLEX",
-                                        "QUADOCTAVE_SIMPLEX",
-                                        "QUINTOCTAVE_SIMPLEX",
-                                        "SEXOCTAVE_SIMPLEX",
-                                        "SEPTOCTAVE_SIMPLEX",
-                                        "OCTOCTAVE_SIMPLEX",
-                                        "NONOCTAVE_SIMPLEX",
-                                        "VIGOCTAVE_SIMPLEX",
-                                        "CELLULAR",
-                                        "CELLULAR_IRIS",
-                                        "PERTERB",
-                                        "PERTERB_IRIS",
-                                        "VASCULAR",
-                                        "VASCULAR_IRIS"
-                                    ]
+                                "irisBased": {
+                                    "description": "If this generator uses the default iris swirly/wispy noise generator. Set to false for pure simplex.",
+                                    "type": "boolean"
                                 },
                                 "opacity": {
                                     "description": "The output multiplier",
