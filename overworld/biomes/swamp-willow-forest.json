@@ -3,7 +3,7 @@
     "layers": [
         {
             "terrainZoom": 0.5,
-            "dispersion": "WISPY",
+            "dispersion": "IRIS",
             "palette": [
                 "GRASS_BLOCK",
                 "GRASS_BLOCK",
@@ -17,7 +17,7 @@
         {
             "minHeight": 2,
             "maxHeight": 4,
-            "palette": [ 
+            "palette": [
                 "DIRT",
                 "COARSE_DIRT"
             ]
@@ -25,7 +25,7 @@
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "dispersion": "SCATTER",
+            "dispersion": "STATIC",
             "palette": [
                 "STONE",
                 "ANDESITE",
@@ -73,9 +73,9 @@
             "shuffle": 16
         }
     ],
-    "wall": 
+    "wall":
     {
-        "dispersion": "SCATTER",
+        "style": "STATIC",
         "palette": [
             "STONE",
             "ANDESITE",
@@ -85,7 +85,6 @@
     "objects": [
         {
             "chance": 0.7,
-            "density": 1,
             "edit":[
                 {
                     "find":"oak_log",
@@ -134,7 +133,6 @@
         },
         {
             "chance": 0.2,
-            "density": 1,
             "edit":[
                 {
                     "find":"oak_log",
@@ -175,7 +173,6 @@
         },
         {
             "chance": 0.135,
-            "density": 1,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -221,7 +218,6 @@
                     "replace":"stripped_dark_oak_wood"
                  }
              ],
-            "density": 1,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -264,7 +260,6 @@
                     "replace":"stripped_dark_oak_wood"
                  }
              ],
-            "density": 1,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -290,7 +285,6 @@
         },
         {
             "chance": 0.00005,
-            "density": 1,
             "rotation": {
                 "enabled": false
             },
@@ -314,8 +308,8 @@
             "palette": [
                 "DEAD_BUSH"
             ],
-            "dispersion": "SCATTER",
-            "variance": "SCATTER"
+            "dispersion": "STATIC",
+            "variance": "STATIC"
         },
         {
             "zoom": 0.3,
@@ -327,15 +321,15 @@
                 "BROWN_MUSHROOM",
                 "RED_MUSHROOM"
             ],
-            "dispersion": "SCATTER",
-            "variance": "SCATTER"
+            "dispersion": "STATIC",
+            "variance": "STATIC"
         },
         {
             "zoom": 0.3,
             "chance": 0.45,
             "palette": ["GRASS"],
-            "dispersion": "SCATTER",
-            "variance": "SCATTER"
+            "dispersion": "STATIC",
+            "variance": "STATIC"
         }
     ],
     "generators":[

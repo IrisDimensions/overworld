@@ -3,7 +3,7 @@
     "rarity": 8,
     "layers": [
         {
-            "dispersion": "WISPY",
+            "dispersion": "IRIS",
             "terrainZoom": 0.35,
             "palette": [
                 "GRASS_BLOCK",
@@ -15,14 +15,14 @@
         {
             "minHeight": 2,
             "maxHeight": 4,
-            "palette": [ 
+            "palette": [
                 "DIRT"
             ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "dispersion": "SCATTER",
+            "dispersion": "STATIC",
             "palette": [
                 "STONE",
                 "ANDESITE",
@@ -64,7 +64,6 @@
         },
         {
             "chance": 0.3,
-            "density": 1,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -90,7 +89,7 @@
                 "y": -2,
                 "z": 0
             }
-        }, 
+        },
         {
             "chance": 0.008,
             "density": 3,
@@ -120,33 +119,33 @@
     ],
     "decorators":[
         {
-            "zoom": 10, 
+            "zoom": 10,
             "stackMax": 1,
             "stackMin": 1,
             "chance": 0.25,
             "palette": [
                 "GRASS",
                 "TALL_GRASS"
-                
+
             ],
-            "verticalVarience": "SCATTER",
+            "verticalVarience": "STATIC",
             "verticalZoom": 88,
-            "dispersion": "SCATTER",
-            "variance": "SCATTER"
+            "dispersion": "STATIC",
+            "variance": "STATIC"
         },
         {
-            "zoom": 10, 
+            "zoom": 10,
             "stackMax": 1,
             "stackMin": 1,
             "chance": 0.0001,
             "palette": [
                 "JUNGLE_SAPLING"
-                
+
             ],
-            "verticalVarience": "SCATTER",
+            "verticalVarience": "STATIC",
             "verticalZoom": 88,
-            "dispersion": "SCATTER",
-            "variance": "SCATTER"
+            "dispersion": "STATIC",
+            "variance": "STATIC"
         }
 
     ],
@@ -162,10 +161,10 @@
             "chance": 1
         }
     ],
-    "wall": 
+    "wall":
     {
-        "dispersion": "WISPY",
-        "terrinZoom": 0.1,
+        "style": "IRIS",
+        "zoom": 0.1,
         "palette": [
             "STRIPPED_JUNGLE_WOOD",
             "minecraft:jungle_leaves[persistent=true]",
@@ -194,7 +193,7 @@
         }
     ],
     "derivative": "JUNGLE",
-    "biomeDispersion": "WISPY",
+    "biomeStyle": "IRIS",
     "biomeZoom": 3,
     "biomeScatter": [
         "BAMBOO_JUNGLE",

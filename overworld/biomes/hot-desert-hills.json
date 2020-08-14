@@ -9,14 +9,14 @@
         {
             "minHeight": 2,
             "maxHeight": 9,
-            "palette": [ 
+            "palette": [
                 "SANDSTONE"
             ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "dispersion": "SCATTER",
+            "dispersion": "STATIC",
             "palette": [
                 "STONE",
                 "ANDESITE",
@@ -27,7 +27,6 @@
     "objects":[
         {
             "chance": 0.15,
-            "density": 1,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -50,11 +49,11 @@
                 "z": 0
             }
         }
-    
+
     ],
-    "wall": 
+    "wall":
     {
-        "dispersion": "SCATTER",
+        "style": "STATIC",
         "palette": [
             "SMOOTH_SANDSTONE",
             "SAND",
@@ -62,8 +61,7 @@
         ]
     },
     "slab": {
-        "dispersion": "SCATTER",
-        "terrainZoom": 0.5,
+        "style": "STATIC",
         "palette": [
             "minecraft:sandstone_slab[type=bottom,waterlogged=false]",
             "minecraft:smooth_sandstone_slab[type=bottom,waterlogged=false]",
@@ -74,9 +72,9 @@
     "decorators": [
         {
             "verticalZoom": 20,
-            "verticalVariance": "WISPY",
-            "dispersion": "SCATTER",
-            "variance": "SCATTER",
+            "verticalVariance": "IRIS",
+            "dispersion": "STATIC",
+            "variance": "STATIC",
             "stackMin": 1,
             "stackMax": 5,
             "chance": 0.01,
@@ -91,8 +89,8 @@
                 "minecraft:polished_blackstone_button[face=floor,facing=east,powered=false]",
                 "minecraft:polished_blackstone_button[face=floor,facing=south,powered=false]"
             ],
-            "dispersion": "SCATTER",
-            "variance": "SCATTER"
+            "dispersion": "STATIC",
+            "variance": "STATIC"
         },
         {
             "zoom": 0.3,
@@ -100,8 +98,8 @@
             "palette": [
                 "DEAD_BUSH"
             ],
-            "dispersion": "SCATTER",
-            "variance": "SCATTER"
+            "dispersion": "STATIC",
+            "variance": "STATIC"
         }
     ],
     "generators":[

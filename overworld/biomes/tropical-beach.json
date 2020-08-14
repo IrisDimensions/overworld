@@ -24,8 +24,8 @@
                 "minecraft:jungle_button[face=floor,facing=east,powered=false]",
                 "minecraft:jungle_button[face=floor,facing=south,powered=false]"
             ],
-            "dispersion": "SCATTER",
-            "variance": "SCATTER"
+            "dispersion": "STATIC",
+            "variance": "STATIC"
         },
         {
             "zoom": 5,
@@ -37,14 +37,13 @@
             "palette": [
                 "SUGAR_CANE"
             ],
-            "verticalVariance": "WISPY",
-            "dispersion": "WISPY",
-            "variance": "SCATTER"
+            "verticalVariance": "IRIS",
+            "dispersion": "IRIS",
+            "variance": "STATIC"
         }
     ],
     "slab": {
-        "dispersion": "SCATTER",
-        "terrainZoom": 0.5,
+        "style": "STATIC",
         "palette": [
             "minecraft:sandstone_slab[type=bottom,waterlogged=false]",
             "minecraft:smooth_sandstone_slab[type=bottom,waterlogged=false]",
@@ -52,9 +51,9 @@
             "AIR"
         ]
     },
-    "wall": 
+    "wall":
     {
-        "dispersion": "SCATTER",
+        "style": "STATIC",
         "palette": [
             "STONE",
             "ANDESITE",
@@ -63,14 +62,13 @@
     },
     "objects": [
         {
-            "chance": 2.925,
+            "chance": 1,
             "edit":[
                 {
                     "find":"player_head",
                     "replace":"air"
                  }
              ],
-            "density": 1,
             "rotation": {
                 "yAxis": {
                     "min": 0,

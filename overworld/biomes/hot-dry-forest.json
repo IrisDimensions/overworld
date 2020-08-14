@@ -2,7 +2,7 @@
     "name": "Dry Forest",
     "layers": [
         {
-            "dispersion": "WISPY",
+            "dispersion": "IRIS",
             "terrainZoom": 0.75,
             "palette": [
                 "GRASS_BLOCK",
@@ -25,14 +25,14 @@
         {
             "minHeight": 2,
             "maxHeight": 4,
-            "palette": [ 
+            "palette": [
                 "DIRT"
             ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "dispersion": "SCATTER",
+            "dispersion": "STATIC",
             "palette": [
                 "STONE",
                 "ANDESITE",
@@ -40,9 +40,9 @@
             ]
         }
     ],
-    "wall": 
+    "wall":
     {
-        "dispersion": "SCATTER",
+        "style": "STATIC",
         "palette": [
             "STONE",
             "ANDESITE",
@@ -57,8 +57,8 @@
                 "minecraft:stone_button[face=floor,facing=east,powered=false]",
                 "minecraft:stone_button[face=floor,facing=south,powered=false]"
             ],
-            "dispersion": "SCATTER",
-            "variance": "SCATTER"
+            "dispersion": "STATIC",
+            "variance": "STATIC"
         },
         {
             "zoom": 0.3,
@@ -66,8 +66,8 @@
             "palette": [
                 "DEAD_BUSH"
             ],
-            "dispersion": "SCATTER",
-            "variance": "SCATTER"
+            "dispersion": "STATIC",
+            "variance": "STATIC"
         },
         {
             "zoom": 0.5,
@@ -76,8 +76,8 @@
                 "GRASS",
                 "TALL_GRASS"
             ],
-            "dispersion": "SCATTER",
-            "variance": "SCATTER"
+            "dispersion": "STATIC",
+            "variance": "STATIC"
         },
         {
             "zoom": 0.3,
@@ -107,8 +107,8 @@
                 "AIR",
                 "AIR"
             ],
-            "dispersion": "SCATTER",
-            "variance": "SCATTER"
+            "dispersion": "STATIC",
+            "variance": "STATIC"
         }
     ],
     "generators":[
@@ -126,7 +126,6 @@
     "objects": [
         {
             "chance": 0.05,
-            "density": 1,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -149,7 +148,6 @@
         },
         {
             "chance": 0.335,
-            "density": 1,
             "edit":[
                 {
                     "find":"oak_wood",
@@ -189,7 +187,6 @@
         },
         {
             "chance": 0.05,
-            "density": 1,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -212,7 +209,6 @@
         },
         {
             "chance": 0.15,
-            "density": 1,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -235,10 +231,10 @@
                 "z": 0
             }
         }
-        
+
     ],
     "derivative": "SAVANNA",
-    "biomeDispersion": "WISPY",
+    "biomeStyle": "IRIS",
     "biomeZoom": 20,
     "biomeScatter": [
         "SAVANNA",
