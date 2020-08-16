@@ -1,0 +1,502 @@
+{
+    "name": "Overworld",
+    "version": 2,
+    "environment": "NORMAL",
+    "regions": [
+        "hot",
+        "tropical",
+        "mushroom",
+        "swamp",
+        "temperate",
+        "temperate",
+        "tundra",
+        "frozen"
+    ],
+    "mirrorCeiling": false,
+    "decorate": true,
+    "placeObjects": true,
+    "postProcessing": true,
+    "carving": false,
+    "caves": false,
+    "postProcessors": [
+        {
+            "phase": 0,
+            "processor": "wall-painter"
+        },
+        {
+            "phase": 0,
+            "processor": "slabber"
+        },
+        {
+            "phase": 1,
+            "processor": "waterlogger"
+        }
+    ],
+	"carvingZoom": 3.5,
+	"carvingMin": 115,
+	"carvingMax": 239,
+	"carvingSliverThickness": 5.5,
+	"carvingRippleThickness": 3,
+	"carvingEnvelope": 0.335,
+    "vanillaStructures": true,
+	"caveScale": 1,
+    "caveShift": -11,
+    "focus": "temperate-plains",
+    "fluidHeight": 99,
+    "biomeZoom": 4.25,
+    "regionZoom": 9.5,
+    "landBiomeStyle": {
+        "style": "CELLULAR_IRIS_DOUBLE",
+        "fracture": {
+            "style": "FRACTAL_WATER",
+            "multiplier": 25 ,
+            "zoom": 0.455
+        }
+    },
+    "seaBiomeStyle": {
+        "style": "CELLULAR_IRIS_DOUBLE"
+    },
+    "shoreBiomeStyle": {
+        "style": "CELLULAR_IRIS_DOUBLE"
+    },
+    "caveBiomeStyle": {
+        "style": "CELLULAR_IRIS_DOUBLE"
+    },
+    "islandBiomeStyle": {
+        "style": "CELLULAR_IRIS_DOUBLE"
+    },
+    "skylandBiomeStyle": {
+        "style": "CELLULAR_IRIS_DOUBLE"
+    },
+    "regionStyle": {
+        "style": "CELLULAR_IRIS_DOUBLE",
+        "fracture": {
+            "style": "FRACTAL_WATER",
+            "multiplier": 75,
+            "zoom": 0.4
+        }
+    },
+    "continentalStyle": {
+        "style": "CELLULAR_IRIS_DOUBLE"
+    },
+    "continentZoom": 1,
+    "dimensionAngleDeg": 19,
+    "terrainZoom": 1,
+    "landZoom": 1.25,
+    "seaZoom": 2.25,
+    "preventLeafDecay": true,
+    "coordFractureZoom": 0.15,
+    "coordFractureDistance": 126,
+    "deposits": [
+        {
+            "minHeight": 19,
+            "maxHeight": 150,
+            "minSize": 22,
+            "maxSize": 32,
+            "minPerChunk": 4,
+            "maxPerChunk": 12,
+            "varience": 4,
+            "palette": [
+                "DIRT",
+                "COARSE_DIRT"
+            ]
+        },
+        {
+            "minHeight": 45,
+            "maxHeight": 140,
+            "minSize": 19,
+            "maxSize": 24,
+            "minPerChunk": 4,
+            "maxPerChunk": 12,
+            "varience": 4,
+            "palette": [
+                "GRAVEL"
+            ]
+        },
+        {
+            "minHeight": 25,
+            "maxHeight": 95,
+            "minSize": 19,
+            "maxSize": 24,
+            "minPerChunk": 4,
+            "maxPerChunk": 12,
+            "varience": 4,
+            "palette": [
+                "ANDESITE"
+            ]
+        },
+        {
+            "minHeight": 35,
+            "maxHeight": 100,
+            "minSize": 19,
+            "maxSize": 24,
+            "minPerChunk": 4,
+            "maxPerChunk": 12,
+            "varience": 4,
+            "palette": [
+                "GRANITE"
+            ]
+        },
+        {
+            "minHeight": 45,
+            "maxHeight": 115,
+            "minSize": 19,
+            "maxSize": 24,
+            "minPerChunk": 4,
+            "maxPerChunk": 12,
+            "varience": 4,
+            "palette": [
+                "DIORITE"
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 18,
+            "minSize": 2,
+            "maxSize": 6,
+            "minPerChunk": 1,
+            "maxPerChunk": 2,
+            "varience": 4,
+            "palette": [
+                "DIAMOND_ORE"
+            ]
+        },
+        {
+            "minHeight": 4,
+            "maxHeight": 40,
+            "minSize": 5,
+            "maxSize": 9,
+            "minPerChunk": 1,
+            "maxPerChunk": 5,
+            "varience": 7,
+            "palette": [
+                "minecraft:redstone_ore[lit=false]"
+            ]
+        },
+        {
+            "minHeight": 3,
+            "maxHeight": 67,
+            "minSize": 1,
+            "maxSize": 2,
+            "minPerChunk": 1,
+            "maxPerChunk": 2,
+            "varience": 3,
+            "palette": [
+                "GOLD_ORE"
+            ]
+        },
+        {
+            "minHeight": 3,
+            "maxHeight": 45,
+            "minSize": 3,
+            "maxSize": 8,
+            "minPerChunk": 0,
+            "maxPerChunk": 1,
+            "varience": 5,
+            "palette": [
+                "LAPIS_ORE"
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 122,
+            "minSize": 6,
+            "maxSize": 9,
+            "minPerChunk": 4,
+            "maxPerChunk": 9,
+            "varience": 7,
+            "palette": [
+                "IRON_ORE"
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 175,
+            "minSize": 9,
+            "maxSize": 12,
+            "minPerChunk": 5,
+            "maxPerChunk": 10,
+            "varience": 9,
+            "palette": [
+                "COAL_ORE"
+            ]
+        }
+    ],
+    "mutations":[
+        {
+            "sideA": [
+                "*swamp-roofed",
+                "swamp-dark-oak-denmyre"
+            ],
+            "sideB": [
+                "swamp-mushroom",
+                "swamp-crimson-mushroom",
+                "swamp-warped-mushroom"
+            ],
+            "radius": 12,
+            "checks": 8,
+            "objects": [
+               {
+                    "chance": 0.4,
+                    "density": 1,
+                    "rotation": {
+                        "yAxis": {
+                            "min": 0,
+                            "max": 0,
+                            "interval": 90,
+                            "enabled": true
+                        },
+                        "enabled": true
+                    },
+                    "place": [
+                        "dual-tree/corrupted-swamp-1",
+                        "dual-tree/corrupted-swamp-2",
+                        "dual-tree/corrupted-swamp-3",
+                        "dual-tree/corrupted-swamp-4",
+                        "dual-tree/corrupted-swamp-5",
+                        "dual-tree/corrupted-swamp-6",
+                        "dual-tree/corrupted-swamp-7",
+                        "dual-tree/corrupted-swamp-8",
+                        "dual-tree/corrupted-swamp-9",
+                        "dual-tree/corrupted-swamp-10"
+                    ]
+                }
+            ]
+        },
+        {
+            "sideA": [
+                "tropical-beach"
+            ],
+            "sideB": [
+                "tropical-rainforest"
+            ],
+            "radius": 12,
+            "checks": 8,
+            "objects": [
+               {
+                    "chance": 0.01,
+                    "density": 1,
+                    "rotation": {
+                        "yAxis": {
+                            "min": 0,
+                            "max": 0,
+                            "interval": 90,
+                            "enabled": true
+                        },
+                        "enabled": true
+                    },
+                    "place": [
+                        "beach-islander/easterHead1"
+                    ]
+                }
+            ]
+        },
+        {
+            "sideA": [
+                "tropical-beach",
+                "hot-beach"
+            ],
+            "sideB": [
+                "swamp-mushroom",
+                "swamp-crimson-mushroom",
+                "swamp-warped-mushroom"
+            ],
+            "radius": 12,
+            "checks": 8,
+            "objects": [
+               {
+                    "chance": 0.4,
+                    "density": 1,
+                    "rotation": {
+                        "yAxis": {
+                            "min": 0,
+                            "max": 0,
+                            "interval": 90,
+                            "enabled": true
+                        },
+                        "enabled": true
+                    },
+                    "place": [
+                        "dual-tree/infested-palm-1",
+                        "dual-tree/infested-palm-2",
+                        "dual-tree/infested-palm-3",
+                        "dual-tree/infested-palm-4",
+                        "dual-tree/infested-palm-5"
+                    ]
+                }
+            ]
+        },
+        {
+            "sideA": [
+                "tropical-beach"
+            ],
+            "sideB": [
+                "tropical-rainforest",
+                "tropical-bamboo-forest"
+            ],
+            "radius": 12,
+            "checks": 8,
+            "objects": [
+               {
+                    "chance": 0.4,
+                    "density": 1,
+                    "edit":[
+                        {
+                            "find":"sand",
+                            "replace":"spruce_leaves"
+                         }
+                     ],
+                    "rotation": {
+                        "yAxis": {
+                            "min": 0,
+                            "max": 0,
+                            "interval": 90,
+                            "enabled": true
+                        },
+                        "enabled": true
+                    },
+                    "place": [
+                        "dual-tree/sandy-jungle-1",
+                        "dual-tree/sandy-jungle-2",
+                        "dual-tree/sandy-jungle-3",
+                        "dual-tree/sandy-jungle-4"
+                    ],
+                    "translate": {
+                        "x": 0,
+                        "y": -2,
+                        "z": 0
+                    }
+                }
+            ]
+        }
+    ],
+    "compatability": [
+        {"supplement": "NETHER_FENCE", "when": "WEEPING_VINES"},
+        {"supplement": "NETHER_FENCE", "when": "WEEPING_VINES_PLANT"},
+        {"supplement": "NETHER_WART_BLOCK", "when": "WARPED_WART_BLOCK"},
+        {"supplement": "BAMBOO", "when": "TWISTING_VINES"},
+        {"supplement": "BAMBOO", "when": "TWISTING_VINES_PLANT"},
+        {"supplement": "COBBLESTONE", "when": "TARGET"},
+        {"supplement": "SOULSAND", "when": "SOUL_SOIL"},
+        {"supplement": "TORCH", "when": "SOUL_TORCH"},
+        {"supplement": "LANTERN", "when": "SOUL_LANTERN"},
+        {"supplement": "FIRE", "when": "SOUL_FIRE"},
+        {"supplement": "CAMPFIRE", "when": "SOUL_CAMPFIRE"},
+        {"supplement": "GLOWSTONE", "when": "SHROOMLIGHT"},
+        {"supplement": "OBSIDIAN", "when": "RESPAWN_ANCHOR"},
+        {"supplement": "RED_MUSHROOM", "when": "NETHER_SPROUTS"},
+        {"supplement": "GOLD_ORE", "when": "NETHER_GOLD_ORE"},
+        {"supplement": "STONE", "when": "LODESTONE"},
+        {"supplement": "BROWN_MUSHROOM_BLOCK", "when": "STRIPPED_WARPED_HYPHAE"},
+        {"supplement": "RED_MUSHROOM_BLOCK", "when": "STRIPPED_CRIMSON_HYPHAE"},
+        {"supplement": "MUSHROOM_STEM", "when": "WARPED_HYPHAE"},
+        {"supplement": "RED_MUSHROOM_BLOCK", "when": "CRIMSON_HYPHAE"},
+        {"supplement": "COBBLESTONE", "when": "GILDED_BLACKSTONE"},
+        {"supplement": "OBSIDIAN", "when": "CRYING_OBSIDIAN"},
+        {"supplement": "MUSHROOM_STEM", "when": "STRIPPED_WARPED_STEM"},
+        {"supplement": "MUSHROOM_STEM", "when": "STRIPPED_CRIMSON_STEM"},
+        {"supplement": "MUSHROOM_STEM", "when": "WARPED_STEM"},
+        {"supplement": "MUSHROOM_STEM", "when": "CRIMSON_STEM"},
+        {"supplement": "RED_MUSHROOM", "when": "CRIMSON_ROOTS"},
+        {"supplement": "BROWN_MUSHROOM", "when": "WARPED_ROOTS"},
+        {"supplement": "OAK_PLANKS", "when": "CRIMSON_PLANKS"},
+        {"supplement": "OAK_PLANKS", "when": "WARPED_PLANKS"},
+        {"supplement": "MYCELIUM", "when": "WARPED_NYLIUM"},
+        {"supplement": "MYCELIUM", "when": "CRIMSON_NYLIUM"},
+        {"supplement": "BROWN_MUSHROOM", "when": "WARPED_FUNGUS"},
+        {"supplement": "RED_MUSHROOM", "when": "CRIMSON_FUNGUS"},
+        {"supplement": "NETHER_BRICKS", "when": "CRACKED_NETHER_BRICKS"},
+        {"supplement": "NETHER_BRICKS", "when": "CHISELED_NETHER_BRICKS"},
+        {"supplement": "LEGACY_NETHER_FENCE", "when": "NETHER_FENCE"},
+        {"supplement": "IRON_BARS", "when": "CHAIN"},
+        {"supplement": "QUARTZ_BLOCK", "when": "NETHERITE_BLOCK"},
+        {"supplement": "COBBLESTONE", "when": "BLACKSTONE"},
+        {"supplement": "STONE", "when": "BASALT"},
+        {"supplement": "NETHERRACK", "when": "ANCIENT_DEBRIS"},
+        {"supplement": "LEGACY_NETHERRACK", "when": "NETHERRACK"},
+        {"supplement": "OAK_LEAVES", "when": "HONEY_BLOCK"},
+        {"supplement": "OAK_LEAVES", "when": "BEEHIVE"},
+        {"supplement": "OAK_LEAVES", "when": "BEE_NEST"},
+        {"supplement": "COBBLESTONE_WALL", "when": "GRANITE_WALL"},
+        {"supplement": "PACKED_ICE", "when": "BLUE_ICE"},
+        {"supplement": "COBBLESTONE_WALL", "when": "DIORITE_WALL"},
+        {"supplement": "COBBLESTONE_WALL", "when": "ANDESITE_WALL"},
+        {"supplement": "GRASS", "when": "SWEET_BERRY_BUSH"},
+        {"supplement": "CRAFTING_TABLE", "when": "STONECUTTER"},
+        {"supplement": "LEGACY_SANDSTONE_STAIRS", "when": "SANDSTONE_STAIRS"},
+        {"supplement": "LEGACY_SANDSTONE_STAIRS", "when": "SMOOTH_SANDSTONE_STAIRS"},
+        {"supplement": "COBBLESTONE_STAIRS", "when": "MOSSY_COBBLESTONE_STAIRS"},
+        {"supplement": "STONE_BRICK_STAIRS", "when": "MOSSY_STONE_BRICK_STAIRS"},
+        {"supplement": "COBBLESTONE_STAIRS", "when": "POLISHED_GRANITE_STAIRS"},
+        {"supplement": "COBBLESTONE_STAIRS", "when": "GRANITE_STAIRS"},
+        {"supplement": "COBBLESTONE_STAIRS", "when": "POLISHED_DIORITE_STAIRS"},
+        {"supplement": "COBBLESTONE_STAIRS", "when": "DIORITE_STAIRS"},
+        {"supplement": "COBBLESTONE_STAIRS", "when": "POLISHED_ANDESITE_STAIRS"},
+        {"supplement": "COBBLESTONE_STAIRS", "when": "ANDESITE_STAIRS"},
+        {"supplement": "COBBLESTONE_STAIRS", "when": "STONE_STAIRS"},
+        {"supplement": "LEGACY_SANDSTONE_STAIRS", "when": "END_STONE_BRICK_STAIRS"},
+        {"supplement": "LEGACY_NETHER_BRICK_STAIRS", "when": "NETHER_BRICK_STAIRS"},
+        {"supplement": "NETHER_BRICK_STAIRS", "when": "RED_NETHER_BRICK_STAIRS"},
+        {"supplement": "LEGACY_QUARTZ_STAIRS", "when": "SMOOTH_QUARTZ_STAIRS"},
+        {"supplement": "LEGACY_QUARTZ_STAIRS", "when": "QUARTZ_STAIRS"},
+        {"supplement": "LEGACY_RED_SANDSTONE_STAIRS", "when": "RED_SANDSTONE_STAIRS"},
+        {"supplement": "LEGACY_RED_SANDSTONE_STAIRS", "when": "SMOOTH_RED_SANDSTONE_STAIRS"},
+        {"supplement": "SMOOTH_STONE_SLAB", "when": "STONE_SLAB"},
+        {"supplement": "FURNACE", "when": "SMOKER"},
+        {"supplement": "CRAFTING_TABLE", "when": "SMITHING_TABLE"},
+        {"supplement": "SANDSTONE_SLAB", "when": "END_STONE_BRICK_SLAB"},
+        {"supplement": "NETHER_BRICK_SLAB", "when": "RED_NETHER_BRICK_SLAB"},
+        {"supplement": "QUARTZ_SLAB", "when": "SMOOTH_QUARTZ_SLAB"},
+        {"supplement": "SANDSTONE_SLAB", "when": "CUT_SANDSTONE_SLAB"},
+        {"supplement": "RED_SANDSTONE_SLAB", "when": "CUT_RED_SANDSTONE_SLAB"},
+        {"supplement": "RED_SANDSTONE_SLAB", "when": "SMOOTH_RED_SANDSTONE_SLAB"},
+        {"supplement": "SANDSTONE_SLAB", "when": "SMOOTH_SANDSTONE_SLAB"},
+        {"supplement": "COBBLESTONE_SLAB", "when": "MOSSY_COBBLESTONE_SLAB"},
+        {"supplement": "STONE_BRICK_SLAB", "when": "MOSSY_STONE_BRICK_SLAB"},
+        {"supplement": "SMOOTH_STONE_SLAB", "when": "STONE_SLAB"},
+        {"supplement": "COBBLESTONE_SLAB", "when": "ANDESITE_SLAB"},
+        {"supplement": "COBBLESTONE_SLAB", "when": "ANDESITE_SLAB"},
+        {"supplement": "COBBLESTONE_SLAB", "when": "DIORITE_SLAB"},
+        {"supplement": "COBBLESTONE_SLAB", "when": "GRANITE_SLAB"},
+        {"supplement": "SMOOTH_STONE_SLAB", "when": "POLISHED_ANDESITE_SLAB"},
+        {"supplement": "SMOOTH_STONE_SLAB", "when": "POLISHED_DIORITE_SLAB"},
+        {"supplement": "SMOOTH_STONE_SLAB", "when": "POLISHED_GRANITE_SLAB"},
+        {"supplement": "LEGACY_WALL_SIGN", "when": "WARPED_WALL_SIGN"},
+        {"supplement": "LEGACY_SIGN_POST", "when": "WARPED_SIGN"},
+        {"supplement": "LEGACY_WALL_SIGN", "when": "SPRUCE_WALL_SIGN"},
+        {"supplement": "LEGACY_SIGN_POST", "when": "SPRUCE_SIGN"},
+        {"supplement": "LEGACY_WALL_SIGN", "when": "OAK_WALL_SIGN"},
+        {"supplement": "LEGACY_SIGN_POST", "when": "OAK_SIGN"},
+        {"supplement": "LEGACY_WALL_SIGN", "when": "JUNGLE_WALL_SIGN"},
+        {"supplement": "LEGACY_SIGN_POST", "when": "JUNGLE_SIGN"},
+        {"supplement": "LEGACY_WALL_SIGN", "when": "DARK_OAK_WALL_SIGN"},
+        {"supplement": "LEGACY_SIGN_POST", "when": "DARK_OAK_SIGN"},
+        {"supplement": "LEGACY_WALL_SIGN", "when": "CRIMSON_WALL_SIGN"},
+        {"supplement": "LEGACY_SIGN_POST", "when": "CRIMSON_SIGN"},
+        {"supplement": "LEGACY_WALL_SIGN", "when": "BIRCH_WALL_SIGN"},
+        {"supplement": "LEGACY_SIGN_POST", "when": "BIRCH_SIGN"},
+        {"supplement": "LEGACY_WALL_SIGN", "when": "ACACIA_WALL_SIGN"},
+        {"supplement": "LEGACY_SIGN_POST", "when": "ACACIA_SIGN"},
+        {"supplement": "BIRCH_FENCE", "when": "SCAFFOLDING"},
+        {"supplement": "LOOM", "when": "LOOM"},
+        {"supplement": "BOOKSHELF", "when": "LECTERN"},
+        {"supplement": "REDSTONE_LAMP", "when": "LANTERN"},
+        {"supplement": "AIR", "when": "JIGSAW"},
+        {"supplement": "COBBLESTONE", "when": "GRINDSTONE"},
+        {"supplement": "CRAFTING_TABLE", "when": "FLETCHING_TABLE"},
+        {"supplement": "CHEST", "when": "COMPOSTER"},
+        {"supplement": "CRAFTING_TABLE", "when": "CARTOGRAPHY_TABLE"},
+        {"supplement": "DARK_OAK_SLAB", "when": "CAMPFIRE"},
+        {"supplement": "FURNACE", "when": "BLAST_FURNACE"},
+        {"supplement": "REDSTONE_LAMP", "when": "BELL"},
+        {"supplement": "minecraft:hay_bale[axis=z]", "exact": true, "when": "minecraft:barrel[facing=south]"},
+        {"supplement": "minecraft:hay_bale[axis=z]", "exact": true, "when": "minecraft:barrel[facing=north]"},
+        {"supplement": "minecraft:hay_bale[axis=x]", "exact": true, "when": "minecraft:barrel[facing=east]"},
+        {"supplement": "minecraft:hay_bale[axis=x]", "exact": true, "when": "minecraft:barrel[facing=west]"},
+        {"supplement": "minecraft:hay_bale[axis=y]", "exact": true, "when": "minecraft:barrel[facing=up]"},
+        {"supplement": "minecraft:hay_bale[axis=y]", "exact": true, "when": "minecraft:barrel[facing=down]"},
+        {"supplement": "BIRCH_FENCE", "when": "BAMBOO"},
+        {"supplement": "BIRCH_SAPLING", "when": "BAMBOO_SAPLING"},
+        {"supplement": "POTTED_BIRCH_SAPLING", "when": "POTTED_BAMBOO"}
+    ]
+}
