@@ -1,122 +1,168 @@
 {
-    "name": "Ocean",
-    "layers": [
-        {
-            "minHeight": 2,
-            "maxHeight": 3,
-            "style": {"style": "STATIC"},
-            "zoom": 0.825,
-            "palette": [
-                "SAND",
-                "CLAY",
-                "SAND",
-                "GRAVEL",
-                "SAND",
-                "DIRT",
-                "SAND",
-                "SAND"
-            ]
-        },
-        {
-            "palette": [
-                "DIRT"
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                "DIRT",
-                "DIRT",
-                "COARSE_DIRT"
-            ]
-        }
-    ],
-    "objects":[
-     {
-        "chance": 0.01,
-        "underwater": true,
-        "density": 1,
-        "rotation": {
-            "yAxis": {
-                "min": 0,
-                "max": 0,
-                "interval": 90,
-                "enabled": true
-            },
-            "enabled": true
-        },
-        "place": [
-            "ships/swreck-1",
-            "ships/usd-ship-1",
-            "ships/usd-ship-2"
-        ],
-        "translate": {
-            "x": 0,
-            "y": -4,
-            "z": 0
-        }
-    }
-
-    ],
-    "generators":[
-        {
-            "generator": "plain",
-            "min": -41,
-            "max": -7
-        }
-    ],
-    "decorators":[
-        {
-            "zoom": 1,
-            "chance": 0.0006,
-            "palette": [
-                "SOUL_SAND",
-                "MAGMA_BLOCK"
-            ],
-            "style": {"style": "STATIC"},
-            "variance": {"style": "STATIC"}
-                    },
-        {
-            "zoom": 5,
-            "chance": 0.07,
-            "palette": [
-                "SEAGRASS"
-            ],
-            "style": {"style": "STATIC"},
-            "variance": {"style": "STATIC"}
-                    },
-        {
-            "zoom": 1,
-            "stackMax": 24,
-            "stackMin": 2,
-            "chance": 0.013,
-            "palette": [
-                "KELP_PLANT"
-            ],
-            "heightVariance": {"style": "IRIS"},
-            "verticalZoom": 88,
-            "style": {"style": "STATIC"},
-            "variance": {"style": "STATIC"}
-                    },
-        {
-            "zoom": 1,
-            "chance": 0.001,
-            "palette": [
-                "minecraft:sea_pickle[pickles=1,waterlogged=true]"
-            ],
-            "style": {"style": "STATIC"},
-            "variance": {"style": "STATIC"}
-                    }
-    ],
-    "slab": {
-        "style": {"style": "STATIC"},
-        "palette": [
-            "minecraft:sandstone_slab[type=bottom,waterlogged=false]",
-            "minecraft:smooth_sandstone_slab[type=bottom,waterlogged=false]",
-            "AIR",
-            "AIR"
-        ]
+  "name": "Ocean",
+  "layers": [
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "style": {
+        "style": "STATIC"
+      },
+      "zoom": 0.825,
+      "palette": [
+        "SAND",
+        "CLAY",
+        "SAND",
+        "GRAVEL",
+        "SAND",
+        "DIRT",
+        "SAND",
+        "SAND"
+      ]
     },
-    "derivative": "LUKEWARM_OCEAN"
+    {
+      "palette": [
+        "DIRT"
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 3,
+      "palette": [
+        "DIRT",
+        "DIRT",
+        "COARSE_DIRT"
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "chance": 0.01,
+      "underwater": true,
+      "density": 1,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 0,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "ships/swreck-1",
+        "ships/usd-ship-1",
+        "ships/usd-ship-2"
+      ],
+      "translate": {
+        "x": 0,
+        "y": -4,
+        "z": 0
+      }
+    },
+    {
+      "chance": 0.3,
+      "underwater": true,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 0,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "statue/sub-stat-1",
+        "statue/sub-stat-2",
+        "statue/sub-stat-3",
+        "statue/sub-stat-4",
+        "statue/sub-stat-5"
+      ],
+      "translate": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    }
+  ],
+  "generators": [
+    {
+      "generator": "plain",
+      "min": -41,
+      "max": -7
+    }
+  ],
+  "decorators": [
+    {
+      "zoom": 1,
+      "chance": 0.0006,
+      "palette": [
+        "SOUL_SAND",
+        "MAGMA_BLOCK"
+      ],
+      "style": {
+        "style": "STATIC"
+      },
+      "variance": {
+        "style": "STATIC"
+      }
+    },
+    {
+      "zoom": 5,
+      "chance": 0.07,
+      "palette": [
+        "SEAGRASS"
+      ],
+      "style": {
+        "style": "STATIC"
+      },
+      "variance": {
+        "style": "STATIC"
+      }
+    },
+    {
+      "zoom": 1,
+      "stackMax": 24,
+      "stackMin": 2,
+      "chance": 0.013,
+      "palette": [
+        "KELP_PLANT"
+      ],
+      "heightVariance": {
+        "style": "IRIS"
+      },
+      "verticalZoom": 88,
+      "style": {
+        "style": "STATIC"
+      },
+      "variance": {
+        "style": "STATIC"
+      }
+    },
+    {
+      "zoom": 1,
+      "chance": 0.001,
+      "palette": [
+        "minecraft:sea_pickle[pickles=1,waterlogged=true]"
+      ],
+      "style": {
+        "style": "STATIC"
+      },
+      "variance": {
+        "style": "STATIC"
+      }
+    }
+  ],
+  "slab": {
+    "style": {
+      "style": "STATIC"
+    },
+    "palette": [
+      "minecraft:sandstone_slab[type=bottom,waterlogged=false]",
+      "minecraft:smooth_sandstone_slab[type=bottom,waterlogged=false]",
+      "AIR",
+      "AIR"
+    ]
+  },
+  "derivative": "LUKEWARM_OCEAN"
 }

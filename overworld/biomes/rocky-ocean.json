@@ -5,7 +5,9 @@
         {
             "minHeight": 2,
             "maxHeight": 3,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "zoom": 0.825,
             "palette": [
                 "STONE",
@@ -33,7 +35,7 @@
             ]
         }
     ],
-    "objects":[
+    "objects": [
         {
             "chance": 0.01,
             "underwater": true,
@@ -56,11 +58,37 @@
                 "y": -4,
                 "z": 0
             }
+        },
+        {
+            "chance": 0.3,
+            "underwater": true,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "statue/sub-stat-1",
+                "statue/sub-stat-2",
+                "statue/sub-stat-3",
+                "statue/sub-stat-4",
+                "statue/sub-stat-5"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
         }
     ],
-    "wall":
-    {
-       "style":{"style":"IRIS"},
+    "wall": {
+        "style": {
+            "style": "IRIS"
+        },
         "palette": [
             "CLAY",
             "COBBLESTONE",
@@ -69,7 +97,9 @@
         ]
     },
     "slab": {
-       "style":{"style":"STATIC"},
+        "style": {
+            "style": "STATIC"
+        },
         "palette": [
             "minecraft:cobblestone_slab[type=bottom,waterlogged=false]",
             "AIR"
@@ -77,73 +107,66 @@
     },
     "decorators": [
         {
-
-                "zoom": 20,
-                "chance": 0.07,
-                "palette": [
-                    "SEAGRASS"
-                ],
-                "style": {"style": "STATIC"},
-                "variance": {"style": "STATIC"}
+            "zoom": 1,
+            "chance": 0.0006,
+            "palette": [
+                "SOUL_SAND",
+                "MAGMA_BLOCK"
+            ],
+            "style": {
+                "style": "STATIC"
             },
-            {
-                "zoom": 1,
-                "chance": 0.0006,
-                "palette": [
-                    "SOUL_SAND",
-                    "MAGMA_BLOCK"
-                ],
-                "style": {"style": "STATIC"},
-                "variance": {"style": "STATIC"}
-            },
-            {
-                "zoom": 5,
-                "chance": 0.07,
-                "palette": [
-                    "SEAGRASS"
-                ],
-                "style": {"style": "STATIC"},
-                "variance": {"style": "STATIC"}
-            },
-            {
-                "zoom": 1,
-                "stackMax": 24,
-                "stackMin": 2,
-                "chance": 0.013,
-                "palette": [
-                    "KELP_PLANT"
-                ],
-                "heightVariance": {"style": "IRIS"},
-                "verticalZoom": 88,
-                "style": {"style": "STATIC"},
-                "variance": {"style": "STATIC"}
-            },
-            {
-                "zoom": 1,
-                "stackMax": 9,
-                "stackMin": 1,
-                "chance": 0.125,
-                "palette": [
-                    "KELP_PLANT"
-                ],
-                "heightVariance": {"style": "STATIC"},
-                "verticalZoom": 20,
-                "style": {"style": "STATIC"},
-                "variance": {"style": "STATIC"}
-            },
-
-            {
-                "zoom": 1,
-                "chance": 0.001,
-                "palette": [
-                    "minecraft:sea_pickle[pickles=1,waterlogged=true]"
-                ],
-                "style": {"style": "STATIC"},
-                "variance": {"style": "STATIC"}
+            "variance": {
+                "style": "STATIC"
             }
-
+        },
+        {
+            "zoom": 5,
+            "chance": 0.07,
+            "palette": [
+                "SEAGRASS"
+            ],
+            "style": {
+                "style": "STATIC"
+            },
+            "variance": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "zoom": 1,
+            "stackMax": 9,
+            "stackMin": 1,
+            "chance": 0.055,
+            "palette": [
+                "KELP_PLANT"
+            ],
+            "heightVariance": {
+                "style": "STATIC"
+            },
+            "verticalZoom": 20,
+            "style": {
+                "style": "STATIC"
+            },
+            "variance": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "zoom": 1,
+            "chance": 0.001,
+            "palette": [
+                "minecraft:sea_pickle[pickles=1,waterlogged=true]"
+            ],
+            "style": {
+                "style": "STATIC"
+            },
+            "variance": {
+                "style": "STATIC"
+            }
+        }
     ],
-    "generators":[
+    "generators": [
         {
             "generator": "plain",
             "min": -41,
