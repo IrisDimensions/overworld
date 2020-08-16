@@ -1,0 +1,120 @@
+{
+    "name": "Tropical Island Beach",
+    "layers": [
+        {
+            "minHeight": 3,
+            "maxHeight": 6,
+            "palette": [
+                "SAND"
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                "DIRT"
+            ]
+        }
+    ],
+    "decorators":[
+        {
+            "zoom": 0.3,
+            "chance": 0.03,
+            "palette": [
+                "minecraft:jungle_button[face=floor,facing=east,powered=false]",
+                "minecraft:jungle_button[face=floor,facing=south,powered=false]"
+            ],
+            "style": {"style": "STATIC"},
+            "variance": {"style": "STATIC"}
+                    },
+        {
+            "zoom": 5,
+            "verticalZoom": 5,
+            "chance": 0.09,
+            "partOf": "SHORE_LINE",
+            "stackMin": 1,
+            "stackMax": 3,
+            "palette": [
+                "SUGAR_CANE"
+            ],
+            "heightVariance": {"style": "STATIC"},
+            "style": {"style": "STATIC"},
+            "variance": {"style": "STATIC"}
+                    }
+    ],
+    "slab": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            "minecraft:sandstone_slab[type=bottom,waterlogged=false]",
+            "minecraft:smooth_sandstone_slab[type=bottom,waterlogged=false]",
+            "AIR",
+            "AIR"
+        ]
+    },
+    "wall":
+    {
+        "style": {"style": "STATIC"},
+        "palette": [
+            "STONE",
+            "ANDESITE",
+            "STONE"
+        ]
+    },
+    "objects": [
+        {
+
+            "chance": 1,
+            "edit":[
+                {
+                    "find":["PLAYER_WALL_HEAD"],
+                    "replace":["air"]
+                 }
+             ],
+
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "palm/palm1",
+                "palm/palm2",
+                "palm/palm3",
+                "palm/palm4",
+                "palm/palm5",
+                "palm/palm6",
+                "palm/palm7",
+                "palm/palm8"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            }
+        }
+    ],
+    "generators":[
+        {
+            "generator": "sharper",
+            "min": -7,
+            "max": -3
+        }
+    ],
+    "effects":[
+        {
+            "interval": 550,
+            "particleOffset": 12,
+            "particleEffect": "TOTEM",
+            "particleCount": 0,
+            "particleAltX": 0.301,
+            "particleAltY": -0.33885,
+            "particleAltZ": 0.301,
+            "chance": 1
+        }
+    ],
+    "derivative": "JUNGLE"
+}
