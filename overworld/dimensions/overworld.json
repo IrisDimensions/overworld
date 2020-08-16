@@ -17,8 +17,132 @@
     "decorate": true,
     "placeObjects": true,
     "postProcessing": true,
-    "carving": false,
-    "caves": false,
+    "carving": true,
+    "caves": true,
+    "caveLayers": [
+        {
+            "caveZoom": 1.25,
+            "caveThickness": 2,
+            "canBreakSurface": false,
+            "verticalSlope": {
+                "generator": {
+                    "style": "IRIS",
+                    "fracture": {
+                        "style": "IRIS_THICK",
+                        "zoom": 0.3,
+                        "multiplier": 9
+                    }
+                },
+                "max": 52,
+                "min": 95
+            },
+            "horizontalSlope": {
+                "generator": {
+                    "style": "IRIS_THICK",
+                    "fracture": {
+                        "style": "IRIS_THICK",
+                        "zoom": 0.3,
+                        "multiplier": 9
+                    }
+                },
+                "max": -110,
+                "min": 110
+            }
+        },
+        {
+            "caveZoom": 0.89,
+            "caveThickness": 1,
+            "canBreakSurface": false,
+            "verticalSlope": {
+                "generator": {
+                    "style": "IRIS_DOUBLE",
+                    "zoom": 1.82,
+                    "fracture": {
+                        "style": "IRIS_THICK",
+                        "zoom": 0.3,
+                        "multiplier": 9
+                    }
+                },
+                "max": 22,
+                "min": 54
+            },
+            "horizontalSlope": {
+                "generator": {
+                    "style": "IRIS_THICK",
+                    "zoom": 0.885,
+                    "fracture": {
+                        "style": "IRIS_THICK",
+                        "zoom": 0.3,
+                        "multiplier": 9
+                    }
+                },
+                "max": -10,
+                "min": 10
+            }
+        },
+        {
+            "caveZoom": 0.89,
+            "caveThickness": 0.9,
+            "canBreakSurface": true,
+            "verticalSlope": {
+                "generator": {
+                    "style": "IRIS_DOUBLE",
+                    "zoom": 1.12,
+                    "fracture": {
+                        "style": "IRIS_THICK",
+                        "zoom": 0.3,
+                        "multiplier": 9
+                    }
+                },
+                "max": 103,
+                "min": 175
+            },
+            "horizontalSlope": {
+                "generator": {
+                    "style": "IRIS_DOUBLE",
+                    "zoom": 1.12,
+                    "fracture": {
+                        "style": "IRIS_THICK",
+                        "zoom": 0.3,
+                        "multiplier": 9
+                    }
+                },
+                "max": -10,
+                "min": 10
+            }
+        },
+        {
+            "caveZoom": 0.99,
+            "caveThickness": 1.125,
+            "canBreakSurface": false,
+            "verticalSlope": {
+                "generator": {
+                    "style": "IRIS_DOUBLE",
+                    "zoom": 1.12,
+                    "fracture": {
+                        "style": "IRIS_THICK",
+                        "zoom": 0.3,
+                        "multiplier": 9
+                    }
+                },
+                "max": 91,
+                "min": 155
+            },
+            "horizontalSlope": {
+                "generator": {
+                    "style": "IRIS_DOUBLE",
+                    "zoom": 1.12,
+                    "fracture": {
+                        "style": "IRIS_THICK",
+                        "zoom": 0.3,
+                        "multiplier": 9
+                    }
+                },
+                "max": -10,
+                "min": 10
+            }
+        }
+    ],
     "postProcessors": [
         {
             "phase": 0,
@@ -44,8 +168,6 @@
 	"carvingRippleThickness": 3,
 	"carvingEnvelope": 0.335,
     "vanillaStructures": true,
-	"caveScale": 1,
-    "caveShift": -11,
     "fluidHeight": 99,
     "biomeZoom": 2.25,
     "regionZoom": 7.5,
