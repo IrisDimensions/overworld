@@ -79,12 +79,12 @@
             ],
             "translate": {
                 "x": 0,
-                "y": -1,
+                "y": 0,
                 "z": 0
             }
         },
         {
-            "chance": 0.4,
+            "chance": 0.05,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -115,7 +115,7 @@
             }
         },
         {
-            "chance": 0.01,
+            "chance": 0.0075,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -135,12 +135,22 @@
             ],
             "translate": {
                 "x": 0,
-                "y": -2,
+                "y": 0,
                 "z": 0
             }
         }
     ],
     "decorators": [
+        {
+            "zoom": 0.3,
+            "chance": 0.009,
+            "palette": [
+                "minecraft:polished_blackstone_button[face=floor,facing=east,powered=false]",
+                "minecraft:polished_blackstone_button[face=floor,facing=south,powered=false]"
+            ],
+            "dispersion": {"style": "STATIC"},
+            "variance": {"style": "STATIC"}
+                    },
         {
             "zoom": 0.02,
             "chance": 0.003,
@@ -150,8 +160,17 @@
                     },
         {
             "zoom": 0.3,
-            "chance": 0.023,
+            "chance": 0.046,
             "palette": ["GRASS"],
+            "dispersion": {"style": "STATIC"},
+            "variance": {"style": "STATIC"}
+                    },
+        {
+            "zoom": 0.3,
+            "chance": 0.001,
+            "palette": [
+                "DEAD_BUSH"
+            ],
             "dispersion": {"style": "STATIC"},
             "variance": {"style": "STATIC"}
                     },
@@ -163,47 +182,13 @@
             ],
             "dispersion": {"style": "STATIC"},
             "variance": {"style": "STATIC"}
-                    },
-                            {
-            "zoom": 0.02,
-            "chance": 0.001,
-            "palette": ["WITHER_ROSE", "OXEYE_DAISY", "PINK_TULIP", "LILY_OF_THE_VALLEY"],
-            "dispersion": {"style": "FRACTAL_SMOKE"},
-            "variance": {"style": "STATIC"}
-                    },
-        {
-            "zoom": 0.1,
-            "chance": 0.01,
-            "palette": ["SUNFLOWER", "DANDELION", "POPPY", "ROSE_BUSH"],
-            "dispersion": {"style": "STATIC"},
-            "variance": {"style": "STATIC"}
-                    },
-        {
-            "zoom": 0.2,
-            "chance": 0.05,
-            "palette": ["LARGE_FERN", "TALL_GRASS"],
-            "dispersion": {"style": "FRACTAL_SMOKE"},
-            "variance": {"style": "STATIC"}
-                    },
-        {
-            "zoom": 0.2,
-            "chance": 0.21,
-            "palette": ["GRASS", "FERN"],
-            "dispersion": {"style": "STATIC"},
-            "variance": {"style": "STATIC"}
                     }
-
     ],
     "generators":[
         {
             "generator": "plain",
             "min": 5,
             "max": 14
-        },
-        {
-            "generator": "plain-cliffs-thin",
-            "min": 1,
-            "max": 4
         }
     ],
     "derivative": "GIANT_TREE_TAIGA"
