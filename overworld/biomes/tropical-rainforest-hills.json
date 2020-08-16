@@ -3,7 +3,9 @@
     "rarity": 8,
     "layers": [
         {
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "zoom": 0.35,
             "palette": [
                 "GRASS_BLOCK",
@@ -22,7 +24,9 @@
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "palette": [
                 "STONE",
                 "ANDESITE",
@@ -74,7 +78,6 @@
                 "enabled": true
             },
             "place": [
-
                 "boulder/boulder1",
                 "boulder/boulder2",
                 "boulder/boulder4",
@@ -82,7 +85,6 @@
                 "boulder/boulder6",
                 "boulder/boulder7",
                 "boulder/boulder8"
-
             ],
             "translate": {
                 "x": 0,
@@ -103,7 +105,6 @@
                 "enabled": true
             },
             "place": [
-
                 "jungle-remade/bjungle-1",
                 "jungle-remade/bjungle-2",
                 "jungle-remade/bjungle-3",
@@ -117,7 +118,28 @@
             }
         }
     ],
-    "decorators":[
+    "decorators": [
+        {
+            "zoom": 0.1,
+            "chance": 0.45,
+            "palette": [
+                "minecraft:jungle_leaves[persistent=true]",
+                "TALL_GRASS",
+                "GRASS",
+                "minecraft:jungle_leaves[persistent=true]",
+                "GRASS",
+                "minecraft:jungle_leaves[persistent=true]"
+            ],
+            "style": {
+                "style": "FRACTAL_BILLOW_IRIS",
+                "fracture": {
+                    "style": "STATIC"
+                }
+            },
+            "variance": {
+                "style": "IRIS"
+            }
+        },
         {
             "zoom": 10,
             "stackMax": 1,
@@ -126,13 +148,18 @@
             "palette": [
                 "GRASS",
                 "TALL_GRASS"
-
             ],
-            "heightVariance": {"style": "STATIC"},
+            "heightVariance": {
+                "style": "STATIC"
+            },
             "verticalZoom": 88,
-            "style": {"style": "STATIC"},
-            "variance": {"style": "STATIC"}
-                    },
+            "style": {
+                "style": "STATIC"
+            },
+            "variance": {
+                "style": "STATIC"
+            }
+        },
         {
             "zoom": 10,
             "stackMax": 1,
@@ -140,16 +167,20 @@
             "chance": 0.0001,
             "palette": [
                 "JUNGLE_SAPLING"
-
             ],
-            "heightVariance": {"style": "STATIC"},
+            "heightVariance": {
+                "style": "STATIC"
+            },
             "verticalZoom": 88,
-            "style": {"style": "STATIC"},
-            "variance": {"style": "STATIC"}
-                    }
-
+            "style": {
+                "style": "STATIC"
+            },
+            "variance": {
+                "style": "STATIC"
+            }
+        }
     ],
-    "effects":[
+    "effects": [
         {
             "interval": 550,
             "particleOffset": 12,
@@ -161,9 +192,10 @@
             "chance": 1
         }
     ],
-    "wall":
-    {
-        "style": {"style": "IRIS"},
+    "wall": {
+        "style": {
+            "style": "IRIS"
+        },
         "zoom": 0.1,
         "palette": [
             "STRIPPED_JUNGLE_WOOD",
@@ -175,7 +207,7 @@
             "STRIPPED_JUNGLE_WOOD"
         ]
     },
-    "generators":[
+    "generators": [
         {
             "generator": "plain-cliffs",
             "min": 32,
@@ -183,7 +215,9 @@
         }
     ],
     "derivative": "JUNGLE",
-    "biomeStyle": {"style": "IRIS"},
+    "biomeStyle": {
+        "style": "IRIS"
+    },
     "biomeZoom": 3,
     "biomeScatter": [
         "BAMBOO_JUNGLE",
