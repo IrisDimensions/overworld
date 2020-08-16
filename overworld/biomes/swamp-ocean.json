@@ -4,17 +4,22 @@
         {
             "minHeight": 2,
             "maxHeight": 3,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "VASCULAR",
+                "zoom": 0.8,
+                "fracture": {
+                    "style": "STATIC",
+                    "multiplier": 2
+                }
+                },
             "zoom": 0.825,
             "palette": [
                 "SAND",
-                "CLAY",
-                "SAND",
-                "GRAVEL",
-                "SAND",
                 "DIRT",
-                "SAND",
-                "SAND"
+                "GRAVEL",
+                "CLAY"
+
+
             ]
         },
         {
@@ -33,67 +38,7 @@
         }
     ],
     "objects":[
-
-        {
-         "chance": 0.1,
-         "density": 1,
-         "underwater": true,
-         "rotation": {
-             "yAxis": {
-                 "min": 0,
-                 "max": 0,
-                 "interval": 90,
-                 "enabled": true
-             },
-             "enabled": true
-         },
-         "place": [
-             "coral-rgb/coral-by-1",
-             "coral-rgb/coral-by-2",
-             "coral-rgb/coral-by-3",
-             "coral-rgb/coral-by-4"
-         ],
-         "translate": {
-             "x": 0,
-             "y": -3,
-             "z": 0
-         }
-     },
-     {
-         "chance": 0.1,
-         "density": 1,
-         "edit":[
-             {
-                 "find":"horn_coral_block",
-                 "replace":"fire_coral_block"
-              },
-              {
-                 "find":"tube_coral_block",
-                 "replace":"brain_coral_block"
-              }
-         ],
-         "rotation": {
-             "yAxis": {
-                 "min": 0,
-                 "max": 0,
-                 "interval": 90,
-                 "enabled": true
-             },
-             "enabled": true
-         },
-         "place": [
-             "coral-rgb/coral-by-1",
-             "coral-rgb/coral-by-2",
-             "coral-rgb/coral-by-3",
-             "coral-rgb/coral-by-4"
-         ],
-         "translate": {
-             "x": 0,
-             "y": -3,
-             "z": 0
-         }
-     },
-     {
+         {
         "chance": 0.05,
         "density": 1,
         "underwater": true,
@@ -192,56 +137,7 @@
             "style": {"style": "STATIC"},
             "variance": {"style": "STATIC"}
                     },
-        {
-            "zoom": 1,
-            "chance": 0.05,
-            "palette": [
-                "TUBE_CORAL",
-                "TUBE_CORAL_FAN"
-            ],
-            "style": {"style": "STATIC"},
-            "variance": {"style": "STATIC"}
-                    },
-        {
-            "zoom": 1,
-            "chance": 0.05,
-            "palette": [
-                "BRAIN_CORAL",
-                "BRAIN_CORAL_FAN"
-            ],
-            "style": {"style": "STATIC"},
-            "variance": {"style": "STATIC"}
-                    },
-        {
-            "zoom": 1,
-            "chance": 0.05,
-            "palette": [
-                "BUBBLE_CORAL",
-                "BUBBLE_CORAL_FAN"
-            ],
-            "style": {"style": "STATIC"},
-            "variance": {"style": "STATIC"}
-                    },
-        {
-            "zoom": 1,
-            "chance": 0.05,
-            "palette": [
-                "FIRE_CORAL",
-                "FIRE_CORAL_FAN"
-            ],
-            "style": {"style": "STATIC"},
-            "variance": {"style": "STATIC"}
-                    },
-        {
-            "zoom": 1,
-            "chance": 0.05,
-            "palette": [
-                "HORN_CORAL",
-                "HORN_CORAL_FAN"
-            ],
-            "style": {"style": "STATIC"},
-            "variance": {"style": "STATIC"}
-                    },
+
         {
             "zoom": 1,
             "chance": 0.004,
