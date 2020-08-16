@@ -13,8 +13,7 @@
         "frozen"
     ],
     "mirrorCeiling": false,
-    "decorate": true,
-    "placeObjects": true,
+    "decorate": false,
     "postProcessing": true,
     "carving": false,
     "caves": false,
@@ -41,7 +40,7 @@
     "vanillaStructures": true,
 	"caveScale": 1,
     "caveShift": -11,
-    "focus": "temperate-plains",
+    "focus": "tropical-ocean",
     "fluidHeight": 99,
     "biomeZoom": 4.25,
     "regionZoom": 9.5,
@@ -79,6 +78,7 @@
     "continentalStyle": {
         "style": "CELLULAR_IRIS_DOUBLE"
     },
+
     "continentZoom": 1,
     "dimensionAngleDeg": 19,
     "terrainZoom": 1,
@@ -276,6 +276,12 @@
                {
                     "chance": 0.01,
                     "density": 1,
+                    "edit": [
+                        {
+                            "find": "minecraft:bricks",
+                            "replace": "cave_air"
+                        }
+                    ],
                     "rotation": {
                         "yAxis": {
                             "min": 0,
