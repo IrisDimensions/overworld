@@ -4,7 +4,7 @@
         {
             "style": {
                 "style": "IRIS"
-             },
+            },
             "palette": [
                 "GRASS_BLOCK",
                 "GRASS_BLOCK",
@@ -30,7 +30,9 @@
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "palette": [
                 "STONE",
                 "ANDESITE",
@@ -38,26 +40,33 @@
             ]
         }
     ],
-    "wall":
-    {
-        "style": {"style": "STATIC"},
+    "wall": {
+        "style": {
+            "style": "STATIC"
+        },
         "palette": [
             "STONE",
             "ANDESITE",
             "STONE"
         ]
     },
-    "children":[
+    "children": [
         "temperate-wilds"
     ],
     "decorators": [
         {
             "zoom": 0.3,
             "chance": 0.19,
-            "palette": ["GRASS"],
-            "style": {"style": "STATIC"},
-            "variance": {"style": "STATIC"}
-                    },
+            "palette": [
+                "GRASS"
+            ],
+            "style": {
+                "style": "STATIC"
+            },
+            "variance": {
+                "style": "STATIC"
+            }
+        },
         {
             "zoom": 0.3,
             "chance": 0.001,
@@ -67,20 +76,28 @@
                 "minecraft:sweet_berry_bush[age=2]",
                 "minecraft:sweet_berry_bush[age=3]"
             ],
-            "style": {"style": "STATIC"},
-            "variance": {"style": "STATIC"}
-                    },
+            "style": {
+                "style": "STATIC"
+            },
+            "variance": {
+                "style": "STATIC"
+            }
+        },
         {
-            "zoom": 0.5,
-            "chance": 0.05,
+            "zoom": 0.3,
+            "chance": 0.02,
             "palette": [
                 "minecraft:wheat[age=7]"
             ],
-            "style": {"style": "CELLULAR_IRIS"},
-            "variance": {"style": "CELLULAR_IRIS"}
+            "style": {
+                "style": "CELLULAR_IRIS_DOUBLE"
+            },
+            "variance": {
+                "style": "CELLULAR_IRIS"
+            }
         }
     ],
-    "generators":[
+    "generators": [
         {
             "generator": "plain",
             "min": 4,
@@ -88,7 +105,9 @@
         }
     ],
     "derivative": "PLAINS",
-    "biomeStyle": {"style": "IRIS"},
+    "biomeStyle": {
+        "style": "IRIS"
+    },
     "biomeZoom": 60,
     "biomeScatter": [
         "FOREST",
