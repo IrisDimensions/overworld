@@ -1,99 +1,116 @@
 {
-    "name": "Tundra Cavern",
-    "layers": [
-        {
-            "style": {"style": "STATIC"},
-            "zoom": 0.2,
-            "minHeight": 1,
-            "maxHeight": 2,
-            "palette": [
-                "BLUE_ICE",
-                "PACKED_ICE",
-                "ICE",
-                "ICE",
-                "ICE",
-                "ICE",
-                "ICE",
-                "ICE"
-            ]
-        },
-        {
-            "style": {"style": "STATIC"},
-            "zoom": 0.2,
-            "minHeight": 1,
-            "maxHeight": 1,
-            "palette": [
-                "ICE"
-            ]
-        }
-
-    ],
-    "slab": {
-        "style": {"style": "IRIS"},
-        "zoom": 0.5,
-        "palette": [
-            "minecraft:cobblestone_slab[type=bottom,waterlogged=false]",
-            "minecraft:mossy_cobblestone_slab[type=bottom,waterlogged=false]",
-            "AIR"
-        ]
+  "name": "Tundra Cavern",
+  "layers": [
+    {
+      "style": {
+        "style": "STATIC"
+      },
+      "zoom": 0.2,
+      "minHeight": 1,
+      "maxHeight": 2,
+      "palette": [
+        "BLUE_ICE",
+        "PACKED_ICE",
+        "ICE",
+        "ICE",
+        "ICE",
+        "ICE",
+        "ICE",
+        "ICE"
+      ]
     },
-    "decorators": [
-        {
-            "zoom": 0.3,
-            "chance": 0.02,
-            "palette": [
-                "COBWEB"
-            ],
-            "style": {"style": "STATIC"},
-            "variance": {"style": "STATIC"}
-                    },
-        {
-            "zoom": 0.3,
-            "chance": 0.01,
-            "palette": [
-                "CORNFLOWER"
-            ],
-            "style": {"style": "STATIC"},
-            "variance": {"style": "STATIC"}
-                    },
-        {
-            "zoom": 0.3,
-            "chance": 0.001,
-            "palette": [
-                "PRISMARINE_WALL"
-            ],
-            "style": {"style": "STATIC"},
-            "variance": {"style": "STATIC"}
-                    }
-    ],
-    "generators":[
-        {
-            "generator": "plain",
-            "min": 4,
-            "max": 6
-        }
-    ],
-    "objects": [
-        {
-            "chance": 0.000856,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "grave/grave"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        }
-    ],
-    "derivative": "FROZEN_OCEAN"
+    {
+      "style": {
+        "style": "STATIC"
+      },
+      "zoom": 0.2,
+      "minHeight": 1,
+      "maxHeight": 1,
+      "palette": [
+        "ICE"
+      ]
+    }
+  ],
+  "slab": {
+    "style": {
+      "style": "IRIS"
+    },
+    "zoom": 0.5,
+    "palette": [
+      "minecraft:cobblestone_slab[type=bottom,waterlogged=false]",
+      "minecraft:mossy_cobblestone_slab[type=bottom,waterlogged=false]",
+      "AIR"
+    ]
+  },
+  "decorators": [
+    {
+      "zoom": 0.3,
+      "chance": 0.02,
+      "palette": [
+        "COBWEB"
+      ],
+      "style": {
+        "style": "STATIC"
+      },
+      "variance": {
+        "style": "STATIC"
+      }
+    },
+    {
+      "zoom": 0.3,
+      "chance": 0.01,
+      "palette": [
+        "CORNFLOWER"
+      ],
+      "style": {
+        "style": "STATIC"
+      },
+      "variance": {
+        "style": "STATIC"
+      }
+    },
+    {
+      "zoom": 0.3,
+      "chance": 0.001,
+      "palette": [
+        "PRISMARINE_WALL"
+      ],
+      "style": {
+        "style": "STATIC"
+      },
+      "variance": {
+        "style": "STATIC"
+      }
+    }
+  ],
+  "generators": [
+    {
+      "generator": "plain",
+      "min": 4,
+      "max": 6
+    }
+  ],
+  "objects": [
+    {
+      "chance": 0.000856,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 0,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "grave/grave"
+      ],
+      "translate": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    }
+  ],
+  "derivative": "FROZEN_OCEAN"
 }

@@ -1,64 +1,78 @@
 {
-    "name": "Cold Beach",
-    "layers": [
-        {
-            "style": {"style": "STATIC"},
-            "zoom": 0.25,
-            "minHeight": 3,
-            "maxHeight": 6,
-            "palette": [
-                "SAND"
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                "DIRT"
-            ]
-        }
-    ],
-    "slab": {
-        "style": {"style": "STATIC"},
-        "palette": [
-            "minecraft:sandstone_slab[type=bottom,waterlogged=false]",
-            "minecraft:smooth_sandstone_slab[type=bottom,waterlogged=false]",
-            "AIR",
-            "AIR"
-        ]
+  "name": "Cold Beach",
+  "layers": [
+    {
+      "style": {
+        "style": "STATIC"
+      },
+      "zoom": 0.25,
+      "minHeight": 3,
+      "maxHeight": 6,
+      "palette": [
+        "SAND"
+      ]
     },
-    "decorators":[
-        {
-            "zoom": 0.3,
-            "chance": 0.03,
-            "palette": [
-                "minecraft:stone_button[face=floor,facing=east,powered=false]",
-                "minecraft:stone_button[face=floor,facing=south,powered=false]"
-            ],
-            "style": {"style": "STATIC"},
-            "variance": {"style": "STATIC"}
-                    },
-        {
-            "zoom": 5,
-            "verticalZoom": 5,
-            "chance": 0.09,
-            "partOf": "SHORE_LINE",
-            "stackMin": 1,
-            "stackMax": 3,
-            "palette": [
-                "SUGAR_CANE"
-            ],
-            "heightVariance": {"style": "IRIS"},
-            "style": {"style": "STATIC"},
-            "variance": {"style": "STATIC"}
-                    }
-    ],
-    "generators":[
-        {
-            "generator": "plain",
-            "min": -1,
-            "max": 1
-        }
-    ],
-    "derivative": "BEACH"
+    {
+      "minHeight": 1,
+      "maxHeight": 3,
+      "palette": [
+        "DIRT"
+      ]
+    }
+  ],
+  "slab": {
+    "style": {
+      "style": "STATIC"
+    },
+    "palette": [
+      "minecraft:sandstone_slab[type=bottom,waterlogged=false]",
+      "minecraft:smooth_sandstone_slab[type=bottom,waterlogged=false]",
+      "AIR",
+      "AIR"
+    ]
+  },
+  "decorators": [
+    {
+      "zoom": 0.3,
+      "chance": 0.03,
+      "palette": [
+        "minecraft:stone_button[face=floor,facing=east,powered=false]",
+        "minecraft:stone_button[face=floor,facing=south,powered=false]"
+      ],
+      "style": {
+        "style": "STATIC"
+      },
+      "variance": {
+        "style": "STATIC"
+      }
+    },
+    {
+      "zoom": 5,
+      "verticalZoom": 5,
+      "chance": 0.09,
+      "partOf": "SHORE_LINE",
+      "stackMin": 1,
+      "stackMax": 3,
+      "palette": [
+        "SUGAR_CANE"
+      ],
+      "heightVariance": {
+        "style": "IRIS"
+      },
+      "style": {
+        "style": "STATIC"
+      },
+      "variance": {
+        "style": "STATIC"
+      }
+    }
+  ],
+  "generators": [
+    {
+      "generator": "plain",
+      "min": -1,
+      "max": 1
+    }
+  ],
+  "derivative": "BEACH"
 }
