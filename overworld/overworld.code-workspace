@@ -16,6 +16,7 @@
                     "definitions": {
                         "irisobjectplacement": {
                             "description": "Represents an iris object placer. It places objects.",
+                            "additionalProperties": false,
                             "type": "object",
                             "properties": {
                                 "chance": {
@@ -198,6 +199,7 @@
                         },
                         "irispostprocessor": {
                             "description": "Represents a post processor",
+                            "additionalProperties": false,
                             "type": "object",
                             "properties": {
                                 "phase": {
@@ -218,6 +220,7 @@
                         },
                         "iriscompatabilityfilter": {
                             "description": "Find and replace object materials for compatability",
+                            "additionalProperties": false,
                             "type": "object",
                             "properties": {
                                 "supplement": {
@@ -240,6 +243,7 @@
                         },
                         "irisobjectreplace": {
                             "description": "Find and replace object materials",
+                            "additionalProperties": false,
                             "type": "object",
                             "properties": {
                                 "find": {
@@ -262,6 +266,7 @@
                         },
                         "irisbiomemutation": {
                             "description": "A biome mutation if a condition is met",
+                            "additionalProperties": false,
                             "type": "object",
                             "properties": {
                                 "checks": {
@@ -304,6 +309,7 @@
                         },
                         "irisdepositgenerator": {
                             "description": "Creates ore & other block deposits underground",
+                            "additionalProperties": false,
                             "type": "object",
                             "properties": {
                                 "minHeight": {
@@ -8349,6 +8355,7 @@
                     "definitions": {
                         "irisobjectplacement": {
                             "description": "Represents an iris object placer. It places objects.",
+                            "additionalProperties": false,
                             "type": "object",
                             "properties": {
                                 "chance": {
@@ -8531,6 +8538,7 @@
                         },
                         "iriseffect": {
                             "description": "An iris effect",
+                            "additionalProperties": false,
                             "type": "object",
                             "properties": {
                                 "particleAltX": {
@@ -9768,6 +9776,7 @@
                         },
                         "irisbiomedecorator": {
                             "description": "A biome decorator is used for placing flowers, grass, cacti and so on",
+                            "additionalProperties": false,
                             "type": "object",
                             "properties": {
                                 "partOf": {
@@ -10442,19 +10451,8 @@
                                     "type": "integer",
                                     "minimum": 1
                                 },
-                                "zoom": {
-                                    "description": "The zoom is for zooming in or out wispy dispersions. Makes patches bigger the higher this zoom value is",
-                                    "type": "number",
-                                    "minimum": 1.0E-4
-                                },
-                                "palette": {
-                                    "minItems": 1,
-                                    "description": "The palette of blocks to pick from when this decorator needs to place.",
-                                    "type": "array",
-                                    "items": {"type": "string"}
-                                },
-                                "heightVariance": {
-                                    "description": "If this decorator has a height more than 1 this changes how it picks the height between your maxes. Scatter = random, Wispy = wavy heights",
+                                "style": {
+                                    "description": "Dispersion is used to pick places to spawn. Scatter randomly places them (vanilla) or Wispy for a streak like patch system.",
                                     "additionalProperties": false,
                                     "type": "object",
                                     "properties": {
@@ -11099,8 +11097,19 @@
                                         }
                                     }
                                 },
-                                "dispersion": {
-                                    "description": "Dispersion is used to pick places to spawn. Scatter randomly places them (vanilla) or Wispy for a streak like patch system.",
+                                "zoom": {
+                                    "description": "The zoom is for zooming in or out wispy dispersions. Makes patches bigger the higher this zoom value is",
+                                    "type": "number",
+                                    "minimum": 1.0E-4
+                                },
+                                "palette": {
+                                    "minItems": 1,
+                                    "description": "The palette of blocks to pick from when this decorator needs to place.",
+                                    "type": "array",
+                                    "items": {"type": "string"}
+                                },
+                                "heightVariance": {
+                                    "description": "If this decorator has a height more than 1 this changes how it picks the height between your maxes. Scatter = random, Wispy = wavy heights",
                                     "additionalProperties": false,
                                     "type": "object",
                                     "properties": {
@@ -11764,6 +11773,7 @@
                         },
                         "irisbiomepalettelayer": {
                             "description": "A layer of surface / subsurface material in biomes",
+                            "additionalProperties": false,
                             "type": "object",
                             "properties": {
                                 "minHeight": {
@@ -12440,6 +12450,7 @@
                         },
                         "irisstructureplacement": {
                             "description": "Represents a structure placement",
+                            "additionalProperties": false,
                             "type": "object",
                             "properties": {
                                 "tileset": {
@@ -12482,6 +12493,7 @@
                         },
                         "irisobjectreplace": {
                             "description": "Find and replace object materials",
+                            "additionalProperties": false,
                             "type": "object",
                             "properties": {
                                 "find": {
@@ -12504,6 +12516,7 @@
                         },
                         "irisdepositgenerator": {
                             "description": "Creates ore & other block deposits underground",
+                            "additionalProperties": false,
                             "type": "object",
                             "properties": {
                                 "minHeight": {
@@ -12651,6 +12664,7 @@
                         },
                         "irisbiomegeneratorlink": {
                             "description": "This represents a link to a generator for a biome",
+                            "additionalProperties": false,
                             "type": "object",
                             "properties": {
                                 "min": {
@@ -15787,6 +15801,7 @@
                     "definitions": {
                         "iriseffect": {
                             "description": "An iris effect",
+                            "additionalProperties": false,
                             "type": "object",
                             "properties": {
                                 "particleAltX": {
@@ -17024,6 +17039,7 @@
                         },
                         "irisstructureplacement": {
                             "description": "Represents a structure placement",
+                            "additionalProperties": false,
                             "type": "object",
                             "properties": {
                                 "tileset": {
@@ -17066,6 +17082,7 @@
                         },
                         "irisregionridge": {
                             "description": "A ridge config",
+                            "additionalProperties": false,
                             "type": "object",
                             "properties": {
                                 "as": {
@@ -17689,6 +17706,7 @@
                         },
                         "irisregionspot": {
                             "description": "A spot config",
+                            "additionalProperties": false,
                             "type": "object",
                             "properties": {
                                 "as": {
@@ -18297,6 +18315,7 @@
                         },
                         "irisdepositgenerator": {
                             "description": "Creates ore & other block deposits underground",
+                            "additionalProperties": false,
                             "type": "object",
                             "properties": {
                                 "minHeight": {
@@ -18515,6 +18534,7 @@
                     "type": "object",
                     "definitions": {"irisnoisegenerator": {
                         "description": "A noise generator",
+                        "additionalProperties": false,
                         "type": "object",
                         "properties": {
                             "sinCentered": {
@@ -20041,6 +20061,7 @@
                     "type": "object",
                     "definitions": {"irisstructuretile": {
                         "description": "Represents a structure tile",
+                        "additionalProperties": false,
                         "type": "object",
                         "properties": {
                             "ceiling": {
