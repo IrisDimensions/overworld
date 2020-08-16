@@ -13,11 +13,11 @@
         "frozen"
     ],
     "mirrorCeiling": false,
-    "decorate": false,
+    "decorate": true,
     "placeObjects": false,
-    "postProcessing": false,
-    "carving": false,
-    "caves": false,
+    "postProcessing": true,
+    "carving": true,
+    "caves": true,
     "postProcessors": [
         {
             "phase": 0,
@@ -48,13 +48,9 @@
     "landBiomeStyle": {
         "style": "CELLULAR_IRIS_DOUBLE",
         "fracture": {
-            "style": "IRIS_DOUBLE",
-            "multiplier": 14,
-            "zoom": 0.03,
-            "fracture": {
-                "style": "STATIC",
-                "multiplier": 3
-            }
+            "style": "FRACTAL_WATER",
+            "multiplier": 25 ,
+            "zoom": 0.455
         }
     },
     "seaBiomeStyle": {
@@ -73,19 +69,15 @@
         "style": "CELLULAR_IRIS_DOUBLE"
     },
     "regionStyle": {
-        "style": "CELLULAR_IRIS_THICK"
-    },
-    "continentalStyle": {
         "style": "CELLULAR_IRIS_DOUBLE",
         "fracture": {
-            "style": "IRIS_DOUBLE",
-            "multiplier": 14,
-            "zoom": 0.03,
-            "fracture": {
-                "style": "STATIC",
-                "multiplier": 3
-            }
+            "style": "FRACTAL_WATER",
+            "multiplier": 75,
+            "zoom": 0.4
         }
+    },
+    "continentalStyle": {
+        "style": "CELLULAR_IRIS_THICK"
     },
     "continentZoom": 1,
     "dimensionAngleDeg": 19,
