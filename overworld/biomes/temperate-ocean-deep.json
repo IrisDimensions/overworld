@@ -3,13 +3,20 @@
   "rarity": 6,
   "layers": [
     {
-      "minHeight": 12,
-      "maxHeight": 22,
+      "minHeight": 2,
+      "maxHeight": 3,
       "style": {
-        "style": "STATIC"
+        "style": "FRACTAL_FBM_IRIS"
       },
-      "zoom": 0.825,
+      "zoom": 0.725,
       "palette": [
+        "SAND",
+        "CLAY",
+        "SAND",
+        "GRAVEL",
+        "SAND",
+        "DIRT",
+        "SAND",
         "SAND"
       ]
     },
@@ -49,13 +56,16 @@
       ],
       "translate": {
         "x": 0,
-        "y": -2,
+        "y": -3,
         "z": 0
       }
     },
         {
       "chance": 0.05,
       "underwater": true,
+      "clamp": {
+        "minimumHeight": 4
+      },
       "density": 1,
       "rotation": {
         "yAxis": {
@@ -67,18 +77,19 @@
         "enabled": true
       },
       "place": [
-        "ships/gall-2",
         "ships/gall-1",
+        "ships/gall-2",
         "ships/gall-3"
+
       ],
       "translate": {
         "x": 0,
-        "y": -4,
+        "y": 0,
         "z": 0
       }
     },
     {
-      "chance": 0.05,
+      "chance": 0.01,
       "underwater": true,
       "rotation": {
         "yAxis": {
@@ -106,8 +117,8 @@
   "generators": [
     {
       "generator": "plain-chaotic",
-      "min": -79,
-      "max": -2
+      "min": -75,
+      "max": -4
     }
   ],
   "decorators": [
