@@ -1,343 +1,424 @@
 {
-    "name": "Roofed Willow",
-    "layers": [
-        {
-            "zoom": 0.5,
-            "style": {"style": "STATIC"},
-            "palette": [
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "COARSE_DIRT",
-                "COARSE_DIRT"
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 4,
-            "palette": [
-                "DIRT",
-                "COARSE_DIRT"
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {"style": "STATIC"},
-            "palette": [
-                "STONE",
-                "ANDESITE",
-                "STONE"
-            ]
-        }
-    ],
-    "effects": [
-        {
-            "interval": 4750,
-            "sound": "AMBIENT_SOUL_SAND_VALLEY_MOOD",
-            "soundDistance": 3,
-            "volume": 6.2,
-            "minPitch": 1.6,
-            "maxPitch": 1.35,
-            "chance": 11
-        },
-        {
-            "interval": 1550,
-            "sound": "AMBIENT_SOUL_SAND_VALLEY_MOOD",
-            "soundDistance": 3,
-            "volume": 6.2,
-            "minPitch": 0.4,
-            "maxPitch": 0.2,
-            "chance": 5
-        },
-        {
-            "interval": 550,
-            "particleOffset": 12,
-            "particleEffect": "CAMPFIRE_SIGNAL_SMOKE",
-            "particleCount": 0,
-            "particleAltX": 0.0101,
-            "particleAltY": -0.033885,
-            "particleAltZ": 0.0101,
-            "chance": 1
-        }
-    ],
-    "structures": [
-        {
-            "tileset": "murky-stronghold",
-            "zoom": 1.14,
-            "ratio": 0.59,
-            "height": 58,
-            "rarity": 37,
-            "shuffle": 16
-        }
-    ],
-    "wall":
+  "name": "Roofed Willow",
+  "layers": [
     {
-        "style": {"style": "STATIC"},
-        "palette": [
-            "STONE",
-            "ANDESITE",
-            "STONE"
-        ]
+      "zoom": 0.5,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        "GRASS_BLOCK",
+        "GRASS_BLOCK",
+        "GRASS_BLOCK",
+        "GRASS_BLOCK",
+        "GRASS_BLOCK",
+        "PODZOL",
+        "PODZOL"
+      ]
     },
-    "objects": [
+    {
+      "minHeight": 2,
+      "maxHeight": 4,
+      "palette": [
+        "DIRT",
+        "COARSE_DIRT"
+      ]
+    },
+    {
+      "minHeight": 6,
+      "maxHeight": 18,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        "STONE",
+        "ANDESITE",
+        "STONE"
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "interval": 4750,
+      "sound": "AMBIENT_SOUL_SAND_VALLEY_MOOD",
+      "soundDistance": 3,
+      "volume": 6.2,
+      "minPitch": 1.6,
+      "maxPitch": 1.35,
+      "chance": 11
+    },
+    {
+      "interval": 1550,
+      "sound": "AMBIENT_SOUL_SAND_VALLEY_MOOD",
+      "soundDistance": 3,
+      "volume": 6.2,
+      "minPitch": 0.4,
+      "maxPitch": 0.2,
+      "chance": 5
+    },
+    {
+      "interval": 550,
+      "particleOffset": 12,
+      "particleEffect": "CAMPFIRE_SIGNAL_SMOKE",
+      "particleCount": 0,
+      "particleAltX": 0.0101,
+      "particleAltY": -0.033885,
+      "particleAltZ": 0.0101,
+      "chance": 1
+    }
+  ],
+  "structures": [
+    {
+      "tileset": "murky-stronghold",
+      "zoom": 1.14,
+      "ratio": 0.59,
+      "height": 58,
+      "rarity": 37,
+      "shuffle": 16
+    }
+  ],
+  "wall": {
+    "style": {
+      "style": "STATIC"
+    },
+    "palette": [
+      "STONE",
+      "ANDESITE",
+      "STONE"
+    ]
+  },
+  "objects": [
+    {
+      "chance": 0.7,
+      "edit": [
         {
-            "chance": 0.7,
-            "edit":[
-                {
-                    "find":["oak_log"],
-                    "replace":["dark_oak_log"]
-                 },
-                 {
-                    "find":["oak_wood"],
-                    "replace":["dark_oak_wood"]
-                 },
-                 {
-                    "find":["oak_fence"],
-                    "replace":["dark_oak_fence"]
-                 },
-                 {
-                    "find":["dark_oak_planks"],
-                    "replace":["stripped_dark_oak_wood"]
-                 }
-             ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "willwo/willwo-1",
-                "willwo/willwo-2",
-                "willwo/willwo-3",
-                "willwo/willwo-5",
-                "willwo/willwo-6",
-                "willwo/willwo-7",
-                "willwo/willwo-8",
-                "willwo/willwo-9",
-                "willwo/willwo-10",
-                "willwo/willwo-11"
-
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
+          "find": [
+            "oak_log"
+          ],
+          "replace": [
+            "dark_oak_log"
+          ]
         },
         {
-            "chance": 0.2,
-            "edit":[
-                {
-                    "find":["oak_log"],
-                    "replace":["dark_oak_log"]
-                 },
-                 {
-                    "find":["oak_wood"],
-                    "replace":["dark_oak_wood"]
-                 },
-                 {
-                    "find":["oak_fence"],
-                    "replace":["dark_oak_fence"]
-                 },
-                 {
-                    "find":["dark_oak_planks"],
-                    "replace":["stripped_dark_oak_wood"]
-                 }
-             ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "willowbutbigger/o1",
-                "willowbutbigger/o2"
-
-            ],
-            "translate": {
-                "x": 24,
-                "y": -3,
-                "z": 0
-            }
+          "find": [
+            "oak_wood"
+          ],
+          "replace": [
+            "dark_oak_wood"
+          ]
         },
         {
-            "chance": 0.135,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "boulder/boulder1",
-                "boulder/boulder2",
-                "boulder/boulder3",
-                "boulder/boulder4",
-                "boulder/boulder5",
-                "boulder/boulder6",
-                "boulder/boulder7",
-                "boulder/boulder8"
-            ],
-            "translate": {
-                "x": 0,
-                "y": -2,
-                "z": 0
-            }
+          "find": [
+            "oak_fence"
+          ],
+          "replace": [
+            "dark_oak_fence"
+          ]
         },
         {
-            "chance": 0.17,
-            "edit":[
-                {
-                    "find":["oak_log"],
-                    "replace":["dark_oak_log"]
-                 },
-                 {
-                    "find":["oak_wood"],
-                    "replace":["dark_oak_wood"]
-                 },
-                 {
-                    "find":["oak_fence"],
-                    "replace":["dark_oak_fence"]
-                 },
-                 {
-                    "find":["dark_oak_planks"],
-                    "replace":["stripped_dark_oak_wood"]
-                 }
-             ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "clutter/oak-clutt-1",
-                "clutter/oak-clutt-2",
-                "clutter/oak-clutt-3",
-                "clutter/oak-clutt-4",
-                "clutter/oak-clutt-5"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.08,
-            "edit":[
-                {
-                    "find":["oak_log"],
-                    "replace":["dark_oak_log"]
-                 },
-                 {
-                    "find":["oak_wood"],
-                    "replace":["dark_oak_wood"]
-                 },
-                 {
-                    "find":["oak_fence"],
-                    "replace":["dark_oak_fence"]
-                 },
-                 {
-                    "find":["dark_oak_planks"],
-                    "replace":["stripped_dark_oak_wood"]
-                 }
-             ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "stump/stump1",
-                "stump/stump2",
-                "stump/stump3",
-                "stump/stump4",
-                "stump/stump5",
-                "stump/stump6"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.00005,
-            "rotation": {
-                "enabled": false
-            },
-            "place": [
-                "stump/grave-1"
-            ],
-            "translate": {
-                "x": 0,
-                "y": -1,
-                "z": 0
-            }
+          "find": [
+            "dark_oak_planks"
+          ],
+          "replace": [
+            "stripped_dark_oak_wood"
+          ]
         }
-    ],
-    "children": [
-        "swamp-dark-oak-denmyre"
-    ],
-    "decorators": [
+      ],
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 0,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "willwo/willwo-1",
+        "willwo/willwo-2",
+        "willwo/willwo-3",
+        "willwo/willwo-5",
+        "willwo/willwo-6",
+        "willwo/willwo-7",
+        "willwo/willwo-8",
+        "willwo/willwo-9",
+        "willwo/willwo-10",
+        "willwo/willwo-11"
+      ],
+      "translate": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "chance": 0.2,
+      "edit": [
         {
-            "zoom": 0.3,
-            "chance": 0.01,
-            "palette": [
-                "DEAD_BUSH"
-            ],
-            "style": {"style": "STATIC"},
-            "variance": {"style": "STATIC"}
-                    },
+          "find": [
+            "oak_log"
+          ],
+          "replace": [
+            "dark_oak_log"
+          ]
+        },
         {
-            "zoom": 0.3,
-            "chance": 0.0002,
-            "palette": [
-                "CRIMSON_FUNGUS",
-                "BROWN_MUSHROOM",
-                "RED_MUSHROOM",
-                "BROWN_MUSHROOM",
-                "RED_MUSHROOM"
-            ],
-            "style": {"style": "STATIC"},
-            "variance": {"style": "STATIC"}
-                    },
+          "find": [
+            "oak_wood"
+          ],
+          "replace": [
+            "dark_oak_wood"
+          ]
+        },
         {
-            "zoom": 0.3,
-            "chance": 0.45,
-            "palette": ["GRASS"],
-            "style": {"style": "STATIC"},
-            "variance": {"style": "STATIC"}
-                    }
-    ],
-    "generators":[
+          "find": [
+            "oak_fence"
+          ],
+          "replace": [
+            "dark_oak_fence"
+          ]
+        },
         {
-            "generator": "plain",
-            "min": 4,
-            "max": 11
+          "find": [
+            "dark_oak_planks"
+          ],
+          "replace": [
+            "stripped_dark_oak_wood"
+          ]
         }
-    ],
-    "derivative": "SWAMP"
+      ],
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 0,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "willowbutbigger/o1",
+        "willowbutbigger/o2"
+      ],
+      "translate": {
+        "x": 24,
+        "y": -3,
+        "z": 0
+      }
+    },
+    {
+      "chance": 0.135,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 0,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "boulder/boulder1",
+        "boulder/boulder2",
+        "boulder/boulder3",
+        "boulder/boulder4",
+        "boulder/boulder5",
+        "boulder/boulder6",
+        "boulder/boulder7",
+        "boulder/boulder8"
+      ],
+      "translate": {
+        "x": 0,
+        "y": -2,
+        "z": 0
+      }
+    },
+    {
+      "chance": 0.17,
+      "edit": [
+        {
+          "find": [
+            "oak_log"
+          ],
+          "replace": [
+            "dark_oak_log"
+          ]
+        },
+        {
+          "find": [
+            "oak_wood"
+          ],
+          "replace": [
+            "dark_oak_wood"
+          ]
+        },
+        {
+          "find": [
+            "oak_fence"
+          ],
+          "replace": [
+            "dark_oak_fence"
+          ]
+        },
+        {
+          "find": [
+            "dark_oak_planks"
+          ],
+          "replace": [
+            "stripped_dark_oak_wood"
+          ]
+        }
+      ],
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 0,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "clutter/oak-clutt-1",
+        "clutter/oak-clutt-2",
+        "clutter/oak-clutt-3",
+        "clutter/oak-clutt-4",
+        "clutter/oak-clutt-5"
+      ],
+      "translate": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "chance": 0.08,
+      "edit": [
+        {
+          "find": [
+            "oak_log"
+          ],
+          "replace": [
+            "dark_oak_log"
+          ]
+        },
+        {
+          "find": [
+            "oak_wood"
+          ],
+          "replace": [
+            "dark_oak_wood"
+          ]
+        },
+        {
+          "find": [
+            "oak_fence"
+          ],
+          "replace": [
+            "dark_oak_fence"
+          ]
+        },
+        {
+          "find": [
+            "dark_oak_planks"
+          ],
+          "replace": [
+            "stripped_dark_oak_wood"
+          ]
+        }
+      ],
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 0,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "stump/stump1",
+        "stump/stump2",
+        "stump/stump3",
+        "stump/stump4",
+        "stump/stump5",
+        "stump/stump6"
+      ],
+      "translate": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "chance": 0.00005,
+      "rotation": {
+        "enabled": false
+      },
+      "place": [
+        "stump/grave-1"
+      ],
+      "translate": {
+        "x": 0,
+        "y": -1,
+        "z": 0
+      }
+    }
+  ],
+  "children": [
+    "swamp-dark-oak-denmyre"
+  ],
+  "decorators": [
+    {
+      "zoom": 0.3,
+      "chance": 0.01,
+      "palette": [
+        "DEAD_BUSH"
+      ],
+      "style": {
+        "style": "STATIC"
+      },
+      "variance": {
+        "style": "STATIC"
+      }
+    },
+    {
+      "zoom": 0.3,
+      "chance": 0.0002,
+      "palette": [
+        "CRIMSON_FUNGUS",
+        "BROWN_MUSHROOM",
+        "RED_MUSHROOM",
+        "BROWN_MUSHROOM",
+        "RED_MUSHROOM"
+      ],
+      "style": {
+        "style": "STATIC"
+      },
+      "variance": {
+        "style": "STATIC"
+      }
+    },
+    {
+      "zoom": 0.3,
+      "chance": 0.45,
+      "palette": [
+        "GRASS"
+      ],
+      "style": {
+        "style": "STATIC"
+      },
+      "variance": {
+        "style": "STATIC"
+      }
+    }
+  ],
+  "generators": [
+    {
+      "generator": "plain",
+      "min": 4,
+      "max": 11
+    }
+  ],
+  "derivative": "SWAMP"
 }

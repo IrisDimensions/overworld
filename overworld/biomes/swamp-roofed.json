@@ -1,286 +1,370 @@
 {
-    "name": "Roofed Swamp",
-    "layers": [
-        {
-            "zoom": 0.5,
-            "style": {"style": "STATIC"},
-            "palette": [
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "COARSE_DIRT",
-                "COARSE_DIRT"
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 4,
-            "palette": [
-                "DIRT",
-                "COARSE_DIRT"
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {"style": "STATIC"},
-            "palette": [
-                "STONE",
-                "ANDESITE",
-                "STONE"
-            ]
-        }
-    ],
-    "wall":
+  "name": "Roofed Swamp",
+  "layers": [
     {
-        "style": {"style": "STATIC"},
-        "palette": [
-            "STONE",
-            "ANDESITE",
-            "STONE"
-        ]
+      "zoom": 0.5,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        "GRASS_BLOCK",
+        "GRASS_BLOCK",
+        "GRASS_BLOCK",
+        "GRASS_BLOCK",
+        "GRASS_BLOCK",
+        "PODZOL",
+        "PODZOL"
+      ]
     },
-    "objects": [
+    {
+      "minHeight": 2,
+      "maxHeight": 4,
+      "palette": [
+        "DIRT",
+        "COARSE_DIRT"
+      ]
+    },
+    {
+      "minHeight": 6,
+      "maxHeight": 18,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        "STONE",
+        "ANDESITE",
+        "STONE"
+      ]
+    }
+  ],
+  "wall": {
+    "style": {
+      "style": "STATIC"
+    },
+    "palette": [
+      "STONE",
+      "ANDESITE",
+      "STONE"
+    ]
+  },
+  "objects": [
+    {
+      "chance": 0.5,
+            "edit": [
+          {
+              "find": ["SPRUCE_LEAVES"],
+              "replace": ["OAK_LEAVES"]
+          },
+          {
+              "find": ["BIRCH_LEAVES"],
+              "replace": ["DARK_OAK_LEAVES"]
+          }
+      ],
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 0,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "roofed-wayward/med-1",
+        "roofed-wayward/med-2",
+        "roofed-wayward/med-3",
+        "roofed-wayward/med-4",
+        "roofed-wayward/med-5",
+        "roofed-wayward/med-6",
+        "roofed-wayward/med-7",
+        "roofed-wayward/med-8",
+        "roofed-wayward/med-9",
+        "roofed-wayward/med-10",
+        "roofed-wayward/med-11",
+        "roofed-wayward/med-12"
+      ],
+      "translate": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "chance": 0.5,
+            "edit": [
+          {
+              "find": ["SPRUCE_LEAVES"],
+              "replace": ["OAK_LEAVES"]
+          },
+          {
+              "find": ["BIRCH_LEAVES"],
+              "replace": ["DARK_OAK_LEAVES"]
+          }
+      ],
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 0,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "roofed-wayward/taller-roof-1",
+        "roofed-wayward/taller-roof-2",
+        "roofed-wayward/taller-roof-3",
+        "roofed-wayward/taller-roof-4",
+        "roofed-wayward/taller-roof-5",
+        "roofed-wayward/taller-roof-6",
+        "roofed-wayward/taller-roof-7",
+        "roofed-wayward/taller-roof-8",
+        "roofed-wayward/taller-roof-9",
+        "roofed-wayward/taller-roof-10"
+      ],
+      "translate": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "chance": 0.135,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 0,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "boulder/boulder1",
+        "boulder/boulder2",
+        "boulder/boulder3",
+        "boulder/boulder4",
+        "boulder/boulder5",
+        "boulder/boulder6",
+        "boulder/boulder7",
+        "boulder/boulder8"
+      ],
+      "translate": {
+        "x": 0,
+        "y": -2,
+        "z": 0
+      }
+    },
+    {
+      "chance": 0.1,
+      "edit": [
         {
-            "chance": 0.5,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "roofed-wayward/med-1",
-                "roofed-wayward/med-2",
-                "roofed-wayward/med-3",
-                "roofed-wayward/med-4",
-                "roofed-wayward/med-5",
-                "roofed-wayward/med-6",
-                "roofed-wayward/med-7",
-                "roofed-wayward/med-8",
-                "roofed-wayward/med-9",
-                "roofed-wayward/med-10",
-                "roofed-wayward/med-11",
-                "roofed-wayward/med-12"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
+          "find": [
+            "oak_log"
+          ],
+          "replace": [
+            "dark_oak_log"
+          ]
         },
         {
-            "chance": 0.5,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "roofed-wayward/taller-roof-1",
-                "roofed-wayward/taller-roof-2",
-                "roofed-wayward/taller-roof-3",
-                "roofed-wayward/taller-roof-4",
-                "roofed-wayward/taller-roof-5",
-                "roofed-wayward/taller-roof-6",
-                "roofed-wayward/taller-roof-7",
-                "roofed-wayward/taller-roof-8",
-                "roofed-wayward/taller-roof-9",
-                "roofed-wayward/taller-roof-10"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
+          "find": [
+            "oak_wood"
+          ],
+          "replace": [
+            "dark_oak_wood"
+          ]
         },
         {
-            "chance": 0.135,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "boulder/boulder1",
-                "boulder/boulder2",
-                "boulder/boulder3",
-                "boulder/boulder4",
-                "boulder/boulder5",
-                "boulder/boulder6",
-                "boulder/boulder7",
-                "boulder/boulder8"
-            ],
-            "translate": {
-                "x": 0,
-                "y": -2,
-                "z": 0
-            }
+          "find": [
+            "oak_fence"
+          ],
+          "replace": [
+            "dark_oak_fence"
+          ]
         },
         {
-            "chance": 0.1,
-            "edit":[
-                {
-                    "find":["oak_log"],
-                    "replace":["dark_oak_log"]
-                 },
-                 {
-                    "find":["oak_wood"],
-                    "replace":["dark_oak_wood"]
-                 },
-                 {
-                    "find":["oak_fence"],
-                    "replace":["dark_oak_fence"]
-                 },
-                 {
-                    "find":["dark_oak_planks"],
-                    "replace":["stripped_dark_oak_wood"]
-                 }
-             ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "stump/stump1",
-                "stump/stump2",
-                "stump/stump3",
-                "stump/stump4",
-                "stump/stump5",
-                "stump/stump6"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.3,
-            "edit":[
-                {
-                    "find":["oak_log"],
-                    "replace":["dark_oak_log"]
-                 },
-                 {
-                    "find":["oak_wood"],
-                    "replace":["dark_oak_wood"]
-                 },
-                 {
-                    "find":["oak_fence"],
-                    "replace":["dark_oak_fence"]
-                 },
-                 {
-                    "find":["dark_oak_planks"],
-                    "replace":["stripped_dark_oak_wood"]
-                 }
-             ],
-
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "clutter/oak-clutt-1",
-                "clutter/oak-clutt-2",
-                "clutter/oak-clutt-3",
-                "clutter/oak-clutt-4",
-                "clutter/oak-clutt-5"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.001,
-            "rotation": {
-                "enabled": false
-            },
-            "place": [
-                "stump/grave-1"
-            ],
-            "translate": {
-                "x": 0,
-                "y": -1,
-                "z": 0
-            }
+          "find": [
+            "dark_oak_planks"
+          ],
+          "replace": [
+            "stripped_dark_oak_wood"
+          ]
         }
-    ],
-    "structures": [
+      ],
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 0,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "stump/stump1",
+        "stump/stump2",
+        "stump/stump3",
+        "stump/stump4",
+        "stump/stump5",
+        "stump/stump6"
+      ],
+      "translate": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "chance": 0.3,
+      "edit": [
         {
-            "tileset": "murky-stronghold",
-            "zoom": 1.15,
-            "ratio": 0.58,
-            "height": 53,
-            "rarity": 41,
-            "shuffle": 11
+          "find": [
+            "oak_log"
+          ],
+          "replace": [
+            "dark_oak_log"
+          ]
+        },
+        {
+          "find": [
+            "oak_wood"
+          ],
+          "replace": [
+            "dark_oak_wood"
+          ]
+        },
+        {
+          "find": [
+            "oak_fence"
+          ],
+          "replace": [
+            "dark_oak_fence"
+          ]
+        },
+        {
+          "find": [
+            "dark_oak_planks"
+          ],
+          "replace": [
+            "stripped_dark_oak_wood"
+          ]
         }
-    ],
-    "children": [
-        "swamp-dark-oak-denmyre"
-    ],
-    "decorators": [
-        {
-            "zoom": 0.3,
-            "chance": 0.03,
-            "palette": [
-                "DEAD_BUSH",
-                "BROWN_MUSHROOM",
-                "RED_MUSHROOM",
-                "BROWN_MUSHROOM",
-                "RED_MUSHROOM"
-            ],
-            "style": {"style": "STATIC"},
-            "variance": {"style": "STATIC"}
-                    },
-        {
-            "zoom": 0.3,
-            "chance": 0.0002,
-            "palette": [
-                "CRIMSON_FUNGUS"
-            ],
-            "style": {"style": "STATIC"},
-            "variance": {"style": "STATIC"}
-                    },
-        {
-            "zoom": 0.3,
-            "chance": 0.45,
-            "palette": ["GRASS"],
-            "style": {"style": "STATIC"},
-            "variance": {"style": "STATIC"}
-                    }
-    ],
-    "generators":[
-        {
-            "generator": "plain",
-            "min": 4,
-            "max": 11
-        }
-    ],
-    "derivative": "SWAMP"
+      ],
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 0,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "clutter/oak-clutt-1",
+        "clutter/oak-clutt-2",
+        "clutter/oak-clutt-3",
+        "clutter/oak-clutt-4",
+        "clutter/oak-clutt-5"
+      ],
+      "translate": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "chance": 0.001,
+      "rotation": {
+        "enabled": false
+      },
+      "place": [
+        "stump/grave-1"
+      ],
+      "translate": {
+        "x": 0,
+        "y": -1,
+        "z": 0
+      }
+    }
+  ],
+  "structures": [
+    {
+      "tileset": "murky-stronghold",
+      "zoom": 1.15,
+      "ratio": 0.58,
+      "height": 53,
+      "rarity": 41,
+      "shuffle": 11
+    }
+  ],
+  "children": [
+    "swamp-dark-oak-denmyre"
+  ],
+  "decorators": [
+    {
+      "zoom": 0.3,
+      "chance": 0.01,
+      "palette": [
+        "DEAD_BUSH",
+        "BROWN_MUSHROOM",
+        "RED_MUSHROOM",
+        "BROWN_MUSHROOM",
+        "RED_MUSHROOM"
+      ],
+      "style": {
+        "style": "STATIC"
+      },
+      "variance": {
+        "style": "STATIC"
+      }
+    },
+    {
+      "zoom": 0.3,
+      "chance": 0.0002,
+      "palette": [
+        "CRIMSON_FUNGUS"
+      ],
+      "style": {
+        "style": "STATIC"
+      },
+      "variance": {
+        "style": "STATIC"
+      }
+    },
+    {
+      "zoom": 1,
+      "chance": 0.003,
+      "palette": [
+        "minecraft:dark_oak_button[face=floor,facing=east,powered=false]",
+        "minecraft:dark_oak_button[face=floor,facing=south,powered=false]"
+      ],
+      "style": {
+        "style": "STATIC"
+      },
+      "variance": {
+        "style": "STATIC"
+      }
+    },
+    {
+      "zoom": 0.3,
+      "chance": 0.45,
+      "palette": [
+        "GRASS"
+      ],
+      "style": {
+        "style": "STATIC"
+      },
+      "variance": {
+        "style": "STATIC"
+      }
+    }
+  ],
+  "generators": [
+    {
+      "generator": "plain",
+      "min": 4,
+      "max": 11
+    }
+  ],
+  "derivative": "SWAMP"
 }
