@@ -53,15 +53,18 @@
     },
     "decorators": [
         {
-            "zoom": 0.3,
-            "chance": 0.015,
             "palette": [
-                "minecraft:dark_oak_button[face=floor,facing=east,powered=false]",
-                "minecraft:dark_oak_button[face=floor,facing=south,powered=false]"
+                "minecraft:snow[layers=1]",
+                "minecraft:snow[layers=2]",
+                "minecraft:snow[layers=3]",
+                "minecraft:snow[layers=4]"
             ],
-            "style": {"style": "STATIC"},
-            "variance": {"style": "STATIC"}
-                    }
+            "chance": 1,
+            "variance": {
+                "style": "IRIS",
+                "zoom": 0.2
+            }
+        }
     ],
     "children": [
         "frozen-peak",
