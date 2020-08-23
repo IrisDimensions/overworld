@@ -1,29 +1,20 @@
 {
-    "name": "Tropical Root",
-    "rarity": 4,
-    "layers": [
-        {
-            "maxHeight": 3,
-            "style": {"style": "STATIC"},
-            "zoom": 0.1,
-            "minHeight": 1,
-            "palette": [
-                "STRIPPED_JUNGLE_WOOD",
-                "minecraft:jungle_leaves[persistent=true]",
-                "minecraft:jungle_leaves[persistent=true]",
-                "minecraft:jungle_leaves[persistent=true]",
-                "minecraft:jungle_leaves[persistent=true]",
-                "STRIPPED_JUNGLE_WOOD",
-                "STRIPPED_JUNGLE_WOOD",
-                "STRIPPED_JUNGLE_WOOD",
-                "STRIPPED_JUNGLE_WOOD",
-                "STRIPPED_JUNGLE_WOOD",
-                "STRIPPED_JUNGLE_WOOD",
-                "STRIPPED_JUNGLE_WOOD",
-                "STRIPPED_JUNGLE_WOOD"
-            ]
-        }
-    ],"objects": [
+  "name": "Lit Cavern",
+  "rarity": 6,
+  "layers": [
+    {
+      "maxHeight": 2,
+      "style": {
+        "style": "STATIC"
+      },
+      "zoom": 0.1,
+      "minHeight": 1,
+      "palette": [
+        "STONE",
+        "ANDESITE"
+      ]
+    }
+  ],"objects": [
 
         {
             "chance": 0.00175,
@@ -101,30 +92,47 @@
       }
     }
   ],
-    "decorators": [
+    "loot": {
+        "tables": [
+            "cave-clutter"
+        ]
+    },
+  "slab": {
+    "style": {
+      "style": "STATIC"
+    },
+    "palette": [
+      "minecraft:cobblestone_slab[type=bottom,waterlogged=false]",
+      "minecraft:mossy_cobblestone_slab[type=bottom,waterlogged=false]",
+      "AIR"
+    ]
+  },
+  "decorators": [
     {
       "chance": 0.0001,
       "palette": [
         "BARREL"
       ]
     },
-        {
-            "zoom": 0.3,
-            "chance": 0.03,
-            "palette": [
-                "minecraft:jungle_button[face=floor,facing=east,powered=false]",
-                "minecraft:jungle_button[face=floor,facing=south,powered=false]"
-            ],
-            "style": {"style": "STATIC"},
-            "variance": {"style": "STATIC"}
-                    }
-    ],
-    "generators":[
-        {
-            "generator": "plain",
-            "min": 4,
-            "max": 6
-        }
-    ],
-    "derivative": "FOREST"
+    {
+      "chance": 0.008,
+      "palette": [
+        "ANDESITE_WALL"
+      ]
+    },
+    {
+      "chance": 0.002,
+      "palette": [
+        "TORCH"
+      ]
+    }
+  ],
+  "generators": [
+    {
+      "generator": "plain",
+      "min": 4,
+      "max": 6
+    }
+  ],
+  "derivative": "PLAINS"
 }
