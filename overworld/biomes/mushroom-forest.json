@@ -1,318 +1,408 @@
 {
-    "name":"Mushroom Forest",
-    "layers":[
-       {
-          "zoom":0.5,
-          "style":{
-             "style": "IRIS"
-          },
-          "palette":[
-             "MYCELIUM",
-             "MYCELIUM",
-             "MYCELIUM",
-             "MYCELIUM",
-             "GRAVEL",
-             "MYCELIUM",
-             "MYCELIUM",
-             "MYCELIUM"
-          ]
-       },
-       {
-          "minHeight":2,
-          "maxHeight":4,
-          "palette":[
-             "DIRT",
-             "COARSE_DIRT"
-          ]
-       },
-       {
-          "minHeight":6,
-          "maxHeight":18,
-          "style":{
-             "style": "STATIC"
-          },
-          "palette":[
-             "STONE",
-             "ANDESITE",
-             "STONE"
-          ]
-       }
-    ],
-    "slab":{
-       "style":{"style":"STATIC"},
-       "palette":[
-          "AIR",
-          "AIR",
-          "AIR",
-          "AIR",
-          "AIR",
-          "AIR",
-          "AIR",
-          "AIR",
-          "minecraft:cobblestone_slab[type=bottom,waterlogged=false]",
-          "AIR",
-          "AIR",
-          "AIR",
-          "AIR",
-          "AIR",
-          "AIR",
-          "AIR",
-          "AIR",
-          "AIR",
-          "AIR"
-       ]
+  "name": "Mushroom Forest",
+  "layers": [
+    {
+      "zoom": 0.5,
+      "style": {
+        "style": "IRIS"
+      },
+      "palette": [
+        "MYCELIUM",
+        "MYCELIUM",
+        "MYCELIUM",
+        "MYCELIUM",
+        "GRAVEL",
+        "MYCELIUM",
+        "MYCELIUM",
+        "MYCELIUM"
+      ]
     },
-    "effects": [
-        {
-            "interval": 6000,
-            "sound": "AMBIENT_WARPED_FOREST_ADDITIONS",
-            "soundDistance": 3,
-            "volume": 6.2,
-            "minPitch": 0.2,
-            "maxPitch": 0.3,
-            "chance": 8
-        }
-    ],
-    "wall":{
-       "style":{"style":"STATIC"},
-       "palette":[
-          "STONE",
-          "ANDESITE",
-          "STONE"
-       ]
+    {
+      "minHeight": 2,
+      "maxHeight": 4,
+      "palette": [
+        "DIRT",
+        "COARSE_DIRT"
+      ]
     },
-    "objects":[
-       {
-          "chance":0.21,
-          "density":2,
-          "rotation":{
-             "yAxis":{
-                "min":0,
-                "max":0,
-                "interval":90,
-                "enabled":true
-             },
-             "enabled":true
-          },
-          "place":[
-             "mushroom-red/small-organell-r-1",
-             "mushroom-red/small-organell-r-2",
-             "mushroom-red/small-organell-r-3",
-             "mushroom-red/small-organell-r-4",
-             "mushroom-red/small-organell-r-5",
-             "mushroom-red/small-organell-r-6",
-             "mushroom-red/small-organell-r-7",
-             "mushroom-red/small-organell-r-8",
-             "mushroom-red/small-organell-r-9",
-             "mushroom-red/small-organell-r-10"
-          ],
-          "translate":{
-             "x":0,
-             "y":-1,
-             "z":0
-          }
-       },
-       {
-          "chance":0.21,
-          "edit":[
-             {
-                "find":["red_mushroom_block"],
-                "replace":["brown_mushroom_block"]
-             }
-          ],
-          "density":2,
-          "rotation":{
-             "yAxis":{
-                "min":0,
-                "max":0,
-                "interval":90,
-                "enabled":true
-             },
-             "enabled":true
-          },
-          "place":[
-             "mushroom-red/small-organell-r-1",
-             "mushroom-red/small-organell-r-2",
-             "mushroom-red/small-organell-r-3",
-             "mushroom-red/small-organell-r-4",
-             "mushroom-red/small-organell-r-5",
-             "mushroom-red/small-organell-r-6",
-             "mushroom-red/small-organell-r-7",
-             "mushroom-red/small-organell-r-8",
-             "mushroom-red/small-organell-r-9",
-             "mushroom-red/small-organell-r-10"
-          ],
-          "translate":{
-             "x":0,
-             "y":-1,
-             "z":0
-          }
-       },
-       {
-          "chance":0.5,
-          "density":2,
-          "rotation":{
-             "yAxis":{
-                "min":0,
-                "max":0,
-                "interval":90,
-                "enabled":true
-             },
-             "enabled":true
-          },
-          "place":[
-             "mushroom-red/organell-r-1",
-             "mushroom-red/organell-r-2",
-             "mushroom-red/organell-b-1",
-             "mushroom-red/organell-b-2",
-             "mushroom-red/organell-r-3",
-             "mushroom-red/organell-r-4",
-             "mushroom-red/organell-r-5",
-             "mushroom-red/organell-r-6",
-             "mushroom-red/organell-r-7",
-             "mushroom-red/organell-r-8",
-             "mushroom-red/organell-r-9",
-             "mushroom-red/organell-r-10"
-          ],
-          "translate":{
-             "x":0,
-             "y":-1,
-             "z":0
-          }
-       },
-       {
-          "chance":0.5,
-          "edit":[
-             {
-                "find":["red_mushroom_block"],
-                "replace":["brown_mushroom_block"]
-             }
-          ],
-          "density":2,
-          "rotation":{
-             "yAxis":{
-                "min":0,
-                "max":0,
-                "interval":90,
-                "enabled":true
-             },
-             "enabled":true
-          },
-          "place":[
-             "mushroom-red/organell-r-1",
-             "mushroom-red/organell-r-2",
-             "mushroom-red/organell-b-1",
-             "mushroom-red/organell-b-2",
-             "mushroom-red/organell-r-3",
-             "mushroom-red/organell-r-4",
-             "mushroom-red/organell-r-5",
-             "mushroom-red/organell-r-6",
-             "mushroom-red/organell-r-7",
-             "mushroom-red/organell-r-8",
-             "mushroom-red/organell-r-9",
-             "mushroom-red/organell-r-10"
-          ],
-          "translate":{
-             "x":0,
-             "y":-1,
-             "z":0
-          }
-       },
-       {
-          "chance":0.025,
-          "edit":[
-             {
-                "find":["red_mushroom_block"],
-                "replace":["brown_mushroom_block"]
-             }
-          ],
-          "density":1,
-          "rotation":{
-             "yAxis":{
-                "min":0,
-                "max":0,
-                "interval":90,
-                "enabled":true
-             },
-             "enabled":true
-          },
-          "place":[
-             "shroom/mushclutt1",
-             "shroom/mushclutt2",
-             "shroom/mushclutt3",
-             "shroom/mushclutt4",
-             "shroom/mushclutt5"
-          ],
-          "translate":{
-             "x":0,
-             "y":-1,
-             "z":0
-          }
-       },
-       {
-          "chance":0.1,
-          "density":1,
-          "rotation":{
-             "yAxis":{
-                "min":0,
-                "max":0,
-                "interval":90,
-                "enabled":true
-             },
-             "enabled":true
-          },
-          "place":[
-             "shroom/mushclutt1",
-             "shroom/mushclutt2",
-             "shroom/mushclutt3",
-             "shroom/mushclutt4",
-             "shroom/mushclutt5"
-          ],
-          "translate":{
-             "x":0,
-             "y":-1,
-             "z":0
-          }
-       }
-    ],
-    "structures": [
+    {
+      "minHeight": 6,
+      "maxHeight": 18,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        "STONE",
+        "ANDESITE",
+        "STONE"
+      ]
+    }
+  ],
+  "slab": {
+    "style": {
+      "style": "STATIC"
+    },
+    "palette": [
+      "AIR",
+      "AIR",
+      "AIR",
+      "AIR",
+      "AIR",
+      "AIR",
+      "AIR",
+      "AIR",
+      "minecraft:cobblestone_slab[type=bottom,waterlogged=false]",
+      "AIR",
+      "AIR",
+      "AIR",
+      "AIR",
+      "AIR",
+      "AIR",
+      "AIR",
+      "AIR",
+      "AIR",
+      "AIR"
+    ]
+  },
+  "effects": [
+    {
+      "interval": 6000,
+      "sound": "AMBIENT_WARPED_FOREST_ADDITIONS",
+      "soundDistance": 3,
+      "volume": 6.2,
+      "minPitch": 0.2,
+      "maxPitch": 0.3,
+      "chance": 8
+    }
+  ],
+  "wall": {
+    "style": {
+      "style": "STATIC"
+    },
+    "palette": [
+      "STONE",
+      "ANDESITE",
+      "STONE"
+    ]
+  },
+  "objects": [
+    {
+      "chance": 0.21,
+      "density": 2,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 0,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "mushroom-red/small-organell-r-1",
+        "mushroom-red/small-organell-r-2",
+        "mushroom-red/small-organell-r-3",
+        "mushroom-red/small-organell-r-4",
+        "mushroom-red/small-organell-r-5",
+        "mushroom-red/small-organell-r-6",
+        "mushroom-red/small-organell-r-7",
+        "mushroom-red/small-organell-r-8",
+        "mushroom-red/small-organell-r-9",
+        "mushroom-red/small-organell-r-10"
+      ],
+      "translate": {
+        "x": 0,
+        "y": -1,
+        "z": 0
+      }
+    },
+    {
+      "chance": 0.21,
+      "edit": [
         {
-            "tileset": "murky-stronghold",
-            "zoom": 1.14,
-            "ratio": 0.59,
-            "height": 45,
-            "rarity": 55,
-            "shuffle": 16
+          "find": [
+            "red_mushroom_block"
+          ],
+          "replace": [
+            "brown_mushroom_block"
+          ]
         }
-    ],
-    "decorators":[
-       {
-          "zoom":0.3,
-          "chance":0.009,
-          "palette":[
-             "minecraft:stone_button[face=floor,facing=east,powered=false]",
-             "minecraft:stone_button[face=floor,facing=south,powered=false]"
+      ],
+      "density": 2,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 0,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "mushroom-red/small-organell-r-1",
+        "mushroom-red/small-organell-r-2",
+        "mushroom-red/small-organell-r-3",
+        "mushroom-red/small-organell-r-4",
+        "mushroom-red/small-organell-r-5",
+        "mushroom-red/small-organell-r-6",
+        "mushroom-red/small-organell-r-7",
+        "mushroom-red/small-organell-r-8",
+        "mushroom-red/small-organell-r-9",
+        "mushroom-red/small-organell-r-10"
+      ],
+      "translate": {
+        "x": 0,
+        "y": -1,
+        "z": 0
+      }
+    },
+    {
+      "chance": 0.4,
+      "density": 2,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 0,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "mushroom-red/organell-r-1",
+        "mushroom-red/organell-r-2",
+        "mushroom-red/organell-b-1",
+        "mushroom-red/organell-b-2",
+        "mushroom-red/organell-r-3",
+        "mushroom-red/organell-r-4",
+        "mushroom-red/organell-r-5",
+        "mushroom-red/organell-r-6",
+        "mushroom-red/organell-r-7",
+        "mushroom-red/organell-r-8",
+        "mushroom-red/organell-r-9",
+        "mushroom-red/organell-r-10"
+      ],
+      "translate": {
+        "x": 0,
+        "y": -1,
+        "z": 0
+      }
+    },
+    {
+      "chance": 0.05,
+      "density": 2,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 0,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "mushroom-red/illuminorganell-r-1",
+        "mushroom-red/illuminorganell-r-2",
+        "mushroom-red/illuminorganell-r-3",
+        "mushroom-red/illuminorganell-r-4",
+        "mushroom-red/illuminorganell-r-5",
+        "mushroom-red/illuminorganell-r-6",
+        "mushroom-red/illuminorganell-r-7",
+        "mushroom-red/illuminorganell-r-8"
+      ],
+      "translate": {
+        "x": 0,
+        "y": -1,
+        "z": 0
+      }
+    },
+    {
+      "chance": 0.05,
+      "density": 2,
+      "edit": [
+        {
+          "find": [
+            "red_mushroom_block"
           ],
-          "style":{"style": "STATIC"},
-          "variance":{"style":"STATIC"}
-       },
-       {
-          "zoom":0.3,
-          "chance":0.05,
-          "palette":[
-             "red_mushroom",
-             "brown_mushroom"
+          "replace": [
+            "brown_mushroom_block"
+          ]
+        }
+      ],
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 0,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "mushroom-red/illuminorganell-r-1",
+        "mushroom-red/illuminorganell-r-2",
+        "mushroom-red/illuminorganell-r-3",
+        "mushroom-red/illuminorganell-r-4",
+        "mushroom-red/illuminorganell-r-5",
+        "mushroom-red/illuminorganell-r-6",
+        "mushroom-red/illuminorganell-r-7",
+        "mushroom-red/illuminorganell-r-8"
+      ],
+      "translate": {
+        "x": 0,
+        "y": -1,
+        "z": 0
+      }
+    },
+    {
+      "chance": 0.5,
+      "edit": [
+        {
+          "find": [
+            "red_mushroom_block"
           ],
-          "style":{"style": "STATIC"},
-          "variance":{"style":"STATIC"}
-       }
-    ],
-    "generators":[
-       {
-          "generator":"plain",
-          "min":6,
-          "max":24
-       }
-    ],
-    "derivative":"MUSHROOM_FIELDS"
- }
+          "replace": [
+            "brown_mushroom_block"
+          ]
+        }
+      ],
+      "density": 2,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 0,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "mushroom-red/organell-r-1",
+        "mushroom-red/organell-r-2",
+        "mushroom-red/organell-b-1",
+        "mushroom-red/organell-b-2",
+        "mushroom-red/organell-r-3",
+        "mushroom-red/organell-r-4",
+        "mushroom-red/organell-r-5",
+        "mushroom-red/organell-r-6",
+        "mushroom-red/organell-r-7",
+        "mushroom-red/organell-r-8",
+        "mushroom-red/organell-r-9",
+        "mushroom-red/organell-r-10"
+      ],
+      "translate": {
+        "x": 0,
+        "y": -1,
+        "z": 0
+      }
+    },
+    {
+      "chance": 0.025,
+      "edit": [
+        {
+          "find": [
+            "red_mushroom_block"
+          ],
+          "replace": [
+            "brown_mushroom_block"
+          ]
+        }
+      ],
+      "density": 1,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 0,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "shroom/mushclutt1",
+        "shroom/mushclutt2",
+        "shroom/mushclutt3",
+        "shroom/mushclutt4",
+        "shroom/mushclutt5"
+      ],
+      "translate": {
+        "x": 0,
+        "y": -1,
+        "z": 0
+      }
+    },
+    {
+      "chance": 0.1,
+      "density": 1,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 0,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "shroom/mushclutt1",
+        "shroom/mushclutt2",
+        "shroom/mushclutt3",
+        "shroom/mushclutt4",
+        "shroom/mushclutt5"
+      ],
+      "translate": {
+        "x": 0,
+        "y": -1,
+        "z": 0
+      }
+    }
+  ],
+  "structures": [
+    {
+      "tileset": "murky-stronghold",
+      "zoom": 1.14,
+      "ratio": 0.59,
+      "height": 45,
+      "rarity": 55,
+      "shuffle": 16
+    }
+  ],
+  "decorators": [
+    {
+      "zoom": 0.3,
+      "chance": 0.009,
+      "palette": [
+        "minecraft:stone_button[face=floor,facing=east,powered=false]",
+        "minecraft:stone_button[face=floor,facing=south,powered=false]"
+      ],
+      "style": {
+        "style": "STATIC"
+      },
+      "variance": {
+        "style": "STATIC"
+      }
+    },
+    {
+      "zoom": 0.3,
+      "chance": 0.05,
+      "palette": [
+        "red_mushroom",
+        "brown_mushroom"
+      ],
+      "style": {
+        "style": "STATIC"
+      },
+      "variance": {
+        "style": "STATIC"
+      }
+    }
+  ],
+  "generators": [
+    {
+      "generator": "plain",
+      "min": 6,
+      "max": 24
+    }
+  ],
+  "derivative": "MUSHROOM_FIELDS"
+}
