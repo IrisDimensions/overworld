@@ -1,0 +1,153 @@
+{
+  "name": "Sharpened Tundra Cavern",
+  "layers": [
+    {
+      "style": {
+        "style": "STATIC"
+      },
+      "zoom": 0.2,
+      "minHeight": 1,
+      "maxHeight": 2,
+      "palette": [
+        "STONE",
+        "ANDESITE",
+        "COBBLESTONE",
+        "GRAVEL"
+      ]
+    }
+  ],
+    "loot": {
+        "tables": [
+            "cave-clutter"
+        ]
+    },
+  "slab": {
+    "style": {
+      "style": "IRIS"
+    },
+    "zoom": 0.5,
+    "palette": [
+      "minecraft:cobblestone_slab[type=bottom,waterlogged=false]",
+      "minecraft:mossy_cobblestone_slab[type=bottom,waterlogged=false]",
+      "AIR"
+    ]
+  },
+  "decorators": [
+    {
+      "chance": 0.0001,
+      "palette": [
+        "BARREL"
+      ]
+    },
+    {
+      "zoom": 0.3,
+      "chance": 0.002,
+      "palette": [
+        "COBWEB"
+      ],
+      "style": {
+        "style": "STATIC"
+      },
+      "variance": {
+        "style": "STATIC"
+      }
+    },
+    {
+            "zoom": 0.3,
+            "chance": 0.0011,
+            "palette": [
+                "minecraft:sweet_berry_bush[age=0]",
+                "minecraft:sweet_berry_bush[age=1]",
+                "minecraft:sweet_berry_bush[age=2]",
+                "minecraft:sweet_berry_bush[age=3]"
+            ],
+            "style": {
+                "style": "STATIC"
+            },
+            "variance": {
+                "style": "STATIC"
+            }
+        },
+    {
+      "zoom": 0.3,
+      "chance": 0.001,
+      "palette": [
+        "PRISMARINE_WALL"
+      ],
+      "style": {
+        "style": "STATIC"
+      },
+      "variance": {
+        "style": "STATIC"
+      }
+    }
+  ],
+  "generators": [
+    {
+      "generator": "plain",
+      "min": 4,
+      "max": 6
+    }
+  ],
+  "objects": [
+    {
+      "chance": 0.000856,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 0,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "grave/grave"
+      ],
+      "translate": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "chance": 1,
+      "edit": [
+        {
+          "find": ["Stone"],
+          "replace": [
+        "STONE",
+        "ANDESITE",
+        "COBBLESTONE",
+        "GRAVEL"
+        ]
+        }
+      ],
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 0,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "stone-clutt/stone-spike-1",
+        "stone-clutt/stone-spike-2",
+        "stone-clutt/stone-spike-3",
+        "stone-clutt/stone-spike-4",
+        "stone-clutt/stone-spike-5",
+        "stone-clutt/stone-spike-6",
+        "stone-clutt/stone-spike-7",
+        "stone-clutt/stone-spike-8"
+      ],
+      "translate": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    }
+  ],
+  "derivative": "FROZEN_OCEAN"
+}
