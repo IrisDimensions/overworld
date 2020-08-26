@@ -1,253 +1,152 @@
 {
-    "name": "Example Temple",
-    "gridSize": 5,
     "gridHeight": 6,
-    "maxLayers": 1,
-    "mergeEdges": false,
-    "wallChance": 0.45,
-    "loot": {
-        "tables": [
-            "global-treasure",
-            "tropical-treasure",
-            "hot-treasure",
-            "cold-treasure",
-            "global-tools"
-        ]
+    "wallStyle": {
+        "multiplier": 1,
+        "style": "STATIC",
+        "zoom": 1,
+        "exponent": 1
     },
     "tiles": [
         {
-            "ceiling": "REQUIRED",
-            "floor": "REQUIRED",
-            "north": "NEVER",
+            "ceiling": "AGNOSTIC",
+            "east": "NEVER",
+            "placeMode": "PAINT",
             "south": "NEVER",
-            "east": "NEVER",
-            "west": "NEVER",
-            "objects": [
-                "structure/murky-stronghold/fc-x-1",
-                "structure/murky-stronghold/fc-x-2",
-                "structure/murky-stronghold/fc-x-3",
-                "structure/murky-stronghold/fc-x-4",
-                "structure/murky-stronghold/fc-x-5",
-                "structure/murky-stronghold/fc-x-6",
-                "structure/murky-stronghold/fc-x-7",
-                "structure/murky-stronghold/fc-x-8"
-            ]
-        },
-        {
-            "ceiling": "REQUIRED",
-            "floor": "NEVER",
+            "rareObjects": [],
             "north": "NEVER",
+            "objects": [
+                "structure/OgMurkyCavern/cross-1",
+                "structure/OgMurkyCavern/cross-2",
+                "structure/OgMurkyCavern/cross-3",
+                "structure/OgMurkyCavern/cross-4",
+                "structure/OgMurkyCavern/cross-5",
+                "structure/OgMurkyCavern/cross-6",
+                "structure/OgMurkyCavern/cross-7",
+                "structure/OgMurkyCavern/cross-8"
+            ],
+            "west": "NEVER",
+            "loot": {
+                "mode": "ADD",
+                "tables": [],
+                "multiplier": 1
+            },
+            "floor": "REQUIRED"
+        },
+        {
+            "ceiling": "AGNOSTIC",
+            "east": "NEVER",
+            "placeMode": "PAINT",
             "south": "NEVER",
-            "east": "NEVER",
-            "west": "NEVER",
+            "rareObjects": [],
+            "north": "REQUIRED",
             "objects": [
-                "structure/murky-stronghold/c-x-1",
-                "structure/murky-stronghold/c-x-2",
-                "structure/murky-stronghold/c-x-3",
-                "structure/murky-stronghold/c-x-4",
-                "structure/murky-stronghold/c-x-5",
-                "structure/murky-stronghold/c-x-6"
-            ]
+                "structure/OgMurkyCavern/t-connect-1",
+                "structure/OgMurkyCavern/t-connect-2",
+                "structure/OgMurkyCavern/t-connect-3",
+                "structure/OgMurkyCavern/t-connect-4"
+            ],
+            "west": "NEVER",
+            "loot": {
+                "mode": "ADD",
+                "tables": [],
+                "multiplier": 1
+            },
+            "floor": "REQUIRED"
         },
         {
-            "ceiling": "NEVER",
-            "floor": "REQUIRED",
-            "north": "NEVER",
+            "ceiling": "AGNOSTIC",
+            "east": "NEVER",
+            "placeMode": "PAINT",
+            "south": "REQUIRED",
+            "rareObjects": [],
+            "north": "REQUIRED",
+            "objects": [
+                "structure/OgMurkyCavern/hall-1",
+                "structure/OgMurkyCavern/hall-2",
+                "structure/OgMurkyCavern/hall-3",
+                "structure/OgMurkyCavern/hall-4"
+            ],
+            "west": "NEVER",
+            "loot": {
+                "mode": "ADD",
+                "tables": [],
+                "multiplier": 1
+            },
+            "floor": "REQUIRED"
+        },
+        {
+            "ceiling": "AGNOSTIC",
+            "east": "REQUIRED",
+            "placeMode": "PAINT",
             "south": "NEVER",
-            "east": "NEVER",
+            "rareObjects": [],
+            "north": "REQUIRED",
+            "objects": [
+                "structure/OgMurkyCavern/corner-1",
+                "structure/OgMurkyCavern/corner-2",
+                "structure/OgMurkyCavern/corner-3",
+                "structure/OgMurkyCavern/corner-4"
+            ],
             "west": "NEVER",
-            "objects": [
-                "structure/murky-stronghold/f-x-1",
-                "structure/murky-stronghold/f-x-2",
-                "structure/murky-stronghold/f-x-3",
-                "structure/murky-stronghold/f-x-4",
-                "structure/murky-stronghold/f-x-5",
-                "structure/murky-stronghold/f-x-6"
-            ]
-        },
-
-
-
-
-
-        {
-            "ceiling": "REQUIRED",
-            "floor": "REQUIRED",
-            "north": "NEVER",
-            "south": "REQUIRED",
-            "east": "NEVER",
-            "west": "REQUIRED",
-            "objects": [
-                "structure/murky-stronghold/fc-sw-1",
-                "structure/murky-stronghold/fc-sw-2",
-                "structure/murky-stronghold/fc-sw-3",
-                "structure/murky-stronghold/fc-sw-4"
-            ]
+            "loot": {
+                "mode": "ADD",
+                "tables": [],
+                "multiplier": 1
+            },
+            "floor": "REQUIRED"
         },
         {
-            "ceiling": "NEVER",
-            "floor": "REQUIRED",
-            "north": "NEVER",
-            "south": "REQUIRED",
-            "east": "NEVER",
-            "west": "REQUIRED",
-            "objects": [
-                "structure/murky-stronghold/f-sw-1",
-                "structure/murky-stronghold/f-sw-2",
-                "structure/murky-stronghold/f-sw-3",
-                "structure/murky-stronghold/f-sw-4"
-            ]
-        },
-        {
-            "ceiling": "REQUIRED",
-            "floor": "NEVER",
-            "north": "NEVER",
-            "south": "REQUIRED",
-            "east": "NEVER",
-            "west": "REQUIRED",
-            "objects": [
-                "structure/murky-stronghold/c-sw-1",
-                "structure/murky-stronghold/c-sw-2",
-                "structure/murky-stronghold/c-sw-3",
-                "structure/murky-stronghold/c-sw-4"
-            ]
-        },
-
-
-
-
-
-        {
-            "ceiling": "REQUIRED",
-            "floor": "REQUIRED",
-            "north": "REQUIRED",
-            "south": "REQUIRED",
-            "east": "NEVER",
-            "west": "REQUIRED",
-            "objects": [
-                "structure/murky-stronghold/fc-nsw-1",
-                "structure/murky-stronghold/fc-nsw-2",
-                "structure/murky-stronghold/fc-nsw-3",
-                "structure/murky-stronghold/fc-nsw-4"
-            ]
-        },
-        {
-            "ceiling": "NEVER",
-            "floor": "REQUIRED",
-            "north": "REQUIRED",
-            "south": "REQUIRED",
-            "east": "NEVER",
-            "west": "REQUIRED",
-            "objects": [
-                "structure/murky-stronghold/f-nsw-1",
-                "structure/murky-stronghold/f-nsw-2",
-                "structure/murky-stronghold/f-nsw-3",
-                "structure/murky-stronghold/f-nsw-4"
-            ]
-        },
-        {
-            "ceiling": "REQUIRED",
-            "floor": "NEVER",
-            "north": "REQUIRED",
-            "south": "REQUIRED",
-            "east": "NEVER",
-            "west": "REQUIRED",
-            "objects": [
-                "structure/murky-stronghold/c-nsw-1",
-                "structure/murky-stronghold/c-nsw-2",
-                "structure/murky-stronghold/c-nsw-3",
-                "structure/murky-stronghold/c-nsw-4"
-            ]
-        },
-
-
-
-
-
-        {
-            "ceiling": "REQUIRED",
-            "floor": "REQUIRED",
-            "north": "REQUIRED",
-            "south": "REQUIRED",
-            "east": "NEVER",
-            "west": "NEVER",
-            "objects": [
-                "structure/murky-stronghold/fc-ns-1",
-                "structure/murky-stronghold/fc-ns-2",
-                "structure/murky-stronghold/fc-ns-3",
-                "structure/murky-stronghold/fc-ns-4"
-            ]
-        },
-        {
-            "ceiling": "REQUIRED",
-            "floor": "NEVER",
-            "north": "REQUIRED",
-            "south": "REQUIRED",
-            "east": "NEVER",
-            "west": "NEVER",
-            "objects": [
-                "structure/murky-stronghold/c-ns-1",
-                "structure/murky-stronghold/c-ns-2",
-                "structure/murky-stronghold/c-ns-3",
-                "structure/murky-stronghold/c-ns-4"
-            ]
-        },
-        {
-            "ceiling": "REQUIRED",
-            "floor": "NEVER",
-            "north": "REQUIRED",
-            "south": "REQUIRED",
-            "east": "NEVER",
-            "west": "NEVER",
-            "objects": [
-                "structure/murky-stronghold/c-ns-1",
-                "structure/murky-stronghold/c-ns-2",
-                "structure/murky-stronghold/c-ns-3",
-                "structure/murky-stronghold/c-ns-4"
-            ]
-        },
-
-        {
-            "ceiling": "REQUIRED",
-            "floor": "REQUIRED",
-            "north": "REQUIRED",
+            "ceiling": "AGNOSTIC",
+            "east": "REQUIRED",
+            "placeMode": "PAINT",
             "south": "NEVER",
-            "east": "NEVER",
-            "west": "NEVER",
+            "rareObjects": [],
+            "north": "REQUIRED",
             "objects": [
-                "structure/murky-stronghold/fc-n-1",
-                "structure/murky-stronghold/fc-n-2",
-                "structure/murky-stronghold/fc-n-3",
-                "structure/murky-stronghold/fc-n-4"
-            ]
+                "structure/OgMurkyCavern/room-1",
+                "structure/OgMurkyCavern/room-2",
+                "structure/OgMurkyCavern/room-3",
+                "structure/OgMurkyCavern/room-4"
+            ],
+            "west": "REQUIRED",
+            "loot": {
+                "mode": "ADD",
+                "tables": [],
+                "multiplier": 1
+            },
+            "floor": "REQUIRED"
         },
         {
-            "ceiling": "NEVER",
-            "floor": "REQUIRED",
+            "ceiling": "AGNOSTIC",
+            "east": "REQUIRED",
+            "placeMode": "PAINT",
+            "south": "REQUIRED",
+            "rareObjects": [],
             "north": "REQUIRED",
-            "south": "NEVER",
-            "east": "NEVER",
-            "west": "NEVER",
-            "objects": [
-                "structure/murky-stronghold/f-n-1",
-                "structure/murky-stronghold/f-n-2",
-                "structure/murky-stronghold/f-n-3",
-                "structure/murky-stronghold/f-n-4"
-            ]
-        },
-        {
-            "ceiling": "REQUIRED",
-            "floor": "NEVER",
-            "north": "REQUIRED",
-            "south": "NEVER",
-            "east": "NEVER",
-            "west": "NEVER",
-            "objects": [
-                "structure/murky-stronghold/c-n-1",
-                "structure/murky-stronghold/c-n-2",
-                "structure/murky-stronghold/c-n-3",
-                "structure/murky-stronghold/c-n-4"
-            ]
+            "objects": ["structure/OgMurkyCavern/walled-room-1"],
+            "west": "REQUIRED",
+            "loot": {
+                "mode": "ADD",
+                "tables": [],
+                "multiplier": 1
+            },
+            "floor": "REQUIRED"
         }
-    ]
+    ],
+    "gridSize": 5,
+    "wallChance": 0.35,
+    "maxLayers": 1,
+    "name": "OgMurkyCavern",
+    "underwater": false,
+    "loot": {
+        "mode": "ADD",
+        "tables": [],
+        "multiplier": 1
+    },
+    "clamp": {
+        "minimumHeight": 0,
+        "maximumHeight": 255
+    },
+    "bore": true,
+    "mergeEdges": false
 }
