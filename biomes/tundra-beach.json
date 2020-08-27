@@ -1,73 +1,73 @@
 {
-  "name": "Cold Beach",
+    "name": "Cold Beach",
     "loot": {
         "tables": [
             "beach-clutter"
         ]
     },
-  "layers": [
-    {
-      "style": {
-        "style": "STATIC"
-      },
-      "zoom": 0.25,
-      "minHeight": 3,
-      "maxHeight": 6,
-      "palette": [
-        "SAND"
-      ]
+    "layers": [
+        {
+            "style": {
+                "style": "STATIC"
+            },
+            "zoom": 0.25,
+            "minHeight": 3,
+            "maxHeight": 6,
+            "palette": [
+                "SAND"
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                "DIRT"
+            ]
+        }
+    ],
+    "slab": {
+        "style": {
+            "style": "STATIC"
+        },
+        "palette": [
+            "minecraft:sandstone_slab[type=bottom,waterlogged=false]",
+            "minecraft:smooth_sandstone_slab[type=bottom,waterlogged=false]",
+            "AIR",
+            "AIR"
+        ]
     },
-    {
-      "minHeight": 1,
-      "maxHeight": 3,
-      "palette": [
-        "DIRT"
-      ]
-    }
-  ],
-  "slab": {
-    "style": {
-      "style": "STATIC"
-    },
-    "palette": [
-      "minecraft:sandstone_slab[type=bottom,waterlogged=false]",
-      "minecraft:smooth_sandstone_slab[type=bottom,waterlogged=false]",
-      "AIR",
-      "AIR"
-    ]
-  },
-  "decorators": [
-    {
-      "chance": 0.006,
-      "palette": [
-        "minecraft:turtle_egg[eggs=1]",
-        "minecraft:turtle_egg[eggs=2]",
-        "minecraft:turtle_egg[eggs=3]",
-        "minecraft:turtle_egg[eggs=4]"
-      ]
-    },
-    {
-      "zoom": 0.3,
-      "chance": 0.003,
-      "palette": [
-        "minecraft:stone_button[face=floor,facing=east,powered=false]",
-        "AIR",
-        "minecraft:stone_button[face=floor,facing=south,powered=false]"
-      ],
-      "style": {
-        "style": "STATIC"
-      },
-      "variance": {
-        "style": "STATIC"
-      }
-    }
-  ],
-  "generators": [
-    {
-      "generator": "plain",
-      "min": -1,
-      "max": 1
-    }
-  ],
-  "derivative": "BEACH"
+    "decorators": [
+        {
+            "chance": 0.006,
+            "palette": [
+                "minecraft:turtle_egg[eggs=1]",
+                "minecraft:turtle_egg[eggs=2]",
+                "minecraft:turtle_egg[eggs=3]",
+                "minecraft:turtle_egg[eggs=4]"
+            ]
+        },
+        {
+            "zoom": 0.3,
+            "chance": 0.003,
+            "palette": [
+                "minecraft:stone_button[face=floor,facing=east,powered=false]",
+                "AIR",
+                "minecraft:stone_button[face=floor,facing=south,powered=false]"
+            ],
+            "style": {
+                "style": "STATIC"
+            },
+            "variance": {
+                "style": "STATIC"
+            }
+        }
+    ],
+    "generators": [
+        {
+            "generator": "plain",
+            "min": -1,
+            "max": 1
+        }
+    ],
+    "derivative": "BEACH"
 }

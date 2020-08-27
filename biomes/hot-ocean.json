@@ -4,7 +4,9 @@
         {
             "minHeight": 2,
             "maxHeight": 3,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "zoom": 0.825,
             "palette": [
                 "SAND",
@@ -32,9 +34,10 @@
             ]
         }
     ],
-    "wall":
-    {
-        "style": {"style":"IRIS"},
+    "wall": {
+        "style": {
+            "style": "IRIS"
+        },
         "palette": [
             "CLAY",
             "SMOOTH_SANDSTONE",
@@ -45,56 +48,62 @@
             "SMOOTH_RED_SANDSTONE"
         ]
     },
-    "objects":[
-       {
-          "chance":0.03,
-          "density":1,
-          "rotation":{
-             "enabled":false
-          },
-          "edit": [
-              {
-                  "find": ["WATER"],
-                  "replace": ["AIR"]
-              }
-          ],
-          "underwater": true,
-          "place":[
-             "bombs/bomb"
-          ],
-          "translate":{
-             "x":0,
-             "y":0,
-             "z":0
-          }
-       },
-    {
-        "chance": 0.01,
-        "density": 1,
-        "underwater": true,
-        "rotation": {
-            "yAxis": {
-                "min": 0,
-                "max": 0,
-                "interval": 90,
+    "objects": [
+        {
+            "chance": 0.03,
+            "density": 1,
+            "rotation": {
+                "enabled": false
+            },
+            "edit": [
+                {
+                    "find": [
+                        "WATER"
+                    ],
+                    "replace": [
+                        "AIR"
+                    ]
+                }
+            ],
+            "underwater": true,
+            "place": [
+                "bombs/bomb"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.01,
+            "density": 1,
+            "underwater": true,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
                 "enabled": true
             },
-            "enabled": true
-        },
-        "place": [
-            "ships/swreck-1",
-            "ships/usd-ship-1",
-            "ships/usd-ship-2"
-        ],
-        "translate": {
-            "x": 0,
-            "y": -4,
-            "z": 0
+            "place": [
+                "ships/swreck-1",
+                "ships/usd-ship-1",
+                "ships/usd-ship-2"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -4,
+                "z": 0
+            }
         }
-    }
     ],
     "slab": {
-        "style": {"style":"STATIC"},
+        "style": {
+            "style": "STATIC"
+        },
         "palette": [
             "minecraft:sandstone_slab[type=bottom,waterlogged=false]",
             "minecraft:smooth_sandstone_slab[type=bottom,waterlogged=false]",
@@ -102,7 +111,7 @@
             "AIR"
         ]
     },
-    "effects":[
+    "effects": [
         {
             "interval": 650,
             "particleOffset": 0,
@@ -131,19 +140,26 @@
                 "MAGMA_BLOCK",
                 "MAGMA_BLOCK"
             ],
-            "style": {"style": "STATIC"},
-            "variance": {"style": "STATIC"}
-                    },
+            "style": {
+                "style": "STATIC"
+            },
+            "variance": {
+                "style": "STATIC"
+            }
+        },
         {
             "zoom": 5,
             "chance": 0.02,
             "palette": [
                 "SEAGRASS"
             ],
-            "style": {"style": "STATIC"},
-            "variance": {"style": "STATIC"}
-                    },
-
+            "style": {
+                "style": "STATIC"
+            },
+            "variance": {
+                "style": "STATIC"
+            }
+        },
         {
             "zoom": 1,
             "stackMax": 9,
@@ -152,11 +168,17 @@
             "palette": [
                 "KELP_PLANT"
             ],
-            "heightVariance": {"style": "STATIC"},
+            "heightVariance": {
+                "style": "STATIC"
+            },
             "verticalZoom": 20,
-            "style": {"style": "STATIC"},
-            "variance": {"style": "STATIC"}
-                    },
+            "style": {
+                "style": "STATIC"
+            },
+            "variance": {
+                "style": "STATIC"
+            }
+        },
         {
             "zoom": 0.25,
             "chance": 0.01,
@@ -165,20 +187,28 @@
                 "DEAD_FIRE_CORAL",
                 "FIRE_CORAL_FAN"
             ],
-            "style": {"style": "STATIC"},
-            "variance": {"style": "STATIC"}
-                    },
+            "style": {
+                "style": "STATIC"
+            },
+            "variance": {
+                "style": "STATIC"
+            }
+        },
         {
             "zoom": 1,
             "chance": 0.001,
             "palette": [
                 "minecraft:sea_pickle[pickles=1,waterlogged=true]"
             ],
-            "style": {"style": "STATIC"},
-            "variance": {"style": "STATIC"}
-                    }
+            "style": {
+                "style": "STATIC"
+            },
+            "variance": {
+                "style": "STATIC"
+            }
+        }
     ],
-    "generators":[
+    "generators": [
         {
             "generator": "plain",
             "min": -21,
