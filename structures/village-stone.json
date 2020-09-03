@@ -96,7 +96,7 @@
         {
             "ceiling": "AGNOSTIC",
             "east": "REQUIRED",
-            "placeMode": "PAINT",
+            "placeMode": "STILT",
             "south": "NEVER",
             "rareObjects": [],
             "north": "REQUIRED",
@@ -104,7 +104,11 @@
                 "structure/Village-2/room-1",
                 "structure/Village-2/room-2",
                 "structure/Village-2/room-3",
-                "structure/Village-2/room-4"
+                "structure/Village-2/room-4",
+                "structure/Village-2/room-5",
+                "structure/Village-2/room-6",
+                "structure/Village-2/room-7",
+                "structure/Village-2/room-8"
             ],
             "west": "REQUIRED",
             "loot": {
@@ -117,7 +121,7 @@
         {
             "ceiling": "AGNOSTIC",
             "east": "REQUIRED",
-            "placeMode": "PAINT",
+            "placeMode": "STILT",
             "south": "REQUIRED",
             "rareObjects": [],
             "north": "REQUIRED",
@@ -134,19 +138,19 @@
         }
     ],
     "gridSize": 23,
-    "wallChance": 0.35,
+    "wallChance": 0.8,
     "maxLayers": 1,
     "name": "Stone Village",
     "underwater": false,
     "loot": {
         "mode": "ADD",
-        "tables": [],
+        "tables": ["global-treasure","global-tools","global-clutter","cold-treasure","cold-food"],
         "multiplier": 1
     },
     "clamp": {
         "minimumHeight": 0,
         "maximumHeight": 255
     },
-    "bore": true,
+    "bore": false,
     "mergeEdges": false
 }
