@@ -173,12 +173,17 @@
         }
     ],
     "landChance": 0.72,
-    "carvingZoom": 3.5,
-    "carvingMin": 115,
-    "carvingMax": 239,
-    "carvingSliverThickness": 5.5,
-    "carvingRippleThickness": 3,
-    "carvingEnvelope": 0.335,
+    "carveLayers": [
+        {
+            "minHeight": 115,
+            "maxHeight": 236,
+            "threshold": 0.335,
+            "style": {
+                "zoom": 7,
+                "style": "FRACTAL_WATER"
+            }
+        }
+    ],
     "vanillaStructures": true,
     "fluidHeight": 99,
     "biomeZoom": 2.25,
