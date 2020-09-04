@@ -1,11 +1,9 @@
 {
-    "name": "Test Island",
+    "name": "Island",
     "layers": [
         {
-            "minHeight": 2,
-            "maxHeight": 3,
             "palette": [
-                "SAND"
+                "GRASS_BLOCK"
             ]
         },
         {
@@ -18,28 +16,145 @@
             "maxHeight": 3,
             "palette": [
                 "DIRT",
-                "DIRT",
                 "COARSE_DIRT"
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                "STONE",
+                "ANDESITE",
+                "STONE"
             ]
         }
     ],
-    "generators": [
+    "objects": [
         {
-            "generator": "sharper",
-            "min": -1,
-            "max": 3
+            "chance": 0.01,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "hazel-oak/hoak-3",
+                "hazel-oak/hoak-4",
+                "hazel-oak/hoak-5",
+                "hazel-oak/hoak-6",
+                "hazel-oak/hoak-7",
+                "hazel-oak/hoak-8",
+                "hazel-oak/hoak-9",
+                "hazel-oak/hoak-1",
+                "hazel-oak/s-hoak-3",
+                "hazel-oak/s-hoak-4",
+                "hazel-oak/s-hoak-5",
+                "hazel-oak/s-hoak-6",
+                "hazel-oak/s-hoak-7",
+                "hazel-oak/s-hoak-8",
+                "hazel-oak/s-hoak-9",
+                "hazel-oak/s-hoak-1",
+                "hazel-oak/s-hoak-2"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.005,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "stone-clutt/obelisk-1",
+                "stone-clutt/obelisk-2",
+                "stone-clutt/obelisk-3",
+                "stone-clutt/obelisk-4",
+                "stone-clutt/obelisk-5",
+                "stone-clutt/obelisk-6",
+                "stone-clutt/obelisk-7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
         }
     ],
-    "slab": {
+    "wall": {
         "style": {
             "style": "STATIC"
         },
         "palette": [
-            "minecraft:sandstone_slab[type=bottom,waterlogged=false]",
-            "minecraft:smooth_sandstone_slab[type=bottom,waterlogged=false]",
-            "AIR",
-            "AIR"
+            "STONE",
+            "ANDESITE",
+            "STONE"
         ]
     },
-    "derivative": "SNOWY_BEACH"
+    "children": [
+        "temperate-wilds"
+    ],
+    "decorators": [
+        {
+            "zoom": 0.3,
+            "chance": 0.19,
+            "palette": [
+                "GRASS"
+            ],
+            "style": {
+                "style": "STATIC"
+            },
+            "variance": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "zoom": 0.3,
+            "chance": 0.02,
+            "palette": [
+                "minecraft:wheat[age=7]"
+            ],
+            "style": {
+                "style": "IRIS",
+                "zoom": 0.28
+            },
+            "variance": {
+                "style": "STATIC"
+            }
+        }
+    ],
+    "generators": [
+        {
+            "generator": "plain",
+            "min": 28,
+            "max": 42
+        }
+    ],
+    "derivative": "PLAINS",
+    "biomeStyle": {
+        "style": "IRIS"
+    },
+    "biomeZoom": 60,
+    "biomeScatter": [
+        "FOREST",
+        "PLAINS"
+    ],
+    "biomeSkyScatter": [
+        "JUNGLE"
+    ]
 }
