@@ -151,6 +151,24 @@
             }
         }
     ],
+    "overlayNoise": [
+        {
+            "generator": {
+                "style": "FRACTAL_WATER",
+                "zoom": 8
+            },
+            "max": 6,
+            "min": -6
+        },
+        {
+            "generator": {
+                "style": "IRIS_DOUBLE",
+                "zoom": 1.1
+            },
+            "max": 6,
+            "min": -6
+        }
+    ],
     "postProcessors": [
         {
             "phase": 0,
@@ -171,6 +189,10 @@
         {
             "phase": 1,
             "processor": "slabber"
+        },
+        {
+            "phase": 1,
+            "processor": "foliage-cleaner"
         },
         {
             "phase": 2,
