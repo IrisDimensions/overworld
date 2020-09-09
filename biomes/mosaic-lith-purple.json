@@ -24,32 +24,59 @@
             ]
         },
         {
-            "minHeight": 2,
-            "maxHeight": 4,
+            "minHeight": 12,
+            "maxHeight": 16,
+            "style": {
+                "style": "FLAT"
+            },
             "palette": [
-                "BLACKSTONE",
-                "COARSE_DIRT",
-                "DIRT"
+                "BLACKSTONE"
             ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
             "style": {
-                "style": "STATIC"
+                "style": "FLAT"
             },
             "palette": [
-                "STONE",
-                "ANDESITE",
-                "STONE"
+                "BLACKSTONE"
             ]
+        }
+    ],
+    "slab": {
+        "palette": [
+            "CRIMSON_SLAB",
+            "AIR",
+            "AIR",
+            "AIR"
+        ],
+        "style": {
+            "style": "STATIC"
+        }
+    },
+    "decorators": [
+        {
+            "palette": [
+                "CRIMSON_FENCE"
+            ],
+            "stackMax": 4,
+            "stackMin": 1,
+            "chance": 0.0045
+        },
+        {
+            "palette": [
+                "minecraft:bubble_coral[waterlogged=false]",
+                "minecraft:bubble_coral_fan[waterlogged=false]"
+            ],
+            "chance": 0.0175
         }
     ],
     "generators": [
         {
-            "generator": "plain",
-            "min": 22,
-            "max": 30
+            "generator": "wicked",
+            "min": 42,
+            "max": 96
         }
     ],
     "wall": {
@@ -94,17 +121,5 @@
             }
         }
     ],
-    "derivative": "SAVANNA",
-    "biomeStyle": {
-        "style": "IRIS"
-    },
-    "biomeZoom": 20,
-    "biomeScatter": [
-        "SAVANNA",
-        "DESERT"
-    ],
-    "biomeSkyScatter": [
-        "DESERT",
-        "SAVANNA"
-    ]
+    "derivative": "BASALT_DELTAS"
 }
