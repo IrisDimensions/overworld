@@ -26,7 +26,7 @@
     "postProcessing": true,
     "carving": true,
     "caves": true,
-    "vanillaCaves": true,
+    "vanillaCaves": false,
     "caveLayers": [
         {
             "caveZoom": 1.25,
@@ -41,7 +41,7 @@
                         "multiplier": 9
                     }
                 },
-                "min": 52,
+                "min": 42,
                 "max": 95
             },
             "horizontalSlope": {
@@ -59,8 +59,12 @@
         },
         {
             "caveZoom": 0.89,
-            "caveThickness": 1,
+            "caveThickness": 0.7,
             "canBreakSurface": false,
+            "fluid": {
+                "fluidHeight": 22,
+                "fluidType": "LAVA"
+            },
             "verticalSlope": {
                 "generator": {
                     "style": "IRIS_DOUBLE",
@@ -71,8 +75,8 @@
                         "multiplier": 9
                     }
                 },
-                "min": 22,
-                "max": 54
+                "min": 11,
+                "max": 43
             },
             "horizontalSlope": {
                 "generator": {
