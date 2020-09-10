@@ -1,108 +1,108 @@
 {
+    "biomeSkyScatter": [
+        "SNOWY_TAIGA",
+        "SNOWY_MOUNTAINS"
+    ],
+    "decorators": [{
+        "chance": 0.009,
+        "variance": {"style": "STATIC"},
+        "zoom": 0.3,
+        "palette": [
+            {
+                "data": {
+                    "face": "floor",
+                    "powered": false,
+                    "facing": "east"
+                },
+                "block": "stone_button"
+            },
+            {
+                "data": {
+                    "face": "floor",
+                    "powered": false,
+                    "facing": "south"
+                },
+                "block": "stone_button"
+            }
+        ],
+        "style": {"style": "STATIC"}
+    }],
+    "objects": [{
+        "chance": 0.5,
+        "rotation": {
+            "yAxis": {
+                "min": 0,
+                "max": 0,
+                "interval": 90,
+                "enabled": true
+            },
+            "enabled": true
+        },
+        "place": [
+            "boulder/boulder1",
+            "boulder/boulder2",
+            "boulder/boulder4",
+            "boulder/boulder5",
+            "boulder/boulder6",
+            "boulder/boulder7",
+            "boulder/boulder8"
+        ],
+        "translate": {
+            "x": 0,
+            "y": -3,
+            "z": 0
+        }
+    }],
     "name": "Shattered Rock Mountains",
-    "rarity": 2,
     "layers": [
         {
             "minHeight": 2,
             "maxHeight": 3,
             "palette": [
-                "STONE",
-                "ANDESITE",
-                "GRAVEL"
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "gravel"}
             ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
+            "style": {"style": "STATIC"},
             "palette": [
-                "STONE",
-                "ANDESITE",
-                "STONE"
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
             ]
         }
     ],
-    "wall": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            "STONE",
-            "ANDESITE",
-            "STONE"
-        ]
-    },
     "generators": [
         {
-            "generator": "plain",
             "min": 11,
-            "max": 32
+            "max": 32,
+            "generator": "plain"
         },
         {
-            "generator": "mountain-cliffs",
             "min": 12,
-            "max": 62
+            "max": 62,
+            "generator": "mountain-cliffs"
         }
     ],
-    "decorators": [
-        {
-            "zoom": 0.3,
-            "chance": 0.009,
-            "palette": [
-                "minecraft:stone_button[face=floor,facing=east,powered=false]",
-                "minecraft:stone_button[face=floor,facing=south,powered=false]"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        }
-    ],
-    "objects": [
-        {
-            "chance": 0.5,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "boulder/boulder1",
-                "boulder/boulder2",
-                "boulder/boulder4",
-                "boulder/boulder5",
-                "boulder/boulder6",
-                "boulder/boulder7",
-                "boulder/boulder8"
-            ],
-            "translate": {
-                "x": 0,
-                "y": -3,
-                "z": 0
-            }
-        }
-    ],
-    "derivative": "MOUNTAINS",
-    "biomeStyle": {
-        "style": "IRIS"
-    },
     "biomeZoom": 30,
+    "derivative": "MOUNTAINS",
+    "biomeStyle": {"style": "IRIS"},
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {"block": "stone"},
+            {"block": "andesite"},
+            {"block": "stone"}
+        ]
+    },
     "biomeScatter": [
         "PLAINS",
         "TAIGA_HILLS",
         "MOUNTAINS",
         "SWAMP"
     ],
-    "biomeSkyScatter": [
-        "SNOWY_TAIGA",
-        "SNOWY_MOUNTAINS"
-    ]
+    "rarity": 2
 }

@@ -1,103 +1,54 @@
 {
-    "name": "Spiked Tundra Cavern",
-    "layers": [
-        {
-            "style": {
-                "style": "STATIC"
-            },
-            "zoom": 0.2,
-            "minHeight": 1,
-            "maxHeight": 2,
-            "palette": [
-                "STONE",
-                "ANDESITE",
-                "COBBLESTONE",
-                "GRAVEL"
-            ]
-        }
-    ],
-    "loot": {
-        "tables": [
-            "cave-clutter"
-        ]
-    },
-    "slab": {
-        "style": {
-            "style": "IRIS"
-        },
-        "zoom": 0.5,
-        "palette": [
-            "minecraft:cobblestone_slab[type=bottom,waterlogged=false]",
-            "minecraft:mossy_cobblestone_slab[type=bottom,waterlogged=false]",
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR"
-        ]
-    },
     "decorators": [
         {
-            "chance": 0.0001,
-            "palette": [
-                "BARREL"
-            ]
+            "chance": 1.0E-4,
+            "palette": [{"block": "barrel"}]
         },
         {
-            "zoom": 0.3,
             "chance": 0.002,
-            "palette": [
-                "COBWEB"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [{"block": "cobweb"}],
+            "style": {"style": "STATIC"}
         },
         {
-            "zoom": 0.3,
             "chance": 0.0011,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
             "palette": [
-                "minecraft:sweet_berry_bush[age=0]",
-                "minecraft:sweet_berry_bush[age=1]",
-                "minecraft:sweet_berry_bush[age=2]",
-                "minecraft:sweet_berry_bush[age=3]"
+                {
+                    "data": {"age": 0},
+                    "block": "sweet_berry_bush"
+                },
+                {
+                    "data": {"age": 1},
+                    "block": "sweet_berry_bush"
+                },
+                {
+                    "data": {"age": 2},
+                    "block": "sweet_berry_bush"
+                },
+                {
+                    "data": {"age": 3},
+                    "block": "sweet_berry_bush"
+                }
             ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+            "style": {"style": "STATIC"}
         },
         {
-            "zoom": 0.3,
             "chance": 0.001,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
             "palette": [
-                "COBBLESTONE_WALL",
-                "ANDESITE_WALL"
+                {"block": "cobblestone_wall"},
+                {"block": "andesite_wall"}
             ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        }
-    ],
-    "generators": [
-        {
-            "generator": "plain",
-            "min": 4,
-            "max": 6
+            "style": {"style": "STATIC"}
         }
     ],
     "objects": [
         {
-            "chance": 0.000856,
+            "chance": 8.56E-4,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -107,9 +58,7 @@
                 },
                 "enabled": true
             },
-            "place": [
-                "grave/grave"
-            ],
+            "place": ["grave/grave"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -118,19 +67,15 @@
         },
         {
             "chance": 1,
-            "edit": [
-                {
-                    "find": [
-                        "Stone"
-                    ],
-                    "replace": [
-                        "STONE",
-                        "ANDESITE",
-                        "COBBLESTONE",
-                        "GRAVEL"
-                    ]
-                }
-            ],
+            "edit": [{
+                "find": ["Stone"],
+                "replace": [
+                    "STONE",
+                    "ANDESITE",
+                    "COBBLESTONE",
+                    "GRAVEL"
+                ]
+            }],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -157,5 +102,48 @@
             }
         }
     ],
-    "derivative": "FROZEN_OCEAN"
+    "name": "Spiked Tundra Cavern",
+    "layers": [{
+        "minHeight": 1,
+        "maxHeight": 2,
+        "style": {"style": "STATIC"},
+        "zoom": 0.2,
+        "palette": [
+            {"block": "stone"},
+            {"block": "andesite"},
+            {"block": "cobblestone"},
+            {"block": "gravel"}
+        ]
+    }],
+    "generators": [{
+        "min": 4,
+        "max": 6,
+        "generator": "plain"
+    }],
+    "loot": {"tables": ["cave-clutter"]},
+    "derivative": "FROZEN_OCEAN",
+    "slab": {
+        "style": {"style": "IRIS"},
+        "zoom": 0.5,
+        "palette": [
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "cobblestone_slab"
+            },
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "mossy_cobblestone_slab"
+            },
+            {
+                "weight": 6,
+                "block": "air"
+            }
+        ]
+    }
 }

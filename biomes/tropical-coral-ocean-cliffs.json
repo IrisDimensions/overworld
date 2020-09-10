@@ -1,85 +1,163 @@
 {
-    "name": "Shattered Coral Ocean",
-    "rarity": 4,
-    "layers": [
+    "effects": [{
+        "particleAltX": 0.3,
+        "particleAltY": 1.960885,
+        "particleAltZ": 0.3,
+        "particleDistanceWidth": 8,
+        "chance": 1,
+        "particleEffect": "BUBBLE_COLUMN_UP",
+        "particleDistance": 5,
+        "particleOffset": 2,
+        "interval": 250,
+        "particleCount": 0
+    }],
+    "decorators": [
         {
-            "minHeight": 2,
-            "maxHeight": 6,
+            "chance": 0.05,
+            "variance": {"style": "STATIC"},
+            "stackMax": 3,
+            "zoom": 1,
             "palette": [
-                "SAND"
-            ]
+                {"block": "tube_coral_block"},
+                {"block": "brain_coral_block"},
+                {"block": "fire_coral_block"},
+                {"block": "horn_coral_block"},
+                {"block": "bubble_coral_block"}
+            ],
+            "style": {"style": "STATIC"},
+            "stackMin": 1
         },
         {
+            "chance": 6.0E-4,
+            "variance": {"style": "STATIC"},
+            "zoom": 1,
             "palette": [
-                "DIRT"
-            ]
+                {"block": "soul_sand"},
+                {"block": "magma_block"},
+                {"block": "melon"}
+            ],
+            "style": {"style": "STATIC"}
         },
         {
-            "minHeight": 1,
-            "maxHeight": 3,
+            "chance": 0.07,
+            "variance": {"style": "STATIC"},
+            "zoom": 5,
+            "palette": [{"block": "seagrass"}],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.025,
+            "verticalZoom": 88,
+            "variance": {"style": "STATIC"},
+            "stackMax": 24,
+            "zoom": 1,
+            "palette": [{"block": "kelp_plant"}],
+            "style": {"style": "STATIC"},
+            "heightVariance": {"style": "IRIS"},
+            "stackMin": 2
+        },
+        {
+            "chance": 0.225,
+            "verticalZoom": 20,
+            "variance": {"style": "STATIC"},
+            "stackMax": 9,
+            "zoom": 1,
+            "palette": [{"block": "kelp_plant"}],
+            "style": {"style": "STATIC"},
+            "heightVariance": {"style": "STATIC"},
+            "stackMin": 1
+        },
+        {
+            "chance": 0.2,
+            "variance": {"style": "STATIC"},
+            "zoom": 1,
             "palette": [
-                "DIRT",
-                "DIRT",
-                "COARSE_DIRT"
-            ]
+                {"block": "tube_coral"},
+                {"block": "tube_coral_fan"}
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.2,
+            "variance": {"style": "STATIC"},
+            "zoom": 1,
+            "palette": [
+                {"block": "brain_coral"},
+                {"block": "brain_coral_fan"}
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.2,
+            "variance": {"style": "STATIC"},
+            "zoom": 1,
+            "palette": [
+                {"block": "bubble_coral"},
+                {"block": "bubble_coral_fan"}
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.2,
+            "variance": {"style": "STATIC"},
+            "zoom": 1,
+            "palette": [
+                {"block": "fire_coral"},
+                {"block": "fire_coral_fan"}
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.2,
+            "variance": {"style": "STATIC"},
+            "zoom": 1,
+            "palette": [
+                {"block": "horn_coral"},
+                {"block": "horn_coral_fan"}
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.004,
+            "variance": {"style": "STATIC"},
+            "zoom": 1,
+            "palette": [
+                {
+                    "data": {
+                        "waterlogged": true,
+                        "pickles": 2
+                    },
+                    "block": "sea_pickle"
+                },
+                {
+                    "data": {
+                        "waterlogged": true,
+                        "pickles": 3
+                    },
+                    "block": "sea_pickle"
+                },
+                {
+                    "data": {
+                        "waterlogged": true,
+                        "pickles": 4
+                    },
+                    "block": "sea_pickle"
+                }
+            ],
+            "style": {"style": "STATIC"}
         }
     ],
-    "effects": [
-        {
-            "interval": 250,
-            "particleOffset": 2,
-            "particleEffect": "BUBBLE_COLUMN_UP",
-            "particleCount": 0,
-            "particleAltX": 0.3,
-            "particleAltY": 1.960885,
-            "particleAltZ": 0.3,
-            "particleDistance": 5,
-            "particleDistanceWidth": 8,
-            "chance": 1
-        }
-    ],
-    "slab": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            "minecraft:prismarine_slab[type=bottom,waterlogged=true]",
-            "AIR",
-            "AIR"
-        ]
-    },
-    "wall": {
-        "palette": [
-            "TUBE_CORAL_BLOCK",
-            "BRAIN_CORAL_BLOCK",
-            "FIRE_CORAL_BLOCK",
-            "HORN_CORAL_BLOCK",
-            "BUBBLE_CORAL_BLOCK"
-        ],
-        "style": {
-            "style": "STATIC"
-        },
-        "zoom": 0.1
-    },
     "objects": [
         {
             "chance": 0.025,
             "edit": [
                 {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "FIRE_CORAL_BLOCK"
-                    ]
+                    "find": ["STONE"],
+                    "replace": ["FIRE_CORAL_BLOCK"]
                 },
                 {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "BUBBLE_CORAL_BLOCK"
-                    ]
+                    "find": ["DIRT"],
+                    "replace": ["BUBBLE_CORAL_BLOCK"]
                 }
             ],
             "rotation": {
@@ -110,20 +188,12 @@
             "chance": 0.025,
             "edit": [
                 {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "FIRE_CORAL_BLOCK"
-                    ]
+                    "find": ["STONE"],
+                    "replace": ["FIRE_CORAL_BLOCK"]
                 },
                 {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "HORN_CORAL_BLOCK"
-                    ]
+                    "find": ["DIRT"],
+                    "replace": ["HORN_CORAL_BLOCK"]
                 }
             ],
             "rotation": {
@@ -154,20 +224,12 @@
             "chance": 0.025,
             "edit": [
                 {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "FIRE_CORAL_BLOCK"
-                    ]
+                    "find": ["STONE"],
+                    "replace": ["FIRE_CORAL_BLOCK"]
                 },
                 {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "TUBE_CORAL_BLOCK"
-                    ]
+                    "find": ["DIRT"],
+                    "replace": ["TUBE_CORAL_BLOCK"]
                 }
             ],
             "rotation": {
@@ -198,20 +260,12 @@
             "chance": 0.025,
             "edit": [
                 {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "FIRE_CORAL_BLOCK"
-                    ]
+                    "find": ["STONE"],
+                    "replace": ["FIRE_CORAL_BLOCK"]
                 },
                 {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "BRAIN_CORAL_BLOCK"
-                    ]
+                    "find": ["DIRT"],
+                    "replace": ["BRAIN_CORAL_BLOCK"]
                 }
             ],
             "rotation": {
@@ -242,20 +296,12 @@
             "chance": 0.025,
             "edit": [
                 {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "FIRE_CORAL_BLOCK"
-                    ]
+                    "find": ["STONE"],
+                    "replace": ["FIRE_CORAL_BLOCK"]
                 },
                 {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "FIRE_CORAL_BLOCK"
-                    ]
+                    "find": ["DIRT"],
+                    "replace": ["FIRE_CORAL_BLOCK"]
                 }
             ],
             "rotation": {
@@ -286,20 +332,12 @@
             "chance": 0.025,
             "edit": [
                 {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "BUBBLE_CORAL_BLOCK"
-                    ]
+                    "find": ["STONE"],
+                    "replace": ["BUBBLE_CORAL_BLOCK"]
                 },
                 {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "BUBBLE_CORAL_BLOCK"
-                    ]
+                    "find": ["DIRT"],
+                    "replace": ["BUBBLE_CORAL_BLOCK"]
                 }
             ],
             "rotation": {
@@ -330,20 +368,12 @@
             "chance": 0.025,
             "edit": [
                 {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "BUBBLE_CORAL_BLOCK"
-                    ]
+                    "find": ["STONE"],
+                    "replace": ["BUBBLE_CORAL_BLOCK"]
                 },
                 {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "HORN_CORAL_BLOCK"
-                    ]
+                    "find": ["DIRT"],
+                    "replace": ["HORN_CORAL_BLOCK"]
                 }
             ],
             "rotation": {
@@ -374,20 +404,12 @@
             "chance": 0.025,
             "edit": [
                 {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "BUBBLE_CORAL_BLOCK"
-                    ]
+                    "find": ["STONE"],
+                    "replace": ["BUBBLE_CORAL_BLOCK"]
                 },
                 {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "TUBE_CORAL_BLOCK"
-                    ]
+                    "find": ["DIRT"],
+                    "replace": ["TUBE_CORAL_BLOCK"]
                 }
             ],
             "rotation": {
@@ -418,20 +440,12 @@
             "chance": 0.025,
             "edit": [
                 {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "BUBBLE_CORAL_BLOCK"
-                    ]
+                    "find": ["STONE"],
+                    "replace": ["BUBBLE_CORAL_BLOCK"]
                 },
                 {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "BRAIN_CORAL_BLOCK"
-                    ]
+                    "find": ["DIRT"],
+                    "replace": ["BRAIN_CORAL_BLOCK"]
                 }
             ],
             "rotation": {
@@ -462,20 +476,12 @@
             "chance": 0.025,
             "edit": [
                 {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "BUBBLE_CORAL_BLOCK"
-                    ]
+                    "find": ["STONE"],
+                    "replace": ["BUBBLE_CORAL_BLOCK"]
                 },
                 {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "BUBBLE_CORAL_BLOCK"
-                    ]
+                    "find": ["DIRT"],
+                    "replace": ["BUBBLE_CORAL_BLOCK"]
                 }
             ],
             "rotation": {
@@ -506,20 +512,12 @@
             "chance": 0.025,
             "edit": [
                 {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "HORN_CORAL_BLOCK"
-                    ]
+                    "find": ["STONE"],
+                    "replace": ["HORN_CORAL_BLOCK"]
                 },
                 {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "BUBBLE_CORAL_BLOCK"
-                    ]
+                    "find": ["DIRT"],
+                    "replace": ["BUBBLE_CORAL_BLOCK"]
                 }
             ],
             "rotation": {
@@ -550,20 +548,12 @@
             "chance": 0.025,
             "edit": [
                 {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "HORN_CORAL_BLOCK"
-                    ]
+                    "find": ["STONE"],
+                    "replace": ["HORN_CORAL_BLOCK"]
                 },
                 {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "HORN_CORAL_BLOCK"
-                    ]
+                    "find": ["DIRT"],
+                    "replace": ["HORN_CORAL_BLOCK"]
                 }
             ],
             "rotation": {
@@ -594,20 +584,12 @@
             "chance": 0.025,
             "edit": [
                 {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "HORN_CORAL_BLOCK"
-                    ]
+                    "find": ["STONE"],
+                    "replace": ["HORN_CORAL_BLOCK"]
                 },
                 {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "TUBE_CORAL_BLOCK"
-                    ]
+                    "find": ["DIRT"],
+                    "replace": ["TUBE_CORAL_BLOCK"]
                 }
             ],
             "rotation": {
@@ -638,20 +620,12 @@
             "chance": 0.025,
             "edit": [
                 {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "HORN_CORAL_BLOCK"
-                    ]
+                    "find": ["STONE"],
+                    "replace": ["HORN_CORAL_BLOCK"]
                 },
                 {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "BRAIN_CORAL_BLOCK"
-                    ]
+                    "find": ["DIRT"],
+                    "replace": ["BRAIN_CORAL_BLOCK"]
                 }
             ],
             "rotation": {
@@ -682,20 +656,12 @@
             "chance": 0.025,
             "edit": [
                 {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "HORN_CORAL_BLOCK"
-                    ]
+                    "find": ["STONE"],
+                    "replace": ["HORN_CORAL_BLOCK"]
                 },
                 {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "HORN_CORAL_BLOCK"
-                    ]
+                    "find": ["DIRT"],
+                    "replace": ["HORN_CORAL_BLOCK"]
                 }
             ],
             "rotation": {
@@ -726,20 +692,12 @@
             "chance": 0.025,
             "edit": [
                 {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "TUBE_CORAL_BLOCK"
-                    ]
+                    "find": ["STONE"],
+                    "replace": ["TUBE_CORAL_BLOCK"]
                 },
                 {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "BUBBLE_CORAL_BLOCK"
-                    ]
+                    "find": ["DIRT"],
+                    "replace": ["BUBBLE_CORAL_BLOCK"]
                 }
             ],
             "rotation": {
@@ -770,20 +728,12 @@
             "chance": 0.025,
             "edit": [
                 {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "TUBE_CORAL_BLOCK"
-                    ]
+                    "find": ["STONE"],
+                    "replace": ["TUBE_CORAL_BLOCK"]
                 },
                 {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "HORN_CORAL_BLOCK"
-                    ]
+                    "find": ["DIRT"],
+                    "replace": ["HORN_CORAL_BLOCK"]
                 }
             ],
             "rotation": {
@@ -814,20 +764,12 @@
             "chance": 0.025,
             "edit": [
                 {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "TUBE_CORAL_BLOCK"
-                    ]
+                    "find": ["STONE"],
+                    "replace": ["TUBE_CORAL_BLOCK"]
                 },
                 {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "TUBE_CORAL_BLOCK"
-                    ]
+                    "find": ["DIRT"],
+                    "replace": ["TUBE_CORAL_BLOCK"]
                 }
             ],
             "rotation": {
@@ -858,20 +800,12 @@
             "chance": 0.025,
             "edit": [
                 {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "TUBE_CORAL_BLOCK"
-                    ]
+                    "find": ["STONE"],
+                    "replace": ["TUBE_CORAL_BLOCK"]
                 },
                 {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "BRAIN_CORAL_BLOCK"
-                    ]
+                    "find": ["DIRT"],
+                    "replace": ["BRAIN_CORAL_BLOCK"]
                 }
             ],
             "rotation": {
@@ -902,20 +836,12 @@
             "chance": 0.025,
             "edit": [
                 {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "TUBE_CORAL_BLOCK"
-                    ]
+                    "find": ["STONE"],
+                    "replace": ["TUBE_CORAL_BLOCK"]
                 },
                 {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "TUBE_CORAL_BLOCK"
-                    ]
+                    "find": ["DIRT"],
+                    "replace": ["TUBE_CORAL_BLOCK"]
                 }
             ],
             "rotation": {
@@ -946,20 +872,12 @@
             "chance": 0.025,
             "edit": [
                 {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "BRAIN_CORAL_BLOCK"
-                    ]
+                    "find": ["STONE"],
+                    "replace": ["BRAIN_CORAL_BLOCK"]
                 },
                 {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "BUBBLE_CORAL_BLOCK"
-                    ]
+                    "find": ["DIRT"],
+                    "replace": ["BUBBLE_CORAL_BLOCK"]
                 }
             ],
             "rotation": {
@@ -990,20 +908,12 @@
             "chance": 0.025,
             "edit": [
                 {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "BRAIN_CORAL_BLOCK"
-                    ]
+                    "find": ["STONE"],
+                    "replace": ["BRAIN_CORAL_BLOCK"]
                 },
                 {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "HORN_CORAL_BLOCK"
-                    ]
+                    "find": ["DIRT"],
+                    "replace": ["HORN_CORAL_BLOCK"]
                 }
             ],
             "rotation": {
@@ -1034,20 +944,12 @@
             "chance": 0.025,
             "edit": [
                 {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "BRAIN_CORAL_BLOCK"
-                    ]
+                    "find": ["STONE"],
+                    "replace": ["BRAIN_CORAL_BLOCK"]
                 },
                 {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "TUBE_CORAL_BLOCK"
-                    ]
+                    "find": ["DIRT"],
+                    "replace": ["TUBE_CORAL_BLOCK"]
                 }
             ],
             "rotation": {
@@ -1078,20 +980,12 @@
             "chance": 0.025,
             "edit": [
                 {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "BRAIN_CORAL_BLOCK"
-                    ]
+                    "find": ["STONE"],
+                    "replace": ["BRAIN_CORAL_BLOCK"]
                 },
                 {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "BRAIN_CORAL_BLOCK"
-                    ]
+                    "find": ["DIRT"],
+                    "replace": ["BRAIN_CORAL_BLOCK"]
                 }
             ],
             "rotation": {
@@ -1122,20 +1016,12 @@
             "chance": 0.025,
             "edit": [
                 {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "BRAIN_CORAL_BLOCK"
-                    ]
+                    "find": ["STONE"],
+                    "replace": ["BRAIN_CORAL_BLOCK"]
                 },
                 {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "BRAIN_CORAL_BLOCK"
-                    ]
+                    "find": ["DIRT"],
+                    "replace": ["BRAIN_CORAL_BLOCK"]
                 }
             ],
             "rotation": {
@@ -1164,7 +1050,6 @@
         },
         {
             "chance": 0.01,
-            "underwater": true,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -1174,6 +1059,7 @@
                 },
                 "enabled": true
             },
+            "underwater": true,
             "place": [
                 "ships/swreck-1",
                 "ships/usd-ship-1",
@@ -1186,189 +1072,59 @@
             }
         }
     ],
-    "decorators": [
+    "name": "Shattered Coral Ocean",
+    "layers": [
         {
-            "zoom": 1,
-            "chance": 0.05,
-            "stackMin": 1,
-            "stackMax": 3,
-            "palette": [
-                "TUBE_CORAL_BLOCK",
-                "BRAIN_CORAL_BLOCK",
-                "FIRE_CORAL_BLOCK",
-                "HORN_CORAL_BLOCK",
-                "BUBBLE_CORAL_BLOCK"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+            "minHeight": 2,
+            "maxHeight": 6,
+            "palette": [{"block": "sand"}]
         },
+        {"palette": [{"block": "dirt"}]},
         {
-            "zoom": 1,
-            "chance": 0.0006,
+            "minHeight": 1,
+            "maxHeight": 3,
             "palette": [
-                "SOUL_SAND",
-                "MAGMA_BLOCK",
-                "MELON"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 5,
-            "chance": 0.07,
-            "palette": [
-                "SEAGRASS"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 1,
-            "stackMax": 24,
-            "stackMin": 2,
-            "chance": 0.025,
-            "palette": [
-                "KELP_PLANT"
-            ],
-            "heightVariance": {
-                "style": "IRIS"
-            },
-            "verticalZoom": 88,
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 1,
-            "stackMax": 9,
-            "stackMin": 1,
-            "chance": 0.225,
-            "palette": [
-                "KELP_PLANT"
-            ],
-            "heightVariance": {
-                "style": "STATIC"
-            },
-            "verticalZoom": 20,
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 1,
-            "chance": 0.2,
-            "palette": [
-                "TUBE_CORAL",
-                "TUBE_CORAL_FAN"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 1,
-            "chance": 0.2,
-            "palette": [
-                "BRAIN_CORAL",
-                "BRAIN_CORAL_FAN"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 1,
-            "chance": 0.2,
-            "palette": [
-                "BUBBLE_CORAL",
-                "BUBBLE_CORAL_FAN"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 1,
-            "chance": 0.2,
-            "palette": [
-                "FIRE_CORAL",
-                "FIRE_CORAL_FAN"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 1,
-            "chance": 0.2,
-            "palette": [
-                "HORN_CORAL",
-                "HORN_CORAL_FAN"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 1,
-            "chance": 0.004,
-            "palette": [
-                "minecraft:sea_pickle[pickles=2,waterlogged=true]",
-                "minecraft:sea_pickle[pickles=3,waterlogged=true]",
-                "minecraft:sea_pickle[pickles=4,waterlogged=true]"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+                {
+                    "weight": 2,
+                    "block": "dirt"
+                },
+                {"block": "coarse_dirt"}
+            ]
         }
     ],
-    "loot": {
-        "tables": [
-            "ocean-clutter"
-        ]
+    "generators": [{
+        "min": -51,
+        "max": -17,
+        "generator": "plain-cliffs"
+    }],
+    "loot": {"tables": ["ocean-clutter"]},
+    "derivative": "LUKEWARM_OCEAN",
+    "wall": {
+        "palette": [
+            {"block": "tube_coral_block"},
+            {"block": "brain_coral_block"},
+            {"block": "fire_coral_block"},
+            {"block": "horn_coral_block"},
+            {"block": "bubble_coral_block"}
+        ],
+        "style": {"style": "STATIC"},
+        "zoom": 0.1
     },
-    "generators": [
-        {
-            "generator": "plain-cliffs",
-            "min": -51,
-            "max": -17
-        }
-    ],
-    "derivative": "LUKEWARM_OCEAN"
+    "rarity": 4,
+    "slab": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {
+                "data": {
+                    "waterlogged": true,
+                    "type": "bottom"
+                },
+                "block": "prismarine_slab"
+            },
+            {
+                "weight": 2,
+                "block": "air"
+            }
+        ]
+    }
 }

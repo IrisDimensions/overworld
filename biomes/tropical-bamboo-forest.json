@@ -1,57 +1,11 @@
 {
-    "name": "Bamboo Forest",
-    "layers": [
-        {
-            "palette": [
-                "GRASS_BLOCK"
-            ]
-        },
-        {
-            "palette": [
-                "DIRT"
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                "DIRT",
-                "COARSE_DIRT"
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                "STONE",
-                "ANDESITE",
-                "STONE"
-            ]
-        }
-    ],
-    "entityInitialSpawns": [
-        {
-            "entity": "panda",
-            "maxSpawns": 5,
-            "minSpawns": 2,
-            "rarity": 4
-        }
-    ],
-    "effects": [
-        {
-            "interval": 550,
-            "particleOffset": 12,
-            "particleEffect": "TOTEM",
-            "particleCount": 0,
-            "particleAltX": 0.301,
-            "particleAltY": -0.33885,
-            "particleAltZ": 0.301,
-            "chance": 1
-        }
-    ],
+    "entityInitialSpawns": [{
+        "maxSpawns": 5,
+        "minSpawns": 2,
+        "entity": "panda",
+        "rarity": 4
+    }],
+    "biomeSkyScatter": ["DESERT"],
     "objects": [
         {
             "chance": 0.5,
@@ -134,77 +88,125 @@
             }
         }
     ],
-    "wall": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            "STONE",
-            "ANDESITE",
-            "STONE"
-        ]
-    },
-    "children": [
-        "temperate-wilds"
-    ],
+    "biomeZoom": 10,
+    "derivative": "DESERT",
+    "biomeStyle": {"style": "IRIS"},
+    "effects": [{
+        "particleAltX": 0.301,
+        "particleAltY": -0.33885,
+        "particleAltZ": 0.301,
+        "chance": 1,
+        "particleEffect": "TOTEM",
+        "particleOffset": 12,
+        "interval": 550,
+        "particleCount": 0
+    }],
+    "children": ["temperate-wilds"],
     "decorators": [
         {
-            "zoom": 0.3,
             "chance": 0.25,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
             "palette": [
-                "GRASS",
-                "GRASS",
-                "GRASS",
-                "TALL_GRASS"
+                {
+                    "weight": 3,
+                    "block": "grass"
+                },
+                {"block": "tall_grass"}
             ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+            "style": {"style": "STATIC"}
         },
         {
-            "zoom": 5,
             "verticalZoom": 5,
             "chance": 0.18,
-            "stackMin": 3,
+            "variance": {"style": "STATIC"},
             "stackMax": 19,
+            "zoom": 5,
             "palette": [
-                "minecraft:bamboo[age=0,leaves=none,stage=0]",
-                "minecraft:bamboo[age=0,leaves=small,stage=0]",
-                "minecraft:bamboo[age=0,leaves=none,stage=1]",
-                "minecraft:bamboo[age=0,leaves=small,stage=1]",
-                "minecraft:bamboo[age=0,leaves=large,stage=0]"
+                {
+                    "data": {
+                        "leaves": "none",
+                        "stage": 0,
+                        "age": 0
+                    },
+                    "block": "bamboo"
+                },
+                {
+                    "data": {
+                        "leaves": "small",
+                        "stage": 0,
+                        "age": 0
+                    },
+                    "block": "bamboo"
+                },
+                {
+                    "data": {
+                        "leaves": "none",
+                        "stage": 1,
+                        "age": 0
+                    },
+                    "block": "bamboo"
+                },
+                {
+                    "data": {
+                        "leaves": "small",
+                        "stage": 1,
+                        "age": 0
+                    },
+                    "block": "bamboo"
+                },
+                {
+                    "data": {
+                        "leaves": "large",
+                        "stage": 0,
+                        "age": 0
+                    },
+                    "block": "bamboo"
+                }
             ],
-            "heightVariance": {
-                "style": "IRIS"
-            },
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+            "style": {"style": "STATIC"},
+            "heightVariance": {"style": "IRIS"},
+            "stackMin": 3
         }
     ],
-    "generators": [
+    "name": "Bamboo Forest",
+    "layers": [
+        {"palette": [{"block": "grass_block"}]},
+        {"palette": [{"block": "dirt"}]},
         {
-            "generator": "plain",
-            "min": 4,
-            "max": 7
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {"block": "dirt"},
+                {"block": "coarse_dirt"}
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
+            ]
         }
     ],
-    "derivative": "DESERT",
-    "biomeStyle": {
-        "style": "IRIS"
+    "generators": [{
+        "min": 4,
+        "max": 7,
+        "generator": "plain"
+    }],
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {"block": "stone"},
+            {"block": "andesite"},
+            {"block": "stone"}
+        ]
     },
-    "biomeZoom": 10,
     "biomeScatter": [
         "BAMBOO_JUNGLE",
-        "DESERT"
-    ],
-    "biomeSkyScatter": [
         "DESERT"
     ]
 }

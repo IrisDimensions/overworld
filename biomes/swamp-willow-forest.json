@@ -1,127 +1,83 @@
 {
-    "name": "Roofed Willow",
-    "layers": [
-        {
-            "zoom": 0.5,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "PODZOL",
-                "PODZOL"
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 4,
-            "palette": [
-                "DIRT",
-                "COARSE_DIRT"
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                "STONE",
-                "ANDESITE",
-                "STONE"
-            ]
-        }
-    ],
     "effects": [
         {
-            "interval": 4750,
-            "sound": "AMBIENT_SOUL_SAND_VALLEY_MOOD",
-            "soundDistance": 3,
             "volume": 6.2,
             "minPitch": 1.6,
+            "chance": 11,
             "maxPitch": 1.35,
-            "chance": 11
+            "sound": "AMBIENT_SOUL_SAND_VALLEY_MOOD",
+            "interval": 4750,
+            "soundDistance": 3
         },
         {
-            "interval": 1550,
-            "sound": "AMBIENT_SOUL_SAND_VALLEY_MOOD",
-            "soundDistance": 3,
             "volume": 6.2,
             "minPitch": 0.4,
+            "chance": 5,
             "maxPitch": 0.2,
-            "chance": 5
+            "sound": "AMBIENT_SOUL_SAND_VALLEY_MOOD",
+            "interval": 1550,
+            "soundDistance": 3
         },
         {
-            "interval": 550,
-            "particleOffset": 12,
-            "particleEffect": "CAMPFIRE_SIGNAL_SMOKE",
-            "particleCount": 0,
             "particleAltX": 0.0101,
             "particleAltY": -0.033885,
             "particleAltZ": 0.0101,
-            "chance": 1
+            "chance": 1,
+            "particleEffect": "CAMPFIRE_SIGNAL_SMOKE",
+            "particleOffset": 12,
+            "interval": 550,
+            "particleCount": 0
         }
     ],
-    "structures": [
+    "children": ["swamp-dark-oak-denmyre"],
+    "decorators": [
         {
-            "tileset": "murky-stronghold",
-            "zoom": 3.14,
-            "ratio": 0.59,
-            "height": 58,
-            "rarity": 31,
-            "shuffle": 16
+            "chance": 0.01,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [{"block": "dead_bush"}],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 2.0E-4,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [
+                {"block": "crimson_fungus"},
+                {"block": "brown_mushroom"},
+                {"block": "red_mushroom"},
+                {"block": "brown_mushroom"},
+                {"block": "red_mushroom"}
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.45,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [{"block": "grass"}],
+            "style": {"style": "STATIC"}
         }
     ],
-    "wall": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            "STONE",
-            "ANDESITE",
-            "STONE"
-        ]
-    },
     "objects": [
         {
             "chance": 0.7,
             "edit": [
                 {
-                    "find": [
-                        "oak_log"
-                    ],
-                    "replace": [
-                        "dark_oak_log"
-                    ]
+                    "find": ["oak_log"],
+                    "replace": ["dark_oak_log"]
                 },
                 {
-                    "find": [
-                        "oak_wood"
-                    ],
-                    "replace": [
-                        "dark_oak_wood"
-                    ]
+                    "find": ["oak_wood"],
+                    "replace": ["dark_oak_wood"]
                 },
                 {
-                    "find": [
-                        "oak_fence"
-                    ],
-                    "replace": [
-                        "dark_oak_fence"
-                    ]
+                    "find": ["oak_fence"],
+                    "replace": ["dark_oak_fence"]
                 },
                 {
-                    "find": [
-                        "dark_oak_planks"
-                    ],
-                    "replace": [
-                        "stripped_dark_oak_wood"
-                    ]
+                    "find": ["dark_oak_planks"],
+                    "replace": ["stripped_dark_oak_wood"]
                 }
             ],
             "rotation": {
@@ -155,36 +111,20 @@
             "chance": 0.2,
             "edit": [
                 {
-                    "find": [
-                        "oak_log"
-                    ],
-                    "replace": [
-                        "dark_oak_log"
-                    ]
+                    "find": ["oak_log"],
+                    "replace": ["dark_oak_log"]
                 },
                 {
-                    "find": [
-                        "oak_wood"
-                    ],
-                    "replace": [
-                        "dark_oak_wood"
-                    ]
+                    "find": ["oak_wood"],
+                    "replace": ["dark_oak_wood"]
                 },
                 {
-                    "find": [
-                        "oak_fence"
-                    ],
-                    "replace": [
-                        "dark_oak_fence"
-                    ]
+                    "find": ["oak_fence"],
+                    "replace": ["dark_oak_fence"]
                 },
                 {
-                    "find": [
-                        "dark_oak_planks"
-                    ],
-                    "replace": [
-                        "stripped_dark_oak_wood"
-                    ]
+                    "find": ["dark_oak_planks"],
+                    "replace": ["stripped_dark_oak_wood"]
                 }
             ],
             "rotation": {
@@ -237,36 +177,20 @@
             "chance": 0.17,
             "edit": [
                 {
-                    "find": [
-                        "oak_log"
-                    ],
-                    "replace": [
-                        "dark_oak_log"
-                    ]
+                    "find": ["oak_log"],
+                    "replace": ["dark_oak_log"]
                 },
                 {
-                    "find": [
-                        "oak_wood"
-                    ],
-                    "replace": [
-                        "dark_oak_wood"
-                    ]
+                    "find": ["oak_wood"],
+                    "replace": ["dark_oak_wood"]
                 },
                 {
-                    "find": [
-                        "oak_fence"
-                    ],
-                    "replace": [
-                        "dark_oak_fence"
-                    ]
+                    "find": ["oak_fence"],
+                    "replace": ["dark_oak_fence"]
                 },
                 {
-                    "find": [
-                        "dark_oak_planks"
-                    ],
-                    "replace": [
-                        "stripped_dark_oak_wood"
-                    ]
+                    "find": ["dark_oak_planks"],
+                    "replace": ["stripped_dark_oak_wood"]
                 }
             ],
             "rotation": {
@@ -295,36 +219,20 @@
             "chance": 0.08,
             "edit": [
                 {
-                    "find": [
-                        "oak_log"
-                    ],
-                    "replace": [
-                        "dark_oak_log"
-                    ]
+                    "find": ["oak_log"],
+                    "replace": ["dark_oak_log"]
                 },
                 {
-                    "find": [
-                        "oak_wood"
-                    ],
-                    "replace": [
-                        "dark_oak_wood"
-                    ]
+                    "find": ["oak_wood"],
+                    "replace": ["dark_oak_wood"]
                 },
                 {
-                    "find": [
-                        "oak_fence"
-                    ],
-                    "replace": [
-                        "dark_oak_fence"
-                    ]
+                    "find": ["oak_fence"],
+                    "replace": ["dark_oak_fence"]
                 },
                 {
-                    "find": [
-                        "dark_oak_planks"
-                    ],
-                    "replace": [
-                        "stripped_dark_oak_wood"
-                    ]
+                    "find": ["dark_oak_planks"],
+                    "replace": ["stripped_dark_oak_wood"]
                 }
             ],
             "rotation": {
@@ -351,13 +259,9 @@
             }
         },
         {
-            "chance": 0.00005,
-            "rotation": {
-                "enabled": false
-            },
-            "place": [
-                "stump/grave-1"
-            ],
+            "chance": 5.0E-5,
+            "rotation": {"enabled": false},
+            "place": ["stump/grave-1"],
             "translate": {
                 "x": 0,
                 "y": -1,
@@ -365,60 +269,61 @@
             }
         }
     ],
-    "children": [
-        "swamp-dark-oak-denmyre"
-    ],
-    "decorators": [
+    "name": "Roofed Willow",
+    "layers": [
         {
-            "zoom": 0.3,
-            "chance": 0.01,
+            "zoom": 0.5,
+            "style": {"style": "STATIC"},
             "palette": [
-                "DEAD_BUSH"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+                {
+                    "weight": 5,
+                    "block": "grass_block"
+                },
+                {
+                    "weight": 2,
+                    "block": "podzol"
+                }
+            ]
         },
         {
-            "zoom": 0.3,
-            "chance": 0.0002,
+            "minHeight": 2,
+            "maxHeight": 4,
             "palette": [
-                "CRIMSON_FUNGUS",
-                "BROWN_MUSHROOM",
-                "RED_MUSHROOM",
-                "BROWN_MUSHROOM",
-                "RED_MUSHROOM"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+                {"block": "dirt"},
+                {"block": "coarse_dirt"}
+            ]
         },
         {
-            "zoom": 0.3,
-            "chance": 0.45,
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
             "palette": [
-                "GRASS"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
+            ]
         }
     ],
-    "generators": [
-        {
-            "generator": "plain",
-            "min": 4,
-            "max": 11
-        }
-    ],
-    "derivative": "SWAMP"
+    "structures": [{
+        "tileset": "murky-stronghold",
+        "zoom": 3.14,
+        "shuffle": 16,
+        "ratio": 0.59,
+        "height": 58,
+        "rarity": 31
+    }],
+    "generators": [{
+        "min": 4,
+        "max": 11,
+        "generator": "plain"
+    }],
+    "derivative": "SWAMP",
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {"block": "stone"},
+            {"block": "andesite"},
+            {"block": "stone"}
+        ]
+    }
 }

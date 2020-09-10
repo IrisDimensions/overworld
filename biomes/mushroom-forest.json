@@ -1,98 +1,55 @@
 {
-    "name": "Mushroom Forest",
-    "layers": [
+    "effects": [{
+        "volume": 6.2,
+        "minPitch": 0.2,
+        "chance": 8,
+        "maxPitch": 0.3,
+        "sound": "AMBIENT_WARPED_FOREST_ADDITIONS",
+        "interval": 6000,
+        "soundDistance": 3
+    }],
+    "entityInitialSpawns": [{
+        "maxSpawns": 5,
+        "minSpawns": 2,
+        "entity": "mooshroom",
+        "rarity": 5
+    }],
+    "decorators": [
         {
-            "zoom": 0.5,
-            "style": {
-                "style": "IRIS"
-            },
+            "chance": 0.009,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
             "palette": [
-                "MYCELIUM",
-                "MYCELIUM",
-                "MYCELIUM",
-                "MYCELIUM",
-                "GRAVEL",
-                "MYCELIUM",
-                "MYCELIUM",
-                "MYCELIUM"
-            ]
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "east"
+                    },
+                    "block": "stone_button"
+                },
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "south"
+                    },
+                    "block": "stone_button"
+                }
+            ],
+            "style": {"style": "STATIC"}
         },
         {
-            "minHeight": 2,
-            "maxHeight": 4,
+            "chance": 0.05,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
             "palette": [
-                "DIRT",
-                "COARSE_DIRT"
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                "STONE",
-                "ANDESITE",
-                "STONE"
-            ]
+                {"block": "red_mushroom"},
+                {"block": "brown_mushroom"}
+            ],
+            "style": {"style": "STATIC"}
         }
     ],
-    "entityInitialSpawns": [
-        {
-            "entity": "mooshroom",
-            "maxSpawns": 5,
-            "minSpawns": 2,
-            "rarity": 5
-        }
-    ],
-    "slab": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR",
-            "minecraft:cobblestone_slab[type=bottom,waterlogged=false]",
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR"
-        ]
-    },
-    "effects": [
-        {
-            "interval": 6000,
-            "sound": "AMBIENT_WARPED_FOREST_ADDITIONS",
-            "soundDistance": 3,
-            "volume": 6.2,
-            "minPitch": 0.2,
-            "maxPitch": 0.3,
-            "chance": 8
-        }
-    ],
-    "wall": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            "STONE",
-            "ANDESITE",
-            "STONE"
-        ]
-    },
     "objects": [
         {
             "chance": 0.21,
@@ -126,17 +83,11 @@
         },
         {
             "chance": 0.21,
-            "edit": [
-                {
-                    "find": [
-                        "red_mushroom_block"
-                    ],
-                    "replace": [
-                        "brown_mushroom_block"
-                    ]
-                }
-            ],
             "density": 2,
+            "edit": [{
+                "find": ["red_mushroom_block"],
+                "replace": ["brown_mushroom_block"]
+            }],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -229,16 +180,10 @@
         {
             "chance": 0.05,
             "density": 2,
-            "edit": [
-                {
-                    "find": [
-                        "red_mushroom_block"
-                    ],
-                    "replace": [
-                        "brown_mushroom_block"
-                    ]
-                }
-            ],
+            "edit": [{
+                "find": ["red_mushroom_block"],
+                "replace": ["brown_mushroom_block"]
+            }],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -269,17 +214,11 @@
         },
         {
             "chance": 0.5,
-            "edit": [
-                {
-                    "find": [
-                        "red_mushroom_block"
-                    ],
-                    "replace": [
-                        "brown_mushroom_block"
-                    ]
-                }
-            ],
             "density": 2,
+            "edit": [{
+                "find": ["red_mushroom_block"],
+                "replace": ["brown_mushroom_block"]
+            }],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -310,17 +249,11 @@
         },
         {
             "chance": 0.025,
-            "edit": [
-                {
-                    "find": [
-                        "red_mushroom_block"
-                    ],
-                    "replace": [
-                        "brown_mushroom_block"
-                    ]
-                }
-            ],
             "density": 1,
+            "edit": [{
+                "find": ["red_mushroom_block"],
+                "replace": ["brown_mushroom_block"]
+            }],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -369,52 +302,82 @@
             }
         }
     ],
-    "structures": [
+    "name": "Mushroom Forest",
+    "layers": [
         {
-            "tileset": "murky-stronghold",
-            "zoom": 1.14,
-            "ratio": 0.59,
-            "height": 45,
-            "rarity": 55,
-            "shuffle": 16
-        }
-    ],
-    "decorators": [
-        {
-            "zoom": 0.3,
-            "chance": 0.009,
+            "zoom": 0.5,
+            "style": {"style": "IRIS"},
             "palette": [
-                "minecraft:stone_button[face=floor,facing=east,powered=false]",
-                "minecraft:stone_button[face=floor,facing=south,powered=false]"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+                {
+                    "weight": 4,
+                    "block": "mycelium"
+                },
+                {"block": "gravel"},
+                {
+                    "weight": 3,
+                    "block": "mycelium"
+                }
+            ]
         },
         {
-            "zoom": 0.3,
-            "chance": 0.05,
+            "minHeight": 2,
+            "maxHeight": 4,
             "palette": [
-                "red_mushroom",
-                "brown_mushroom"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        }
-    ],
-    "generators": [
+                {"block": "dirt"},
+                {"block": "coarse_dirt"}
+            ]
+        },
         {
-            "generator": "plain",
-            "min": 6,
-            "max": 24
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
+            ]
         }
     ],
-    "derivative": "MUSHROOM_FIELDS"
+    "structures": [{
+        "tileset": "murky-stronghold",
+        "zoom": 1.14,
+        "shuffle": 16,
+        "ratio": 0.59,
+        "height": 45,
+        "rarity": 55
+    }],
+    "generators": [{
+        "min": 6,
+        "max": 24,
+        "generator": "plain"
+    }],
+    "derivative": "MUSHROOM_FIELDS",
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {"block": "stone"},
+            {"block": "andesite"},
+            {"block": "stone"}
+        ]
+    },
+    "slab": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {
+                "weight": 8,
+                "block": "air"
+            },
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "cobblestone_slab"
+            },
+            {
+                "weight": 10,
+                "block": "air"
+            }
+        ]
+    }
 }

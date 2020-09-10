@@ -1,41 +1,70 @@
 {
-    "name": "Rainforest Hills",
-    "rarity": 8,
-    "layers": [
+    "effects": [{
+        "particleAltX": 0.301,
+        "particleAltY": -0.33885,
+        "particleAltZ": 0.301,
+        "chance": 1,
+        "particleEffect": "TOTEM",
+        "particleOffset": 12,
+        "interval": 550,
+        "particleCount": 0
+    }],
+    "decorators": [
         {
-            "style": {
-                "style": "STATIC"
-            },
-            "zoom": 0.35,
+            "chance": 0.45,
+            "variance": {"style": "IRIS"},
+            "zoom": 0.1,
             "palette": [
-                "GRASS_BLOCK",
-                "minecraft:jungle_leaves[persistent=true]",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK"
-            ]
+                {
+                    "data": {"persistent": true},
+                    "block": "jungle_leaves"
+                },
+                {"block": "tall_grass"},
+                {"block": "grass"},
+                {
+                    "data": {"persistent": true},
+                    "block": "jungle_leaves"
+                },
+                {"block": "grass"},
+                {
+                    "data": {"persistent": true},
+                    "block": "jungle_leaves"
+                }
+            ],
+            "style": {
+                "style": "FRACTAL_BILLOW_IRIS",
+                "fracture": {"style": "STATIC"}
+            }
         },
         {
-            "minHeight": 2,
-            "maxHeight": 4,
+            "chance": 0.25,
+            "verticalZoom": 88,
+            "variance": {"style": "STATIC"},
+            "stackMax": 1,
+            "zoom": 10,
             "palette": [
-                "DIRT"
-            ]
+                {"block": "grass"},
+                {"block": "tall_grass"}
+            ],
+            "style": {"style": "STATIC"},
+            "heightVariance": {"style": "STATIC"},
+            "stackMin": 1
         },
         {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                "STONE",
-                "ANDESITE",
-                "STONE"
-            ]
+            "chance": 1.0E-4,
+            "verticalZoom": 88,
+            "variance": {"style": "STATIC"},
+            "stackMax": 1,
+            "zoom": 10,
+            "palette": [{"block": "jungle_sapling"}],
+            "style": {"style": "STATIC"},
+            "heightVariance": {"style": "STATIC"},
+            "stackMin": 1
         }
     ],
     "objects": [
         {
+            "mode": "PAINT",
             "chance": 0.0025,
             "rotation": {
                 "yAxis": {
@@ -46,10 +75,7 @@
                 },
                 "enabled": true
             },
-            "mode": "PAINT",
-            "place": [
-                "camp/barrel-bin"
-            ],
+            "place": ["camp/barrel-bin"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -139,101 +165,66 @@
             }
         }
     ],
-    "decorators": [
+    "name": "Rainforest Hills",
+    "layers": [
         {
-            "zoom": 0.1,
-            "chance": 0.45,
+            "style": {"style": "STATIC"},
+            "zoom": 0.35,
             "palette": [
-                "minecraft:jungle_leaves[persistent=true]",
-                "TALL_GRASS",
-                "GRASS",
-                "minecraft:jungle_leaves[persistent=true]",
-                "GRASS",
-                "minecraft:jungle_leaves[persistent=true]"
-            ],
-            "style": {
-                "style": "FRACTAL_BILLOW_IRIS",
-                "fracture": {
-                    "style": "STATIC"
+                {"block": "grass_block"},
+                {
+                    "data": {"persistent": true},
+                    "block": "jungle_leaves"
+                },
+                {
+                    "weight": 2,
+                    "block": "grass_block"
                 }
-            },
-            "variance": {
-                "style": "IRIS"
-            }
+            ]
         },
         {
-            "zoom": 10,
-            "stackMax": 1,
-            "stackMin": 1,
-            "chance": 0.25,
-            "palette": [
-                "GRASS",
-                "TALL_GRASS"
-            ],
-            "heightVariance": {
-                "style": "STATIC"
-            },
-            "verticalZoom": 88,
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+            "minHeight": 2,
+            "maxHeight": 4,
+            "palette": [{"block": "dirt"}]
         },
         {
-            "zoom": 10,
-            "stackMax": 1,
-            "stackMin": 1,
-            "chance": 0.0001,
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
             "palette": [
-                "JUNGLE_SAPLING"
-            ],
-            "heightVariance": {
-                "style": "STATIC"
-            },
-            "verticalZoom": 88,
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
+            ]
         }
     ],
-    "effects": [
-        {
-            "interval": 550,
-            "particleOffset": 12,
-            "particleEffect": "TOTEM",
-            "particleCount": 0,
-            "particleAltX": 0.301,
-            "particleAltY": -0.33885,
-            "particleAltZ": 0.301,
-            "chance": 1
-        }
-    ],
+    "generators": [{
+        "min": 32,
+        "max": 65,
+        "generator": "plain-cliffs"
+    }],
+    "derivative": "JUNGLE",
     "wall": {
-        "style": {
-            "style": "IRIS"
-        },
+        "style": {"style": "IRIS"},
         "zoom": 0.1,
         "palette": [
-            "STRIPPED_JUNGLE_WOOD",
-            "minecraft:jungle_leaves[persistent=true]",
-            "STRIPPED_JUNGLE_WOOD",
-            "minecraft:jungle_leaves[persistent=true]",
-            "STRIPPED_JUNGLE_WOOD",
-            "minecraft:jungle_leaves[persistent=true]",
-            "STRIPPED_JUNGLE_WOOD"
+            {"block": "stripped_jungle_wood"},
+            {
+                "data": {"persistent": true},
+                "block": "jungle_leaves"
+            },
+            {"block": "stripped_jungle_wood"},
+            {
+                "data": {"persistent": true},
+                "block": "jungle_leaves"
+            },
+            {"block": "stripped_jungle_wood"},
+            {
+                "data": {"persistent": true},
+                "block": "jungle_leaves"
+            },
+            {"block": "stripped_jungle_wood"}
         ]
     },
-    "generators": [
-        {
-            "generator": "plain-cliffs",
-            "min": 32,
-            "max": 65
-        }
-    ],
-    "derivative": "JUNGLE"
+    "rarity": 8
 }

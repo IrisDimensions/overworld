@@ -1,27 +1,19 @@
 {
-    "name": "Cracked Cavern",
-    "rarity": 2,
-    "layers": [
+    "entitySpawnOverrides": [{
+        "trigger": "SKELETON",
+        "entity": "shroud",
+        "cancelSourceSpawn": true,
+        "rarity": 7
+    }],
+    "children": ["temperate-lit-cavern"],
+    "decorators": [
         {
-            "maxHeight": 2,
-            "style": {
-                "style": "STATIC"
-            },
-            "zoom": 0.1,
-            "minHeight": 1,
-            "palette": [
-                "STONE",
-                "ANDESITE",
-                "COBBLESTONE"
-            ]
-        }
-    ],
-    "entitySpawnOverrides": [
+            "chance": 1.0E-4,
+            "palette": [{"block": "barrel"}]
+        },
         {
-            "rarity": 7,
-            "entity": "shroud",
-            "cancelSourceSpawn": true,
-            "trigger": "SKELETON"
+            "chance": 0.008,
+            "palette": [{"block": "cobblestone_wall"}]
         }
     ],
     "objects": [
@@ -36,9 +28,7 @@
                 },
                 "enabled": true
             },
-            "place": [
-                "camp/camp"
-            ],
+            "place": ["camp/camp"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -46,6 +36,7 @@
             }
         },
         {
+            "mode": "PAINT",
             "chance": 0.005,
             "rotation": {
                 "yAxis": {
@@ -56,10 +47,7 @@
                 },
                 "enabled": true
             },
-            "mode": "PAINT",
-            "place": [
-                "camp/barrel-bin"
-            ],
+            "place": ["camp/barrel-bin"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -101,51 +89,47 @@
             }
         }
     ],
-    "children": [
-        "temperate-lit-cavern"
-    ],
-    "loot": {
-        "tables": [
-            "cave-clutter"
-        ]
-    },
-    "slab": {
-        "style": {
-            "style": "STATIC"
-        },
+    "name": "Cracked Cavern",
+    "layers": [{
+        "minHeight": 1,
+        "maxHeight": 2,
+        "style": {"style": "STATIC"},
+        "zoom": 0.1,
         "palette": [
-            "minecraft:cobblestone_slab[type=bottom,waterlogged=false]",
-            "minecraft:mossy_cobblestone_slab[type=bottom,waterlogged=false]",
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR"
+            {"block": "stone"},
+            {"block": "andesite"},
+            {"block": "cobblestone"}
         ]
-    },
-    "decorators": [
-        {
-            "chance": 0.0001,
-            "palette": [
-                "BARREL"
-            ]
-        },
-        {
-            "chance": 0.008,
-            "palette": [
-                "COBBLESTONE_WALL"
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "generator": "plain",
-            "min": 4,
-            "max": 6
-        }
-    ],
-    "derivative": "PLAINS"
+    }],
+    "generators": [{
+        "min": 4,
+        "max": 6,
+        "generator": "plain"
+    }],
+    "loot": {"tables": ["cave-clutter"]},
+    "derivative": "PLAINS",
+    "rarity": 2,
+    "slab": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "cobblestone_slab"
+            },
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "mossy_cobblestone_slab"
+            },
+            {
+                "weight": 8,
+                "block": "air"
+            }
+        ]
+    }
 }

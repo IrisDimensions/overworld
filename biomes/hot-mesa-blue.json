@@ -1,100 +1,86 @@
 {
+    "decorators": [
+        {
+            "chance": 0.009,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "east"
+                    },
+                    "block": "stone_button"
+                },
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "south"
+                    },
+                    "block": "stone_button"
+                }
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.01,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [{"block": "dead_bush"}],
+            "style": {"style": "STATIC"}
+        }
+    ],
     "name": "Midnight Mesa",
-    "rarity": 16,
-    "lockLayers": true,
     "layers": [
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                "CYAN_TERRACOTTA"
-            ]
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "cyan_terracotta"}]
         },
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                "BLUE_TERRACOTTA"
-            ]
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "blue_terracotta"}]
         },
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                "LIGHT_BLUE_TERRACOTTA"
-            ]
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "light_blue_terracotta"}]
         },
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                "MAGENTA_TERRACOTTA"
-            ]
-        }
-    ],
-    "wall": {
-        "style": {
-            "style": "IRIS"
-        },
-        "palette": [
-            "MAGENTA_TERRACOTTA",
-            "LIGHT_BLUE_TERRACOTTA",
-            "BLUE_TERRACOTTA",
-            "CYAN_TERRACOTTA"
-        ]
-    },
-    "decorators": [
-        {
-            "zoom": 0.3,
-            "chance": 0.009,
-            "palette": [
-                "minecraft:stone_button[face=floor,facing=east,powered=false]",
-                "minecraft:stone_button[face=floor,facing=south,powered=false]"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 0.3,
-            "chance": 0.01,
-            "palette": [
-                "DEAD_BUSH"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "magenta_terracotta"}]
         }
     ],
     "generators": [
         {
-            "generator": "plain",
             "min": 4,
-            "max": 26
+            "max": 26,
+            "generator": "plain"
         },
         {
-            "generator": "mesa",
             "min": 12,
-            "max": 38
+            "max": 38,
+            "generator": "mesa"
         }
     ],
-    "derivative": "SHATTERED_SAVANNA"
+    "derivative": "SHATTERED_SAVANNA",
+    "lockLayers": true,
+    "wall": {
+        "style": {"style": "IRIS"},
+        "palette": [
+            {"block": "magenta_terracotta"},
+            {"block": "light_blue_terracotta"},
+            {"block": "blue_terracotta"},
+            {"block": "cyan_terracotta"}
+        ]
+    },
+    "rarity": 16
 }

@@ -1,48 +1,51 @@
 {
-    "name": "Cold Ocean",
-    "layers": [
+    "children": ["rocky-ocean"],
+    "decorators": [
         {
-            "minHeight": 2,
-            "maxHeight": 3,
-            "zoom": 0.825,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                "SAND",
-                "CLAY",
-                "SAND",
-                "GRAVEL",
-                "SAND",
-                "DIRT",
-                "SAND",
-                "SAND"
-            ]
+            "chance": 0.07,
+            "variance": {"style": "STATIC"},
+            "zoom": 20,
+            "palette": [{"block": "seagrass"}],
+            "style": {"style": "STATIC"}
         },
         {
+            "chance": 6.0E-4,
+            "variance": {"style": "STATIC"},
+            "zoom": 1,
             "palette": [
-                "DIRT"
-            ]
+                {"block": "soul_sand"},
+                {"block": "magma_block"}
+            ],
+            "style": {"style": "STATIC"}
         },
         {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                "DIRT",
-                "DIRT",
-                "COARSE_DIRT"
-            ]
+            "chance": 0.013,
+            "verticalZoom": 88,
+            "variance": {"style": "STATIC"},
+            "stackMax": 24,
+            "zoom": 1,
+            "palette": [{"block": "kelp_plant"}],
+            "style": {"style": "STATIC"},
+            "heightVariance": {"style": "IRIS"},
+            "stackMin": 2
+        },
+        {
+            "chance": 0.001,
+            "variance": {"style": "STATIC"},
+            "zoom": 1,
+            "palette": [{
+                "data": {
+                    "waterlogged": true,
+                    "pickles": 1
+                },
+                "block": "sea_pickle"
+            }],
+            "style": {"style": "STATIC"}
         }
     ],
-    "loot": {
-        "tables": [
-            "ocean-clutter"
-        ]
-    },
     "objects": [
         {
             "chance": 0.01,
-            "underwater": true,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -52,6 +55,7 @@
                 },
                 "enabled": true
             },
+            "underwater": true,
             "place": [
                 "ships/swreck-1",
                 "ships/usd-ship-1",
@@ -65,7 +69,6 @@
         },
         {
             "chance": 0.1,
-            "underwater": true,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -75,6 +78,7 @@
                 },
                 "enabled": true
             },
+            "underwater": true,
             "place": [
                 "statue/sub-stat-1",
                 "statue/sub-stat-2",
@@ -89,97 +93,75 @@
             }
         }
     ],
-    "children": [
-        "rocky-ocean"
-    ],
-    "slab": {
-        "style": {
-            "style": "STATIC"
+    "name": "Cold Ocean",
+    "layers": [
+        {
+            "minHeight": 2,
+            "maxHeight": 3,
+            "zoom": 0.825,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "sand"},
+                {"block": "clay"},
+                {"block": "sand"},
+                {"block": "gravel"},
+                {"block": "sand"},
+                {"block": "dirt"},
+                {
+                    "weight": 2,
+                    "block": "sand"
+                }
+            ]
         },
-        "palette": [
-            "minecraft:sandstone_slab[type=bottom,waterlogged=false]",
-            "minecraft:smooth_sandstone_slab[type=bottom,waterlogged=false]",
-            "AIR",
-            "AIR"
-        ]
-    },
+        {"palette": [{"block": "dirt"}]},
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {
+                    "weight": 2,
+                    "block": "dirt"
+                },
+                {"block": "coarse_dirt"}
+            ]
+        }
+    ],
+    "generators": [{
+        "min": -33,
+        "max": -7,
+        "generator": "plain"
+    }],
+    "loot": {"tables": ["ocean-clutter"]},
+    "derivative": "COLD_OCEAN",
     "wall": {
-        "style": {
-            "style": "STATIC"
-        },
+        "style": {"style": "STATIC"},
         "palette": [
-            "STONE",
-            "ANDESITE",
-            "STONE"
+            {"block": "stone"},
+            {"block": "andesite"},
+            {"block": "stone"}
         ]
     },
-    "decorators": [
-        {
-            "zoom": 20,
-            "chance": 0.07,
-            "palette": [
-                "SEAGRASS"
-            ],
-            "style": {
-                "style": "STATIC"
+    "slab": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "sandstone_slab"
             },
-            "variance": {
-                "style": "STATIC"
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "smooth_sandstone_slab"
+            },
+            {
+                "weight": 2,
+                "block": "air"
             }
-        },
-        {
-            "zoom": 1,
-            "chance": 0.0006,
-            "palette": [
-                "SOUL_SAND",
-                "MAGMA_BLOCK"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 1,
-            "stackMax": 24,
-            "stackMin": 2,
-            "chance": 0.013,
-            "palette": [
-                "KELP_PLANT"
-            ],
-            "heightVariance": {
-                "style": "IRIS"
-            },
-            "verticalZoom": 88,
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 1,
-            "chance": 0.001,
-            "palette": [
-                "minecraft:sea_pickle[pickles=1,waterlogged=true]"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        }
-    ],
-    "generators": [
-        {
-            "generator": "plain",
-            "min": -33,
-            "max": -7
-        }
-    ],
-    "derivative": "COLD_OCEAN"
+        ]
+    }
 }

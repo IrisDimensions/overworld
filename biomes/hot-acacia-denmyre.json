@@ -1,173 +1,137 @@
 {
+    "decorators": [
+        {
+            "chance": 0.1,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.01,
+            "palette": [
+                {
+                    "weight": 4,
+                    "block": "dead_bush"
+                },
+                {"block": "brown_mushroom"}
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.001,
+            "variance": {"style": "STATIC"},
+            "stackMax": 2,
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "cactus"}],
+            "stackMin": 1
+        },
+        {
+            "chance": 0.4,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [{"block": "grass"}],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.03,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "east"
+                    },
+                    "block": "stone_button"
+                },
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "south"
+                    },
+                    "block": "stone_button"
+                }
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.017,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [{"block": "tall_grass"}],
+            "style": {"style": "STATIC"}
+        }
+    ],
+    "objects": [{
+        "chance": 0.5,
+        "density": 2,
+        "edit": [{
+            "find": ["acacia_planks"],
+            "replace": ["stripped_acacia_wood"]
+        }],
+        "rotation": {
+            "yAxis": {
+                "min": 0,
+                "max": 0,
+                "interval": 90,
+                "enabled": true
+            },
+            "enabled": true
+        },
+        "place": [
+            "acacia-medium/acacia-denmyre-1",
+            "acacia-medium/acacia-denmyre-2",
+            "acacia-medium/acacia-denmyre-3",
+            "acacia-medium/acacia-denmyre-4",
+            "acacia-medium/acacia-denmyre-5",
+            "acacia-medium/acacia-denmyre-6",
+            "acacia-medium/acacia-denmyre-7",
+            "acacia-medium/acacia-denmyre-8",
+            "acacia-medium/acacia-denmyre-9",
+            "acacia-medium/acacia-denmyre-10",
+            "acacia-medium/acacia-denmyre-11",
+            "acacia-medium/acacia-denmyre-12"
+        ],
+        "translate": {
+            "x": 0,
+            "y": -1,
+            "z": 0
+        }
+    }],
     "name": "Acacia Denmyre",
-    "rarity": 2,
     "layers": [
         {
-            "style": {
-                "style": "FLAT"
-            },
-            "palette": [
-                "GRASS_BLOCK"
-            ]
+            "style": {"style": "FLAT"},
+            "palette": [{"block": "grass_block"}]
         },
-        {
-            "palette": [
-                "DIRT"
-            ]
-        },
+        {"palette": [{"block": "dirt"}]},
         {
             "minHeight": 1,
             "maxHeight": 3,
-            "palette": [
-                "COARSE_DIRT"
-            ]
+            "palette": [{"block": "coarse_dirt"}]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
+            "style": {"style": "STATIC"},
             "palette": [
-                "STONE",
-                "ANDESITE",
-                "STONE"
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
             ]
         }
     ],
-    "decorators": [
-        {
-            "zoom": 0.01,
-            "chance": 0.1,
-            "palette": [
-                "DEAD_BUSH",
-                "DEAD_BUSH",
-                "DEAD_BUSH",
-                "DEAD_BUSH",
-                "BROWN_MUSHROOM"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            },
-            "stackMin": 1,
-            "stackMax": 2,
-            "chance": 0.001,
-            "palette": [
-                "CACTUS"
-            ]
-        },
-        {
-            "zoom": 0.3,
-            "chance": 0.4,
-            "palette": [
-                "GRASS"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 0.3,
-            "chance": 0.03,
-            "palette": [
-                "minecraft:stone_button[face=floor,facing=east,powered=false]",
-                "minecraft:stone_button[face=floor,facing=south,powered=false]"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 0.3,
-            "chance": 0.017,
-            "palette": [
-                "TALL_GRASS"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        }
-    ],
-    "objects": [
-        {
-            "chance": 0.5,
-            "density": 2,
-            "edit": [
-                {
-                    "find": [
-                        "acacia_planks"
-                    ],
-                    "replace": [
-                        "stripped_acacia_wood"
-                    ]
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "acacia-medium/acacia-denmyre-1",
-                "acacia-medium/acacia-denmyre-2",
-                "acacia-medium/acacia-denmyre-3",
-                "acacia-medium/acacia-denmyre-4",
-                "acacia-medium/acacia-denmyre-5",
-                "acacia-medium/acacia-denmyre-6",
-                "acacia-medium/acacia-denmyre-7",
-                "acacia-medium/acacia-denmyre-8",
-                "acacia-medium/acacia-denmyre-9",
-                "acacia-medium/acacia-denmyre-10",
-                "acacia-medium/acacia-denmyre-11",
-                "acacia-medium/acacia-denmyre-12"
-            ],
-            "translate": {
-                "x": 0,
-                "y": -1,
-                "z": 0
-            }
-        }
-    ],
+    "generators": [{
+        "min": 4,
+        "max": 7,
+        "generator": "plain"
+    }],
+    "derivative": "DESERT",
     "wall": {
-        "style": {
-            "style": "STATIC"
-        },
+        "style": {"style": "STATIC"},
         "palette": [
-            "STONE",
-            "ANDESITE",
-            "STONE"
+            {"block": "stone"},
+            {"block": "andesite"},
+            {"block": "stone"}
         ]
     },
-    "generators": [
-        {
-            "generator": "plain",
-            "min": 4,
-            "max": 7
-        }
-    ],
-    "derivative": "DESERT"
+    "rarity": 2
 }

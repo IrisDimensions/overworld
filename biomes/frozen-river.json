@@ -1,36 +1,4 @@
 {
-    "name": "Frozen River",
-    "layers": [
-        {
-            "palette": [
-                "DIRT",
-                "GRAVEL",
-                "STONE"
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 3,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                "SAND",
-                "CLAY",
-                "SAND",
-                "GRAVEL",
-                "SAND",
-                "DIRT",
-                "SAND",
-                "SAND"
-            ]
-        }
-    ],
-    "loot": {
-        "tables": [
-            "ocean-clutter"
-        ]
-    },
     "seaLayers": [
         {
             "minHeight": 3,
@@ -38,38 +6,42 @@
             "style": {
                 "style": "FRACTAL_WATER",
                 "fracture": {
-                    "style": "IRIS_DOUBLE",
-                    "multiplier": 9.25
+                    "multiplier": 9.25,
+                    "style": "IRIS_DOUBLE"
                 }
             },
             "zoom": 1.16,
             "palette": [
-                "ICE",
-                "ICE",
-                "PACKED_ICE",
-                "PACKED_ICE",
-                "PACKED_ICE",
-                "BLUE_ICE",
-                "PACKED_ICE",
-                "PACKED_ICE",
-                "PACKED_ICE",
-                "ICE",
-                "ICE"
+                {
+                    "weight": 2,
+                    "block": "ice"
+                },
+                {
+                    "weight": 3,
+                    "block": "packed_ice"
+                },
+                {"block": "blue_ice"},
+                {
+                    "weight": 3,
+                    "block": "packed_ice"
+                },
+                {
+                    "weight": 2,
+                    "block": "ice"
+                }
             ]
         },
         {
             "minHeight": 1,
             "maxHeight": 2,
-            "palette": [
-                "PACKED_ICE"
-            ]
+            "palette": [{"block": "packed_ice"}]
         }
     ],
     "objects": [
         {
             "chance": 0.01,
             "density": 3,
-            "onwater": true,
+            "snow": 0.45,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -79,7 +51,7 @@
                 },
                 "enabled": true
             },
-            "snow": 0.45,
+            "onwater": true,
             "place": [
                 "ice-spikes/sp-1",
                 "ice-spikes/sp-2",
@@ -99,8 +71,8 @@
         },
         {
             "chance": 0.1,
-            "onwater": true,
             "density": 3,
+            "snow": 0.01,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -110,7 +82,7 @@
                 },
                 "enabled": true
             },
-            "snow": 0.01,
+            "onwater": true,
             "place": [
                 "ice-spikes/ice-spec-1",
                 "ice-spikes/ice-spec-2",
@@ -125,12 +97,36 @@
             }
         }
     ],
-    "generators": [
+    "name": "Frozen River",
+    "layers": [
+        {"palette": [
+            {"block": "dirt"},
+            {"block": "gravel"},
+            {"block": "stone"}
+        ]},
         {
-            "generator": "sharp",
-            "min": -18,
-            "max": -13
+            "minHeight": 2,
+            "maxHeight": 3,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "sand"},
+                {"block": "clay"},
+                {"block": "sand"},
+                {"block": "gravel"},
+                {"block": "sand"},
+                {"block": "dirt"},
+                {
+                    "weight": 2,
+                    "block": "sand"
+                }
+            ]
         }
     ],
+    "generators": [{
+        "min": -18,
+        "max": -13,
+        "generator": "sharp"
+    }],
+    "loot": {"tables": ["ocean-clutter"]},
     "derivative": "DEEP_FROZEN_OCEAN"
 }

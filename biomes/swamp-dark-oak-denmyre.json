@@ -1,98 +1,57 @@
 {
-    "name": "Swamp Denmyre",
-    "rarity": 2,
-    "layers": [
-        {
-            "style": {
-                "style": "FLAT"
-            },
-            "palette": [
-                "GRASS_BLOCK"
-            ]
-        },
-        {
-            "palette": [
-                "DIRT"
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                "COARSE_DIRT"
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                "STONE",
-                "ANDESITE",
-                "STONE"
-            ]
-        }
-    ],
     "decorators": [
         {
-            "zoom": 0.01,
             "chance": 0.01,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.01,
             "palette": [
-                "DEAD_BUSH",
-                "BROWN_MUSHROOM"
+                {"block": "dead_bush"},
+                {"block": "brown_mushroom"}
             ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+            "style": {"style": "STATIC"}
         },
         {
-            "zoom": 0.3,
             "chance": 0.4,
-            "palette": [
-                "GRASS"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 1,
-            "chance": 0.003,
-            "palette": [
-                "minecraft:dark_oak_button[face=floor,facing=east,powered=false]",
-                "minecraft:dark_oak_button[face=floor,facing=south,powered=false]"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
+            "variance": {"style": "STATIC"},
             "zoom": 0.3,
-            "chance": 0.017,
+            "palette": [{"block": "grass"}],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.003,
+            "variance": {"style": "STATIC"},
+            "zoom": 1,
             "palette": [
-                "TALL_GRASS"
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "east"
+                    },
+                    "block": "dark_oak_button"
+                },
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "south"
+                    },
+                    "block": "dark_oak_button"
+                }
             ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.017,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [{"block": "tall_grass"}],
+            "style": {"style": "STATIC"}
         }
     ],
     "objects": [
         {
+            "mode": "PAINT",
             "chance": 0.0025,
             "rotation": {
                 "yAxis": {
@@ -103,10 +62,7 @@
                 },
                 "enabled": true
             },
-            "mode": "PAINT",
-            "place": [
-                "camp/barrel-bin"
-            ],
+            "place": ["camp/barrel-bin"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -118,28 +74,16 @@
             "density": 2,
             "edit": [
                 {
-                    "find": [
-                        "dark_oak_planks"
-                    ],
-                    "replace": [
-                        "stripped_dark_oak_wood"
-                    ]
+                    "find": ["dark_oak_planks"],
+                    "replace": ["stripped_dark_oak_wood"]
                 },
                 {
-                    "find": [
-                        "SPRUCE_LEAVES"
-                    ],
-                    "replace": [
-                        "OAK_LEAVES"
-                    ]
+                    "find": ["SPRUCE_LEAVES"],
+                    "replace": ["OAK_LEAVES"]
                 },
                 {
-                    "find": [
-                        "BIRCH_LEAVES"
-                    ],
-                    "replace": [
-                        "DARK_OAK_LEAVES"
-                    ]
+                    "find": ["BIRCH_LEAVES"],
+                    "replace": ["DARK_OAK_LEAVES"]
                 }
             ],
             "rotation": {
@@ -228,22 +172,42 @@
             }
         }
     ],
-    "wall": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            "STONE",
-            "ANDESITE",
-            "STONE"
-        ]
-    },
-    "generators": [
+    "name": "Swamp Denmyre",
+    "layers": [
         {
-            "generator": "plain",
-            "min": 4,
-            "max": 7
+            "style": {"style": "FLAT"},
+            "palette": [{"block": "grass_block"}]
+        },
+        {"palette": [{"block": "dirt"}]},
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [{"block": "coarse_dirt"}]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
+            ]
         }
     ],
-    "derivative": "SWAMP"
+    "generators": [{
+        "min": 4,
+        "max": 7,
+        "generator": "plain"
+    }],
+    "derivative": "SWAMP",
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {"block": "stone"},
+            {"block": "andesite"},
+            {"block": "stone"}
+        ]
+    },
+    "rarity": 2
 }

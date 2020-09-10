@@ -1,53 +1,85 @@
 {
-    "name": "Cold Tundra",
-    "layers": [
+    "decorators": [
         {
-            "style": {
-                "style": "STATIC"
-            },
-            "zoom": 0.92,
+            "chance": 0.003,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.02,
             "palette": [
-                "GRASS_BLOCK"
-            ]
+                {"block": "white_tulip"},
+                {"block": "blue_orchid"}
+            ],
+            "style": {"style": "STATIC"}
         },
         {
-            "minHeight": 2,
-            "maxHeight": 4,
-            "palette": [
-                "DIRT",
-                "COARSE_DIRT"
-            ]
+            "chance": 0.023,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [{"block": "grass"}],
+            "style": {"style": "STATIC"}
         },
         {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
+            "chance": 0.001,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [{"block": "poppy"}],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.001,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
             "palette": [
-                "STONE",
-                "ANDESITE",
-                "STONE"
-            ]
+                {
+                    "data": {"age": 0},
+                    "block": "sweet_berry_bush"
+                },
+                {
+                    "data": {"age": 1},
+                    "block": "sweet_berry_bush"
+                },
+                {
+                    "data": {"age": 2},
+                    "block": "sweet_berry_bush"
+                },
+                {
+                    "data": {"age": 3},
+                    "block": "sweet_berry_bush"
+                }
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.001,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.02,
+            "palette": [
+                {"block": "wither_rose"},
+                {"block": "oxeye_daisy"},
+                {"block": "pink_tulip"}
+            ],
+            "style": {"style": "FRACTAL_SMOKE"}
+        },
+        {
+            "chance": 0.05,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.2,
+            "palette": [
+                {"block": "large_fern"},
+                {"block": "tall_grass"}
+            ],
+            "style": {"style": "FRACTAL_SMOKE"}
+        },
+        {
+            "chance": 0.21,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.2,
+            "palette": [
+                {"block": "grass"},
+                {"block": "fern"}
+            ],
+            "style": {"style": "STATIC"}
         }
     ],
-    "structures": [
-        {
-            "tileset": "village-stone",
-            "zoom": 2,
-            "rarity": 159
-        }
-    ],
-    "wall": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            "STONE",
-            "ANDESITE",
-            "STONE"
-        ]
-    },
     "objects": [
         {
             "chance": 0.00256,
@@ -60,9 +92,7 @@
                 },
                 "enabled": true
             },
-            "place": [
-                "grave/grave"
-            ],
+            "place": ["grave/grave"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -118,16 +148,10 @@
         },
         {
             "chance": 0.25,
-            "edit": [
-                {
-                    "find": [
-                        "OAK_LEAVES"
-                    ],
-                    "replace": [
-                        "minecraft:birch_leaves[persistent=true]"
-                    ]
-                }
-            ],
+            "edit": [{
+                "find": ["OAK_LEAVES"],
+                "replace": ["minecraft:birch_leaves[persistent=true]"]
+            }],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -207,113 +231,49 @@
             }
         }
     ],
-    "decorators": [
+    "name": "Cold Tundra",
+    "layers": [
         {
-            "zoom": 0.02,
-            "chance": 0.003,
-            "palette": [
-                "WHITE_TULIP",
-                "BLUE_ORCHID"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+            "style": {"style": "STATIC"},
+            "zoom": 0.92,
+            "palette": [{"block": "grass_block"}]
         },
         {
-            "zoom": 0.3,
-            "chance": 0.023,
+            "minHeight": 2,
+            "maxHeight": 4,
             "palette": [
-                "GRASS"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+                {"block": "dirt"},
+                {"block": "coarse_dirt"}
+            ]
         },
         {
-            "zoom": 0.3,
-            "chance": 0.001,
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
             "palette": [
-                "POPPY"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 0.3,
-            "chance": 0.001,
-            "palette": [
-                "minecraft:sweet_berry_bush[age=0]",
-                "minecraft:sweet_berry_bush[age=1]",
-                "minecraft:sweet_berry_bush[age=2]",
-                "minecraft:sweet_berry_bush[age=3]"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 0.02,
-            "chance": 0.001,
-            "palette": [
-                "WITHER_ROSE",
-                "OXEYE_DAISY",
-                "PINK_TULIP"
-            ],
-            "style": {
-                "style": "FRACTAL_SMOKE"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 0.2,
-            "chance": 0.05,
-            "palette": [
-                "LARGE_FERN",
-                "TALL_GRASS"
-            ],
-            "style": {
-                "style": "FRACTAL_SMOKE"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 0.2,
-            "chance": 0.21,
-            "palette": [
-                "GRASS",
-                "FERN"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
+            ]
         }
     ],
-    "generators": [
-        {
-            "generator": "plain",
-            "min": 5,
-            "max": 14
-        }
-    ],
-    "derivative": "GIANT_TREE_TAIGA"
+    "structures": [{
+        "tileset": "village-stone",
+        "zoom": 2,
+        "rarity": 159
+    }],
+    "generators": [{
+        "min": 5,
+        "max": 14,
+        "generator": "plain"
+    }],
+    "derivative": "GIANT_TREE_TAIGA",
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {"block": "stone"},
+            {"block": "andesite"},
+            {"block": "stone"}
+        ]
+    }
 }

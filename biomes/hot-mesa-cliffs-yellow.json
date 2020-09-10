@@ -1,147 +1,115 @@
 {
+    "decorators": [
+        {
+            "chance": 0.009,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "east"
+                    },
+                    "block": "stone_button"
+                },
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "south"
+                    },
+                    "block": "stone_button"
+                }
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.01,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [{"block": "dead_bush"}],
+            "style": {"style": "STATIC"}
+        }
+    ],
+    "children": ["hot-mesa-cliffs"],
     "name": "Yellow Mesa",
-    "lockLayers": true,
-    "rarity": 9,
     "layers": [
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                "TERRACOTTA"
-            ]
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "terracotta"}]
         },
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                "WHITE_TERRACOTTA"
-            ]
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "white_terracotta"}]
         },
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                "TERRACOTTA"
-            ]
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "terracotta"}]
         },
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                "RED_TERRACOTTA"
-            ]
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "red_terracotta"}]
         },
         {
             "minHeight": 2,
             "maxHeight": 2,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                "TERRACOTTA"
-            ]
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "terracotta"}]
         },
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                "YELLOW_TERRACOTTA"
-            ]
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "yellow_terracotta"}]
         },
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                "TERRACOTTA"
-            ]
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "terracotta"}]
         },
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                "BROWN_TERRACOTTA"
-            ]
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "brown_terracotta"}]
         }
-    ],
-    "wall": {
-        "style": {
-            "style": "IRIS"
-        },
-        "palette": [
-            "RED_TERRACOTTA",
-            "GRAY_TERRACOTTA",
-            "YELLOW_TERRACOTTA"
-        ]
-    },
-    "decorators": [
-        {
-            "zoom": 0.3,
-            "chance": 0.009,
-            "palette": [
-                "minecraft:stone_button[face=floor,facing=east,powered=false]",
-                "minecraft:stone_button[face=floor,facing=south,powered=false]"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 0.3,
-            "chance": 0.01,
-            "palette": [
-                "DEAD_BUSH"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        }
-    ],
-    "children": [
-        "hot-mesa-cliffs"
     ],
     "generators": [
         {
-            "generator": "plain",
             "min": 3,
-            "max": 6
+            "max": 6,
+            "generator": "plain"
         },
         {
-            "generator": "mesa",
             "min": 9,
-            "max": 38
+            "max": 38,
+            "generator": "mesa"
         },
         {
-            "generator": "plain-cliffs",
             "min": 14,
-            "max": 40
+            "max": 40,
+            "generator": "plain-cliffs"
         }
     ],
-    "derivative": "SHATTERED_SAVANNA"
+    "derivative": "SHATTERED_SAVANNA",
+    "lockLayers": true,
+    "wall": {
+        "style": {"style": "IRIS"},
+        "palette": [
+            {"block": "red_terracotta"},
+            {"block": "gray_terracotta"},
+            {"block": "yellow_terracotta"}
+        ]
+    },
+    "rarity": 9
 }

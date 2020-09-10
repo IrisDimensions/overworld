@@ -1,40 +1,14 @@
 {
-    "name": "Tropical Cavern",
-    "layers": [
-        {
-            "maxHeight": 2,
-            "style": {
-                "style": "STATIC"
-            },
-            "zoom": 0.1,
-            "minHeight": 1,
-            "palette": [
-                "STONE",
-                "STONE",
-                "JUNGLE_LEAVES",
-                "STONE",
-                "STONE",
-                "ANDESITE",
-                "STONE",
-                "STONE",
-                "ANDESITE",
-                "STONE"
-            ]
-        }
-    ],
-    "entitySpawnOverrides": [
-        {
-            "rarity": 12,
-            "entity": "shroud",
-            "cancelSourceSpawn": true,
-            "trigger": "SKELETON"
-        }
-    ],
-    "loot": {
-        "tables": [
-            "cave-clutter"
-        ]
-    },
+    "entitySpawnOverrides": [{
+        "trigger": "SKELETON",
+        "entity": "shroud",
+        "cancelSourceSpawn": true,
+        "rarity": 12
+    }],
+    "decorators": [{
+        "chance": 1.0E-5,
+        "palette": [{"block": "barrel"}]
+    }],
     "objects": [
         {
             "chance": 0.00175,
@@ -47,9 +21,7 @@
                 },
                 "enabled": true
             },
-            "place": [
-                "camp/camp"
-            ],
+            "place": ["camp/camp"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -57,6 +29,7 @@
             }
         },
         {
+            "mode": "PAINT",
             "chance": 0.005,
             "rotation": {
                 "yAxis": {
@@ -67,10 +40,7 @@
                 },
                 "enabled": true
             },
-            "mode": "PAINT",
-            "place": [
-                "camp/barrel-bin"
-            ],
+            "place": ["camp/barrel-bin"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -112,36 +82,59 @@
             }
         }
     ],
-    "slab": {
-        "style": {
-            "style": "STATIC"
-        },
+    "name": "Tropical Cavern",
+    "layers": [{
+        "minHeight": 1,
+        "maxHeight": 2,
+        "style": {"style": "STATIC"},
+        "zoom": 0.1,
         "palette": [
-            "minecraft:stone_slab[type=bottom,waterlogged=false]",
-            "minecraft:polished_diorite_slab[type=bottom,waterlogged=false]",
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR"
+            {
+                "weight": 2,
+                "block": "stone"
+            },
+            {"block": "jungle_leaves"},
+            {
+                "weight": 2,
+                "block": "stone"
+            },
+            {"block": "andesite"},
+            {
+                "weight": 2,
+                "block": "stone"
+            },
+            {"block": "andesite"},
+            {"block": "stone"}
         ]
-    },
-    "decorators": [
-        {
-            "chance": 0.00001,
-            "palette": [
-                "BARREL"
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "generator": "plain",
-            "min": 4,
-            "max": 6
-        }
-    ],
-    "derivative": "FOREST"
+    }],
+    "generators": [{
+        "min": 4,
+        "max": 6,
+        "generator": "plain"
+    }],
+    "loot": {"tables": ["cave-clutter"]},
+    "derivative": "FOREST",
+    "slab": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "stone_slab"
+            },
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "polished_diorite_slab"
+            },
+            {
+                "weight": 7,
+                "block": "air"
+            }
+        ]
+    }
 }

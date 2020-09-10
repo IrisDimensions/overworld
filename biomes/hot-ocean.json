@@ -1,74 +1,83 @@
 {
-    "name": "Hot Ocean",
-    "layers": [
+    "effects": [{
+        "particleAltX": 0.001,
+        "particleAltY": 0.04285,
+        "particleAltZ": 0.001,
+        "chance": 1,
+        "particleEffect": "CAMPFIRE_COSY_SMOKE",
+        "particleOffset": 0,
+        "interval": 650,
+        "particleCount": 0
+    }],
+    "children": ["hot-ocean-cliffs"],
+    "decorators": [
         {
-            "minHeight": 2,
-            "maxHeight": 3,
-            "style": {
-                "style": "STATIC"
-            },
-            "zoom": 0.825,
+            "chance": 9.0E-4,
+            "variance": {"style": "STATIC"},
+            "zoom": 1,
             "palette": [
-                "SAND",
-                "CLAY",
-                "SAND",
-                "GRAVEL",
-                "SAND",
-                "DIRT",
-                "SAND",
-                "SAND"
-            ]
+                {"block": "soul_sand"},
+                {
+                    "weight": 2,
+                    "block": "magma_block"
+                }
+            ],
+            "style": {"style": "STATIC"}
         },
         {
-            "palette": [
-                "DIRT"
-            ]
+            "chance": 0.02,
+            "variance": {"style": "STATIC"},
+            "zoom": 5,
+            "palette": [{"block": "seagrass"}],
+            "style": {"style": "STATIC"}
         },
         {
-            "minHeight": 1,
-            "maxHeight": 3,
+            "chance": 0.015,
+            "verticalZoom": 20,
+            "variance": {"style": "STATIC"},
+            "stackMax": 9,
+            "zoom": 1,
+            "palette": [{"block": "kelp_plant"}],
+            "style": {"style": "STATIC"},
+            "heightVariance": {"style": "STATIC"},
+            "stackMin": 1
+        },
+        {
+            "chance": 0.01,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.25,
             "palette": [
-                "DIRT",
-                "DIRT",
-                "COARSE_DIRT"
-            ]
+                {"block": "fire_coral"},
+                {"block": "dead_fire_coral"},
+                {"block": "fire_coral_fan"}
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.001,
+            "variance": {"style": "STATIC"},
+            "zoom": 1,
+            "palette": [{
+                "data": {
+                    "waterlogged": true,
+                    "pickles": 1
+                },
+                "block": "sea_pickle"
+            }],
+            "style": {"style": "STATIC"}
         }
     ],
-    "wall": {
-        "style": {
-            "style": "IRIS"
-        },
-        "palette": [
-            "CLAY",
-            "SMOOTH_SANDSTONE",
-            "RED_SAND",
-            "SMOOTH_RED_SANDSTONE",
-            "SMOOTH_SANDSTONE",
-            "SAND",
-            "SMOOTH_RED_SANDSTONE"
-        ]
-    },
     "objects": [
         {
             "chance": 0.03,
             "density": 1,
-            "rotation": {
-                "enabled": false
-            },
-            "edit": [
-                {
-                    "find": [
-                        "WATER"
-                    ],
-                    "replace": [
-                        "AIR"
-                    ]
-                }
-            ],
+            "edit": [{
+                "find": ["WATER"],
+                "replace": ["AIR"]
+            }],
+            "rotation": {"enabled": false},
             "underwater": true,
-            "place": [
-                "bombs/bomb"
-            ],
+            "place": ["bombs/bomb"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -78,7 +87,6 @@
         {
             "chance": 0.01,
             "density": 1,
-            "underwater": true,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -88,6 +96,7 @@
                 },
                 "enabled": true
             },
+            "underwater": true,
             "place": [
                 "ships/swreck-1",
                 "ships/usd-ship-1",
@@ -100,120 +109,79 @@
             }
         }
     ],
-    "slab": {
-        "style": {
-            "style": "STATIC"
+    "name": "Hot Ocean",
+    "layers": [
+        {
+            "minHeight": 2,
+            "maxHeight": 3,
+            "style": {"style": "STATIC"},
+            "zoom": 0.825,
+            "palette": [
+                {"block": "sand"},
+                {"block": "clay"},
+                {"block": "sand"},
+                {"block": "gravel"},
+                {"block": "sand"},
+                {"block": "dirt"},
+                {
+                    "weight": 2,
+                    "block": "sand"
+                }
+            ]
         },
+        {"palette": [{"block": "dirt"}]},
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {
+                    "weight": 2,
+                    "block": "dirt"
+                },
+                {"block": "coarse_dirt"}
+            ]
+        }
+    ],
+    "generators": [{
+        "min": -21,
+        "max": -7,
+        "generator": "plain"
+    }],
+    "loot": {"tables": ["ocean-clutter"]},
+    "derivative": "SWAMP",
+    "wall": {
+        "style": {"style": "IRIS"},
         "palette": [
-            "minecraft:sandstone_slab[type=bottom,waterlogged=false]",
-            "minecraft:smooth_sandstone_slab[type=bottom,waterlogged=false]",
-            "AIR",
-            "AIR"
+            {"block": "clay"},
+            {"block": "smooth_sandstone"},
+            {"block": "red_sand"},
+            {"block": "smooth_red_sandstone"},
+            {"block": "smooth_sandstone"},
+            {"block": "sand"},
+            {"block": "smooth_red_sandstone"}
         ]
     },
-    "effects": [
-        {
-            "interval": 650,
-            "particleOffset": 0,
-            "particleEffect": "CAMPFIRE_COSY_SMOKE",
-            "particleCount": 0,
-            "particleAltX": 0.001,
-            "particleAltY": 0.04285,
-            "particleAltZ": 0.001,
-            "chance": 1
-        }
-    ],
-    "children": [
-        "hot-ocean-cliffs"
-    ],
-    "loot": {
-        "tables": [
-            "ocean-clutter"
+    "slab": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "sandstone_slab"
+            },
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "smooth_sandstone_slab"
+            },
+            {
+                "weight": 2,
+                "block": "air"
+            }
         ]
-    },
-    "decorators": [
-        {
-            "zoom": 1,
-            "chance": 0.0009,
-            "palette": [
-                "SOUL_SAND",
-                "MAGMA_BLOCK",
-                "MAGMA_BLOCK"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 5,
-            "chance": 0.02,
-            "palette": [
-                "SEAGRASS"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 1,
-            "stackMax": 9,
-            "stackMin": 1,
-            "chance": 0.015,
-            "palette": [
-                "KELP_PLANT"
-            ],
-            "heightVariance": {
-                "style": "STATIC"
-            },
-            "verticalZoom": 20,
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 0.25,
-            "chance": 0.01,
-            "palette": [
-                "FIRE_CORAL",
-                "DEAD_FIRE_CORAL",
-                "FIRE_CORAL_FAN"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 1,
-            "chance": 0.001,
-            "palette": [
-                "minecraft:sea_pickle[pickles=1,waterlogged=true]"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        }
-    ],
-    "generators": [
-        {
-            "generator": "plain",
-            "min": -21,
-            "max": -7
-        }
-    ],
-    "derivative": "SWAMP"
+    }
 }

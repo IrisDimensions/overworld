@@ -1,37 +1,38 @@
 {
-    "name": "Tropical Root",
-    "rarity": 4,
-    "layers": [
+    "entitySpawnOverrides": [{
+        "trigger": "SKELETON",
+        "entity": "shroud",
+        "cancelSourceSpawn": true,
+        "rarity": 12
+    }],
+    "decorators": [
         {
-            "maxHeight": 3,
-            "style": {
-                "style": "STATIC"
-            },
-            "zoom": 0.1,
-            "minHeight": 1,
+            "chance": 1.0E-4,
+            "palette": [{"block": "barrel"}]
+        },
+        {
+            "chance": 0.03,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
             "palette": [
-                "STRIPPED_JUNGLE_WOOD",
-                "minecraft:jungle_leaves[persistent=true]",
-                "minecraft:jungle_leaves[persistent=true]",
-                "minecraft:jungle_leaves[persistent=true]",
-                "minecraft:jungle_leaves[persistent=true]",
-                "STRIPPED_JUNGLE_WOOD",
-                "STRIPPED_JUNGLE_WOOD",
-                "STRIPPED_JUNGLE_WOOD",
-                "STRIPPED_JUNGLE_WOOD",
-                "STRIPPED_JUNGLE_WOOD",
-                "STRIPPED_JUNGLE_WOOD",
-                "STRIPPED_JUNGLE_WOOD",
-                "STRIPPED_JUNGLE_WOOD"
-            ]
-        }
-    ],
-    "entitySpawnOverrides": [
-        {
-            "rarity": 12,
-            "entity": "shroud",
-            "cancelSourceSpawn": true,
-            "trigger": "SKELETON"
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "east"
+                    },
+                    "block": "jungle_button"
+                },
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "south"
+                    },
+                    "block": "jungle_button"
+                }
+            ],
+            "style": {"style": "STATIC"}
         }
     ],
     "objects": [
@@ -46,9 +47,7 @@
                 },
                 "enabled": true
             },
-            "place": [
-                "camp/camp"
-            ],
+            "place": ["camp/camp"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -56,6 +55,7 @@
             }
         },
         {
+            "mode": "PAINT",
             "chance": 0.005,
             "rotation": {
                 "yAxis": {
@@ -66,10 +66,7 @@
                 },
                 "enabled": true
             },
-            "mode": "PAINT",
-            "place": [
-                "camp/barrel-bin"
-            ],
+            "place": ["camp/barrel-bin"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -111,34 +108,30 @@
             }
         }
     ],
-    "decorators": [
-        {
-            "chance": 0.0001,
-            "palette": [
-                "BARREL"
-            ]
-        },
-        {
-            "zoom": 0.3,
-            "chance": 0.03,
-            "palette": [
-                "minecraft:jungle_button[face=floor,facing=east,powered=false]",
-                "minecraft:jungle_button[face=floor,facing=south,powered=false]"
-            ],
-            "style": {
-                "style": "STATIC"
+    "name": "Tropical Root",
+    "layers": [{
+        "minHeight": 1,
+        "maxHeight": 3,
+        "style": {"style": "STATIC"},
+        "zoom": 0.1,
+        "palette": [
+            {"block": "stripped_jungle_wood"},
+            {
+                "data": {"persistent": true},
+                "weight": 4,
+                "block": "jungle_leaves"
             },
-            "variance": {
-                "style": "STATIC"
+            {
+                "weight": 8,
+                "block": "stripped_jungle_wood"
             }
-        }
-    ],
-    "generators": [
-        {
-            "generator": "plain",
-            "min": 4,
-            "max": 6
-        }
-    ],
-    "derivative": "FOREST"
+        ]
+    }],
+    "generators": [{
+        "min": 4,
+        "max": 6,
+        "generator": "plain"
+    }],
+    "derivative": "FOREST",
+    "rarity": 4
 }

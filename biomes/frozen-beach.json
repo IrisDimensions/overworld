@@ -1,61 +1,15 @@
 {
-    "name": "Frozen Beach",
-    "loot": {
-        "tables": [
-            "beach-clutter"
-        ]
-    },
-    "layers": [
-        {
-            "minHeight": 2,
-            "maxHeight": 3,
-            "palette": [
-                {
-                    "block": "snow_block"
-                }
-            ]
-        },
-        {
-            "minHeight": 3,
-            "maxHeight": 5,
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
-        }
-    ],
-    "seaLayers": [
-        {
-            "minHeight": 1,
-            "maxHeight": 7,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "ice"
-                }
-            ]
-        }
-    ],
-    "slab": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            {
-                "block": "snow",
-                "data": {
-                    "layers": 5
-                }
-            }
-        ]
-    },
+    "seaLayers": [{
+        "minHeight": 1,
+        "maxHeight": 7,
+        "style": {"style": "STATIC"},
+        "palette": [{"block": "ice"}]
+    }],
     "objects": [
         {
             "chance": 0.001,
             "density": 3,
+            "snow": 0.35,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -65,7 +19,6 @@
                 },
                 "enabled": true
             },
-            "snow": 0.35,
             "place": [
                 "ice-spikes/ic-1",
                 "ice-spikes/ic-2",
@@ -97,6 +50,7 @@
         {
             "chance": 0.05,
             "density": 3,
+            "snow": 0.35,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -106,7 +60,6 @@
                 },
                 "enabled": true
             },
-            "snow": 0.35,
             "place": [
                 "ice-spikes/ice-spec-1",
                 "ice-spikes/ice-spec-2",
@@ -121,12 +74,31 @@
             }
         }
     ],
-    "generators": [
+    "name": "Frozen Beach",
+    "layers": [
         {
-            "generator": "plain",
-            "min": -1,
-            "max": 1
+            "minHeight": 2,
+            "maxHeight": 3,
+            "palette": [{"block": "snow_block"}]
+        },
+        {
+            "minHeight": 3,
+            "maxHeight": 5,
+            "palette": [{"block": "dirt"}]
         }
     ],
-    "derivative": "SWAMP"
+    "generators": [{
+        "min": -1,
+        "max": 1,
+        "generator": "plain"
+    }],
+    "loot": {"tables": ["beach-clutter"]},
+    "derivative": "SWAMP",
+    "slab": {
+        "style": {"style": "STATIC"},
+        "palette": [{
+            "data": {"layers": 5},
+            "block": "snow"
+        }]
+    }
 }

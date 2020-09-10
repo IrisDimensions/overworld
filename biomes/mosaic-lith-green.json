@@ -1,98 +1,46 @@
 {
-    "name": "Green Mosaic",
-    "layers": [
-        {
-            "style": {
-                "style": "FRACTAL_WATER"
-            },
-            "zoom": 1.1,
-            "palette": [
-                "GREEN_CONCRETE",
-                "GREEN_CONCRETE",
-                "GREEN_CONCRETE_POWDER",
-                "GREEN_CONCRETE_POWDER",
-                "GREEN_TERRACOTTA",
-                "GREEN_TERRACOTTA",
-                "GREEN_CONCRETE",
-                "GREEN_CONCRETE",
-                "GREEN_CONCRETE_POWDER",
-                "GREEN_CONCRETE_POWDER",
-                "GREEN_CONCRETE",
-                "GREEN_CONCRETE",
-                "GREEN_CONCRETE_POWDER",
-                "GREEN_CONCRETE_POWDER"
-            ]
-        },
-        {
-            "minHeight": 12,
-            "maxHeight": 16,
-            "style": {
-                "style": "FLAT"
-            },
-            "palette": [
-                "BLACKSTONE"
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "FLAT"
-            },
-            "palette": [
-                "BLACKSTONE"
-            ]
-        }
-    ],
-    "slab": {
-        "palette": [
-            "MOSSY_COBBLESTONE_SLAB",
-            "AIR",
-            "AIR",
-            "AIR"
-        ],
-        "style": {
-            "style": "STATIC"
-        }
-    },
     "decorators": [
         {
-            "palette": [
-                "MOSSY_COBBLESTONE_WALL"
-            ],
+            "chance": 0.0045,
             "stackMax": 3,
-            "stackMin": 1,
-            "chance": 0.0045
+            "palette": [{"block": "mossy_cobblestone_wall"}],
+            "stackMin": 1
         },
         {
-            "variance": {
-                "style": "STATIC"
-            },
+            "chance": 0.0025,
+            "variance": {"style": "STATIC"},
             "palette": [
-                "minecraft:sea_pickle[pickles=1,waterlogged=false]",
-                "minecraft:sea_pickle[pickles=2,waterlogged=false]",
-                "minecraft:sea_pickle[pickles=3,waterlogged=false]",
-                "minecraft:sea_pickle[pickles=4,waterlogged=false]"
-            ],
-            "chance": 0.0025
+                {
+                    "data": {
+                        "waterlogged": false,
+                        "pickles": 1
+                    },
+                    "block": "sea_pickle"
+                },
+                {
+                    "data": {
+                        "waterlogged": false,
+                        "pickles": 2
+                    },
+                    "block": "sea_pickle"
+                },
+                {
+                    "data": {
+                        "waterlogged": false,
+                        "pickles": 3
+                    },
+                    "block": "sea_pickle"
+                },
+                {
+                    "data": {
+                        "waterlogged": false,
+                        "pickles": 4
+                    },
+                    "block": "sea_pickle"
+                }
+            ]
         }
     ],
-    "generators": [
-        {
-            "generator": "plain-cliffs-thin",
-            "min": 42,
-            "max": 68
-        }
-    ],
-    "wall": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            "GREEN_CONCRETE"
-
-        ]
-    },
     "objects": [
         {
             "chance": 0.06,
@@ -140,20 +88,18 @@
                 "crystal/crystal-10"
             ],
             "translate": {
+                "yRandom": 25,
                 "x": 0,
                 "y": 9,
-                "yRandom": 25,
                 "z": 0
             }
         },
         {
             "chance": 0.01,
-            "edit": [
-                {
-                    "find": ["BLACK_CONCRETE"],
-                    "replace": ["GREEN_CONCRETE"]
-                }
-            ],
+            "edit": [{
+                "find": ["BLACK_CONCRETE"],
+                "replace": ["GREEN_CONCRETE"]
+            }],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -178,5 +124,73 @@
             }
         }
     ],
-    "derivative": "SWAMP"
+    "name": "Green Mosaic",
+    "layers": [
+        {
+            "style": {"style": "FRACTAL_WATER"},
+            "zoom": 1.1,
+            "palette": [
+                {
+                    "weight": 2,
+                    "block": "green_concrete"
+                },
+                {
+                    "weight": 2,
+                    "block": "green_concrete_powder"
+                },
+                {
+                    "weight": 2,
+                    "block": "green_terracotta"
+                },
+                {
+                    "weight": 2,
+                    "block": "green_concrete"
+                },
+                {
+                    "weight": 2,
+                    "block": "green_concrete_powder"
+                },
+                {
+                    "weight": 2,
+                    "block": "green_concrete"
+                },
+                {
+                    "weight": 2,
+                    "block": "green_concrete_powder"
+                }
+            ]
+        },
+        {
+            "minHeight": 12,
+            "maxHeight": 16,
+            "style": {"style": "FLAT"},
+            "palette": [{"block": "blackstone"}]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "FLAT"},
+            "palette": [{"block": "blackstone"}]
+        }
+    ],
+    "generators": [{
+        "min": 42,
+        "max": 68,
+        "generator": "plain-cliffs-thin"
+    }],
+    "derivative": "SWAMP",
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [{"block": "green_concrete"}]
+    },
+    "slab": {
+        "palette": [
+            {"block": "mossy_cobblestone_slab"},
+            {
+                "weight": 3,
+                "block": "air"
+            }
+        ],
+        "style": {"style": "STATIC"}
+    }
 }

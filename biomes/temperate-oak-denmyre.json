@@ -1,89 +1,47 @@
 {
-    "name": "Oak Denmyre",
-    "rarity": 2,
-    "layers": [
-        {
-            "style": {
-                "style": "FLAT"
-            },
-            "palette": [
-                "GRASS_BLOCK"
-            ]
-        },
-        {
-            "palette": [
-                "DIRT"
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                "COARSE_DIRT"
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                "STONE",
-                "ANDESITE",
-                "STONE"
-            ]
-        }
-    ],
-    "loot": {
-        "tables": [
-            "forest-food"
-        ]
-    },
     "decorators": [
         {
-            "zoom": 0.3,
             "chance": 0.4,
-            "palette": [
-                "GRASS"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [{"block": "grass"}],
+            "style": {"style": "STATIC"}
         },
         {
-            "zoom": 0.3,
             "chance": 0.003,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
             "palette": [
-                "minecraft:stone_button[face=floor,facing=east,powered=false]",
-                "minecraft:stone_button[face=floor,facing=south,powered=false]"
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "east"
+                    },
+                    "block": "stone_button"
+                },
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "south"
+                    },
+                    "block": "stone_button"
+                }
             ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+            "style": {"style": "STATIC"}
         },
         {
-            "zoom": 0.3,
             "chance": 0.017,
-            "palette": [
-                "TALL_GRASS"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [{"block": "tall_grass"}],
+            "style": {"style": "STATIC"}
         }
     ],
     "objects": [
         {
+            "mode": "PAINT",
             "chance": 0.00975,
             "rotation": {
                 "yAxis": {
@@ -94,10 +52,7 @@
                 },
                 "enabled": true
             },
-            "mode": "PAINT",
-            "place": [
-                "camp/camp"
-            ],
+            "place": ["camp/camp"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -107,16 +62,10 @@
         {
             "chance": 0.5,
             "density": 2,
-            "edit": [
-                {
-                    "find": [
-                        "oak_planks"
-                    ],
-                    "replace": [
-                        "stripped_oak_wood"
-                    ]
-                }
-            ],
+            "edit": [{
+                "find": ["oak_planks"],
+                "replace": ["stripped_oak_wood"]
+            }],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -177,22 +126,43 @@
             }
         }
     ],
-    "wall": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            "STONE",
-            "ANDESITE",
-            "STONE"
-        ]
-    },
-    "generators": [
+    "name": "Oak Denmyre",
+    "layers": [
         {
-            "generator": "plain",
-            "min": 4,
-            "max": 7
+            "style": {"style": "FLAT"},
+            "palette": [{"block": "grass_block"}]
+        },
+        {"palette": [{"block": "dirt"}]},
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [{"block": "coarse_dirt"}]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
+            ]
         }
     ],
-    "derivative": "FOREST"
+    "generators": [{
+        "min": 4,
+        "max": 7,
+        "generator": "plain"
+    }],
+    "loot": {"tables": ["forest-food"]},
+    "derivative": "FOREST",
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {"block": "stone"},
+            {"block": "andesite"},
+            {"block": "stone"}
+        ]
+    },
+    "rarity": 2
 }

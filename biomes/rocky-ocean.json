@@ -1,49 +1,50 @@
 {
-    "name": "Rocky Ocean",
-    "rarity": 3,
-    "layers": [
+    "decorators": [
         {
-            "minHeight": 2,
-            "maxHeight": 3,
-            "style": {
-                "style": "STATIC"
-            },
-            "zoom": 0.825,
+            "chance": 6.0E-4,
+            "variance": {"style": "STATIC"},
+            "zoom": 1,
             "palette": [
-                "STONE",
-                "CLAY",
-                "COBBLESTONE",
-                "GRAVEL",
-                "COBBLESTONE",
-                "DIRT",
-                "COBBLESTONE",
-                "ANDESITE"
-            ]
+                {"block": "soul_sand"},
+                {"block": "magma_block"}
+            ],
+            "style": {"style": "STATIC"}
         },
         {
-            "palette": [
-                "DIRT"
-            ]
+            "chance": 0.07,
+            "variance": {"style": "STATIC"},
+            "zoom": 5,
+            "palette": [{"block": "seagrass"}],
+            "style": {"style": "STATIC"}
         },
         {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                "DIRT",
-                "DIRT",
-                "COARSE_DIRT"
-            ]
+            "chance": 0.055,
+            "verticalZoom": 20,
+            "variance": {"style": "STATIC"},
+            "stackMax": 9,
+            "zoom": 1,
+            "palette": [{"block": "kelp_plant"}],
+            "style": {"style": "STATIC"},
+            "heightVariance": {"style": "STATIC"},
+            "stackMin": 1
+        },
+        {
+            "chance": 0.001,
+            "variance": {"style": "STATIC"},
+            "zoom": 1,
+            "palette": [{
+                "data": {
+                    "waterlogged": true,
+                    "pickles": 1
+                },
+                "block": "sea_pickle"
+            }],
+            "style": {"style": "STATIC"}
         }
     ],
-    "loot": {
-        "tables": [
-            "ocean-clutter"
-        ]
-    },
     "objects": [
         {
             "chance": 0.01,
-            "underwater": true,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -53,6 +54,7 @@
                 },
                 "enabled": true
             },
+            "underwater": true,
             "place": [
                 "ships/swreck-1",
                 "ships/usd-ship-1",
@@ -66,7 +68,6 @@
         },
         {
             "chance": 0.008,
-            "underwater": true,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -76,6 +77,7 @@
                 },
                 "enabled": true
             },
+            "underwater": true,
             "place": [
                 "statue/sub-stat-1",
                 "statue/sub-stat-2",
@@ -90,93 +92,65 @@
             }
         }
     ],
+    "name": "Rocky Ocean",
+    "layers": [
+        {
+            "minHeight": 2,
+            "maxHeight": 3,
+            "style": {"style": "STATIC"},
+            "zoom": 0.825,
+            "palette": [
+                {"block": "stone"},
+                {"block": "clay"},
+                {"block": "cobblestone"},
+                {"block": "gravel"},
+                {"block": "cobblestone"},
+                {"block": "dirt"},
+                {"block": "cobblestone"},
+                {"block": "andesite"}
+            ]
+        },
+        {"palette": [{"block": "dirt"}]},
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {
+                    "weight": 2,
+                    "block": "dirt"
+                },
+                {"block": "coarse_dirt"}
+            ]
+        }
+    ],
+    "generators": [{
+        "min": -41,
+        "max": -7,
+        "generator": "plain"
+    }],
+    "loot": {"tables": ["ocean-clutter"]},
+    "derivative": "LUKEWARM_OCEAN",
     "wall": {
-        "style": {
-            "style": "IRIS"
-        },
+        "style": {"style": "IRIS"},
         "palette": [
-            "CLAY",
-            "COBBLESTONE",
-            "STONE",
-            "ANDESITE"
+            {"block": "clay"},
+            {"block": "cobblestone"},
+            {"block": "stone"},
+            {"block": "andesite"}
         ]
     },
+    "rarity": 3,
     "slab": {
-        "style": {
-            "style": "STATIC"
-        },
+        "style": {"style": "STATIC"},
         "palette": [
-            "minecraft:cobblestone_slab[type=bottom,waterlogged=false]",
-            "AIR"
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "cobblestone_slab"
+            },
+            {"block": "air"}
         ]
-    },
-    "decorators": [
-        {
-            "zoom": 1,
-            "chance": 0.0006,
-            "palette": [
-                "SOUL_SAND",
-                "MAGMA_BLOCK"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 5,
-            "chance": 0.07,
-            "palette": [
-                "SEAGRASS"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 1,
-            "stackMax": 9,
-            "stackMin": 1,
-            "chance": 0.055,
-            "palette": [
-                "KELP_PLANT"
-            ],
-            "heightVariance": {
-                "style": "STATIC"
-            },
-            "verticalZoom": 20,
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 1,
-            "chance": 0.001,
-            "palette": [
-                "minecraft:sea_pickle[pickles=1,waterlogged=true]"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        }
-    ],
-    "generators": [
-        {
-            "generator": "plain",
-            "min": -41,
-            "max": -7
-        }
-    ],
-    "derivative": "LUKEWARM_OCEAN"
+    }
 }

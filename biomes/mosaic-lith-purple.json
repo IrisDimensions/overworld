@@ -1,102 +1,32 @@
 {
-    "name": "Purple Mosaic",
-    "layers": [
-        {
-            "style": {
-                "style": "FRACTAL_WATER"
-            },
-            "zoom": 1.1,
-            "palette": [
-                "PURPLE_CONCRETE",
-                "PURPLE_CONCRETE",
-                "PURPLE_CONCRETE_POWDER",
-                "PURPLE_CONCRETE_POWDER",
-                "PURPLE_TERRACOTTA",
-                "PURPLE_TERRACOTTA",
-                "PURPLE_CONCRETE",
-                "PURPLE_CONCRETE",
-                "PURPLE_CONCRETE_POWDER",
-                "PURPLE_CONCRETE_POWDER",
-                "PURPLE_CONCRETE",
-                "PURPLE_CONCRETE",
-                "PURPLE_CONCRETE_POWDER",
-                "PURPLE_CONCRETE_POWDER"
-            ]
-        },
-        {
-            "minHeight": 12,
-            "maxHeight": 16,
-            "style": {
-                "style": "FLAT"
-            },
-            "palette": [
-                "BLACKSTONE"
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "FLAT"
-            },
-            "palette": [
-                "BLACKSTONE"
-            ]
-        }
-    ],
-    "slab": {
-        "palette": [
-            "CRIMSON_SLAB",
-            "AIR",
-            "AIR",
-            "AIR"
-        ],
-        "style": {
-            "style": "STATIC"
-        }
-    },
     "decorators": [
         {
-            "palette": [
-                "CRIMSON_FENCE"
-            ],
+            "chance": 0.0045,
             "stackMax": 4,
-            "stackMin": 1,
-            "chance": 0.0045
+            "palette": [{"block": "crimson_fence"}],
+            "stackMin": 1
         },
         {
+            "chance": 0.0175,
             "palette": [
-                "minecraft:bubble_coral[waterlogged=false]",
-                "minecraft:bubble_coral_fan[waterlogged=false]"
-            ],
-            "chance": 0.0175
+                {
+                    "data": {"waterlogged": false},
+                    "block": "bubble_coral"
+                },
+                {
+                    "data": {"waterlogged": false},
+                    "block": "bubble_coral_fan"
+                }
+            ]
         }
     ],
-    "generators": [
-        {
-            "generator": "wicked",
-            "min": 42,
-            "max": 96
-        }
-    ],
-    "wall": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            "PURPLE_CONCRETE"
-
-        ]
-    },
     "objects": [
         {
             "chance": 0.06,
-            "edit": [
-                {
-                    "find": ["BLUE_TERRACOTTA"],
-                    "replace": ["PURPLE_CONCRETE"]
-                }
-            ],
+            "edit": [{
+                "find": ["BLUE_TERRACOTTA"],
+                "replace": ["PURPLE_CONCRETE"]
+            }],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -131,20 +61,18 @@
                 "crystal/crystal-10"
             ],
             "translate": {
+                "yRandom": 25,
                 "x": 0,
                 "y": 9,
-                "yRandom": 25,
                 "z": 0
             }
         },
         {
             "chance": 0.01,
-            "edit": [
-                {
-                    "find": ["BLACK_CONCRETE"],
-                    "replace": ["PURPLE_CONCRETE"]
-                }
-            ],
+            "edit": [{
+                "find": ["BLACK_CONCRETE"],
+                "replace": ["PURPLE_CONCRETE"]
+            }],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -169,5 +97,73 @@
             }
         }
     ],
-    "derivative": "BASALT_DELTAS"
+    "name": "Purple Mosaic",
+    "layers": [
+        {
+            "style": {"style": "FRACTAL_WATER"},
+            "zoom": 1.1,
+            "palette": [
+                {
+                    "weight": 2,
+                    "block": "purple_concrete"
+                },
+                {
+                    "weight": 2,
+                    "block": "purple_concrete_powder"
+                },
+                {
+                    "weight": 2,
+                    "block": "purple_terracotta"
+                },
+                {
+                    "weight": 2,
+                    "block": "purple_concrete"
+                },
+                {
+                    "weight": 2,
+                    "block": "purple_concrete_powder"
+                },
+                {
+                    "weight": 2,
+                    "block": "purple_concrete"
+                },
+                {
+                    "weight": 2,
+                    "block": "purple_concrete_powder"
+                }
+            ]
+        },
+        {
+            "minHeight": 12,
+            "maxHeight": 16,
+            "style": {"style": "FLAT"},
+            "palette": [{"block": "blackstone"}]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "FLAT"},
+            "palette": [{"block": "blackstone"}]
+        }
+    ],
+    "generators": [{
+        "min": 42,
+        "max": 96,
+        "generator": "wicked"
+    }],
+    "derivative": "BASALT_DELTAS",
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [{"block": "purple_concrete"}]
+    },
+    "slab": {
+        "palette": [
+            {"block": "crimson_slab"},
+            {
+                "weight": 3,
+                "block": "air"
+            }
+        ],
+        "style": {"style": "STATIC"}
+    }
 }

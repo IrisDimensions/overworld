@@ -1,136 +1,125 @@
 {
+    "effects": [{
+        "particleAltX": 0.301,
+        "particleAltY": -0.33885,
+        "particleAltZ": 0.301,
+        "chance": 1,
+        "particleEffect": "TOTEM",
+        "particleOffset": 12,
+        "interval": 550,
+        "particleCount": 0
+    }],
+    "decorators": [
+        {
+            "chance": 0.03,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "east"
+                    },
+                    "block": "jungle_button"
+                },
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "south"
+                    },
+                    "block": "jungle_button"
+                }
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "partOf": "SHORE_LINE",
+            "verticalZoom": 5,
+            "chance": 0.09,
+            "variance": {"style": "STATIC"},
+            "stackMax": 5,
+            "zoom": 5,
+            "palette": [{"block": "sugar_cane"}],
+            "style": {"style": "STATIC"},
+            "heightVariance": {"style": "STATIC"},
+            "stackMin": 1
+        }
+    ],
+    "objects": [{
+        "chance": 1,
+        "edit": [{
+            "find": ["PLAYER_WALL_HEAD"],
+            "replace": ["air"]
+        }],
+        "rotation": {
+            "yAxis": {
+                "min": 0,
+                "max": 0,
+                "interval": 90,
+                "enabled": true
+            },
+            "enabled": true
+        },
+        "place": [
+            "palm/palm1",
+            "palm/palm2",
+            "palm/palm3",
+            "palm/palm4",
+            "palm/palm5",
+            "palm/palm6",
+            "palm/palm7",
+            "palm/palm8"
+        ],
+        "translate": {
+            "x": 0,
+            "y": -1,
+            "z": 0
+        }
+    }],
     "name": "Tropical Island Beach",
-    "loot": {
-        "tables": [
-            "beach-clutter"
-        ]
-    },
     "layers": [
         {
             "minHeight": 3,
             "maxHeight": 6,
-            "palette": [
-                "SAND"
-            ]
+            "palette": [{"block": "sand"}]
         },
         {
             "minHeight": 1,
             "maxHeight": 3,
-            "palette": [
-                "DIRT"
-            ]
+            "palette": [{"block": "dirt"}]
         }
     ],
-    "decorators": [
-        {
-            "zoom": 0.3,
-            "chance": 0.03,
-            "palette": [
-                "minecraft:jungle_button[face=floor,facing=east,powered=false]",
-                "minecraft:jungle_button[face=floor,facing=south,powered=false]"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 5,
-            "verticalZoom": 5,
-            "chance": 0.09,
-            "partOf": "SHORE_LINE",
-            "stackMin": 1,
-            "stackMax": 5,
-            "palette": [
-                "SUGAR_CANE"
-            ],
-            "heightVariance": {
-                "style": "STATIC"
-            },
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        }
-    ],
+    "generators": [{
+        "min": -7,
+        "max": -3,
+        "generator": "sharper"
+    }],
+    "loot": {"tables": ["beach-clutter"]},
+    "derivative": "JUNGLE",
+    "wall": {"palette": [{"block": "smooth_sandstone"}]},
     "slab": {
-        "style": {
-            "style": "STATIC"
-        },
+        "style": {"style": "STATIC"},
         "palette": [
-            "minecraft:sandstone_slab[type=bottom,waterlogged=false]",
-            "minecraft:smooth_sandstone_slab[type=bottom,waterlogged=false]",
-            "AIR",
-            "AIR"
-        ]
-    },
-    "wall": {
-        "palette": [
-            "SMOOTH_SANDSTONE"
-        ]
-    },
-    "objects": [
-        {
-            "chance": 1,
-            "edit": [
-                {
-                    "find": [
-                        "PLAYER_WALL_HEAD"
-                    ],
-                    "replace": [
-                        "air"
-                    ]
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
                 },
-                "enabled": true
+                "block": "sandstone_slab"
             },
-            "place": [
-                "palm/palm1",
-                "palm/palm2",
-                "palm/palm3",
-                "palm/palm4",
-                "palm/palm5",
-                "palm/palm6",
-                "palm/palm7",
-                "palm/palm8"
-
-            ],
-            "translate": {
-                "x": 0,
-                "y": -1,
-                "z": 0
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "smooth_sandstone_slab"
+            },
+            {
+                "weight": 2,
+                "block": "air"
             }
-        }
-    ],
-    "generators": [
-        {
-            "generator": "sharper",
-            "min": -7,
-            "max": -3
-        }
-    ],
-    "effects": [
-        {
-            "interval": 550,
-            "particleOffset": 12,
-            "particleEffect": "TOTEM",
-            "particleCount": 0,
-            "particleAltX": 0.301,
-            "particleAltY": -0.33885,
-            "particleAltZ": 0.301,
-            "chance": 1
-        }
-    ],
-    "derivative": "JUNGLE"
+        ]
+    }
 }

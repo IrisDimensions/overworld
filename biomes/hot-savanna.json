@@ -1,107 +1,39 @@
 {
-    "name": "Savanna",
-    "layers": [
-        {
-            "style": {
-                "style": "STATIC"
-            },
-            "zoom": 0.75,
-            "palette": [
-                "GRASS_BLOCK"
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 4,
-            "palette": [
-                "DIRT"
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                "STONE",
-                "ANDESITE",
-                "STONE"
-            ]
-        }
+    "biomeSkyScatter": [
+        "DESERT",
+        "SAVANNA"
     ],
     "decorators": [
         {
-            "zoom": 0.3,
             "chance": 0.001,
-            "palette": [
-                "DEAD_BUSH"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [{"block": "dead_bush"}],
+            "style": {"style": "STATIC"}
         },
         {
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            },
-            "stackMin": 1,
+            "chance": 0.001,
+            "variance": {"style": "STATIC"},
             "stackMax": 2,
-            "chance": 0.001,
-            "palette": [
-                "CACTUS"
-            ]
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "cactus"}],
+            "stackMin": 1
         },
         {
-            "zoom": 0.3,
             "chance": 0.3,
-            "palette": [
-                "GRASS"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
+            "variance": {"style": "STATIC"},
             "zoom": 0.3,
-            "chance": 0.01,
-            "palette": [
-                "TALL_GRASS"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        }
-    ],
-    "generators": [
-        {
-            "generator": "plain",
-            "min": 4,
-            "max": 9
-        }
-    ],
-    "wall": {
-        "style": {
-            "style": "STATIC"
+            "palette": [{"block": "grass"}],
+            "style": {"style": "STATIC"}
         },
-        "palette": [
-            "STONE",
-            "ANDESITE",
-            "STONE"
-        ]
-    },
+        {
+            "chance": 0.01,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [{"block": "tall_grass"}],
+            "style": {"style": "STATIC"}
+        }
+    ],
     "children": [
         "hot-acacia-denmyre",
         "hot-savanna-cliff"
@@ -118,9 +50,7 @@
                 },
                 "enabled": true
             },
-            "place": [
-                "camp/camp"
-            ],
+            "place": ["camp/camp"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -128,6 +58,7 @@
             }
         },
         {
+            "mode": "PAINT",
             "chance": 0.005,
             "rotation": {
                 "yAxis": {
@@ -138,10 +69,7 @@
                 },
                 "enabled": true
             },
-            "mode": "PAINT",
-            "place": [
-                "camp/barrel-bin"
-            ],
+            "place": ["camp/barrel-bin"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -261,17 +189,47 @@
             }
         }
     ],
-    "derivative": "SAVANNA",
-    "biomeStyle": {
-        "style": "IRIS"
-    },
+    "name": "Savanna",
+    "layers": [
+        {
+            "style": {"style": "STATIC"},
+            "zoom": 0.75,
+            "palette": [{"block": "grass_block"}]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "palette": [{"block": "dirt"}]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
+            ]
+        }
+    ],
+    "generators": [{
+        "min": 4,
+        "max": 9,
+        "generator": "plain"
+    }],
     "biomeZoom": 20,
+    "derivative": "SAVANNA",
+    "biomeStyle": {"style": "IRIS"},
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {"block": "stone"},
+            {"block": "andesite"},
+            {"block": "stone"}
+        ]
+    },
     "biomeScatter": [
         "SAVANNA",
         "DESERT"
-    ],
-    "biomeSkyScatter": [
-        "DESERT",
-        "SAVANNA"
     ]
 }

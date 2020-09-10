@@ -1,108 +1,113 @@
 {
-    "name": "Red Mosaic",
-    "layers": [
-        {
-            "style": {
-                "style": "FRACTAL_WATER"
-            },
-            "zoom": 1.1,
-            "palette": [
-                "RED_CONCRETE",
-                "RED_CONCRETE",
-                "RED_CONCRETE_POWDER",
-                "RED_CONCRETE_POWDER",
-                "RED_TERRACOTTA",
-                "RED_TERRACOTTA",
-                "RED_CONCRETE",
-                "RED_CONCRETE",
-                "RED_CONCRETE_POWDER",
-                "RED_CONCRETE_POWDER",
-                "RED_CONCRETE",
-                "RED_CONCRETE",
-                "RED_CONCRETE_POWDER",
-                "RED_CONCRETE_POWDER"
-            ]
-        },
-        {
-            "minHeight": 12,
-            "maxHeight": 16,
-            "style": {
-                "style": "FLAT"
-            },
-            "palette": [
-                "BLACKSTONE"
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "FLAT"
-            },
-            "palette": [
-                "BLACKSTONE"
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "generator": "plain-chaotic",
-            "min": 32,
-            "max": 60
-        }
-    ],
-    "slab": {
-        "palette": [
-            "RED_NETHER_BRICK_SLAB",
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR"
-        ],
-        "style": {
-            "style": "STATIC"
-        }
-    },
     "decorators": [
         {
-            "palette": [
-                "RED_NETHER_BRICK_WALL",
-                "NETHER_BRICK_WALL"
-            ],
+            "chance": 0.0045,
             "stackMax": 3,
-            "stackMin": 1,
-            "chance": 0.0045
+            "palette": [
+                {"block": "red_nether_brick_wall"},
+                {"block": "nether_brick_wall"}
+            ],
+            "stackMin": 1
         },
         {
+            "chance": 0.0175,
             "palette": [
-                "minecraft:fire_coral[waterlogged=false]",
-                "minecraft:fire_coral_fan[waterlogged=false]"
-            ],
-            "chance": 0.0175
+                {
+                    "data": {"waterlogged": false},
+                    "block": "fire_coral"
+                },
+                {
+                    "data": {"waterlogged": false},
+                    "block": "fire_coral_fan"
+                }
+            ]
         },
         {
+            "chance": 3.5E-4,
             "palette": [
-                "minecraft:redstone_wire[east=none,west=none,south=none,north=none,power=6]",
-                "minecraft:redstone_wire[east=none,west=none,south=none,north=none,power=7]",
-                "minecraft:redstone_wire[east=none,west=none,south=none,north=none,power=8]",
-                "minecraft:redstone_wire[east=none,west=none,south=none,north=none,power=9]",
-                "minecraft:redstone_wire[east=none,west=none,south=none,north=none,power=10]",
-                "minecraft:redstone_wire[east=none,west=none,south=none,north=none,power=11]",
-                "minecraft:redstone_wire[east=none,west=none,south=none,north=none,power=12]",
-                "minecraft:redstone_wire[east=none,west=none,south=none,north=none,power=13]"
-            ],
-            "chance": 0.00035
+                {
+                    "data": {
+                        "east": "none",
+                        "south": "none",
+                        "north": "none",
+                        "west": "none",
+                        "power": 6
+                    },
+                    "block": "redstone_wire"
+                },
+                {
+                    "data": {
+                        "east": "none",
+                        "south": "none",
+                        "north": "none",
+                        "west": "none",
+                        "power": 7
+                    },
+                    "block": "redstone_wire"
+                },
+                {
+                    "data": {
+                        "east": "none",
+                        "south": "none",
+                        "north": "none",
+                        "west": "none",
+                        "power": 8
+                    },
+                    "block": "redstone_wire"
+                },
+                {
+                    "data": {
+                        "east": "none",
+                        "south": "none",
+                        "north": "none",
+                        "west": "none",
+                        "power": 9
+                    },
+                    "block": "redstone_wire"
+                },
+                {
+                    "data": {
+                        "east": "none",
+                        "south": "none",
+                        "north": "none",
+                        "west": "none",
+                        "power": 10
+                    },
+                    "block": "redstone_wire"
+                },
+                {
+                    "data": {
+                        "east": "none",
+                        "south": "none",
+                        "north": "none",
+                        "west": "none",
+                        "power": 11
+                    },
+                    "block": "redstone_wire"
+                },
+                {
+                    "data": {
+                        "east": "none",
+                        "south": "none",
+                        "north": "none",
+                        "west": "none",
+                        "power": 12
+                    },
+                    "block": "redstone_wire"
+                },
+                {
+                    "data": {
+                        "east": "none",
+                        "south": "none",
+                        "north": "none",
+                        "west": "none",
+                        "power": 13
+                    },
+                    "block": "redstone_wire"
+                }
+            ]
         }
     ],
-    "wall": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            "RED_CONCRETE"
-
-        ]
-    },
     "objects": [
         {
             "chance": 0.06,
@@ -150,20 +155,18 @@
                 "crystal/crystal-10"
             ],
             "translate": {
+                "yRandom": 25,
                 "x": 0,
                 "y": 9,
-                "yRandom": 25,
                 "z": 0
             }
         },
         {
             "chance": 0.01,
-            "edit": [
-                {
-                    "find": ["BLACK_CONCRETE"],
-                    "replace": ["RED_CONCRETE"]
-                }
-            ],
+            "edit": [{
+                "find": ["BLACK_CONCRETE"],
+                "replace": ["RED_CONCRETE"]
+            }],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -188,5 +191,73 @@
             }
         }
     ],
-    "derivative": "CRIMSON_FOREST"
+    "name": "Red Mosaic",
+    "layers": [
+        {
+            "style": {"style": "FRACTAL_WATER"},
+            "zoom": 1.1,
+            "palette": [
+                {
+                    "weight": 2,
+                    "block": "red_concrete"
+                },
+                {
+                    "weight": 2,
+                    "block": "red_concrete_powder"
+                },
+                {
+                    "weight": 2,
+                    "block": "red_terracotta"
+                },
+                {
+                    "weight": 2,
+                    "block": "red_concrete"
+                },
+                {
+                    "weight": 2,
+                    "block": "red_concrete_powder"
+                },
+                {
+                    "weight": 2,
+                    "block": "red_concrete"
+                },
+                {
+                    "weight": 2,
+                    "block": "red_concrete_powder"
+                }
+            ]
+        },
+        {
+            "minHeight": 12,
+            "maxHeight": 16,
+            "style": {"style": "FLAT"},
+            "palette": [{"block": "blackstone"}]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "FLAT"},
+            "palette": [{"block": "blackstone"}]
+        }
+    ],
+    "generators": [{
+        "min": 32,
+        "max": 60,
+        "generator": "plain-chaotic"
+    }],
+    "derivative": "CRIMSON_FOREST",
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [{"block": "red_concrete"}]
+    },
+    "slab": {
+        "palette": [
+            {"block": "red_nether_brick_slab"},
+            {
+                "weight": 4,
+                "block": "air"
+            }
+        ],
+        "style": {"style": "STATIC"}
+    }
 }

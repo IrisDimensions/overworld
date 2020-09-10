@@ -1,1359 +1,1121 @@
 {
+    "effects": [{
+        "particleAltX": 0.3,
+        "particleAltY": 1.960885,
+        "particleAltZ": 0.3,
+        "particleDistanceWidth": 8,
+        "chance": 1,
+        "particleEffect": "BUBBLE_COLUMN_UP",
+        "particleDistance": 5,
+        "particleOffset": 2,
+        "interval": 250,
+        "particleCount": 0
+    }],
+    "decorators": [
+        {
+            "chance": 0.005,
+            "variance": {"style": "STATIC"},
+            "stackMax": 3,
+            "zoom": 1,
+            "palette": [
+                {"block": "tube_coral_block"},
+                {"block": "brain_coral_block"},
+                {"block": "fire_coral_block"},
+                {"block": "horn_coral_block"},
+                {"block": "bubble_coral_block"}
+            ],
+            "style": {"style": "STATIC"},
+            "stackMin": 1
+        },
+        {
+            "chance": 6.0E-4,
+            "variance": {"style": "STATIC"},
+            "zoom": 1,
+            "palette": [
+                {"block": "soul_sand"},
+                {"block": "magma_block"}
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.04,
+            "variance": {"style": "STATIC"},
+            "zoom": 5,
+            "palette": [{"block": "seagrass"}],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.012,
+            "verticalZoom": 88,
+            "variance": {"style": "STATIC"},
+            "stackMax": 21,
+            "zoom": 1,
+            "palette": [{"block": "kelp_plant"}],
+            "style": {"style": "STATIC"},
+            "heightVariance": {"style": "IRIS"},
+            "stackMin": 2
+        },
+        {
+            "chance": 0.05,
+            "variance": {"style": "STATIC"},
+            "zoom": 1,
+            "palette": [
+                {"block": "tube_coral"},
+                {"block": "tube_coral_fan"}
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.05,
+            "variance": {"style": "STATIC"},
+            "zoom": 1,
+            "palette": [
+                {"block": "brain_coral"},
+                {"block": "brain_coral_fan"}
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.05,
+            "variance": {"style": "STATIC"},
+            "zoom": 1,
+            "palette": [
+                {"block": "bubble_coral"},
+                {"block": "bubble_coral_fan"}
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.05,
+            "variance": {"style": "STATIC"},
+            "zoom": 1,
+            "palette": [
+                {"block": "fire_coral"},
+                {"block": "fire_coral_fan"}
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.05,
+            "variance": {"style": "STATIC"},
+            "zoom": 1,
+            "palette": [
+                {"block": "horn_coral"},
+                {"block": "horn_coral_fan"}
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.008,
+            "variance": {"style": "STATIC"},
+            "zoom": 1,
+            "palette": [
+                {
+                    "data": {
+                        "waterlogged": true,
+                        "pickles": 2
+                    },
+                    "block": "sea_pickle"
+                },
+                {
+                    "data": {
+                        "waterlogged": true,
+                        "pickles": 3
+                    },
+                    "block": "sea_pickle"
+                },
+                {
+                    "data": {
+                        "waterlogged": true,
+                        "pickles": 4
+                    },
+                    "block": "sea_pickle"
+                }
+            ],
+            "style": {"style": "STATIC"}
+        }
+    ],
+    "objects": [
+        {
+            "chance": 0.0025,
+            "edit": [
+                {
+                    "find": ["STONE"],
+                    "replace": ["FIRE_CORAL_BLOCK"]
+                },
+                {
+                    "find": ["DIRT"],
+                    "replace": ["BUBBLE_CORAL_BLOCK"]
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "coral/stonedirtsetter-1",
+                "coral/stonedirtsetter-2",
+                "coral/stonedirtsetter-3",
+                "coral/stonedirtsetter-4",
+                "coral/stonedirtsetter-5",
+                "coral/stonedirtsetter-6",
+                "coral/stonedirtsetter-7"
+            ],
+            "clamp": {"minimumHeight": 0},
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": ["STONE"],
+                    "replace": ["FIRE_CORAL_BLOCK"]
+                },
+                {
+                    "find": ["DIRT"],
+                    "replace": ["HORN_CORAL_BLOCK"]
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "coral/stonedirtsetter-1",
+                "coral/stonedirtsetter-2",
+                "coral/stonedirtsetter-3",
+                "coral/stonedirtsetter-4",
+                "coral/stonedirtsetter-5",
+                "coral/stonedirtsetter-6",
+                "coral/stonedirtsetter-7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": ["STONE"],
+                    "replace": ["FIRE_CORAL_BLOCK"]
+                },
+                {
+                    "find": ["DIRT"],
+                    "replace": ["TUBE_CORAL_BLOCK"]
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "coral/stonedirtsetter-1",
+                "coral/stonedirtsetter-2",
+                "coral/stonedirtsetter-3",
+                "coral/stonedirtsetter-4",
+                "coral/stonedirtsetter-5",
+                "coral/stonedirtsetter-6",
+                "coral/stonedirtsetter-7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": ["STONE"],
+                    "replace": ["FIRE_CORAL_BLOCK"]
+                },
+                {
+                    "find": ["DIRT"],
+                    "replace": ["BRAIN_CORAL_BLOCK"]
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "coral/stonedirtsetter-1",
+                "coral/stonedirtsetter-2",
+                "coral/stonedirtsetter-3",
+                "coral/stonedirtsetter-4",
+                "coral/stonedirtsetter-5",
+                "coral/stonedirtsetter-6",
+                "coral/stonedirtsetter-7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": ["STONE"],
+                    "replace": ["FIRE_CORAL_BLOCK"]
+                },
+                {
+                    "find": ["DIRT"],
+                    "replace": ["FIRE_CORAL_BLOCK"]
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "coral/stonedirtsetter-1",
+                "coral/stonedirtsetter-2",
+                "coral/stonedirtsetter-3",
+                "coral/stonedirtsetter-4",
+                "coral/stonedirtsetter-5",
+                "coral/stonedirtsetter-6",
+                "coral/stonedirtsetter-7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.005,
+            "edit": [
+                {
+                    "find": ["STONE"],
+                    "replace": ["BUBBLE_CORAL_BLOCK"]
+                },
+                {
+                    "find": ["DIRT"],
+                    "replace": ["BUBBLE_CORAL_BLOCK"]
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "coral/stonedirtsetter-1",
+                "coral/stonedirtsetter-2",
+                "coral/stonedirtsetter-3",
+                "coral/stonedirtsetter-4",
+                "coral/stonedirtsetter-5",
+                "coral/stonedirtsetter-6",
+                "coral/stonedirtsetter-7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.0025,
+            "edit": [
+                {
+                    "find": ["STONE"],
+                    "replace": ["BUBBLE_CORAL_BLOCK"]
+                },
+                {
+                    "find": ["DIRT"],
+                    "replace": ["HORN_CORAL_BLOCK"]
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "coral/stonedirtsetter-1",
+                "coral/stonedirtsetter-2",
+                "coral/stonedirtsetter-3",
+                "coral/stonedirtsetter-4",
+                "coral/stonedirtsetter-5",
+                "coral/stonedirtsetter-6",
+                "coral/stonedirtsetter-7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.0025,
+            "edit": [
+                {
+                    "find": ["STONE"],
+                    "replace": ["BUBBLE_CORAL_BLOCK"]
+                },
+                {
+                    "find": ["DIRT"],
+                    "replace": ["TUBE_CORAL_BLOCK"]
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "coral/stonedirtsetter-1",
+                "coral/stonedirtsetter-2",
+                "coral/stonedirtsetter-3",
+                "coral/stonedirtsetter-4",
+                "coral/stonedirtsetter-5",
+                "coral/stonedirtsetter-6",
+                "coral/stonedirtsetter-7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.0025,
+            "edit": [
+                {
+                    "find": ["STONE"],
+                    "replace": ["BUBBLE_CORAL_BLOCK"]
+                },
+                {
+                    "find": ["DIRT"],
+                    "replace": ["BRAIN_CORAL_BLOCK"]
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "coral/stonedirtsetter-1",
+                "coral/stonedirtsetter-2",
+                "coral/stonedirtsetter-3",
+                "coral/stonedirtsetter-4",
+                "coral/stonedirtsetter-5",
+                "coral/stonedirtsetter-6",
+                "coral/stonedirtsetter-7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.0025,
+            "edit": [
+                {
+                    "find": ["STONE"],
+                    "replace": ["BUBBLE_CORAL_BLOCK"]
+                },
+                {
+                    "find": ["DIRT"],
+                    "replace": ["BUBBLE_CORAL_BLOCK"]
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "coral/stonedirtsetter-1",
+                "coral/stonedirtsetter-2",
+                "coral/stonedirtsetter-3",
+                "coral/stonedirtsetter-4",
+                "coral/stonedirtsetter-5",
+                "coral/stonedirtsetter-6",
+                "coral/stonedirtsetter-7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.0025,
+            "edit": [
+                {
+                    "find": ["STONE"],
+                    "replace": ["HORN_CORAL_BLOCK"]
+                },
+                {
+                    "find": ["DIRT"],
+                    "replace": ["BUBBLE_CORAL_BLOCK"]
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "coral/stonedirtsetter-1",
+                "coral/stonedirtsetter-2",
+                "coral/stonedirtsetter-3",
+                "coral/stonedirtsetter-4",
+                "coral/stonedirtsetter-5",
+                "coral/stonedirtsetter-6",
+                "coral/stonedirtsetter-7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": ["STONE"],
+                    "replace": ["HORN_CORAL_BLOCK"]
+                },
+                {
+                    "find": ["DIRT"],
+                    "replace": ["HORN_CORAL_BLOCK"]
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "coral/stonedirtsetter-1",
+                "coral/stonedirtsetter-2",
+                "coral/stonedirtsetter-3",
+                "coral/stonedirtsetter-4",
+                "coral/stonedirtsetter-5",
+                "coral/stonedirtsetter-6",
+                "coral/stonedirtsetter-7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": ["STONE"],
+                    "replace": ["HORN_CORAL_BLOCK"]
+                },
+                {
+                    "find": ["DIRT"],
+                    "replace": ["TUBE_CORAL_BLOCK"]
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "coral/stonedirtsetter-1",
+                "coral/stonedirtsetter-2",
+                "coral/stonedirtsetter-3",
+                "coral/stonedirtsetter-4",
+                "coral/stonedirtsetter-5",
+                "coral/stonedirtsetter-6",
+                "coral/stonedirtsetter-7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": ["STONE"],
+                    "replace": ["HORN_CORAL_BLOCK"]
+                },
+                {
+                    "find": ["DIRT"],
+                    "replace": ["BRAIN_CORAL_BLOCK"]
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "coral/stonedirtsetter-1",
+                "coral/stonedirtsetter-2",
+                "coral/stonedirtsetter-3",
+                "coral/stonedirtsetter-4",
+                "coral/stonedirtsetter-5",
+                "coral/stonedirtsetter-6",
+                "coral/stonedirtsetter-7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": ["STONE"],
+                    "replace": ["HORN_CORAL_BLOCK"]
+                },
+                {
+                    "find": ["DIRT"],
+                    "replace": ["HORN_CORAL_BLOCK"]
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "coral/stonedirtsetter-1",
+                "coral/stonedirtsetter-2",
+                "coral/stonedirtsetter-3",
+                "coral/stonedirtsetter-4",
+                "coral/stonedirtsetter-5",
+                "coral/stonedirtsetter-6",
+                "coral/stonedirtsetter-7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": ["STONE"],
+                    "replace": ["TUBE_CORAL_BLOCK"]
+                },
+                {
+                    "find": ["DIRT"],
+                    "replace": ["BUBBLE_CORAL_BLOCK"]
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "coral/stonedirtsetter-1",
+                "coral/stonedirtsetter-2",
+                "coral/stonedirtsetter-3",
+                "coral/stonedirtsetter-4",
+                "coral/stonedirtsetter-5",
+                "coral/stonedirtsetter-6",
+                "coral/stonedirtsetter-7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": ["STONE"],
+                    "replace": ["TUBE_CORAL_BLOCK"]
+                },
+                {
+                    "find": ["DIRT"],
+                    "replace": ["HORN_CORAL_BLOCK"]
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "coral/stonedirtsetter-1",
+                "coral/stonedirtsetter-2",
+                "coral/stonedirtsetter-3",
+                "coral/stonedirtsetter-4",
+                "coral/stonedirtsetter-5",
+                "coral/stonedirtsetter-6",
+                "coral/stonedirtsetter-7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": ["STONE"],
+                    "replace": ["TUBE_CORAL_BLOCK"]
+                },
+                {
+                    "find": ["DIRT"],
+                    "replace": ["TUBE_CORAL_BLOCK"]
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "coral/stonedirtsetter-1",
+                "coral/stonedirtsetter-2",
+                "coral/stonedirtsetter-3",
+                "coral/stonedirtsetter-4",
+                "coral/stonedirtsetter-5",
+                "coral/stonedirtsetter-6",
+                "coral/stonedirtsetter-7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": ["STONE"],
+                    "replace": ["TUBE_CORAL_BLOCK"]
+                },
+                {
+                    "find": ["DIRT"],
+                    "replace": ["BRAIN_CORAL_BLOCK"]
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "coral/stonedirtsetter-1",
+                "coral/stonedirtsetter-2",
+                "coral/stonedirtsetter-3",
+                "coral/stonedirtsetter-4",
+                "coral/stonedirtsetter-5",
+                "coral/stonedirtsetter-6",
+                "coral/stonedirtsetter-7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": ["STONE"],
+                    "replace": ["TUBE_CORAL_BLOCK"]
+                },
+                {
+                    "find": ["DIRT"],
+                    "replace": ["TUBE_CORAL_BLOCK"]
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "coral/stonedirtsetter-1",
+                "coral/stonedirtsetter-2",
+                "coral/stonedirtsetter-3",
+                "coral/stonedirtsetter-4",
+                "coral/stonedirtsetter-5",
+                "coral/stonedirtsetter-6",
+                "coral/stonedirtsetter-7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": ["STONE"],
+                    "replace": ["BRAIN_CORAL_BLOCK"]
+                },
+                {
+                    "find": ["DIRT"],
+                    "replace": ["BUBBLE_CORAL_BLOCK"]
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "coral/stonedirtsetter-1",
+                "coral/stonedirtsetter-2",
+                "coral/stonedirtsetter-3",
+                "coral/stonedirtsetter-4",
+                "coral/stonedirtsetter-5",
+                "coral/stonedirtsetter-6",
+                "coral/stonedirtsetter-7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": ["STONE"],
+                    "replace": ["BRAIN_CORAL_BLOCK"]
+                },
+                {
+                    "find": ["DIRT"],
+                    "replace": ["HORN_CORAL_BLOCK"]
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "coral/stonedirtsetter-1",
+                "coral/stonedirtsetter-2",
+                "coral/stonedirtsetter-3",
+                "coral/stonedirtsetter-4",
+                "coral/stonedirtsetter-5",
+                "coral/stonedirtsetter-6",
+                "coral/stonedirtsetter-7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": ["STONE"],
+                    "replace": ["BRAIN_CORAL_BLOCK"]
+                },
+                {
+                    "find": ["DIRT"],
+                    "replace": ["TUBE_CORAL_BLOCK"]
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "coral/stonedirtsetter-1",
+                "coral/stonedirtsetter-2",
+                "coral/stonedirtsetter-3",
+                "coral/stonedirtsetter-4",
+                "coral/stonedirtsetter-5",
+                "coral/stonedirtsetter-6",
+                "coral/stonedirtsetter-7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": ["STONE"],
+                    "replace": ["BRAIN_CORAL_BLOCK"]
+                },
+                {
+                    "find": ["DIRT"],
+                    "replace": ["BRAIN_CORAL_BLOCK"]
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "coral/stonedirtsetter-1",
+                "coral/stonedirtsetter-2",
+                "coral/stonedirtsetter-3",
+                "coral/stonedirtsetter-4",
+                "coral/stonedirtsetter-5",
+                "coral/stonedirtsetter-6",
+                "coral/stonedirtsetter-7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": ["STONE"],
+                    "replace": ["BRAIN_CORAL_BLOCK"]
+                },
+                {
+                    "find": ["DIRT"],
+                    "replace": ["BRAIN_CORAL_BLOCK"]
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "coral/stonedirtsetter-1",
+                "coral/stonedirtsetter-2",
+                "coral/stonedirtsetter-3",
+                "coral/stonedirtsetter-4",
+                "coral/stonedirtsetter-5",
+                "coral/stonedirtsetter-6",
+                "coral/stonedirtsetter-7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        }
+    ],
     "name": "Coral Ocean",
-    "rarity": 2,
     "layers": [
         {
             "minHeight": 2,
             "maxHeight": 6,
-            "palette": [
-                "SAND"
-            ]
+            "palette": [{"block": "sand"}]
         },
-        {
-            "palette": [
-                "DIRT"
-            ]
-        },
+        {"palette": [{"block": "dirt"}]},
         {
             "minHeight": 1,
             "maxHeight": 3,
             "palette": [
-                "DIRT",
-                "DIRT",
-                "COARSE_DIRT"
+                {
+                    "weight": 2,
+                    "block": "dirt"
+                },
+                {"block": "coarse_dirt"}
             ]
         }
     ],
-    "effects": [
-        {
-            "interval": 250,
-            "particleOffset": 2,
-            "particleEffect": "BUBBLE_COLUMN_UP",
-            "particleCount": 0,
-            "particleAltX": 0.3,
-            "particleAltY": 1.960885,
-            "particleAltZ": 0.3,
-            "particleDistance": 5,
-            "particleDistanceWidth": 8,
-            "chance": 1
-        }
-    ],
+    "generators": [{
+        "min": -51,
+        "max": -17,
+        "generator": "plain"
+    }],
+    "loot": {"tables": ["ocean-clutter"]},
+    "derivative": "LUKEWARM_OCEAN",
     "wall": {
         "palette": [
-            "TUBE_CORAL_BLOCK",
-            "BRAIN_CORAL_BLOCK",
-            "FIRE_CORAL_BLOCK",
-            "HORN_CORAL_BLOCK",
-            "BUBBLE_CORAL_BLOCK"
+            {"block": "tube_coral_block"},
+            {"block": "brain_coral_block"},
+            {"block": "fire_coral_block"},
+            {"block": "horn_coral_block"},
+            {"block": "bubble_coral_block"}
         ],
-        "style": {
-            "style": "IRIS"
-        },
+        "style": {"style": "IRIS"},
         "zoom": 0.1
     },
+    "rarity": 2,
     "slab": {
-        "style": {
-            "style": "STATIC"
-        },
+        "style": {"style": "STATIC"},
         "palette": [
-            "minecraft:prismarine_slab[type=bottom,waterlogged=true]",
-            "AIR",
-            "AIR"
+            {
+                "data": {
+                    "waterlogged": true,
+                    "type": "bottom"
+                },
+                "block": "prismarine_slab"
+            },
+            {
+                "weight": 2,
+                "block": "air"
+            }
         ]
-    },
-    "objects": [
-        {
-            "chance": 0.0025,
-            "underwater": true,
-            "edit": [
-                {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "FIRE_CORAL_BLOCK"
-                    ]
-                },
-                {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "BUBBLE_CORAL_BLOCK"
-                    ]
-                }
-            ],
-            "clamp": {
-                "minimumHeight": 0
-            },
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "coral/stonedirtsetter-1",
-                "coral/stonedirtsetter-2",
-                "coral/stonedirtsetter-3",
-                "coral/stonedirtsetter-4",
-                "coral/stonedirtsetter-5",
-                "coral/stonedirtsetter-6",
-                "coral/stonedirtsetter-7"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.025,
-            "underwater": true,
-            "edit": [
-                {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "FIRE_CORAL_BLOCK"
-                    ]
-                },
-                {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "HORN_CORAL_BLOCK"
-                    ]
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "coral/stonedirtsetter-1",
-                "coral/stonedirtsetter-2",
-                "coral/stonedirtsetter-3",
-                "coral/stonedirtsetter-4",
-                "coral/stonedirtsetter-5",
-                "coral/stonedirtsetter-6",
-                "coral/stonedirtsetter-7"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.025,
-            "underwater": true,
-            "edit": [
-                {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "FIRE_CORAL_BLOCK"
-                    ]
-                },
-                {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "TUBE_CORAL_BLOCK"
-                    ]
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "coral/stonedirtsetter-1",
-                "coral/stonedirtsetter-2",
-                "coral/stonedirtsetter-3",
-                "coral/stonedirtsetter-4",
-                "coral/stonedirtsetter-5",
-                "coral/stonedirtsetter-6",
-                "coral/stonedirtsetter-7"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.025,
-            "underwater": true,
-            "edit": [
-                {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "FIRE_CORAL_BLOCK"
-                    ]
-                },
-                {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "BRAIN_CORAL_BLOCK"
-                    ]
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "coral/stonedirtsetter-1",
-                "coral/stonedirtsetter-2",
-                "coral/stonedirtsetter-3",
-                "coral/stonedirtsetter-4",
-                "coral/stonedirtsetter-5",
-                "coral/stonedirtsetter-6",
-                "coral/stonedirtsetter-7"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.025,
-            "underwater": true,
-            "edit": [
-                {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "FIRE_CORAL_BLOCK"
-                    ]
-                },
-                {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "FIRE_CORAL_BLOCK"
-                    ]
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "coral/stonedirtsetter-1",
-                "coral/stonedirtsetter-2",
-                "coral/stonedirtsetter-3",
-                "coral/stonedirtsetter-4",
-                "coral/stonedirtsetter-5",
-                "coral/stonedirtsetter-6",
-                "coral/stonedirtsetter-7"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.005,
-            "underwater": true,
-            "edit": [
-                {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "BUBBLE_CORAL_BLOCK"
-                    ]
-                },
-                {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "BUBBLE_CORAL_BLOCK"
-                    ]
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "coral/stonedirtsetter-1",
-                "coral/stonedirtsetter-2",
-                "coral/stonedirtsetter-3",
-                "coral/stonedirtsetter-4",
-                "coral/stonedirtsetter-5",
-                "coral/stonedirtsetter-6",
-                "coral/stonedirtsetter-7"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.0025,
-            "underwater": true,
-            "edit": [
-                {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "BUBBLE_CORAL_BLOCK"
-                    ]
-                },
-                {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "HORN_CORAL_BLOCK"
-                    ]
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "coral/stonedirtsetter-1",
-                "coral/stonedirtsetter-2",
-                "coral/stonedirtsetter-3",
-                "coral/stonedirtsetter-4",
-                "coral/stonedirtsetter-5",
-                "coral/stonedirtsetter-6",
-                "coral/stonedirtsetter-7"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.0025,
-            "underwater": true,
-            "edit": [
-                {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "BUBBLE_CORAL_BLOCK"
-                    ]
-                },
-                {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "TUBE_CORAL_BLOCK"
-                    ]
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "coral/stonedirtsetter-1",
-                "coral/stonedirtsetter-2",
-                "coral/stonedirtsetter-3",
-                "coral/stonedirtsetter-4",
-                "coral/stonedirtsetter-5",
-                "coral/stonedirtsetter-6",
-                "coral/stonedirtsetter-7"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.0025,
-            "underwater": true,
-            "edit": [
-                {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "BUBBLE_CORAL_BLOCK"
-                    ]
-                },
-                {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "BRAIN_CORAL_BLOCK"
-                    ]
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "coral/stonedirtsetter-1",
-                "coral/stonedirtsetter-2",
-                "coral/stonedirtsetter-3",
-                "coral/stonedirtsetter-4",
-                "coral/stonedirtsetter-5",
-                "coral/stonedirtsetter-6",
-                "coral/stonedirtsetter-7"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.0025,
-            "underwater": true,
-            "edit": [
-                {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "BUBBLE_CORAL_BLOCK"
-                    ]
-                },
-                {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "BUBBLE_CORAL_BLOCK"
-                    ]
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "coral/stonedirtsetter-1",
-                "coral/stonedirtsetter-2",
-                "coral/stonedirtsetter-3",
-                "coral/stonedirtsetter-4",
-                "coral/stonedirtsetter-5",
-                "coral/stonedirtsetter-6",
-                "coral/stonedirtsetter-7"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.0025,
-            "underwater": true,
-            "edit": [
-                {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "HORN_CORAL_BLOCK"
-                    ]
-                },
-                {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "BUBBLE_CORAL_BLOCK"
-                    ]
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "coral/stonedirtsetter-1",
-                "coral/stonedirtsetter-2",
-                "coral/stonedirtsetter-3",
-                "coral/stonedirtsetter-4",
-                "coral/stonedirtsetter-5",
-                "coral/stonedirtsetter-6",
-                "coral/stonedirtsetter-7"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.025,
-            "underwater": true,
-            "edit": [
-                {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "HORN_CORAL_BLOCK"
-                    ]
-                },
-                {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "HORN_CORAL_BLOCK"
-                    ]
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "coral/stonedirtsetter-1",
-                "coral/stonedirtsetter-2",
-                "coral/stonedirtsetter-3",
-                "coral/stonedirtsetter-4",
-                "coral/stonedirtsetter-5",
-                "coral/stonedirtsetter-6",
-                "coral/stonedirtsetter-7"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.025,
-            "underwater": true,
-            "edit": [
-                {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "HORN_CORAL_BLOCK"
-                    ]
-                },
-                {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "TUBE_CORAL_BLOCK"
-                    ]
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "coral/stonedirtsetter-1",
-                "coral/stonedirtsetter-2",
-                "coral/stonedirtsetter-3",
-                "coral/stonedirtsetter-4",
-                "coral/stonedirtsetter-5",
-                "coral/stonedirtsetter-6",
-                "coral/stonedirtsetter-7"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.025,
-            "underwater": true,
-            "edit": [
-                {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "HORN_CORAL_BLOCK"
-                    ]
-                },
-                {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "BRAIN_CORAL_BLOCK"
-                    ]
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "coral/stonedirtsetter-1",
-                "coral/stonedirtsetter-2",
-                "coral/stonedirtsetter-3",
-                "coral/stonedirtsetter-4",
-                "coral/stonedirtsetter-5",
-                "coral/stonedirtsetter-6",
-                "coral/stonedirtsetter-7"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.025,
-            "underwater": true,
-            "edit": [
-                {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "HORN_CORAL_BLOCK"
-                    ]
-                },
-                {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "HORN_CORAL_BLOCK"
-                    ]
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "coral/stonedirtsetter-1",
-                "coral/stonedirtsetter-2",
-                "coral/stonedirtsetter-3",
-                "coral/stonedirtsetter-4",
-                "coral/stonedirtsetter-5",
-                "coral/stonedirtsetter-6",
-                "coral/stonedirtsetter-7"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.025,
-            "underwater": true,
-            "edit": [
-                {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "TUBE_CORAL_BLOCK"
-                    ]
-                },
-                {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "BUBBLE_CORAL_BLOCK"
-                    ]
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "coral/stonedirtsetter-1",
-                "coral/stonedirtsetter-2",
-                "coral/stonedirtsetter-3",
-                "coral/stonedirtsetter-4",
-                "coral/stonedirtsetter-5",
-                "coral/stonedirtsetter-6",
-                "coral/stonedirtsetter-7"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.025,
-            "underwater": true,
-            "edit": [
-                {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "TUBE_CORAL_BLOCK"
-                    ]
-                },
-                {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "HORN_CORAL_BLOCK"
-                    ]
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "coral/stonedirtsetter-1",
-                "coral/stonedirtsetter-2",
-                "coral/stonedirtsetter-3",
-                "coral/stonedirtsetter-4",
-                "coral/stonedirtsetter-5",
-                "coral/stonedirtsetter-6",
-                "coral/stonedirtsetter-7"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.025,
-            "underwater": true,
-            "edit": [
-                {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "TUBE_CORAL_BLOCK"
-                    ]
-                },
-                {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "TUBE_CORAL_BLOCK"
-                    ]
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "coral/stonedirtsetter-1",
-                "coral/stonedirtsetter-2",
-                "coral/stonedirtsetter-3",
-                "coral/stonedirtsetter-4",
-                "coral/stonedirtsetter-5",
-                "coral/stonedirtsetter-6",
-                "coral/stonedirtsetter-7"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.025,
-            "underwater": true,
-            "edit": [
-                {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "TUBE_CORAL_BLOCK"
-                    ]
-                },
-                {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "BRAIN_CORAL_BLOCK"
-                    ]
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "coral/stonedirtsetter-1",
-                "coral/stonedirtsetter-2",
-                "coral/stonedirtsetter-3",
-                "coral/stonedirtsetter-4",
-                "coral/stonedirtsetter-5",
-                "coral/stonedirtsetter-6",
-                "coral/stonedirtsetter-7"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.025,
-            "underwater": true,
-            "edit": [
-                {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "TUBE_CORAL_BLOCK"
-                    ]
-                },
-                {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "TUBE_CORAL_BLOCK"
-                    ]
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "coral/stonedirtsetter-1",
-                "coral/stonedirtsetter-2",
-                "coral/stonedirtsetter-3",
-                "coral/stonedirtsetter-4",
-                "coral/stonedirtsetter-5",
-                "coral/stonedirtsetter-6",
-                "coral/stonedirtsetter-7"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.025,
-            "underwater": true,
-            "edit": [
-                {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "BRAIN_CORAL_BLOCK"
-                    ]
-                },
-                {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "BUBBLE_CORAL_BLOCK"
-                    ]
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "coral/stonedirtsetter-1",
-                "coral/stonedirtsetter-2",
-                "coral/stonedirtsetter-3",
-                "coral/stonedirtsetter-4",
-                "coral/stonedirtsetter-5",
-                "coral/stonedirtsetter-6",
-                "coral/stonedirtsetter-7"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.025,
-            "underwater": true,
-            "edit": [
-                {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "BRAIN_CORAL_BLOCK"
-                    ]
-                },
-                {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "HORN_CORAL_BLOCK"
-                    ]
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "coral/stonedirtsetter-1",
-                "coral/stonedirtsetter-2",
-                "coral/stonedirtsetter-3",
-                "coral/stonedirtsetter-4",
-                "coral/stonedirtsetter-5",
-                "coral/stonedirtsetter-6",
-                "coral/stonedirtsetter-7"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.025,
-            "underwater": true,
-            "edit": [
-                {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "BRAIN_CORAL_BLOCK"
-                    ]
-                },
-                {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "TUBE_CORAL_BLOCK"
-                    ]
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "coral/stonedirtsetter-1",
-                "coral/stonedirtsetter-2",
-                "coral/stonedirtsetter-3",
-                "coral/stonedirtsetter-4",
-                "coral/stonedirtsetter-5",
-                "coral/stonedirtsetter-6",
-                "coral/stonedirtsetter-7"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.025,
-            "underwater": true,
-            "edit": [
-                {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "BRAIN_CORAL_BLOCK"
-                    ]
-                },
-                {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "BRAIN_CORAL_BLOCK"
-                    ]
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "coral/stonedirtsetter-1",
-                "coral/stonedirtsetter-2",
-                "coral/stonedirtsetter-3",
-                "coral/stonedirtsetter-4",
-                "coral/stonedirtsetter-5",
-                "coral/stonedirtsetter-6",
-                "coral/stonedirtsetter-7"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.025,
-            "underwater": true,
-            "edit": [
-                {
-                    "find": [
-                        "STONE"
-                    ],
-                    "replace": [
-                        "BRAIN_CORAL_BLOCK"
-                    ]
-                },
-                {
-                    "find": [
-                        "DIRT"
-                    ],
-                    "replace": [
-                        "BRAIN_CORAL_BLOCK"
-                    ]
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "coral/stonedirtsetter-1",
-                "coral/stonedirtsetter-2",
-                "coral/stonedirtsetter-3",
-                "coral/stonedirtsetter-4",
-                "coral/stonedirtsetter-5",
-                "coral/stonedirtsetter-6",
-                "coral/stonedirtsetter-7"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        }
-    ],
-    "decorators": [
-        {
-            "zoom": 1,
-            "chance": 0.005,
-            "stackMin": 1,
-            "stackMax": 3,
-            "palette": [
-                "TUBE_CORAL_BLOCK",
-                "BRAIN_CORAL_BLOCK",
-                "FIRE_CORAL_BLOCK",
-                "HORN_CORAL_BLOCK",
-                "BUBBLE_CORAL_BLOCK"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 1,
-            "chance": 0.0006,
-            "palette": [
-                "SOUL_SAND",
-                "MAGMA_BLOCK"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 5,
-            "chance": 0.04,
-            "palette": [
-                "SEAGRASS"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 1,
-            "stackMax": 21,
-            "stackMin": 2,
-            "chance": 0.012,
-            "palette": [
-                "KELP_PLANT"
-            ],
-            "heightVariance": {
-                "style": "IRIS"
-            },
-            "verticalZoom": 88,
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 1,
-            "chance": 0.05,
-            "palette": [
-                "TUBE_CORAL",
-                "TUBE_CORAL_FAN"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 1,
-            "chance": 0.05,
-            "palette": [
-                "BRAIN_CORAL",
-                "BRAIN_CORAL_FAN"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 1,
-            "chance": 0.05,
-            "palette": [
-                "BUBBLE_CORAL",
-                "BUBBLE_CORAL_FAN"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 1,
-            "chance": 0.05,
-            "palette": [
-                "FIRE_CORAL",
-                "FIRE_CORAL_FAN"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 1,
-            "chance": 0.05,
-            "palette": [
-                "HORN_CORAL",
-                "HORN_CORAL_FAN"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 1,
-            "chance": 0.008,
-            "palette": [
-                "minecraft:sea_pickle[pickles=2,waterlogged=true]",
-                "minecraft:sea_pickle[pickles=3,waterlogged=true]",
-                "minecraft:sea_pickle[pickles=4,waterlogged=true]"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        }
-    ],
-    "generators": [
-        {
-            "generator": "plain",
-            "min": -51,
-            "max": -17
-        }
-    ],
-    "loot": {
-        "tables": [
-            "ocean-clutter"
-        ]
-    },
-    "derivative": "LUKEWARM_OCEAN"
+    }
 }

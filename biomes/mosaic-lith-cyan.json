@@ -1,100 +1,46 @@
 {
-    "name": "Cyan Mosaic",
-    "layers": [
-        {
-            "style": {
-                "style": "FRACTAL_WATER"
-            },
-            "zoom": 1.1,
-            "palette": [
-                "LIGHT_BLUE_CONCRETE",
-                "LIGHT_BLUE_CONCRETE",
-                "LIGHT_BLUE_CONCRETE_POWDER",
-                "LIGHT_BLUE_CONCRETE_POWDER",
-                "LIGHT_BLUE_TERRACOTTA",
-                "LIGHT_BLUE_TERRACOTTA",
-                "LIGHT_BLUE_CONCRETE",
-                "LIGHT_BLUE_CONCRETE",
-                "LIGHT_BLUE_CONCRETE_POWDER",
-                "LIGHT_BLUE_CONCRETE_POWDER",
-                "LIGHT_BLUE_CONCRETE",
-                "LIGHT_BLUE_CONCRETE",
-                "LIGHT_BLUE_CONCRETE_POWDER",
-                "LIGHT_BLUE_CONCRETE_POWDER"
-            ]
-        },
-        {
-            "minHeight": 12,
-            "maxHeight": 16,
-            "style": {
-                "style": "FLAT"
-            },
-            "palette": [
-                "BLACKSTONE"
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "FLAT"
-            },
-            "palette": [
-                "BLACKSTONE"
-            ]
-        }
-    ],
-    "slab": {
-        "palette": [
-            "WARPED_SLAB",
-            "AIR",
-            "AIR",
-            "AIR"
-        ],
-        "style": {
-            "style": "STATIC"
-        }
-    },
     "decorators": [
         {
-            "palette": [
-                "TWISTING_VINES_PLANT"
-            ],
+            "chance": 0.0045,
             "stackMax": 6,
-            "stackMin": 3,
-            "chance": 0.0045
+            "palette": [{"block": "twisting_vines_plant"}],
+            "stackMin": 3
         },
         {
+            "chance": 0.0175,
             "palette": [
-                "minecraft:tube_coral[waterlogged=false]",
-                "minecraft:tube_coral_fan[waterlogged=false]"
-            ],
-            "chance": 0.0175
+                {
+                    "data": {"waterlogged": false},
+                    "block": "tube_coral"
+                },
+                {
+                    "data": {"waterlogged": false},
+                    "block": "tube_coral_fan"
+                }
+            ]
         },
         {
+            "chance": 3.5E-4,
             "palette": [
-                "minecraft:warped_button[face=floor,facing=east,powered=false]",
-                "minecraft:warped_button[face=floor,facing=south,powered=false]"
-            ],
-            "chance": 0.00035
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "east"
+                    },
+                    "block": "warped_button"
+                },
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "south"
+                    },
+                    "block": "warped_button"
+                }
+            ]
         }
     ],
-    "generators": [
-        {
-            "generator": "wicked",
-            "min": 3,
-            "max": 96
-        }
-    ],
-    "wall": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            "LIGHT_BLUE_CONCRETE"
-
-        ]
-    },
     "objects": [
         {
             "chance": 0.06,
@@ -142,20 +88,18 @@
                 "crystal/crystal-10"
             ],
             "translate": {
+                "yRandom": 25,
                 "x": 0,
                 "y": 9,
-                "yRandom": 25,
                 "z": 0
             }
         },
         {
             "chance": 0.01,
-            "edit": [
-                {
-                    "find": ["BLACK_CONCRETE"],
-                    "replace": ["CYAN_CONCRETE"]
-                }
-            ],
+            "edit": [{
+                "find": ["BLACK_CONCRETE"],
+                "replace": ["CYAN_CONCRETE"]
+            }],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -180,5 +124,73 @@
             }
         }
     ],
-    "derivative": "WARPED_FOREST"
+    "name": "Cyan Mosaic",
+    "layers": [
+        {
+            "style": {"style": "FRACTAL_WATER"},
+            "zoom": 1.1,
+            "palette": [
+                {
+                    "weight": 2,
+                    "block": "light_blue_concrete"
+                },
+                {
+                    "weight": 2,
+                    "block": "light_blue_concrete_powder"
+                },
+                {
+                    "weight": 2,
+                    "block": "light_blue_terracotta"
+                },
+                {
+                    "weight": 2,
+                    "block": "light_blue_concrete"
+                },
+                {
+                    "weight": 2,
+                    "block": "light_blue_concrete_powder"
+                },
+                {
+                    "weight": 2,
+                    "block": "light_blue_concrete"
+                },
+                {
+                    "weight": 2,
+                    "block": "light_blue_concrete_powder"
+                }
+            ]
+        },
+        {
+            "minHeight": 12,
+            "maxHeight": 16,
+            "style": {"style": "FLAT"},
+            "palette": [{"block": "blackstone"}]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "FLAT"},
+            "palette": [{"block": "blackstone"}]
+        }
+    ],
+    "generators": [{
+        "min": 3,
+        "max": 96,
+        "generator": "wicked"
+    }],
+    "derivative": "WARPED_FOREST",
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [{"block": "light_blue_concrete"}]
+    },
+    "slab": {
+        "palette": [
+            {"block": "warped_slab"},
+            {
+                "weight": 3,
+                "block": "air"
+            }
+        ],
+        "style": {"style": "STATIC"}
+    }
 }

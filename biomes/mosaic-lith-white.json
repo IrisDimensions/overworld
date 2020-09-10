@@ -1,86 +1,10 @@
 {
-    "name": "White Mosaic",
-    "layers": [
-        {
-            "style": {
-                "style": "FRACTAL_WATER"
-            },
-            "zoom": 1.1,
-            "palette": [
-                "WHITE_CONCRETE",
-                "WHITE_CONCRETE",
-                "WHITE_CONCRETE_POWDER",
-                "WHITE_CONCRETE_POWDER",
-                "WHITE_TERRACOTTA",
-                "WHITE_TERRACOTTA",
-                "WHITE_CONCRETE",
-                "WHITE_CONCRETE",
-                "WHITE_CONCRETE_POWDER",
-                "WHITE_CONCRETE_POWDER",
-                "WHITE_CONCRETE",
-                "WHITE_CONCRETE",
-                "WHITE_CONCRETE_POWDER",
-                "WHITE_CONCRETE_POWDER"
-            ]
-        },
-        {
-            "minHeight": 12,
-            "maxHeight": 16,
-            "style": {
-                "style": "FLAT"
-            },
-            "palette": [
-                "BLACKSTONE"
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "FLAT"
-            },
-            "palette": [
-                "BLACKSTONE"
-            ]
-        }
-    ],
-    "decorators": [
-        {
-            "palette": [
-                "DIORITE_WALL"
-            ],
-            "stackMax": 3,
-            "stackMin": 1,
-            "chance": 0.0045
-        }
-    ],
-    "slab": {
-        "palette": [
-            "DIORITE_SLAB",
-            "AIR",
-            "AIR",
-            "AIR"
-        ],
-        "style": {
-            "style": "STATIC"
-        }
-    },
-    "generators": [
-        {
-            "generator": "plain",
-            "min": 28,
-            "max": 41
-        }
-    ],
-    "wall": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            "WHITE_CONCRETE"
-
-        ]
-    },
+    "decorators": [{
+        "chance": 0.0045,
+        "stackMax": 3,
+        "palette": [{"block": "diorite_wall"}],
+        "stackMin": 1
+    }],
     "objects": [
         {
             "chance": 0.06,
@@ -88,12 +12,10 @@
                 {
                     "find": ["BLUE_TERRACOTTA"],
                     "replace": ["LIGHT_GRAY_STAINED_GLASS"]
-
                 },
                 {
                     "find": ["WHITE_STAINED_GLASS"],
                     "replace": ["WHITE_CONCRETE"]
-
                 }
             ],
             "rotation": {
@@ -130,20 +52,18 @@
                 "crystal/crystal-10"
             ],
             "translate": {
+                "yRandom": 25,
                 "x": 0,
                 "y": 9,
-                "yRandom": 25,
                 "z": 0
             }
         },
         {
             "chance": 0.01,
-            "edit": [
-                {
-                    "find": ["BLACK_CONCRETE"],
-                    "replace": ["WHITE_CONCRETE"]
-                }
-            ],
+            "edit": [{
+                "find": ["BLACK_CONCRETE"],
+                "replace": ["WHITE_CONCRETE"]
+            }],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -168,5 +88,73 @@
             }
         }
     ],
-    "derivative": "BASALT_DELTAS"
+    "name": "White Mosaic",
+    "layers": [
+        {
+            "style": {"style": "FRACTAL_WATER"},
+            "zoom": 1.1,
+            "palette": [
+                {
+                    "weight": 2,
+                    "block": "white_concrete"
+                },
+                {
+                    "weight": 2,
+                    "block": "white_concrete_powder"
+                },
+                {
+                    "weight": 2,
+                    "block": "white_terracotta"
+                },
+                {
+                    "weight": 2,
+                    "block": "white_concrete"
+                },
+                {
+                    "weight": 2,
+                    "block": "white_concrete_powder"
+                },
+                {
+                    "weight": 2,
+                    "block": "white_concrete"
+                },
+                {
+                    "weight": 2,
+                    "block": "white_concrete_powder"
+                }
+            ]
+        },
+        {
+            "minHeight": 12,
+            "maxHeight": 16,
+            "style": {"style": "FLAT"},
+            "palette": [{"block": "blackstone"}]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "FLAT"},
+            "palette": [{"block": "blackstone"}]
+        }
+    ],
+    "generators": [{
+        "min": 28,
+        "max": 41,
+        "generator": "plain"
+    }],
+    "derivative": "BASALT_DELTAS",
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [{"block": "white_concrete"}]
+    },
+    "slab": {
+        "palette": [
+            {"block": "diorite_slab"},
+            {
+                "weight": 3,
+                "block": "air"
+            }
+        ],
+        "style": {"style": "STATIC"}
+    }
 }

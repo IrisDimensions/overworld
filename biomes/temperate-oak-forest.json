@@ -1,101 +1,8 @@
 {
-    "name": "Oak Forest",
-    "layers": [
-        {
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                "GRASS_BLOCK"
-            ]
-        },
-        {
-            "palette": [
-                "DIRT"
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                "DIRT",
-                "COARSE_DIRT"
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                "STONE",
-                "ANDESITE",
-                "STONE"
-            ]
-        }
+    "biomeSkyScatter": [
+        "FOREST",
+        "JUNGLE"
     ],
-    "children": [
-        "temperate-oak-denmyre"
-    ],
-    "decorators": [
-        {
-            "zoom": 0.1,
-            "chance": 0.09,
-            "palette": [
-                "GRASS",
-                "ALLIUM",
-                "LILY_OF_THE_VALLEY"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 0.3,
-            "chance": 0.4,
-            "palette": [
-                "GRASS"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 0.3,
-            "chance": 0.017,
-            "palette": [
-                "TALL_GRASS"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        }
-    ],
-    "loot": {
-        "tables": [
-            "forest-food"
-        ]
-    },
-    "wall": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            "STONE",
-            "ANDESITE",
-            "STONE"
-        ]
-    },
     "objects": [
         {
             "chance": 0.07,
@@ -134,6 +41,7 @@
             }
         },
         {
+            "mode": "PAINT",
             "chance": 0.00975,
             "rotation": {
                 "yAxis": {
@@ -144,10 +52,7 @@
                 },
                 "enabled": true
             },
-            "mode": "PAINT",
-            "place": [
-                "camp/camp"
-            ],
+            "place": ["camp/camp"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -232,20 +137,12 @@
             "chance": 0.01,
             "edit": [
                 {
-                    "find": [
-                        "WHITE_WOOL"
-                    ],
-                    "replace": [
-                        "OAK_WOOD"
-                    ]
+                    "find": ["WHITE_WOOL"],
+                    "replace": ["OAK_WOOD"]
                 },
                 {
-                    "find": [
-                        "BLACK_WOOL"
-                    ],
-                    "replace": [
-                        "OAK_WOOD"
-                    ]
+                    "find": ["BLACK_WOOL"],
+                    "replace": ["OAK_WOOD"]
                 }
             ],
             "rotation": {
@@ -257,9 +154,7 @@
                 },
                 "enabled": true
             },
-            "place": [
-                "sm-tree/oakw-oakl"
-            ],
+            "place": ["sm-tree/oakw-oakl"],
             "translate": {
                 "x": 0,
                 "y": -3,
@@ -267,24 +162,79 @@
             }
         }
     ],
-    "generators": [
+    "biomeZoom": 60,
+    "derivative": "DEEP_LUKEWARM_OCEAN",
+    "biomeStyle": {"style": "IRIS"},
+    "children": ["temperate-oak-denmyre"],
+    "decorators": [
         {
-            "generator": "plain",
-            "min": 4,
-            "max": 7
+            "chance": 0.09,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.1,
+            "palette": [
+                {"block": "grass"},
+                {"block": "allium"},
+                {"block": "lily_of_the_valley"}
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.4,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [{"block": "grass"}],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.017,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [{"block": "tall_grass"}],
+            "style": {"style": "STATIC"}
         }
     ],
-    "derivative": "DEEP_LUKEWARM_OCEAN",
-    "biomeStyle": {
-        "style": "IRIS"
+    "name": "Oak Forest",
+    "layers": [
+        {
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "grass_block"}]
+        },
+        {"palette": [{"block": "dirt"}]},
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {"block": "dirt"},
+                {"block": "coarse_dirt"}
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
+            ]
+        }
+    ],
+    "generators": [{
+        "min": 4,
+        "max": 7,
+        "generator": "plain"
+    }],
+    "loot": {"tables": ["forest-food"]},
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {"block": "stone"},
+            {"block": "andesite"},
+            {"block": "stone"}
+        ]
     },
-    "biomeZoom": 60,
     "biomeScatter": [
         "FOREST",
         "PLAINS"
-    ],
-    "biomeSkyScatter": [
-        "FOREST",
-        "JUNGLE"
     ]
 }

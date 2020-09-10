@@ -1,124 +1,118 @@
 {
+    "children": ["hot-desert-hills"],
+    "decorators": [
+        {
+            "verticalZoom": 20,
+            "chance": 0.004,
+            "variance": {"style": "STATIC"},
+            "stackMax": 5,
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "cactus"}],
+            "heightVariance": {"style": "IRIS"},
+            "stackMin": 1
+        },
+        {
+            "chance": 0.00875,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "east"
+                    },
+                    "block": "polished_blackstone_button"
+                },
+                {"block": "air"},
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "south"
+                    },
+                    "block": "polished_blackstone_button"
+                }
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.03,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [{"block": "dead_bush"}],
+            "style": {"style": "STATIC"}
+        }
+    ],
     "name": "Red Desert",
-    "rarity": 2,
     "layers": [
         {
             "style": {
                 "style": "IRIS_THICK",
                 "fracture": {
-                    "style": "STATIC",
-                    "multiplier": 7
+                    "multiplier": 7,
+                    "style": "STATIC"
                 }
             },
             "zoom": 0.65,
             "palette": [
-                "RED_SAND",
-                "ORANGE_CONCRETE_POWDER"
+                {"block": "red_sand"},
+                {"block": "orange_concrete_powder"}
             ]
         },
         {
             "minHeight": 2,
             "maxHeight": 9,
-            "palette": [
-                "RED_SANDSTONE"
-            ]
+            "palette": [{"block": "red_sandstone"}]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
+            "style": {"style": "STATIC"},
             "palette": [
-                "STONE",
-                "ANDESITE",
-                "STONE"
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
             ]
         }
     ],
-    "loot": {
-        "tables": [
-            "cactus-clutter"
-        ]
-    },
+    "generators": [{
+        "min": 4,
+        "max": 6,
+        "generator": "plain"
+    }],
+    "loot": {"tables": ["cactus-clutter"]},
+    "derivative": "DESERT",
     "wall": {
-        "style": {
-            "style": "STATIC"
-        },
+        "style": {"style": "STATIC"},
         "palette": [
-            "minecraft:smooth_red_sandstone",
-            "RED_SAND",
-            "minecraft:smooth_red_sandstone"
+            {"block": "smooth_red_sandstone"},
+            {"block": "red_sand"},
+            {"block": "smooth_red_sandstone"}
         ]
     },
+    "rarity": 2,
     "slab": {
-        "style": {
-            "style": "STATIC"
-        },
+        "style": {"style": "STATIC"},
         "palette": [
-            "minecraft:red_sandstone_slab[type=bottom,waterlogged=false]",
-            "minecraft:smooth_red_sandstone_slab[type=bottom,waterlogged=false]",
-            "AIR",
-            "AIR"
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "red_sandstone_slab"
+            },
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "smooth_red_sandstone_slab"
+            },
+            {
+                "weight": 2,
+                "block": "air"
+            }
         ]
-    },
-    "children": [
-        "hot-desert-hills"
-    ],
-    "decorators": [
-        {
-            "verticalZoom": 20,
-            "heightVariance": {
-                "style": "IRIS"
-            },
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            },
-            "stackMin": 1,
-            "stackMax": 5,
-            "chance": 0.004,
-            "palette": [
-                "CACTUS"
-            ]
-        },
-        {
-            "zoom": 0.3,
-            "chance": 0.00875,
-            "palette": [
-                "minecraft:polished_blackstone_button[face=floor,facing=east,powered=false]",
-                "AIR",
-                "minecraft:polished_blackstone_button[face=floor,facing=south,powered=false]"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 0.3,
-            "chance": 0.03,
-            "palette": [
-                "DEAD_BUSH"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        }
-    ],
-    "generators": [
-        {
-            "generator": "plain",
-            "min": 4,
-            "max": 6
-        }
-    ],
-    "derivative": "DESERT"
+    }
 }

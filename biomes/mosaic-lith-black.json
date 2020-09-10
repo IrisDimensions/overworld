@@ -1,81 +1,38 @@
 {
-    "name": "Black Mosaic",
-    "layers": [
-        {
-            "style": {
-                "style": "FRACTAL_WATER"
-            },
-            "zoom": 1.1,
-            "palette": [
-                "BLACK_CONCRETE",
-                "BLACK_CONCRETE",
-                "BLACK_CONCRETE_POWDER",
-                "BLACK_CONCRETE_POWDER",
-                "BLACK_TERRACOTTA",
-                "BLACK_TERRACOTTA",
-                "BLACK_CONCRETE",
-                "BLACK_CONCRETE",
-                "BLACK_CONCRETE_POWDER",
-                "BLACK_CONCRETE_POWDER",
-                "BLACK_CONCRETE",
-                "BLACK_CONCRETE",
-                "BLACK_CONCRETE_POWDER",
-                "BLACK_CONCRETE_POWDER"
-            ]
-        },
-        {
-            "minHeight": 12,
-            "maxHeight": 16,
-            "style": {
-                "style": "FLAT"
-            },
-            "palette": [
-                "BLACKSTONE"
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "FLAT"
-            },
-            "palette": [
-                "BLACKSTONE"
-            ]
-        }
+    "biomeSkyScatter": [
+        "DESERT",
+        "SAVANNA"
     ],
-    "generators": [
-        {
-            "generator": "wicked",
-            "min": 12,
-            "max": 70
-        }
-    ],
-    "wall": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            "BLACK_CONCRETE"
-
-        ]
-    },
     "decorators": [
         {
-            "palette": [
-                "BLACKSTONE_WALL",
-                "POLISHED_BLACKSTONE_WALL"
-            ],
+            "chance": 0.0045,
             "stackMax": 3,
-            "stackMin": 1,
-            "chance": 0.0045
+            "palette": [
+                {"block": "blackstone_wall"},
+                {"block": "polished_blackstone_wall"}
+            ],
+            "stackMin": 1
         },
         {
+            "chance": 3.5E-4,
             "palette": [
-                "minecraft:polished_blackstone_button[face=floor,facing=east,powered=false]",
-                "minecraft:polished_blackstone_button[face=floor,facing=south,powered=false]"
-            ],
-            "chance": 0.00035
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "east"
+                    },
+                    "block": "polished_blackstone_button"
+                },
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "south"
+                    },
+                    "block": "polished_blackstone_button"
+                }
+            ]
         }
     ],
     "objects": [
@@ -125,9 +82,9 @@
                 "crystal/crystal-10"
             ],
             "translate": {
+                "yRandom": 25,
                 "x": 0,
                 "y": 9,
-                "yRandom": 25,
                 "z": 0
             }
         },
@@ -157,17 +114,69 @@
             }
         }
     ],
-    "derivative": "SAVANNA",
-    "biomeStyle": {
-        "style": "IRIS"
-    },
+    "name": "Black Mosaic",
+    "layers": [
+        {
+            "style": {"style": "FRACTAL_WATER"},
+            "zoom": 1.1,
+            "palette": [
+                {
+                    "weight": 2,
+                    "block": "black_concrete"
+                },
+                {
+                    "weight": 2,
+                    "block": "black_concrete_powder"
+                },
+                {
+                    "weight": 2,
+                    "block": "black_terracotta"
+                },
+                {
+                    "weight": 2,
+                    "block": "black_concrete"
+                },
+                {
+                    "weight": 2,
+                    "block": "black_concrete_powder"
+                },
+                {
+                    "weight": 2,
+                    "block": "black_concrete"
+                },
+                {
+                    "weight": 2,
+                    "block": "black_concrete_powder"
+                }
+            ]
+        },
+        {
+            "minHeight": 12,
+            "maxHeight": 16,
+            "style": {"style": "FLAT"},
+            "palette": [{"block": "blackstone"}]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "FLAT"},
+            "palette": [{"block": "blackstone"}]
+        }
+    ],
+    "generators": [{
+        "min": 12,
+        "max": 70,
+        "generator": "wicked"
+    }],
     "biomeZoom": 20,
+    "derivative": "SAVANNA",
+    "biomeStyle": {"style": "IRIS"},
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [{"block": "black_concrete"}]
+    },
     "biomeScatter": [
         "SAVANNA",
         "DESERT"
-    ],
-    "biomeSkyScatter": [
-        "DESERT",
-        "SAVANNA"
     ]
 }

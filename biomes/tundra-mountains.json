@@ -1,46 +1,8 @@
 {
-    "name": "Mountains",
-    "rarity": 2,
-    "layers": [
-        {
-            "palette": [
-                "GRASS_BLOCK"
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                "STONE",
-                "ANDESITE",
-                "STONE"
-            ]
-        }
+    "biomeSkyScatter": [
+        "SNOWY_TAIGA",
+        "SNOWY_MOUNTAINS"
     ],
-    "generators": [
-        {
-            "generator": "mountain",
-            "min": 66,
-            "max": 89
-        }
-    ],
-    "children": [
-        "tundra-mountains-cliffs"
-    ],
-    "childShrinkFactor": 8,
-    "wall": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            "STONE",
-            "ANDESITE",
-            "STONE"
-        ]
-    },
     "objects": [
         {
             "chance": 0.8,
@@ -115,65 +77,87 @@
             }
         }
     ],
+    "biomeZoom": 30,
+    "derivative": "MOUNTAINS",
+    "biomeStyle": {"style": "IRIS"},
+    "children": ["tundra-mountains-cliffs"],
     "decorators": [
         {
-            "zoom": 0.1,
             "chance": 0.01,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.1,
             "palette": [
-                "WHITE_TULIP",
-                "BLUE_ORCHID",
-                "POPPY"
+                {"block": "white_tulip"},
+                {"block": "blue_orchid"},
+                {"block": "poppy"}
             ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+            "style": {"style": "STATIC"}
         },
         {
-            "zoom": 0.3,
             "chance": 0.001,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
             "palette": [
-                "minecraft:sweet_berry_bush[age=0]",
-                "minecraft:sweet_berry_bush[age=1]",
-                "minecraft:sweet_berry_bush[age=2]",
-                "minecraft:sweet_berry_bush[age=3]"
+                {
+                    "data": {"age": 0},
+                    "block": "sweet_berry_bush"
+                },
+                {
+                    "data": {"age": 1},
+                    "block": "sweet_berry_bush"
+                },
+                {
+                    "data": {"age": 2},
+                    "block": "sweet_berry_bush"
+                },
+                {
+                    "data": {"age": 3},
+                    "block": "sweet_berry_bush"
+                }
             ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+            "style": {"style": "STATIC"}
         },
         {
-            "zoom": 0.3,
             "chance": 0.2,
-            "palette": [
-                "GRASS"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [{"block": "grass"}],
+            "style": {"style": "STATIC"}
         }
     ],
-    "derivative": "MOUNTAINS",
-    "biomeStyle": {
-        "style": "IRIS"
+    "name": "Mountains",
+    "layers": [
+        {"palette": [{"block": "grass_block"}]},
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
+            ]
+        }
+    ],
+    "generators": [{
+        "min": 66,
+        "max": 89,
+        "generator": "mountain"
+    }],
+    "childShrinkFactor": 8,
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {"block": "stone"},
+            {"block": "andesite"},
+            {"block": "stone"}
+        ]
     },
-    "biomeZoom": 30,
     "biomeScatter": [
         "PLAINS",
         "TAIGA_HILLS",
         "MOUNTAINS",
         "SWAMP"
     ],
-    "biomeSkyScatter": [
-        "SNOWY_TAIGA",
-        "SNOWY_MOUNTAINS"
-    ]
+    "rarity": 2
 }

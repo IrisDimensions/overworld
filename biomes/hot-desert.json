@@ -1,75 +1,61 @@
 {
-    "name": "Desert",
-    "layers": [
+    "children": ["hot-desert-hills"],
+    "decorators": [
         {
-            "palette": [
-                "SAND"
-            ]
+            "verticalZoom": 20,
+            "chance": 0.001,
+            "variance": {"style": "STATIC"},
+            "stackMax": 5,
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "cactus"}],
+            "heightVariance": {"style": "IRIS"},
+            "stackMin": 1
         },
         {
-            "minHeight": 2,
-            "maxHeight": 9,
+            "chance": 0.00235,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
             "palette": [
-                "SANDSTONE"
-            ]
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "east"
+                    },
+                    "block": "polished_blackstone_button"
+                },
+                {"block": "air"},
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "south"
+                    },
+                    "block": "polished_blackstone_button"
+                }
+            ],
+            "style": {"style": "STATIC"}
         },
         {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                "STONE",
-                "ANDESITE",
-                "STONE"
-            ]
+            "chance": 0.01,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [{"block": "dead_bush"}],
+            "style": {"style": "STATIC"}
         }
-    ],
-    "loot": {
-        "tables": [
-            "cactus-clutter"
-        ]
-    },
-    "wall": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            "SMOOTH_SANDSTONE",
-            "SAND",
-            "SMOOTH_SANDSTONE"
-        ]
-    },
-    "slab": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            "minecraft:sandstone_slab[type=bottom,waterlogged=false]",
-            "minecraft:smooth_sandstone_slab[type=bottom,waterlogged=false]",
-            "AIR",
-            "AIR"
-        ]
-    },
-    "children": [
-        "hot-desert-hills"
     ],
     "objects": [
         {
+            "chance": 0.001,
+            "density": 3,
             "place": [
                 "clutter/desert-post1",
                 "clutter/desert-post2",
                 "clutter/desert-post3"
-            ],
-            "chance": 0.001,
-            "density": 3
+            ]
         },
         {
             "chance": 0.005,
-            "clamp": {
-                "maximumHeight": 108
-            },
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -83,6 +69,7 @@
                 "global-clutter/sphinxToomb-1",
                 "global-clutter/BrokSphinxToomb-1"
             ],
+            "clamp": {"maximumHeight": 108},
             "translate": {
                 "x": 0,
                 "y": -1,
@@ -90,60 +77,61 @@
             }
         }
     ],
-    "decorators": [
+    "name": "Desert",
+    "layers": [
+        {"palette": [{"block": "sand"}]},
         {
-            "verticalZoom": 20,
-            "heightVariance": {
-                "style": "IRIS"
-            },
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            },
-            "stackMin": 1,
-            "stackMax": 5,
-            "chance": 0.001,
+            "minHeight": 2,
+            "maxHeight": 9,
+            "palette": [{"block": "sandstone"}]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
             "palette": [
-                "CACTUS"
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
             ]
-        },
-        {
-            "zoom": 0.3,
-            "chance": 0.00235,
-            "palette": [
-                "minecraft:polished_blackstone_button[face=floor,facing=east,powered=false]",
-                "AIR",
-                "minecraft:polished_blackstone_button[face=floor,facing=south,powered=false]"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 0.3,
-            "chance": 0.01,
-            "palette": [
-                "DEAD_BUSH"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
         }
     ],
-    "generators": [
-        {
-            "generator": "plain",
-            "min": 4,
-            "max": 6
-        }
-    ],
-    "derivative": "DESERT"
+    "generators": [{
+        "min": 4,
+        "max": 6,
+        "generator": "plain"
+    }],
+    "loot": {"tables": ["cactus-clutter"]},
+    "derivative": "DESERT",
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {"block": "smooth_sandstone"},
+            {"block": "sand"},
+            {"block": "smooth_sandstone"}
+        ]
+    },
+    "slab": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "sandstone_slab"
+            },
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "smooth_sandstone_slab"
+            },
+            {
+                "weight": 2,
+                "block": "air"
+            }
+        ]
+    }
 }

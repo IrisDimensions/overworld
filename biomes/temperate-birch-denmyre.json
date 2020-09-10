@@ -1,103 +1,57 @@
 {
-    "name": "Birch Denmyre",
-    "rarity": 2,
-    "layers": [
-        {
-            "style": {
-                "style": "FLAT"
-            },
-            "palette": [
-                "GRASS_BLOCK"
-            ]
-        },
-        {
-            "palette": [
-                "DIRT"
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                "COARSE_DIRT"
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                "STONE",
-                "ANDESITE",
-                "STONE"
-            ]
-        }
-    ],
-    "loot": {
-        "tables": [
-            "forest-food"
-        ]
-    },
     "decorators": [
         {
-            "zoom": 0.01,
             "chance": 0.01,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.01,
             "palette": [
-                "RED_TULIP",
-                "ORANGE_TULIP",
-                "WHITE_TULIP",
-                "PINK_TULIP",
-                "CORNFLOWER"
+                {"block": "red_tulip"},
+                {"block": "orange_tulip"},
+                {"block": "white_tulip"},
+                {"block": "pink_tulip"},
+                {"block": "cornflower"}
             ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+            "style": {"style": "STATIC"}
         },
         {
             "chance": 0.35,
-            "palette": [
-                "GRASS"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+            "variance": {"style": "STATIC"},
+            "palette": [{"block": "grass"}],
+            "style": {"style": "STATIC"}
         },
         {
             "chance": 0.003,
+            "variance": {"style": "STATIC"},
             "palette": [
-                "minecraft:stone_button[face=floor,facing=east,powered=false]",
-                "minecraft:stone_button[face=floor,facing=south,powered=false]"
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "east"
+                    },
+                    "block": "stone_button"
+                },
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "south"
+                    },
+                    "block": "stone_button"
+                }
             ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+            "style": {"style": "STATIC"}
         },
         {
             "chance": 0.027,
-            "palette": [
-                "TALL_GRASS"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+            "variance": {"style": "STATIC"},
+            "palette": [{"block": "tall_grass"}],
+            "style": {"style": "STATIC"}
         }
     ],
     "objects": [
         {
+            "mode": "PAINT",
             "chance": 0.0025,
             "rotation": {
                 "yAxis": {
@@ -108,10 +62,7 @@
                 },
                 "enabled": true
             },
-            "mode": "PAINT",
-            "place": [
-                "camp/barrel-bin"
-            ],
+            "place": ["camp/barrel-bin"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -119,6 +70,7 @@
             }
         },
         {
+            "mode": "PAINT",
             "chance": 0.00375,
             "rotation": {
                 "yAxis": {
@@ -129,10 +81,7 @@
                 },
                 "enabled": true
             },
-            "mode": "PAINT",
-            "place": [
-                "camp/camp"
-            ],
+            "place": ["camp/camp"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -142,16 +91,10 @@
         {
             "chance": 0.5,
             "density": 2,
-            "edit": [
-                {
-                    "find": [
-                        "birch_planks"
-                    ],
-                    "replace": [
-                        "stripped_birch_wood"
-                    ]
-                }
-            ],
+            "edit": [{
+                "find": ["birch_planks"],
+                "replace": ["stripped_birch_wood"]
+            }],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -212,22 +155,43 @@
             }
         }
     ],
-    "wall": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            "STONE",
-            "ANDESITE",
-            "STONE"
-        ]
-    },
-    "generators": [
+    "name": "Birch Denmyre",
+    "layers": [
         {
-            "generator": "plain",
-            "min": 4,
-            "max": 7
+            "style": {"style": "FLAT"},
+            "palette": [{"block": "grass_block"}]
+        },
+        {"palette": [{"block": "dirt"}]},
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [{"block": "coarse_dirt"}]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
+            ]
         }
     ],
-    "derivative": "FOREST"
+    "generators": [{
+        "min": 4,
+        "max": 7,
+        "generator": "plain"
+    }],
+    "loot": {"tables": ["forest-food"]},
+    "derivative": "FOREST",
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {"block": "stone"},
+            {"block": "andesite"},
+            {"block": "stone"}
+        ]
+    },
+    "rarity": 2
 }

@@ -1,133 +1,73 @@
 {
-    "name": "Mushroom Ocean",
-    "layers": [
-        {
-            "minHeight": 2,
-            "maxHeight": 3,
-            "style": {
-                "style": "STATIC"
-            },
-            "zoom": 0.825,
-            "palette": [
-                "CLAY",
-                "COARSE_DIRT",
-                "GRAVEL",
-                "DIRT"
-            ]
-        },
-        {
-            "palette": [
-                "DIRT"
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                "DIRT",
-                "DIRT",
-                "COARSE_DIRT"
-            ]
-        }
-    ],
-    "loot": {
-        "tables": [
-            "ocean-clutter"
-        ]
-    },
     "decorators": [
         {
-            "zoom": 20,
             "chance": 0.06,
-            "palette": [
-                "SEAGRASS"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+            "variance": {"style": "STATIC"},
+            "zoom": 20,
+            "palette": [{"block": "seagrass"}],
+            "style": {"style": "STATIC"}
         },
         {
+            "chance": 6.0E-4,
+            "variance": {"style": "STATIC"},
             "zoom": 1,
-            "chance": 0.0006,
             "palette": [
-                "SOUL_SAND",
-                "MAGMA_BLOCK"
+                {"block": "soul_sand"},
+                {"block": "magma_block"}
             ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+            "style": {"style": "STATIC"}
         },
         {
-            "zoom": 1,
-            "stackMax": 9,
-            "stackMin": 1,
             "chance": 0.1,
-            "palette": [
-                "KELP_PLANT"
-            ],
-            "heightVariance": {
-                "style": "STATIC"
-            },
             "verticalZoom": 20,
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+            "variance": {"style": "STATIC"},
+            "stackMax": 9,
+            "zoom": 1,
+            "palette": [{"block": "kelp_plant"}],
+            "style": {"style": "STATIC"},
+            "heightVariance": {"style": "STATIC"},
+            "stackMin": 1
         },
         {
-            "zoom": 1,
             "chance": 0.005,
+            "variance": {"style": "STATIC"},
+            "zoom": 1,
             "palette": [
-                "minecraft:sea_pickle[pickles=1,waterlogged=true]",
-                "minecraft:sea_pickle[pickles=2,waterlogged=true]",
-                "minecraft:sea_pickle[pickles=3,waterlogged=true]",
-                "minecraft:sea_pickle[pickles=4,waterlogged=true]"
+                {
+                    "data": {
+                        "waterlogged": true,
+                        "pickles": 1
+                    },
+                    "block": "sea_pickle"
+                },
+                {
+                    "data": {
+                        "waterlogged": true,
+                        "pickles": 2
+                    },
+                    "block": "sea_pickle"
+                },
+                {
+                    "data": {
+                        "waterlogged": true,
+                        "pickles": 3
+                    },
+                    "block": "sea_pickle"
+                },
+                {
+                    "data": {
+                        "waterlogged": true,
+                        "pickles": 4
+                    },
+                    "block": "sea_pickle"
+                }
             ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+            "style": {"style": "STATIC"}
         }
     ],
-    "wall": {
-        "style": {
-            "style": "IRIS"
-        },
-        "palette": [
-            "CLAY",
-            "SMOOTH_SANDSTONE",
-            "RED_SAND",
-            "SMOOTH_RED_SANDSTONE",
-            "SMOOTH_SANDSTONE",
-            "SAND",
-            "SMOOTH_RED_SANDSTONE"
-        ]
-    },
-    "slab": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            "minecraft:sandstone_slab[type=bottom,waterlogged=false]",
-            "minecraft:smooth_sandstone_slab[type=bottom,waterlogged=false]",
-            "AIR",
-            "AIR"
-        ]
-    },
     "objects": [
         {
             "chance": 0.01,
-            "underwater": true,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -137,6 +77,7 @@
                 },
                 "enabled": true
             },
+            "underwater": true,
             "place": [
                 "ships/swreck-1",
                 "ships/usd-ship-1",
@@ -150,17 +91,10 @@
         },
         {
             "chance": 0.3,
-            "underwater": true,
-            "edit": [
-                {
-                    "find": [
-                        "SHROOMLIGHT"
-                    ],
-                    "replace": [
-                        "MUSHROOM_STEM"
-                    ]
-                }
-            ],
+            "edit": [{
+                "find": ["SHROOMLIGHT"],
+                "replace": ["MUSHROOM_STEM"]
+            }],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -170,6 +104,7 @@
                 },
                 "enabled": true
             },
+            "underwater": true,
             "place": [
                 "lumoshroom/subnauti-1",
                 "lumoshroom/subnauti-2",
@@ -190,7 +125,6 @@
         },
         {
             "chance": 0.25,
-            "underwater": true,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -200,6 +134,7 @@
                 },
                 "enabled": true
             },
+            "underwater": true,
             "place": [
                 "lumoshroom/subnauti-1",
                 "lumoshroom/subnauti-2",
@@ -219,12 +154,73 @@
             }
         }
     ],
-    "generators": [
+    "name": "Mushroom Ocean",
+    "layers": [
         {
-            "generator": "plain",
-            "min": -41,
-            "max": -7
+            "minHeight": 2,
+            "maxHeight": 3,
+            "style": {"style": "STATIC"},
+            "zoom": 0.825,
+            "palette": [
+                {"block": "clay"},
+                {"block": "coarse_dirt"},
+                {"block": "gravel"},
+                {"block": "dirt"}
+            ]
+        },
+        {"palette": [{"block": "dirt"}]},
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {
+                    "weight": 2,
+                    "block": "dirt"
+                },
+                {"block": "coarse_dirt"}
+            ]
         }
     ],
-    "derivative": "OCEAN"
+    "generators": [{
+        "min": -41,
+        "max": -7,
+        "generator": "plain"
+    }],
+    "loot": {"tables": ["ocean-clutter"]},
+    "derivative": "OCEAN",
+    "wall": {
+        "style": {"style": "IRIS"},
+        "palette": [
+            {"block": "clay"},
+            {"block": "smooth_sandstone"},
+            {"block": "red_sand"},
+            {"block": "smooth_red_sandstone"},
+            {"block": "smooth_sandstone"},
+            {"block": "sand"},
+            {"block": "smooth_red_sandstone"}
+        ]
+    },
+    "slab": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "sandstone_slab"
+            },
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "smooth_sandstone_slab"
+            },
+            {
+                "weight": 2,
+                "block": "air"
+            }
+        ]
+    }
 }

@@ -1,73 +1,85 @@
 {
+    "effects": [{
+        "particleAltX": 0.001,
+        "particleAltY": 0.13885,
+        "particleAltZ": 0.001,
+        "chance": 1,
+        "particleEffect": "CAMPFIRE_SIGNAL_SMOKE",
+        "particleOffset": 0,
+        "interval": 150,
+        "particleCount": 0
+    }],
     "name": "Submerged Volcanic",
     "layers": [
         {
-            "style": {
-                "style": "STATIC"
-            },
-            "zoom": 0.33,
-            "maxHeight": 4,
             "minHeight": 2,
+            "maxHeight": 4,
+            "style": {"style": "STATIC"},
+            "zoom": 0.33,
             "palette": [
-                "minecraft:basalt[axis=x]",
-                "minecraft:basalt[axis=y]",
-                "minecraft:basalt[axis=z]",
-                "MAGMA_BLOCK",
-                "minecraft:basalt[axis=x]",
-                "minecraft:basalt[axis=y]",
-                "minecraft:basalt[axis=z]"
+                {
+                    "data": {"axis": "x"},
+                    "block": "basalt"
+                },
+                {
+                    "data": {"axis": "y"},
+                    "block": "basalt"
+                },
+                {
+                    "data": {"axis": "z"},
+                    "block": "basalt"
+                },
+                {"block": "magma_block"},
+                {
+                    "data": {"axis": "x"},
+                    "block": "basalt"
+                },
+                {
+                    "data": {"axis": "y"},
+                    "block": "basalt"
+                },
+                {
+                    "data": {"axis": "z"},
+                    "block": "basalt"
+                }
             ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
+            "style": {"style": "STATIC"},
             "palette": [
-                "STONE",
-                "ANDESITE",
-                "STONE"
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
             ]
         }
     ],
-    "effects": [
-        {
-            "interval": 150,
-            "particleOffset": 0,
-            "particleEffect": "CAMPFIRE_SIGNAL_SMOKE",
-            "particleCount": 0,
-            "particleAltX": 0.001,
-            "particleAltY": 0.13885,
-            "particleAltZ": 0.001,
-            "chance": 1
-        }
-    ],
-    "slab": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            "minecraft:blackstone_slab[type=bottom,waterlogged=false]",
-            "AIR"
-        ]
-    },
     "generators": [
         {
-            "generator": "sharp",
             "min": -12,
-            "max": 5
+            "max": 5,
+            "generator": "sharp"
         },
         {
-            "generator": "plain",
             "min": -12,
-            "max": -9
+            "max": -9,
+            "generator": "plain"
         }
     ],
-    "loot": {
-        "tables": [
-            "ocean-clutter"
+    "loot": {"tables": ["ocean-clutter"]},
+    "derivative": "WARM_OCEAN",
+    "slab": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "blackstone_slab"
+            },
+            {"block": "air"}
         ]
-    },
-    "derivative": "WARM_OCEAN"
+    }
 }

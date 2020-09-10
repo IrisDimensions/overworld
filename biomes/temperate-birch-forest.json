@@ -1,143 +1,11 @@
 {
-    "name": "Birch Forest",
-    "layers": [
-        {
-            "style": {
-                "style": "STATIC"
-            },
-            "zoom": 0.656,
-            "palette": [
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRAVEL",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK"
-            ]
-        },
-        {
-            "palette": [
-                "DIRT"
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                "DIRT",
-                "COARSE_DIRT"
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                "STONE",
-                "ANDESITE",
-                "STONE"
-            ]
-        }
-    ],
-    "loot": {
-        "tables": [
-            "forest-food"
-        ]
-    },
-    "wall": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            "STONE",
-            "ANDESITE",
-            "STONE"
-        ]
-    },
-    "decorators": [
-        {
-            "zoom": 0.1,
-            "chance": 0.09,
-            "palette": [
-                "GRASS",
-                "ALLIUM",
-                "POPPY",
-                "DANDELION",
-                "AZURE_BLUET",
-                "PINK_TULIP",
-                "LILY_OF_THE_VALLEY"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 0.3,
-            "chance": 0.4,
-            "palette": [
-                "GRASS"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 0.3,
-            "chance": 0.017,
-            "palette": [
-                "TALL_GRASS"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        }
+    "biomeSkyScatter": [
+        "FOREST",
+        "JUNGLE"
     ],
     "objects": [
         {
+            "mode": "PAINT",
             "chance": 0.0025,
             "rotation": {
                 "yAxis": {
@@ -148,10 +16,7 @@
                 },
                 "enabled": true
             },
-            "mode": "PAINT",
-            "place": [
-                "camp/barrel-bin"
-            ],
+            "place": ["camp/barrel-bin"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -159,6 +24,7 @@
             }
         },
         {
+            "mode": "PAINT",
             "chance": 0.00375,
             "rotation": {
                 "yAxis": {
@@ -169,10 +35,7 @@
                 },
                 "enabled": true
             },
-            "mode": "PAINT",
-            "place": [
-                "camp/camp"
-            ],
+            "place": ["camp/camp"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -259,27 +122,94 @@
             }
         }
     ],
-    "generators": [
+    "biomeZoom": 60,
+    "derivative": "PLAINS",
+    "biomeStyle": {"style": "IRIS"},
+    "decorators": [
         {
-            "generator": "plain",
-            "min": 4,
-            "max": 7
+            "chance": 0.09,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.1,
+            "palette": [
+                {"block": "grass"},
+                {"block": "allium"},
+                {"block": "poppy"},
+                {"block": "dandelion"},
+                {"block": "azure_bluet"},
+                {"block": "pink_tulip"},
+                {"block": "lily_of_the_valley"}
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.4,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [{"block": "grass"}],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.017,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [{"block": "tall_grass"}],
+            "style": {"style": "STATIC"}
         }
     ],
-    "derivative": "PLAINS",
-    "biomeStyle": {
-        "style": "IRIS"
+    "children": ["temperate-birch-denmyre"],
+    "name": "Birch Forest",
+    "layers": [
+        {
+            "style": {"style": "STATIC"},
+            "zoom": 0.656,
+            "palette": [
+                {
+                    "weight": 19,
+                    "block": "grass_block"
+                },
+                {"block": "gravel"},
+                {
+                    "weight": 19,
+                    "block": "grass_block"
+                }
+            ]
+        },
+        {"palette": [{"block": "dirt"}]},
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {"block": "dirt"},
+                {"block": "coarse_dirt"}
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
+            ]
+        }
+    ],
+    "generators": [{
+        "min": 4,
+        "max": 7,
+        "generator": "plain"
+    }],
+    "loot": {"tables": ["forest-food"]},
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {"block": "stone"},
+            {"block": "andesite"},
+            {"block": "stone"}
+        ]
     },
-    "biomeZoom": 60,
     "biomeScatter": [
         "FOREST",
         "PLAINS"
-    ],
-    "biomeSkyScatter": [
-        "FOREST",
-        "JUNGLE"
-    ],
-    "children": [
-        "temperate-birch-denmyre"
     ]
 }

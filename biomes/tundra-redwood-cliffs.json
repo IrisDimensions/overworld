@@ -1,49 +1,70 @@
 {
-    "name": "Redwood Cliffs",
-    "rarity": 6,
-    "layers": [
+    "decorators": [
         {
-            "style": {
-                "style": "IRIS_DOUBLE",
-                "fracture": {
-                    "style": "IRIS",
-                    "zoom": 0.2
+            "chance": 0.009,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "east"
+                    },
+                    "block": "stone_button"
+                },
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "south"
+                    },
+                    "block": "stone_button"
                 }
-            },
-            "zoom": 0.2,
-            "palette": [
-                "PODZOL"
-            ]
+            ],
+            "style": {"style": "STATIC"}
         },
         {
-            "minHeight": 2,
-            "maxHeight": 4,
+            "chance": 0.003,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.02,
             "palette": [
-                "DIRT",
-                "COARSE_DIRT"
-            ]
+                {"block": "white_tulip"},
+                {"block": "cornflower"},
+                {"block": "blue_orchid"},
+                {"block": "lily_of_the_valley"}
+            ],
+            "style": {"style": "STATIC"}
         },
         {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                "STONE",
-                "ANDESITE",
-                "STONE"
-            ]
+            "chance": 0.00145,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [{"block": "fern"}],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.015,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [{"block": "orange_tulip"}],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.01,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [{"block": "dead_bush"}],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.01,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [{"block": "poppy"}],
+            "style": {"style": "STATIC"}
         }
     ],
-    "wall": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            "COARSE_DIRT"
-        ]
-    },
     "objects": [
         {
             "chance": 0.7,
@@ -102,16 +123,10 @@
         },
         {
             "chance": 0.75,
-            "edit": [
-                {
-                    "find": [
-                        "OAK_LEAVES"
-                    ],
-                    "replace": [
-                        "minecraft:birch_leaves[persistent=true]"
-                    ]
-                }
-            ],
+            "edit": [{
+                "find": ["OAK_LEAVES"],
+                "replace": ["minecraft:birch_leaves[persistent=true]"]
+            }],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -220,101 +235,54 @@
             }
         }
     ],
-    "decorators": [
+    "name": "Redwood Cliffs",
+    "layers": [
         {
-            "zoom": 0.3,
-            "chance": 0.009,
-            "palette": [
-                "minecraft:stone_button[face=floor,facing=east,powered=false]",
-                "minecraft:stone_button[face=floor,facing=south,powered=false]"
-            ],
             "style": {
-                "style": "STATIC"
+                "style": "IRIS_DOUBLE",
+                "fracture": {
+                    "style": "IRIS",
+                    "zoom": 0.2
+                }
             },
-            "variance": {
-                "style": "STATIC"
-            }
+            "zoom": 0.2,
+            "palette": [{"block": "podzol"}]
         },
         {
-            "zoom": 0.02,
-            "chance": 0.003,
+            "minHeight": 2,
+            "maxHeight": 4,
             "palette": [
-                "WHITE_TULIP",
-                "CORNFLOWER",
-                "BLUE_ORCHID",
-                "LILY_OF_THE_VALLEY"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+                {"block": "dirt"},
+                {"block": "coarse_dirt"}
+            ]
         },
         {
-            "zoom": 0.3,
-            "chance": 0.00145,
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
             "palette": [
-                "FERN"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 0.3,
-            "chance": 0.015,
-            "palette": [
-                "ORANGE_TULIP"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 0.3,
-            "chance": 0.01,
-            "palette": [
-                "DEAD_BUSH"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 0.3,
-            "chance": 0.01,
-            "palette": [
-                "POPPY"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
+            ]
         }
     ],
     "generators": [
         {
-            "generator": "plain",
             "min": 11,
-            "max": 32
+            "max": 32,
+            "generator": "plain"
         },
         {
-            "generator": "mountain-cliffs",
             "min": 12,
-            "max": 62
+            "max": 62,
+            "generator": "mountain-cliffs"
         }
     ],
-    "derivative": "TAIGA"
+    "derivative": "TAIGA",
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [{"block": "coarse_dirt"}]
+    },
+    "rarity": 6
 }

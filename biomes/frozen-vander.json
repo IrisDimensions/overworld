@@ -1,81 +1,7 @@
 {
-    "name": "Frozen Vander",
-    "layers": [
-        {
-            "minHeight": 1,
-            "maxHeight": 1,
-            "style": {
-                "style": "IRIS",
-                "zoom": 0.7
-            },
-            "zoom": 0.6,
-            "palette": [
-                "minecraft:snow[layers=1]",
-                "minecraft:snow[layers=2]",
-                "minecraft:snow[layers=3]",
-                "minecraft:snow[layers=4]",
-                "minecraft:snow[layers=5]",
-                "minecraft:snow[layers=6]",
-                "minecraft:snow[layers=7]",
-                "minecraft:snow[layers=8]"
-            ]
-        },
-        {
-            "maxHeight": 3,
-            "palette": [
-                "SNOW_BLOCK"
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 4,
-            "palette": [
-                "PACKED_ICE"
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                "STONE",
-                "ANDESITE",
-                "STONE"
-            ]
-        }
-    ],
-    "wall": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            "STONE",
-            "ANDESITE",
-            "STONE"
-        ]
-    },
-    "decorators": [
-        {
-            "palette": [
-                "minecraft:snow[layers=1]",
-                "minecraft:snow[layers=2]",
-                "minecraft:snow[layers=3]",
-                "minecraft:snow[layers=4]"
-            ],
-            "chance": 1,
-            "variance": {
-                "style": "IRIS",
-                "zoom": 0.2
-            }
-        }
-    ],
-    "children": [
-        "frozen-peak",
-        "frozen-mountains",
-        "frozen-mountains",
-        "frozen-mountains"
+    "biomeSkyScatter": [
+        "SNOWY_TAIGA",
+        "SNOWY_MOUNTAINS"
     ],
     "objects": [
         {
@@ -186,6 +112,7 @@
         {
             "chance": 0.05,
             "density": 3,
+            "snow": 0.35,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -195,7 +122,6 @@
                 },
                 "enabled": true
             },
-            "snow": 0.35,
             "place": [
                 "ice-spikes/ice-spec-1",
                 "ice-spikes/ice-spec-2",
@@ -210,32 +136,130 @@
             }
         }
     ],
-    "generators": [
+    "biomeZoom": 50,
+    "derivative": "SNOWY_TAIGA_MOUNTAINS",
+    "biomeStyle": {"style": "IRIS"},
+    "decorators": [{
+        "chance": 1,
+        "variance": {
+            "style": "IRIS",
+            "zoom": 0.2
+        },
+        "palette": [
+            {
+                "data": {"layers": 1},
+                "block": "snow"
+            },
+            {
+                "data": {"layers": 2},
+                "block": "snow"
+            },
+            {
+                "data": {"layers": 3},
+                "block": "snow"
+            },
+            {
+                "data": {"layers": 4},
+                "block": "snow"
+            }
+        ]
+    }],
+    "children": [
+        "frozen-peak",
+        "frozen-mountains",
+        "frozen-mountains",
+        "frozen-mountains"
+    ],
+    "name": "Frozen Vander",
+    "layers": [
         {
-            "generator": "plain",
-            "min": 3,
-            "max": 16
+            "minHeight": 1,
+            "maxHeight": 1,
+            "style": {
+                "style": "IRIS",
+                "zoom": 0.7
+            },
+            "zoom": 0.6,
+            "palette": [
+                {
+                    "data": {"layers": 1},
+                    "block": "snow"
+                },
+                {
+                    "data": {"layers": 2},
+                    "block": "snow"
+                },
+                {
+                    "data": {"layers": 3},
+                    "block": "snow"
+                },
+                {
+                    "data": {"layers": 4},
+                    "block": "snow"
+                },
+                {
+                    "data": {"layers": 5},
+                    "block": "snow"
+                },
+                {
+                    "data": {"layers": 6},
+                    "block": "snow"
+                },
+                {
+                    "data": {"layers": 7},
+                    "block": "snow"
+                },
+                {
+                    "data": {"layers": 8},
+                    "block": "snow"
+                }
+            ]
         },
         {
-            "generator": "mountain",
+            "maxHeight": 3,
+            "palette": [{"block": "snow_block"}]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "palette": [{"block": "packed_ice"}]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
+            ]
+        }
+    ],
+    "generators": [
+        {
+            "min": 3,
+            "max": 16,
+            "generator": "plain"
+        },
+        {
             "min": 13,
-            "max": 44
+            "max": 44,
+            "generator": "mountain"
         }
     ],
     "childShrinkFactor": 20,
-    "derivative": "SNOWY_TAIGA_MOUNTAINS",
-    "biomeStyle": {
-        "style": "IRIS"
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {"block": "stone"},
+            {"block": "andesite"},
+            {"block": "stone"}
+        ]
     },
-    "biomeZoom": 50,
     "biomeScatter": [
         "SNOWY_TAIGA_MOUNTAINS",
         "TAIGA_HILLS",
         "MOUNTAINS",
         "ICE_SPIKES"
-    ],
-    "biomeSkyScatter": [
-        "SNOWY_TAIGA",
-        "SNOWY_MOUNTAINS"
     ]
 }

@@ -1,37 +1,93 @@
 {
-    "name": "Coral Cavern",
-    "rarity": 2,
-    "layers": [
+    "entitySpawnOverrides": [{
+        "trigger": "SKELETON",
+        "entity": "shroud",
+        "cancelSourceSpawn": true,
+        "rarity": 12
+    }],
+    "decorators": [
         {
-            "maxHeight": 3,
-            "style": {
-                "style": "STATIC"
-            },
-            "zoom": 0.1,
-            "minHeight": 2,
+            "chance": 1.0E-4,
+            "palette": [{"block": "barrel"}]
+        },
+        {
+            "chance": 0.02,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
             "palette": [
-                "DEAD_BRAIN_CORAL_BLOCK",
-                "DEAD_BRAIN_CORAL_BLOCK",
-                "DEAD_BRAIN_CORAL_BLOCK",
-                "DEAD_TUBE_CORAL_BLOCK",
-                "DEAD_BRAIN_CORAL_BLOCK",
-                "DEAD_FIRE_CORAL_BLOCK"
-            ]
-        }
-    ],
-    "entitySpawnOverrides": [
+                {
+                    "data": {
+                        "waterlogged": false,
+                        "pickles": 1
+                    },
+                    "block": "sea_pickle"
+                },
+                {
+                    "data": {
+                        "waterlogged": false,
+                        "pickles": 2
+                    },
+                    "block": "sea_pickle"
+                },
+                {
+                    "data": {
+                        "waterlogged": false,
+                        "pickles": 3
+                    },
+                    "block": "sea_pickle"
+                }
+            ],
+            "style": {"style": "STATIC"}
+        },
         {
-            "rarity": 12,
-            "entity": "shroud",
-            "cancelSourceSpawn": true,
-            "trigger": "SKELETON"
+            "chance": 0.21,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "data": {"waterlogged": false},
+                    "block": "dead_brain_coral"
+                },
+                {
+                    "data": {"waterlogged": false},
+                    "block": "dead_bubble_coral"
+                },
+                {
+                    "data": {"waterlogged": false},
+                    "block": "dead_fire_coral"
+                },
+                {
+                    "data": {"waterlogged": false},
+                    "block": "dead_horn_coral"
+                },
+                {
+                    "data": {"waterlogged": false},
+                    "block": "dead_tube_coral"
+                },
+                {
+                    "data": {"waterlogged": false},
+                    "block": "dead_brain_coral_fan"
+                },
+                {
+                    "data": {"waterlogged": false},
+                    "block": "dead_bubble_coral_fan"
+                },
+                {
+                    "data": {"waterlogged": false},
+                    "block": "dead_fire_coral_fan"
+                },
+                {
+                    "data": {"waterlogged": false},
+                    "block": "dead_horn_coral_fan"
+                },
+                {
+                    "data": {"waterlogged": false},
+                    "block": "dead_tube_coral_fan"
+                }
+            ],
+            "style": {"style": "STATIC"}
         }
     ],
-    "loot": {
-        "tables": [
-            "cave-clutter"
-        ]
-    },
     "objects": [
         {
             "chance": 0.00175,
@@ -44,9 +100,7 @@
                 },
                 "enabled": true
             },
-            "place": [
-                "camp/camp"
-            ],
+            "place": ["camp/camp"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -54,6 +108,7 @@
             }
         },
         {
+            "mode": "PAINT",
             "chance": 0.005,
             "rotation": {
                 "yAxis": {
@@ -64,10 +119,7 @@
                 },
                 "enabled": true
             },
-            "mode": "PAINT",
-            "place": [
-                "camp/barrel-bin"
-            ],
+            "place": ["camp/barrel-bin"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -109,73 +161,51 @@
             }
         }
     ],
-    "slab": {
-        "style": {
-            "style": "STATIC"
-        },
+    "name": "Coral Cavern",
+    "layers": [{
+        "minHeight": 2,
+        "maxHeight": 3,
+        "style": {"style": "STATIC"},
+        "zoom": 0.1,
         "palette": [
-            "minecraft:stone_slab[type=bottom,waterlogged=false]",
-            "minecraft:polished_diorite_slab[type=bottom,waterlogged=false]",
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR"
+            {
+                "weight": 3,
+                "block": "dead_brain_coral_block"
+            },
+            {"block": "dead_tube_coral_block"},
+            {"block": "dead_brain_coral_block"},
+            {"block": "dead_fire_coral_block"}
         ]
-    },
-    "decorators": [
-        {
-            "chance": 0.0001,
-            "palette": [
-                "BARREL"
-            ]
-        },
-        {
-            "zoom": 0.3,
-            "chance": 0.02,
-            "palette": [
-                "minecraft:sea_pickle[pickles=1,waterlogged=false]",
-                "minecraft:sea_pickle[pickles=2,waterlogged=false]",
-                "minecraft:sea_pickle[pickles=3,waterlogged=false]"
-            ],
-            "style": {
-                "style": "STATIC"
+    }],
+    "generators": [{
+        "min": 4,
+        "max": 6,
+        "generator": "plain"
+    }],
+    "loot": {"tables": ["cave-clutter"]},
+    "derivative": "FOREST",
+    "rarity": 2,
+    "slab": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "stone_slab"
             },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 0.3,
-            "chance": 0.21,
-            "palette": [
-                "minecraft:dead_brain_coral[waterlogged=false]",
-                "minecraft:dead_bubble_coral[waterlogged=false]",
-                "minecraft:dead_fire_coral[waterlogged=false]",
-                "minecraft:dead_horn_coral[waterlogged=false]",
-                "minecraft:dead_tube_coral[waterlogged=false]",
-                "minecraft:dead_brain_coral_fan[waterlogged=false]",
-                "minecraft:dead_bubble_coral_fan[waterlogged=false]",
-                "minecraft:dead_fire_coral_fan[waterlogged=false]",
-                "minecraft:dead_horn_coral_fan[waterlogged=false]",
-                "minecraft:dead_tube_coral_fan[waterlogged=false]"
-            ],
-            "style": {
-                "style": "STATIC"
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "polished_diorite_slab"
             },
-            "variance": {
-                "style": "STATIC"
+            {
+                "weight": 7,
+                "block": "air"
             }
-        }
-    ],
-    "generators": [
-        {
-            "generator": "plain",
-            "min": 4,
-            "max": 6
-        }
-    ],
-    "derivative": "FOREST"
+        ]
+    }
 }

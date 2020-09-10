@@ -1,95 +1,57 @@
 {
-    "name": "Sandstone Caverns",
-    "layers": [
-        {
-            "minHeight": 1,
-            "maxHeight": 2,
-            "palette": [
-                "SMOOTH_SANDSTONE"
-            ]
-        }
-    ],
-    "slab": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            "minecraft:sandstone_slab[type=bottom,waterlogged=false]",
-            "minecraft:smooth_sandstone_slab[type=bottom,waterlogged=false]",
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR"
-        ]
-    },
-    "entitySpawnOverrides": [
-        {
-            "rarity": 12,
-            "entity": "shroud",
-            "cancelSourceSpawn": true,
-            "trigger": "SKELETON"
-        }
-    ],
+    "entitySpawnOverrides": [{
+        "trigger": "SKELETON",
+        "entity": "shroud",
+        "cancelSourceSpawn": true,
+        "rarity": 12
+    }],
     "decorators": [
         {
-            "chance": 0.0001,
-            "palette": [
-                "BARREL"
-            ]
+            "chance": 1.0E-4,
+            "palette": [{"block": "barrel"}]
         },
         {
             "verticalZoom": 20,
-            "heightVariance": {
-                "style": "IRIS"
-            },
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            },
-            "stackMin": 1,
-            "stackMax": 2,
             "chance": 0.01,
-            "palette": [
-                "CACTUS"
-            ]
+            "variance": {"style": "STATIC"},
+            "stackMax": 2,
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "cactus"}],
+            "heightVariance": {"style": "IRIS"},
+            "stackMin": 1
         },
         {
-            "zoom": 0.3,
             "chance": 0.0235,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
             "palette": [
-                "minecraft:polished_blackstone_button[face=floor,facing=east,powered=false]",
-                "minecraft:polished_blackstone_button[face=floor,facing=south,powered=false]"
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "east"
+                    },
+                    "block": "polished_blackstone_button"
+                },
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "south"
+                    },
+                    "block": "polished_blackstone_button"
+                }
             ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+            "style": {"style": "STATIC"}
         },
         {
-            "zoom": 0.3,
             "chance": 0.012,
-            "palette": [
-                "DEAD_BUSH"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [{"block": "dead_bush"}],
+            "style": {"style": "STATIC"}
         }
     ],
-    "loot": {
-        "tables": [
-            "cave-clutter",
-            "cactus-clutter"
-        ]
-    },
     "objects": [
         {
             "chance": 0.15,
@@ -116,7 +78,7 @@
             }
         },
         {
-            "chance": 0.000856,
+            "chance": 8.56E-4,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -126,9 +88,7 @@
                 },
                 "enabled": true
             },
-            "place": [
-                "grave/grave"
-            ],
+            "place": ["grave/grave"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -136,12 +96,43 @@
             }
         }
     ],
-    "generators": [
-        {
-            "generator": "plain",
-            "min": 4,
-            "max": 6
-        }
-    ],
-    "derivative": "DESERT"
+    "name": "Sandstone Caverns",
+    "layers": [{
+        "minHeight": 1,
+        "maxHeight": 2,
+        "palette": [{"block": "smooth_sandstone"}]
+    }],
+    "generators": [{
+        "min": 4,
+        "max": 6,
+        "generator": "plain"
+    }],
+    "loot": {"tables": [
+        "cave-clutter",
+        "cactus-clutter"
+    ]},
+    "derivative": "DESERT",
+    "slab": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "sandstone_slab"
+            },
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "smooth_sandstone_slab"
+            },
+            {
+                "weight": 5,
+                "block": "air"
+            }
+        ]
+    }
 }

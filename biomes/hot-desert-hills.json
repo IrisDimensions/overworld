@@ -1,45 +1,56 @@
 {
-    "name": "Desert Hills",
-    "layers": [
+    "decorators": [
         {
-            "palette": [
-                "SAND"
-            ]
+            "verticalZoom": 5,
+            "chance": 0.003,
+            "variance": {"style": "STATIC"},
+            "stackMax": 5,
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "cactus"}],
+            "heightVariance": {"style": "IRIS"},
+            "stackMin": 1
         },
         {
-            "minHeight": 2,
-            "maxHeight": 9,
+            "chance": 0.00135,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
             "palette": [
-                "SANDSTONE"
-            ]
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "east"
+                    },
+                    "block": "polished_blackstone_button"
+                },
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "south"
+                    },
+                    "block": "polished_blackstone_button"
+                }
+            ],
+            "style": {"style": "STATIC"}
         },
         {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                "STONE",
-                "ANDESITE",
-                "STONE"
-            ]
+            "chance": 0.01,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [{"block": "dead_bush"}],
+            "style": {"style": "STATIC"}
         }
     ],
-    "loot": {
-        "tables": [
-            "cactus-clutter"
-        ]
-    },
     "objects": [
         {
+            "chance": 0.001,
+            "density": 3,
             "place": [
                 "clutter/desert-post1",
                 "clutter/desert-post2",
                 "clutter/desert-post3"
-            ],
-            "chance": 0.001,
-            "density": 3
+            ]
         },
         {
             "chance": 0.15,
@@ -66,80 +77,61 @@
             }
         }
     ],
-    "wall": {
-        "style": {
-            "style": "STATIC"
+    "name": "Desert Hills",
+    "layers": [
+        {"palette": [{"block": "sand"}]},
+        {
+            "minHeight": 2,
+            "maxHeight": 9,
+            "palette": [{"block": "sandstone"}]
         },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
+            ]
+        }
+    ],
+    "generators": [{
+        "min": 5,
+        "max": 9,
+        "generator": "plain"
+    }],
+    "loot": {"tables": ["cactus-clutter"]},
+    "derivative": "DESERT",
+    "wall": {
+        "style": {"style": "STATIC"},
         "palette": [
-            "SMOOTH_SANDSTONE",
-            "SAND",
-            "SMOOTH_SANDSTONE"
+            {"block": "smooth_sandstone"},
+            {"block": "sand"},
+            {"block": "smooth_sandstone"}
         ]
     },
     "slab": {
-        "style": {
-            "style": "STATIC"
-        },
+        "style": {"style": "STATIC"},
         "palette": [
-            "minecraft:sandstone_slab[type=bottom,waterlogged=false]",
-            "minecraft:smooth_sandstone_slab[type=bottom,waterlogged=false]",
-            "AIR",
-            "AIR"
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "sandstone_slab"
+            },
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "smooth_sandstone_slab"
+            },
+            {
+                "weight": 2,
+                "block": "air"
+            }
         ]
-    },
-    "decorators": [
-        {
-            "verticalZoom": 5,
-            "heightVariance": {
-                "style": "IRIS"
-            },
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            },
-            "stackMin": 1,
-            "stackMax": 5,
-            "chance": 0.003,
-            "palette": [
-                "CACTUS"
-            ]
-        },
-        {
-            "zoom": 0.3,
-            "chance": 0.00135,
-            "palette": [
-                "minecraft:polished_blackstone_button[face=floor,facing=east,powered=false]",
-                "minecraft:polished_blackstone_button[face=floor,facing=south,powered=false]"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "zoom": 0.3,
-            "chance": 0.01,
-            "palette": [
-                "DEAD_BUSH"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        }
-    ],
-    "generators": [
-        {
-            "generator": "plain",
-            "min": 5,
-            "max": 9
-        }
-    ],
-    "derivative": "DESERT"
+    }
 }

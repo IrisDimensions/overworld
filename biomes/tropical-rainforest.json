@@ -1,53 +1,73 @@
 {
-    "name": "Rainforest",
-    "rarity": 2,
-    "layers": [
-        {
-            "style": {
-                "style": "FRACTAL_BILLOW_IRIS"
-            },
-            "zoom": 0.6,
-            "palette": [
-                "GRASS_BLOCK",
-                "minecraft:jungle_leaves[persistent=true]",
-                "GRASS_BLOCK",
-                "GRASS_BLOCK"
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 4,
-            "palette": [
-                "DIRT"
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                "STONE",
-                "ANDESITE",
-                "STONE"
-            ]
-        }
+    "effects": [{
+        "particleAltX": 0.301,
+        "particleAltY": -0.33885,
+        "particleAltZ": 0.301,
+        "chance": 1,
+        "particleEffect": "TOTEM",
+        "particleOffset": 12,
+        "interval": 550,
+        "particleCount": 0
+    }],
+    "children": [
+        "tropical-rainforest-hills",
+        "tropical-jungle-denmyre"
     ],
-    "effects": [
+    "decorators": [
         {
-            "interval": 550,
-            "particleOffset": 12,
-            "particleEffect": "TOTEM",
-            "particleCount": 0,
-            "particleAltX": 0.301,
-            "particleAltY": -0.33885,
-            "particleAltZ": 0.301,
-            "chance": 1
+            "chance": 0.45,
+            "variance": {"style": "IRIS"},
+            "zoom": 0.1,
+            "palette": [
+                {
+                    "data": {"persistent": true},
+                    "block": "jungle_leaves"
+                },
+                {"block": "tall_grass"},
+                {"block": "grass"},
+                {
+                    "data": {"persistent": true},
+                    "block": "jungle_leaves"
+                },
+                {"block": "grass"},
+                {
+                    "data": {"persistent": true},
+                    "block": "jungle_leaves"
+                }
+            ],
+            "style": {
+                "style": "FRACTAL_BILLOW_IRIS",
+                "fracture": {"style": "STATIC"}
+            }
+        },
+        {
+            "chance": 0.1,
+            "verticalZoom": 88,
+            "variance": {"style": "IRIS"},
+            "zoom": 10,
+            "palette": [{
+                "weight": 3,
+                "block": "jungle_wood"
+            }],
+            "style": {"style": "STATIC"},
+            "heightVariance": {"style": "IRIS"}
+        },
+        {
+            "chance": 0.5,
+            "verticalZoom": 88,
+            "variance": {"style": "STATIC"},
+            "zoom": 10,
+            "palette": [
+                {"block": "grass"},
+                {"block": "tall_grass"}
+            ],
+            "style": {"style": "STATIC"},
+            "heightVariance": {"style": "STATIC"}
         }
     ],
     "objects": [
         {
+            "mode": "PAINT",
             "chance": 0.0025,
             "rotation": {
                 "yAxis": {
@@ -58,10 +78,7 @@
                 },
                 "enabled": true
             },
-            "mode": "PAINT",
-            "place": [
-                "camp/barrel-bin"
-            ],
+            "place": ["camp/barrel-bin"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -79,9 +96,7 @@
                 },
                 "enabled": true
             },
-            "place": [
-                "camp/camp"
-            ],
+            "place": ["camp/camp"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -194,91 +209,66 @@
             }
         }
     ],
-    "wall": {
-        "style": {
-            "style": "IRIS"
+    "name": "Rainforest",
+    "layers": [
+        {
+            "style": {"style": "FRACTAL_BILLOW_IRIS"},
+            "zoom": 0.6,
+            "palette": [
+                {"block": "grass_block"},
+                {
+                    "data": {"persistent": true},
+                    "block": "jungle_leaves"
+                },
+                {
+                    "weight": 2,
+                    "block": "grass_block"
+                }
+            ]
         },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "palette": [{"block": "dirt"}]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
+            ]
+        }
+    ],
+    "generators": [{
+        "min": 3,
+        "max": 9,
+        "generator": "sharp"
+    }],
+    "derivative": "JUNGLE",
+    "wall": {
+        "style": {"style": "IRIS"},
         "zoom": 0.1,
         "palette": [
-            "STRIPPED_JUNGLE_WOOD",
-            "minecraft:jungle_leaves[persistent=true]",
-            "STRIPPED_JUNGLE_WOOD",
-            "minecraft:jungle_leaves[persistent=true]",
-            "STRIPPED_JUNGLE_WOOD",
-            "minecraft:jungle_leaves[persistent=true]",
-            "STRIPPED_JUNGLE_WOOD"
+            {"block": "stripped_jungle_wood"},
+            {
+                "data": {"persistent": true},
+                "block": "jungle_leaves"
+            },
+            {"block": "stripped_jungle_wood"},
+            {
+                "data": {"persistent": true},
+                "block": "jungle_leaves"
+            },
+            {"block": "stripped_jungle_wood"},
+            {
+                "data": {"persistent": true},
+                "block": "jungle_leaves"
+            },
+            {"block": "stripped_jungle_wood"}
         ]
     },
-    "children": [
-        "tropical-rainforest-hills",
-        "tropical-jungle-denmyre"
-    ],
-    "generators": [
-        {
-            "generator": "sharp",
-            "min": 3,
-            "max": 9
-        }
-    ],
-    "decorators": [
-        {
-            "zoom": 0.1,
-            "chance": 0.45,
-            "palette": [
-                "minecraft:jungle_leaves[persistent=true]",
-                "TALL_GRASS",
-                "GRASS",
-                "minecraft:jungle_leaves[persistent=true]",
-                "GRASS",
-                "minecraft:jungle_leaves[persistent=true]"
-            ],
-            "style": {
-                "style": "FRACTAL_BILLOW_IRIS",
-                "fracture": {
-                    "style": "STATIC"
-                }
-            },
-            "variance": {
-                "style": "IRIS"
-            }
-        },
-        {
-            "zoom": 10,
-            "chance": 0.1,
-            "palette": [
-                "JUNGLE_WOOD",
-                "JUNGLE_WOOD",
-                "JUNGLE_WOOD"
-            ],
-            "heightVariance": {
-                "style": "IRIS"
-            },
-            "verticalZoom": 88,
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "IRIS"
-            }
-        },
-        {
-            "zoom": 10,
-            "chance": 0.5,
-            "palette": [
-                "GRASS",
-                "TALL_GRASS"
-            ],
-            "heightVariance": {
-                "style": "STATIC"
-            },
-            "verticalZoom": 88,
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
-        }
-    ],
-    "derivative": "JUNGLE"
+    "rarity": 2
 }

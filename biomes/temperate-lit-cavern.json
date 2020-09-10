@@ -1,18 +1,16 @@
 {
-    "name": "Lit Cavern",
-    "rarity": 6,
-    "layers": [
+    "decorators": [
         {
-            "maxHeight": 2,
-            "style": {
-                "style": "STATIC"
-            },
-            "zoom": 0.1,
-            "minHeight": 1,
-            "palette": [
-                "STONE",
-                "ANDESITE"
-            ]
+            "chance": 1.0E-4,
+            "palette": [{"block": "barrel"}]
+        },
+        {
+            "chance": 0.008,
+            "palette": [{"block": "andesite_wall"}]
+        },
+        {
+            "chance": 0.002,
+            "palette": [{"block": "torch"}]
         }
     ],
     "objects": [
@@ -27,9 +25,7 @@
                 },
                 "enabled": true
             },
-            "place": [
-                "camp/camp"
-            ],
+            "place": ["camp/camp"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -37,6 +33,7 @@
             }
         },
         {
+            "mode": "PAINT",
             "chance": 0.005,
             "rotation": {
                 "yAxis": {
@@ -47,10 +44,7 @@
                 },
                 "enabled": true
             },
-            "mode": "PAINT",
-            "place": [
-                "camp/barrel-bin"
-            ],
+            "place": ["camp/barrel-bin"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -92,53 +86,46 @@
             }
         }
     ],
-    "loot": {
-        "tables": [
-            "cave-clutter"
-        ]
-    },
-    "slab": {
-        "style": {
-            "style": "STATIC"
-        },
+    "name": "Lit Cavern",
+    "layers": [{
+        "minHeight": 1,
+        "maxHeight": 2,
+        "style": {"style": "STATIC"},
+        "zoom": 0.1,
         "palette": [
-            "minecraft:cobblestone_slab[type=bottom,waterlogged=false]",
-            "minecraft:mossy_cobblestone_slab[type=bottom,waterlogged=false]",
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR"
+            {"block": "stone"},
+            {"block": "andesite"}
         ]
-    },
-    "decorators": [
-        {
-            "chance": 0.0001,
-            "palette": [
-                "BARREL"
-            ]
-        },
-        {
-            "chance": 0.008,
-            "palette": [
-                "ANDESITE_WALL"
-            ]
-        },
-        {
-            "chance": 0.002,
-            "palette": [
-                "TORCH"
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "generator": "plain",
-            "min": 4,
-            "max": 6
-        }
-    ],
-    "derivative": "PLAINS"
+    }],
+    "generators": [{
+        "min": 4,
+        "max": 6,
+        "generator": "plain"
+    }],
+    "loot": {"tables": ["cave-clutter"]},
+    "derivative": "PLAINS",
+    "rarity": 6,
+    "slab": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "cobblestone_slab"
+            },
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "mossy_cobblestone_slab"
+            },
+            {
+                "weight": 7,
+                "block": "air"
+            }
+        ]
+    }
 }

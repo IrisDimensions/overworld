@@ -1,127 +1,92 @@
 {
-    "name": "Spruce Denmyre",
-    "rarity": 2,
-    "layers": [
-        {
-            "style": {
-                "style": "FLAT"
-            },
-            "palette": [
-                "GRASS_BLOCK"
-            ]
-        },
-        {
-            "palette": [
-                "DIRT"
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                "COARSE_DIRT"
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                "STONE",
-                "ANDESITE",
-                "STONE"
-            ]
-        }
-    ],
     "decorators": [
         {
-            "zoom": 0.02,
             "chance": 0.003,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.02,
             "palette": [
-                "WHITE_TULIP",
-                "CORNFLOWER",
-                "BLUE_ORCHID",
-                "LILY_OF_THE_VALLEY"
+                {"block": "white_tulip"},
+                {"block": "cornflower"},
+                {"block": "blue_orchid"},
+                {"block": "lily_of_the_valley"}
             ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+            "style": {"style": "STATIC"}
         },
         {
-            "zoom": 0.3,
             "chance": 0.001,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
             "palette": [
-                "minecraft:sweet_berry_bush[age=0]",
-                "minecraft:sweet_berry_bush[age=1]",
-                "minecraft:sweet_berry_bush[age=2]",
-                "minecraft:sweet_berry_bush[age=3]"
+                {
+                    "data": {"age": 0},
+                    "block": "sweet_berry_bush"
+                },
+                {
+                    "data": {"age": 1},
+                    "block": "sweet_berry_bush"
+                },
+                {
+                    "data": {"age": 2},
+                    "block": "sweet_berry_bush"
+                },
+                {
+                    "data": {"age": 3},
+                    "block": "sweet_berry_bush"
+                }
             ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+            "style": {"style": "STATIC"}
         },
         {
             "chance": 0.2,
+            "variance": {"style": "STATIC"},
             "palette": [
-                "GRASS",
-                "FERN"
+                {"block": "grass"},
+                {"block": "fern"}
             ],
-            "style": {
-                "style": "IRIS_DOUBLE"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+            "style": {"style": "IRIS_DOUBLE"}
         },
         {
             "chance": 0.1,
+            "variance": {"style": "STATIC"},
             "palette": [
-                "GRASS",
-                "FERN"
+                {"block": "grass"},
+                {"block": "fern"}
             ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+            "style": {"style": "STATIC"}
         },
         {
             "chance": 0.003,
+            "variance": {"style": "STATIC"},
             "palette": [
-                "minecraft:stone_button[face=floor,facing=east,powered=false]",
-                "minecraft:stone_button[face=floor,facing=south,powered=false]"
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "east"
+                    },
+                    "block": "stone_button"
+                },
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "south"
+                    },
+                    "block": "stone_button"
+                }
             ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+            "style": {"style": "STATIC"}
         },
         {
             "chance": 0.017,
-            "palette": [
-                "TALL_GRASS"
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "variance": {
-                "style": "STATIC"
-            }
+            "variance": {"style": "STATIC"},
+            "palette": [{"block": "tall_grass"}],
+            "style": {"style": "STATIC"}
         }
     ],
     "objects": [
         {
+            "mode": "PAINT",
             "chance": 0.0025,
             "rotation": {
                 "yAxis": {
@@ -132,10 +97,7 @@
                 },
                 "enabled": true
             },
-            "mode": "PAINT",
-            "place": [
-                "camp/barrel-bin"
-            ],
+            "place": ["camp/barrel-bin"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -145,16 +107,10 @@
         {
             "chance": 0.5,
             "density": 2,
-            "edit": [
-                {
-                    "find": [
-                        "spruce_planks"
-                    ],
-                    "replace": [
-                        "stripped_spruce_wood"
-                    ]
-                }
-            ],
+            "edit": [{
+                "find": ["spruce_planks"],
+                "replace": ["stripped_spruce_wood"]
+            }],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -215,22 +171,42 @@
             }
         }
     ],
-    "wall": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            "STONE",
-            "ANDESITE",
-            "STONE"
-        ]
-    },
-    "generators": [
+    "name": "Spruce Denmyre",
+    "layers": [
         {
-            "generator": "plain",
-            "min": 4,
-            "max": 7
+            "style": {"style": "FLAT"},
+            "palette": [{"block": "grass_block"}]
+        },
+        {"palette": [{"block": "dirt"}]},
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [{"block": "coarse_dirt"}]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
+            ]
         }
     ],
-    "derivative": "SNOWY_TUNDRA"
+    "generators": [{
+        "min": 4,
+        "max": 7,
+        "generator": "plain"
+    }],
+    "derivative": "SNOWY_TUNDRA",
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {"block": "stone"},
+            {"block": "andesite"},
+            {"block": "stone"}
+        ]
+    },
+    "rarity": 2
 }
