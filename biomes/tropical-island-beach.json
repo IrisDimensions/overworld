@@ -1,18 +1,22 @@
 {
-    "effects": [{
-        "particleAltX": 0.301,
-        "particleAltY": -0.33885,
-        "particleAltZ": 0.301,
-        "chance": 1,
-        "particleEffect": "TOTEM",
-        "particleOffset": 12,
-        "interval": 550,
-        "particleCount": 0
-    }],
+    "effects": [
+        {
+            "particleAltX": 0.301,
+            "particleAltY": -0.33885,
+            "particleAltZ": 0.301,
+            "chance": 1,
+            "particleEffect": "TOTEM",
+            "particleOffset": 12,
+            "interval": 550,
+            "particleCount": 0
+        }
+    ],
     "decorators": [
         {
             "chance": 0.03,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 0.3,
             "palette": [
                 {
@@ -32,75 +36,121 @@
                     "block": "jungle_button"
                 }
             ],
-            "style": {"style": "STATIC"}
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
             "partOf": "SHORE_LINE",
             "verticalZoom": 5,
             "chance": 0.09,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "stackMax": 5,
             "zoom": 5,
-            "palette": [{"block": "sugar_cane"}],
-            "style": {"style": "STATIC"},
-            "heightVariance": {"style": "STATIC"},
+            "palette": [
+                {
+                    "block": "sugar_cane"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            },
+            "heightVariance": {
+                "style": "STATIC"
+            },
             "stackMin": 1
         }
     ],
-    "objects": [{
-        "chance": 1,
-        "edit": [{
-            "find": ["PLAYER_WALL_HEAD"],
-            "replace": ["air"]
-        }],
-        "rotation": {
-            "yAxis": {
-                "min": 0,
-                "max": 0,
-                "interval": 90,
+    "objects": [
+        {
+            "chance": 1,
+            "edit": [
+                {
+                    "find": [
+                        "PLAYER_WALL_HEAD"
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "air"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
                 "enabled": true
             },
-            "enabled": true
-        },
-        "place": [
-            "palm/palm1",
-            "palm/palm2",
-            "palm/palm3",
-            "palm/palm4",
-            "palm/palm5",
-            "palm/palm6",
-            "palm/palm7",
-            "palm/palm8"
-        ],
-        "translate": {
-            "x": 0,
-            "y": -1,
-            "z": 0
+            "place": [
+                "palm/palm1",
+                "palm/palm2",
+                "palm/palm3",
+                "palm/palm4",
+                "palm/palm5",
+                "palm/palm6",
+                "palm/palm7",
+                "palm/palm8"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            }
         }
-    }],
+    ],
     "name": "Tropical Island Beach",
     "layers": [
         {
             "minHeight": 3,
             "maxHeight": 6,
-            "palette": [{"block": "sand"}]
+            "palette": [
+                {
+                    "block": "sand"
+                }
+            ]
         },
         {
             "minHeight": 1,
             "maxHeight": 3,
-            "palette": [{"block": "dirt"}]
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
         }
     ],
-    "generators": [{
-        "min": -7,
-        "max": -3,
-        "generator": "sharper"
-    }],
-    "loot": {"tables": ["beach-clutter"]},
+    "generators": [
+        {
+            "min": -7,
+            "max": -3,
+            "generator": "sharper"
+        }
+    ],
+    "loot": {
+        "tables": [
+            "beach-clutter"
+        ]
+    },
     "derivative": "JUNGLE",
-    "wall": {"palette": [{"block": "smooth_sandstone"}]},
+    "wall": {
+        "palette": [
+            {
+                "block": "smooth_sandstone"
+            }
+        ]
+    },
     "slab": {
-        "style": {"style": "STATIC"},
+        "style": {
+            "style": "STATIC"
+        },
         "palette": [
             {
                 "data": {

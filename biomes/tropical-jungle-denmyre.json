@@ -1,35 +1,55 @@
 {
-    "effects": [{
-        "particleAltX": 0.301,
-        "particleAltY": -0.33885,
-        "particleAltZ": 0.301,
-        "chance": 1,
-        "particleEffect": "TOTEM",
-        "particleOffset": 12,
-        "interval": 550,
-        "particleCount": 0
-    }],
+    "effects": [
+        {
+            "particleAltX": 0.301,
+            "particleAltY": -0.33885,
+            "particleAltZ": 0.301,
+            "chance": 1,
+            "particleEffect": "TOTEM",
+            "particleOffset": 12,
+            "interval": 550,
+            "particleCount": 0
+        }
+    ],
     "decorators": [
         {
             "chance": 0.1,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 0.01,
             "palette": [
-                {"block": "dead_bush"},
-                {"block": "brown_mushroom"}
+                {
+                    "block": "dead_bush"
+                },
+                {
+                    "block": "brown_mushroom"
+                }
             ],
-            "style": {"style": "STATIC"}
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
             "chance": 0.4,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 0.3,
-            "palette": [{"block": "grass"}],
-            "style": {"style": "STATIC"}
+            "palette": [
+                {
+                    "block": "grass"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
             "chance": 0.03,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 0.3,
             "palette": [
                 {
@@ -49,24 +69,44 @@
                     "block": "stone_button"
                 }
             ],
-            "style": {"style": "STATIC"}
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
             "chance": 0.017,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 0.3,
-            "palette": [{"block": "tall_grass"}],
-            "style": {"style": "STATIC"}
+            "palette": [
+                {
+                    "block": "tall_grass"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
         }
     ],
     "objects": [
         {
             "chance": 0.5,
             "density": 2,
-            "edit": [{
-                "find": ["jungle_planks"],
-                "replace": ["stripped_jungle_wood"]
-            }],
+            "edit": [
+                {
+                    "find": [
+                        "jungle_planks"
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "stripped_jungle_wood"
+                            }
+                        ]
+                    }
+                }
+            ],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -130,45 +170,77 @@
     "name": "Jungle Denmyre",
     "layers": [
         {
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "zoom": 0.01,
             "palette": [
-                {"block": "gravel"},
+                {
+                    "block": "gravel"
+                },
                 {
                     "weight": 19,
                     "block": "grass_block"
                 }
             ]
         },
-        {"palette": [{"block": "dirt"}]},
+        {
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        },
         {
             "minHeight": 1,
             "maxHeight": 3,
-            "palette": [{"block": "coarse_dirt"}]
+            "palette": [
+                {
+                    "block": "coarse_dirt"
+                }
+            ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "palette": [
-                {"block": "stone"},
-                {"block": "andesite"},
-                {"block": "stone"}
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
             ]
         }
     ],
-    "generators": [{
-        "min": 4,
-        "max": 7,
-        "generator": "plain"
-    }],
+    "generators": [
+        {
+            "min": 4,
+            "max": 7,
+            "generator": "plain"
+        }
+    ],
     "derivative": "JUNGLE",
     "wall": {
-        "style": {"style": "STATIC"},
+        "style": {
+            "style": "STATIC"
+        },
         "palette": [
-            {"block": "stone"},
-            {"block": "andesite"},
-            {"block": "stone"}
+            {
+                "block": "stone"
+            },
+            {
+                "block": "andesite"
+            },
+            {
+                "block": "stone"
+            }
         ]
     },
     "rarity": 3

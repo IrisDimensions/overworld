@@ -2,14 +2,24 @@
     "decorators": [
         {
             "chance": 0.4,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 0.3,
-            "palette": [{"block": "grass"}],
-            "style": {"style": "STATIC"}
+            "palette": [
+                {
+                    "block": "grass"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
             "chance": 0.003,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 0.3,
             "palette": [
                 {
@@ -29,14 +39,24 @@
                     "block": "stone_button"
                 }
             ],
-            "style": {"style": "STATIC"}
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
             "chance": 0.017,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 0.3,
-            "palette": [{"block": "tall_grass"}],
-            "style": {"style": "STATIC"}
+            "palette": [
+                {
+                    "block": "tall_grass"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
         }
     ],
     "objects": [
@@ -52,7 +72,9 @@
                 },
                 "enabled": true
             },
-            "place": ["camp/camp"],
+            "place": [
+                "camp/camp"
+            ],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -62,10 +84,20 @@
         {
             "chance": 0.5,
             "density": 2,
-            "edit": [{
-                "find": ["oak_planks"],
-                "replace": ["stripped_oak_wood"]
-            }],
+            "edit": [
+                {
+                    "find": [
+                        "oak_planks"
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "stripped_oak_wood"
+                            }
+                        ]
+                    }
+                }
+            ],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -129,39 +161,77 @@
     "name": "Oak Denmyre",
     "layers": [
         {
-            "style": {"style": "FLAT"},
-            "palette": [{"block": "grass_block"}]
+            "style": {
+                "style": "FLAT"
+            },
+            "palette": [
+                {
+                    "block": "grass_block"
+                }
+            ]
         },
-        {"palette": [{"block": "dirt"}]},
+        {
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        },
         {
             "minHeight": 1,
             "maxHeight": 3,
-            "palette": [{"block": "coarse_dirt"}]
+            "palette": [
+                {
+                    "block": "coarse_dirt"
+                }
+            ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "palette": [
-                {"block": "stone"},
-                {"block": "andesite"},
-                {"block": "stone"}
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
             ]
         }
     ],
-    "generators": [{
-        "min": 4,
-        "max": 7,
-        "generator": "plain"
-    }],
-    "loot": {"tables": ["forest-food"]},
+    "generators": [
+        {
+            "min": 4,
+            "max": 7,
+            "generator": "plain"
+        }
+    ],
+    "loot": {
+        "tables": [
+            "forest-food"
+        ]
+    },
     "derivative": "FOREST",
     "wall": {
-        "style": {"style": "STATIC"},
+        "style": {
+            "style": "STATIC"
+        },
         "palette": [
-            {"block": "stone"},
-            {"block": "andesite"},
-            {"block": "stone"}
+            {
+                "block": "stone"
+            },
+            {
+                "block": "andesite"
+            },
+            {
+                "block": "stone"
+            }
         ]
     },
     "rarity": 2

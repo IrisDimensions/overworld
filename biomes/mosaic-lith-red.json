@@ -4,8 +4,12 @@
             "chance": 0.0045,
             "stackMax": 3,
             "palette": [
-                {"block": "red_nether_brick_wall"},
-                {"block": "nether_brick_wall"}
+                {
+                    "block": "red_nether_brick_wall"
+                },
+                {
+                    "block": "nether_brick_wall"
+                }
             ],
             "stackMin": 1
         },
@@ -13,17 +17,21 @@
             "chance": 0.0175,
             "palette": [
                 {
-                    "data": {"waterlogged": false},
+                    "data": {
+                        "waterlogged": false
+                    },
                     "block": "fire_coral"
                 },
                 {
-                    "data": {"waterlogged": false},
+                    "data": {
+                        "waterlogged": false
+                    },
                     "block": "fire_coral_fan"
                 }
             ]
         },
         {
-            "chance": 3.5E-4,
+            "chance": 0.00035,
             "palette": [
                 {
                     "data": {
@@ -113,12 +121,28 @@
             "chance": 0.06,
             "edit": [
                 {
-                    "find": ["BLUE_TERRACOTTA"],
-                    "replace": ["RED_TERRACOTTA"]
+                    "find": [
+                        "BLUE_TERRACOTTA"
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "red_terracotta"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "find": ["WHITE_STAINED_GLASS"],
-                    "replace": ["BLACK_STAINED_GLASS"]
+                    "find": [
+                        "WHITE_STAINED_GLASS"
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "black_stained_glass"
+                            }
+                        ]
+                    }
                 }
             ],
             "rotation": {
@@ -163,10 +187,20 @@
         },
         {
             "chance": 0.01,
-            "edit": [{
-                "find": ["BLACK_CONCRETE"],
-                "replace": ["RED_CONCRETE"]
-            }],
+            "edit": [
+                {
+                    "find": [
+                        "BLACK_CONCRETE"
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "red_concrete"
+                            }
+                        ]
+                    }
+                }
+            ],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -194,7 +228,9 @@
     "name": "Red Mosaic",
     "layers": [
         {
-            "style": {"style": "FRACTAL_WATER"},
+            "style": {
+                "style": "FRACTAL_WATER"
+            },
             "zoom": 1.1,
             "palette": [
                 {
@@ -230,34 +266,58 @@
         {
             "minHeight": 12,
             "maxHeight": 16,
-            "style": {"style": "FLAT"},
-            "palette": [{"block": "blackstone"}]
+            "style": {
+                "style": "FLAT"
+            },
+            "palette": [
+                {
+                    "block": "blackstone"
+                }
+            ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "FLAT"},
-            "palette": [{"block": "blackstone"}]
+            "style": {
+                "style": "FLAT"
+            },
+            "palette": [
+                {
+                    "block": "blackstone"
+                }
+            ]
         }
     ],
-    "generators": [{
-        "min": 32,
-        "max": 60,
-        "generator": "plain-chaotic"
-    }],
+    "generators": [
+        {
+            "min": 32,
+            "max": 60,
+            "generator": "plain-chaotic"
+        }
+    ],
     "derivative": "CRIMSON_FOREST",
     "wall": {
-        "style": {"style": "STATIC"},
-        "palette": [{"block": "red_concrete"}]
+        "style": {
+            "style": "STATIC"
+        },
+        "palette": [
+            {
+                "block": "red_concrete"
+            }
+        ]
     },
     "slab": {
         "palette": [
-            {"block": "red_nether_brick_slab"},
+            {
+                "block": "red_nether_brick_slab"
+            },
             {
                 "weight": 4,
                 "block": "air"
             }
         ],
-        "style": {"style": "STATIC"}
+        "style": {
+            "style": "STATIC"
+        }
     }
 }

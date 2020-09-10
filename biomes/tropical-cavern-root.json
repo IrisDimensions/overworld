@@ -1,18 +1,26 @@
 {
-    "entitySpawnOverrides": [{
-        "trigger": "SKELETON",
-        "entity": "shroud",
-        "cancelSourceSpawn": true,
-        "rarity": 12
-    }],
+    "entitySpawnOverrides": [
+        {
+            "trigger": "SKELETON",
+            "entity": "shroud",
+            "cancelSourceSpawn": true,
+            "rarity": 12
+        }
+    ],
     "decorators": [
         {
-            "chance": 1.0E-4,
-            "palette": [{"block": "barrel"}]
+            "chance": 0.0001,
+            "palette": [
+                {
+                    "block": "barrel"
+                }
+            ]
         },
         {
             "chance": 0.03,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 0.3,
             "palette": [
                 {
@@ -32,7 +40,9 @@
                     "block": "jungle_button"
                 }
             ],
-            "style": {"style": "STATIC"}
+            "style": {
+                "style": "STATIC"
+            }
         }
     ],
     "objects": [
@@ -47,7 +57,9 @@
                 },
                 "enabled": true
             },
-            "place": ["camp/camp"],
+            "place": [
+                "camp/camp"
+            ],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -66,7 +78,9 @@
                 },
                 "enabled": true
             },
-            "place": ["camp/barrel-bin"],
+            "place": [
+                "camp/barrel-bin"
+            ],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -109,29 +123,39 @@
         }
     ],
     "name": "Tropical Root",
-    "layers": [{
-        "minHeight": 1,
-        "maxHeight": 3,
-        "style": {"style": "STATIC"},
-        "zoom": 0.1,
-        "palette": [
-            {"block": "stripped_jungle_wood"},
-            {
-                "data": {"persistent": true},
-                "weight": 4,
-                "block": "jungle_leaves"
+    "layers": [
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "style": {
+                "style": "STATIC"
             },
-            {
-                "weight": 8,
-                "block": "stripped_jungle_wood"
-            }
-        ]
-    }],
-    "generators": [{
-        "min": 4,
-        "max": 6,
-        "generator": "plain"
-    }],
+            "zoom": 0.1,
+            "palette": [
+                {
+                    "block": "stripped_jungle_wood"
+                },
+                {
+                    "data": {
+                        "persistent": true
+                    },
+                    "weight": 4,
+                    "block": "jungle_leaves"
+                },
+                {
+                    "weight": 8,
+                    "block": "stripped_jungle_wood"
+                }
+            ]
+        }
+    ],
+    "generators": [
+        {
+            "min": 4,
+            "max": 6,
+            "generator": "plain"
+        }
+    ],
     "derivative": "FOREST",
     "rarity": 4
 }

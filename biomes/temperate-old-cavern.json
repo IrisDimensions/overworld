@@ -1,19 +1,31 @@
 {
-    "entitySpawnOverrides": [{
-        "trigger": "SKELETON",
-        "entity": "shroud",
-        "cancelSourceSpawn": true,
-        "rarity": 12
-    }],
-    "children": ["temperate-lit-cavern"],
+    "entitySpawnOverrides": [
+        {
+            "trigger": "SKELETON",
+            "entity": "shroud",
+            "cancelSourceSpawn": true,
+            "rarity": 12
+        }
+    ],
+    "children": [
+        "temperate-lit-cavern"
+    ],
     "decorators": [
         {
-            "chance": 1.0E-4,
-            "palette": [{"block": "barrel"}]
+            "chance": 0.0001,
+            "palette": [
+                {
+                    "block": "barrel"
+                }
+            ]
         },
         {
             "chance": 0.008,
-            "palette": [{"block": "andesite_wall"}]
+            "palette": [
+                {
+                    "block": "andesite_wall"
+                }
+            ]
         }
     ],
     "objects": [
@@ -28,7 +40,9 @@
                 },
                 "enabled": true
             },
-            "place": ["camp/camp"],
+            "place": [
+                "camp/camp"
+            ],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -47,7 +61,9 @@
                 },
                 "enabled": true
             },
-            "place": ["camp/barrel-bin"],
+            "place": [
+                "camp/barrel-bin"
+            ],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -90,25 +106,41 @@
         }
     ],
     "name": "Old Cavern",
-    "layers": [{
-        "minHeight": 1,
-        "maxHeight": 2,
-        "style": {"style": "STATIC"},
-        "zoom": 0.1,
-        "palette": [
-            {"block": "stone"},
-            {"block": "andesite"}
+    "layers": [
+        {
+            "minHeight": 1,
+            "maxHeight": 2,
+            "style": {
+                "style": "STATIC"
+            },
+            "zoom": 0.1,
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                }
+            ]
+        }
+    ],
+    "generators": [
+        {
+            "min": 4,
+            "max": 6,
+            "generator": "plain"
+        }
+    ],
+    "loot": {
+        "tables": [
+            "cave-clutter"
         ]
-    }],
-    "generators": [{
-        "min": 4,
-        "max": 6,
-        "generator": "plain"
-    }],
-    "loot": {"tables": ["cave-clutter"]},
+    },
     "derivative": "PLAINS",
     "slab": {
-        "style": {"style": "STATIC"},
+        "style": {
+            "style": "STATIC"
+        },
         "palette": [
             {
                 "data": {

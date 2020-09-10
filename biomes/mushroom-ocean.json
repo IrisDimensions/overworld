@@ -2,35 +2,63 @@
     "decorators": [
         {
             "chance": 0.06,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 20,
-            "palette": [{"block": "seagrass"}],
-            "style": {"style": "STATIC"}
+            "palette": [
+                {
+                    "block": "seagrass"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
-            "chance": 6.0E-4,
-            "variance": {"style": "STATIC"},
+            "chance": 0.0006,
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 1,
             "palette": [
-                {"block": "soul_sand"},
-                {"block": "magma_block"}
+                {
+                    "block": "soul_sand"
+                },
+                {
+                    "block": "magma_block"
+                }
             ],
-            "style": {"style": "STATIC"}
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
             "chance": 0.1,
             "verticalZoom": 20,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "stackMax": 9,
             "zoom": 1,
-            "palette": [{"block": "kelp_plant"}],
-            "style": {"style": "STATIC"},
-            "heightVariance": {"style": "STATIC"},
+            "palette": [
+                {
+                    "block": "kelp_plant"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            },
+            "heightVariance": {
+                "style": "STATIC"
+            },
             "stackMin": 1
         },
         {
             "chance": 0.005,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 1,
             "palette": [
                 {
@@ -62,7 +90,9 @@
                     "block": "sea_pickle"
                 }
             ],
-            "style": {"style": "STATIC"}
+            "style": {
+                "style": "STATIC"
+            }
         }
     ],
     "objects": [
@@ -91,10 +121,20 @@
         },
         {
             "chance": 0.3,
-            "edit": [{
-                "find": ["SHROOMLIGHT"],
-                "replace": ["MUSHROOM_STEM"]
-            }],
+            "edit": [
+                {
+                    "find": [
+                        "SHROOMLIGHT"
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "mushroom_stem"
+                            }
+                        ]
+                    }
+                }
+            ],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -159,16 +199,32 @@
         {
             "minHeight": 2,
             "maxHeight": 3,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "zoom": 0.825,
             "palette": [
-                {"block": "clay"},
-                {"block": "coarse_dirt"},
-                {"block": "gravel"},
-                {"block": "dirt"}
+                {
+                    "block": "clay"
+                },
+                {
+                    "block": "coarse_dirt"
+                },
+                {
+                    "block": "gravel"
+                },
+                {
+                    "block": "dirt"
+                }
             ]
         },
-        {"palette": [{"block": "dirt"}]},
+        {
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        },
         {
             "minHeight": 1,
             "maxHeight": 3,
@@ -177,31 +233,57 @@
                     "weight": 2,
                     "block": "dirt"
                 },
-                {"block": "coarse_dirt"}
+                {
+                    "block": "coarse_dirt"
+                }
             ]
         }
     ],
-    "generators": [{
-        "min": -41,
-        "max": -7,
-        "generator": "plain"
-    }],
-    "loot": {"tables": ["ocean-clutter"]},
+    "generators": [
+        {
+            "min": -41,
+            "max": -7,
+            "generator": "plain"
+        }
+    ],
+    "loot": {
+        "tables": [
+            "ocean-clutter"
+        ]
+    },
     "derivative": "OCEAN",
     "wall": {
-        "style": {"style": "IRIS"},
+        "style": {
+            "style": "IRIS"
+        },
         "palette": [
-            {"block": "clay"},
-            {"block": "smooth_sandstone"},
-            {"block": "red_sand"},
-            {"block": "smooth_red_sandstone"},
-            {"block": "smooth_sandstone"},
-            {"block": "sand"},
-            {"block": "smooth_red_sandstone"}
+            {
+                "block": "clay"
+            },
+            {
+                "block": "smooth_sandstone"
+            },
+            {
+                "block": "red_sand"
+            },
+            {
+                "block": "smooth_red_sandstone"
+            },
+            {
+                "block": "smooth_sandstone"
+            },
+            {
+                "block": "sand"
+            },
+            {
+                "block": "smooth_red_sandstone"
+            }
         ]
     },
     "slab": {
-        "style": {"style": "STATIC"},
+        "style": {
+            "style": "STATIC"
+        },
         "palette": [
             {
                 "data": {
