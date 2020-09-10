@@ -8,14 +8,16 @@
             "minHeight": 1,
             "maxHeight": 2,
             "palette": [
-                "BLUE_ICE",
-                "PACKED_ICE",
-                "ICE",
-                "ICE",
-                "ICE",
-                "ICE",
-                "ICE",
-                "ICE"
+                {
+                    "block": "blue_ice"
+                },
+                {
+                    "block": "packed_ice"
+                },
+                {
+                    "block": "ice",
+                    "weight": 6
+                }
             ]
         },
         {
@@ -25,7 +27,9 @@
             "minHeight": 1,
             "maxHeight": 1,
             "palette": [
-                "ICE"
+                {
+                    "block": "ice"
+                }
             ]
         },
         {
@@ -35,7 +39,9 @@
                 "style": "STATIC"
             },
             "palette": [
-                "BLACKSTONE"
+                {
+                    "block": "blackstone"
+                }
             ]
         }
     ],
@@ -53,27 +59,34 @@
         },
         "zoom": 0.5,
         "palette": [
-            "minecraft:cobblestone_slab[type=bottom,waterlogged=false]",
-            "minecraft:mossy_cobblestone_slab[type=bottom,waterlogged=false]",
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR",
-            "AIR"
+            {
+                "block": "cobblestone_slab",
+                "data": {
+                    "type": "bottom",
+                    "waterlogged": false
+                }
+            },
+            {
+                "block": "mossy_cobblestone_slab",
+                "data": {
+                    "type": "bottom",
+                    "waterlogged": false
+                }
+            },
+            {
+                "block": "air",
+                "weight": 5
+            }
         ]
     },
     "decorators": [
         {
-            "chance": 0.0001,
-            "palette": [
-                "BARREL"
-            ]
-        },
-        {
             "zoom": 0.3,
             "chance": 0.02,
             "palette": [
-                "COBWEB"
+                {
+                    "block": "cobweb"
+                }
             ],
             "style": {
                 "style": "STATIC"
@@ -86,7 +99,9 @@
             "zoom": 0.3,
             "chance": 0.01,
             "palette": [
-                "CORNFLOWER"
+                {
+                    "block": "cornflower"
+                }
             ],
             "style": {
                 "style": "STATIC"
@@ -99,7 +114,9 @@
             "zoom": 0.3,
             "chance": 0.001,
             "palette": [
-                "PRISMARINE_WALL"
+                {
+                    "block": "blackstone_wall"
+                }
             ],
             "style": {
                 "style": "STATIC"
