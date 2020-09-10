@@ -1,10 +1,14 @@
 {
-    "name": "Tundra",
-    "biomeImplosionRatio": 0.25,
-    "shoreHeightMin": 2.2,
-    "shoreHeightMax": 5.2,
-    "shoreHeightZoom": 1.14,
-    "landBiomeZoom": 1.25,
+    "riverBiomes": [
+        "tundra-river"
+    ],
+    "structures": [
+        {
+            "tileset": "ruins",
+            "zoom": 1,
+            "rarity": 600
+        }
+    ],
     "landBiomes": [
         "tundra-taiga",
         "tundra-redwoods-forest",
@@ -12,56 +16,54 @@
         "tundra-mountains",
         "rocky-mountains"
     ],
+    "biomeImplosionRatio": 0.25,
     "seaBiomes": [
         "tundra-ocean"
     ],
-    "shoreBiomes": [
-        "tundra-beach",
-        "tundra-beach-stone"
-    ],
-    "riverBiomes": [
-        "tundra-river"
-    ],
-    "structures": [
+    "deposits": [
         {
-            "tileset": "ruins",
-            "rarity": 600,
-            "zoom": 1
+            "minHeight": 15,
+            "maxPerChunk": 3,
+            "maxHeight": 87,
+            "minPerChunk": 2,
+            "minSize": 1,
+            "maxSize": 2,
+            "palette": [
+                {
+                    "block": "emerald_ore"
+                }
+            ],
+            "varience": 2
         }
     ],
     "riverRarity": 1,
-    "riverStyle": {
-        "style": "VASCULAR",
-        "zoom": 4.77,
-        "fracture": {
-            "style": "IRIS",
-            "zoom": 5,
-            "multiplier": 240
-        }
-    },
-    "riverThickness": 0.025,
     "caveBiomes": [
         "tundra-cavern",
         "tundra-spiked-cavern"
     ],
+    "landBiomeZoom": 1.25,
+    "riverStyle": {
+        "style": "VASCULAR",
+        "zoom": 4.77,
+        "fracture": {
+            "multiplier": 240,
+            "style": "IRIS",
+            "zoom": 5
+        }
+    },
+    "shoreHeightMin": 2.2,
+    "shoreBiomes": [
+        "tundra-beach",
+        "tundra-beach-stone"
+    ],
+    "name": "Tundra",
+    "shoreHeightMax": 5.2,
     "loot": {
         "tables": [
             "cold-food",
             "cold-treasure"
         ]
     },
-    "deposits": [
-        {
-            "minHeight": 15,
-            "maxHeight": 87,
-            "minSize": 1,
-            "maxSize": 2,
-            "minPerChunk": 2,
-            "maxPerChunk": 3,
-            "varience": 2,
-            "palette": [
-                "EMERALD_ORE"
-            ]
-        }
-    ]
+    "shoreHeightZoom": 1.14,
+    "riverThickness": 0.025
 }

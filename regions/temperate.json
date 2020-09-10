@@ -1,75 +1,79 @@
 {
-    "name": "Temperate",
-    "biomeImplosionRatio": 0.25,
-    "shoreHeightMin": 2.2,
-    "shoreHeightMax": 5.2,
-    "shoreHeightZoom": 1.14,
-    "landBiomeZoom": 1.25,
+    "riverBiomes": [
+        "temperate-river"
+    ],
+    "structures": [
+        {
+            "tileset": "ruins",
+            "zoom": 1,
+            "rarity": 600
+        }
+    ],
+    "spotBiomes": [
+        {
+            "as": "LAND",
+            "biome": "temperate-island",
+            "scale": 1.65,
+            "type": "SEA",
+            "rarity": 119
+        }
+    ],
     "landBiomes": [
         "temperate-plains",
         "temperate-birch-forest",
         "temperate-oak-forest"
     ],
+    "biomeImplosionRatio": 0.25,
     "seaBiomes": [
         "temperate-ocean",
         "temperate-ocean-deep"
     ],
+    "deposits": [
+        {
+            "minHeight": 15,
+            "maxPerChunk": 2,
+            "maxHeight": 122,
+            "minPerChunk": 0,
+            "minSize": 4,
+            "maxSize": 12,
+            "palette": [
+                {
+                    "block": "iron_ore"
+                },
+                {
+                    "block": "coal_ore"
+                }
+            ],
+            "varience": 4
+        }
+    ],
+    "riverRarity": 1,
     "caveBiomes": [
         "temperate-old-cavern",
         "temperate-cracked-cavern"
     ],
-    "riverBiomes": [
-        "temperate-river"
-    ],
-    "riverRarity": 1,
+    "landBiomeZoom": 1.25,
     "riverStyle": {
         "style": "VASCULAR",
         "zoom": 4.77,
         "fracture": {
+            "multiplier": 240,
             "style": "IRIS",
-            "zoom": 5,
-            "multiplier": 240
+            "zoom": 5
         }
     },
-    "spotBiomes": [
-        {
-            "rarity": 119,
-            "biome": "temperate-island",
-            "type": "SEA",
-            "as": "LAND",
-            "scale": 1.65
-        }
-    ],
-    "riverThickness": 0.025,
+    "shoreHeightMin": 2.2,
     "shoreBiomes": [
         "temperate-beach"
     ],
+    "name": "Temperate",
+    "shoreHeightMax": 5.2,
     "loot": {
         "tables": [
             "temperate-food",
             "temperate-clutter"
         ]
     },
-    "structures": [
-        {
-            "tileset": "ruins",
-            "rarity": 600,
-            "zoom": 1
-        }
-    ],
-    "deposits": [
-        {
-            "minHeight": 15,
-            "maxHeight": 122,
-            "minSize": 4,
-            "maxSize": 12,
-            "minPerChunk": 0,
-            "maxPerChunk": 2,
-            "varience": 4,
-            "palette": [
-                "IRON_ORE",
-                "COAL_ORE"
-            ]
-        }
-    ]
+    "shoreHeightZoom": 1.14,
+    "riverThickness": 0.025
 }

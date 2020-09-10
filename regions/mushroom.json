@@ -1,29 +1,16 @@
 {
-    "name": "Mushroom",
-    "rarity": 14,
-    "biomeImplosionRatio": 0.25,
-    "shoreHeightMin": 3.2,
-    "shoreHeightMax": 6.2,
-    "shoreHeightZoom": 1.14,
-    "landBiomeZoom": 1.25,
-    "landBiomes": [
-        "mushroom-forest",
-        "mushroom-plains"
-    ],
-    "seaBiomes": [
-        "mushroom-ocean"
-    ],
-    "shoreBiomes": [
-        "mushroom-beach"
-    ],
-    "loot": {
-        "tables": [
-            "mushroom-food",
-            "mushroom-clutter"
-        ]
-    },
     "blockDrops": [
         {
+            "drops": [
+                {
+                    "type": "RED_MUSHROOM",
+                    "rarity": 8
+                },
+                {
+                    "type": "BROWN_MUSHROOM",
+                    "rarity": 8
+                }
+            ],
             "blocks": [
                 {
                     "block": "mycelium"
@@ -37,61 +24,72 @@
                 {
                     "block": "brown_mushroom_block"
                 }
-            ],
-
-            "drops": [
-                {
-                    "type": "RED_MUSHROOM",
-                    "rarity": 8
-                },
-                {
-                    "type": "BROWN_MUSHROOM",
-                    "rarity": 8
-                }
             ]
         }
     ],
     "structures": [
         {
             "tileset": "ruins",
-            "rarity": 600,
-            "zoom": 1
+            "zoom": 1,
+            "rarity": 600
         },
         {
             "tileset": "mush-huts",
             "zoom": 1,
             "rarity": 150
-
-        }
-    ],
-    "effects": [
-        {
-            "interval": 50,
-            "particleOffset": 2,
-            "particleEffect": "CRIMSON_SPORE",
-            "particleCount": 0,
-            "particleAltX": 0.00001,
-            "particleAltY": 0.01885,
-            "particleAltZ": 0.00001,
-            "particleAway": 1,
-            "particleDistance": 5,
-            "chance": 3
         }
     ],
     "spotBiomes": [
         {
             "biome": "mushroom-crimson-forest",
-            "type": "LAND",
             "scale": 0.78,
-            "rarity": 262,
-            "shuffle": 44
+            "type": "LAND",
+            "shuffle": 44,
+            "rarity": 262
         },
         {
             "biome": "mushroom-warped-forest",
-            "type": "LAND",
             "scale": 0.77,
-            "rarity": 261,
-            "shuffle": 44
+            "type": "LAND",
+            "shuffle": 44,
+            "rarity": 261
         }
-    ]
+    ],
+    "landBiomes": [
+        "mushroom-forest",
+        "mushroom-plains"
+    ],
+    "biomeImplosionRatio": 0.25,
+    "seaBiomes": [
+        "mushroom-ocean"
+    ],
+    "landBiomeZoom": 1.25,
+    "effects": [
+        {
+            "particleAltX": 0.00001,
+            "particleAway": 1,
+            "particleAltY": 0.01885,
+            "particleAltZ": 0.00001,
+            "chance": 3,
+            "particleEffect": "CRIMSON_SPORE",
+            "particleDistance": 5,
+            "particleOffset": 2,
+            "interval": 50,
+            "particleCount": 0
+        }
+    ],
+    "shoreHeightMin": 3.2,
+    "shoreBiomes": [
+        "mushroom-beach"
+    ],
+    "name": "Mushroom",
+    "shoreHeightMax": 6.2,
+    "loot": {
+        "tables": [
+            "mushroom-food",
+            "mushroom-clutter"
+        ]
+    },
+    "shoreHeightZoom": 1.14,
+    "rarity": 14
 }

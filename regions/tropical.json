@@ -1,62 +1,64 @@
 {
-    "name": "Tropical",
-    "biomeImplosionRatio": 0.25,
-    "shoreHeightMin": 3.2,
-    "shoreHeightMax": 9.2,
-    "shoreHeightZoom": 2.14,
-    "landBiomeZoom": 1.25,
+    "spotBiomes": [
+        {
+            "as": "SEA",
+            "biome": "tropical-submerged-volcanic",
+            "scale": 10,
+            "type": "SEA",
+            "shuffle": 1,
+            "rarity": 286
+        },
+        {
+            "as": "LAND",
+            "biome": "tropical-rainforest-island",
+            "scale": 2.65,
+            "type": "SEA",
+            "rarity": 139
+        }
+    ],
     "landBiomes": [
         "tropical-rainforest",
         "tropical-bamboo-forest",
         "tropical-island-beach",
         "tropical-rainforest-wicked"
     ],
+    "biomeImplosionRatio": 0.25,
     "seaBiomes": [
         "tropical-ocean"
     ],
+    "deposits": [
+        {
+            "minHeight": 25,
+            "maxPerChunk": 1,
+            "maxHeight": 157,
+            "minPerChunk": 0,
+            "minSize": 1,
+            "maxSize": 2,
+            "palette": [
+                {
+                    "block": "emerald_ore"
+                }
+            ],
+            "varience": 2
+        }
+    ],
+    "caveBiomes": [
+        "tropical-cavern",
+        "tropical-cavern-coral",
+        "tropical-cavern-root"
+    ],
+    "landBiomeZoom": 1.25,
+    "shoreHeightMin": 3.2,
     "shoreBiomes": [
         "tropical-beach"
     ],
+    "name": "Tropical",
+    "shoreHeightMax": 9.2,
     "loot": {
         "tables": [
             "tropical-food",
             "tropical-treasure"
         ]
     },
-    "caveBiomes": [
-        "tropical-cavern",
-        "tropical-cavern-coral",
-        "tropical-cavern-root"
-    ],
-    "spotBiomes": [
-        {
-            "biome": "tropical-submerged-volcanic",
-            "type": "SEA",
-            "as": "SEA",
-            "scale": 10,
-            "rarity": 286,
-            "shuffle": 1
-        },
-        {
-            "rarity": 139,
-            "biome": "tropical-rainforest-island",
-            "type": "SEA",
-            "as": "LAND",
-            "scale": 2.65
-        }
-    ],
-    "deposits": [
-        {
-            "minHeight": 25,
-            "maxHeight": 157,
-            "minSize": 1,
-            "maxSize": 2,
-            "minPerChunk": 0,
-            "maxPerChunk": 1,
-            "varience": 2,
-            "palette": [
-                "EMERALD_ORE"
-            ]
-        }
-    ]
+    "shoreHeightZoom": 2.14
 }

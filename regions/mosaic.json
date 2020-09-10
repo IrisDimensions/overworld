@@ -1,11 +1,11 @@
 {
-    "name": "The Mosaics",
-    "biomeImplosionRatio": 0.25,
-    "shoreHeightMin": 3.2,
-    "rarity": 30,
-    "shoreHeightMax": 6.2,
-    "shoreHeightZoom": 1.14,
-    "landBiomeZoom": 1.25,
+    "structures": [
+        {
+            "tileset": "ruins",
+            "zoom": 1,
+            "rarity": 600
+        }
+    ],
     "landBiomes": [
         "mosaic-lith-black",
         "mosaic-lith-green",
@@ -14,78 +14,97 @@
         "mosaic-lith-white",
         "mosaic-lith-cyan"
     ],
+    "biomeImplosionRatio": 0.25,
     "seaBiomes": [
         "hot-ocean"
     ],
-    "shoreBiomes": [
-        "hot-beach"
+    "deposits": [
+        {
+            "minHeight": 25,
+            "maxPerChunk": 3,
+            "maxHeight": 67,
+            "minPerChunk": 1,
+            "minSize": 3,
+            "maxSize": 5,
+            "palette": [
+                {
+                    "block": "gold_ore"
+                }
+            ],
+            "varience": 5
+        },
+        {
+            "minHeight": 15,
+            "maxPerChunk": 2,
+            "maxHeight": 47,
+            "minPerChunk": 1,
+            "minSize": 3,
+            "maxSize": 5,
+            "palette": [
+                {
+                    "block": "lapis_ore"
+                }
+            ],
+            "varience": 5
+        },
+        {
+            "minHeight": 11,
+            "maxPerChunk": 15,
+            "maxHeight": 99,
+            "minPerChunk": 5,
+            "minSize": 14,
+            "maxSize": 21,
+            "palette": [
+                {
+                    "data": {
+                        "axis": "x"
+                    },
+                    "block": "basalt"
+                },
+                {
+                    "data": {
+                        "axis": "y"
+                    },
+                    "block": "basalt"
+                },
+                {
+                    "data": {
+                        "axis": "z"
+                    },
+                    "block": "basalt"
+                }
+            ],
+            "varience": 5
+        }
     ],
     "caveBiomes": [
         "hot-sandy-cave"
     ],
+    "landBiomeZoom": 1.25,
+    "effects": [
+        {
+            "particleAltX": 0.001,
+            "particleAltY": 0.00885,
+            "particleAltZ": 0.001,
+            "chance": 2,
+            "particleEffect": "CAMPFIRE_SIGNAL_SMOKE",
+            "particleOffset": 0,
+            "interval": 1350,
+            "particleCount": 0
+        }
+    ],
+    "shoreHeightMin": 3.2,
+    "shoreBiomes": [
+        "hot-beach"
+    ],
+    "name": "The Mosaics",
+    "shoreHeightMax": 6.2,
     "loot": {
         "tables": [
             "hot-food",
             "hot-treasure"
         ]
     },
-    "structures": [
-        {
-            "tileset": "ruins",
-            "rarity": 600,
-            "zoom": 1
-        }
-    ],
-    "effects": [
-        {
-            "interval": 1350,
-            "particleOffset": 0,
-            "particleEffect": "CAMPFIRE_SIGNAL_SMOKE",
-            "particleCount": 0,
-            "particleAltX": 0.001,
-            "particleAltY": 0.00885,
-            "particleAltZ": 0.001,
-            "chance": 2
-        }
-    ],
-    "deposits": [
-        {
-            "minHeight": 25,
-            "maxHeight": 67,
-            "minSize": 3,
-            "maxSize": 5,
-            "minPerChunk": 1,
-            "maxPerChunk": 3,
-            "varience": 5,
-            "palette": [
-                "GOLD_ORE"
-            ]
-        },
-        {
-            "minHeight": 15,
-            "maxHeight": 47,
-            "minSize": 3,
-            "maxSize": 5,
-            "minPerChunk": 1,
-            "maxPerChunk": 2,
-            "varience": 5,
-            "palette": [
-                "LAPIS_ORE"
-            ]
-        },
-        {
-            "minHeight": 11,
-            "maxHeight": 99,
-            "minSize": 14,
-            "maxSize": 21,
-            "minPerChunk": 5,
-            "maxPerChunk": 15,
-            "varience": 5,
-            "palette": [
-                "minecraft:basalt[axis=x]",
-                "minecraft:basalt[axis=y]",
-                "minecraft:basalt[axis=z]"
-            ]
-        }
-    ]
+    "shoreHeightZoom": 1.14,
+    "rarity": 30
 }

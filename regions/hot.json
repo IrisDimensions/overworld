@@ -1,20 +1,23 @@
 {
-    "name": "Hot",
-    "biomeImplosionRatio": 0.25,
-    "shoreHeightMin": 3.2,
-    "shoreHeightMax": 6.2,
-    "shoreHeightZoom": 1.14,
-    "landBiomeZoom": 1.25,
-    "landBiomes": [
-        "hot-mesa-yellow",
-        "hot-desert",
-        "hot-dry-forest",
-        "hot-desert-red",
-        "hot-savanna",
-        "hot-volcanic"
-    ],
     "blockDrops": [
         {
+            "drops": [
+                {
+                    "minAmount": 1,
+                    "type": "ACACIA_PLANKS",
+                    "maxAmount": 3
+                },
+                {
+                    "type": "STRIPPED_ACACIA_LOG",
+                    "rarity": 12
+                },
+                {
+                    "minAmount": 3,
+                    "type": "STICK",
+                    "maxAmount": 5,
+                    "rarity": 7
+                }
+            ],
             "blocks": [
                 {
                     "block": "acacia_wood"
@@ -29,111 +32,126 @@
                     "block": "stripped_acacia_log"
                 }
             ],
-            "replaceVanillaDrops": true,
-            "drops": [
-                {
-                    "type": "ACACIA_PLANKS",
-                    "maxAmount": 3,
-                    "minAmount": 1
-                },
-                {
-                    "type": "STRIPPED_ACACIA_LOG",
-                    "rarity": 12
-                },
-                {
-                    "type": "STICK",
-                    "maxAmount": 5,
-                    "minAmount": 3,
-                    "rarity": 7
-                }
-            ]
+            "replaceVanillaDrops": true
         }
-    ],
-    "seaBiomes": [
-        "hot-ocean"
     ],
     "structures": [
         {
             "tileset": "red-mineshaft",
             "zoom": 0.25,
+            "shuffle": 5,
             "ratio": 0.05,
             "height": 50,
-            "rarity": 15,
-            "shuffle": 5
-
+            "rarity": 15
         }
     ],
-    "shoreBiomes": [
-        "hot-beach"
+    "landBiomes": [
+        "hot-mesa-yellow",
+        "hot-desert",
+        "hot-dry-forest",
+        "hot-desert-red",
+        "hot-savanna",
+        "hot-volcanic"
+    ],
+    "biomeImplosionRatio": 0.25,
+    "seaBiomes": [
+        "hot-ocean"
+    ],
+    "deposits": [
+        {
+            "minHeight": 25,
+            "maxPerChunk": 3,
+            "maxHeight": 67,
+            "minPerChunk": 1,
+            "minSize": 3,
+            "maxSize": 5,
+            "palette": [
+                {
+                    "block": "gold_ore"
+                }
+            ],
+            "varience": 5
+        },
+        {
+            "minHeight": 15,
+            "maxPerChunk": 2,
+            "maxHeight": 47,
+            "minPerChunk": 1,
+            "minSize": 3,
+            "maxSize": 5,
+            "palette": [
+                {
+                    "block": "lapis_ore"
+                }
+            ],
+            "varience": 5
+        },
+        {
+            "minHeight": 22,
+            "maxPerChunk": 12,
+            "maxHeight": 81,
+            "minPerChunk": 7,
+            "minSize": 12,
+            "maxSize": 22,
+            "palette": [
+                {
+                    "data": {
+                        "axis": "x"
+                    },
+                    "block": "basalt"
+                },
+                {
+                    "data": {
+                        "axis": "y"
+                    },
+                    "block": "basalt"
+                },
+                {
+                    "data": {
+                        "axis": "z"
+                    },
+                    "block": "basalt"
+                }
+            ],
+            "varience": 4
+        }
     ],
     "caveBiomes": [
         "hot-sandy-red-cave",
         "hot-sandy-cave"
     ],
+    "landBiomeZoom": 1.25,
+    "effects": [
+        {
+            "potionTicksMin": 87,
+            "potionEffect": "CONFUSION",
+            "chance": 12,
+            "potionStrength": 0,
+            "interval": 3000,
+            "potionTicksMax": 67
+        },
+        {
+            "particleAltX": 0.001,
+            "particleAltY": 0.00885,
+            "particleAltZ": 0.001,
+            "chance": 2,
+            "particleEffect": "CAMPFIRE_SIGNAL_SMOKE",
+            "particleOffset": 0,
+            "interval": 1350,
+            "particleCount": 0
+        }
+    ],
+    "shoreHeightMin": 3.2,
+    "shoreBiomes": [
+        "hot-beach"
+    ],
+    "name": "Hot",
+    "shoreHeightMax": 6.2,
     "loot": {
         "tables": [
             "hot-food",
             "hot-treasure"
         ]
     },
-    "effects": [
-        {
-            "potionEffect": "CONFUSION",
-            "potionStrength": 0,
-            "interval": 3000,
-            "potionTicksMax": 67,
-            "potionTicksMin": 87,
-            "chance": 12
-        },
-        {
-            "interval": 1350,
-            "particleOffset": 0,
-            "particleEffect": "CAMPFIRE_SIGNAL_SMOKE",
-            "particleCount": 0,
-            "particleAltX": 0.001,
-            "particleAltY": 0.00885,
-            "particleAltZ": 0.001,
-            "chance": 2
-        }
-    ],
-    "deposits": [
-        {
-            "minHeight": 25,
-            "maxHeight": 67,
-            "minSize": 3,
-            "maxSize": 5,
-            "minPerChunk": 1,
-            "maxPerChunk": 3,
-            "varience": 5,
-            "palette": [
-                "GOLD_ORE"
-            ]
-        },
-        {
-            "minHeight": 15,
-            "maxHeight": 47,
-            "minSize": 3,
-            "maxSize": 5,
-            "minPerChunk": 1,
-            "maxPerChunk": 2,
-            "varience": 5,
-            "palette": [
-                "LAPIS_ORE"
-            ]
-        },
-        {
-            "minHeight": 22,
-            "maxHeight": 81,
-            "minSize": 12,
-            "maxSize": 22,
-            "minPerChunk": 7,
-            "maxPerChunk": 12,
-            "varience": 4,
-            "palette": [
-                "minecraft:basalt[axis=x]",
-                "minecraft:basalt[axis=y]",
-                "minecraft:basalt[axis=z]"
-            ]
-        }
-    ]
+    "shoreHeightZoom": 1.14
 }
