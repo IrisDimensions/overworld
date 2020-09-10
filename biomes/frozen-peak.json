@@ -1,93 +1,13 @@
 {
-    "name": "Frozen Peaks",
-    "rarity": 3,
-    "layers": [
-        {
-            "minHeight": 2,
-            "maxHeight": 3,
-            "palette": [
-                "AIR"
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 1,
-            "palette": [
-                "ICE"
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                "ICE"
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 4,
-            "palette": [
-                "PACKED_ICE",
-                "PACKED_ICE",
-                "minecraft:basalt[axis=x]",
-                "BLACKSTONE",
-                "PACKED_ICE",
-                "COBBLESTONE",
-                "minecraft:basalt[axis=x]",
-                "PACKED_ICE",
-                "PACKED_ICE",
-                "minecraft:basalt[axis=x]",
-                "PACKED_ICE",
-                "PACKED_ICE",
-                "OBSIDIAN",
-                "PACKED_ICE",
-                "minecraft:basalt[axis=x]",
-                "PACKED_ICE",
-                "PACKED_ICE",
-                "PACKED_ICE",
-                "PACKED_ICE",
-                "minecraft:basalt[axis=y]",
-                "PACKED_ICE",
-                "PACKED_ICE",
-                "PACKED_ICE",
-                "PACKED_ICE",
-                "minecraft:basalt[axis=z]"
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                "STONE",
-                "ANDESITE",
-                "STONE"
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "generator": "plain",
-            "min": 14,
-            "max": 24
-        },
-        {
-            "generator": "sharp",
-            "min": 1,
-            "max": 3
-        },
-        {
-            "generator": "mountain",
-            "min": 56,
-            "max": 96
-        }
+    "biomeSkyScatter": [
+        "SNOWY_TAIGA",
+        "SNOWY_MOUNTAINS"
     ],
     "objects": [
         {
             "chance": 0.05,
             "density": 3,
+            "snow": 0.35,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -97,7 +17,6 @@
                 },
                 "enabled": true
             },
-            "snow": 0.35,
             "place": [
                 "ice-spikes/sp-1",
                 "ice-spikes/sp-2",
@@ -118,6 +37,7 @@
         {
             "chance": 0.05,
             "density": 3,
+            "snow": 0.35,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -127,7 +47,6 @@
                 },
                 "enabled": true
             },
-            "snow": 0.35,
             "place": [
                 "ice-spikes/ice-spec-1",
                 "ice-spikes/ice-spec-2",
@@ -142,19 +61,114 @@
             }
         }
     ],
-    "derivative": "SNOWY_TAIGA_MOUNTAINS",
-    "biomeStyle": {
-        "style": "IRIS"
-    },
+    "name": "Frozen Peaks",
+    "layers": [
+        {
+            "minHeight": 2,
+            "maxHeight": 3,
+            "palette": [{"block": "air"}]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "palette": [{"block": "ice"}]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [{"block": "ice"}]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "palette": [
+                {
+                    "weight": 2,
+                    "block": "packed_ice"
+                },
+                {
+                    "data": {"axis": "x"},
+                    "block": "basalt"
+                },
+                {"block": "blackstone"},
+                {"block": "packed_ice"},
+                {"block": "cobblestone"},
+                {
+                    "data": {"axis": "x"},
+                    "block": "basalt"
+                },
+                {
+                    "weight": 2,
+                    "block": "packed_ice"
+                },
+                {
+                    "data": {"axis": "x"},
+                    "block": "basalt"
+                },
+                {
+                    "weight": 2,
+                    "block": "packed_ice"
+                },
+                {"block": "obsidian"},
+                {"block": "packed_ice"},
+                {
+                    "data": {"axis": "x"},
+                    "block": "basalt"
+                },
+                {
+                    "weight": 4,
+                    "block": "packed_ice"
+                },
+                {
+                    "data": {"axis": "y"},
+                    "block": "basalt"
+                },
+                {
+                    "weight": 4,
+                    "block": "packed_ice"
+                },
+                {
+                    "data": {"axis": "z"},
+                    "block": "basalt"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
+            ]
+        }
+    ],
+    "generators": [
+        {
+            "min": 14,
+            "max": 24,
+            "generator": "plain"
+        },
+        {
+            "min": 1,
+            "max": 3,
+            "generator": "sharp"
+        },
+        {
+            "min": 56,
+            "max": 96,
+            "generator": "mountain"
+        }
+    ],
     "biomeZoom": 30,
+    "derivative": "SNOWY_TAIGA_MOUNTAINS",
+    "biomeStyle": {"style": "IRIS"},
     "biomeScatter": [
         "SNOWY_TAIGA_MOUNTAINS",
         "TAIGA_HILLS",
         "MOUNTAINS",
         "ICE_SPIKES"
     ],
-    "biomeSkyScatter": [
-        "SNOWY_TAIGA",
-        "SNOWY_MOUNTAINS"
-    ]
+    "rarity": 3
 }
