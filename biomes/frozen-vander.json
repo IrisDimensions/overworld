@@ -68,16 +68,40 @@
             "density": 3,
             "edit": [
                 {
-                    "find": ["SPRUCE_PLANKS"],
-                    "replace": ["STRIPPED_SPRUCE_WOOD"]
+                    "find": [
+                        "SPRUCE_PLANKS"
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "stripped_spruce_wood"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "find": ["OAK_WOOD"],
-                    "replace": ["DARK_OAK_WOOD"]
+                    "find": [
+                        "OAK_WOOD"
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "dark_oak_wood"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "find": ["SPRUCE_FENCE"],
-                    "replace": ["DARK_OAK_FENCE"]
+                    "find": [
+                        "SPRUCE_FENCE"
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "dark_oak_fence"
+                            }
+                        ]
+                    }
                 }
             ],
             "rotation": {
@@ -138,32 +162,44 @@
     ],
     "biomeZoom": 50,
     "derivative": "SNOWY_TAIGA_MOUNTAINS",
-    "biomeStyle": {"style": "IRIS"},
-    "decorators": [{
-        "chance": 1,
-        "variance": {
-            "style": "IRIS",
-            "zoom": 0.2
-        },
-        "palette": [
-            {
-                "data": {"layers": 1},
-                "block": "snow"
+    "biomeStyle": {
+        "style": "IRIS"
+    },
+    "decorators": [
+        {
+            "chance": 1,
+            "variance": {
+                "style": "IRIS",
+                "zoom": 0.2
             },
-            {
-                "data": {"layers": 2},
-                "block": "snow"
-            },
-            {
-                "data": {"layers": 3},
-                "block": "snow"
-            },
-            {
-                "data": {"layers": 4},
-                "block": "snow"
-            }
-        ]
-    }],
+            "palette": [
+                {
+                    "data": {
+                        "layers": 1
+                    },
+                    "block": "snow"
+                },
+                {
+                    "data": {
+                        "layers": 2
+                    },
+                    "block": "snow"
+                },
+                {
+                    "data": {
+                        "layers": 3
+                    },
+                    "block": "snow"
+                },
+                {
+                    "data": {
+                        "layers": 4
+                    },
+                    "block": "snow"
+                }
+            ]
+        }
+    ],
     "children": [
         "frozen-peak",
         "frozen-mountains",
@@ -182,56 +218,88 @@
             "zoom": 0.6,
             "palette": [
                 {
-                    "data": {"layers": 1},
+                    "data": {
+                        "layers": 1
+                    },
                     "block": "snow"
                 },
                 {
-                    "data": {"layers": 2},
+                    "data": {
+                        "layers": 2
+                    },
                     "block": "snow"
                 },
                 {
-                    "data": {"layers": 3},
+                    "data": {
+                        "layers": 3
+                    },
                     "block": "snow"
                 },
                 {
-                    "data": {"layers": 4},
+                    "data": {
+                        "layers": 4
+                    },
                     "block": "snow"
                 },
                 {
-                    "data": {"layers": 5},
+                    "data": {
+                        "layers": 5
+                    },
                     "block": "snow"
                 },
                 {
-                    "data": {"layers": 6},
+                    "data": {
+                        "layers": 6
+                    },
                     "block": "snow"
                 },
                 {
-                    "data": {"layers": 7},
+                    "data": {
+                        "layers": 7
+                    },
                     "block": "snow"
                 },
                 {
-                    "data": {"layers": 8},
+                    "data": {
+                        "layers": 8
+                    },
                     "block": "snow"
                 }
             ]
         },
         {
             "maxHeight": 3,
-            "palette": [{"block": "snow_block"}]
+            "palette": [
+                {
+                    "block": "snow_block"
+                }
+            ]
         },
         {
             "minHeight": 2,
             "maxHeight": 4,
-            "palette": [{"block": "packed_ice"}]
+            "palette": [
+                {
+                    "block": "packed_ice"
+                }
+            ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "palette": [
-                {"block": "stone"},
-                {"block": "andesite"},
-                {"block": "stone"}
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
             ]
         }
     ],
@@ -249,11 +317,19 @@
     ],
     "childShrinkFactor": 20,
     "wall": {
-        "style": {"style": "STATIC"},
+        "style": {
+            "style": "STATIC"
+        },
         "palette": [
-            {"block": "stone"},
-            {"block": "andesite"},
-            {"block": "stone"}
+            {
+                "block": "stone"
+            },
+            {
+                "block": "andesite"
+            },
+            {
+                "block": "stone"
+            }
         ]
     },
     "biomeScatter": [

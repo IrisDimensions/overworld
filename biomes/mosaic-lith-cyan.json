@@ -3,24 +3,32 @@
         {
             "chance": 0.0045,
             "stackMax": 6,
-            "palette": [{"block": "twisting_vines_plant"}],
+            "palette": [
+                {
+                    "block": "twisting_vines_plant"
+                }
+            ],
             "stackMin": 3
         },
         {
             "chance": 0.0175,
             "palette": [
                 {
-                    "data": {"waterlogged": false},
+                    "data": {
+                        "waterlogged": false
+                    },
                     "block": "tube_coral"
                 },
                 {
-                    "data": {"waterlogged": false},
+                    "data": {
+                        "waterlogged": false
+                    },
                     "block": "tube_coral_fan"
                 }
             ]
         },
         {
-            "chance": 3.5E-4,
+            "chance": 0.00035,
             "palette": [
                 {
                     "data": {
@@ -46,12 +54,28 @@
             "chance": 0.06,
             "edit": [
                 {
-                    "find": ["BLUE_TERRACOTTA"],
-                    "replace": ["LIGHT_BLUE_CONCRETE"]
+                    "find": [
+                        "BLUE_TERRACOTTA"
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "light_blue_concrete"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "find": ["WHITE_STAINED_GLASS"],
-                    "replace": ["BLUE_STAINED_GLASS"]
+                    "find": [
+                        "WHITE_STAINED_GLASS"
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "blue_stained_glass"
+                            }
+                        ]
+                    }
                 }
             ],
             "rotation": {
@@ -96,10 +120,20 @@
         },
         {
             "chance": 0.01,
-            "edit": [{
-                "find": ["BLACK_CONCRETE"],
-                "replace": ["CYAN_CONCRETE"]
-            }],
+            "edit": [
+                {
+                    "find": [
+                        "BLACK_CONCRETE"
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "cyan_concrete"
+                            }
+                        ]
+                    }
+                }
+            ],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -127,7 +161,9 @@
     "name": "Cyan Mosaic",
     "layers": [
         {
-            "style": {"style": "FRACTAL_WATER"},
+            "style": {
+                "style": "FRACTAL_WATER"
+            },
             "zoom": 1.1,
             "palette": [
                 {
@@ -163,34 +199,58 @@
         {
             "minHeight": 12,
             "maxHeight": 16,
-            "style": {"style": "FLAT"},
-            "palette": [{"block": "blackstone"}]
+            "style": {
+                "style": "FLAT"
+            },
+            "palette": [
+                {
+                    "block": "blackstone"
+                }
+            ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "FLAT"},
-            "palette": [{"block": "blackstone"}]
+            "style": {
+                "style": "FLAT"
+            },
+            "palette": [
+                {
+                    "block": "blackstone"
+                }
+            ]
         }
     ],
-    "generators": [{
-        "min": 3,
-        "max": 96,
-        "generator": "wicked"
-    }],
+    "generators": [
+        {
+            "min": 3,
+            "max": 96,
+            "generator": "wicked"
+        }
+    ],
     "derivative": "WARPED_FOREST",
     "wall": {
-        "style": {"style": "STATIC"},
-        "palette": [{"block": "light_blue_concrete"}]
+        "style": {
+            "style": "STATIC"
+        },
+        "palette": [
+            {
+                "block": "light_blue_concrete"
+            }
+        ]
     },
     "slab": {
         "palette": [
-            {"block": "warped_slab"},
+            {
+                "block": "warped_slab"
+            },
             {
                 "weight": 3,
                 "block": "air"
             }
         ],
-        "style": {"style": "STATIC"}
+        "style": {
+            "style": "STATIC"
+        }
     }
 }

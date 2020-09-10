@@ -1,45 +1,63 @@
 {
-    "effects": [{
-        "particleAltX": 0.001,
-        "particleAltY": 0.13885,
-        "particleAltZ": 0.001,
-        "chance": 1,
-        "particleEffect": "CAMPFIRE_SIGNAL_SMOKE",
-        "particleOffset": 0,
-        "interval": 150,
-        "particleCount": 0
-    }],
+    "effects": [
+        {
+            "particleAltX": 0.001,
+            "particleAltY": 0.13885,
+            "particleAltZ": 0.001,
+            "chance": 1,
+            "particleEffect": "CAMPFIRE_SIGNAL_SMOKE",
+            "particleOffset": 0,
+            "interval": 150,
+            "particleCount": 0
+        }
+    ],
     "name": "Submerged Volcanic",
     "layers": [
         {
             "minHeight": 2,
             "maxHeight": 4,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "zoom": 0.33,
             "palette": [
                 {
-                    "data": {"axis": "x"},
+                    "data": {
+                        "axis": "x"
+                    },
                     "block": "basalt"
                 },
                 {
-                    "data": {"axis": "y"},
+                    "data": {
+                        "axis": "y"
+                    },
                     "block": "basalt"
                 },
                 {
-                    "data": {"axis": "z"},
-                    "block": "basalt"
-                },
-                {"block": "magma_block"},
-                {
-                    "data": {"axis": "x"},
+                    "data": {
+                        "axis": "z"
+                    },
                     "block": "basalt"
                 },
                 {
-                    "data": {"axis": "y"},
+                    "block": "magma_block"
+                },
+                {
+                    "data": {
+                        "axis": "x"
+                    },
                     "block": "basalt"
                 },
                 {
-                    "data": {"axis": "z"},
+                    "data": {
+                        "axis": "y"
+                    },
+                    "block": "basalt"
+                },
+                {
+                    "data": {
+                        "axis": "z"
+                    },
                     "block": "basalt"
                 }
             ]
@@ -47,11 +65,19 @@
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "palette": [
-                {"block": "stone"},
-                {"block": "andesite"},
-                {"block": "stone"}
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
             ]
         }
     ],
@@ -67,10 +93,16 @@
             "generator": "plain"
         }
     ],
-    "loot": {"tables": ["ocean-clutter"]},
+    "loot": {
+        "tables": [
+            "ocean-clutter"
+        ]
+    },
     "derivative": "WARM_OCEAN",
     "slab": {
-        "style": {"style": "STATIC"},
+        "style": {
+            "style": "STATIC"
+        },
         "palette": [
             {
                 "data": {
@@ -79,7 +111,9 @@
                 },
                 "block": "blackstone_slab"
             },
-            {"block": "air"}
+            {
+                "block": "air"
+            }
         ]
     }
 }

@@ -1,14 +1,16 @@
 {
-    "effects": [{
-        "particleAltX": 0.301,
-        "particleAltY": -0.33885,
-        "particleAltZ": 0.301,
-        "chance": 1,
-        "particleEffect": "TOTEM",
-        "particleOffset": 12,
-        "interval": 550,
-        "particleCount": 0
-    }],
+    "effects": [
+        {
+            "particleAltX": 0.301,
+            "particleAltY": -0.33885,
+            "particleAltZ": 0.301,
+            "chance": 1,
+            "particleEffect": "TOTEM",
+            "particleOffset": 12,
+            "interval": 550,
+            "particleCount": 0
+        }
+    ],
     "children": [
         "tropical-rainforest-hills",
         "tropical-jungle-denmyre"
@@ -16,53 +18,87 @@
     "decorators": [
         {
             "chance": 0.45,
-            "variance": {"style": "IRIS"},
+            "variance": {
+                "style": "IRIS"
+            },
             "zoom": 0.1,
             "palette": [
                 {
-                    "data": {"persistent": true},
+                    "data": {
+                        "persistent": true
+                    },
                     "block": "jungle_leaves"
                 },
-                {"block": "tall_grass"},
-                {"block": "grass"},
                 {
-                    "data": {"persistent": true},
+                    "block": "tall_grass"
+                },
+                {
+                    "block": "grass"
+                },
+                {
+                    "data": {
+                        "persistent": true
+                    },
                     "block": "jungle_leaves"
                 },
-                {"block": "grass"},
                 {
-                    "data": {"persistent": true},
+                    "block": "grass"
+                },
+                {
+                    "data": {
+                        "persistent": true
+                    },
                     "block": "jungle_leaves"
                 }
             ],
             "style": {
                 "style": "FRACTAL_BILLOW_IRIS",
-                "fracture": {"style": "STATIC"}
+                "fracture": {
+                    "style": "STATIC"
+                }
             }
         },
         {
             "chance": 0.1,
             "verticalZoom": 88,
-            "variance": {"style": "IRIS"},
+            "variance": {
+                "style": "IRIS"
+            },
             "zoom": 10,
-            "palette": [{
-                "weight": 3,
-                "block": "jungle_wood"
-            }],
-            "style": {"style": "STATIC"},
-            "heightVariance": {"style": "IRIS"}
+            "palette": [
+                {
+                    "weight": 3,
+                    "block": "jungle_wood"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            },
+            "heightVariance": {
+                "style": "IRIS"
+            }
         },
         {
             "chance": 0.5,
             "verticalZoom": 88,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 10,
             "palette": [
-                {"block": "grass"},
-                {"block": "tall_grass"}
+                {
+                    "block": "grass"
+                },
+                {
+                    "block": "tall_grass"
+                }
             ],
-            "style": {"style": "STATIC"},
-            "heightVariance": {"style": "STATIC"}
+            "style": {
+                "style": "STATIC"
+            },
+            "heightVariance": {
+                "style": "STATIC"
+            }
         }
     ],
     "objects": [
@@ -78,7 +114,9 @@
                 },
                 "enabled": true
             },
-            "place": ["camp/barrel-bin"],
+            "place": [
+                "camp/barrel-bin"
+            ],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -96,7 +134,9 @@
                 },
                 "enabled": true
             },
-            "place": ["camp/camp"],
+            "place": [
+                "camp/camp"
+            ],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -212,12 +252,18 @@
     "name": "Rainforest",
     "layers": [
         {
-            "style": {"style": "FRACTAL_BILLOW_IRIS"},
+            "style": {
+                "style": "FRACTAL_BILLOW_IRIS"
+            },
             "zoom": 0.6,
             "palette": [
-                {"block": "grass_block"},
                 {
-                    "data": {"persistent": true},
+                    "block": "grass_block"
+                },
+                {
+                    "data": {
+                        "persistent": true
+                    },
                     "block": "jungle_leaves"
                 },
                 {
@@ -229,45 +275,75 @@
         {
             "minHeight": 2,
             "maxHeight": 4,
-            "palette": [{"block": "dirt"}]
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "palette": [
-                {"block": "stone"},
-                {"block": "andesite"},
-                {"block": "stone"}
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
             ]
         }
     ],
-    "generators": [{
-        "min": 3,
-        "max": 9,
-        "generator": "sharp"
-    }],
+    "generators": [
+        {
+            "min": 3,
+            "max": 9,
+            "generator": "sharp"
+        }
+    ],
     "derivative": "JUNGLE",
     "wall": {
-        "style": {"style": "IRIS"},
+        "style": {
+            "style": "IRIS"
+        },
         "zoom": 0.1,
         "palette": [
-            {"block": "stripped_jungle_wood"},
             {
-                "data": {"persistent": true},
+                "block": "stripped_jungle_wood"
+            },
+            {
+                "data": {
+                    "persistent": true
+                },
                 "block": "jungle_leaves"
             },
-            {"block": "stripped_jungle_wood"},
             {
-                "data": {"persistent": true},
+                "block": "stripped_jungle_wood"
+            },
+            {
+                "data": {
+                    "persistent": true
+                },
                 "block": "jungle_leaves"
             },
-            {"block": "stripped_jungle_wood"},
             {
-                "data": {"persistent": true},
+                "block": "stripped_jungle_wood"
+            },
+            {
+                "data": {
+                    "persistent": true
+                },
                 "block": "jungle_leaves"
             },
-            {"block": "stripped_jungle_wood"}
+            {
+                "block": "stripped_jungle_wood"
+            }
         ]
     },
     "rarity": 2

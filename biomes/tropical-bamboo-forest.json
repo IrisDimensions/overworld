@@ -1,11 +1,15 @@
 {
-    "entityInitialSpawns": [{
-        "maxSpawns": 5,
-        "minSpawns": 2,
-        "entity": "panda",
-        "rarity": 4
-    }],
-    "biomeSkyScatter": ["DESERT"],
+    "entityInitialSpawns": [
+        {
+            "maxSpawns": 5,
+            "minSpawns": 2,
+            "entity": "panda",
+            "rarity": 4
+        }
+    ],
+    "biomeSkyScatter": [
+        "DESERT"
+    ],
     "objects": [
         {
             "chance": 0.5,
@@ -90,36 +94,50 @@
     ],
     "biomeZoom": 10,
     "derivative": "DESERT",
-    "biomeStyle": {"style": "IRIS"},
-    "effects": [{
-        "particleAltX": 0.301,
-        "particleAltY": -0.33885,
-        "particleAltZ": 0.301,
-        "chance": 1,
-        "particleEffect": "TOTEM",
-        "particleOffset": 12,
-        "interval": 550,
-        "particleCount": 0
-    }],
-    "children": ["temperate-wilds"],
+    "biomeStyle": {
+        "style": "IRIS"
+    },
+    "effects": [
+        {
+            "particleAltX": 0.301,
+            "particleAltY": -0.33885,
+            "particleAltZ": 0.301,
+            "chance": 1,
+            "particleEffect": "TOTEM",
+            "particleOffset": 12,
+            "interval": 550,
+            "particleCount": 0
+        }
+    ],
+    "children": [
+        "temperate-wilds"
+    ],
     "decorators": [
         {
             "chance": 0.25,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 0.3,
             "palette": [
                 {
                     "weight": 3,
                     "block": "grass"
                 },
-                {"block": "tall_grass"}
+                {
+                    "block": "tall_grass"
+                }
             ],
-            "style": {"style": "STATIC"}
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
             "verticalZoom": 5,
             "chance": 0.18,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "stackMax": 19,
             "zoom": 5,
             "palette": [
@@ -164,45 +182,83 @@
                     "block": "bamboo"
                 }
             ],
-            "style": {"style": "STATIC"},
-            "heightVariance": {"style": "IRIS"},
+            "style": {
+                "style": "STATIC"
+            },
+            "heightVariance": {
+                "style": "IRIS"
+            },
             "stackMin": 3
         }
     ],
     "name": "Bamboo Forest",
     "layers": [
-        {"palette": [{"block": "grass_block"}]},
-        {"palette": [{"block": "dirt"}]},
+        {
+            "palette": [
+                {
+                    "block": "grass_block"
+                }
+            ]
+        },
+        {
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        },
         {
             "minHeight": 1,
             "maxHeight": 3,
             "palette": [
-                {"block": "dirt"},
-                {"block": "coarse_dirt"}
+                {
+                    "block": "dirt"
+                },
+                {
+                    "block": "coarse_dirt"
+                }
             ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "palette": [
-                {"block": "stone"},
-                {"block": "andesite"},
-                {"block": "stone"}
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
             ]
         }
     ],
-    "generators": [{
-        "min": 4,
-        "max": 7,
-        "generator": "plain"
-    }],
+    "generators": [
+        {
+            "min": 4,
+            "max": 7,
+            "generator": "plain"
+        }
+    ],
     "wall": {
-        "style": {"style": "STATIC"},
+        "style": {
+            "style": "STATIC"
+        },
         "palette": [
-            {"block": "stone"},
-            {"block": "andesite"},
-            {"block": "stone"}
+            {
+                "block": "stone"
+            },
+            {
+                "block": "andesite"
+            },
+            {
+                "block": "stone"
+            }
         ]
     },
     "biomeScatter": [

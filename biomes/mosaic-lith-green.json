@@ -3,12 +3,18 @@
         {
             "chance": 0.0045,
             "stackMax": 3,
-            "palette": [{"block": "mossy_cobblestone_wall"}],
+            "palette": [
+                {
+                    "block": "mossy_cobblestone_wall"
+                }
+            ],
             "stackMin": 1
         },
         {
             "chance": 0.0025,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "palette": [
                 {
                     "data": {
@@ -46,12 +52,28 @@
             "chance": 0.06,
             "edit": [
                 {
-                    "find": ["BLUE_TERRACOTTA"],
-                    "replace": ["GREEN_TERRACOTTA"]
+                    "find": [
+                        "BLUE_TERRACOTTA"
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "green_terracotta"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "find": ["WHITE_STAINED_GLASS"],
-                    "replace": ["LIME_STAINED_GLASS"]
+                    "find": [
+                        "WHITE_STAINED_GLASS"
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "lime_stained_glass"
+                            }
+                        ]
+                    }
                 }
             ],
             "rotation": {
@@ -96,10 +118,20 @@
         },
         {
             "chance": 0.01,
-            "edit": [{
-                "find": ["BLACK_CONCRETE"],
-                "replace": ["GREEN_CONCRETE"]
-            }],
+            "edit": [
+                {
+                    "find": [
+                        "BLACK_CONCRETE"
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "green_concrete"
+                            }
+                        ]
+                    }
+                }
+            ],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -127,7 +159,9 @@
     "name": "Green Mosaic",
     "layers": [
         {
-            "style": {"style": "FRACTAL_WATER"},
+            "style": {
+                "style": "FRACTAL_WATER"
+            },
             "zoom": 1.1,
             "palette": [
                 {
@@ -163,34 +197,58 @@
         {
             "minHeight": 12,
             "maxHeight": 16,
-            "style": {"style": "FLAT"},
-            "palette": [{"block": "blackstone"}]
+            "style": {
+                "style": "FLAT"
+            },
+            "palette": [
+                {
+                    "block": "blackstone"
+                }
+            ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "FLAT"},
-            "palette": [{"block": "blackstone"}]
+            "style": {
+                "style": "FLAT"
+            },
+            "palette": [
+                {
+                    "block": "blackstone"
+                }
+            ]
         }
     ],
-    "generators": [{
-        "min": 42,
-        "max": 68,
-        "generator": "plain-cliffs-thin"
-    }],
+    "generators": [
+        {
+            "min": 42,
+            "max": 68,
+            "generator": "plain-cliffs-thin"
+        }
+    ],
     "derivative": "SWAMP",
     "wall": {
-        "style": {"style": "STATIC"},
-        "palette": [{"block": "green_concrete"}]
+        "style": {
+            "style": "STATIC"
+        },
+        "palette": [
+            {
+                "block": "green_concrete"
+            }
+        ]
     },
     "slab": {
         "palette": [
-            {"block": "mossy_cobblestone_slab"},
+            {
+                "block": "mossy_cobblestone_slab"
+            },
             {
                 "weight": 3,
                 "block": "air"
             }
         ],
-        "style": {"style": "STATIC"}
+        "style": {
+            "style": "STATIC"
+        }
     }
 }

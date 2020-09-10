@@ -1,21 +1,43 @@
 {
-    "decorators": [{
-        "chance": 0.0045,
-        "stackMax": 3,
-        "palette": [{"block": "diorite_wall"}],
-        "stackMin": 1
-    }],
+    "decorators": [
+        {
+            "chance": 0.0045,
+            "stackMax": 3,
+            "palette": [
+                {
+                    "block": "diorite_wall"
+                }
+            ],
+            "stackMin": 1
+        }
+    ],
     "objects": [
         {
             "chance": 0.06,
             "edit": [
                 {
-                    "find": ["BLUE_TERRACOTTA"],
-                    "replace": ["LIGHT_GRAY_STAINED_GLASS"]
+                    "find": [
+                        "BLUE_TERRACOTTA"
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "light_gray_stained_glass"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "find": ["WHITE_STAINED_GLASS"],
-                    "replace": ["WHITE_CONCRETE"]
+                    "find": [
+                        "WHITE_STAINED_GLASS"
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "white_concrete"
+                            }
+                        ]
+                    }
                 }
             ],
             "rotation": {
@@ -60,10 +82,20 @@
         },
         {
             "chance": 0.01,
-            "edit": [{
-                "find": ["BLACK_CONCRETE"],
-                "replace": ["WHITE_CONCRETE"]
-            }],
+            "edit": [
+                {
+                    "find": [
+                        "BLACK_CONCRETE"
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "white_concrete"
+                            }
+                        ]
+                    }
+                }
+            ],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -91,7 +123,9 @@
     "name": "White Mosaic",
     "layers": [
         {
-            "style": {"style": "FRACTAL_WATER"},
+            "style": {
+                "style": "FRACTAL_WATER"
+            },
             "zoom": 1.1,
             "palette": [
                 {
@@ -127,34 +161,58 @@
         {
             "minHeight": 12,
             "maxHeight": 16,
-            "style": {"style": "FLAT"},
-            "palette": [{"block": "blackstone"}]
+            "style": {
+                "style": "FLAT"
+            },
+            "palette": [
+                {
+                    "block": "blackstone"
+                }
+            ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "FLAT"},
-            "palette": [{"block": "blackstone"}]
+            "style": {
+                "style": "FLAT"
+            },
+            "palette": [
+                {
+                    "block": "blackstone"
+                }
+            ]
         }
     ],
-    "generators": [{
-        "min": 28,
-        "max": 41,
-        "generator": "plain"
-    }],
+    "generators": [
+        {
+            "min": 28,
+            "max": 41,
+            "generator": "plain"
+        }
+    ],
     "derivative": "BASALT_DELTAS",
     "wall": {
-        "style": {"style": "STATIC"},
-        "palette": [{"block": "white_concrete"}]
+        "style": {
+            "style": "STATIC"
+        },
+        "palette": [
+            {
+                "block": "white_concrete"
+            }
+        ]
     },
     "slab": {
         "palette": [
-            {"block": "diorite_slab"},
+            {
+                "block": "diorite_slab"
+            },
             {
                 "weight": 3,
                 "block": "air"
             }
         ],
-        "style": {"style": "STATIC"}
+        "style": {
+            "style": "STATIC"
+        }
     }
 }

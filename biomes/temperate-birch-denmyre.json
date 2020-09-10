@@ -2,26 +2,50 @@
     "decorators": [
         {
             "chance": 0.01,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 0.01,
             "palette": [
-                {"block": "red_tulip"},
-                {"block": "orange_tulip"},
-                {"block": "white_tulip"},
-                {"block": "pink_tulip"},
-                {"block": "cornflower"}
+                {
+                    "block": "red_tulip"
+                },
+                {
+                    "block": "orange_tulip"
+                },
+                {
+                    "block": "white_tulip"
+                },
+                {
+                    "block": "pink_tulip"
+                },
+                {
+                    "block": "cornflower"
+                }
             ],
-            "style": {"style": "STATIC"}
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
             "chance": 0.35,
-            "variance": {"style": "STATIC"},
-            "palette": [{"block": "grass"}],
-            "style": {"style": "STATIC"}
+            "variance": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "grass"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
             "chance": 0.003,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "palette": [
                 {
                     "data": {
@@ -40,13 +64,23 @@
                     "block": "stone_button"
                 }
             ],
-            "style": {"style": "STATIC"}
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
             "chance": 0.027,
-            "variance": {"style": "STATIC"},
-            "palette": [{"block": "tall_grass"}],
-            "style": {"style": "STATIC"}
+            "variance": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "tall_grass"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
         }
     ],
     "objects": [
@@ -62,7 +96,9 @@
                 },
                 "enabled": true
             },
-            "place": ["camp/barrel-bin"],
+            "place": [
+                "camp/barrel-bin"
+            ],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -81,7 +117,9 @@
                 },
                 "enabled": true
             },
-            "place": ["camp/camp"],
+            "place": [
+                "camp/camp"
+            ],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -91,10 +129,20 @@
         {
             "chance": 0.5,
             "density": 2,
-            "edit": [{
-                "find": ["birch_planks"],
-                "replace": ["stripped_birch_wood"]
-            }],
+            "edit": [
+                {
+                    "find": [
+                        "birch_planks"
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "stripped_birch_wood"
+                            }
+                        ]
+                    }
+                }
+            ],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -158,39 +206,77 @@
     "name": "Birch Denmyre",
     "layers": [
         {
-            "style": {"style": "FLAT"},
-            "palette": [{"block": "grass_block"}]
+            "style": {
+                "style": "FLAT"
+            },
+            "palette": [
+                {
+                    "block": "grass_block"
+                }
+            ]
         },
-        {"palette": [{"block": "dirt"}]},
+        {
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        },
         {
             "minHeight": 1,
             "maxHeight": 3,
-            "palette": [{"block": "coarse_dirt"}]
+            "palette": [
+                {
+                    "block": "coarse_dirt"
+                }
+            ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "palette": [
-                {"block": "stone"},
-                {"block": "andesite"},
-                {"block": "stone"}
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
             ]
         }
     ],
-    "generators": [{
-        "min": 4,
-        "max": 7,
-        "generator": "plain"
-    }],
-    "loot": {"tables": ["forest-food"]},
+    "generators": [
+        {
+            "min": 4,
+            "max": 7,
+            "generator": "plain"
+        }
+    ],
+    "loot": {
+        "tables": [
+            "forest-food"
+        ]
+    },
     "derivative": "FOREST",
     "wall": {
-        "style": {"style": "STATIC"},
+        "style": {
+            "style": "STATIC"
+        },
         "palette": [
-            {"block": "stone"},
-            {"block": "andesite"},
-            {"block": "stone"}
+            {
+                "block": "stone"
+            },
+            {
+                "block": "andesite"
+            },
+            {
+                "block": "stone"
+            }
         ]
     },
     "rarity": 2

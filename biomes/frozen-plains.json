@@ -1,33 +1,45 @@
 {
-    "decorators": [{
-        "chance": 1,
-        "variance": {
-            "style": "IRIS",
-            "zoom": 0.2
-        },
-        "palette": [
-            {
-                "data": {"layers": 1},
-                "block": "snow"
+    "decorators": [
+        {
+            "chance": 1,
+            "variance": {
+                "style": "IRIS",
+                "zoom": 0.2
             },
-            {
-                "data": {"layers": 2},
-                "block": "snow"
-            },
-            {
-                "data": {"layers": 3},
-                "block": "snow"
-            },
-            {
-                "data": {"layers": 4},
-                "block": "snow"
-            }
-        ]
-    }],
-    "children": ["frozen-plains-hills"],
+            "palette": [
+                {
+                    "data": {
+                        "layers": 1
+                    },
+                    "block": "snow"
+                },
+                {
+                    "data": {
+                        "layers": 2
+                    },
+                    "block": "snow"
+                },
+                {
+                    "data": {
+                        "layers": 3
+                    },
+                    "block": "snow"
+                },
+                {
+                    "data": {
+                        "layers": 4
+                    },
+                    "block": "snow"
+                }
+            ]
+        }
+    ],
+    "children": [
+        "frozen-plains-hills"
+    ],
     "objects": [
         {
-            "chance": 2.56E-4,
+            "chance": 0.000256,
             "snow": 0.25,
             "rotation": {
                 "yAxis": {
@@ -38,7 +50,9 @@
                 },
                 "enabled": true
             },
-            "place": ["grave/grave"],
+            "place": [
+                "grave/grave"
+            ],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -155,7 +169,9 @@
                 },
                 "enabled": true
             },
-            "place": ["camp/camp"],
+            "place": [
+                "camp/camp"
+            ],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -194,36 +210,62 @@
         {
             "minHeight": 3,
             "maxHeight": 5,
-            "palette": [{"block": "snow_block"}]
+            "palette": [
+                {
+                    "block": "snow_block"
+                }
+            ]
         },
         {
             "minHeight": 3,
             "maxHeight": 5,
-            "palette": [{"block": "dirt"}]
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "palette": [
-                {"block": "stone"},
-                {"block": "andesite"},
-                {"block": "stone"}
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
             ]
         }
     ],
-    "generators": [{
-        "min": 4,
-        "max": 6,
-        "generator": "plain"
-    }],
+    "generators": [
+        {
+            "min": 4,
+            "max": 6,
+            "generator": "plain"
+        }
+    ],
     "derivative": "ICE_SPIKES",
     "wall": {
-        "style": {"style": "STATIC"},
+        "style": {
+            "style": "STATIC"
+        },
         "palette": [
-            {"block": "stone"},
-            {"block": "andesite"},
-            {"block": "stone"}
+            {
+                "block": "stone"
+            },
+            {
+                "block": "andesite"
+            },
+            {
+                "block": "stone"
+            }
         ]
     }
 }

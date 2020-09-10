@@ -48,20 +48,26 @@
         {
             "chance": 0.4,
             "density": 2,
-            "edit": [{
-                "find": [
-                    "BIRCH_LEAVES",
-                    "SPRUCE_LEAVES",
-                    "OAK_LEAVES"
-                ],
-                "replace": [
-                    "ICE",
-                    "ICE",
-                    "ICE",
-                    "ICE",
-                    "PACKED_ICE"
-                ]
-            }],
+            "edit": [
+                {
+                    "find": [
+                        "BIRCH_LEAVES",
+                        "SPRUCE_LEAVES",
+                        "OAK_LEAVES"
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "weight": 4,
+                                "block": "ice"
+                            },
+                            {
+                                "block": "packed_ice"
+                            }
+                        ]
+                    }
+                }
+            ],
             "snow": 1,
             "rotation": {
                 "yAxis": {
@@ -119,32 +125,44 @@
     ],
     "biomeZoom": 30,
     "derivative": "SNOWY_TAIGA_MOUNTAINS",
-    "biomeStyle": {"style": "IRIS"},
-    "decorators": [{
-        "chance": 1,
-        "variance": {
-            "style": "IRIS",
-            "zoom": 0.25
-        },
-        "palette": [
-            {
-                "data": {"layers": 1},
-                "block": "snow"
+    "biomeStyle": {
+        "style": "IRIS"
+    },
+    "decorators": [
+        {
+            "chance": 1,
+            "variance": {
+                "style": "IRIS",
+                "zoom": 0.25
             },
-            {
-                "data": {"layers": 2},
-                "block": "snow"
-            },
-            {
-                "data": {"layers": 3},
-                "block": "snow"
-            },
-            {
-                "data": {"layers": 4},
-                "block": "snow"
-            }
-        ]
-    }],
+            "palette": [
+                {
+                    "data": {
+                        "layers": 1
+                    },
+                    "block": "snow"
+                },
+                {
+                    "data": {
+                        "layers": 2
+                    },
+                    "block": "snow"
+                },
+                {
+                    "data": {
+                        "layers": 3
+                    },
+                    "block": "snow"
+                },
+                {
+                    "data": {
+                        "layers": 4
+                    },
+                    "block": "snow"
+                }
+            ]
+        }
+    ],
     "children": [
         "frozen-peak",
         "frozen-mountains"
@@ -154,21 +172,37 @@
         {
             "minHeight": 2,
             "maxHeight": 3,
-            "palette": [{"block": "snow_block"}]
+            "palette": [
+                {
+                    "block": "snow_block"
+                }
+            ]
         },
         {
             "minHeight": 2,
             "maxHeight": 4,
-            "palette": [{"block": "packed_ice"}]
+            "palette": [
+                {
+                    "block": "packed_ice"
+                }
+            ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "palette": [
-                {"block": "stone"},
-                {"block": "andesite"},
-                {"block": "stone"}
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
             ]
         }
     ],
@@ -186,11 +220,19 @@
     ],
     "childShrinkFactor": 20,
     "wall": {
-        "style": {"style": "STATIC"},
+        "style": {
+            "style": "STATIC"
+        },
         "palette": [
-            {"block": "stone"},
-            {"block": "andesite"},
-            {"block": "stone"}
+            {
+                "block": "stone"
+            },
+            {
+                "block": "andesite"
+            },
+            {
+                "block": "stone"
+            }
         ]
     },
     "biomeScatter": [

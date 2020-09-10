@@ -7,7 +7,9 @@
     "decorators": [
         {
             "chance": 0.0235,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 0.3,
             "palette": [
                 {
@@ -27,46 +29,72 @@
                     "block": "stone_button"
                 }
             ],
-            "style": {"style": "STATIC"}
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
             "chance": 0.092,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 0.3,
-            "palette": [{"block": "dead_bush"}],
-            "style": {"style": "STATIC"}
+            "palette": [
+                {
+                    "block": "dead_bush"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
             "chance": 0.1,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 0.5,
             "palette": [
-                {"block": "grass"},
-                {"block": "tall_grass"}
+                {
+                    "block": "grass"
+                },
+                {
+                    "block": "tall_grass"
+                }
             ],
-            "style": {"style": "STATIC"}
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
-            "chance": 1.0E-6,
-            "variance": {"style": "STATIC"},
+            "chance": 0.000001,
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 0.3,
             "palette": [
                 {
                     "weight": 8,
                     "block": "air"
                 },
-                {"block": "pumpkin"},
+                {
+                    "block": "pumpkin"
+                },
                 {
                     "weight": 4,
                     "block": "air"
                 },
-                {"block": "carved_pumpkin"},
+                {
+                    "block": "carved_pumpkin"
+                },
                 {
                     "weight": 8,
                     "block": "air"
                 }
             ],
-            "style": {"style": "STATIC"}
+            "style": {
+                "style": "STATIC"
+            }
         }
     ],
     "objects": [
@@ -82,7 +110,9 @@
                 },
                 "enabled": true
             },
-            "place": ["camp/barrel-bin"],
+            "place": [
+                "camp/barrel-bin"
+            ],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -115,16 +145,40 @@
             "chance": 0.335,
             "edit": [
                 {
-                    "find": ["oak_wood"],
-                    "replace": ["stripped_oak_wood"]
+                    "find": [
+                        "oak_wood"
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "stripped_oak_wood"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "find": ["oak_log"],
-                    "replace": ["stripped_oak_log"]
+                    "find": [
+                        "oak_log"
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "stripped_oak_log"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "find": ["spruce_slab"],
-                    "replace": ["oak_slab"]
+                    "find": [
+                        "spruce_slab"
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "oak_slab"
+                            }
+                        ]
+                    }
                 }
             ],
             "rotation": {
@@ -200,19 +254,25 @@
     "name": "Dry Forest",
     "layers": [
         {
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "zoom": 0.75,
             "palette": [
                 {
                     "weight": 2,
                     "block": "grass_block"
                 },
-                {"block": "brown_concrete_powder"},
+                {
+                    "block": "brown_concrete_powder"
+                },
                 {
                     "weight": 4,
                     "block": "grass_block"
                 },
-                {"block": "brown_concrete_powder"},
+                {
+                    "block": "brown_concrete_powder"
+                },
                 {
                     "weight": 7,
                     "block": "grass_block"
@@ -222,34 +282,62 @@
         {
             "minHeight": 2,
             "maxHeight": 4,
-            "palette": [{"block": "dirt"}]
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "palette": [
-                {"block": "stone"},
-                {"block": "andesite"},
-                {"block": "stone"}
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
             ]
         }
     ],
-    "generators": [{
-        "min": 4,
-        "max": 9,
-        "generator": "plain"
-    }],
+    "generators": [
+        {
+            "min": 4,
+            "max": 9,
+            "generator": "plain"
+        }
+    ],
     "biomeZoom": 20,
-    "loot": {"tables": ["cactus-clutter"]},
+    "loot": {
+        "tables": [
+            "cactus-clutter"
+        ]
+    },
     "derivative": "SAVANNA",
-    "biomeStyle": {"style": "IRIS"},
+    "biomeStyle": {
+        "style": "IRIS"
+    },
     "wall": {
-        "style": {"style": "STATIC"},
+        "style": {
+            "style": "STATIC"
+        },
         "palette": [
-            {"block": "stone"},
-            {"block": "andesite"},
-            {"block": "stone"}
+            {
+                "block": "stone"
+            },
+            {
+                "block": "andesite"
+            },
+            {
+                "block": "stone"
+            }
         ]
     },
     "biomeScatter": [

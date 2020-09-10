@@ -20,7 +20,9 @@
                     "weight": 3,
                     "block": "packed_ice"
                 },
-                {"block": "blue_ice"},
+                {
+                    "block": "blue_ice"
+                },
                 {
                     "weight": 3,
                     "block": "packed_ice"
@@ -34,7 +36,11 @@
         {
             "minHeight": 1,
             "maxHeight": 2,
-            "palette": [{"block": "packed_ice"}]
+            "palette": [
+                {
+                    "block": "packed_ice"
+                }
+            ]
         }
     ],
     "objects": [
@@ -99,31 +105,53 @@
     ],
     "name": "Frozen Ocean",
     "layers": [
-        {"palette": [
-            {"block": "dirt"},
-            {"block": "gravel"},
-            {"block": "stone"}
-        ]},
+        {
+            "palette": [
+                {
+                    "block": "dirt"
+                },
+                {
+                    "block": "gravel"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
+        },
         {
             "minHeight": 2,
             "maxHeight": 3,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "palette": [
                 {
                     "weight": 5,
                     "block": "sand"
                 },
-                {"block": "clay"},
-                {"block": "gravel"},
-                {"block": "dirt"}
+                {
+                    "block": "clay"
+                },
+                {
+                    "block": "gravel"
+                },
+                {
+                    "block": "dirt"
+                }
             ]
         }
     ],
-    "generators": [{
-        "min": -12,
-        "max": -7,
-        "generator": "plain"
-    }],
-    "loot": {"tables": ["ocean-clutter"]},
+    "generators": [
+        {
+            "min": -12,
+            "max": -7,
+            "generator": "plain"
+        }
+    ],
+    "loot": {
+        "tables": [
+            "ocean-clutter"
+        ]
+    },
     "derivative": "DEEP_FROZEN_OCEAN"
 }

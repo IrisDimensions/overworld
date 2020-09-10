@@ -8,13 +8,17 @@
             "chance": 0.0045,
             "stackMax": 3,
             "palette": [
-                {"block": "blackstone_wall"},
-                {"block": "polished_blackstone_wall"}
+                {
+                    "block": "blackstone_wall"
+                },
+                {
+                    "block": "polished_blackstone_wall"
+                }
             ],
             "stackMin": 1
         },
         {
-            "chance": 3.5E-4,
+            "chance": 0.00035,
             "palette": [
                 {
                     "data": {
@@ -40,12 +44,28 @@
             "chance": 0.06,
             "edit": [
                 {
-                    "find": ["BLUE_TERRACOTTA"],
-                    "replace": ["BLACKSTONE"]
+                    "find": [
+                        "BLUE_TERRACOTTA"
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "blackstone"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "find": ["WHITE_STAINED_GLASS"],
-                    "replace": ["RED_STAINED_GLASS"]
+                    "find": [
+                        "WHITE_STAINED_GLASS"
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "red_stained_glass"
+                            }
+                        ]
+                    }
                 }
             ],
             "rotation": {
@@ -117,7 +137,9 @@
     "name": "Black Mosaic",
     "layers": [
         {
-            "style": {"style": "FRACTAL_WATER"},
+            "style": {
+                "style": "FRACTAL_WATER"
+            },
             "zoom": 1.1,
             "palette": [
                 {
@@ -153,27 +175,49 @@
         {
             "minHeight": 12,
             "maxHeight": 16,
-            "style": {"style": "FLAT"},
-            "palette": [{"block": "blackstone"}]
+            "style": {
+                "style": "FLAT"
+            },
+            "palette": [
+                {
+                    "block": "blackstone"
+                }
+            ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "FLAT"},
-            "palette": [{"block": "blackstone"}]
+            "style": {
+                "style": "FLAT"
+            },
+            "palette": [
+                {
+                    "block": "blackstone"
+                }
+            ]
         }
     ],
-    "generators": [{
-        "min": 12,
-        "max": 70,
-        "generator": "wicked"
-    }],
+    "generators": [
+        {
+            "min": 12,
+            "max": 70,
+            "generator": "wicked"
+        }
+    ],
     "biomeZoom": 20,
     "derivative": "SAVANNA",
-    "biomeStyle": {"style": "IRIS"},
+    "biomeStyle": {
+        "style": "IRIS"
+    },
     "wall": {
-        "style": {"style": "STATIC"},
-        "palette": [{"block": "black_concrete"}]
+        "style": {
+            "style": "STATIC"
+        },
+        "palette": [
+            {
+                "block": "black_concrete"
+            }
+        ]
     },
     "biomeScatter": [
         "SAVANNA",
