@@ -1,17 +1,44 @@
 {
+    "children": [
+        "swamp-dark-oak-denmyre"
+    ],
     "decorators": [
         {
             "chance": 0.01,
             "variance": {
                 "style": "STATIC"
             },
-            "zoom": 0.01,
+            "zoom": 0.3,
             "palette": [
                 {
                     "block": "dead_bush"
                 },
                 {
+                    "block": "brown_mushroom"
+                },
+                {
                     "block": "red_mushroom"
+                },
+                {
+                    "block": "brown_mushroom"
+                },
+                {
+                    "block": "red_mushroom"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "chance": 0.0002,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "block": "crimson_fungus"
                 }
             ],
             "style": {
@@ -47,30 +74,6 @@
             }
         },
         {
-            "chance": 0.001,
-            "variance": {
-                "style": "STATIC"
-            },
-            "zoom": 0.1,
-            "palette": [
-                {
-                    "block": "wither_rose"
-                },
-                {
-                    "block": "red_mushroom"
-                },
-                {
-                    "block": "brown_mushroom"
-                },
-                {
-                    "block": "poppy"
-                }
-            ],
-            "style": {
-                "style": "STATIC"
-            }
-        },
-        {
             "chance": 0.45,
             "variance": {
                 "style": "STATIC"
@@ -88,27 +91,33 @@
     ],
     "objects": [
         {
-            "chance": 0.000256,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
+            "chance": 0.05,
+            "edit": [
+                {
+                    "find": [
+                        {"block":"spruce_leaves"}
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "oak_leaves"
+                            }
+                        ]
+                    }
                 },
-                "enabled": true
-            },
-            "place": [
-                "grave/grave"
+                {
+                    "find": [
+                        {"block": "birch_leaves"}
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "dark_oak_leaves"
+                            }
+                        ]
+                    }
+                }
             ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "chance": 1,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -139,7 +148,176 @@
             }
         },
         {
-            "chance": 0.18,
+            "chance": 0.7,
+            "edit": [
+                {
+                    "find": [
+                        {"block":"spruce_leaves"}
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "oak_leaves"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {"block": "birch_leaves"}
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "dark_oak_leaves"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {"block": "dark_oak_fence"}
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "dark_oak_leaves"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "roofed-wayward/taller-roof-1",
+                "roofed-wayward/taller-roof-2",
+                "roofed-wayward/taller-roof-3",
+                "roofed-wayward/taller-roof-4",
+                "roofed-wayward/taller-roof-5",
+                "roofed-wayward/taller-roof-6",
+                "roofed-wayward/taller-roof-7",
+                "roofed-wayward/taller-roof-8",
+                "roofed-wayward/taller-roof-9",
+                "roofed-wayward/taller-roof-10"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.135,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "boulder/boulder1",
+                "boulder/boulder2",
+                "boulder/boulder3",
+                "boulder/boulder4",
+                "boulder/boulder5",
+                "boulder/boulder6",
+                "boulder/boulder7",
+                "boulder/boulder8"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -2,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.1,
+            "edit": [
+                {
+                    "find": [
+                        {"block": "oak_log"}
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "dark_oak_log"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {"block": "oak_wood"}
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "dark_oak_wood"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {"block": "oak_fence"}
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "dark_oak_fence"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {"block": "dark_oak_planks"}
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "stripped_dark_oak_wood"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "stump/stump1",
+                "stump/stump2",
+                "stump/stump3",
+                "stump/stump4",
+                "stump/stump5",
+                "stump/stump6"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.3,
             "edit": [
                 {
                     "find": [
@@ -215,138 +393,33 @@
         {
             "chance": 0.001,
             "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
+                "enabled": false
             },
             "place": [
-                "stone-clutt/obelisk-1",
-                "stone-clutt/obelisk-2",
-                "stone-clutt/obelisk-3",
-                "stone-clutt/obelisk-4",
-                "stone-clutt/obelisk-5",
-                "stone-clutt/obelisk-6",
-                "stone-clutt/obelisk-7"
+                "stump/grave-1"
             ],
             "translate": {
                 "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.085,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "boulder/boulder1",
-                "boulder/boulder2",
-                "boulder/boulder3",
-                "boulder/boulder4",
-                "boulder/boulder5",
-                "boulder/boulder6",
-                "boulder/boulder7",
-                "boulder/boulder8"
-            ],
-            "translate": {
-                "x": 0,
-                "y": -2,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.08,
-            "edit": [
-                {
-                    "find": [
-                        {"block": "oak_log"}
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "dark_oak_log"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "find": [
-                        {"block": "oak_wood"}
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "dark_oak_wood"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "find": [
-                        {"block": "oak_fence"}
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "dark_oak_fence"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "find": [
-                        {"block": "dark_oak_planks"}
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "stripped_dark_oak_wood"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "stump/stump1",
-                "stump/stump2",
-                "stump/stump3",
-                "stump/stump4",
-                "stump/stump5",
-                "stump/stump6"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
+                "y": -1,
                 "z": 0
             }
         }
     ],
-    "name": "Swamp Mountains",
+    "name": "Roofed Swamp",
     "layers": [
         {
+            "zoom": 0.5,
+            "style": {
+                "style": "STATIC"
+            },
             "palette": [
                 {
+                    "weight": 5,
                     "block": "grass_block"
+                },
+                {
+                    "weight": 2,
+                    "block": "podzol"
                 }
             ]
         },
@@ -370,6 +443,9 @@
             },
             "palette": [
                 {
+                    "block": "stone"
+                },
+                {
                     "block": "andesite"
                 },
                 {
@@ -381,18 +457,18 @@
     "structures": [
         {
             "tileset": "murky-stronghold",
-            "zoom": 3.14,
-            "shuffle": 16,
-            "ratio": 0.59,
-            "height": 67,
-            "rarity": 33
+            "zoom": 3.15,
+            "shuffle": 11,
+            "ratio": 0.58,
+            "height": 53,
+            "rarity": 32
         }
     ],
     "generators": [
         {
-            "min": 13,
-            "max": 32,
-            "generator": "mountain"
+            "min": 4,
+            "max": 11,
+            "generator": "plain"
         }
     ],
     "derivative": "SWAMP",
