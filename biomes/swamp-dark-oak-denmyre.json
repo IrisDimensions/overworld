@@ -117,7 +117,9 @@
                 },
                 {
                     "find": [{"block": "acacia_leaves"}],
-                    "replace": {"palette": [{"block": "dark_oak_leaves[persistent=true]"}]}
+                    "replace": {"palette": [{"block": "dark_oak_leaves", "data": {
+                        "persistent": true
+                    }}]}
                 },
                 {
                     "find": [{"block": "acacia_fence"}],
@@ -188,7 +190,10 @@
                     "replace": {
                         "palette": [
                             {
-                                "block": "dark_oak_leaves[persistent=true]"
+                                "block": "dark_oak_leaves",
+                                "data": {
+                                    "persistent": true
+                                }
                             }
                         ]
                     }
@@ -200,7 +205,10 @@
                     "replace": {
                         "palette": [
                             {
-                                "block": "dark_oak_leaves[persistent=true]"
+                                "block": "dark_oak_leaves",
+                                "data": {
+                                    "persistent": true
+                                }
                             }
                         ]
                     }
@@ -212,7 +220,10 @@
                     "replace": {
                         "palette": [
                             {
-                                "block": "dark_oak_leaves[persistent=true]"
+                                "block": "dark_oak_leaves",
+                                "data": {
+                                    "persistent": true
+                                }
                             }
                         ]
                     }
@@ -248,8 +259,8 @@
         }
     ],
     "entityInitialSpawns": [
-    {"entity": "cow", "maxSpawns": 1, "minSpawns": 0, "rarity": 6},
-    {"entity": "pig", "maxSpawns": 1, "minSpawns": 0, "rarity": 6}
+    {"entity": "cow", "maxSpawns": 1, "minSpawns": 1, "rarity": 6},
+    {"entity": "pig", "maxSpawns": 1, "minSpawns": 1, "rarity": 6}
     ],
     "name": "Swamp Denmyre",
     "layers": [

@@ -113,7 +113,9 @@
                 },
                 {
                     "find": [{"block": "acacia_leaves"}],
-                    "replace": {"palette": [{"block": "acacia_leaves[persistent=true]"}]}
+                    "replace": {"palette": [{"block": "acacia_leaves", "data": {
+                        "persistent": true
+                    }}]}
                 }
             ],
             "rotation": {
@@ -196,8 +198,8 @@
         }
     ],
     "entityInitialSpawns": [
-    {"entity": "cow", "maxSpawns": 1, "minSpawns": 0, "rarity": 6},
-    {"entity": "chicken", "maxSpawns": 1, "minSpawns": 0, "rarity": 6}
+    {"entity": "cow", "maxSpawns": 1, "minSpawns": 1, "rarity": 6},
+    {"entity": "chicken", "maxSpawns": 1, "minSpawns": 1, "rarity": 6}
 ],
     "derivative": "DESERT",
     "wall": {

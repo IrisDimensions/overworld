@@ -60,10 +60,10 @@
         }
     ],
     "entityInitialSpawns": [
-    {"entity": "cow", "maxSpawns": 1, "minSpawns": 0, "rarity": 7},
-    {"entity": "pig", "maxSpawns": 1, "minSpawns": 0, "rarity": 7},
-    {"entity": "chicken", "maxSpawns": 1, "minSpawns": 0, "rarity": 7},
-    {"entity": "sheep", "maxSpawns": 1, "minSpawns": 0, "rarity": 7}
+    {"entity": "cow", "maxSpawns": 1, "minSpawns": 1, "rarity": 7},
+    {"entity": "pig", "maxSpawns": 1, "minSpawns": 1, "rarity": 7},
+    {"entity": "chicken", "maxSpawns": 1, "minSpawns": 1, "rarity": 7},
+    {"entity": "sheep", "maxSpawns": 1, "minSpawns": 1, "rarity": 7}
 ],
     "objects": [
         {
@@ -105,7 +105,9 @@
                 },
                 {
                     "find": [{"block": "acacia_leaves"}],
-                    "replace": {"palette": [{"block": "oak_leaves[persistent=true]"}]}
+                    "replace": {"palette": [{"block": "oak_leaves", "data": {
+                        "persistent": true
+                    }}]}
                 },
                 {
                     "find": [{"block": "acacia_fence"}],
@@ -144,15 +146,21 @@
             "edit": [
                 {
                 "find": [{"block": "birch_leaves"}],
-                "replace": {"palette": [{"block": "oak_leaves[persistent=true]"}]}
+                "replace": {"palette": [{"block": "oak_leaves", "data": {
+                    "persistent": true
+                }}]}
                 },
                 {
                 "find": [{"block": "spruce_leaves"}],
-                "replace": {"palette": [{"block": "oak_leaves[persistent=true]"}]}
+                "replace": {"palette": [{"block": "oak_leaves","data": {
+                    "persistent": true
+                }}]}
                 },
                 {
                 "find": [{"block": "spruce_wood"}],
-                "replace": {"palette": [{"block": "oak_leaves[persistent=true]"}]}
+                "replace": {"palette": [{"block": "oak_leaves", "data": {
+                    "persistent": true
+                }}]}
                 }
             ],
             "chance": 0.3,

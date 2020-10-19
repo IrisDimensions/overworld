@@ -4,9 +4,9 @@
         "SNOWY_MOUNTAINS"
     ],
     "entityInitialSpawns": [
-    {"entity": "chicken", "maxSpawns": 1, "minSpawns": 0, "rarity": 7},
-    {"entity": "sheep", "maxSpawns": 1, "minSpawns": 0, "rarity": 7},
-    {"entity": "wolf", "maxSpawns": 1, "minSpawns": 0, "rarity": 7}
+    {"entity": "chicken", "maxSpawns": 1, "minSpawns": 1, "rarity": 7},
+    {"entity": "sheep", "maxSpawns": 1, "minSpawns": 1, "rarity": 7},
+    {"entity": "wolf", "maxSpawns": 1, "minSpawns": 1, "rarity": 7}
 ],
     "decorators": [
         {
@@ -107,6 +107,16 @@
         }
     ],
     "objects": [
+        {
+            "place": [
+                "patch/graveldirt1",
+                "patch/graveldirt2",
+                "patch/graveldirt3",
+                "patch/graveldirt4"
+            ],
+            "chance": 0.75,
+            "mode": "PAINT"
+        },
         {
             "chance": 0.8,
             "rotation": {
@@ -285,12 +295,12 @@
         {
             "min": 11,
             "max": 32,
-            "generator": "plain"
+            "generator": "mountain"
         },
         {
             "min": 12,
             "max": 62,
-            "generator": "mountain-cliffs"
+            "generator": "plain-cliffs"
         }
     ],
     "biomeZoom": 30,
