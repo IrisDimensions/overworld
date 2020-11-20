@@ -1,7 +1,7 @@
 {
     "continentalStyle": {
         "style": "FRACTAL_WATER",
-        "zoom": 4.925
+        "zoom": 1.925
     },
     "decorate": true,
     "landZoom": 1.25,
@@ -33,17 +33,29 @@
         "zoom": 2,
         "style": "CELLULAR_IRIS_DOUBLE",
         "fracture": {
-            "multiplier": 205,
+            "multiplier": 13,
+            "maxFractureAccuracy": true,
             "style": "FRACTAL_WATER",
-            "zoom": 2.655
+            "zoom": 0.655,
+            "fracture": {
+                "maxFractureAccuracy": true,
+                "style": "STATIC",
+                "multiplier": 4
+            }
         }
     },
     "regionStyle": {
         "style": "CELLULAR_IRIS_DOUBLE",
         "fracture": {
-            "multiplier": 60,
+            "multiplier": 18,
+            "maxFractureAccuracy": true,
             "style": "FRACTAL_WATER",
-            "zoom": 0.255
+            "zoom": 0.255,
+            "fracture": {
+                "maxFractureAccuracy": true,
+                "style": "STATIC",
+                "multiplier": 4
+            }
         }
     },
     "mutations": [
