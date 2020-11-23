@@ -1,16 +1,12 @@
 {
-    "vanillaDerivative": "SWAMP",
     "biomeSkyScatter": [
         "SWAMP",
         "DESERT",
         "BADLANDS"
     ],
-    "children": [
-        "swamp-marsh-rotten"
-    ],
     "decorators": [
         {
-            "chance": 0.003,
+            "chance": 0.005,
             "variance": {
                 "style": "STATIC"
             },
@@ -28,7 +24,7 @@
             }
         },
         {
-            "chance": 0.122,
+            "chance": 0.13,
             "variance": {
                 "style": "STATIC"
             },
@@ -46,14 +42,14 @@
             }
         },
         {
-            "chance": 0.142,
+            "chance": 0.15,
             "variance": {
                 "style": "STATIC"
             },
             "zoom": 0.3,
             "palette": [
                 {
-                    "block": "grass"
+                    "block": "dead_bush"
                 },
                 {
                     "block": "fern"
@@ -70,7 +66,7 @@
     ],
     "objects": [
         {
-            "chance": 0.35,
+            "chance": 0.4,
             "density": 2,
             "rotation": {
                 "yAxis": {
@@ -82,9 +78,66 @@
                 "enabled": true
             },
             "place": [
-                "clutter/oak-clutt-1",
-                "clutter/oak-clutt-2",
-                "clutter/oak-clutt-3"
+                "wasteland/dead-1",
+                "wasteland/dead-2",
+                "wasteland/dead-3",
+                "wasteland/dead-4",
+                "wasteland/dead-5",
+                "wasteland/dead-6"
+
+            ],
+            "translate": {
+                "x": 0,
+                "y": -2,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.4,
+            "density": 2,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "misc/shrub-1",
+                "misc/shrub-2",
+                "misc/shrub-3",
+                "misc/shrub-4",
+                "misc/shrub-5",
+                "misc/shrub-6"
+
+            ],
+            "translate": {
+                "x": 0,
+                "y": -2,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.2,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "wasteland/stone-1",
+                "wasteland/stone-2",
+                "wasteland/stone-3",
+                "wasteland/stone-4",
+                "wasteland/stone-5",
+                "wasteland/stone-6",
+                "wasteland/stone-7"
             ],
             "translate": {
                 "x": 0,
@@ -93,7 +146,7 @@
             }
         }
     ],
-    "name": "Swampy Marsh",
+    "name": "Rotten Swampy Marsh",
     "layers": [
         {
             "style": {
@@ -107,6 +160,9 @@
                 },
                 {
                     "block": "podzol"
+                },
+                {
+                    "block": "coarse_dirt"
                 },
                 {
                     "weight": 4,
@@ -154,7 +210,7 @@
     ],
     "generators": [
         {
-            "min": -6,
+            "min": -7,
             "max": -3,
             "generator": "mountain"
         }
