@@ -3,7 +3,7 @@ The standard overworld for Iris
 
 
 Contributors & creators:
-- Astrash (A lot of biomes, objects, generator configurations, caves, jigsaw structures)
+- Astrash (A lot of biomes, objects, generator configurations, caves, jigsaw structures. His pack here: [Continents](https://github.com/Astrashh/Continents))
 - Brian (Despite him leaving Volmit Software, he mustn't be omitted as he created by far the most content)
 - Coco (Bugfixing, small configuration tweaks, merging Astrash's work, continued development)
 - Cyberpwn (A lot of early day configuration and testing)
