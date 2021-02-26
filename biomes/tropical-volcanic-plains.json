@@ -1,0 +1,130 @@
+{
+    "name": "Volcanic Plains",
+    "derivative": "THE_VOID",
+    "vanillaDerivative": "THE_VOID",
+    "rarity": 2,
+    "children": [
+        "tropical-volcanoes"
+    ],
+    "childStyle": {
+        "style": "SIMPLEX",
+        "zoom": 1.3,
+        "exponent": 1.9
+    },
+    "childShrinkFactor": 1,
+    "generators": [
+        {
+            "generator": "smooth-land",
+            "max": 55,
+            "min": 25
+        },
+        {
+            "generator": "cracked-cliffs",
+            "max": 15,
+            "min": 0
+        }
+    ],
+    "layers": [
+        {
+            "style": {
+                "style": "SIMPLEX",
+                "fracture": {
+                    "style": "GLOB",
+                    "zoom": 0.2,
+                    "multiplier": 40
+                }
+            },
+            "zoom": 0.8,
+            "minHeight": 1,
+            "maxHeight": 5,
+            "palette": [
+                {
+                    "weight": 1,
+                    "block": "magma_block"
+                },
+                {
+                    "weight": 3,
+                    "block": "basalt"
+                },
+                {
+                    "weight": 1,
+                    "block": "magma_block"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 2,
+            "palette": [
+                {
+                    "block": "basalt",
+                    "data": {
+                        "axis": "x"
+                    }
+                },
+                {
+                    "block": "basalt",
+                    "data": {
+                        "axis": "y"
+                    }
+                },
+                {
+                    "block": "basalt",
+                    "data": {
+                        "axis": "z"
+                    }
+                }
+            ]
+        },
+        {
+            "minHeight": 3,
+            "maxHeight": 10,
+            "palette": [
+                {
+                    "block": "blackstone"
+                }
+            ]
+        }
+    ],
+    "objects": [
+        {
+            "place": [
+                "landform/spikes/1",
+                "landform/spikes/2",
+                "landform/spikes/3"
+            ],
+            "chance": 1,
+            "density": 2,
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": -360,
+                    "max": 360
+                }
+            },
+            "translate": {
+                "y": -20,
+                "yRandom": 20
+            },
+            "mode": "MIN_HEIGHT",
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "stone"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "basalt"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

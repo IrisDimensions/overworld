@@ -1,0 +1,178 @@
+{
+    "name": "Ocean",
+    "derivative": "OCEAN",
+    "vanillaDerivative": "OCEAN",
+    "children": [
+        "ocean-steep"
+    ],
+    "childStyle": {
+        "style": "SIMPLEX",
+        "zoom": 2,
+        "fracture": {
+            "style": "SIMPLEX",
+            "zoom": 0.8,
+            "multiplier": 50,
+            "fracture": {
+                "style": "CELLULAR",
+                "zoom": 0.3,
+                "multiplier": 25
+            }
+        }
+    },
+    "childShrinkFactor": 1.0,
+    "generators": [
+        {
+            "generator": "ocean",
+            "max": -15,
+            "min": -40
+        }
+    ],
+    "layers": [
+        {
+            "minHeight": 2,
+            "maxHeight": 2,
+            "slopeCondition": {
+                "minimumSlope": 0,
+                "maximumSlope": 3
+            },
+            "style": {
+                "style": "FRACTAL_FBM_IRIS"
+            },
+            "zoom": 0.6,
+            "palette": [
+                {
+                    "block": "sand"
+                },
+                {
+                    "block": "clay"
+                },
+                {
+                    "block": "sand"
+                },
+                {
+                    "block": "gravel"
+                },
+                {
+                    "block": "sand"
+                },
+                {
+                    "block": "dirt"
+                },
+                {
+                    "weight": 2,
+                    "block": "sand"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 10,
+            "palette": [
+                {
+                    "block": "gravel"
+                }
+            ]
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.02,
+            "palette": [
+                {
+                    "block": "kelp_plant"
+                }
+            ],
+            "stackMin": 2,
+            "stackMax": 6
+        },
+        {
+            "chance": 0.05,
+            "palette": [
+                {
+                    "block": "seagrass"
+                }
+            ]
+        },
+        {
+            "chance": 0.05,
+            "palette": [
+                {
+                    "block": "tall_seagrass",
+                    "data": {
+                        "half": "lower"
+                    }
+                }
+            ],
+            "topPalette": [
+                {
+                    "block": "tall_seagrass",
+                    "data": {
+                        "half": "upper"
+                    }
+                }
+            ]
+        }
+    ],
+    "objects": [
+        {
+            "place": [
+                "landform/stone/1",
+                "landform/stone/2",
+                "landform/stone/3",
+                "landform/stone/4",
+                "landform/stone/5"
+            ],
+            "chance": 1,
+            "mode": "FAST_MIN_HEIGHT",
+            "underwater": true,
+            "waterloggable": true,
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "grass_block"
+                        },
+                        {
+                            "block": "dirt"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "clay"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "tall_grass"
+                        },
+                        {
+                            "block": "grass"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "seagrass"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "place": [
+                "ships/generic"
+            ],
+            "chance": 0.01,
+            "onwater": true,
+            "translate": {
+                "y": -1
+            },
+            "waterloggable": true
+        }
+    ]
+}
