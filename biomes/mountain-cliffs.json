@@ -1,0 +1,92 @@
+{
+    "vanillaDerivative": "PLAINS",
+    "name": "Extreme mountains cliffs",
+    "layers": [
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "slopeCondition": {
+                "minimumSlope": 0,
+                "maximumSlope": 3
+            },
+            "palette": [
+                {
+                    "block": "grass_block"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 3,
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "gravel"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
+        }
+    ],
+    "generators": [
+        {
+            "min": 11,
+            "max": 32,
+            "generator": "plain"
+        },
+        {
+            "min": 12,
+            "max": 62,
+            "generator": "cracked-cliffs"
+        }
+    ],
+    "biomeZoom": 30,
+    "derivative": "PLAINS",
+    "biomeStyle": {
+        "style": "IRIS"
+    },
+    "wall": {
+        "style": {
+            "style": "STATIC"
+        },
+        "palette": [
+            {
+                "block": "stone"
+            },
+            {
+                "block": "andesite"
+            },
+            {
+                "block": "stone"
+            }
+        ]
+    },
+    "biomeScatter": [
+        "PLAINS",
+        "TAIGA_HILLS",
+        "MOUNTAINS",
+        "SWAMP"
+    ],
+    "rarity": 19
+}
