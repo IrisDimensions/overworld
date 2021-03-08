@@ -11,20 +11,23 @@
     "placeObjects": true,
     "regions": [
         "mushroom",
-        "hot",
         "swamp",
-        "ocean",
         "mountains",
+        "ocean",
         "temperate",
+        "tundra",
         "tropical",
         "temperate",
+        "mountains",
+        "swamp",
+        "hot",
         "frozen"
     ],
     "seaBiomeStyle": {
         "style": "CELLULAR_IRIS_DOUBLE"
     },
-    "seaZoom": 2.25,
-    "biomeZoom": 2.05,
+    "seaZoom": 0.25,
+    "biomeZoom": 2.09,
     "carving": true,
     "lootTries": 32,
     "caveBiomeStyle": {
@@ -117,14 +120,14 @@
     "rockPalette": {
         "palette": [
             {
-                "block": "stone",
-                "weight": 2
+                "weight": 10,
+                "block": "stone"
+            },
+            {
+                "block": "granite"
             },
             {
                 "block": "andesite"
-            },
-            {
-                "block": "stone"
             }
         ],
         "style": {
@@ -147,30 +150,53 @@
     "caveLayers": [
         {
             "canBreakSurface": true,
+            "caveThickness": 0.1,
+            "caveZoom": 0.8,
             "horizontalSlope": {
-                "min": -110,
-                "max": 110,
+                "min": -30,
+                "max": 30,
                 "generator": {
-                    "style": "IRIS_THICK",
+                    "style": "SIMPLEX",
+                    "zoom": 1.3,
                     "fracture": {
-                        "multiplier": 9,
-                        "style": "IRIS_THICK",
-                        "zoom": 0.3
+                        "style": "SIMPLEX",
+                        "zoom": 0.8,
+                        "multiplier": 10
                     }
                 }
             },
-            "caveThickness": 2,
-            "caveZoom": 1.25,
             "verticalSlope": {
-                "min": 6,
-                "max": 82,
+                "min": 20,
+                "max": 60,
                 "generator": {
-                    "style": "IRIS",
+                    "style": "SIMPLEX",
+                    "zoom": 1.3
+                }
+            }
+        },
+        {
+            "canBreakSurface": false,
+            "caveThickness": 0.1,
+            "caveZoom": 0.9,
+            "horizontalSlope": {
+                "min": -30,
+                "max": 30,
+                "generator": {
+                    "style": "SIMPLEX",
+                    "zoom": 1.3,
                     "fracture": {
-                        "multiplier": 9,
-                        "style": "IRIS_THICK",
-                        "zoom": 0.3
+                        "style": "SIMPLEX",
+                        "zoom": 0.8,
+                        "multiplier": 10
                     }
+                }
+            },
+            "verticalSlope": {
+                "min": 50,
+                "max": 80,
+                "generator": {
+                    "style": "SIMPLEX",
+                    "zoom": 1.3
                 }
             },
             "fluid": {
@@ -178,36 +204,37 @@
                     "block": "lava"
                 },
                 "fluidHeight": 8
-            }
+        	}
         },
         {
             "canBreakSurface": true,
+            "caveThickness": 0.1,
+            "caveZoom": 0.75,
             "horizontalSlope": {
-                "min": -10,
-                "max": 10,
+                "min": -30,
+                "max": 30,
                 "generator": {
-                    "style": "IRIS_THICK",
-                    "zoom": 0.885,
+                    "style": "BIOCTAVE_SIMPLEX",
+                    "zoom": 2,
                     "fracture": {
-                        "multiplier": 9,
-                        "style": "IRIS_THICK",
-                        "zoom": 0.3
+                        "style": "SIMPLEX",
+                        "zoom": 0.3,
+                        "multiplier": 20
                     }
                 }
             },
-            "caveThickness": 0.7,
-            "caveZoom": 0.89,
             "verticalSlope": {
-                "min": 68,
-                "max": 196,
+                "min": 1,
+                "max": 35,
                 "generator": {
-                    "style": "IRIS_DOUBLE",
-                    "zoom": 1.82,
-                    "fracture": {
-                        "multiplier": 9,
-                        "style": "IRIS_THICK",
-                        "zoom": 0.3
-                    }
+                    "style": "TRIOCTAVE_SIMPLEX",
+                    "zoom": 1.3
+                }
+            },
+            "fluid": {
+                "fluidHeight": 17,
+                "fluidType": {
+                    "block": "lava"
                 }
             }
         }
@@ -216,7 +243,7 @@
         "style": "CELLULAR_IRIS_DOUBLE"
     },
     "caves": true,
-    "landChance": 0.59,
+    "landChance": 0.69,
     "preventLeafDecay": true,
     "version": 2,
     "deposits": [
@@ -295,8 +322,8 @@
         },
         {
             "minHeight": 2,
-            "maxPerChunk": 3,
-            "maxHeight": 15,
+            "maxPerChunk": 2,
+            "maxHeight": 18,
             "minPerChunk": 1,
             "minSize": 2,
             "maxSize": 5,
@@ -308,11 +335,11 @@
             "varience": 5
         },
         {
-            "minHeight": 2,
+            "minHeight": 4,
             "maxPerChunk": 5,
             "maxHeight": 40,
             "minPerChunk": 1,
-            "minSize": 6,
+            "minSize": 5,
             "maxSize": 8,
             "palette": [
                 {
@@ -325,12 +352,12 @@
             "varience": 7
         },
         {
-            "minHeight": 2,
-            "maxPerChunk": 3,
+            "minHeight": 3,
+            "maxPerChunk": 2,
             "maxHeight": 67,
             "minPerChunk": 1,
-            "minSize": 2,
-            "maxSize": 4,
+            "minSize": 1,
+            "maxSize": 3,
             "palette": [
                 {
                     "block": "gold_ore"
@@ -340,7 +367,7 @@
         },
         {
             "minHeight": 3,
-            "maxPerChunk": 3,
+            "maxPerChunk": 2,
             "maxHeight": 29,
             "minPerChunk": 0,
             "minSize": 3,
@@ -408,15 +435,15 @@
         "style": "CELLULAR_IRIS_DOUBLE"
     },
     "name": "Overworld",
-    "regionZoom": 6.5,
+    "regionZoom": 8,
     "dimensionAngleDeg": 19,
     "carveLayers": [
         {
-            "minHeight": 130,
-            "maxHeight": 290,
-            "threshold": 0.5,
+            "minHeight": 115,
+            "maxHeight": 236,
+            "threshold": 0.335,
             "style": {
-                "zoom": 2,
+                "zoom": 7,
                 "style": "FRACTAL_WATER"
             }
         }
