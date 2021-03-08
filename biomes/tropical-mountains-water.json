@@ -1,0 +1,146 @@
+{
+    "name": "Tropical Mountains Water",
+    "derivative": "MODIFIED_JUNGLE",
+    "vanillaDerivative": "MODIFIED_JUNGLE",
+    "generators": [
+        {
+            "generator": "mountainous",
+            "min": 33,
+            "max": 105
+        }
+    ],
+    "layers": [
+        {
+            "minHeight": 0,
+            "maxHeight": 2,
+            "palette": [
+                {
+                    "block": "cave_air"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "palette": [
+                {
+                    "block": "water",
+                    "data": {
+                        "level": 1
+                    }
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 8,
+            "palette": [
+                {
+                    "block": "water",
+                    "data": {
+                        "level": 0
+                    }
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "palette": [
+                {
+                    "block": "gravel"
+                }
+            ]
+        }
+    ],
+    "wall": {
+        "palette": [
+            {
+                "block": "water",
+                "data": {
+                    "level": 1
+                }
+            }
+        ]
+    },
+    "decorators": [
+        {
+            "chance": 0.2,
+            "variance": {
+                "style": "CELLULAR",
+                "zoom": 0.3,
+                "fracture": {
+                    "style": "SIMPLEX",
+                    "zoom": 0.2,
+                    "multiplier": 10,
+                    "fracture": {
+                        "style": "STATIC",
+                        "multiplier": 15
+                    }
+                }
+            },
+            "style": {
+                "style": "TRIOCTAVE_SIMPLEX",
+                "zoom": 0.3,
+                "fracture": {
+                    "style": "STATIC",
+                    "multiplier": 8
+                }
+            },
+            "palette": [
+                {
+                    "block": "dandelion"
+                },
+                {
+                    "block": "poppy"
+                },
+                {
+                    "block": "blue_orchid"
+                },
+                {
+                    "block": "allium"
+                },
+                {
+                    "block": "azure_bluet"
+                },
+                {
+                    "block": "red_tulip"
+                },
+                {
+                    "block": "orange_tulip"
+                },
+                {
+                    "block": "white_tulip"
+                },
+                {
+                    "block": "pink_tulip"
+                },
+                {
+                    "block": "oxeye_daisy"
+                },
+                {
+                    "block": "cornflower"
+                },
+                {
+                    "block": "lily_of_the_valley"
+                }
+            ]
+        },
+        {
+            "chance": 0.01,
+            "palette": [
+                {
+                    "block": "tall_grass"
+                }
+            ]
+        },
+        {
+            "chance": 0.5,
+            "palette": [
+                {
+                    "block": "grass"
+                }
+            ]
+        }
+    ]
+}
