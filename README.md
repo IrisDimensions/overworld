@@ -13,3 +13,4 @@ Contributors & creators:
 Great thanks to these people for contributing to the pack.
 If you want to contribute as well, please make a branch and pull requests.
 We sporadically review these requests so please contact us on Discord if you've made any.
+*This list is in no way in order of anything. This does not represent actual effort spent on developing the pack*
