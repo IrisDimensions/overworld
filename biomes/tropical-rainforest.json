@@ -74,16 +74,26 @@
             }
         },
         {
-            "chance": 0.1,
-            "verticalZoom": 88,
+            "chance": 0.003,
             "variance": {
-                "style": "IRIS"
+                "style": "STATIC"
             },
-            "zoom": 10,
             "palette": [
                 {
-                    "weight": 3,
-                    "block": "jungle_wood"
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "east"
+                    },
+                    "block": "stone_button"
+                },
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "south"
+                    },
+                    "block": "stone_button"
                 }
             ],
             "style": {
@@ -317,8 +327,8 @@
     ],
     "generators": [
         {
-            "min": 3,
-            "max": 9,
+            "min": 20,
+            "max": 35,
             "generator": "plain"
         }
     ],
