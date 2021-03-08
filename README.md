@@ -7,6 +7,7 @@ Contributors & creators:
 - Brian (Created the most early content in the pack. A lot of the objects and biomes are of his making)
 - Coco (Bugfixing, small configuration tweaks, merging Astrash's work, continued development)
 - Cyberpwn (A lot of early day configuration and testing)
+- K530 (Amazing (snowy) mountains)
 - RaydenKoning (Innovative ideas turned into fesible configurations and applied to the pack)
 
 Great thanks to these people for contributing to the pack.
