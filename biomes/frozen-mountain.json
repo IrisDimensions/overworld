@@ -1,0 +1,100 @@
+{
+    "name": "Frozen mountains",
+    "derivative": "SNOWY_TAIGA",
+    "vanillaDerivative": "SNOWY_TAIGA",
+    "biomeZoom": 30,
+    "biomeStyle": {
+        "style": "IRIS",
+        "zoom": 0.7,
+        "exponent": 4
+    },
+    "children": [
+        "frozen-mountain-middle"
+    ],
+    "biomeScatter": [
+        "PLAINS",
+        "TAIGA_HILLS",
+        "MOUNTAINS"
+    ],
+    "rarity": 7,
+    "generators": [
+        {
+            "min": 70,
+            "max": 140,
+            "generator": "plain"
+        }
+    ],
+    "layers": [
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "slopeCondition": {
+                "minimumSlope": 0,
+                "maximumSlope": 3.295
+            },
+            "palette": [
+                {
+                    "block": "snow_block"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "slopeCondition": {
+                "minimumSlope": 3.95
+            },
+            "palette": [
+                {
+                    "block": "gravel"
+                },
+                {
+                    "block": "cyan_terracotta"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 3,
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "gravel"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
+        }
+    ],
+    "wall": {
+        "palette": [
+            {
+                "block": "stone"
+            },
+            {
+                "block": "andesite"
+            }
+        ]
+    }
+}

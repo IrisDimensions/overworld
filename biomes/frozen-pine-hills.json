@@ -1,0 +1,134 @@
+{
+    "name": "Pine hills",
+    "derivative": "SNOWY_TAIGA",
+    "vanillaDerivative": "SNOWY_TAIGA",
+    "generators": [
+        {
+            "generator": "smooth-land",
+            "max": 20,
+            "min": 6
+        }
+    ],
+    "layers": [
+        {
+            "minHeight": 3,
+            "maxHeight": 5,
+            "palette": [
+                {
+                    "block": "snow_block"
+                }
+            ]
+        },
+        {
+            "minHeight": 3,
+            "maxHeight": 5,
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 1,
+            "variance": {
+                "style": "IRIS",
+                "zoom": 0.2
+            },
+            "palette": [
+                {
+                    "data": {
+                        "layers": 1
+                    },
+                    "block": "snow"
+                },
+                {
+                    "data": {
+                        "layers": 2
+                    },
+                    "block": "snow"
+                },
+                {
+                    "data": {
+                        "layers": 3
+                    },
+                    "block": "snow"
+                },
+                {
+                    "data": {
+                        "layers": 4
+                    },
+                    "block": "snow"
+                }
+            ]
+        }
+    ],
+    "wall": {
+        "palette": [
+            {
+                "block": "stone"
+            },
+            {
+                "block": "andesite"
+            }
+        ]
+    },
+    "objects": [
+        {
+            "place": [
+                "pine/pine1",
+                "pine/pine2",
+                "pine/pine3",
+                "pine/pine4",
+                "pine/pine5",
+                "pine/pine6",
+                "pine/pine7",
+                "pine/pine8",
+                "pine/pine9"
+            ],
+            "chance": 0.9,
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": -360,
+                    "max": 360
+                }
+            },
+            "warp": {
+                "style": "IRIS_DOUBLE",
+                "exponent": 1.2,
+                "zoom": 0.4
+            },
+            "snow": 0.1
+        }
+    ],
+    "entityInitialSpawns": [
+        {
+            "entity": "polar-bear",
+            "maxSpawns": 2,
+            "minSpawns": 1,
+            "rarity": 7
+        }
+    ]
+}

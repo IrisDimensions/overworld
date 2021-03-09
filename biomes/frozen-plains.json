@@ -1,4 +1,6 @@
 {
+    "name": "Frozen Plains",
+    "derivative": "SNOWY_TAIGA",
     "vanillaDerivative": "SNOWY_TAIGA",
     "decorators": [
         {
@@ -36,7 +38,7 @@
         }
     ],
     "children": [
-        "frozen-plains-hills"
+        "frozen-hills"
     ],
     "entityInitialSpawns": [
         {
@@ -232,7 +234,6 @@
             }
         }
     ],
-    "name": "Frozen Plains",
     "layers": [
         {
             "minHeight": 3,
@@ -275,24 +276,25 @@
         {
             "min": 4,
             "max": 6,
-            "generator": "plain"
+            "generator": "smooth-land"
         }
     ],
-    "derivative": "ICE_SPIKES",
     "wall": {
-        "style": {
-            "style": "STATIC"
-        },
         "palette": [
             {
                 "block": "stone"
             },
             {
                 "block": "andesite"
-            },
-            {
-                "block": "stone"
             }
         ]
-    }
+    },
+    "entityInitialSpawns": [
+        {
+            "entity": "polar-bear",
+            "maxSpawns": 2,
+            "minSpawns": 1,
+            "rarity": 7
+        }
+    ]
 }
