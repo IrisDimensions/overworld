@@ -1,0 +1,202 @@
+{
+    "name": "Ocean",
+    "derivative": "OCEAN",
+    "vanillaDerivative": "OCEAN",
+    "childStyle": {
+        "style": "SIMPLEX",
+        "zoom": 2,
+        "fracture": {
+            "style": "SIMPLEX",
+            "zoom": 0.8,
+            "multiplier": 50,
+            "fracture": {
+                "style": "CELLULAR",
+                "zoom": 0.3,
+                "multiplier": 25
+            }
+        }
+    },
+    "childShrinkFactor": 1.0,
+    "generators": [
+        {
+            "generator": "ocean",
+            "max": -35,
+            "min": -60
+        }
+    ],
+    "layers": [
+        {
+            "minHeight": 2,
+            "maxHeight": 2,
+            "slopeCondition": {
+                "minimumSlope": 0,
+                "maximumSlope": 3
+            },
+            "style": {
+                "style": "FRACTAL_FBM_IRIS"
+            },
+            "zoom": 0.6,
+            "palette": [
+                {
+                    "block": "sand"
+                },
+                {
+                    "block": "clay"
+                },
+                {
+                    "block": "sand"
+                },
+                {
+                    "block": "gravel"
+                },
+                {
+                    "block": "sand"
+                },
+                {
+                    "block": "dirt"
+                },
+                {
+                    "weight": 2,
+                    "block": "sand"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 10,
+            "palette": [
+                {
+                    "block": "gravel"
+                }
+            ]
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.02,
+            "palette": [
+                {
+                    "block": "kelp_plant"
+                }
+            ],
+            "stackMin": 2,
+            "stackMax": 6
+        },
+        {
+            "chance": 0.05,
+            "palette": [
+                {
+                    "block": "seagrass"
+                }
+            ]
+        },
+        {
+            "chance": 0.05,
+            "palette": [
+                {
+                    "block": "tall_seagrass",
+                    "data": {
+                        "half": "lower"
+                    }
+                }
+            ],
+            "topPalette": [
+                {
+                    "block": "tall_seagrass",
+                    "data": {
+                        "half": "upper"
+                    }
+                }
+            ]
+        }
+    ],
+    "objects": [
+        {
+            "place": [
+                "landform/stone/1",
+                "landform/stone/2",
+                "landform/stone/3",
+                "landform/stone/4",
+                "landform/stone/5"
+            ],
+            "chance": 1,
+            "mode": "FAST_MIN_HEIGHT",
+            "underwater": true,
+            "waterloggable": true,
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "grass_block"
+                        },
+                        {
+                            "block": "dirt"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "clay"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "tall_grass"
+                        },
+                        {
+                            "block": "grass"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "water"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "place": [
+                "shipwreck/with-mast-degraded",
+                "shipwreck/with-mast",
+                "shipwreck/upsidedown-full-degraded",
+                "shipwreck/upsidedown-full",
+                "shipwreck/upsidedown-fronthalf-degraded",
+                "shipwreck/upsidedown-fronthalf",
+                "shipwreck/upsidedown-backhalf-degraded",
+                "shipwreck/upsidedown-backhalf",
+                "shipwreck/sideways-full-degraded",
+                "shipwreck/sideways-full",
+                "shipwreck/sideways-fronthalf-degraded",
+                "shipwreck/sideways-fronthalf",
+                "shipwreck/sideways-backhalf-degraded",
+                "shipwreck/sideways-backhalf",
+                "shipwreck/rightsideup-full-degraded",
+                "shipwreck/rightsideup-full",
+                "shipwreck/rightsideup-fronthalf-degraded",
+                "shipwreck/rightsideup-fronthalf",
+                "shipwreck/rightsideup-backhalf-degraded",
+                "shipwreck/rightsideup-backhalf"
+            ],
+            "chance": 0.008,
+            "underwater": true,
+            "waterloggable": true
+        },
+        {
+            "place": [
+                "ocean-ruins/ruin1",
+                "ocean-ruins/ruin2",
+                "ocean-ruins/ruin3"
+            ],
+            "chance": 0.008,
+			"mode": "VACUUM",
+            "underwater": true,
+            "waterloggable": true
+        }
+    ]
+}

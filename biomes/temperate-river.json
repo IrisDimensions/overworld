@@ -109,9 +109,9 @@
             "minHeight": 2,
             "maxHeight": 3,
             "style": {
-                "style": "FRACTAL_FBM_IRIS"
+                "style": "CELLULAR_IRIS_DOUBLE"
             },
-            "zoom": 0.825,
+            "zoom": 0.525,
             "palette": [
                 {
                     "block": "sand"
@@ -120,13 +120,20 @@
                     "block": "clay"
                 },
                 {
-                    "block": "sand"
-                },
-                {
                     "block": "gravel"
                 },
                 {
                     "block": "sand"
+                },
+                {
+                    "weight": 2,
+                    "block": "gravel"
+                },
+                {
+                    "block": "sand"
+                },
+                {
+                    "block": "dirt"
                 },
                 {
                     "block": "dirt"
@@ -160,9 +167,9 @@
     ],
     "generators": [
         {
-            "min": -25,
-            "max": -11,
-            "generator": "plain"
+            "generator": "river",
+            "max": -7,
+            "min": -20
         }
     ],
     "loot": {
@@ -170,30 +177,5 @@
             "ocean-clutter"
         ]
     },
-    "derivative": "LUKEWARM_OCEAN",
-    "slab": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            {
-                "data": {
-                    "waterlogged": false,
-                    "type": "bottom"
-                },
-                "block": "sandstone_slab"
-            },
-            {
-                "data": {
-                    "waterlogged": false,
-                    "type": "bottom"
-                },
-                "block": "smooth_sandstone_slab"
-            },
-            {
-                "weight": 2,
-                "block": "air"
-            }
-        ]
-    }
+    "derivative": "RIVER"
 }

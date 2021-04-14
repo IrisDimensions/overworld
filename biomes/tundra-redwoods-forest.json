@@ -1,58 +1,50 @@
 {
     "vanillaDerivative": "DARK_FOREST",
+    "entityInitialSpawns": [
+    {"entity": "chicken", "maxSpawns": 1, "minSpawns": 1, "rarity": 7},
+    {"entity": "sheep", "maxSpawns": 1, "minSpawns": 1, "rarity": 7},
+    {"entity": "wolf", "maxSpawns": 1, "minSpawns": 1, "rarity": 7}],
     "children": [
-        "tundra-sequia-redwoods",
         "tundra-redwood-cliffs"
     ],
-    "entityInitialSpawns": [
+    "jigsawStructures": [
         {
-            "entity": "chicken",
-            "maxSpawns": 1,
-            "minSpawns": 1,
-            "rarity": 7
+            "rarity": 1000,
+            "structure": "pillager"
         },
         {
-            "entity": "sheep",
-            "maxSpawns": 1,
-            "minSpawns": 1,
-            "rarity": 7
-        },
-        {
-            "entity": "wolf",
-            "maxSpawns": 1,
-            "minSpawns": 1,
-            "rarity": 7
+            "rarity": 650,
+            "structure": "village-tundra"
         }
     ],
-    "decorators": [
+    "generators": [
         {
-            "chance": 0.003,
-            "variance": {
-                "style": "STATIC"
-            },
-            "zoom": 1,
-            "palette": [
-                {
-                    "data": {
-                        "face": "floor",
-                        "powered": false,
-                        "facing": "east"
-                    },
-                    "block": "stone_button"
-                },
-                {
-                    "data": {
-                        "face": "floor",
-                        "powered": false,
-                        "facing": "south"
-                    },
-                    "block": "stone_button"
-                }
-            ],
-            "style": {
-                "style": "STATIC"
-            }
+            "min": 4,
+            "max": 10,
+            "generator": "smooth-land"
+        }
+    ],
+    "derivative": "TAIGA",
+    "wall": {
+        "style": {
+            "style": "FRACTAL_WATER"
         },
+        "palette": [
+            {
+                "block": "diorite"
+            },
+            {
+                "block": "diorite"
+            },
+            {
+                "block": "stone"
+            },
+            {
+                "block": "stone"
+            }
+        ]
+    },
+    "decorators": [
         {
             "chance": 0.003,
             "variance": {
@@ -78,7 +70,7 @@
             }
         },
         {
-            "chance": 0.001,
+            "chance": 0.01,
             "variance": {
                 "style": "STATIC"
             },
@@ -114,95 +106,196 @@
             }
         },
         {
-            "chance": 0.00145,
-            "variance": {
-                "style": "STATIC"
-            },
+            "chance": 0.06,
+            "palette": [
+                {
+                    "block": "tall_grass"
+                }
+            ]
+        },
+        {
+            "chance": 0.25,
+            "palette": [
+                {
+                    "block": "grass"
+                }
+            ]
+        },
+        {
+            "chance": 0.06,
             "palette": [
                 {
                     "block": "fern"
                 }
-            ],
-            "style": {
-                "style": "STATIC"
-            }
+            ]
         },
         {
-            "chance": 0.01,
-            "variance": {
-                "style": "STATIC"
-            },
+            "chance": 0.06,
             "palette": [
                 {
-                    "block": "orange_tulip"
+                    "block": "brown_mushroom"
                 }
-            ],
-            "style": {
-                "style": "STATIC"
-            }
+            ]
         },
         {
-            "chance": 0.01,
-            "variance": {
-                "style": "STATIC"
-            },
+            "chance": 0.06,
             "palette": [
                 {
-                    "block": "dead_bush"
+                    "block": "red_mushroom"
                 }
-            ],
-            "style": {
-                "style": "STATIC"
-            }
+            ]
         },
         {
-            "chance": 0.005,
-            "variance": {
-                "style": "STATIC"
-            },
+            "chance": 0.1,
             "palette": [
                 {
-                    "block": "poppy"
+                    "block": "large_fern"
                 }
-            ],
-            "style": {
-                "style": "STATIC"
-            }
+            ]
+        },
+        {
+            "chance": 0.05,
+            "palette": [
+                {
+                    "block": "cobblestone_slab"
+                }
+            ]
         }
     ],
     "objects": [
         {
+            "name": "standard-surface-portals",
+            "chance": 0.00505,
             "place": [
-                "patch/graveldirt1",
-                "patch/graveldirt2",
-                "patch/graveldirt3",
-                "patch/graveldirt4"
+                "ruined_portal/giant_portal_1",
+                "ruined_portal/giant_portal_2",
+                "ruined_portal/giant_portal_3",
+                "ruined_portal/portal_1",
+                "ruined_portal/portal_2",
+                "ruined_portal/portal_3",
+                "ruined_portal/portal_4",
+                "ruined_portal/portal_5",
+                "ruined_portal/portal_6",
+                "ruined_portal/portal_7",
+                "ruined_portal/portal_8",
+                "ruined_portal/portal_9",
+                "ruined_portal/portal_10"
             ],
-            "chance": 0.75,
-            "mode": "PAINT"
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "gold_block"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "air"
+                            }
+                        ]
+                    },
+                    "chance": 0.1
+                },
+                {
+                    "find": [
+                        {
+                            "block": "netherrack"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "magma_block"
+                            }
+                        ]
+                    },
+                    "chance": 0.07
+                },
+                {
+                    "find": [
+                        {
+                            "block": "obsidian"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "crying_obsidian"
+                            }
+                        ]
+                    },
+                    "chance": 0.15
+                },
+                {
+                    "find": [
+                        {
+                            "block": "lava"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "magma_block"
+                            }
+                        ]
+                    },
+                    "chance": 0.20
+                }
+            ],
+            "mode": "VACUUM",
+            "carvingSupport": "SURFACE_ONLY"
         },
         {
-            "chance": 0.00375,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
+            "mode": "PAINT",
             "place": [
-                "camp/camp"
+                "boulder/boulder1",
+                "boulder/boulder2",
+                "boulder/boulder3",
+                "boulder/boulder4",
+                "boulder/boulder5",
+                "boulder/boulder6",
+                "boulder/boulder7",
+                "boulder/boulder8",
+                "boulder/boulder9",
+                "boulder/boulder10"
             ],
+            "chance": 0.4,
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": -360,
+                    "max": 360
+                }
+            },
             "translate": {
                 "x": 0,
-                "y": 0,
+                "y": -3,
                 "z": 0
             }
         },
         {
-            "chance": 0.8,
+            "mode": "PAINT",
+            "place": [
+                "bush/small/1",
+                "bush/small/2",
+                "bush/small/3"
+            ],
+            "chance": 0.6,
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": -360,
+                    "max": 360
+                }
+            }
+        },
+        {
+            "chance": 0.35,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -241,29 +334,40 @@
                 },
                 "enabled": true
             },
+            "mode": "PAINT",
             "place": [
-                "clutter/stone-clutt-1",
-                "clutter/stone-clutt-2",
-                "clutter/stone-clutt-3",
-                "clutter/stone-clutt-4",
-                "clutter/stone-clutt-5",
-                "clutter/stone-clutt-6",
-                "clutter/stone-clutt-7"
+                "redwood/rock-1",
+                "redwood/rock-2"
             ],
             "translate": {
                 "x": 0,
-                "y": -2,
+                "y": -10,
+                "yRandom": 1,
                 "z": 0
-            }
-        },
-        {
-            "chance": 0.75,
+            },
             "edit": [
                 {
                     "find": [
                         {
-                            "block": "oak_leaves"
+                            "block": "polished_diorite"
                         }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "diorite"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "chance": 0.45,
+            "edit": [
+                {
+                    "find": [
+                        {"block": "oak_leaves"}
                     ],
                     "replace": {
                         "palette": [
@@ -327,6 +431,27 @@
             }
         },
         {
+            "chance": 0.15,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "redwood/bush-1",
+                "redwood/bush-2"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -3,
+                "z": 0
+            }
+        },
+        {
             "chance": 0.01,
             "rotation": {
                 "yAxis": {
@@ -350,40 +475,6 @@
             }
         },
         {
-            "chance": 0.035,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "boulder/boulder1",
-                "boulder/boulder2",
-                "boulder/boulder3",
-                "boulder/boulder4",
-                "boulder/boulder5",
-                "boulder/boulder6",
-                "boulder/boulder7",
-                "boulder/boulder8",
-                "boulder/boulder9",
-                "boulder/boulder10",
-                "boulder/boulder11",
-                "boulder/boulder12",
-                "boulder/boulder13",
-                "boulder/boulder14",
-                "boulder/boulder15"
-            ],
-            "translate": {
-                "x": 0,
-                "y": -2,
-                "z": 0
-            }
-        },
-        {
             "chance": 0.075,
             "rotation": {
                 "yAxis": {
@@ -402,6 +493,36 @@
                 "stump/stump5",
                 "stump/stump6"
             ],
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "oak_log"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "spruce_log"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "oak_wood"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "spruce_wood"
+                            }
+                        ]
+                    }
+                }
+            ],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -412,77 +533,60 @@
     "name": "Redwood Forest",
     "layers": [
         {
-            "minHeight": 2,
-            "maxHeight": 4,
-            "slopeCondition": {
-                "minimumSlope": 3.25
+            "style": {
+                "style": "SIMPLEX",
+                "fracture": {
+                    "style": "FRACTAL_WATER",
+                    "zoom": 0.39,
+                    "multiplier": 23
+                }
             },
+            "zoom": 0.7,
             "palette": [
                 {
                     "block": "coarse_dirt"
                 },
                 {
-                    "block": "dirt"
+                    "block": "grass_block"
                 },
                 {
                     "block": "podzol"
-                }
-            ]
-        },
-        {
-            "palette": [
+                },
                 {
                     "block": "podzol"
+                },
+                {
+                    "block": "grass_block"
+                },
+                {
+                    "block": "coarse_dirt"
                 }
+
             ]
         },
         {
             "minHeight": 2,
-            "maxHeight": 4,
+            "maxHeight": 2,
             "palette": [
                 {
                     "block": "dirt"
-                },
-                {
-                    "block": "coarse_dirt"
                 }
             ]
         },
         {
-            "minHeight": 6,
-            "maxHeight": 18,
             "style": {
                 "style": "STATIC"
             },
+            "minHeight": 1,
+            "maxHeight": 1,
             "palette": [
                 {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
+                    "block": "dirt"
                 },
                 {
                     "block": "stone"
                 }
             ]
         }
-    ],
-    "generators": [
-        {
-            "min": 17,
-            "max": 19,
-            "generator": "plain"
-        }
-    ],
-    "derivative": "TAIGA",
-    "wall": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            {
-                "block": "coarse_dirt"
-            }
-        ]
-    }
+    ]
 }

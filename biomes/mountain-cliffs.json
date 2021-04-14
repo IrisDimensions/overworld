@@ -1,0 +1,90 @@
+{
+    "vanillaDerivative": "MUSHROOM_FIELDS",
+    "name": "Extreme mountains cliffs",
+    "layers": [
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "slopeCondition": {
+                "minimumSlope": 0,
+                "maximumSlope": 3
+            },
+            "palette": [
+                {
+                    "block": "grass_block"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 3,
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "gravel"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
+        }
+    ],
+    "generators": [
+        {
+            "min": 11,
+            "max": 32,
+            "generator": "mountain-plain"
+        },
+        {
+            "min": 12,
+            "max": 45,
+            "generator": "mountain-cracked-cliffs"
+        }
+    ],
+    "biomeZoom": 30,
+    "derivative": "PLAINS",
+    "biomeStyle": {
+        "style": "IRIS"
+    },
+    "wall": {
+        "style": {
+            "style": "STATIC"
+        },
+        "palette": [
+            {
+                "block": "stone"
+            },
+            {
+                "block": "andesite"
+            },
+            {
+                "block": "stone"
+            }
+        ]
+    },
+    "biomeScatter": [
+        "PLAINS",
+        "FOREST"
+    ],
+    "rarity": 19
+}

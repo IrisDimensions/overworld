@@ -1,10 +1,24 @@
 {
-    "connectors": [],
+    "connectors": [{
+        "targetName": "*",
+        "innerConnector": true,
+        "entityCount": 1,
+        "rotateConnector": false,
+        "name": "",
+        "pools": [],
+        "position": {
+            "x": 1,
+            "y": 3,
+            "z": 4
+        },
+        "direction": "WEST_NEGATIVE_X"
+    }],
     "placementOptions": {
         "overStilt": 0,
         "chance": 1,
         "meld": false,
         "density": 1,
+        "boreExtendMinY": 0,
         "edit": [],
         "bottom": false,
         "translateCenter": false,
@@ -29,10 +43,10 @@
             },
             "enabled": true
         },
-        "boreExtendMinY": 0,
+        "boreExtendMaxY": 0,
         "smartBore": false,
         "waterloggable": false,
-        "bore": false,
+        "bore": true,
         "translate": {
             "yRandom": 0,
             "x": 0,
@@ -44,7 +58,6 @@
         "snow": 0,
         "underwater": false,
         "place": [],
-        "boreExtendMaxY": 0,
         "onwater": false,
         "clamp": {
             "minimumHeight": 0,
@@ -58,5 +71,5 @@
             "exponent": 1
         }
     },
-    "object": ""
+    "object": "igloo/bottom"
 }

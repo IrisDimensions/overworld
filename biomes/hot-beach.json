@@ -1,89 +1,7 @@
 {
-    "vanillaDerivative": "BEACH",
-    "entityInitialSpawns": [
-        {
-            "entity": "cow",
-            "maxSpawns": 1,
-            "minSpawns": 1,
-            "rarity": 6
-        },
-        {
-            "entity": "chicken",
-            "maxSpawns": 1,
-            "minSpawns": 1,
-            "rarity": 6
-        }
-    ],
-    "decorators": [
-        {
-            "chance": 0.0005,
-            "variance": {
-                "style": "STATIC"
-            },
-            "stackMax": 2,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "cactus"
-                }
-            ],
-            "stackMin": 1
-        },
-        {
-            "chance": 0.003,
-            "variance": {
-                "style": "STATIC"
-            },
-            "zoom": 0.3,
-            "palette": [
-                {
-                    "data": {
-                        "face": "floor",
-                        "powered": false,
-                        "facing": "east"
-                    },
-                    "block": "stone_button"
-                },
-                {
-                    "block": "air"
-                },
-                {
-                    "data": {
-                        "face": "floor",
-                        "powered": false,
-                        "facing": "south"
-                    },
-                    "block": "stone_button"
-                }
-            ],
-            "style": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "partOf": "SHORE_LINE",
-            "chance": 0.11,
-            "verticalZoom": 0.2,
-            "variance": {
-                "style": "SIMPLEX"
-            },
-            "stackMax": 3,
-            "zoom": 5,
-            "palette": [
-                {
-                    "block": "sugar_cane"
-                }
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "heightVariance": {
-                "style": "STATIC"
-            },
-            "stackMin": 1
-        }
+    "vanillaDerivative": "DESERT_LAKES",
+    "children": [
+        "ocean"
     ],
     "name": "Hot Beach",
     "layers": [
@@ -108,17 +26,67 @@
     ],
     "generators": [
         {
-            "min": -1,
+            "min": 0,
             "max": 1,
             "generator": "plain"
         }
     ],
-    "loot": {
-        "tables": [
-            "beach-clutter"
-        ]
-    },
-    "derivative": "SWAMP",
+    "decorators": [
+        {
+            "chance": 0.01,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "east"
+                    },
+                    "block": "jungle_button"
+                },
+                {
+                    "block": "air"
+                },
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "south"
+                    },
+                    "block": "jungle_button"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "partOf": "SHORE_LINE",
+            "verticalZoom": 0.2,
+            "chance": 0.08,
+            "variance": {
+                "style": "SIMPLEX"
+            },
+            "stackMax": 6,
+            "zoom": 5,
+            "palette": [
+                {
+                    "block": "sugar_cane"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            },
+            "heightVariance": {
+                "style": "IRIS"
+            },
+            "stackMin": 1
+        }
+    ],
+    "derivative": "WARM_OCEAN",
     "wall": {
         "style": {
             "style": "STATIC"
@@ -135,29 +103,19 @@
             }
         ]
     },
-    "slab": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            {
-                "data": {
-                    "waterlogged": false,
-                    "type": "bottom"
-                },
-                "block": "sandstone_slab"
-            },
-            {
-                "data": {
-                    "waterlogged": false,
-                    "type": "bottom"
-                },
-                "block": "smooth_sandstone_slab"
-            },
-            {
-                "weight": 2,
-                "block": "air"
-            }
-        ]
-    }
+    "objects": [
+        {
+            "density": 3,
+            "chance": 1,
+            "place": [
+                "palm/palm1",
+                "palm/palm2",
+                "palm/palm3",
+                "palm/palm4",
+                "palm/palm5",
+                "palm/palm6",
+                "palm/palm7"
+            ]
+        }
+    ]
 }

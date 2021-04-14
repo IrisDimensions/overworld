@@ -1,191 +1,70 @@
 {
+    "name": "Red Desert",
+    "derivative": "DESERT",
     "vanillaDerivative": "DESERT",
-    "children": [
-        "hot-desert-hills"
+    "generators": [
+        {
+            "generator": "desert-dunes",
+            "max": 30,
+            "min": 1
+        }
+    ],
+    "layers": [
+        {
+            "style": {
+                "style": "FRACTAL_WATER"
+            },
+            "zoom": 0.7,
+            "palette": [
+                {
+                    "weight": 1,
+                    "block": "red_sand"
+                },
+                {
+                    "weight": 1,
+                    "block": "smooth_red_sandstone"
+                }
+            ],
+            "minHeight": 5,
+            "maxHeight": 5
+        }
     ],
     "decorators": [
         {
-            "verticalZoom": 20,
-            "chance": 0.004,
-            "variance": {
-                "style": "STATIC"
-            },
-            "stackMax": 5,
-            "style": {
-                "style": "STATIC"
-            },
+            "chance": 0.005,
+            "palette": [
+                {
+                    "block": "dead_bush"
+                }
+            ]
+        },
+        {
+            "chance": 0.01,
             "palette": [
                 {
                     "block": "cactus"
                 }
             ],
-            "heightVariance": {
-                "style": "IRIS"
-            },
-            "stackMin": 1
+            "stackMin": 2,
+            "stackMax": 4,
+            "topPalette": [
+                {
+                    "block": "brain_coral_fan",
+                    "data": {
+                        "waterlogged": "false"
+                    }
+                }
+            ]
         },
         {
-            "chance": 0.00875,
-            "variance": {
-                "style": "STATIC"
-            },
-            "zoom": 0.3,
+            "chance": 0.01,
             "palette": [
                 {
-                    "data": {
-                        "face": "floor",
-                        "powered": false,
-                        "facing": "east"
-                    },
-                    "block": "polished_blackstone_button"
-                },
-                {
-                    "block": "air"
-                },
-                {
-                    "data": {
-                        "face": "floor",
-                        "powered": false,
-                        "facing": "south"
-                    },
-                    "block": "polished_blackstone_button"
+                    "block": "cactus"
                 }
             ],
-            "style": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "chance": 0.03,
-            "variance": {
-                "style": "STATIC"
-            },
-            "zoom": 0.3,
-            "palette": [
-                {
-                    "block": "dead_bush"
-                }
-            ],
-            "style": {
-                "style": "STATIC"
-            }
+            "stackMin": 2,
+            "stackMax": 7
         }
-    ],
-    "entityInitialSpawns": [
-        {
-            "entity": "cow",
-            "maxSpawns": 1,
-            "minSpawns": 1,
-            "rarity": 6
-        },
-        {
-            "entity": "chicken",
-            "maxSpawns": 1,
-            "minSpawns": 1,
-            "rarity": 6
-        }
-    ],
-    "name": "Red Desert",
-    "layers": [
-        {
-            "style": {
-                "style": "IRIS_THICK",
-                "fracture": {
-                    "multiplier": 7,
-                    "style": "STATIC"
-                }
-            },
-            "zoom": 0.65,
-            "palette": [
-                {
-                    "block": "red_sand"
-                },
-                {
-                    "block": "orange_concrete_powder"
-                }
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 9,
-            "palette": [
-                {
-                    "block": "red_sandstone"
-                }
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "stone"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "min": 4,
-            "max": 6,
-            "generator": "plain"
-        }
-    ],
-    "loot": {
-        "tables": [
-            "cactus-clutter"
-        ]
-    },
-    "derivative": "DESERT",
-    "wall": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            {
-                "block": "smooth_red_sandstone"
-            },
-            {
-                "block": "red_sand"
-            },
-            {
-                "block": "smooth_red_sandstone"
-            }
-        ]
-    },
-    "rarity": 2,
-    "slab": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            {
-                "data": {
-                    "waterlogged": false,
-                    "type": "bottom"
-                },
-                "block": "red_sandstone_slab"
-            },
-            {
-                "data": {
-                    "waterlogged": false,
-                    "type": "bottom"
-                },
-                "block": "smooth_red_sandstone_slab"
-            },
-            {
-                "weight": 2,
-                "block": "air"
-            }
-        ]
-    }
+    ]
 }

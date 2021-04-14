@@ -1,6 +1,21 @@
 {
     "connectors": [
         {
+            "targetName": "village/savanna/villagers/unemployed",
+            "entityCount": 3,
+            "spawnEntity": "villager",
+            "innerConnector": true,
+            "rotateConnector": false,
+            "name": "villager",
+            "pools": ["village/desert/decor"],
+            "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "direction": "UP_POSITIVE_Y"
+        },
+        {
             "targetName": "minecraft:street",
             "innerConnector": false,
             "rotateConnector": false,
@@ -82,7 +97,7 @@
             },
             "enabled": true
         },
-        "boreExtendMinY": 0,
+        "boreExtendMinY": -1,
         "smartBore": false,
         "waterloggable": false,
         "bore": false,

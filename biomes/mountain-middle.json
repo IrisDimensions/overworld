@@ -1,0 +1,333 @@
+{
+    "name": "Middle Mountain",
+    "derivative": "MUSHROOM_FIELDS",
+    "vanillaDerivative": "PLAINS",
+    "biomeScatter": [
+        "PLAINS",
+        "FOREST"
+    ],
+    "entityInitialSpawns": [
+        {
+            "entity": "sheep",
+            "maxSpawns": 8,
+            "minSpawns": 3,
+            "rarity": 75
+        },
+        {
+            "entity": "cow",
+            "maxSpawns": 8,
+            "minSpawns": 3,
+            "rarity": 75
+        }
+    ],
+    "children": [
+        "mountain-cliffs"
+    ],
+    "objects": [
+
+        {
+            "name": "standard-surface-portals",
+            "chance": 0.00505,
+            "place": [
+                "ruined_portal/giant_portal_1",
+                "ruined_portal/giant_portal_2",
+                "ruined_portal/giant_portal_3",
+                "ruined_portal/portal_1",
+                "ruined_portal/portal_2",
+                "ruined_portal/portal_3",
+                "ruined_portal/portal_4",
+                "ruined_portal/portal_5",
+                "ruined_portal/portal_6",
+                "ruined_portal/portal_7",
+                "ruined_portal/portal_8",
+                "ruined_portal/portal_9",
+                "ruined_portal/portal_10"
+            ],
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "gold_block"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "air"
+                            }
+                        ]
+                    },
+                    "chance": 0.1
+                },
+                {
+                    "find": [
+                        {
+                            "block": "netherrack"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "magma_block"
+                            }
+                        ]
+                    },
+                    "chance": 0.07
+                },
+                {
+                    "find": [
+                        {
+                            "block": "obsidian"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "crying_obsidian"
+                            }
+                        ]
+                    },
+                    "chance": 0.15
+                },
+                {
+                    "find": [
+                        {
+                            "block": "lava"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "magma_block"
+                            }
+                        ]
+                    },
+                    "chance": 0.20
+                }
+            ],
+            "mode": "VACUUM",
+            "carvingSupport": "SURFACE_ONLY"
+        }
+    ],
+    "childStyle": {
+        "style": "STATIC",
+        "exponent": 0.6,
+        "zoom": 3,
+        "fracture": {
+            "style": "VIGOCTAVE_SIMPLEX",
+            "multiplier": 15,
+            "zoom": 0.9
+        }
+    },
+    "biomeStyle": {
+        "style": "SIMPLEX"
+    },
+    "biomeZoom": 0.4,
+    "generators": [
+        {
+            "generator": "mountain-gen",
+            "max": 80,
+            "min": 0
+        },
+        {
+            "generator": "mountain-plain",
+            "max": 80,
+            "min": 40
+        }
+    ],
+    "layers": [
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "slopeCondition": {
+                "minimumSlope": 0,
+                "maximumSlope": 3
+            },
+            "palette": [
+                {
+                    "block": "grass_block"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "slopeCondition": {
+                "minimumSlope": 3.95
+            },
+            "palette": [
+                {
+                    "block": "gravel"
+                },
+                {
+                    "block": "cyan_terracotta"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "slopeCondition": {
+                "minimumSlope": 3.95
+            },
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "cobblestone"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "slopeCondition": {
+                "minimumSlope": 0,
+                "maximumSlope": 4
+            },
+            "palette": [
+                {
+                    "block": "grass_block"
+                }
+            ]
+        },
+        {
+            "minHeight": 3,
+            "maxHeight": 3,
+            "slopeCondition": {
+                "minimumSlope": 0,
+                "maximumSlope": 3
+            },
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        }
+    ],
+    "slab": {
+        "style": {
+            "style": "STATIC"
+        },
+        "palette": [
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "stone_slab"
+            },
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "cobblestone_slab"
+            },
+            {
+                "weight": 2,
+                "block": "air"
+            }
+        ]
+    },
+    "decorators": [
+        {
+            "chance": 0.2,
+            "variance": {
+                "style": "CELLULAR",
+                "zoom": 0.3,
+                "fracture": {
+                    "style": "SIMPLEX",
+                    "zoom": 0.2,
+                    "multiplier": 10,
+                    "fracture": {
+                        "style": "STATIC",
+                        "multiplier": 15
+                    }
+                }
+            },
+            "style": {
+                "style": "TRIOCTAVE_SIMPLEX",
+                "zoom": 0.3,
+                "fracture": {
+                    "style": "STATIC",
+                    "multiplier": 8
+                }
+            },
+            "palette": [
+                {
+                    "block": "dandelion"
+                },
+                {
+                    "block": "poppy"
+                },
+                {
+                    "block": "blue_orchid"
+                },
+                {
+                    "block": "allium"
+                },
+                {
+                    "block": "azure_bluet"
+                },
+                {
+                    "block": "red_tulip"
+                },
+                {
+                    "block": "orange_tulip"
+                },
+                {
+                    "block": "white_tulip"
+                },
+                {
+                    "block": "pink_tulip"
+                },
+                {
+                    "block": "oxeye_daisy"
+                },
+                {
+                    "block": "cornflower"
+                },
+                {
+                    "block": "lily_of_the_valley"
+                }
+            ]
+        },
+        {
+            "chance": 0.01,
+            "palette": [
+                {
+                    "block": "tall_grass"
+                }
+            ]
+        },
+        {
+            "chance": 0.5,
+            "palette": [
+                {
+                    "block": "grass"
+                }
+            ]
+        }
+    ],
+    "wall": {
+        "style": {
+            "style": "STATIC"
+        },
+        "palette": [
+            {
+                "block": "stone"
+            },
+            {
+                "block": "andesite"
+            },
+            {
+                "block": "stone"
+            }
+        ]
+    }
+}

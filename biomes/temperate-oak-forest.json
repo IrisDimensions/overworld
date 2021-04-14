@@ -1,8 +1,14 @@
 {
     "vanillaDerivative": "FOREST",
-    "biomeSkyScatter": [
-        "FOREST",
-        "JUNGLE"
+    "jigsawStructures": [
+        {
+            "rarity": 1000,
+            "structure": "pillager"
+        },
+        {
+            "rarity": 350,
+            "structure": "village-temperate"
+        }
     ],
     "entityInitialSpawns": [
         {
@@ -32,7 +38,91 @@
     ],
     "objects": [
         {
+            "name": "standard-surface-portals",
+            "chance": 0.00505,
+            "place": [
+                "ruined_portal/giant_portal_1",
+                "ruined_portal/giant_portal_2",
+                "ruined_portal/giant_portal_3",
+                "ruined_portal/portal_1",
+                "ruined_portal/portal_2",
+                "ruined_portal/portal_3",
+                "ruined_portal/portal_4",
+                "ruined_portal/portal_5",
+                "ruined_portal/portal_6",
+                "ruined_portal/portal_7",
+                "ruined_portal/portal_8",
+                "ruined_portal/portal_9",
+                "ruined_portal/portal_10"
+            ],
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "gold_block"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "air"
+                            }
+                        ]
+                    },
+                    "chance": 0.1
+                },
+                {
+                    "find": [
+                        {
+                            "block": "netherrack"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "magma_block"
+                            }
+                        ]
+                    },
+                    "chance": 0.07
+                },
+                {
+                    "find": [
+                        {
+                            "block": "obsidian"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "crying_obsidian"
+                            }
+                        ]
+                    },
+                    "chance": 0.15
+                },
+                {
+                    "find": [
+                        {
+                            "block": "lava"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "magma_block"
+                            }
+                        ]
+                    },
+                    "chance": 0.20
+                }
+            ],
+            "mode": "VACUUM",
+            "carvingSupport": "SURFACE_ONLY"
+        },
+        {
             "chance": 0.07,
+			"persistent": true,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -90,6 +180,7 @@
         },
         {
             "chance": 1,
+			"persistent": true,
             "density": 2,
             "rotation": {
                 "yAxis": {
@@ -285,40 +376,122 @@
     "children": [
         "temperate-oak-denmyre"
     ],
-    "decorators": [
-        {
-            "chance": 0.01,
-            "variance": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "white_tulip"
-                },
-                {
-                    "block": "allium"
-                },
-                {
-                    "block": "lily_of_the_valley"
-                }
-            ]
-        },
-        {
-            "chance": 0.35,
+	"decorators": [
+	{
+		"chance": 0.8,
+		"variance": {
+			"style": "STATIC"
+		},
+		"zoom": 0.2,
+		"palette": [
+			{
+				"weight": 1,
+				"block": "grass"
+			},
+			{
+				"block": "grass"
+			}, 
+			{
+				"block": "grass"
+			},
+            {
+            "chance": 0.8,
             "variance": {
                 "style": "STATIC"
             },
             "zoom": 0.3,
             "palette": [
                 {
-                    "block": "grass"
+                    "block": "rose_bush"
                 }
             ],
             "style": {
                 "style": "STATIC"
             }
-        }
-    ],
+            },
+			{
+			    "chance": 7,
+				"block": "grass"
+			}
+		]
+	},
+	{
+		"chance": 0.03,
+		"variance": {
+			"style": "STATIC"
+		},
+		"zoom": 0.2,
+		"palette": [
+			{
+				"block": "oak_leaves",
+				"data": {
+                        "persistent": true
+                    }
+			}
+		]
+	},
+	{ 
+		"chance": 0.02,
+		"variance": {
+			"style": "STATIC"
+		},
+		"zoom": 0.2,
+		"palette": [
+            {
+                    "block": "tall_grass"
+            }
+		]
+	},
+	{ 
+		"chance": 0.03,
+		"variance": {
+			"style": "STATIC"
+		},
+		"zoom": 0.2,
+		"palette": [
+            {
+                    "block": "rose_bush"
+            }
+		]
+	},
+	{  
+		"chance": 0.05,
+		"variance": {
+			"style": "STATIC"
+		},
+		"zoom": 0.2,
+		"palette": [
+			{
+			    "chance": 3,
+				"block": "red_mushroom"
+			}
+		]
+	},
+	{  
+		"chance": 0.05,
+		"variance": {
+			"style": "STATIC"
+		},
+		"zoom": 0.2,
+		"palette": [
+			{
+			    "chance": 3,
+				"block": "poppy"
+			}
+		]
+	},
+	{
+		"chance": 0.03,
+		"variance": {
+			"style": "STATIC"
+		},
+		"zoom": 0.2,
+		"palette": [
+            {
+                    "block": "cobblestone_slab"
+            }
+		]
+	}],
     "name": "Oak Forest",
     "layers": [
         {
@@ -398,7 +571,6 @@
         ]
     },
     "biomeScatter": [
-        "FOREST",
-        "PLAINS"
+        "FOREST"
     ]
 }

@@ -1,0 +1,467 @@
+{
+    "name": "Mesa valley",
+    "derivative": "SAVANNA",
+    "vanillaDerivative": "BADLANDS",
+    "generators": [
+        {
+            "min": 5,
+            "max": 15,
+            "generator": "smooth-land"
+        }
+    ],
+    "entityInitialSpawns": [
+        {
+            "entity": "cow",
+            "maxSpawns": 3,
+            "minSpawns": 1,
+            "rarity": 7
+        },
+        {
+            "entity": "pig",
+            "maxSpawns": 3,
+            "minSpawns": 1,
+            "rarity": 7
+        },
+        {
+            "entity": "chicken",
+            "maxSpawns": 3,
+            "minSpawns": 1,
+            "rarity": 7
+        },
+        {
+            "entity": "sheep",
+            "maxSpawns": 3,
+            "minSpawns": 1,
+            "rarity": 7
+        }
+    ],
+    "layers": [
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "slopeCondition": {
+                "minimumSlope": 2,
+                "maximumSlope": 10
+            },
+            "palette": [
+                {
+                    "block": "terracotta"
+                }
+            ]
+        },
+        {
+            "slopeCondition": {
+                "minimumSlope": 0,
+                "maximumSlope": 2
+            },
+            "style": {
+                "style": "SIMPLEX",
+                "zoom": 1.4,
+                "fracture": {
+                    "style": "FRACTAL_BILLOW_SIMPLEX",
+                    "zoom": 0.4,
+                    "multiplier": 50,
+                    "fracture": {
+                        "style": "STATIC",
+                        "multiplier": 3
+                    }
+                }
+            },
+            "zoom": 0.9,
+            "minHeight": 1,
+            "maxHeight": 1,
+            "palette": [
+                {
+                    "weight": 3,
+                    "block": "red_sand"
+                },
+                {
+                    "weight": 2,
+                    "block": "orange_terracotta"
+                },
+                {
+                    "weight": 7,
+                    "block": "grass_block"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "palette": [
+                {
+                    "block": "light_gray_terracotta"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "weight": 1,
+                    "block": "terracotta"
+                },
+                {
+                    "weight": 1,
+                    "block": "light_gray_terracotta"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "palette": [
+                {
+                    "block": "terracotta"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 2,
+            "palette": [
+                {
+                    "block": "orange_terracotta"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "palette": [
+                {
+                    "block": "terracotta"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "weight": 1,
+                    "block": "terracotta"
+                },
+                {
+                    "weight": 1,
+                    "block": "light_gray_terracotta"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "palette": [
+                {
+                    "block": "light_gray_terracotta"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "palette": [
+                {
+                    "block": "terracotta"
+                }
+            ]
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.2,
+            "variance": {
+                "style": "CELLULAR",
+                "zoom": 0.3,
+                "fracture": {
+                    "style": "SIMPLEX",
+                    "zoom": 0.2,
+                    "multiplier": 10,
+                    "fracture": {
+                        "style": "STATIC",
+                        "multiplier": 15
+                    }
+                }
+            },
+            "style": {
+                "style": "TRIOCTAVE_SIMPLEX",
+                "zoom": 0.3,
+                "fracture": {
+                    "style": "STATIC",
+                    "multiplier": 8
+                }
+            },
+            "palette": [
+                {
+                    "block": "white_tulip"
+                },
+                {
+                    "block": "red_tulip"
+                },
+                {
+                    "block": "orange_tulip"
+                },
+                {
+                    "block": "dandelion"
+                },
+                {
+                    "block": "poppy"
+                }
+            ]
+        },
+        {
+            "chance": 0.01,
+            "palette": [
+                {
+                    "block": "tall_grass"
+                }
+            ]
+        },
+        {
+            "chance": 0.5,
+            "palette": [
+                {
+                    "block": "grass"
+                }
+            ]
+        }
+    ],
+    "objects": [
+        {
+            "place": [
+                "tree/acacia/1",
+                "tree/acacia/2",
+                "tree/acacia/3"
+            ],
+            "chance": 0.4,
+            "edit": [
+                {
+                    "find": [ { "block": "acacia_planks" } ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "acacia_wood",
+                                "data": { "axis": "y" }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },{
+            "name": "standard-surface-portals",
+            "chance": 0.00505,
+            "place": [
+                "ruined_portal/giant_portal_1",
+                "ruined_portal/giant_portal_2",
+                "ruined_portal/giant_portal_3",
+                "ruined_portal/portal_1",
+                "ruined_portal/portal_2",
+                "ruined_portal/portal_3",
+                "ruined_portal/portal_4",
+                "ruined_portal/portal_5",
+                "ruined_portal/portal_6",
+                "ruined_portal/portal_7",
+                "ruined_portal/portal_8",
+                "ruined_portal/portal_9",
+                "ruined_portal/portal_10"
+            ],
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "gold_block"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "air"
+                            }
+                        ]
+                    },
+                    "chance": 0.1
+                },
+                {
+                    "find": [
+                        {
+                            "block": "netherrack"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "magma_block"
+                            }
+                        ]
+                    },
+                    "chance": 0.07
+                },
+                {
+                    "find": [
+                        {
+                            "block": "obsidian"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "crying_obsidian"
+                            }
+                        ]
+                    },
+                    "chance": 0.15
+                },
+                {
+                    "find": [
+                        {
+                            "block": "lava"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "magma_block"
+                            }
+                        ]
+                    },
+                    "chance": 0.20
+                }
+            ],
+            "mode": "VACUUM",
+            "carvingSupport": "SURFACE_ONLY"
+        },
+        {
+            "chance": 0.00175,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "camp/camp"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "mode": "PAINT",
+            "chance": 0.005,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "camp/barrel-bin"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.07,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "savanna-gen/savannaD-1",
+                "savanna-gen/savannaD-2",
+                "savanna-gen/savannaD-3"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.2,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "savanna-gen/savannaF-1",
+                "savanna-gen/savannaF-2",
+                "savanna-gen/savannaF-3",
+                "savanna-gen/savannaF-4",
+                "savanna-gen/savannaF-5",
+                "savanna-gen/savannaF-6",
+                "savanna-gen/savannaF-7",
+                "savanna-gen/savannaF-8",
+                "savanna-gen/savannaF-9",
+                "savanna-gen/savannaF-10",
+                "savanna-gen/savannaF-11",
+                "savanna-gen/savannaF-13",
+                "savanna-gen/savannaF-14"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.04,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "savanna-gen/savannaS-1",
+                "savanna-gen/savannaS-2",
+                "savanna-gen/savannaS-3",
+                "savanna-gen/savannaS-4",
+                "savanna-gen/savannaS-5",
+                "savanna-gen/savannaS-6",
+                "savanna-gen/savannaS-7",
+                "savanna-gen/savannaS-8",
+                "savanna-gen/savannas-9",
+                "savanna-gen/savannas-10",
+                "savanna-gen/savannas-11",
+                "savanna-gen/savannas-12"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        }
+    ]
+}

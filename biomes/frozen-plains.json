@@ -1,4 +1,6 @@
 {
+    "name": "Frozen Plains",
+    "derivative": "SNOWY_TAIGA",
     "vanillaDerivative": "SNOWY_TAIGA",
     "decorators": [
         {
@@ -36,23 +38,92 @@
         }
     ],
     "children": [
-        "frozen-plains-hills"
-    ],
-    "entityInitialSpawns": [
-        {
-            "entity": "sheep",
-            "maxSpawns": 1,
-            "minSpawns": 1,
-            "rarity": 6
-        },
-        {
-            "entity": "wolf",
-            "maxSpawns": 1,
-            "minSpawns": 1,
-            "rarity": 6
-        }
+        "frozen-hills"
     ],
     "objects": [
+        {
+            "name": "standard-surface-portals",
+            "chance": 0.00505,
+            "place": [
+                "ruined_portal/giant_portal_1",
+                "ruined_portal/giant_portal_2",
+                "ruined_portal/giant_portal_3",
+                "ruined_portal/portal_1",
+                "ruined_portal/portal_2",
+                "ruined_portal/portal_3",
+                "ruined_portal/portal_4",
+                "ruined_portal/portal_5",
+                "ruined_portal/portal_6",
+                "ruined_portal/portal_7",
+                "ruined_portal/portal_8",
+                "ruined_portal/portal_9",
+                "ruined_portal/portal_10"
+            ],
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "gold_block"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "air"
+                            }
+                        ]
+                    },
+                    "chance": 0.1
+                },
+                {
+                    "find": [
+                        {
+                            "block": "netherrack"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "magma_block"
+                            }
+                        ]
+                    },
+                    "chance": 0.07
+                },
+                {
+                    "find": [
+                        {
+                            "block": "obsidian"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "crying_obsidian"
+                            }
+                        ]
+                    },
+                    "chance": 0.15
+                },
+                {
+                    "find": [
+                        {
+                            "block": "lava"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "magma_block"
+                            }
+                        ]
+                    },
+                    "chance": 0.20
+                }
+            ],
+            "mode": "VACUUM",
+            "carvingSupport": "SURFACE_ONLY"
+        },
         {
             "chance": 0.000256,
             "snow": 0.25,
@@ -232,7 +303,6 @@
             }
         }
     ],
-    "name": "Frozen Plains",
     "layers": [
         {
             "minHeight": 3,
@@ -275,24 +345,37 @@
         {
             "min": 4,
             "max": 6,
-            "generator": "plain"
+            "generator": "smooth-land"
         }
     ],
-    "derivative": "ICE_SPIKES",
     "wall": {
-        "style": {
-            "style": "STATIC"
-        },
         "palette": [
             {
                 "block": "stone"
             },
             {
                 "block": "andesite"
-            },
-            {
-                "block": "stone"
             }
         ]
-    }
+    },
+    "entityInitialSpawns": [
+        {
+            "entity": "polar-bear",
+            "maxSpawns": 2,
+            "minSpawns": 1,
+            "rarity": 7
+        },
+        {
+            "entity": "sheep",
+            "maxSpawns": 1,
+            "minSpawns": 1,
+            "rarity": 6
+        },
+        {
+            "entity": "wolf",
+            "maxSpawns": 1,
+            "minSpawns": 1,
+            "rarity": 6
+        }
+    ]
 }

@@ -1,20 +1,5 @@
 {
     "vanillaDerivative": "WARM_OCEAN",
-    "effects": [
-        {
-            "particleAltX": 0.001,
-            "particleAltY": 0.04285,
-            "particleAltZ": 0.001,
-            "chance": 1,
-            "particleEffect": "CAMPFIRE_COSY_SMOKE",
-            "particleOffset": 0,
-            "interval": 650,
-            "particleCount": 0
-        }
-    ],
-    "children": [
-        "hot-ocean-cliffs"
-    ],
     "decorators": [
         {
             "chance": 0.0009,
@@ -119,9 +104,7 @@
             "edit": [
                 {
                     "find": [
-                        {
-                            "block": "water"
-                        }
+                        {"block": "water"}
                     ],
                     "replace": {
                         "palette": [
@@ -165,18 +148,8 @@
             ],
             "edit": [
                 {
-                    "find": [
-                        {
-                            "block": "oak_stairs"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "oak_planks"
-                            }
-                        ]
-                    }
+                    "find": [{"block": "oak_stairs"}],
+                    "replace": {"palette": [{"block": "oak_planks"}]}
                 }
             ],
             "translate": {
@@ -243,9 +216,9 @@
     ],
     "generators": [
         {
-            "min": -21,
-            "max": -7,
-            "generator": "plain"
+            "min": 11,
+            "max": 7,
+            "generator": "ocean-steep"
         }
     ],
     "loot": {
@@ -253,7 +226,7 @@
             "ocean-clutter"
         ]
     },
-    "derivative": "SWAMP",
+    "derivative": "WARM_OCEAN",
     "wall": {
         "style": {
             "style": "IRIS"
