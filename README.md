@@ -8,7 +8,7 @@ Contributors & creators:
 - Coco (Bugfixing, small configuration tweaks, merging Astrash's work, continued development)
 - Cyberpwn (A lot of early day configuration and testing)
 - K530 (Amazing (snowy) mountains)
-- RaydenKoning (Innovative ideas turned into fesible configurations and applied to the pack)
+- RaydenKonig (Innovative ideas turned into fesible configurations and applied to the pack)
 
 Great thanks to these people for contributing to the pack.
 If you want to contribute as well, please make a branch and pull requests.
