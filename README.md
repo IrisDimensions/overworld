@@ -9,7 +9,6 @@ Contributors & creators:
 - [Cyberpwn](https://github.com/cyberpwnn) (Much of the early Bases and development of the iris plugin)
 - [K530](https://github.com/K530-hub) (Biome reworks, and mountain generation)
 - [RaydenKoning](https://github.com/RaydenKonig) (Innovative ideas and configurations)
-- [EmberFlames](https://github.com/EmberFlames) (Brians Assistant, Object development, Tweaks)
 
 Great thanks to these people for contributing to the pack.
 If you want to contribute as well, feel free to make a fork and pull requests.
