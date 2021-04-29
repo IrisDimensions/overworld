@@ -1,5 +1,5 @@
-# Overworld
-The standard overworld for Iris
+# Overworld Classic
+The legacy version of Iris' overworld. 
 
 
 Contributors & creators:
@@ -11,7 +11,4 @@ Contributors & creators:
 - RaydenKonig (Innovative ideas turned into fesible configurations and applied to the pack)
 
 Great thanks to these people for contributing to the pack.
-If you want to contribute as well, please make a branch and pull requests.
-We sporadically review these requests so please contact us on Discord if you've made any.
-
-*This list is in no way in order of anything. This does not represent actual effort spent on developing the pack*
+This pack is now archived and will no longer be updated. Visit our new overworld by clicking [here.](https://github.com/IrisDimensions/overworld)
