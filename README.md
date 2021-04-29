@@ -1,5 +1,5 @@
-# Overworld
-The standard overworld for Iris
+# Overworld (version 2)
+The standard overworld for Iris. New and Improved!
 
 
 Contributors & creators:
