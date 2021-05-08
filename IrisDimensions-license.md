@@ -1,24 +1,14 @@
-This license does not apply to this pack.
-
-
-
 VOLMIT SOFTWARE PUBLIC LICENSE
 
-Version 1.1, 24 February 2021
+Version 1.2, 13 March 2021
 
 Copyright :copyright: 2021 Andrew Baker
-
-
-Preamble
-
-After a long and arduous conversation with a former Volmit Software developer, it has become clear that it is no longer viable to keep Volmit repositories under the WTFPL license.
-Because of this, we have developed our own software license for our public repositories. You may not be able to do "WHATEVER THE FUCK YOU WANT TO," as per the WTFPL, but you will still have a large amount of leniency over what you can do with Volmit repositories.
 
 TERMS AND CONDITIONS
 
 0. Definitions
 
-"License" refers to this file.
+"License" refers to this file. An updated version is available at <https://github.com/VolmitSoftware/Licenses>. The version at <https://github.com/VolmitSoftware/Licenses> is always correct and up-to-date.
 
 "Author" refers to the person Andrew Baker <andrew@andrewcbaker.net>.
 
@@ -38,10 +28,8 @@ TERMS AND CONDITIONS
 
 3. You may not host publicly available download links to Compiled versions of the Content unless you are using less than 5% of the original Content in a Repository of your own.
 
-4. You may not host, copy, Modify, distribute, create derivative works, or distribute derivative works of the Content if you are Brian Fopiano <mypsn1550@gmail.com> or are associated with Brian Fopiano.
+4. For any conditions not outlined in the License, refer to your country or state laws for Copyright.
 
-5. For any conditions not outlined in the License, refer to your country or state laws for Copyright.
-
-6. If you do not agree to any of the above conditions you must delete the Content in its entirety as well as all copies of the Content and derivative works of the Content that you have made.
+5. If you do not agree to any of the above conditions you must delete the Content in its entirety as well as all copies of the Content and derivative works of the Content that you have made.
 
 END TERMS AND CONDITIONS
