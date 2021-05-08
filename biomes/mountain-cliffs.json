@@ -1,5 +1,5 @@
 {
-    "vanillaDerivative": "MUSHROOM_FIELDS",
+    "vanillaDerivative": "TAIGA_MOUNTAINS",
     "name": "Extreme mountains cliffs",
     "layers": [
         {
@@ -7,7 +7,7 @@
             "maxHeight": 1,
             "slopeCondition": {
                 "minimumSlope": 0,
-                "maximumSlope": 3
+                "maximumSlope": 2.6
             },
             "palette": [
                 {
@@ -16,17 +16,17 @@
             ]
         },
         {
-            "minHeight": 2,
-            "maxHeight": 3,
+            "minHeight": 1,
+            "maxHeight": 2,
+            "slopeCondition": {
+                "minimumSlope": 3.95
+            },
             "palette": [
                 {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
                     "block": "gravel"
+                },
+                {
+                    "block": "cyan_terracotta"
                 }
             ]
         },
@@ -57,15 +57,11 @@
         },
         {
             "min": 12,
-            "max": 45,
-            "generator": "mountain-cracked-cliffs"
+            "max": 62,
+            "generator": "cracked-cliffs"
         }
     ],
-    "biomeZoom": 30,
-    "derivative": "PLAINS",
-    "biomeStyle": {
-        "style": "IRIS"
-    },
+    "derivative": "TAIGA_MOUNTAINS",
     "wall": {
         "style": {
             "style": "STATIC"
@@ -78,13 +74,12 @@
                 "block": "andesite"
             },
             {
-                "block": "stone"
+                "block": "gravel"
+            },
+            {
+                "block": "cyan_terracotta"
             }
         ]
     },
-    "biomeScatter": [
-        "PLAINS",
-        "FOREST"
-    ],
     "rarity": 19
 }

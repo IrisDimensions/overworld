@@ -1,33 +1,291 @@
 {
-    "entitySpawnOverrides": [
+    "name": "Old cavern",
+    "derivative": "FOREST",
+    "vanillaDerivative": "THE_VOID",
+    "generators": [
         {
-            "trigger": "SKELETON",
-            "entity": "shroud",
-            "cancelSourceSpawn": true,
-            "rarity": 12
+            "generator": "plain",
+            "max": 3,
+            "min": 4
         }
     ],
-    "children": [
-        "temperate-lit-cavern"
-    ],
-    "decorators": [
+    "layers": [
         {
-            "chance": 0.0001,
+            "slopeCondition": {
+                "minimumSlope": 0,
+                "maximumSlope": 0.7
+            },
+            "maxHeight": 1,
+            "minHeight": 1,
             "palette": [
                 {
-                    "block": "barrel"
+                    "block": "grass_block"
                 }
             ]
         },
         {
-            "chance": 0.008,
+            "maxHeight": 1,
+            "minHeight": 1,
+            "style": {
+                "style": "STATIC"
+            },
+            "zoom": 0.08,
             "palette": [
                 {
-                    "block": "andesite_wall"
+                    "block": "stone",
+                    "weight": 8
+                },
+                {
+                    "block": "andesite",
+                    "weight": 6
+                }
+            ]
+        },
+        {
+            "maxHeight": 1,
+            "minHeight": 1,
+            "style": {
+                "style": "STATIC"
+            },
+            "zoom": 0.08,
+            "palette": [
+                {
+                    "block": "stone",
+                    "weight": 18
+                },
+                {
+                    "block": "andesite",
+                    "weight": 8
+                },
+                {
+                    "block": "jungle_leaves",
+                    "weight": 1,
+                    "data": {
+                        "persistent": true
+                    }
+
+                },
+                {
+                    "block": "shroomlight",
+                    "weight": 1
                 }
             ]
         }
     ],
+    "decorators": [   
+        {
+            "chance": 0.02,
+            "palette": [
+                {
+                    "block": "andesite_wall"
+                }
+            ],
+            "stackMax": 5,
+            "stackMin": 1
+        },
+		{
+            "forcePlace": true,
+            "chance": 0.06,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.14,
+            "palette": [
+                {
+                    "block": "grass"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "chance": 0.004,
+            "palette": [
+                {
+                    "block": "crimson_fungus"
+
+                }
+            ]
+        },
+        {
+            "chance": 0.004,
+            "palette": [
+                {
+                    "block": "red_mushroom"
+
+                }
+            ]
+        },
+        {
+            "chance": 0.004,
+            "palette": [
+                {
+                    "block": "brown_mushroom"
+
+                }
+            ]
+        },
+        {
+            "chance": 0.004,
+            "palette": [
+                {
+                    "block": "warped_fungus"
+
+                }
+            ]
+        },
+        {
+            "style": {
+                "style": "STATIC"
+            },
+            "chance": 0.03,
+            "palette": [
+                {
+                    "block": "stone_button",
+                    "data": {
+                        "face": "floor",
+                        "facing": "south"
+                    }
+                }
+            ]
+        },
+        {
+            "forcePlace": true,
+            "chance": 0.006,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.02,
+            "palette": [
+                {
+                    "block": "nether_sprouts"
+                },
+                {
+                    "block": "warped_roots"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "chance": 0.034,
+            "palette": [
+                {
+                    "block": "jungle_leaves",
+                    "data": {
+                        "persistent": true
+                    }
+
+                }
+            ]
+        },
+        {
+            "chance": 0.0013,
+            "palette": [
+                {
+                    "block": "lava"
+                }
+            ],
+            "stackMax": 11,
+            "stackMin": 10
+        },
+        {
+            "chance": 0.003,
+            "palette": [
+                {
+                    "block": "water"
+                }
+            ],
+            "stackMax": 11,
+            "stackMin": 10
+        },
+        {
+            "chance": 0.005,
+            "palette": [
+                {
+                    "block": "stone"
+                }
+            ],
+            "stackMax": 16,
+            "stackMin": 15
+        },
+        {
+            "chance": 0.004,
+            "palette": [
+                {
+                    "block": "crimson_fungus"
+
+                }
+            ]
+        },
+        {
+            "chance": 0.004,
+            "palette": [
+                {
+                    "block": "red_mushroom"
+
+                }
+            ]
+        },
+        {
+            "chance": 0.004,
+            "palette": [
+                {
+                    "block": "brown_mushroom"
+
+                }
+            ]
+        },
+        {
+            "chance": 0.004,
+            "palette": [
+                {
+                    "block": "warped_fungus"
+
+                }
+            ]
+        },
+        {
+            "style": {
+                "style": "STATIC"
+            },
+            "chance": 0.03,
+            "palette": [
+                {
+                    "block": "stone_button",
+                    "data": {
+                        "face": "floor",
+                        "facing": "south"
+                    }
+                }
+            ]
+        }
+    ],
+    "slab": {
+        "style": {
+            "style": "STATIC"
+        },
+        "palette": [
+            {
+                "data": {
+                    "type": "bottom"
+                },
+                "block": "cobblestone_slab"
+            },
+            {
+                "data": {
+                    "type": "bottom"
+                },
+                "block": "stone_slab"
+            },
+            {
+                "weight": 8,
+                "block": "air"
+            }
+        ]
+    },
     "objects": [
         {
             "chance": 0.00175,
@@ -71,7 +329,8 @@
             }
         },
         {
-            "chance": 0.005,
+            "mode": "PAINT",
+            "chance": 0.5,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -82,84 +341,8 @@
                 "enabled": true
             },
             "place": [
-                "boulder/boulder1",
-                "boulder/boulder2",
-                "boulder/boulder3",
-                "boulder/boulder4",
-                "boulder/boulder5",
-                "boulder/boulder6",
-                "boulder/boulder7",
-                "boulder/boulder8",
-                "boulder/boulder9",
-                "boulder/boulder10",
-                "boulder/boulder11",
-                "boulder/boulder12",
-                "boulder/boulder13",
-                "boulder/boulder14",
-                "boulder/boulder15"
-            ],
-            "translate": {
-                "x": 0,
-                "y": -2,
-                "z": 0
-            }
-        }
-    ],
-    "name": "Old Cavern",
-    "layers": [
-        {
-            "minHeight": 1,
-            "maxHeight": 2,
-            "style": {
-                "style": "STATIC"
-            },
-            "zoom": 0.1,
-            "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                }
+                "camp/camp"
             ]
         }
-    ],
-    "generators": [
-        {
-            "min": 4,
-            "max": 6,
-            "generator": "plain"
-        }
-    ],
-    "loot": {
-        "tables": [
-            "cave-clutter"
-        ]
-    },
-    "derivative": "PLAINS",
-    "slab": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            {
-                "data": {
-                    "waterlogged": false,
-                    "type": "bottom"
-                },
-                "block": "cobblestone_slab"
-            },
-            {
-                "data": {
-                    "waterlogged": false,
-                    "type": "bottom"
-                },
-                "block": "mossy_cobblestone_slab"
-            },
-            {
-                "weight": 7,
-                "block": "air"
-            }
-        ]
-    }
+    ]
 }

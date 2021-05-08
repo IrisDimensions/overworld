@@ -6,13 +6,8 @@
     "generators": [
         {
             "generator": "smooth-land",
-            "max": 20,
+            "max": 15,
             "min": -10
-        },
-        {
-            "generator": "small-cliffs",
-            "min": -17,
-            "max": 0
         }
     ],
     "layers": [
@@ -51,10 +46,7 @@
     "wall": {
         "palette": [
             {
-                "block": "stone"
-            },
-            {
-                "block": "andesite"
+                "block": "terracotta"
             }
         ]
     },
@@ -73,27 +65,9 @@
             ]
         },
         {
-            "chance": 0.2,
+            "chance": 0.06,
             "variance": {
-                "style": "CELLULAR",
-                "zoom": 0.3,
-                "fracture": {
-                    "style": "SIMPLEX",
-                    "zoom": 0.2,
-                    "multiplier": 10,
-                    "fracture": {
-                        "style": "STATIC",
-                        "multiplier": 15
-                    }
-                }
-            },
-            "style": {
-                "style": "TRIOCTAVE_SIMPLEX",
-                "zoom": 0.3,
-                "fracture": {
-                    "style": "STATIC",
-                    "multiplier": 8
-                }
+                "style": "STATIC"
             },
             "palette": [
                 {
@@ -137,6 +111,7 @@
     ],
     "objects": [
         {
+            "mode": "PAINT",
             "place": [
                 "bush/small/1",
                 "bush/small/2",

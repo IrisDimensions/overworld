@@ -146,6 +146,48 @@
             }
         },
         {
+            "chance": 0.005,
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "vine"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "air"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "stone-clutt/obelisk-1",
+                "stone-clutt/obelisk-2",
+                "stone-clutt/obelisk-3",
+                "stone-clutt/obelisk-4",
+                "stone-clutt/obelisk-5",
+                "stone-clutt/obelisk-6",
+                "stone-clutt/obelisk-7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
             "chance": 0.01,
             "density": 3,
             "snow": 0.35,
@@ -187,7 +229,8 @@
             }
         },
         {
-            "chance": 0.8,
+            "chance": 0.1,
+			"persistent": true,
             "density": 3,
             "snow": 0.35,
             "rotation": {
@@ -265,7 +308,7 @@
             }
         },
         {
-            "chance": 0.05,
+            "chance": 0.2,
             "density": 3,
             "snow": 0.35,
             "rotation": {
@@ -345,7 +388,7 @@
         {
             "min": 4,
             "max": 6,
-            "generator": "smooth-land"
+            "generator": "mountain-plain"
         }
     ],
     "wall": {

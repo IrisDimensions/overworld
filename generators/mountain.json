@@ -1,23 +1,40 @@
 {
-    "interpolator":{
-        "function":"BILINEAR_STARCAST_9",
-        "horizontalScale":41
+    "interpolator": {
+        "function": "BILINEAR_STARCAST_9",
+        "horizontalScale": 30
     },
-    "seed":9246661,
-    "composite":[
+    "seed": 530530,
+    "composite": [
         {
-            "style":{
-                "style":"IRIS",
-                "zoom":0.87,
-                "fracture":{
-                    "style":"IRIS_HALF",
-                    "zoom":0.295,
-                    "multiplier":18
+            "seed": 5346,
+            "style": {
+                "style": "TRIOCTAVE_FRACTAL_CUBIC",
+                "zoom": 1.7,
+                "fracture": {
+                    "style": "IRIS_THICK",
+                    "zoom": 0.8,
+                    "exponent": 1.2,
+                    "multiplier": 55
                 }
             },
-            "seed":134056,
-            "bezier":true,
-            "exponent":1.125
+            "exponent": 4,
+            "negative": true
+        },
+        {
+            "seed": 1714,
+            "style": {
+                "style": "IRIS_THICK",
+                "zoom": 0.6,
+                "exponent": 0.7,
+                "fracture": {
+                    "style": "SIMPLEX",
+                    "zoom": 0.8,
+                    "exponent": 0.7,
+                    "multiplier": 50
+                }
+            },
+            "negative": true,
+            "opacity": 0.1
         }
     ]
 }

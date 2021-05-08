@@ -167,6 +167,78 @@
             "mode": "VACUUM",
             "carvingSupport": "SURFACE_ONLY"
         },
+		{
+            "place": [
+                "tree/jungle/1",
+                "tree/jungle/2",
+                "tree/jungle/3",
+                "tree/jungle/4",
+                "tree/jungle/5",
+                "tree/jungle/7",
+                "tree/jungle/8",
+                "tree/jungle/9"
+            ],
+            "chance": 0.8,
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "jungle_leaves"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "oak_leaves",
+                                "data": {
+                                    "persistent": true
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "jungle_wood"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "dark_oak_wood"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "jungle_log"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "dark_oak_wood"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": -360,
+                    "max": 360
+                }
+            },
+            "translate": {
+                "y": -3
+            }
+        },
         {
             "chance": 0.35,
             "density": 2,
@@ -252,8 +324,8 @@
     ],
     "generators": [
         {
-            "min": -6,
-            "max": -3,
+            "min": 6,
+            "max": 3,
             "generator": "mountain"
         }
     ],

@@ -1,121 +1,17 @@
 {
     "name": "Middle Mountain",
-    "derivative": "MUSHROOM_FIELDS",
-    "vanillaDerivative": "PLAINS",
-    "biomeScatter": [
-        "PLAINS",
-        "FOREST"
-    ],
-    "entityInitialSpawns": [
-        {
-            "entity": "sheep",
-            "maxSpawns": 8,
-            "minSpawns": 3,
-            "rarity": 75
-        },
-        {
-            "entity": "cow",
-            "maxSpawns": 8,
-            "minSpawns": 3,
-            "rarity": 75
-        }
-    ],
+    "derivative": "TAIGA_MOUNTAINS",
+    "vanillaDerivative": "TAIGA_MOUNTAINS",
     "children": [
         "mountain-cliffs"
     ],
-    "objects": [
-
-        {
-            "name": "standard-surface-portals",
-            "chance": 0.00505,
-            "place": [
-                "ruined_portal/giant_portal_1",
-                "ruined_portal/giant_portal_2",
-                "ruined_portal/giant_portal_3",
-                "ruined_portal/portal_1",
-                "ruined_portal/portal_2",
-                "ruined_portal/portal_3",
-                "ruined_portal/portal_4",
-                "ruined_portal/portal_5",
-                "ruined_portal/portal_6",
-                "ruined_portal/portal_7",
-                "ruined_portal/portal_8",
-                "ruined_portal/portal_9",
-                "ruined_portal/portal_10"
-            ],
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "gold_block"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "air"
-                            }
-                        ]
-                    },
-                    "chance": 0.1
-                },
-                {
-                    "find": [
-                        {
-                            "block": "netherrack"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "magma_block"
-                            }
-                        ]
-                    },
-                    "chance": 0.07
-                },
-                {
-                    "find": [
-                        {
-                            "block": "obsidian"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "crying_obsidian"
-                            }
-                        ]
-                    },
-                    "chance": 0.15
-                },
-                {
-                    "find": [
-                        {
-                            "block": "lava"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "magma_block"
-                            }
-                        ]
-                    },
-                    "chance": 0.20
-                }
-            ],
-            "mode": "VACUUM",
-            "carvingSupport": "SURFACE_ONLY"
-        }
-    ],
     "childStyle": {
         "style": "STATIC",
-        "exponent": 0.6,
-        "zoom": 3,
+        "exponent": 0.625,
+        "zoom": 1,
         "fracture": {
             "style": "VIGOCTAVE_SIMPLEX",
-            "multiplier": 15,
+            "multiplier": 4,
             "zoom": 0.9
         }
     },
@@ -125,13 +21,13 @@
     "biomeZoom": 0.4,
     "generators": [
         {
-            "generator": "mountain-gen",
-            "max": 80,
+            "generator": "mountain",
+            "max": 95,
             "min": 0
         },
         {
             "generator": "mountain-plain",
-            "max": 80,
+            "max": 95,
             "min": 40
         }
     ],
@@ -141,7 +37,7 @@
             "maxHeight": 1,
             "slopeCondition": {
                 "minimumSlope": 0,
-                "maximumSlope": 3
+                "maximumSlope": 2.6
             },
             "palette": [
                 {
@@ -326,7 +222,10 @@
                 "block": "andesite"
             },
             {
-                "block": "stone"
+                "block": "gravel"
+            },
+            {
+                "block": "cyan_terracotta"
             }
         ]
     }

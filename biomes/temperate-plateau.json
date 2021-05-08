@@ -1,15 +1,5 @@
 {
     "vanillaDerivative": "FOREST",
-    "jigsawStructures": [
-        {
-            "rarity": 1000,
-            "structure": "pillager"
-        },
-        {
-            "rarity": 350,
-            "structure": "village-temperate"
-        }
-    ],
     "entityInitialSpawns": [
         {
             "entity": "cow",
@@ -314,56 +304,6 @@
                 "y": 0,
                 "z": 0
             }
-        },
-        {
-            "chance": 0.0015,
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "white_wool"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "oak_wood"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "find": [
-                        {
-                            "block": "black_wool"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "oak_wood"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "sm-tree/oakw-oakl"
-            ],
-            "translate": {
-                "x": 0,
-                "y": -3,
-                "z": 0
-            }
         }
     ],
     "biomeZoom": 60,
@@ -539,7 +479,7 @@
     ],
     "generators": [
         {
-            "min": 40,
+            "min": 30,
             "max": 55,
             "generator": "smooth-land-steep"
         },
@@ -551,7 +491,7 @@
         {
             "min": 2,
             "max": 6,
-            "generator": "cracked-cliffs"
+            "generator": "plain"
         }
     ],
     "loot": {
@@ -577,5 +517,6 @@
     },
     "biomeScatter": [
         "FOREST"
-    ]
+    ],
+    "rarity": 40
 }
