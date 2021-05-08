@@ -1,0 +1,117 @@
+{
+    "connectors": [
+        {
+            "targetName": "village/snowy/villagers/unemployed",
+            "entityCount": 3,
+            "spawnEntity": "villager",
+            "innerConnector": true,
+            "rotateConnector": false,
+            "name": "villager",
+            "pools": ["village/desert/decor"],
+            "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "direction": "UP_POSITIVE_Y"
+        },
+        {
+            "targetName": "minecraft:street",
+            "innerConnector": false,
+            "rotateConnector": false,
+            "name": "minecraft:street",
+            "pools": ["village/snowy/streets"],
+            "position": {
+                "x": -7,
+                "y": 0,
+                "z": -8
+            },
+            "direction": "NORTH_NEGATIVE_Z"
+        },
+        {
+            "targetName": "minecraft:street",
+            "innerConnector": false,
+            "rotateConnector": false,
+            "name": "minecraft:street",
+            "pools": ["village/snowy/streets"],
+            "position": {
+                "x": -7,
+                "y": 0,
+                "z": 7
+            },
+            "direction": "SOUTH_POSITIVE_Z"
+        },
+        {
+            "targetName": "minecraft:building_entrance",
+            "innerConnector": true,
+            "rotateConnector": false,
+            "name": "minecraft:building_entrance",
+            "pools": ["village/snowy/houses"],
+            "position": {
+                "x": -6,
+                "y": 0,
+                "z": 0
+            },
+            "direction": "EAST_POSITIVE_X"
+        }
+    ],
+    "placementOptions": {
+        "overStilt": 0,
+        "chance": 1,
+        "meld": false,
+        "density": 1,
+        "edit": [],
+        "bottom": false,
+        "translateCenter": false,
+        "rotation": {
+            "yAxis": {
+                "min": 0,
+                "max": 0,
+                "interval": 90,
+                "enabled": true
+            },
+            "xAxis": {
+                "min": 0,
+                "max": 0,
+                "interval": 0,
+                "enabled": false
+            },
+            "zAxis": {
+                "min": 0,
+                "max": 0,
+                "interval": 0,
+                "enabled": false
+            },
+            "enabled": true
+        },
+        "boreExtendMinY": -1,
+        "smartBore": false,
+        "waterloggable": false,
+        "bore": false,
+        "translate": {
+            "yRandom": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "mode": "FAST_MAX_HEIGHT",
+        "carvingSupport": "SURFACE_ONLY",
+        "snow": 0,
+        "underwater": false,
+        "place": [],
+        "boreExtendMaxY": 0,
+        "onwater": false,
+        "clamp": {
+            "minimumHeight": 0,
+            "maximumHeight": 255
+        },
+        "warp": {
+            "multiplier": 1,
+            "style": "FLAT",
+            "zoom": 1,
+            "maxFractureAccuracy": false,
+            "exponent": 1
+        }
+    },
+    "object": "village/snowy/streets/straight_02"
+}

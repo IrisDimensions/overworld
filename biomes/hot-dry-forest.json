@@ -1,0 +1,450 @@
+{
+    "vanillaDerivative": "SAVANNA",
+    "biomeSkyScatter": [
+        "DESERT"
+    ],
+    "decorators": [
+        {
+            "chance": 0.00435,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "east"
+                    },
+                    "block": "stone_button"
+                },
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "south"
+                    },
+                    "block": "stone_button"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "chance": 0.092,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "block": "dead_bush"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "chance": 0.1,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.5,
+            "palette": [
+                {
+                    "block": "grass"
+                },
+                {
+                    "block": "tall_grass"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "chance": 0.000001,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "weight": 8,
+                    "block": "air"
+                },
+                {
+                    "block": "pumpkin"
+                },
+                {
+                    "weight": 4,
+                    "block": "air"
+                },
+                {
+                    "block": "carved_pumpkin"
+                },
+                {
+                    "weight": 8,
+                    "block": "air"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        }
+    ],
+    "objects": [
+        {
+            "name": "standard-surface-portals",
+            "chance": 0.00505,
+            "place": [
+                "ruined_portal/giant_portal_1",
+                "ruined_portal/giant_portal_2",
+                "ruined_portal/giant_portal_3",
+                "ruined_portal/portal_1",
+                "ruined_portal/portal_2",
+                "ruined_portal/portal_3",
+                "ruined_portal/portal_4",
+                "ruined_portal/portal_5",
+                "ruined_portal/portal_6",
+                "ruined_portal/portal_7",
+                "ruined_portal/portal_8",
+                "ruined_portal/portal_9",
+                "ruined_portal/portal_10"
+            ],
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "gold_block"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "air"
+                            }
+                        ]
+                    },
+                    "chance": 0.1
+                },
+                {
+                    "find": [
+                        {
+                            "block": "netherrack"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "magma_block"
+                            }
+                        ]
+                    },
+                    "chance": 0.07
+                },
+                {
+                    "find": [
+                        {
+                            "block": "obsidian"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "crying_obsidian"
+                            }
+                        ]
+                    },
+                    "chance": 0.15
+                },
+                {
+                    "find": [
+                        {
+                            "block": "lava"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "magma_block"
+                            }
+                        ]
+                    },
+                    "chance": 0.20
+                }
+            ],
+            "mode": "VACUUM",
+            "carvingSupport": "SURFACE_ONLY"
+        },
+        {
+            "mode": "PAINT",
+            "chance": 0.0025,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "camp/barrel-bin"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.05,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "haybale/hay1",
+                "haybale/hay3",
+                "haybale/hay2"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.335,
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "oak_wood"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "stripped_oak_wood"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "oak_log"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "stripped_oak_log"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "spruce_slab"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "oak_slab"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "deadwood/dadwood1",
+                "deadwood/dadwood2",
+                "deadwood/dadwood3",
+                "deadwood/dadwood4",
+                "deadwood/dadwood5",
+                "deadwood/dadwood6"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.05,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "haybale/hay1",
+                "haybale/hay3",
+                "haybale/hay2"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.15,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/oak-clutt-1",
+                "clutter/oak-clutt-2",
+                "clutter/oak-clutt-3",
+                "clutter/oak-clutt-4",
+                "clutter/oak-clutt-5"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        }
+    ],
+    "entityInitialSpawns": [
+        {
+            "entity": "cow",
+            "maxSpawns": 1,
+            "minSpawns": 1,
+            "rarity": 6
+        },
+        {
+            "entity": "chicken",
+            "maxSpawns": 1,
+            "minSpawns": 1,
+            "rarity": 6
+        }
+    ],
+    "name": "Dry Forest",
+    "layers": [
+        {
+            "style": {
+                "style": "STATIC"
+            },
+            "zoom": 0.75,
+            "palette": [
+                {
+                    "weight": 2,
+                    "block": "grass_block"
+                },
+                {
+                    "block": "brown_concrete_powder"
+                },
+                {
+                    "weight": 4,
+                    "block": "grass_block"
+                },
+                {
+                    "block": "brown_concrete_powder"
+                },
+                {
+                    "weight": 7,
+                    "block": "grass_block"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
+        }
+    ],
+    "generators": [
+        {
+            "min": 7,
+            "max": 10,
+            "generator": "plain"
+        }
+    ],
+    "biomeZoom": 20,
+    "loot": {
+        "tables": [
+            "cactus-clutter"
+        ]
+    },
+    "derivative": "SAVANNA",
+    "biomeStyle": {
+        "style": "IRIS"
+    },
+    "wall": {
+        "style": {
+            "style": "STATIC"
+        },
+        "palette": [
+            {
+                "block": "stone"
+            },
+            {
+                "block": "andesite"
+            },
+            {
+                "block": "stone"
+            }
+        ]
+    },
+    "biomeScatter": [
+        "SAVANNA",
+        "DESERT"
+    ],
+    "rarity": 6
+}

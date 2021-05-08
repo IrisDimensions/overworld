@@ -1,0 +1,413 @@
+{
+    "continentalStyle": {
+        "style": "CELLULAR_HEIGHT_IRIS_DOUBLE",
+        "zoom": 12.925,
+        "exponent": 10.1
+    },
+    "stronghold": "stronghold",
+    "decorate": true,
+    "focus": "temperate-birch-forest",
+    "landZoom": 3.15,
+    "placeObjects": true,
+    "regions": [
+        "mushroom",
+        "swamp",
+        "mountain",
+        "ocean",
+        "tropical",
+        "temperate",
+		"savanna",
+        "temperate",
+        "ocean",
+        "frozen",
+        "hot",
+        "tundra",
+        "tropical-mountain",
+        "temperate",
+		"mesa"
+    ],
+    "seaBiomeStyle": {
+        "style": "CELLULAR_IRIS_DOUBLE"
+    },
+    "seaZoom": 1.25,
+    "biomeZoom": 8.09,
+    "carving": true,
+    "lootTries": 32,
+    "caveBiomeStyle": {
+        "style": "CELLULAR_IRIS_DOUBLE"
+    },
+    "continentZoom": 1,
+    "postProcessing": true,
+    "landBiomeStyle": {
+        "style": "CELLULAR",
+        "fracture": {
+            "multiplier": 18,
+            "maxFractureAccuracy": true,
+            "style": "FRACTAL_WATER",
+            "zoom": 0.255,
+            "fracture": {
+                "maxFractureAccuracy": true,
+                "style": "STATIC",
+                "multiplier": 4
+            }
+        }
+    },
+    "regionStyle": {
+        "style": "CELLULAR_IRIS_DOUBLE",
+        "fracture": {
+            "multiplier": 18,
+            "maxFractureAccuracy": true,
+            "style": "FRACTAL_WATER",
+            "zoom": 0.255,
+            "fracture": {
+                "maxFractureAccuracy": true,
+                "style": "STATIC",
+                "multiplier": 4
+            }
+        }
+    },
+    "aggressiveBiomeReshuffle": true,
+    "entitySpawnOverrides": [
+        {
+            "cancelSourceSpawn": true,
+            "entity": "fred",
+            "rarity": 60,
+            "trigger": "VEX"
+        },
+        {
+            "cancelSourceSpawn": true,
+            "entity": "fred",
+            "rarity": 260,
+            "trigger": "PANDA"
+        },
+        {
+            "cancelSourceSpawn": true,
+            "entity": "dan",
+            "rarity": 250,
+            "trigger": "CREEPER"
+        },
+        {
+            "cancelSourceSpawn": true,
+            "entity": "phantomapi",
+            "rarity": 70,
+            "trigger": "PHANTOM"
+        }
+    ],
+    "terrainZoom": 1,
+    "coordFractureZoom": 0.15,
+    "fluidHeight": 63,
+    "ravines": false,
+    "ravineRarity": 28,
+    "ravineRibRarity": 2,
+    "fluidPalette": {
+        "palette": [
+            {
+                "block": "water"
+            }
+        ]
+    },
+    "rockPalette": {
+        "palette": [
+            {
+                "weight": 10,
+                "block": "stone"
+            },
+            {
+                "block": "granite"
+            },
+            {
+                "block": "andesite"
+            }
+        ],
+        "style": {
+            "style": "IRIS_THICK",
+            "zoom": 1.26,
+            "fracture": {
+                "style": "STATIC",
+                "multiplier": 3
+            }
+        }
+    },
+    "loot": {
+        "tables": [
+            "global-treasure",
+            "global-tools",
+            "global-clutter"
+        ]
+    },
+    "coordFractureDistance": 926,
+    "caveLayers": [
+        {
+            "canBreakSurface": false,
+            "horizontalSlope": {
+                "min": -110,
+                "max": 100,
+                "generator": {
+                    "style": "FRACTAL_SMOKE",
+                    "fracture": {
+                        "multiplier": 9,
+                        "style": "FRACTAL_SMOKE",
+                        "zoom": 0.3
+                    }
+                }
+            },
+            "caveThickness": 2,
+            "caveZoom": 1.25,
+            "verticalSlope": {
+                "min": 6,
+                "max": 82,
+                "generator": {
+                    "style": "FRACTAL_SMOKE",
+                    "fracture": {
+                        "multiplier": 9,
+                        "style": "IRIS_THICK",
+                        "zoom": 0.3
+                    }
+                }
+            },
+            "fluid": {
+                "fluidType": {"block": "water"},
+                "fluidHeight": 10
+            }
+        },
+        {
+            "canBreakSurface": true,
+            "horizontalSlope": {
+                "min": -20,
+                "max": 10,
+                "generator": {
+                    "style": "IRIS_THICK",
+                    "zoom": 0.885,
+                    "fracture": {
+                        "multiplier": 9,
+                        "style": "IRIS_THICK",
+                        "zoom": 0.3
+                    }
+                }
+            },
+            "caveThickness": 0.7,
+            "caveZoom": 0.89,
+            "verticalSlope": {
+                "min": 68,
+                "max": 110,
+                "generator": {
+                    "style": "IRIS_DOUBLE",
+                    "zoom": 1.82,
+                    "fracture": {
+                        "multiplier": 9,
+                        "style": "IRIS_THICK",
+                        "zoom": 0.3
+                    }
+                }
+            }
+        }
+    ],
+    "shoreBiomeStyle": {
+        "style": "CELLULAR",
+        "fracture": {
+            "multiplier": 18,
+            "maxFractureAccuracy": true,
+            "style": "FRACTAL_WATER",
+            "zoom": 0.255,
+            "fracture": {
+                "maxFractureAccuracy": true,
+                "style": "STATIC",
+                "multiplier": 4
+            }
+        }
+    },
+    "caves": true,
+    "landChance": 0.69,
+    "preventLeafDecay": true,
+    "version": 2,
+    "deposits": [
+        {
+            "minHeight": 19,
+            "maxPerChunk": 12,
+            "maxHeight": 150,
+            "minPerChunk": 4,
+            "minSize": 22,
+            "maxSize": 32,
+            "palette": [
+                {
+                    "block": "dirt"
+                },
+                {
+                    "block": "coarse_dirt"
+                }
+            ],
+            "varience": 4
+        },
+        {
+            "minHeight": 45,
+            "maxPerChunk": 12,
+            "maxHeight": 140,
+            "minPerChunk": 4,
+            "minSize": 19,
+            "maxSize": 24,
+            "palette": [
+                {
+                    "block": "gravel"
+                }
+            ],
+            "varience": 4
+        },
+        {
+            "minHeight": 25,
+            "maxPerChunk": 12,
+            "maxHeight": 95,
+            "minPerChunk": 4,
+            "minSize": 19,
+            "maxSize": 24,
+            "palette": [
+                {
+                    "block": "andesite"
+                }
+            ],
+            "varience": 4
+        },
+        {
+            "minHeight": 35,
+            "maxPerChunk": 12,
+            "maxHeight": 100,
+            "minPerChunk": 4,
+            "minSize": 19,
+            "maxSize": 24,
+            "palette": [
+                {
+                    "block": "granite"
+                }
+            ],
+            "varience": 4
+        },
+        {
+            "minHeight": 45,
+            "maxPerChunk": 12,
+            "maxHeight": 115,
+            "minPerChunk": 4,
+            "minSize": 19,
+            "maxSize": 24,
+            "palette": [
+                {
+                    "block": "diorite"
+                }
+            ],
+            "varience": 4
+        },
+        {
+            "minHeight": 2,
+            "maxPerChunk": 2,
+            "maxHeight": 18,
+            "minPerChunk": 1,
+            "minSize": 2,
+            "maxSize": 5,
+            "palette": [
+                {
+                    "block": "diamond_ore"
+                }
+            ],
+            "varience": 5
+        },
+        {
+            "minHeight": 4,
+            "maxPerChunk": 5,
+            "maxHeight": 40,
+            "minPerChunk": 1,
+            "minSize": 5,
+            "maxSize": 8,
+            "palette": [
+                {
+                    "data": {
+                        "lit": false
+                    },
+                    "block": "redstone_ore"
+                }
+            ],
+            "varience": 7
+        },
+        {
+            "minHeight": 3,
+            "maxPerChunk": 2,
+            "maxHeight": 67,
+            "minPerChunk": 1,
+            "minSize": 1,
+            "maxSize": 3,
+            "palette": [
+                {
+                    "block": "gold_ore"
+                }
+            ],
+            "varience": 3
+        },
+        {
+            "minHeight": 3,
+            "maxPerChunk": 2,
+            "maxHeight": 29,
+            "minPerChunk": 0,
+            "minSize": 3,
+            "maxSize": 8,
+            "palette": [
+                {
+                    "block": "lapis_ore"
+                }
+            ],
+            "varience": 5
+        },
+        {
+            "minHeight": 1,
+            "maxPerChunk": 9,
+            "maxHeight": 120,
+            "minPerChunk": 9,
+            "minSize": 3,
+            "maxSize": 8,
+            "palette": [
+                {
+                    "block": "iron_ore"
+                }
+            ],
+            "varience": 7
+        },
+        {
+            "minHeight": 1,
+            "maxPerChunk": 10,
+            "maxHeight": 175,
+            "minPerChunk": 9,
+            "minSize": 6,
+            "maxSize": 10,
+            "palette": [
+                {
+                    "block": "coal_ore"
+                }
+            ],
+            "varience": 9
+        }
+    ],
+    "environment": "NORMAL",
+    "overlayNoise": [
+        {
+            "min": 0,
+            "max": 6,
+            "generator": {
+                "style": "FRACTAL_WATER",
+                "zoom": 8
+            }
+        },
+        {
+            "min": 0,
+            "max": 6,
+            "generator": {
+                "style": "IRIS_DOUBLE",
+                "zoom": 1.1
+            }
+        }
+    ],
+    "islandBiomeStyle": {
+        "style": "CELLULAR_IRIS_DOUBLE"
+    },
+    "skylandBiomeStyle": {
+        "style": "CELLULAR_IRIS_DOUBLE"
+    },
+    "name": "Overworld",
+    "regionZoom": 20,
+    "dimensionAngleDeg": 19
+}

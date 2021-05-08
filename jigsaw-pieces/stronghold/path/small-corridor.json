@@ -1,0 +1,59 @@
+{
+    "connectors": [
+        {
+            "targetName": "*",
+            "innerConnector": false,
+            "rotateConnector": false,
+            "name": "",
+            "pools": ["stronghold/paths"],
+            "position": {
+                "x": 0,
+                "y": -2,
+                "z": -4
+            },
+            "direction": "NORTH_NEGATIVE_Z"
+        },
+        {
+            "targetName": "*",
+            "innerConnector": false,
+            "rotateConnector": false,
+            "name": "",
+            "pools": ["stronghold/paths"],
+            "position": {
+                "x": 0,
+                "y": -2,
+                "z": 4
+            },
+            "direction": "SOUTH_POSITIVE_Z"
+        },
+        {
+            "targetName": "*",
+            "innerConnector": true,
+            "rotateConnector": false,
+            "name": "",
+            "pools": ["stronghold/wall-fixture-5x3"],
+            "position": {
+                "x": 2,
+                "y": -1,
+                "z": 0
+            },
+            "direction": "WEST_NEGATIVE_X"
+        }
+    ],
+    "max2dDim": {
+        "nullSupport": false,
+        "check": {},
+        "time": {},
+        "write": {}
+    },
+    "max3dDim": {
+        "nullSupport": false,
+        "check": {},
+        "time": {},
+        "write": {}
+    },
+    "object": "stronghold/path/small-corridor",
+    "placementOptions": {
+        "bore": true
+    }
+}

@@ -1,0 +1,127 @@
+{
+    "entitySpawnOverrides": [
+        {
+            "trigger": "SKELETON",
+            "entity": "shroud",
+            "cancelSourceSpawn": true,
+            "rarity": 12
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.01,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "block": "cornflower"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "chance": 0.001,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "block": "blackstone_wall"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        }
+    ],
+    "name": "Frozen Cavern",
+    "layers": [
+        {
+            "minHeight": 1,
+            "maxHeight": 2,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "blue_ice"
+                },
+                {
+                    "block": "packed_ice"
+                },
+                {
+                    "weight": 6,
+                    "block": "ice"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "ice"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 3,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "blackstone"
+                }
+            ]
+        }
+    ],
+    "generators": [
+        {
+            "min": 4,
+            "max": 6,
+            "generator": "plain"
+        }
+    ],
+    "loot": {
+        "tables": [
+            "cave-clutter"
+        ]
+    },
+    "derivative": "FROZEN_OCEAN",
+    "slab": {
+        "style": {
+            "style": "IRIS"
+        },
+        "zoom": 0.5,
+        "palette": [
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "cobblestone_slab"
+            },
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "mossy_cobblestone_slab"
+            },
+            {
+                "weight": 5,
+                "block": "air"
+            }
+        ]
+    }
+}

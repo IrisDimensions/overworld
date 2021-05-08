@@ -1,0 +1,115 @@
+{
+    "connectors": [
+        {
+            "targetName": "minecraft:empty",
+            "innerConnector": false,
+            "rotateConnector": false,
+            "name": "minecraft:stairs_mirrored",
+            "pools": ["empty"],
+            "position": {
+                "x": -7,
+                "y": -3,
+                "z": -8
+            },
+            "direction": "NORTH_NEGATIVE_Z"
+        },
+        {
+            "targetName": "minecraft:inner_connector_left",
+            "innerConnector": false,
+            "rotateConnector": false,
+            "name": "minecraft:stable_stairs",
+            "pools": ["bastion/hoglin_stable/large_stables/inner"],
+            "position": {
+                "x": 7,
+                "y": -3,
+                "z": -8
+            },
+            "direction": "NORTH_NEGATIVE_Z"
+        },
+        {
+            "targetName": "minecraft:inner_connector_right",
+            "innerConnector": false,
+            "rotateConnector": false,
+            "name": "minecraft:stable_stairs",
+            "pools": ["bastion/hoglin_stable/small_stables/inner"],
+            "position": {
+                "x": 7,
+                "y": -3,
+                "z": 7
+            },
+            "direction": "SOUTH_POSITIVE_Z"
+        },
+        {
+            "targetName": "minecraft:stair_1_bottom",
+            "innerConnector": false,
+            "rotateConnector": false,
+            "name": "minecraft:starting_stairs",
+            "pools": ["bastion/hoglin_stable/stairs"],
+            "position": {
+                "x": 7,
+                "y": 2,
+                "z": -2
+            },
+            "direction": "EAST_POSITIVE_X"
+        }
+    ],
+    "placementOptions": {
+        "overStilt": 0,
+        "chance": 1,
+        "meld": false,
+        "density": 1,
+        "edit": [],
+        "bottom": false,
+        "translateCenter": false,
+        "rotation": {
+            "yAxis": {
+                "min": 0,
+                "max": 0,
+                "interval": 90,
+                "enabled": true
+            },
+            "xAxis": {
+                "min": 0,
+                "max": 0,
+                "interval": 0,
+                "enabled": false
+            },
+            "zAxis": {
+                "min": 0,
+                "max": 0,
+                "interval": 0,
+                "enabled": false
+            },
+            "enabled": true
+        },
+        "boreExtendMinY": 0,
+        "smartBore": false,
+        "waterloggable": false,
+        "bore": false,
+        "translate": {
+            "yRandom": 0,
+            "x": 0,
+            "y": -1,
+            "z": 0
+        },
+        "mode": "FAST_MAX_HEIGHT",
+        "carvingSupport": "SURFACE_ONLY",
+        "snow": 0,
+        "underwater": false,
+        "place": [],
+        "boreExtendMaxY": 0,
+        "onwater": false,
+        "clamp": {
+            "minimumHeight": 0,
+            "maximumHeight": 255
+        },
+        "warp": {
+            "multiplier": 1,
+            "style": "FLAT",
+            "zoom": 1,
+            "maxFractureAccuracy": false,
+            "exponent": 1
+        }
+    },
+    "object": "bastion/hoglin_stable/starting_pieces/stairs_0_mirrored"
+}

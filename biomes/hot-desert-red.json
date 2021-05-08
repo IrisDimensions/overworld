@@ -1,0 +1,70 @@
+{
+    "name": "Red Desert",
+    "derivative": "DESERT",
+    "vanillaDerivative": "DESERT",
+    "generators": [
+        {
+            "generator": "desert-dunes",
+            "max": 30,
+            "min": 1
+        }
+    ],
+    "layers": [
+        {
+            "style": {
+                "style": "FRACTAL_WATER"
+            },
+            "zoom": 0.7,
+            "palette": [
+                {
+                    "weight": 1,
+                    "block": "red_sand"
+                },
+                {
+                    "weight": 1,
+                    "block": "smooth_red_sandstone"
+                }
+            ],
+            "minHeight": 5,
+            "maxHeight": 5
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.005,
+            "palette": [
+                {
+                    "block": "dead_bush"
+                }
+            ]
+        },
+        {
+            "chance": 0.01,
+            "palette": [
+                {
+                    "block": "cactus"
+                }
+            ],
+            "stackMin": 2,
+            "stackMax": 4,
+            "topPalette": [
+                {
+                    "block": "brain_coral_fan",
+                    "data": {
+                        "waterlogged": "false"
+                    }
+                }
+            ]
+        },
+        {
+            "chance": 0.01,
+            "palette": [
+                {
+                    "block": "cactus"
+                }
+            ],
+            "stackMin": 2,
+            "stackMax": 7
+        }
+    ]
+}
