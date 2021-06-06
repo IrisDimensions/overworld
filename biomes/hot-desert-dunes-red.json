@@ -1,0 +1,196 @@
+{
+    "derivative": "DESERT",
+    "name": "Desert dunes",
+    "vanillaDerivative": "DESERT",
+    "generators": [
+        {
+            "generator": "dunes",
+            "max": 30,
+            "min": 10
+        }
+    ],
+    "jigsawStructures": [
+        {
+            "rarity": 1650,
+            "structure": "desert-pyramid"
+        }
+    ],
+    "objects": [
+        {
+            "name": "standard-surface-portals",
+            "chance": 0.00505,
+            "place": [
+                "ruined_portal/giant_portal_1",
+                "ruined_portal/giant_portal_2",
+                "ruined_portal/giant_portal_3",
+                "ruined_portal/portal_1",
+                "ruined_portal/portal_2",
+                "ruined_portal/portal_3",
+                "ruined_portal/portal_4",
+                "ruined_portal/portal_5",
+                "ruined_portal/portal_6",
+                "ruined_portal/portal_7",
+                "ruined_portal/portal_8",
+                "ruined_portal/portal_9",
+                "ruined_portal/portal_10"
+            ],
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "gold_block"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "air"
+                            }
+                        ]
+                    },
+                    "chance": 0.1
+                },
+                {
+                    "find": [
+                        {
+                            "block": "netherrack"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "magma_block"
+                            }
+                        ]
+                    },
+                    "chance": 0.07
+                },
+                {
+                    "find": [
+                        {
+                            "block": "obsidian"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "crying_obsidian"
+                            }
+                        ]
+                    },
+                    "chance": 0.15
+                },
+                {
+                    "find": [
+                        {
+                            "block": "lava"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "magma_block"
+                            }
+                        ]
+                    },
+                    "chance": 0.20
+                }
+            ],
+            "mode": "VACUUM",
+            "carvingSupport": "SURFACE_ONLY"
+        },
+        {
+            "chance": 0.001,
+            "density": 3,
+            "place": [
+                "clutter/desert-post1",
+                "clutter/desert-post2",
+                "clutter/desert-post3"
+            ]
+        },
+        {
+            "chance": 0.0000001,
+			"mode": "STILT",
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "pryamid/pyramid-extreme",
+                "void/void",
+                "void/void",
+                "void/void"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -14,
+                "z": 0
+            }
+        }
+    ],
+    "layers": [
+        {
+            "minHeight": 5,
+            "maxHeight": 6,
+            "palette": [
+                {
+                    "weight": 1,
+                    "block": "sand"
+                }
+            ]
+        },
+        {
+            "minHeight": 3,
+            "maxHeight": 4,
+            "palette": [
+                {
+                    "block": "red_sandstone"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 5,
+            "palette": [
+                {
+                    "block": "red_terracotta"
+                }
+            ]
+        }
+    ],
+    "decorators": [
+        {
+            "verticalZoom": 5,
+            "chance": 0.004,
+            "variance": {
+                "style": "STATIC"
+            },
+            "stackMax": 5,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "cactus"
+                }
+            ],
+            "heightVariance": {
+                "style": "IRIS"
+            },
+            "stackMin": 1
+        },
+        {
+            "chance": 0.005,
+            "palette": [
+                {
+                    "block": "dead_bush"
+                }
+            ]
+        }
+    ]
+}
