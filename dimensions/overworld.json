@@ -14,31 +14,28 @@
         "mountain",
         "ocean",
         "tropical-mountain",
+        "savanna",
+        "tundra",
         "temperate",
-		"savanna",
-        "temperate",
-        "ocean",
         "frozen",
         "hot",
-        "tundra",
         "tropical",
-        "temperate",
-		"mesa"
+        "mesa",
+        "ocean"
     ],
     "seaBiomeStyle": {
         "style": "CELLULAR_IRIS_DOUBLE"
     },
     "seaZoom": 1.25,
-    "biomeZoom": 8.09,
-
+    "biomeZoom": 8,
     "lootTries": 32,
     "caveBiomeStyle": {
         "style": "CELLULAR_IRIS_DOUBLE"
     },
     "continentZoom": 1,
     "postProcessing": true,
-    "postProcessCaves":true,
-    "Nipple-Remover":true,
+    "postProcessCaves": true,
+    "Nipple-Remover": true,
     "landBiomeStyle": {
         "style": "CELLULAR",
         "fracture": {
@@ -137,50 +134,41 @@
         ]
     },
     "coordFractureDistance": 926,
-
-
-
     "carving": true,
     "carveLayers": [
         {
             "style": {
                 "style": "IRIS_DOUBLE",
-                "zoom": 1.0,
+                "zoom": 1,
                 "fracture": {
-                "multiplier": 20,
-                "style": "FRACTAL_SMOKE",
-                "zoom": 0.5
-                    }
+                    "multiplier": 20,
+                    "style": "FRACTAL_SMOKE",
+                    "zoom": 0.5
+                }
             },
             "fullPercent": 0.01,
             "threshold": 0.75,
             "minHeight": -30,
             "maxHeight": 70
         },
-
         {
             "style": {
                 "style": "PERLIN_IRIS_HALF",
                 "zoom": 0.3,
                 "fracture": {
-                "multiplier": 20,
-                "style": "FRACTAL_SMOKE",
-                "zoom": 0.5
-                    }
+                    "multiplier": 20,
+                    "style": "FRACTAL_SMOKE",
+                    "zoom": 0.5
+                }
             },
             "fullPercent": 0.5,
             "threshold": 0.68,
             "minHeight": -70,
             "maxHeight": 100
         }
-
-
     ],
     "caves": true,
     "caveLayers": [
-
-
-
         {
             "canBreakSurface": false,
             "caveThickness": 0.5,
@@ -191,7 +179,6 @@
                 "generator": {
                     "style": "IRIS",
                     "zoom": 2
-
                 }
             },
             "verticalSlope": {
@@ -203,7 +190,6 @@
                 }
             }
         },
-
         {
             "canBreakSurface": true,
             "caveThickness": 0.5,
@@ -214,7 +200,6 @@
                 "generator": {
                     "style": "SIMPLEX",
                     "zoom": 2
-
                 }
             },
             "verticalSlope": {
@@ -236,7 +221,6 @@
                 "generator": {
                     "style": "PERLIN",
                     "zoom": 2
-
                 }
             },
             "verticalSlope": {
@@ -269,7 +253,6 @@
             }
         }
     },
-
     "landChance": 0.69,
     "preventLeafDecay": true,
     "version": 2,
