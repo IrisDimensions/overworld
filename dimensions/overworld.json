@@ -147,14 +147,14 @@
                 "style": "IRIS_DOUBLE",
                 "zoom": 1.0,
                 "fracture": {
-                "multiplier": 20,
+                "multiplier": 5,
                 "style": "FRACTAL_SMOKE",
                 "zoom": 0.5
                     }
             },
             "fullPercent": 0.01,
             "threshold": 0.75,
-            "minHeight": -30,
+            "minHeight": -40,
             "maxHeight": 70
         },
 
@@ -163,14 +163,14 @@
                 "style": "PERLIN_IRIS_HALF",
                 "zoom": 0.3,
                 "fracture": {
-                "multiplier": 20,
+                "multiplier": 5,
                 "style": "FRACTAL_SMOKE",
                 "zoom": 0.5
                     }
             },
             "fullPercent": 0.5,
             "threshold": 0.68,
-            "minHeight": -70,
+            "minHeight": -50,
             "maxHeight": 100
         }
 
@@ -179,7 +179,28 @@
     "caves": true,
     "caveLayers": [
 
+        {
+            "canBreakSurface": true,
+            "caveThickness": 0.5,
+            "caveZoom": 0.7,
+            "horizontalSlope": {
+                "min": -40,
+                "max": 60,
+                "generator": {
+                    "style": "SIMPLEX",
+                    "zoom": 2
 
+                }
+            },
+            "verticalSlope": {
+                "min": 10,
+                "max": 110,
+                "generator": {
+                    "style": "SIMPLEX",
+                    "zoom": 4
+                }
+            }
+        },
 
         {
             "canBreakSurface": false,
@@ -204,28 +225,7 @@
             }
         },
 
-        {
-            "canBreakSurface": true,
-            "caveThickness": 0.5,
-            "caveZoom": 0.7,
-            "horizontalSlope": {
-                "min": -40,
-                "max": 50,
-                "generator": {
-                    "style": "SIMPLEX",
-                    "zoom": 2
 
-                }
-            },
-            "verticalSlope": {
-                "min": 10,
-                "max": 100,
-                "generator": {
-                    "style": "SIMPLEX",
-                    "zoom": 4
-                }
-            }
-        },
         {
             "canBreakSurface": false,
             "caveThickness": 0.1,
@@ -241,7 +241,7 @@
             },
             "verticalSlope": {
                 "min": -40,
-                "max": 70,
+                "max": 80,
                 "generator": {
                     "style": "PERLIN",
                     "zoom": 2
