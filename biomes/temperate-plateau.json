@@ -104,7 +104,7 @@
                             }
                         ]
                     },
-                    "chance": 0.20
+                    "chance": 0.2
                 }
             ],
             "mode": "VACUUM",
@@ -315,25 +315,31 @@
     "biomeStyle": {
         "style": "IRIS"
     },
-	"decorators": [
-	{
-		"chance": 0.8,
-		"variance": {
-			"style": "STATIC"
-		},
-		"zoom": 0.2,
-		"palette": [
-			{
-				"weight": 1,
-				"block": "grass"
-			},
-			{
-				"block": "grass"
-			},
-			{
-				"block": "grass"
-			},
-            {
+    "decorators": [
+        {
+            "chance": 0.8,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.2,
+            "palette": [
+                {
+                    "weight": 1,
+                    "block": "grass"
+                },
+                {
+                    "block": "grass"
+                },
+                {
+                    "block": "grass"
+                },
+                {
+                    "chance": 7,
+                    "block": "grass"
+                }
+            ]
+        },
+        {
             "chance": 0.8,
             "variance": {
                 "style": "STATIC"
@@ -347,90 +353,85 @@
             "style": {
                 "style": "STATIC"
             }
+        },
+        {
+            "chance": 0.03,
+            "variance": {
+                "style": "STATIC"
             },
-			{
-			    "chance": 7,
-				"block": "grass"
-			}
-		]
-	},
-	{
-		"chance": 0.03,
-		"variance": {
-			"style": "STATIC"
-		},
-		"zoom": 0.2,
-		"palette": [
-			{
-				"block": "oak_leaves",
-				"data": {
+            "zoom": 0.2,
+            "palette": [
+                {
+                    "block": "oak_leaves",
+                    "data": {
                         "persistent": true
                     }
-			}
-		]
-	},
-	{
-		"chance": 0.02,
-		"variance": {
-			"style": "STATIC"
-		},
-		"zoom": 0.2,
-		"palette": [
-            {
+                }
+            ]
+        },
+        {
+            "chance": 0.02,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.2,
+            "palette": [
+                {
                     "block": "tall_grass"
-            }
-		]
-	},
-	{
-		"chance": 0.03,
-		"variance": {
-			"style": "STATIC"
-		},
-		"zoom": 0.2,
-		"palette": [
-            {
+                }
+            ]
+        },
+        {
+            "chance": 0.03,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.2,
+            "palette": [
+                {
                     "block": "rose_bush"
-            }
-		]
-	},
-	{
-		"chance": 0.05,
-		"variance": {
-			"style": "STATIC"
-		},
-		"zoom": 0.2,
-		"palette": [
-			{
-			    "chance": 3,
-				"block": "red_mushroom"
-			}
-		]
-	},
-	{
-		"chance": 0.05,
-		"variance": {
-			"style": "STATIC"
-		},
-		"zoom": 0.2,
-		"palette": [
-			{
-			    "chance": 3,
-				"block": "poppy"
-			}
-		]
-	},
-	{
-		"chance": 0.03,
-		"variance": {
-			"style": "STATIC"
-		},
-		"zoom": 0.2,
-		"palette": [
-            {
+                }
+            ]
+        },
+        {
+            "chance": 0.05,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.2,
+            "palette": [
+                {
+                    "chance": 3,
+                    "block": "red_mushroom"
+                }
+            ]
+        },
+        {
+            "chance": 0.05,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.2,
+            "palette": [
+                {
+                    "chance": 3,
+                    "block": "poppy"
+                }
+            ]
+        },
+        {
+            "chance": 0.03,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.2,
+            "palette": [
+                {
                     "block": "cobblestone_slab"
-            }
-		]
-	}],
+                }
+            ]
+        }
+    ],
     "name": "temperate plateau",
     "layers": [
         {
@@ -485,7 +486,7 @@
         {
             "min": 30,
             "max": 55,
-            "generator": "smooth-land-steep"
+            "generator": "canyon-steep"
         },
         {
             "min": 2,
