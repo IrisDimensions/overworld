@@ -24,7 +24,12 @@
     ],
     "generators": [
         {
-            "generator": "mountain-plain",
+            "generator": "plain",
+            "max": 5,
+            "min": 2
+        },
+        {
+            "generator": "mountain",
             "max": 4,
             "min": 3
         }
@@ -226,7 +231,6 @@
         {
             "mode": "PAINT",
             "chance": 0.1,
-            "persistent": true,
             "place": [
                 "bush/small/1",
                 "bush/small/2",
@@ -235,7 +239,6 @@
         },
         {
             "mode": "PAINT",
-            "persistent": true,
             "chance": 0.1,
             "place": [
                 "bush/small/1",
@@ -245,7 +248,6 @@
         },
         {
             "mode": "PAINT",
-            "persistent": true,
             "chance": 0.1,
             "place": [
                 "bush/small/1",
@@ -288,8 +290,13 @@
                 "spruce-medium/spruce42",
                 "spruce-medium/spruce43"
             ],
+            "edit": [
+                {
+                    "find": [{"block": "dark_oak_fence"}, {"block": "dark_oak_fence_gate"}],
+                    "replace": {"palette": [{"block": "spruce_leaves", "data": {"persistent": true}}]}
+                    }
+            ],
             "chance": 1,
-            "persistent": true,
             "density": 5,
             "rotation": {
                 "enabled": true,

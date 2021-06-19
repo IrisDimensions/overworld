@@ -4,9 +4,9 @@
     "vanillaDerivative": "DESERT",
     "generators": [
         {
-            "generator": "dunes",
+            "generator": "smooth-dunes",
             "max": 30,
-            "min": 10 
+            "min": 10
         }
     ],
     "jigsawStructures": [
@@ -16,89 +16,7 @@
         }
     ],
     "objects": [
-        {
-            "name": "standard-surface-portals",
-            "chance": 0.00505,
-            "place": [
-                "ruined_portal/giant_portal_1",
-                "ruined_portal/giant_portal_2",
-                "ruined_portal/giant_portal_3",
-                "ruined_portal/portal_1",
-                "ruined_portal/portal_2",
-                "ruined_portal/portal_3",
-                "ruined_portal/portal_4",
-                "ruined_portal/portal_5",
-                "ruined_portal/portal_6",
-                "ruined_portal/portal_7",
-                "ruined_portal/portal_8",
-                "ruined_portal/portal_9",
-                "ruined_portal/portal_10"
-            ],
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "gold_block"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "air"
-                            }
-                        ]
-                    },
-                    "chance": 0.1
-                },
-                {
-                    "find": [
-                        {
-                            "block": "netherrack"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "magma_block"
-                            }
-                        ]
-                    },
-                    "chance": 0.07
-                },
-                {
-                    "find": [
-                        {
-                            "block": "obsidian"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "crying_obsidian"
-                            }
-                        ]
-                    },
-                    "chance": 0.15
-                },
-                {
-                    "find": [
-                        {
-                            "block": "lava"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "magma_block"
-                            }
-                        ]
-                    },
-                    "chance": 0.20
-                }
-            ],
-            "mode": "VACUUM",
-            "carvingSupport": "SURFACE_ONLY"
-        },
+
         {
             "chance": 0.001,
             "density": 3,
@@ -109,8 +27,8 @@
             ]
         },
         {
-            "chance": 0.000000000000000000000000000000000000000000000000000000000000000000001,
-			"mode": "MIN_HEIGHT",
+            "chance": 0.0000001,
+			"mode": "STILT",
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -121,7 +39,10 @@
                 "enabled": true
             },
             "place": [
-                "pryamid/pyramid-extreme"
+                "pryamid/pyramid-extreme",
+                "void/void",
+                "void/void",
+                "void/void"
             ],
             "translate": {
                 "x": 0,
