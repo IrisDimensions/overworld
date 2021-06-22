@@ -1,6 +1,19 @@
 {
+    "name": "Hot Mountain Cliffs",
+    "derivative": "DESERT",
     "vanillaDerivative": "DESERT",
-    "name": "Extreme mountains cliffs",
+    "generators": [
+        {
+            "min": 11,
+            "max": 32,
+            "generator": "plain"
+        },
+        {
+            "min": 12,
+            "max": 62,
+            "generator": "cracked-cliffs"
+        }
+    ],
     "layers": [
         {
             "minHeight": 1,
@@ -58,20 +71,7 @@
             ]
         }
     ],
-    "generators": [
-        {
-            "min": 11,
-            "max": 32,
-            "generator": "plain"
-        },
-        {
-            "min": 12,
-            "max": 62,
-            "generator": "cracked-cliffs"
-        }
-    ],
     "biomeZoom": 30,
-    "derivative": "DESERT",
     "biomeStyle": {
         "style": "IRIS"
     },
@@ -84,6 +84,5 @@
                 "block": "gray_terracotta"
             }
         ]
-    },
-    "rarity": 39
+    }
 }

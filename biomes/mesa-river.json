@@ -1,14 +1,12 @@
 {
+    "name": "Mesa River",
     "vanillaDerivative": "DESERT_LAKES",
-    "name": "Mesa river",
-    "decorators": [
+    "derivative": "DESERT_LAKES",
+    "generators": [
         {
-            "chance": 0.2,
-            "palette": [
-                {
-                    "block": "seagrass"
-                }
-            ]
+            "generator": "plain",
+            "max": -4,
+            "min": -15
         }
     ],
     "layers": [
@@ -55,12 +53,14 @@
             ]
         }
     ],
-    "generators": [
+    "decorators": [
         {
-            "generator": "plain",
-            "max": -4,
-            "min": -15
+            "chance": 0.2,
+            "palette": [
+                {
+                    "block": "seagrass"
+                }
+            ]
         }
-    ],
-    "derivative": "DESERT_LAKES"
+    ]
 }

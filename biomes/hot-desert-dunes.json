@@ -1,7 +1,13 @@
 {
+    "name": "Hot Desert Dunes",
     "derivative": "DESERT",
-    "name": "Desert dunes",
     "vanillaDerivative": "DESERT",
+    "jigsawStructures": [
+        {
+            "rarity": 1500,
+            "structure": "desert-pyramid"
+        }
+    ],
     "generators": [
         {
             "generator": "smooth-dunes",
@@ -9,10 +15,34 @@
             "min": 10
         }
     ],
-    "jigsawStructures": [
+    "layers": [
         {
-            "rarity": 1500,
-            "structure": "desert-pyramid"
+            "minHeight": 5,
+            "maxHeight": 6,
+            "palette": [
+                {
+                    "weight": 1,
+                    "block": "sand"
+                }
+            ]
+        },
+        {
+            "minHeight": 3,
+            "maxHeight": 4,
+            "palette": [
+                {
+                    "block": "sandstone"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 5,
+            "palette": [
+                {
+                    "block": "terracotta"
+                }
+            ]
         }
     ],
     "objects": [
@@ -49,36 +79,6 @@
                 "y": -19,
                 "z": 0
             }
-        }
-    ],
-    "layers": [
-        {
-            "minHeight": 5,
-            "maxHeight": 6,
-            "palette": [
-                {
-                    "weight": 1,
-                    "block": "sand"
-                }
-            ]
-        },
-        {
-            "minHeight": 3,
-            "maxHeight": 4,
-            "palette": [
-                {
-                    "block": "sandstone"
-                }
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 5,
-            "palette": [
-                {
-                    "block": "terracotta"
-                }
-            ]
         }
     ],
     "decorators": [

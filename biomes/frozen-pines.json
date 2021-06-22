@@ -1,5 +1,60 @@
 {
+    "name": "Frozen Pines",
+    "derivative": "SNOWY_TAIGA_MOUNTAINS",
     "vanillaDerivative": "SNOWY_TAIGA",
+    "children": [
+        "frozen-vander"
+    ],
+    "layers": [
+        {
+            "minHeight": 2,
+            "maxHeight": 3,
+            "palette": [
+                {
+                    "block": "snow_block"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "palette": [
+                {
+                    "block": "packed_ice"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
+        }
+    ],
+    "generators": [
+        {
+            "min": 3,
+            "max": 16,
+            "generator": "plain"
+        },
+        {
+            "min": 13,
+            "max": 48,
+            "generator": "mountain"
+        }
+    ],
     "biomeSkyScatter": [
         "SNOWY_TAIGA",
         "SNOWY_MOUNTAINS"
@@ -118,7 +173,6 @@
         }
     ],
     "biomeZoom": 30,
-    "derivative": "SNOWY_TAIGA_MOUNTAINS",
     "biomeStyle": {
         "style": "IRIS"
     },
@@ -157,9 +211,6 @@
             ]
         }
     ],
-    "children": [
-        "frozen-vander"
-    ],
     "entityInitialSpawns": [
         {
             "entity": "sheep",
@@ -172,57 +223,6 @@
             "maxSpawns": 1,
             "minSpawns": 1,
             "rarity": 6
-        }
-    ],
-    "name": "Frozen Pines",
-    "layers": [
-        {
-            "minHeight": 2,
-            "maxHeight": 3,
-            "palette": [
-                {
-                    "block": "snow_block"
-                }
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 4,
-            "palette": [
-                {
-                    "block": "packed_ice"
-                }
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "stone"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "min": 3,
-            "max": 16,
-            "generator": "plain"
-        },
-        {
-            "min": 13,
-            "max": 48,
-            "generator": "mountain"
         }
     ],
     "childShrinkFactor": 20,
