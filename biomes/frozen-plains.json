@@ -2,6 +2,59 @@
     "name": "Frozen Plains",
     "derivative": "SNOWY_TAIGA",
     "vanillaDerivative": "SNOWY_TAIGA",
+    "children": [
+        "frozen-hills"
+    ],
+    "generators": [
+        {
+            "min": 4,
+            "max": 6,
+             "generator": "mountain"
+        },
+        {
+            "min": 3,
+            "max": 5,
+            "generator": "plain"
+        }
+    ],
+    "layers": [
+        {
+            "minHeight": 3,
+            "maxHeight": 5,
+            "palette": [
+                {
+                    "block": "snow_block"
+                }
+            ]
+        },
+        {
+            "minHeight": 3,
+            "maxHeight": 5,
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
+        }
+    ],
     "decorators": [
         {
             "chance": 1,
@@ -36,9 +89,6 @@
                 }
             ]
         }
-    ],
-    "children": [
-        "frozen-hills"
     ],
     "objects": [
 
@@ -261,56 +311,6 @@
                 "y": 0,
                 "z": 0
             }
-        }
-    ],
-    "layers": [
-        {
-            "minHeight": 3,
-            "maxHeight": 5,
-            "palette": [
-                {
-                    "block": "snow_block"
-                }
-            ]
-        },
-        {
-            "minHeight": 3,
-            "maxHeight": 5,
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "stone"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "min": 4,
-            "max": 6,
-             "generator": "mountain"
-        },
-        {
-            "min": 3,
-            "max": 5,
-            "generator": "plain"
         }
     ],
     "wall": {

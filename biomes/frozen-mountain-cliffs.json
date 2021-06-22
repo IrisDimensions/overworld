@@ -1,5 +1,60 @@
 {
+    "name": "Frozen Mountain Cliffs",
+    "derivative": "SNOWY_TAIGA_MOUNTAINS",
     "vanillaDerivative": "SNOWY_MOUNTAINS",
+    "children": [
+        "frozen-peak",
+        "frozen-mountains",
+        "frozen-vander"
+    ],
+    "layers": [
+        {
+            "minHeight": 2,
+            "maxHeight": 3,
+            "palette": [
+                {
+                    "block": "snow_block"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "palette": [
+                {
+                    "block": "packed_ice"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "andesite"
+                },
+                {
+                    "weight": 2,
+                    "block": "stone"
+                }
+            ]
+        }
+    ],
+    "generators": [
+        {
+            "min": 14,
+            "max": 65,
+            "generator": "plain-cliffs"
+        }
+    ],
+    "biomeScatter": [
+        "ICE_SPIKES",
+        "FROZEN_OCEAN",
+        "FROZEN_RIVER"
+    ],
     "biomeSkyScatter": [
         "SNOWY_TAIGA",
         "SNOWY_MOUNTAINS"
@@ -138,7 +193,6 @@
         }
     ],
     "biomeZoom": 30,
-    "derivative": "SNOWY_TAIGA_MOUNTAINS",
     "biomeStyle": {
         "style": "IRIS"
     },
@@ -191,55 +245,6 @@
             "rarity": 6
         }
     ],
-    "children": [
-        "frozen-peak",
-        "frozen-mountains",
-        "frozen-vander"
-    ],
-    "name": "Frozen Mountains",
-    "layers": [
-        {
-            "minHeight": 2,
-            "maxHeight": 3,
-            "palette": [
-                {
-                    "block": "snow_block"
-                }
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 4,
-            "palette": [
-                {
-                    "block": "packed_ice"
-                }
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "andesite"
-                },
-                {
-                    "weight": 2,
-                    "block": "stone"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "min": 14,
-            "max": 65,
-            "generator": "plain-cliffs"
-        }
-    ],
     "childShrinkFactor": 20,
     "wall": {
         "style": {
@@ -250,11 +255,5 @@
                 "block": "packed_ice"
             }
         ]
-    },
-    "biomeScatter": [
-        "SNOWY_TAIGA_MOUNTAINS",
-        "TAIGA_HILLS",
-        "MOUNTAINS",
-        "ICE_SPIKES"
-    ]
+    }
 }

@@ -1,39 +1,20 @@
 {
-    "blockDrops": [
-        {
-            "drops": [
-                {
-                    "minAmount": 1,
-                    "type": "acacia_planks",
-                    "maxAmount": 3
-                },
-                {
-                    "type": "stripped_acacia_log",
-                    "rarity": 12
-                },
-                {
-                    "minAmount": 3,
-                    "type": "stick",
-                    "maxAmount": 5,
-                    "rarity": 7
-                }
-            ],
-            "blocks": [
-                {
-                    "block": "acacia_wood"
-                },
-                {
-                    "block": "acacia_log"
-                },
-                {
-                    "block": "stripped_acacia_wood"
-                },
-                {
-                    "block": "stripped_acacia_log"
-                }
-            ],
-            "replaceVanillaDrops": true
-        }
+    "name": "Hot",
+    "landBiomes": [
+        "hot-desert-red",
+        "hot-desert-dunes-red",
+        "hot-desert-dunes",
+        "hot-desert"
+    ],
+    "shoreBiomes": [
+		"hot-beach-grass",
+        "hot-beach"
+    ],
+    "seaBiomes": [
+        "hot-ocean"
+    ],
+    "caveBiomes": [
+        "hot-sandy-cave"
     ],
     "riverStyle": {
         "style": "VASCULAR",
@@ -54,16 +35,7 @@
             "structure": "village-hot"
         }
     ],
-    "landBiomes": [
-        "hot-desert-red",
-        "hot-desert-dunes-red",
-        "hot-desert-dunes",
-        "hot-desert"
-    ],
     "biomeImplosionRatio": 0.25,
-    "seaBiomes": [
-        "hot-ocean"
-    ],
     "deposits": [
         {
             "minHeight": 25,
@@ -123,9 +95,6 @@
             "varience": 4
         }
     ],
-    "caveBiomes": [
-        "hot-sandy-cave"
-    ],
     "landBiomeZoom": 1.25,
     "effects": [
         {
@@ -147,7 +116,43 @@
             "particleCount": 0
         }
     ],
-        "objects": [
+    "blockDrops": [
+        {
+            "drops": [
+                {
+                    "minAmount": 1,
+                    "type": "acacia_planks",
+                    "maxAmount": 3
+                },
+                {
+                    "type": "stripped_acacia_log",
+                    "rarity": 12
+                },
+                {
+                    "minAmount": 3,
+                    "type": "stick",
+                    "maxAmount": 5,
+                    "rarity": 7
+                }
+            ],
+            "blocks": [
+                {
+                    "block": "acacia_wood"
+                },
+                {
+                    "block": "acacia_log"
+                },
+                {
+                    "block": "stripped_acacia_wood"
+                },
+                {
+                    "block": "stripped_acacia_log"
+                }
+            ],
+            "replaceVanillaDrops": true
+        }
+    ],
+    "objects": [
         {
             "name": "standard-surface-portals",
             "chance": 0.001,
@@ -232,18 +237,12 @@
             "carvingSupport": "SURFACE_ONLY"
         }
     ],
-
     "shoreHeightMin": 3.2,
-    "shoreBiomes": [
-		"hot-beach-grass",
-        "hot-beach"
-    ],
-    "name": "Hot",
     "shoreHeightMax": 6.2,
     "loot": {
         "tables": [
             "hot-food",
-            "hot-treasure", 
+            "hot-treasure",
             "global-tools"
         ]
     },
