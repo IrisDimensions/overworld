@@ -1,45 +1,7 @@
 {
-    "entitySpawnOverrides": [
-        {
-            "trigger": "SKELETON",
-            "entity": "shroud",
-            "cancelSourceSpawn": true,
-            "rarity": 12
-        }
-    ],
-    "decorators": [
-        {
-            "chance": 0.01,
-            "variance": {
-                "style": "STATIC"
-            },
-            "zoom": 0.3,
-            "palette": [
-                {
-                    "block": "cornflower"
-                }
-            ],
-            "style": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "chance": 0.001,
-            "variance": {
-                "style": "STATIC"
-            },
-            "zoom": 0.3,
-            "palette": [
-                {
-                    "block": "blackstone_wall"
-                }
-            ],
-            "style": {
-                "style": "STATIC"
-            }
-        }
-    ],
-    "name": "Frozen Cavern",
+    "name": "Frozen Ice Cavern",
+    "derivative": "FROZEN_OCEAN",
+    "vanillaDerivative": "FROZEN_OCEAN",
     "layers": [
         {
             "minHeight": 1,
@@ -92,12 +54,51 @@
             "generator": "plain"
         }
     ],
+    "entitySpawnOverrides": [
+        {
+            "trigger": "SKELETON",
+            "entity": "shroud",
+            "cancelSourceSpawn": true,
+            "rarity": 12
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.01,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "block": "cornflower"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "chance": 0.001,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "block": "blackstone_wall"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        }
+    ],
     "loot": {
         "tables": [
             "cave-clutter"
         ]
     },
-    "derivative": "FROZEN_OCEAN",
     "slab": {
         "style": {
             "style": "IRIS"
