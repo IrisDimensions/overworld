@@ -1,0 +1,167 @@
+{
+    "name": "Temperate Beach",
+    "derivative": "BEACH",
+    "vanillaDerivative": "BEACH",
+    "generators": [
+        {
+            "min": -5,
+            "max": 1,
+            "generator": "plain"
+        }
+    ],
+    "layers": [
+        {
+            "minHeight": 3,
+            "maxHeight": 6,
+            "palette": [
+                {
+                    "block": "sand"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.003,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "east"
+                    },
+                    "block": "stone_button"
+                },
+                {
+                    "block": "air"
+                },
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "south"
+                    },
+                    "block": "stone_button"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "partOf": "SHORE_LINE",
+            "chance": 0.09,
+            "verticalZoom": 0.2,
+            "variance": {
+                "style": "SIMPLEX"
+            },
+            "stackMax": 2,
+            "stackMin": 1,
+            "zoom": 5,
+            "palette": [
+                {
+                    "block": "sugar_cane"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            },
+            "heightVariance": {
+                "style": "STATIC"
+            }
+        }
+    ],
+    "entityInitialSpawns": [
+        {
+            "entity": "cow",
+            "maxSpawns": 1,
+            "minSpawns": 1,
+            "rarity": 7
+        },
+        {
+            "entity": "pig",
+            "maxSpawns": 1,
+            "minSpawns": 1,
+            "rarity": 7
+        },
+        {
+            "entity": "chicken",
+            "maxSpawns": 1,
+            "minSpawns": 1,
+            "rarity": 7
+        },
+        {
+            "entity": "sheep",
+            "maxSpawns": 1,
+            "minSpawns": 1,
+            "rarity": 7
+        }
+    ],
+    "objects": [
+
+        {
+            "mode": "PAINT",
+            "chance": 0.0025,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "camp/barrel-bin"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        }
+    ],
+    "loot": {
+        "tables": [
+            "beach-clutter"
+        ]
+    },
+    "slab": {
+        "style": {
+            "style": "STATIC"
+        },
+        "palette": [
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "sandstone_slab"
+            },
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "smooth_sandstone_slab"
+            },
+            {
+                "weight": 2,
+                "block": "air"
+            }
+        ]
+    }
+}

@@ -1,0 +1,121 @@
+{
+    "name": "Mountain River Soft",
+    "derivative": "RIVER",
+    "vanillaDerivative": "RIVER",
+    "generators": [
+        {
+            "generator": "river",
+            "max": -32,
+            "min": -40
+        }
+    ],
+    "layers": [
+        {
+            "minHeight": 2,
+            "maxHeight": 3,
+            "style": {
+                "style": "IRIS_DOUBLE",
+                "fracture": {
+                    "style": "STATIC",
+                    "multiplier": 30
+                }
+            },
+            "zoom": 0.7,
+            "palette": [
+                {
+                    "block": "cobblestone",
+                    "weight": 3
+                },
+                {
+                    "block": "clay",
+                    "weight": 1
+                },
+                {
+                    "block": "gravel",
+                    "weight": 8
+                }
+            ]
+        },
+        {
+            "palette": [
+                {
+                    "block": "cobblestone"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.07,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 5,
+            "palette": [
+                {
+                    "block": "seagrass"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "chance": 0.013,
+            "verticalZoom": 88,
+            "variance": {
+                "style": "STATIC"
+            },
+            "stackMax": 6,
+            "zoom": 1,
+            "palette": [
+                {
+                    "block": "kelp_plant"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            },
+            "heightVariance": {
+                "style": "IRIS"
+            },
+            "stackMin": 2
+        }
+    ],
+    "objects": [
+        {
+            "chance": 0.001,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "stone-clutt/obelisk-1",
+                "stone-clutt/obelisk-2",
+                "stone-clutt/obelisk-3",
+                "stone-clutt/obelisk-4",
+                "stone-clutt/obelisk-5",
+                "stone-clutt/obelisk-6",
+                "stone-clutt/obelisk-7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        }
+    ],
+    "loot": {
+        "tables": [
+            "ocean-clutter"
+        ]
+    }
+}

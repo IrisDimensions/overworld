@@ -1,0 +1,101 @@
+{
+    "name": "Frozen Mountains",
+    "derivative": "SNOWY_TAIGA",
+    "vanillaDerivative": "SNOWY_TAIGA",
+    "children": [
+        "frozen/frozen-mountain-middle",
+        "frozen/frozen-peak",
+        "frozen/frozen-mountain-cliffs"
+    ],
+    "layers": [
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "slopeCondition": {
+                "minimumSlope": 0,
+                "maximumSlope": 3.295
+            },
+            "palette": [
+                {
+                    "block": "snow_block"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "slopeCondition": {
+                "minimumSlope": 3.95
+            },
+            "palette": [
+                {
+                    "block": "gravel"
+                },
+                {
+                    "block": "cyan_terracotta"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 3,
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "gravel"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
+        }
+    ],
+    "generators": [
+        {
+            "min": 70,
+            "max": 140,
+            "generator": "plain"
+        }
+    ],
+    "biomeZoom": 30,
+    "biomeStyle": {
+        "style": "IRIS",
+        "zoom": 0.7,
+        "exponent": 4
+    },
+    "biomeScatter": [
+        "PLAINS",
+        "TAIGA_HILLS",
+        "MOUNTAINS"
+    ],
+    "wall": {
+        "palette": [
+            {
+                "block": "stone"
+            },
+            {
+                "block": "andesite"
+            }
+        ]
+    }
+}
