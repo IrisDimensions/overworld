@@ -1,4 +1,6 @@
 {
+    "name": "Swampy Marsh",
+    "derivative": "SWAMP",
     "vanillaDerivative": "SWAMP",
     "children": [
         "swamp-marsh"
@@ -11,6 +13,71 @@
         {
             "rarity": 350,
             "structure": "village-tundra"
+        }
+    ],
+    "generators": [
+        {
+            "min": -8,
+            "max": -5,
+            "generator": "river"
+        }
+    ],
+    "layers": [
+        {
+            "style": {
+                "style": "IRIS"
+            },
+            "zoom": 0.5,
+            "palette": [
+                {
+                    "weight": 3,
+                    "block": "grass_block"
+                },
+                {
+                    "block": "podzol"
+                },
+                {
+                    "weight": 4,
+                    "block": "grass_block"
+                }
+            ]
+        },
+        {
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {
+                    "block": "dirt"
+                },
+                {
+                    "block": "coarse_dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
         }
     ],
     "decorators": [
@@ -109,74 +176,7 @@
             }
         }
     ],
-    "name": "Swampy Marsh",
-    "layers": [
-        {
-            "style": {
-                "style": "IRIS"
-            },
-            "zoom": 0.5,
-            "palette": [
-                {
-                    "weight": 3,
-                    "block": "grass_block"
-                },
-                {
-                    "block": "podzol"
-                },
-                {
-                    "weight": 4,
-                    "block": "grass_block"
-                }
-            ]
-        },
-        {
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                {
-                    "block": "dirt"
-                },
-                {
-                    "block": "coarse_dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "stone"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "min": -8,
-            "max": -5,
-            "generator": "river"
-        }
-    ],
     "biomeZoom": 9,
-    "derivative": "SWAMP",
     "biomeStyle": {
         "style": "IRIS"
     },
@@ -195,6 +195,5 @@
                 "block": "stone"
             }
         ]
-    },
-    "rarity": 2
+    }
 }

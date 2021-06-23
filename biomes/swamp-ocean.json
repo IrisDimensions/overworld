@@ -1,5 +1,63 @@
 {
+    "name": "Swamp Ocean",
+    "derivative": "SWAMP",
     "vanillaDerivative": "OCEAN",
+    "generators": [
+        {
+            "min": -2,
+            "max": 0,
+            "generator": "river"
+        }
+    ],
+    "layers": [
+        {
+            "minHeight": 2,
+            "maxHeight": 3,
+            "style": {
+                "style": "VASCULAR",
+                "zoom": 0.8,
+                "fracture": {
+                    "multiplier": 2,
+                    "style": "STATIC"
+                }
+            },
+            "zoom": 0.825,
+            "palette": [
+                {
+                    "block": "sand"
+                },
+                {
+                    "block": "dirt"
+                },
+                {
+                    "block": "gravel"
+                },
+                {
+                    "block": "clay"
+                }
+            ]
+        },
+        {
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {
+                    "weight": 2,
+                    "block": "dirt"
+                },
+                {
+                    "block": "coarse_dirt"
+                }
+            ]
+        }
+    ],
     "decorators": [
         {
             "partOf": "SEA_SURFACE",
@@ -161,69 +219,11 @@
             }
         }
     ],
-    "name": "Swamp Ocean",
-    "layers": [
-        {
-            "minHeight": 2,
-            "maxHeight": 3,
-            "style": {
-                "style": "VASCULAR",
-                "zoom": 0.8,
-                "fracture": {
-                    "multiplier": 2,
-                    "style": "STATIC"
-                }
-            },
-            "zoom": 0.825,
-            "palette": [
-                {
-                    "block": "sand"
-                },
-                {
-                    "block": "dirt"
-                },
-                {
-                    "block": "gravel"
-                },
-                {
-                    "block": "clay"
-                }
-            ]
-        },
-        {
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                {
-                    "weight": 2,
-                    "block": "dirt"
-                },
-                {
-                    "block": "coarse_dirt"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "min": -2,
-            "max": 0,
-            "generator": "river"
-        }
-    ],
     "loot": {
         "tables": [
             "ocean-clutter"
         ]
     },
-    "derivative": "SWAMP",
     "wall": {
         "style": {
             "style": "IRIS"

@@ -1,4 +1,6 @@
 {
+    "name": "Swamp Roofed Wayward",
+    "derivative": "SWAMP",
     "vanillaDerivative": "DARK_FOREST",
     "children": [
         "swamp-lake"
@@ -11,6 +13,61 @@
         {
             "rarity": 350,
             "structure": "village-tundra"
+        }
+    ],
+    "generators": [
+        {
+            "min": -7,
+            "max": -3,
+            "generator": "plain"
+        }
+    ],
+    "layers": [
+        {
+            "zoom": 0.5,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "weight": 5,
+                    "block": "grass_block"
+                },
+                {
+                    "weight": 2,
+                    "block": "coarse_dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "palette": [
+                {
+                    "block": "dirt"
+                },
+                {
+                    "block": "coarse_dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
         }
     ],
     "decorators": [
@@ -491,62 +548,6 @@
             }
         }
     ],
-    "name": "Roofed Marsh",
-    "layers": [
-        {
-            "zoom": 0.5,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "weight": 5,
-                    "block": "grass_block"
-                },
-                {
-                    "weight": 2,
-                    "block": "coarse_dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 4,
-            "palette": [
-                {
-                    "block": "dirt"
-                },
-                {
-                    "block": "coarse_dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "stone"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "min": -7,
-            "max": -3,
-            "generator": "plain"
-        }
-    ],
     "entityInitialSpawns": [
         {
             "entity": "cow",
@@ -561,7 +562,6 @@
             "rarity": 6
         }
     ],
-    "derivative": "SWAMP",
     "wall": {
         "style": {
             "style": "STATIC"

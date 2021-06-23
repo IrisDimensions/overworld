@@ -1,4 +1,43 @@
 {
+    "name": "Swamp Murky Cavern",
+    "derivative": "SWAMP",
+    "vanillaDerivative": "SWAMP",
+    "children": [
+        "swamp-murky-cavern-gleaming"
+    ],
+    "layers": [
+        {
+            "minHeight": 1,
+            "maxHeight": 2,
+            "style": {
+                "style": "STATIC"
+            },
+            "zoom": 0.1,
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "weight": 2,
+                    "block": "cobblestone"
+                },
+                {
+                    "weight": 2,
+                    "block": "mossy_cobblestone"
+                },
+                {
+                    "block": "mossy_stone_bricks"
+                }
+            ]
+        }
+    ],
+    "generators": [
+        {
+            "min": 4,
+            "max": 6,
+            "generator": "plain"
+        }
+    ],
     "entitySpawnOverrides": [
         {
             "trigger": "SKELETON",
@@ -6,9 +45,6 @@
             "cancelSourceSpawn": true,
             "rarity": 5
         }
-    ],
-    "children": [
-        "swamp-murky-cavern-gleaming"
     ],
     "decorators": [
         {
@@ -130,46 +166,11 @@
             }
         }
     ],
-    "name": "Murky Cavern",
-    "layers": [
-        {
-            "minHeight": 1,
-            "maxHeight": 2,
-            "style": {
-                "style": "STATIC"
-            },
-            "zoom": 0.1,
-            "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "weight": 2,
-                    "block": "cobblestone"
-                },
-                {
-                    "weight": 2,
-                    "block": "mossy_cobblestone"
-                },
-                {
-                    "block": "mossy_stone_bricks"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "min": 4,
-            "max": 6,
-            "generator": "plain"
-        }
-    ],
     "loot": {
         "tables": [
             "cave-clutter"
         ]
     },
-    "derivative": "SWAMP",
     "slab": {
         "style": {
             "style": "STATIC"

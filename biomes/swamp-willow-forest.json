@@ -1,5 +1,66 @@
 {
+    "name": "Swamp Willow Forest",
+    "derivative": "SWAMP",
     "vanillaDerivative": "DARK_FOREST",
+    "children": [
+        "swamp-denmyre",
+        "swamp-marsh"
+    ],
+    "generators": [
+        {
+            "min": 4,
+            "max": 11,
+            "generator": "plain"
+        }
+    ],
+    "layers": [
+        {
+            "zoom": 0.5,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "weight": 5,
+                    "block": "grass_block"
+                },
+                {
+                    "weight": 2,
+                    "block": "podzol"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "palette": [
+                {
+                    "block": "dirt"
+                },
+                {
+                    "block": "coarse_dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
+        }
+    ],
     "effects": [
         {
             "interval": 65656,
@@ -29,10 +90,6 @@
             "interval": 640,
             "particleCount": 0
         }
-    ],
-    "children": [
-        "swamp-denmyre",
-        "swamp-marsh"
     ],
     "decorators": [
         {
@@ -469,63 +526,6 @@
             }
         }
     ],
-    "name": "Roofed Willow",
-    "layers": [
-        {
-            "zoom": 0.5,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "weight": 5,
-                    "block": "grass_block"
-                },
-                {
-                    "weight": 2,
-                    "block": "podzol"
-                }
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 4,
-            "palette": [
-                {
-                    "block": "dirt"
-                },
-                {
-                    "block": "coarse_dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "stone"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "min": 4,
-            "max": 11,
-            "generator": "plain"
-        }
-    ],
-    "derivative": "SWAMP",
     "wall": {
         "style": {
             "style": "STATIC"
