@@ -2,21 +2,6 @@
     "name": "Ocean",
     "derivative": "OCEAN",
     "vanillaDerivative": "OCEAN",
-    "childStyle": {
-        "style": "SIMPLEX",
-        "zoom": 2,
-        "fracture": {
-            "style": "SIMPLEX",
-            "zoom": 0.8,
-            "multiplier": 50,
-            "fracture": {
-                "style": "CELLULAR",
-                "zoom": 0.3,
-                "multiplier": 25
-            }
-        }
-    },
-    "childShrinkFactor": 1.0,
     "generators": [
         {
             "generator": "mountain",
@@ -71,6 +56,21 @@
             ]
         }
     ],
+    "childStyle": {
+        "style": "SIMPLEX",
+        "zoom": 2,
+        "fracture": {
+            "style": "SIMPLEX",
+            "zoom": 0.8,
+            "multiplier": 50,
+            "fracture": {
+                "style": "CELLULAR",
+                "zoom": 0.3,
+                "multiplier": 25
+            }
+        }
+    },
+    "childShrinkFactor": 1.0,
     "decorators": [
         {
             "chance": 0.02,

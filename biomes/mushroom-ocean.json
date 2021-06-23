@@ -1,4 +1,61 @@
 {
+    "name": "Mushroom Ocean",
+    "derivative": "OCEAN",
+    "vanillaDerivative": "OCEAN",
+    "layers": [
+        {
+            "minHeight": 2,
+            "maxHeight": 3,
+            "style": {
+                "style": "STATIC"
+            },
+            "zoom": 0.825,
+            "palette": [
+                {
+                    "block": "clay"
+                },
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "cobblestone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "gravel"
+                }
+            ]
+        },
+        {
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {
+                    "weight": 2,
+                    "block": "dirt"
+                },
+                {
+                    "block": "coarse_dirt"
+                }
+            ]
+        }
+    ],
+    "generators": [
+        {
+            "min": -51,
+            "max": -39,
+            "generator": "ocean"
+        }
+    ],
     "decorators": [
         {
             "chance": 0.06,
@@ -212,68 +269,11 @@
             }
         }
     ],
-    "vanillaDerivative": "OCEAN",
-    "name": "Mushroom Ocean",
-    "layers": [
-        {
-            "minHeight": 2,
-            "maxHeight": 3,
-            "style": {
-                "style": "STATIC"
-            },
-            "zoom": 0.825,
-            "palette": [
-                {
-                    "block": "clay"
-                },
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "cobblestone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "gravel"
-                }
-            ]
-        },
-        {
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                {
-                    "weight": 2,
-                    "block": "dirt"
-                },
-                {
-                    "block": "coarse_dirt"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "min": -51,
-            "max": -39,
-            "generator": "ocean"
-        }
-    ],
     "loot": {
         "tables": [
             "ocean-clutter"
         ]
     },
-    "derivative": "OCEAN",
     "wall": {
         "style": {
             "style": "IRIS"

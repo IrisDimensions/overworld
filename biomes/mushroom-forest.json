@@ -1,15 +1,9 @@
 {
+    "name": "Mushroom Forest",
+    "derivative": "MUSHROOM_FIELDS",
     "vanillaDerivative": "MUSHROOM_FIELDS",
-    "effects": [
-        {
-            "volume": 6.2,
-            "minPitch": 0.2,
-            "chance": 8,
-            "maxPitch": 0.3,
-            "sound": "AMBIENT_WARPED_FOREST_ADDITIONS",
-            "interval": 6000,
-            "soundDistance": 3
-        }
+    "children": [
+        "mushroom-forest-hills"
     ],
     "jigsawStructures": [
         {
@@ -25,6 +19,121 @@
             "rarity": 1000
         }
     ],
+    "layers": [
+        {
+            "minHeight": 3,
+            "maxHeight": 5,
+            "slopeCondition": {
+                "minimumSlope": 6.9
+            },
+            "palette": [
+                {
+                    "block": "gravel"
+                },
+                {
+                    "block": "red_mushroom_block",
+                    "data": {
+                        "down": true,
+                        "up": true,
+                        "north": true,
+                        "south": true,
+                        "east": true,
+                        "west": true
+                    }
+                }
+            ]
+        },
+        {
+            "minHeight": 3,
+            "maxHeight": 5,
+            "slopeCondition": {
+                "minimumSlope": 4.6
+            },
+            "palette": [
+                {
+                    "block": "gravel"
+                },
+                {
+                    "block": "brown_mushroom_block",
+                    "data": {
+                        "down": true,
+                        "up": true,
+                        "north": true,
+                        "south": true,
+                        "east": true,
+                        "west": true
+                    }
+                }
+            ]
+        },
+        {
+            "zoom": 0.5,
+            "style": {
+                "style": "IRIS"
+            },
+            "palette": [
+                {
+                    "weight": 4,
+                    "block": "mycelium"
+                },
+                {
+                    "block": "gravel"
+                },
+                {
+                    "weight": 3,
+                    "block": "mycelium"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "palette": [
+                {
+                    "block": "dirt"
+                },
+                {
+                    "block": "coarse_dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
+        }
+    ],
+    "generators": [
+        {
+            "min": 6,
+            "max": 24,
+            "generator": "plain"
+        }
+    ],
+    "effects": [
+        {
+            "volume": 6.2,
+            "minPitch": 0.2,
+            "chance": 8,
+            "maxPitch": 0.3,
+            "sound": "AMBIENT_WARPED_FOREST_ADDITIONS",
+            "interval": 6000,
+            "soundDistance": 3
+        }
+    ],
     "entityInitialSpawns": [
         {
             "maxSpawns": 5,
@@ -32,9 +141,6 @@
             "entity": "mooshroom",
             "rarity": 5
         }
-    ],
-    "children": [
-        "mushroom-forest-hills"
     ],
     "decorators": [
         {
@@ -438,112 +544,6 @@
             }
         }
     ],
-    "name": "Mushroom Forest",
-    "layers": [
-        {
-            "minHeight": 3,
-            "maxHeight": 5,
-            "slopeCondition": {
-                "minimumSlope": 6.9
-            },
-            "palette": [
-                {
-                    "block": "gravel"
-                },
-                {
-                    "block": "red_mushroom_block",
-                    "data": {
-                        "down": true,
-                        "up": true,
-                        "north": true,
-                        "south": true,
-                        "east": true,
-                        "west": true
-                    }
-                }
-            ]
-        },
-        {
-            "minHeight": 3,
-            "maxHeight": 5,
-            "slopeCondition": {
-                "minimumSlope": 4.6
-            },
-            "palette": [
-                {
-                    "block": "gravel"
-                },
-                {
-                    "block": "brown_mushroom_block",
-                    "data": {
-                        "down": true,
-                        "up": true,
-                        "north": true,
-                        "south": true,
-                        "east": true,
-                        "west": true
-                    }
-                }
-            ]
-        },
-        {
-            "zoom": 0.5,
-            "style": {
-                "style": "IRIS"
-            },
-            "palette": [
-                {
-                    "weight": 4,
-                    "block": "mycelium"
-                },
-                {
-                    "block": "gravel"
-                },
-                {
-                    "weight": 3,
-                    "block": "mycelium"
-                }
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 4,
-            "palette": [
-                {
-                    "block": "dirt"
-                },
-                {
-                    "block": "coarse_dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "stone"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "min": 6,
-            "max": 24,
-            "generator": "plain"
-        }
-    ],
-    "derivative": "MUSHROOM_FIELDS",
     "wall": {
         "style": {
             "style": "STATIC"

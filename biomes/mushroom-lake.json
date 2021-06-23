@@ -1,4 +1,7 @@
 {
+    "name": "Mushroom Lake",
+    "derivative": "MUSHROOM_FIELDS",
+    "vanillaDerivative": "MUSHROOM_FIELDS",
     "effects": [
         {
             "volume": 6.2,
@@ -10,6 +13,64 @@
             "soundDistance": 3
         }
     ],
+    "layers": [
+        {
+            "zoom": 0.3,
+            "style": {
+                "style": "IRIS"
+            },
+            "palette": [
+                {
+                    "weight": 7,
+                    "block": "mycelium"
+                },
+                {
+                    "block": "gravel"
+                },
+                {
+                    "weight": 9,
+                    "block": "mycelium"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "palette": [
+                {
+                    "block": "dirt"
+                },
+                {
+                    "block": "coarse_dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
+        }
+    ],
+    "generators": [
+        {
+            "min": -30,
+            "max": -10,
+            "generator": "river"
+        }
+    ],
     "entityInitialSpawns": [
         {
             "maxSpawns": 5,
@@ -18,7 +79,6 @@
             "rarity": 5
         }
     ],
-    "vanillaDerivative": "MUSHROOM_FIELDS",
     "decorators": [
         {
             "chance": 0.005,
@@ -212,66 +272,6 @@
             }
         }
     ],
-    "name": "Mushroom Plains",
-    "layers": [
-        {
-            "zoom": 0.3,
-            "style": {
-                "style": "IRIS"
-            },
-            "palette": [
-                {
-                    "weight": 7,
-                    "block": "mycelium"
-                },
-                {
-                    "block": "gravel"
-                },
-                {
-                    "weight": 9,
-                    "block": "mycelium"
-                }
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 4,
-            "palette": [
-                {
-                    "block": "dirt"
-                },
-                {
-                    "block": "coarse_dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "stone"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "min": -30,
-            "max": -10,
-            "generator": "river"
-        }
-    ],
-    "derivative": "MUSHROOM_FIELDS",
     "wall": {
         "style": {
             "style": "STATIC"
