@@ -1,4 +1,6 @@
 {
+    "name": "Tundra Lake",
+    "derivative": "SNOWY_TUNDRA",
     "vanillaDerivative": "WOODED_HILLS",
     "jigsawStructures": [
         {
@@ -8,6 +10,13 @@
         {
             "rarity": 350,
             "structure": "village-temperate"
+        }
+    ],
+    "generators": [
+        {
+            "min": -30,
+            "max": -15,
+            "generator": "river"
         }
     ],
     "decorators": [
@@ -145,6 +154,52 @@
             "style": {
                 "style": "STATIC"
             }
+        }
+    ],
+    "layers": [
+        {
+            "style": {
+                "style": "FLAT"
+            },
+            "palette": [
+                {
+                    "block": "grass_block"
+                }
+            ]
+        },
+        {
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {
+                    "block": "coarse_dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
         }
     ],
     "entityInitialSpawns": [
@@ -368,61 +423,6 @@
             }
         }
     ],
-    "name": "tundra lake",
-    "layers": [
-        {
-            "style": {
-                "style": "FLAT"
-            },
-            "palette": [
-                {
-                    "block": "grass_block"
-                }
-            ]
-        },
-        {
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                {
-                    "block": "coarse_dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "stone"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "min": -30,
-            "max": -15,
-            "generator": "river"
-        }
-    ],
-    "derivative": "SNOWY_TUNDRA",
     "wall": {
         "style": {
             "style": "STATIC"
@@ -438,6 +438,5 @@
                 "block": "stone"
             }
         ]
-    },
-    "rarity": 2
+    }
 }

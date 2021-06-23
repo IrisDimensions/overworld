@@ -1,5 +1,80 @@
 {
+    "name": "Tundra Forest",
+    "derivative": "MOUNTAINS",
     "vanillaDerivative": "TAIGA_MOUNTAINS",
+    "children": [
+        "tundra-forest-cliffs"
+    ],
+    "generators": [
+        {
+            "generator": "smooth-dunes",
+            "max": 14,
+            "min": 8
+        }
+    ],
+    "layers": [
+        {
+            "minHeight": 3,
+            "maxHeight": 5,
+            "slopeCondition": {
+                "minimumSlope": 6.9
+            },
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "gravel"
+                }
+            ]
+        },
+        {
+            "minHeight": 3,
+            "maxHeight": 5,
+            "slopeCondition": {
+                "minimumSlope": 5.3
+            },
+            "palette": [
+                {
+                    "block": "dirt"
+                },
+                {
+                    "block": "coarse_dirt"
+                },
+                {
+                    "block": "gravel"
+                }
+            ]
+        },
+        {
+            "palette": [
+                {
+                    "block": "grass_block"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
+        }
+    ],
     "entityInitialSpawns": [
         {
             "entity": "chicken",
@@ -113,13 +188,9 @@
         }
     ],
     "biomeZoom": 30,
-    "derivative": "MOUNTAINS",
     "biomeStyle": {
         "style": "IRIS"
     },
-    "children": [
-        "tundra-forest-cliffs"
-    ],
     "decorators": [
         {
             "chance": 0.01,
@@ -194,77 +265,6 @@
             }
         }
     ],
-    "name": "Tundra Forest",
-    "layers": [
-        {
-            "minHeight": 3,
-            "maxHeight": 5,
-            "slopeCondition": {
-                "minimumSlope": 6.9
-            },
-            "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "gravel"
-                }
-            ]
-        },
-        {
-            "minHeight": 3,
-            "maxHeight": 5,
-            "slopeCondition": {
-                "minimumSlope": 5.3
-            },
-            "palette": [
-                {
-                    "block": "dirt"
-                },
-                {
-                    "block": "coarse_dirt"
-                },
-                {
-                    "block": "gravel"
-                }
-            ]
-        },
-        {
-            "palette": [
-                {
-                    "block": "grass_block"
-                }
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "stone"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "generator": "smooth-dunes",
-            "max": 14,
-            "min": 8
-        }
-    ],
     "childShrinkFactor": 8,
     "wall": {
         "style": {
@@ -285,6 +285,5 @@
     "biomeScatter": [
         "TAIGA_HILLS",
         "MOUNTAINS"
-    ],
-    "rarity": 2
+    ]
 }

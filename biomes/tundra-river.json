@@ -1,7 +1,70 @@
 {
+    "name": "Tundra River",
+    "derivative": "COLD_OCEAN",
     "vanillaDerivative": "RIVER",
     "children": [
         "tundra-river-rocky"
+    ],
+    "generators": [
+        {
+            "generator": "river",
+            "max": -10,
+            "min": -27
+        }
+    ],
+    "layers": [
+        {
+            "minHeight": 2,
+            "maxHeight": 3,
+            "zoom": 0.825,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "sand"
+                },
+                {
+                    "block": "clay"
+                },
+                {
+                    "block": "sand"
+                },
+                {
+                    "block": "gravel"
+                },
+                {
+                    "block": "sand"
+                },
+                {
+                    "block": "dirt"
+                },
+                {
+                    "weight": 2,
+                    "block": "sand"
+                }
+            ]
+        },
+        {
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {
+                    "weight": 2,
+                    "block": "dirt"
+                },
+                {
+                    "block": "coarse_dirt"
+                }
+            ]
+        }
     ],
     "decorators": [
         {
@@ -128,74 +191,11 @@
             }
         }
     ],
-    "name": "Cold River",
-    "layers": [
-        {
-            "minHeight": 2,
-            "maxHeight": 3,
-            "zoom": 0.825,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "sand"
-                },
-                {
-                    "block": "clay"
-                },
-                {
-                    "block": "sand"
-                },
-                {
-                    "block": "gravel"
-                },
-                {
-                    "block": "sand"
-                },
-                {
-                    "block": "dirt"
-                },
-                {
-                    "weight": 2,
-                    "block": "sand"
-                }
-            ]
-        },
-        {
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                {
-                    "weight": 2,
-                    "block": "dirt"
-                },
-                {
-                    "block": "coarse_dirt"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "generator": "river",
-            "max": -10,
-            "min": -27
-        }
-    ],
     "loot": {
         "tables": [
             "ocean-clutter"
         ]
     },
-    "derivative": "COLD_OCEAN",
     "wall": {
         "style": {
             "style": "STATIC"

@@ -1,4 +1,6 @@
 {
+    "name": "Tundra Sequoia Redwoods",
+    "derivative": "TAIGA",
     "vanillaDerivative": "WOODED_HILLS",
     "jigsawStructures": [
         {
@@ -8,6 +10,65 @@
         {
             "rarity": 650,
             "structure": "village-tundra"
+        }
+    ],
+    "generators": [
+        {
+            "min": 17,
+            "max": 19,
+            "generator": "plain"
+        }
+    ],
+    "layers": [
+        {
+            "style": {
+                "style": "IRIS_DOUBLE",
+                "fracture": {
+                    "style": "IRIS",
+                    "zoom": 0.2
+                }
+            },
+            "zoom": 0.2,
+            "palette": [
+                {
+                    "weight": 2,
+                    "block": "podzol"
+                },
+                {
+                    "weight": 2,
+                    "block": "coarse_dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "palette": [
+                {
+                    "block": "dirt"
+                },
+                {
+                    "block": "coarse_dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
         }
     ],
     "decorators": [
@@ -337,67 +398,6 @@
             }
         }
     ],
-    "name": "Sequoia Redwoods",
-    "layers": [
-        {
-            "style": {
-                "style": "IRIS_DOUBLE",
-                "fracture": {
-                    "style": "IRIS",
-                    "zoom": 0.2
-                }
-            },
-            "zoom": 0.2,
-            "palette": [
-                {
-                    "weight": 2,
-                    "block": "podzol"
-                },
-                {
-                    "weight": 2,
-                    "block": "coarse_dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 4,
-            "palette": [
-                {
-                    "block": "dirt"
-                },
-                {
-                    "block": "coarse_dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "stone"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "min": 17,
-            "max": 19,
-            "generator": "plain"
-        }
-    ],
-    "derivative": "TAIGA",
     "wall": {
         "style": {
             "style": "STATIC"
@@ -407,6 +407,5 @@
                 "block": "coarse_dirt"
             }
         ]
-    },
-    "rarity": 7
+    }
 }

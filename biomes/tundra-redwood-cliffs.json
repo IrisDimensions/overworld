@@ -1,9 +1,7 @@
 {
+    "name": "Tundra Redwood Cliffs",
+    "derivative": "TAIGA",
     "vanillaDerivative": "DARK_FOREST",
-    "entityInitialSpawns": [
-    {"entity": "chicken", "maxSpawns": 1, "minSpawns": 1, "rarity": 7},
-    {"entity": "sheep", "maxSpawns": 1, "minSpawns": 1, "rarity": 7},
-    {"entity": "wolf", "maxSpawns": 1, "minSpawns": 1, "rarity": 7}],
     "generators": [
         {
             "min": 15,
@@ -16,7 +14,69 @@
             "generator": "plain-cliffs"
         }
     ],
-    "derivative": "TAIGA",
+    "layers": [
+        {
+            "style": {
+                "style": "SIMPLEX",
+                "fracture": {
+                    "style": "FRACTAL_WATER",
+                    "zoom": 0.35,
+                    "multiplier": 23
+                }
+            },
+            "zoom": 0.7,
+            "palette": [
+                {
+                    "block": "coarse_dirt"
+                },
+                {
+                    "block": "grass_block"
+                },
+                {
+                    "block": "podzol"
+                },
+                {
+                    "block": "podzol"
+                },
+                {
+                    "block": "grass_block"
+                },
+                {
+                    "block": "coarse_dirt"
+                }
+
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 2,
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        },
+        {
+            "style": {
+                "style": "STATIC"
+            },
+            "minHeight": 1,
+            "maxHeight": 1,
+            "palette": [
+                {
+                    "block": "dirt"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
+        }
+    ],
+    "entityInitialSpawns": [
+        {"entity": "chicken", "maxSpawns": 1, "minSpawns": 1, "rarity": 7},
+        {"entity": "sheep", "maxSpawns": 1, "minSpawns": 1, "rarity": 7},
+        {"entity": "wolf", "maxSpawns": 1, "minSpawns": 1, "rarity": 7}
+    ],
     "wall": {
         "style": {
             "style": "FRACTAL_WATER"
@@ -438,65 +498,6 @@
                 "y": 0,
                 "z": 0
             }
-        }
-    ],
-    "name": "Redwood Forest Hills",
-    "layers": [
-        {
-            "style": {
-                "style": "SIMPLEX",
-                "fracture": {
-                    "style": "FRACTAL_WATER",
-                    "zoom": 0.35,
-                    "multiplier": 23
-                }
-            },
-            "zoom": 0.7,
-            "palette": [
-                {
-                    "block": "coarse_dirt"
-                },
-                {
-                    "block": "grass_block"
-                },
-                {
-                    "block": "podzol"
-                },
-                {
-                    "block": "podzol"
-                },
-                {
-                    "block": "grass_block"
-                },
-                {
-                    "block": "coarse_dirt"
-                }
-
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 2,
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
-        },
-        {
-            "style": {
-                "style": "STATIC"
-            },
-            "minHeight": 1,
-            "maxHeight": 1,
-            "palette": [
-                {
-                    "block": "dirt"
-                },
-                {
-                    "block": "stone"
-                }
-            ]
         }
     ]
 }

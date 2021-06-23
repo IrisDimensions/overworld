@@ -1,5 +1,82 @@
 {
+    "name": "Tundra Mountains Cliffs",
+    "derivative": "MOUNTAINS",
     "vanillaDerivative": "TAIGA_MOUNTAINS",
+    "generators": [
+        {
+            "min": 11,
+            "max": 32,
+            "generator": "mountain"
+        },
+        {
+            "min": 12,
+            "max": 62,
+            "generator": "plain-cliffs"
+        }
+    ],
+    "layers": [
+        {
+            "minHeight": 3,
+            "maxHeight": 5,
+            "slopeCondition": {
+                "minimumSlope": 6.9
+            },
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "gravel"
+                }
+            ]
+        },
+        {
+            "minHeight": 3,
+            "maxHeight": 5,
+            "slopeCondition": {
+                "minimumSlope": 5.2
+            },
+            "palette": [
+                {
+                    "block": "dirt"
+                },
+                {
+                    "block": "coarse_dirt"
+                },
+                {
+                    "block": "gravel"
+                }
+            ]
+        },
+        {
+            "palette": [
+                {
+                    "block": "grass_block"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "IRIS"
+            },
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
+        }
+    ],
     "biomeSkyScatter": [
         "SNOWY_TAIGA",
         "SNOWY_MOUNTAINS"
@@ -290,84 +367,7 @@
             }
         }
     ],
-    "name": "Shattered Mountains",
-    "layers": [
-        {
-            "minHeight": 3,
-            "maxHeight": 5,
-            "slopeCondition": {
-                "minimumSlope": 6.9
-            },
-            "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "gravel"
-                }
-            ]
-        },
-        {
-            "minHeight": 3,
-            "maxHeight": 5,
-            "slopeCondition": {
-                "minimumSlope": 5.2
-            },
-            "palette": [
-                {
-                    "block": "dirt"
-                },
-                {
-                    "block": "coarse_dirt"
-                },
-                {
-                    "block": "gravel"
-                }
-            ]
-        },
-        {
-            "palette": [
-                {
-                    "block": "grass_block"
-                }
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "IRIS"
-            },
-            "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "stone"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "min": 11,
-            "max": 32,
-            "generator": "mountain"
-        },
-        {
-            "min": 12,
-            "max": 62,
-            "generator": "plain-cliffs"
-        }
-    ],
     "biomeZoom": 30,
-    "derivative": "MOUNTAINS",
     "biomeStyle": {
         "style": "IRIS"
     },
@@ -392,6 +392,5 @@
         "TAIGA_HILLS",
         "MOUNTAINS",
         "SWAMP"
-    ],
-    "rarity": 4
+    ]
 }

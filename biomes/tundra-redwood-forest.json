@@ -1,11 +1,79 @@
 {
+    "name": "Tundra Redwood Forest",
+    "derivative": "TAIGA",
     "vanillaDerivative": "DARK_FOREST",
-    "entityInitialSpawns": [
-    {"entity": "chicken", "maxSpawns": 1, "minSpawns": 1, "rarity": 7},
-    {"entity": "sheep", "maxSpawns": 1, "minSpawns": 1, "rarity": 7},
-    {"entity": "wolf", "maxSpawns": 1, "minSpawns": 1, "rarity": 7}],
     "children": [
         "tundra-redwood-cliffs"
+    ],
+    "generators": [
+        {
+            "min": 4,
+            "max": 10,
+            "generator": "smooth-dunes"
+        }
+    ],
+    "layers": [
+        {
+            "style": {
+                "style": "SIMPLEX",
+                "fracture": {
+                    "style": "FRACTAL_WATER",
+                    "zoom": 0.39,
+                    "multiplier": 23
+                }
+            },
+            "zoom": 0.7,
+            "palette": [
+                {
+                    "block": "coarse_dirt"
+                },
+                {
+                    "block": "grass_block"
+                },
+                {
+                    "block": "podzol"
+                },
+                {
+                    "block": "podzol"
+                },
+                {
+                    "block": "grass_block"
+                },
+                {
+                    "block": "coarse_dirt"
+                }
+
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 2,
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        },
+        {
+            "style": {
+                "style": "STATIC"
+            },
+            "minHeight": 1,
+            "maxHeight": 1,
+            "palette": [
+                {
+                    "block": "dirt"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
+        }
+    ],
+    "entityInitialSpawns": [
+        {"entity": "chicken", "maxSpawns": 1, "minSpawns": 1, "rarity": 7},
+        {"entity": "sheep", "maxSpawns": 1, "minSpawns": 1, "rarity": 7},
+        {"entity": "wolf", "maxSpawns": 1, "minSpawns": 1, "rarity": 7}
     ],
     "jigsawStructures": [
         {
@@ -17,14 +85,6 @@
             "structure": "village-tundra"
         }
     ],
-    "generators": [
-        {
-            "min": 4,
-            "max": 10,
-            "generator": "smooth-dunes"
-        }
-    ],
-    "derivative": "TAIGA",
     "wall": {
         "style": {
             "style": "FRACTAL_WATER"
@@ -447,65 +507,6 @@
                 "y": 0,
                 "z": 0
             }
-        }
-    ],
-    "name": "Redwood Forest",
-    "layers": [
-        {
-            "style": {
-                "style": "SIMPLEX",
-                "fracture": {
-                    "style": "FRACTAL_WATER",
-                    "zoom": 0.39,
-                    "multiplier": 23
-                }
-            },
-            "zoom": 0.7,
-            "palette": [
-                {
-                    "block": "coarse_dirt"
-                },
-                {
-                    "block": "grass_block"
-                },
-                {
-                    "block": "podzol"
-                },
-                {
-                    "block": "podzol"
-                },
-                {
-                    "block": "grass_block"
-                },
-                {
-                    "block": "coarse_dirt"
-                }
-
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 2,
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
-        },
-        {
-            "style": {
-                "style": "STATIC"
-            },
-            "minHeight": 1,
-            "maxHeight": 1,
-            "palette": [
-                {
-                    "block": "dirt"
-                },
-                {
-                    "block": "stone"
-                }
-            ]
         }
     ]
 }
