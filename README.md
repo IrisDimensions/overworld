@@ -1,4 +1,4 @@
-# Overworld (version 2)
+# Overworld V2  (1.14-1.16 ONLY)
 The standard overworld for Iris. New and Improved!
 
 
