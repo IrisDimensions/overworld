@@ -1,5 +1,89 @@
 {
+    "name": "Savanna",
+    "derivative": "SAVANNA",
     "vanillaDerivative": "SAVANNA",
+    "children": [
+        "savanna-cliff"
+    ],
+    "generators": [
+        {
+            "min": 7,
+            "max": 15,
+             "generator": "mountain"
+        },
+        {
+            "min": 3,
+            "max": 5,
+            "generator": "plain"
+        }
+    ],
+    "layers": [
+        {
+            "minHeight": 3,
+            "maxHeight": 5,
+            "slopeCondition": {
+                "minimumSlope": 6.9
+            },
+            "palette": [
+                {
+                    "block": "granite"
+                }
+            ]
+        },
+        {
+            "minHeight": 3,
+            "maxHeight": 5,
+            "slopeCondition": {
+                "minimumSlope": 4.6
+            },
+            "palette": [
+                {
+                    "block": "coarse_dirt"
+                },
+                {
+                    "block": "gravel"
+                }
+            ]
+        },
+        {
+            "style": {
+                "style": "STATIC"
+            },
+            "zoom": 0.75,
+            "palette": [
+                {
+                    "block": "grass_block"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
+        }
+    ],
     "biomeSkyScatter": [
         "DESERT",
         "SAVANNA"
@@ -80,9 +164,6 @@
                 "style": "STATIC"
             }
         }
-    ],
-    "children": [
-        "savanna-cliff"
     ],
     "objects": [
         {
@@ -239,88 +320,7 @@
             }
         }
     ],
-    "name": "Savanna",
-    "layers": [
-        {
-            "minHeight": 3,
-            "maxHeight": 5,
-            "slopeCondition": {
-                "minimumSlope": 6.9
-            },
-            "palette": [
-                {
-                    "block": "granite"
-                }
-            ]
-        },
-        {
-            "minHeight": 3,
-            "maxHeight": 5,
-            "slopeCondition": {
-                "minimumSlope": 4.6
-            },
-            "palette": [
-                {
-                    "block": "coarse_dirt"
-                },
-                {
-                    "block": "gravel"
-                }
-            ]
-        },
-        {
-            "style": {
-                "style": "STATIC"
-            },
-            "zoom": 0.75,
-            "palette": [
-                {
-                    "block": "grass_block"
-                }
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 4,
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "stone"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "min": 7,
-            "max": 15,
-             "generator": "mountain"
-        },
-        {
-            "min": 3,
-            "max": 5,
-            "generator": "plain"
-        }
-    ],
     "biomeZoom": 20,
-    "derivative": "SAVANNA",
     "biomeStyle": {
         "style": "IRIS"
     },
