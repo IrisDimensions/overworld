@@ -1,4 +1,6 @@
 {
+    "name": "Temperate Oak Denmyre",
+    "derivative": "FOREST",
     "vanillaDerivative": "FOREST",
     "jigsawStructures": [
         {
@@ -8,6 +10,59 @@
         {
             "rarity": 350,
             "structure": "village-temperate"
+        }
+    ],
+    "generators": [
+        {
+            "min": 4,
+            "max": 7,
+            "generator": "plain"
+        }
+    ],
+    "layers": [
+        {
+            "style": {
+                "style": "FLAT"
+            },
+            "palette": [
+                {
+                    "block": "grass_block"
+                }
+            ]
+        },
+        {
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {
+                    "block": "coarse_dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
         }
     ],
 	"decorators": [
@@ -123,7 +178,8 @@
                     "block": "cobblestone_slab"
             }
 		]
-	}],
+	}
+    ],
     "entityInitialSpawns": [
         {
             "entity": "cow",
@@ -345,66 +401,11 @@
             }
         }
     ],
-    "name": "Oak Denmyre",
-    "layers": [
-        {
-            "style": {
-                "style": "FLAT"
-            },
-            "palette": [
-                {
-                    "block": "grass_block"
-                }
-            ]
-        },
-        {
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                {
-                    "block": "coarse_dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "stone"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "min": 4,
-            "max": 7,
-            "generator": "plain"
-        }
-    ],
     "loot": {
         "tables": [
             "forest-food"
         ]
     },
-    "derivative": "FOREST",
     "wall": {
         "style": {
             "style": "STATIC"
@@ -420,6 +421,5 @@
                 "block": "stone"
             }
         ]
-    },
-    "rarity": 4
+    }
 }

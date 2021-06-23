@@ -1,5 +1,5 @@
 {
-    "name": "Plains",
+    "name": "Temperate Plains",
     "derivative": "PLAINS",
     "vanillaDerivative": "PLAINS",
     "children": [
@@ -16,11 +16,6 @@
             "structure": "village-temperate"
         }
     ],
-    "childStyle": {
-        "style": "IRIS",
-        "zoom": 0.5,
-        "exponent": 2.0
-    },
     "generators": [
         {
             "min": 4,
@@ -28,6 +23,56 @@
             "generator": "plain"
         }
     ],
+    "layers": [
+        {
+            "palette": [
+                {
+                    "block": "grass_block"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 2,
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {
+                    "block": "dirt"
+                },
+                {
+                    "block": "coarse_dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "dirt"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
+        }
+    ],
+    "childStyle": {
+        "style": "IRIS",
+        "zoom": 0.5,
+        "exponent": 2.0
+    },
     "decorators": [
         {
             "chance": 0.19,
@@ -468,51 +513,6 @@
             }
         }
     ],
-    "layers": [
-        {
-            "palette": [
-                {
-                    "block": "grass_block"
-                }
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 2,
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                {
-                    "block": "dirt"
-                },
-                {
-                    "block": "coarse_dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "dirt"
-                },
-                {
-                    "block": "stone"
-                }
-            ]
-        }
-    ],
     "entityInitialSpawns": [
         {
             "entity": "cow",
@@ -539,7 +539,6 @@
             "rarity": 7
         }
     ],
-    "biomeZoom": 60,
     "biomeStyle": {
         "style": "IRIS"
     },
@@ -552,5 +551,6 @@
                 "block": "andesite"
             }
         ]
-    }
+    },
+    "biomeZoom": 60
 }

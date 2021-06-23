@@ -1,9 +1,76 @@
 {
+    "name": "Temperate Highlands",
+    "derivative": "FOREST",
     "vanillaDerivative": "PLAINS",
     "jigsawStructures": [
         {
             "rarity": 1000,
             "structure": "pillager"
+        }
+    ],
+    "generators": [
+        {
+            "min": 12,
+            "max": 24,
+            "generator": "plain"
+        }
+    ],
+    "layers": [
+        {
+            "style": {
+                "style": "STATIC"
+            },
+            "zoom": 0.256,
+            "palette": [
+                {
+                    "weight": 3,
+                    "block": "grass_block"
+                },
+                {
+                    "block": "podzol"
+                },
+                {
+                    "weight": 4,
+                    "block": "grass_block"
+                }
+            ]
+        },
+        {
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {
+                    "block": "dirt"
+                },
+                {
+                    "block": "coarse_dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
         }
     ],
     "entityInitialSpawns": [
@@ -151,74 +218,7 @@
             }
         }
     ],
-    "name": "Highlands",
-    "layers": [
-        {
-            "style": {
-                "style": "STATIC"
-            },
-            "zoom": 0.256,
-            "palette": [
-                {
-                    "weight": 3,
-                    "block": "grass_block"
-                },
-                {
-                    "block": "podzol"
-                },
-                {
-                    "weight": 4,
-                    "block": "grass_block"
-                }
-            ]
-        },
-        {
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                {
-                    "block": "dirt"
-                },
-                {
-                    "block": "coarse_dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "stone"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "min": 12,
-            "max": 24,
-            "generator": "plain"
-        }
-    ],
     "biomeZoom": 9,
-    "derivative": "FOREST",
     "biomeStyle": {
         "style": "IRIS"
     },
@@ -237,6 +237,5 @@
                 "block": "stone"
             }
         ]
-    },
-    "rarity": 4
+    }
 }

@@ -1,15 +1,37 @@
 {
+    "name": "Temperate Cracked Cavern",
+    "derivative": "PLAINS",
     "vanillaDerivative": "THE_VOID",
-    "entitySpawnOverrides": [
-        {
-            "trigger": "SKELETON",
-            "entity": "shroud",
-            "cancelSourceSpawn": true,
-            "rarity": 7
-        }
-    ],
     "children": [
         "temperate-lit-cavern"
+    ],
+    "generators": [
+        {
+            "min": 4,
+            "max": 6,
+            "generator": "plain"
+        }
+    ],
+    "layers": [
+        {
+            "minHeight": 1,
+            "maxHeight": 2,
+            "style": {
+                "style": "STATIC"
+            },
+            "zoom": 0.1,
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "cobblestone"
+                }
+            ]
+        }
     ],
     "decorators": [
         {
@@ -106,33 +128,12 @@
             }
         }
     ],
-    "name": "Cracked Cavern",
-    "layers": [
+    "entitySpawnOverrides": [
         {
-            "minHeight": 1,
-            "maxHeight": 2,
-            "style": {
-                "style": "STATIC"
-            },
-            "zoom": 0.1,
-            "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "cobblestone"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "min": 4,
-            "max": 6,
-            "generator": "plain"
+            "trigger": "SKELETON",
+            "entity": "shroud",
+            "cancelSourceSpawn": true,
+            "rarity": 7
         }
     ],
     "loot": {
@@ -140,8 +141,6 @@
             "cave-clutter"
         ]
     },
-    "derivative": "PLAINS",
-    "rarity": 2,
     "slab": {
         "style": {
             "style": "STATIC"

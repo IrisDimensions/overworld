@@ -1,5 +1,75 @@
 {
+    "name": "Temperate River",
+    "derivative": "RIVER",
     "vanillaDerivative": "RIVER",
+    "generators": [
+        {
+            "generator": "river",
+            "max": -7,
+            "min": -12
+        }
+    ],
+    "layers": [
+        {
+            "minHeight": 2,
+            "maxHeight": 3,
+            "style": {
+                "style": "CELLULAR_IRIS_DOUBLE"
+            },
+            "zoom": 0.525,
+            "palette": [
+                {
+                    "block": "sand"
+                },
+                {
+                    "block": "clay"
+                },
+                {
+                    "block": "gravel"
+                },
+                {
+                    "block": "sand"
+                },
+                {
+                    "weight": 2,
+                    "block": "gravel"
+                },
+                {
+                    "block": "sand"
+                },
+                {
+                    "block": "dirt"
+                },
+                {
+                    "block": "dirt"
+                },
+                {
+                    "weight": 2,
+                    "block": "sand"
+                }
+            ]
+        },
+        {
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {
+                    "weight": 2,
+                    "block": "dirt"
+                },
+                {
+                    "block": "coarse_dirt"
+                }
+            ]
+        }
+    ],
     "decorators": [
         {
             "chance": 0.0006,
@@ -103,79 +173,9 @@
             }
         }
     ],
-    "name": "River",
-    "layers": [
-        {
-            "minHeight": 2,
-            "maxHeight": 3,
-            "style": {
-                "style": "CELLULAR_IRIS_DOUBLE"
-            },
-            "zoom": 0.525,
-            "palette": [
-                {
-                    "block": "sand"
-                },
-                {
-                    "block": "clay"
-                },
-                {
-                    "block": "gravel"
-                },
-                {
-                    "block": "sand"
-                },
-                {
-                    "weight": 2,
-                    "block": "gravel"
-                },
-                {
-                    "block": "sand"
-                },
-                {
-                    "block": "dirt"
-                },
-                {
-                    "block": "dirt"
-                },
-                {
-                    "weight": 2,
-                    "block": "sand"
-                }
-            ]
-        },
-        {
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                {
-                    "weight": 2,
-                    "block": "dirt"
-                },
-                {
-                    "block": "coarse_dirt"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "generator": "river",
-            "max": -7,
-            "min": -12
-        }
-    ],
     "loot": {
         "tables": [
             "ocean-clutter"
         ]
-    },
-    "derivative": "RIVER"
+    }
 }

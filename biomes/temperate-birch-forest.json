@@ -1,5 +1,10 @@
- {
+{
+    "name": "Temperate Birch Forest",
+    "derivative": "PLAINS",
     "vanillaDerivative": "BIRCH_FOREST",
+    "children": [
+        "temperate-birch-denmyre"
+    ],
     "jigsawStructures": [
         {
             "rarity": 1000,
@@ -8,6 +13,71 @@
         {
             "rarity": 350,
             "structure": "village-temperate"
+        }
+    ],
+    "generators": [
+        {
+            "min": 4,
+            "max": 7,
+            "generator": "smooth-dunes"
+        }
+    ],
+    "layers": [
+        {
+            "style": {
+                "style": "STATIC"
+            },
+            "zoom": 0.656,
+            "palette": [
+                {
+                    "weight": 19,
+                    "block": "grass_block"
+                },
+                {
+                    "block": "gravel"
+                },
+                {
+                    "weight": 19,
+                    "block": "grass_block"
+                }
+            ]
+        },
+        {
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {
+                    "block": "dirt"
+                },
+                {
+                    "block": "coarse_dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
         }
     ],
     "entityInitialSpawns": [
@@ -167,7 +237,6 @@
         }
     ],
     "biomeZoom": 60,
-    "derivative": "PLAINS",
     "biomeStyle": {
         "style": "IRIS"
     },
@@ -234,75 +303,6 @@
             "style": {
                 "style": "STATIC"
             }
-        }
-    ],
-    "children": [
-        "temperate-birch-denmyre"
-    ],
-    "name": "Birch Forest",
-    "layers": [
-        {
-            "style": {
-                "style": "STATIC"
-            },
-            "zoom": 0.656,
-            "palette": [
-                {
-                    "weight": 19,
-                    "block": "grass_block"
-                },
-                {
-                    "block": "gravel"
-                },
-                {
-                    "weight": 19,
-                    "block": "grass_block"
-                }
-            ]
-        },
-        {
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                {
-                    "block": "dirt"
-                },
-                {
-                    "block": "coarse_dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "stone"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "min": 4,
-            "max": 7,
-            "generator": "smooth-dunes"
         }
     ],
     "loot": {

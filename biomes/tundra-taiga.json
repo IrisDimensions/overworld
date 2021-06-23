@@ -1,4 +1,6 @@
 {
+    "name": "Tundra Taiga",
+    "derivative": "GIANT_TREE_TAIGA",
     "vanillaDerivative": "TAIGA",
     "jigsawStructures": [
         {
@@ -8,6 +10,56 @@
         {
             "rarity": 350,
             "structure": "village-tundra"
+        }
+    ],
+    "generators": [
+        {
+            "min": 5,
+            "max": 14,
+            "generator": "plain"
+        }
+    ],
+    "layers": [
+        {
+            "style": {
+                "style": "STATIC"
+            },
+            "zoom": 0.92,
+            "palette": [
+                {
+                    "block": "grass_block"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "palette": [
+                {
+                    "block": "dirt"
+                },
+                {
+                    "block": "coarse_dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
         }
     ],
     "decorators": [
@@ -323,57 +375,6 @@
             }
         }
     ],
-    "name": "Cold Tundra",
-    "layers": [
-        {
-            "style": {
-                "style": "STATIC"
-            },
-            "zoom": 0.92,
-            "palette": [
-                {
-                    "block": "grass_block"
-                }
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 4,
-            "palette": [
-                {
-                    "block": "dirt"
-                },
-                {
-                    "block": "coarse_dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "stone"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "min": 5,
-            "max": 14,
-            "generator": "plain"
-        }
-    ],
     "entityInitialSpawns": [
         {
             "entity": "chicken",
@@ -394,7 +395,6 @@
             "rarity": 7
         }
     ],
-    "derivative": "GIANT_TREE_TAIGA",
     "wall": {
         "style": {
             "style": "STATIC"

@@ -1,6 +1,69 @@
 {
+	"name": "Temperate Flower Forest",
+	"derivative": "FLOWER_FOREST",
 	"vanillaDerivative": "FLOWER_FOREST",
-	"entityInitialSpawns": [{
+	"generators": [
+		{
+            "min": 4,
+            "max": 7,
+            "generator": "plain"
+		}
+	],
+	"layers": [
+		{
+			"style": {
+				"style": "STATIC"
+			},
+			"zoom": 0.656,
+			"palette": [{
+					"weight": 19,
+					"block": "grass_block"
+				},
+				{
+					"block": "gravel"
+				},
+				{
+					"weight": 26,
+					"block": "grass_block"
+				}
+			]
+		},
+		{
+			"palette": [{
+				"block": "dirt"
+			}]
+		},
+		{
+			"minHeight": 1,
+			"maxHeight": 3,
+			"palette": [{
+					"block": "dirt"
+				},
+				{
+					"block": "coarse_dirt"
+				}
+			]
+		},
+		{
+			"minHeight": 6,
+			"maxHeight": 18,
+			"style": {
+				"style": "STATIC"
+			},
+			"palette": [{
+					"block": "stone"
+				},
+				{
+					"block": "andesite"
+				},
+				{
+					"block": "stone"
+				}
+			]
+		}
+	],
+	"entityInitialSpawns": [
+		{
 			"entity": "cow",
 			"maxSpawns": 3,
 			"minSpawns": 1,
@@ -31,7 +94,8 @@
 			"rarity": 3
 		}
 	],
-	"objects": [{
+	"objects": [
+		{
 			"chance": 0.07,
 			"rotation": {
 				"yAxis": {
@@ -426,11 +490,11 @@
 			}
 		}
 	],
-	"derivative": "FLOWER_FOREST",
 	"biomeStyle": {
 		"style": "IRIS"
 	},
-	"decorators": [{
+	"decorators": [
+		{
 			"chance": 0.3,
 			"variance": {
 				"style": "CELLULAR",
@@ -641,64 +705,6 @@
 			}]
 		}
 	],
-	"name": "Flower Forest",
-	"layers": [{
-			"style": {
-				"style": "STATIC"
-			},
-			"zoom": 0.656,
-			"palette": [{
-					"weight": 19,
-					"block": "grass_block"
-				},
-				{
-					"block": "gravel"
-				},
-				{
-					"weight": 26,
-					"block": "grass_block"
-				}
-			]
-		},
-		{
-			"palette": [{
-				"block": "dirt"
-			}]
-		},
-		{
-			"minHeight": 1,
-			"maxHeight": 3,
-			"palette": [{
-					"block": "dirt"
-				},
-				{
-					"block": "coarse_dirt"
-				}
-			]
-		},
-		{
-			"minHeight": 6,
-			"maxHeight": 18,
-			"style": {
-				"style": "STATIC"
-			},
-			"palette": [{
-					"block": "stone"
-				},
-				{
-					"block": "andesite"
-				},
-				{
-					"block": "stone"
-				}
-			]
-		}
-	],
-	"generators": [{
-            "min": 4,
-            "max": 7,
-            "generator": "plain"
-	}],
 	"loot": {
 		"tables": [
 			"forest-food"

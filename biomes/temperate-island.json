@@ -1,4 +1,6 @@
 {
+    "name": "Temperate Island",
+    "derivative": "PLAINS",
     "vanillaDerivative": "PLAINS",
     "children": [
         "temperate-wilds"
@@ -11,6 +13,59 @@
         {
             "rarity": 350,
             "structure": "village-temperate"
+        }
+    ],
+    "generators": [
+        {
+            "min": 28,
+            "max": 42,
+            "generator": "plain"
+        }
+    ],
+    "layers": [
+        {
+            "palette": [
+                {
+                    "block": "grass_block"
+                }
+            ]
+        },
+        {
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {
+                    "block": "dirt"
+                },
+                {
+                    "block": "coarse_dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
         }
     ],
     "entityInitialSpawns": [
@@ -139,62 +194,7 @@
             }
         }
     ],
-    "name": "Island",
-    "layers": [
-        {
-            "palette": [
-                {
-                    "block": "grass_block"
-                }
-            ]
-        },
-        {
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                {
-                    "block": "dirt"
-                },
-                {
-                    "block": "coarse_dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "stone"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "min": 28,
-            "max": 42,
-            "generator": "plain"
-        }
-    ],
     "biomeZoom": 60,
-    "derivative": "PLAINS",
     "biomeStyle": {
         "style": "IRIS"
     },

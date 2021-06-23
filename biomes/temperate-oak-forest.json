@@ -1,5 +1,10 @@
 {
+    "name": "Temperate Oak Forest",
+    "derivative": "DEEP_LUKEWARM_OCEAN",
     "vanillaDerivative": "FOREST",
+    "children": [
+        "temperate-oak-denmyre"
+    ],
     "jigsawStructures": [
         {
             "rarity": 1000,
@@ -8,6 +13,62 @@
         {
             "rarity": 350,
             "structure": "village-temperate"
+        }
+    ],
+    "generators": [
+        {
+            "min": 4,
+            "max": 7,
+            "generator": "plain"
+        }
+    ],
+    "layers": [
+        {
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "grass_block"
+                }
+            ]
+        },
+        {
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {
+                    "block": "dirt"
+                },
+                {
+                    "block": "coarse_dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
         }
     ],
     "entityInitialSpawns": [
@@ -293,13 +354,9 @@
         }
     ],
     "biomeZoom": 60,
-    "derivative": "DEEP_LUKEWARM_OCEAN",
     "biomeStyle": {
         "style": "IRIS"
     },
-    "children": [
-        "temperate-oak-denmyre"
-    ],
 	"decorators": [
 	{
 		"chance": 0.8,
@@ -400,63 +457,7 @@
                     "block": "cobblestone_slab"
             }
 		]
-	}],
-    "name": "Oak Forest",
-    "layers": [
-        {
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "grass_block"
-                }
-            ]
-        },
-        {
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                {
-                    "block": "dirt"
-                },
-                {
-                    "block": "coarse_dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "stone"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "min": 4,
-            "max": 7,
-            "generator": "plain"
-        }
+	}
     ],
     "loot": {
         "tables": [

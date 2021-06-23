@@ -1,4 +1,68 @@
 {
+    "name": "Temperate Ocean Deep",
+    "derivative": "DEEP_OCEAN",
+    "vanillaDerivative": "DEEP_OCEAN",
+    "generators": [
+        {
+            "min": -57,
+            "max": -25,
+            "generator": "plain"
+        }
+    ],
+    "layers": [
+        {
+            "minHeight": 2,
+            "maxHeight": 3,
+            "style": {
+                "style": "FRACTAL_FBM_IRIS"
+            },
+            "zoom": 0.725,
+            "palette": [
+                {
+                    "block": "sand"
+                },
+                {
+                    "block": "clay"
+                },
+                {
+                    "block": "sand"
+                },
+                {
+                    "block": "gravel"
+                },
+                {
+                    "block": "sand"
+                },
+                {
+                    "block": "dirt"
+                },
+                {
+                    "weight": 2,
+                    "block": "sand"
+                }
+            ]
+        },
+        {
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {
+                    "weight": 2,
+                    "block": "dirt"
+                },
+                {
+                    "block": "coarse_dirt"
+                }
+            ]
+        }
+    ],
     "decorators": [
         {
             "chance": 0.0006,
@@ -168,76 +232,11 @@
             }
         }
     ],
-    "name": "Deep Ocean",
-    "layers": [
-        {
-            "minHeight": 2,
-            "maxHeight": 3,
-            "style": {
-                "style": "FRACTAL_FBM_IRIS"
-            },
-            "zoom": 0.725,
-            "palette": [
-                {
-                    "block": "sand"
-                },
-                {
-                    "block": "clay"
-                },
-                {
-                    "block": "sand"
-                },
-                {
-                    "block": "gravel"
-                },
-                {
-                    "block": "sand"
-                },
-                {
-                    "block": "dirt"
-                },
-                {
-                    "weight": 2,
-                    "block": "sand"
-                }
-            ]
-        },
-        {
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                {
-                    "weight": 2,
-                    "block": "dirt"
-                },
-                {
-                    "block": "coarse_dirt"
-                }
-            ]
-        }
-    ],
-    "vanillaDerivative": "DEEP_OCEAN",
-    "generators": [
-        {
-            "min": -57,
-            "max": -25,
-            "generator": "plain"
-        }
-    ],
     "loot": {
         "tables": [
             "ocean-clutter"
         ]
     },
-    "derivative": "DEEP_OCEAN",
-    "rarity": 6,
     "slab": {
         "style": {
             "style": "STATIC"

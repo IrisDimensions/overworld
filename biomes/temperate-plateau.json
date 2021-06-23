@@ -1,5 +1,73 @@
 {
+    "name": "Temperate Plateau",
+    "derivative": "DEEP_LUKEWARM_OCEAN",
     "vanillaDerivative": "FOREST",
+    "generators": [
+        {
+            "min": 30,
+            "max": 55,
+            "generator": "canyon-steep"
+        },
+        {
+            "min": 2,
+            "max": 3,
+            "generator": "smooth-dunes"
+        },
+        {
+            "min": 2,
+            "max": 6,
+            "generator": "plain"
+        }
+    ],
+    "layers": [
+        {
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "grass_block"
+                }
+            ]
+        },
+        {
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {
+                    "block": "dirt"
+                },
+                {
+                    "block": "coarse_dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
+        }
+    ],
     "entityInitialSpawns": [
         {
             "entity": "cow",
@@ -310,8 +378,6 @@
             }
         }
     ],
-    "biomeZoom": 60,
-    "derivative": "DEEP_LUKEWARM_OCEAN",
     "biomeStyle": {
         "style": "IRIS"
     },
@@ -371,73 +437,6 @@
             ]
         }
     ],
-    "name": "temperate plateau",
-    "layers": [
-        {
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "grass_block"
-                }
-            ]
-        },
-        {
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                {
-                    "block": "dirt"
-                },
-                {
-                    "block": "coarse_dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "stone"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "min": 30,
-            "max": 55,
-            "generator": "canyon-steep"
-        },
-        {
-            "min": 2,
-            "max": 3,
-            "generator": "smooth-dunes"
-        },
-        {
-            "min": 2,
-            "max": 6,
-            "generator": "plain"
-        }
-    ],
     "loot": {
         "tables": [
             "forest-food"
@@ -462,5 +461,5 @@
     "biomeScatter": [
         "FOREST"
     ],
-    "rarity": 40
+    "biomeZoom": 60
 }
