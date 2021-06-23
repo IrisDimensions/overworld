@@ -4,8 +4,8 @@
     "vanillaDerivative": "SNOWY_TAIGA",
     "layers": [
         {
-            "minHeight": 3,
-            "maxHeight": 5,
+            "minHeight": 0,
+            "maxHeight": 1,
             "palette": [
                 {
                     "block": "snow_block"
@@ -13,8 +13,20 @@
             ]
         },
         {
-            "minHeight": 3,
-            "maxHeight": 5,
+            "minHeight": 1,
+            "maxHeight": 1,
+            "palette": [
+                {
+                   "block": "grass_block",
+                    "data":{
+                        "snowy": true
+                    }
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 28,
             "palette": [
                 {
                     "block": "dirt"
@@ -63,21 +75,21 @@
                 },
                 {
                     "data": {
-                        "layers": 2
+                        "layers": 1
                     },
                     "block": "snow"
                 },
                 {
+                    "block": "air"
+                },
+                {
                     "data": {
-                        "layers": 3
+                        "layers": 1
                     },
                     "block": "snow"
                 },
                 {
-                    "data": {
-                        "layers": 4
-                    },
-                    "block": "snow"
+                    "block": "air"
                 }
             ]
         }

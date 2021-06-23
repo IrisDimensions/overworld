@@ -4,8 +4,8 @@
     "vanillaDerivative": "SNOWY_BEACH",
     "layers": [
         {
-            "minHeight": 2,
-            "maxHeight": 3,
+            "minHeight": 0,
+            "maxHeight": 1,
             "palette": [
                 {
                     "block": "snow_block"
@@ -13,8 +13,20 @@
             ]
         },
         {
-            "minHeight": 3,
-            "maxHeight": 5,
+            "minHeight": 1,
+            "maxHeight": 1,
+            "palette": [
+                {
+                    "block": "grass_block",
+                    "data":{
+                        "snowy": true
+                    }
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
             "palette": [
                 {
                     "block": "dirt"
@@ -166,6 +178,41 @@
                 "y": 0,
                 "z": 0
             }
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 1,
+            "variance": {
+                "style": "IRIS",
+                "zoom": 0.2
+            },
+            "palette": [
+                {
+                    "data": {
+                        "layers": 1
+                    },
+                    "block": "snow"
+                },
+                {
+                    "data": {
+                        "layers": 1
+                    },
+                    "block": "snow"
+                },
+                {
+                    "block": "air"
+                },
+                {
+                    "data": {
+                        "layers": 1
+                    },
+                    "block": "snow"
+                },
+                {
+                    "block": "air"
+                }
+            ]
         }
     ],
     "slab": {
