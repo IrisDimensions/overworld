@@ -1,5 +1,91 @@
 {
+    "name": "Savanna Plateau",
+    "derivative": "SAVANNA_PLATEAU",
     "vanillaDerivative": "SAVANNA",
+    "generators": [
+        {
+            "min": 15,
+            "max": 20,
+            "generator": "canyon-steep"
+        },
+        {
+            "min": 2,
+            "max": 3,
+            "generator": "smooth-dunes"
+        },
+        {
+            "min": 2,
+            "max": 6,
+            "generator": "plain"
+        }
+    ],
+    "layers": [
+        {
+            "minHeight": 3,
+            "maxHeight": 5,
+            "slopeCondition": {
+                "minimumSlope": 6.9
+            },
+            "palette": [
+                {
+                    "block": "granite"
+                }
+            ]
+        },
+        {
+            "minHeight": 3,
+            "maxHeight": 5,
+            "slopeCondition": {
+                "minimumSlope": 4.6
+            },
+            "palette": [
+                {
+                    "block": "coarse_dirt"
+                },
+                {
+                    "block": "gravel"
+                }
+            ]
+        },
+        {
+            "style": {
+                "style": "STATIC"
+            },
+            "zoom": 0.75,
+            "palette": [
+                {
+                    "block": "grass_block"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
+        }
+    ],
     "biomeSkyScatter": [
         "DESERT",
         "SAVANNA"
@@ -82,7 +168,6 @@
         }
     ],
     "objects": [
-
         {
             "chance": 0.00175,
             "rotation": {
@@ -237,93 +322,7 @@
             }
         }
     ],
-    "name": "Savanna plateau",
-    "layers": [
-        {
-            "minHeight": 3,
-            "maxHeight": 5,
-            "slopeCondition": {
-                "minimumSlope": 6.9
-            },
-            "palette": [
-                {
-                    "block": "granite"
-                }
-            ]
-        },
-        {
-            "minHeight": 3,
-            "maxHeight": 5,
-            "slopeCondition": {
-                "minimumSlope": 4.6
-            },
-            "palette": [
-                {
-                    "block": "coarse_dirt"
-                },
-                {
-                    "block": "gravel"
-                }
-            ]
-        },
-        {
-            "style": {
-                "style": "STATIC"
-            },
-            "zoom": 0.75,
-            "palette": [
-                {
-                    "block": "grass_block"
-                }
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 4,
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "stone"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "min": 15,
-            "max": 20,
-            "generator": "canyon-steep"
-        },
-        {
-            "min": 2,
-            "max": 3,
-            "generator": "smooth-dunes"
-        },
-        {
-            "min": 2,
-            "max": 6,
-            "generator": "plain"
-        }
-    ],
     "biomeZoom": 60,
-    "derivative": "SAVANNA_PLATEAU",
     "biomeStyle": {
         "style": "IRIS"
     },
@@ -346,6 +345,5 @@
     "biomeScatter": [
         "SAVANNA",
         "DESERT"
-    ],
-    "rarity": 40
+    ]
 }
