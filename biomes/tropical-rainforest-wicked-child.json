@@ -1,5 +1,64 @@
 {
+    "name": "Tropical Rainforest Wicked Child",
+    "derivative": "MODIFIED_JUNGLE",
     "vanillaDerivative": "MODIFIED_JUNGLE_EDGE",
+    "generators": [
+        {
+            "min": 3,
+            "max": 50,
+            "generator": "plain"
+        }
+    ],
+    "layers": [
+        {
+            "style": {
+                "style": "FRACTAL_BILLOW_IRIS"
+            },
+            "zoom": 0.6,
+            "palette": [
+                {
+                    "block": "grass_block"
+                },
+                {
+                    "data": {
+                        "persistent": true
+                    },
+                    "block": "jungle_leaves"
+                },
+                {
+                    "weight": 2,
+                    "block": "grass_block"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
+        }
+    ],
     "effects": [
         {
             "particleAltX": 0.301,
@@ -261,65 +320,6 @@
             }
         }
     ],
-    "name": "Wicked Rainforest",
-    "layers": [
-        {
-            "style": {
-                "style": "FRACTAL_BILLOW_IRIS"
-            },
-            "zoom": 0.6,
-            "palette": [
-                {
-                    "block": "grass_block"
-                },
-                {
-                    "data": {
-                        "persistent": true
-                    },
-                    "block": "jungle_leaves"
-                },
-                {
-                    "weight": 2,
-                    "block": "grass_block"
-                }
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 4,
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "stone"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "min": 3,
-            "max": 50,
-            "generator": "plain"
-        }
-    ],
-    "derivative": "MODIFIED_JUNGLE",
     "wall": {
         "style": {
             "style": "IRIS"
@@ -357,6 +357,5 @@
                 "block": "stripped_jungle_wood"
             }
         ]
-    },
-    "rarity": 12
+    }
 }

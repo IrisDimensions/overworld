@@ -1,5 +1,45 @@
 {
+    "name": "Tropical Coral Ocean",
+    "derivative": "LUKEWARM_OCEAN",
     "vanillaDerivative": "WARM_OCEAN",
+    "generators": [
+        {
+            "min": -51,
+            "max": -37,
+            "generator": "plain"
+        }
+    ],
+    "layers": [
+        {
+            "minHeight": 2,
+            "maxHeight": 6,
+            "palette": [
+                {
+                    "block": "sand"
+                }
+            ]
+        },
+        {
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {
+                    "weight": 2,
+                    "block": "dirt"
+                },
+                {
+                    "block": "coarse_dirt"
+                }
+            ]
+        }
+    ],
     "effects": [
         {
             "particleAltX": 0.3,
@@ -1652,51 +1692,11 @@
             }
         }
     ],
-    "name": "Coral Ocean",
-    "layers": [
-        {
-            "minHeight": 2,
-            "maxHeight": 6,
-            "palette": [
-                {
-                    "block": "sand"
-                }
-            ]
-        },
-        {
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                {
-                    "weight": 2,
-                    "block": "dirt"
-                },
-                {
-                    "block": "coarse_dirt"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "min": -51,
-            "max": -37,
-            "generator": "plain"
-        }
-    ],
     "loot": {
         "tables": [
             "ocean-clutter"
         ]
     },
-    "derivative": "LUKEWARM_OCEAN",
     "wall": {
         "palette": [
             {
@@ -1720,7 +1720,6 @@
         },
         "zoom": 0.1
     },
-    "rarity": 2,
     "slab": {
         "style": {
             "style": "STATIC"

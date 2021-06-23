@@ -1,5 +1,68 @@
 {
+    "name": "Tropical Rainforest",
+    "derivative": "JUNGLE",
     "vanillaDerivative": "JUNGLE",
+    "children": [
+        "tropical-rainforest-hills",
+        "tropical-jungle-denmyre"
+    ],
+    "generators": [
+        {
+            "min": 20,
+            "max": 35,
+            "generator": "plain"
+        }
+    ],
+    "layers": [
+        {
+            "style": {
+                "style": "FRACTAL_BILLOW_IRIS"
+            },
+            "zoom": 0.6,
+            "palette": [
+                {
+                    "block": "grass_block"
+                },
+                {
+                    "data": {
+                        "persistent": true
+                    },
+                    "block": "jungle_leaves"
+                },
+                {
+                    "weight": 2,
+                    "block": "grass_block"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
+        }
+    ],
     "effects": [
         {
             "particleAltX": 0.301,
@@ -25,10 +88,6 @@
             "minSpawns": 1,
             "rarity": 4
         }
-    ],
-    "children": [
-        "tropical-rainforest-hills",
-        "tropical-jungle-denmyre"
     ],
     "decorators": [
         {
@@ -275,65 +334,6 @@
             }
         }
     ],
-    "name": "Rainforest",
-    "layers": [
-        {
-            "style": {
-                "style": "FRACTAL_BILLOW_IRIS"
-            },
-            "zoom": 0.6,
-            "palette": [
-                {
-                    "block": "grass_block"
-                },
-                {
-                    "data": {
-                        "persistent": true
-                    },
-                    "block": "jungle_leaves"
-                },
-                {
-                    "weight": 2,
-                    "block": "grass_block"
-                }
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 4,
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "stone"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "min": 20,
-            "max": 35,
-            "generator": "plain"
-        }
-    ],
-    "derivative": "JUNGLE",
     "wall": {
         "style": {
             "style": "IRIS"
@@ -371,6 +371,5 @@
                 "block": "stripped_jungle_wood"
             }
         ]
-    },
-    "rarity": 2
+    }
 }

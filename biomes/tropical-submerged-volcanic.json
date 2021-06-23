@@ -1,18 +1,14 @@
 {
+    "name": "Tropical Submerged Volcanic",
+    "derivative": "WARM_OCEAN",
     "vanillaDerivative": "WARM_OCEAN",
-    "effects": [
+    "generators": [
         {
-            "particleAltX": 0.001,
-            "particleAltY": 0.13885,
-            "particleAltZ": 0.001,
-            "chance": 1,
-            "particleEffect": "CAMPFIRE_SIGNAL_SMOKE",
-            "particleOffset": 0,
-            "interval": 150,
-            "particleCount": 0
+            "min": -24,
+            "max": -3,
+            "generator": "canyon-steep"
         }
     ],
-    "name": "Submerged Volcanic",
     "layers": [
         {
             "minHeight": 2,
@@ -82,11 +78,16 @@
             ]
         }
     ],
-    "generators": [
+    "effects": [
         {
-            "min": -24,
-            "max": -3,
-            "generator": "canyon-steep"
+            "particleAltX": 0.001,
+            "particleAltY": 0.13885,
+            "particleAltZ": 0.001,
+            "chance": 1,
+            "particleEffect": "CAMPFIRE_SIGNAL_SMOKE",
+            "particleOffset": 0,
+            "interval": 150,
+            "particleCount": 0
         }
     ],
     "loot": {
@@ -94,7 +95,6 @@
             "ocean-clutter"
         ]
     },
-    "derivative": "WARM_OCEAN",
     "slab": {
         "style": {
             "style": "STATIC"

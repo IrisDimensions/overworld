@@ -1,5 +1,64 @@
 {
+    "name": "Rainforest Hills",
+    "derivative": "JUNGLE",
     "vanillaDerivative": "JUNGLE_HILLS",
+    "generators": [
+        {
+            "min": 32,
+            "max": 65,
+            "generator": "plain-cliffs"
+        }
+    ],
+    "layers": [
+        {
+            "style": {
+                "style": "STATIC"
+            },
+            "zoom": 0.35,
+            "palette": [
+                {
+                    "block": "grass_block"
+                },
+                {
+                    "data": {
+                        "persistent": true
+                    },
+                    "block": "jungle_leaves"
+                },
+                {
+                    "weight": 2,
+                    "block": "grass_block"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
+        }
+    ],
     "effects": [
         {
             "particleAltX": 0.301,
@@ -220,65 +279,6 @@
             }
         }
     ],
-    "name": "Rainforest Hills",
-    "layers": [
-        {
-            "style": {
-                "style": "STATIC"
-            },
-            "zoom": 0.35,
-            "palette": [
-                {
-                    "block": "grass_block"
-                },
-                {
-                    "data": {
-                        "persistent": true
-                    },
-                    "block": "jungle_leaves"
-                },
-                {
-                    "weight": 2,
-                    "block": "grass_block"
-                }
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 4,
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "stone"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "min": 32,
-            "max": 65,
-            "generator": "plain-cliffs"
-        }
-    ],
-    "derivative": "JUNGLE",
     "wall": {
         "style": {
             "style": "IRIS"
@@ -316,6 +316,5 @@
                 "block": "stripped_jungle_wood"
             }
         ]
-    },
-    "rarity": 8
+    }
 }

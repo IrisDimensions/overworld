@@ -1,6 +1,34 @@
 {
+    "name": "Tropical Beach Bamboo",
+    "derivative": "JUNGLE",
     "vanillaDerivative": "BEACH",
-    "rarity": 3,
+    "generators": [
+        {
+            "min": -5,
+            "max": 1,
+            "generator": "plain"
+        }
+    ],
+    "layers": [
+        {
+            "minHeight": 3,
+            "maxHeight": 6,
+            "palette": [
+                {
+                    "block": "sand"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        }
+    ],
     "effects": [
         {
             "particleAltX": 0.301,
@@ -169,45 +197,16 @@
             }
         }
     ],
-    "name": "Bamboo Beach",
-    "layers": [
-        {
-            "minHeight": 3,
-            "maxHeight": 6,
-            "palette": [
-                {
-                    "block": "sand"
-                }
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "min": -5,
-            "max": 1,
-            "generator": "plain"
-        }
-    ],
     "loot": {
         "tables": [
             "beach-clutter"
         ]
     },
-    "derivative": "JUNGLE",
     "wall": {
         "palette": [
             {
                 "block": "smooth_sandstone"
             }
         ]
-    } 
+    }
 }

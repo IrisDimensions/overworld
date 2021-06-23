@@ -1,4 +1,53 @@
 {
+    "name": "Tropical Cavern",
+    "derivative": "FOREST",
+    "vanillaDerivative": "FOREST",
+    "generators": [
+        {
+            "min": 4,
+            "max": 6,
+            "generator": "plain"
+        }
+    ],
+    "layers": [
+        {
+            "minHeight": 1,
+            "maxHeight": 2,
+            "style": {
+                "style": "STATIC"
+            },
+            "zoom": 0.1,
+            "palette": [
+                {
+                    "weight": 2,
+                    "block": "stone"
+                },
+                {
+                    "block": "jungle_leaves",
+			        "data": {
+                        "persistent": true
+                    }
+                },
+                {
+                    "weight": 2,
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "weight": 2,
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
+        }
+    ],
     "entitySpawnOverrides": [
         {
             "trigger": "SKELETON",
@@ -94,59 +143,11 @@
             }
         }
     ],
-    "name": "Tropical Cavern",
-    "layers": [
-        {
-            "minHeight": 1,
-            "maxHeight": 2,
-            "style": {
-                "style": "STATIC"
-            },
-            "zoom": 0.1,
-            "palette": [
-                {
-                    "weight": 2,
-                    "block": "stone"
-                },
-                {
-                    "block": "jungle_leaves",
-			        "data": {
-                        "persistent": true
-                    }
-                },
-                {
-                    "weight": 2,
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "weight": 2,
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "stone"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "min": 4,
-            "max": 6,
-            "generator": "plain"
-        }
-    ],
     "loot": {
         "tables": [
             "cave-clutter"
         ]
     },
-    "derivative": "FOREST",
     "slab": {
         "style": {
             "style": "STATIC"

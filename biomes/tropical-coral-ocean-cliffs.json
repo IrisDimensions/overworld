@@ -1,7 +1,47 @@
 {
+    "name": "Tropical Coral Ocean Cliffs",
+    "derivative": "LUKEWARM_OCEAN",
     "vanillaDerivative": "LUKEWARM_OCEAN",
     "children": [
         "tropical-coral-ocean"
+    ],
+    "generators": [
+        {
+            "min": -51,
+            "max": -37,
+            "generator": "plain-cliffs"
+        }
+    ],
+    "layers": [
+        {
+            "minHeight": 2,
+            "maxHeight": 6,
+            "palette": [
+                {
+                    "block": "sand"
+                }
+            ]
+        },
+        {
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {
+                    "weight": 2,
+                    "block": "dirt"
+                },
+                {
+                    "block": "coarse_dirt"
+                }
+            ]
+        }
     ],
     "effects": [
         {
@@ -1679,51 +1719,11 @@
             }
         }
     ],
-    "name": "Coral Ocean Cliffs",
-    "layers": [
-        {
-            "minHeight": 2,
-            "maxHeight": 6,
-            "palette": [
-                {
-                    "block": "sand"
-                }
-            ]
-        },
-        {
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                {
-                    "weight": 2,
-                    "block": "dirt"
-                },
-                {
-                    "block": "coarse_dirt"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "min": -51,
-            "max": -37,
-            "generator": "plain-cliffs"
-        }
-    ],
     "loot": {
         "tables": [
             "ocean-clutter"
         ]
     },
-    "derivative": "LUKEWARM_OCEAN",
     "wall": {
         "palette": [
             {
@@ -1747,7 +1747,6 @@
         },
         "zoom": 0.1
     },
-    "rarity": 4,
     "slab": {
         "style": {
             "style": "STATIC"

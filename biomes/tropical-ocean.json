@@ -1,5 +1,73 @@
 {
+    "name": "Tropical Ocean",
+    "derivative": "DEEP_WARM_OCEAN",
     "vanillaDerivative": "WARM_OCEAN",
+    "children": [
+        "tropical-coral-ocean",
+        "tropical-coral-ocean-cliffs"
+    ],
+    "generators": [
+        {
+            "min": -38,
+            "max": -20,
+            "generator": "river"
+        }
+    ],
+    "layers": [
+        {
+            "minHeight": 2,
+            "maxHeight": 2,
+            "style": {
+                "style": "VASCULAR",
+                "zoom": 0.9,
+                "fracture": {
+                    "multiplier": 60,
+                    "style": "IRIS_DOUBLE",
+                    "zoom": 2,
+                    "fracture": {
+                        "multiplier": 50,
+                        "style": "STATIC"
+                    }
+                }
+            },
+            "zoom": 0.825,
+            "palette": [
+                {
+                    "weight": 2,
+                    "block": "sand"
+                },
+                {
+                    "block": "dirt"
+                },
+                {
+                    "block": "gravel"
+                },
+                {
+                    "block": "clay"
+                }
+            ]
+        },
+        {
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {
+                    "weight": 2,
+                    "block": "dirt"
+                },
+                {
+                    "block": "coarse_dirt"
+                }
+            ]
+        }
+    ],
     "effects": [
         {
             "particleAltX": 0.3,
@@ -15,10 +83,6 @@
         }
     ],
     "childShrinkFactor": 3,
-    "children": [
-        "tropical-coral-ocean",
-        "tropical-coral-ocean-cliffs"
-    ],
     "decorators": [
         {
             "chance": 0.03,
@@ -289,76 +353,11 @@
             }
         }
     ],
-
-    "name": "Tropical Ocean",
-    "layers": [
-        {
-            "minHeight": 2,
-            "maxHeight": 2,
-            "style": {
-                "style": "VASCULAR",
-                "zoom": 0.9,
-                "fracture": {
-                    "multiplier": 60,
-                    "style": "IRIS_DOUBLE",
-                    "zoom": 2,
-                    "fracture": {
-                        "multiplier": 50,
-                        "style": "STATIC"
-                    }
-                }
-            },
-            "zoom": 0.825,
-            "palette": [
-                {
-                    "weight": 2,
-                    "block": "sand"
-                },
-                {
-                    "block": "dirt"
-                },
-                {
-                    "block": "gravel"
-                },
-                {
-                    "block": "clay"
-                }
-            ]
-        },
-        {
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                {
-                    "weight": 2,
-                    "block": "dirt"
-                },
-                {
-                    "block": "coarse_dirt"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "min": -38,
-            "max": -20,
-            "generator": "river"
-        }
-    ],
     "loot": {
         "tables": [
             "ocean-clutter"
         ]
     },
-    "derivative": "DEEP_WARM_OCEAN",
     "wall": {
         "palette": [
             {

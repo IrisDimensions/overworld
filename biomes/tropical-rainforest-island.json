@@ -1,5 +1,64 @@
 {
+    "name": "Tropical Rainforest Island",
+    "derivative": "JUNGLE",
     "vanillaDerivative": "MODIFIED_JUNGLE_EDGE",
+    "generators": [
+        {
+            "min": 49,
+            "max": 65,
+            "generator": "plain"
+        }
+    ],
+    "layers": [
+        {
+            "style": {
+                "style": "FRACTAL_BILLOW_IRIS"
+            },
+            "zoom": 0.6,
+            "palette": [
+                {
+                    "block": "grass_block"
+                },
+                {
+                    "data": {
+                        "persistent": true
+                    },
+                    "block": "jungle_leaves"
+                },
+                {
+                    "weight": 2,
+                    "block": "grass_block"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
+        }
+    ],
     "seaLayers": [
         {
             "minHeight": 64,
@@ -272,65 +331,6 @@
             }
         }
     ],
-    "name": "Rainforest Oasis",
-    "layers": [
-        {
-            "style": {
-                "style": "FRACTAL_BILLOW_IRIS"
-            },
-            "zoom": 0.6,
-            "palette": [
-                {
-                    "block": "grass_block"
-                },
-                {
-                    "data": {
-                        "persistent": true
-                    },
-                    "block": "jungle_leaves"
-                },
-                {
-                    "weight": 2,
-                    "block": "grass_block"
-                }
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 4,
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "stone"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "min": 49,
-            "max": 65,
-            "generator": "plain"
-        }
-    ],
-    "derivative": "JUNGLE",
     "wall": {
         "style": {
             "style": "IRIS"
@@ -368,6 +368,5 @@
                 "block": "stripped_jungle_wood"
             }
         ]
-    },
-    "rarity": 2
+    }
 }
