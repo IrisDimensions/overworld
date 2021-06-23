@@ -1,5 +1,52 @@
 {
+    "name": "Mountain River",
+    "derivative": "RIVER",
     "vanillaDerivative": "RIVER",
+    "generators": [
+        {
+            "generator": "river",
+            "max": -7,
+            "min": -20
+        }
+    ],
+    "layers": [
+        {
+            "minHeight": 2,
+            "maxHeight": 3,
+            "style": {
+                "style": "IRIS_DOUBLE",
+                "fracture": {
+                    "style": "STATIC",
+                    "multiplier": 30
+                }
+            },
+            "zoom": 0.7,
+            "palette": [
+                {
+                    "block": "cobblestone",
+                    "weight": 3
+                },
+                {
+                    "block": "clay",
+                    "weight": 1
+                },
+                {
+                    "block": "gravel",
+                    "weight": 8
+                }
+            ]
+        },
+        {
+            "palette": [
+                {
+                    "block": "cobblestone"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
+        }
+    ],
     "decorators": [
         {
             "chance": 0.07,
@@ -66,56 +113,9 @@
             }
         }
     ],
-    "name": "River",
-    "layers": [
-        {
-            "minHeight": 2,
-            "maxHeight": 3,
-            "style": {
-                "style": "IRIS_DOUBLE",
-                "fracture": {
-                    "style": "STATIC",
-                    "multiplier": 30
-                }
-            },
-            "zoom": 0.7,
-            "palette": [
-                {
-                    "block": "cobblestone",
-                    "weight": 3
-                },
-                {
-                    "block": "clay",
-                    "weight": 1
-                },
-                {
-                    "block": "gravel",
-                    "weight": 8
-                }
-            ]
-        },
-        {
-            "palette": [
-                {
-                    "block": "cobblestone"
-                },
-                {
-                    "block": "stone"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "generator": "river",
-            "max": -7,
-            "min": -20
-        }
-    ],
     "loot": {
         "tables": [
             "ocean-clutter"
         ]
-    },
-    "derivative": "RIVER"
+    }
 }
