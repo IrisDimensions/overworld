@@ -1,7 +1,10 @@
 {
-    "name": "Desert Hills",
+    "name": "Hot Desert",
     "derivative": "DESERT",
     "vanillaDerivative": "DESERT",
+    "children": [
+        "hot-oasis"
+    ],
     "generators": [
         {
             "generator": "smooth-dunes",
@@ -9,8 +12,34 @@
             "min": -8
         }
     ],
-    "children": [
-        "hot-oasis"
+    "layers": [
+        {
+            "minHeight": 3,
+            "maxHeight": 10,
+            "slopeCondition": {
+                "minimumSlope": 4.5,
+                "maximumSlope": 20
+            },
+            "palette": [
+                {
+                    "block": "terracotta"
+                }
+            ]
+        },
+        {
+            "minHeight": 5,
+            "maxHeight": 5,
+            "style": {
+                "style": "FRACTAL_WATER"
+            },
+            "zoom": 0.7,
+            "palette": [
+                {
+                    "weight": 1,
+                    "block": "sand"
+                }
+            ]
+        }
     ],
     "entityInitialSpawns": [
         {
@@ -58,35 +87,6 @@
                 "y": -3,
                 "z": 0
             }
-        }
-    ],
-    "layers": [
-        {
-            "minHeight": 3,
-            "maxHeight": 10,
-            "slopeCondition": {
-                "minimumSlope": 4.5,
-                "maximumSlope": 20
-            },
-            "palette": [
-                {
-                    "block": "terracotta"
-                }
-            ]
-        },
-        {
-            "minHeight": 5,
-            "maxHeight": 5,
-            "style": {
-                "style": "FRACTAL_WATER"
-            },
-            "zoom": 0.7,
-            "palette": [
-                {
-                    "weight": 1,
-                    "block": "sand"
-                }
-            ]
         }
     ],
     "loot": {

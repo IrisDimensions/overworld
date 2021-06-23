@@ -1,11 +1,13 @@
 {
     "name": "Cold Treasure",
     "rarity": 1,
-    "minPicked": 0,
+    "maxPicked": 3,
+    "minPicked": 1,
     "loot": [
         {
             "type": "iron_nugget",
             "maxAmount": 12,
+            "minAmount": 3,
             "rarity": 3,
             "slotTypes": "STORAGE"
         },
@@ -23,7 +25,7 @@
         },
         {
             "type": "emerald_block",
-            "maxamount": 2,
+            "maxamount": 1,
             "rarity": 14,
             "slottypes": "STORAGE"
         },
@@ -67,6 +69,13 @@
                 },
                 {
                     "attribute": "GENERIC_ARMOR",
+                    "operation": "ADD_NUMBER",
+                    "maxAmount": 4,
+                    "minAmount": 2,
+                    "name": "RRM"
+                },
+                {
+                    "attribute": "GENERIC_MAX_HEALTH",
                     "operation": "ADD_NUMBER",
                     "maxAmount": 4,
                     "minAmount": 2,

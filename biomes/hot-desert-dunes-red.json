@@ -1,54 +1,18 @@
 {
+    "name": "Hot Desert Dunes Red",
     "derivative": "DESERT",
-    "name": "Desert dunes",
     "vanillaDerivative": "DESERT",
+    "jigsawStructures": [
+        {
+            "rarity": 1500,
+            "structure": "desert-pyramid"
+        }
+    ],
     "generators": [
         {
             "generator": "smooth-dunes",
             "max": 30,
             "min": 10
-        }
-    ],
-    "jigsawStructures": [
-        {
-            "rarity": 1650,
-            "structure": "desert-pyramid"
-        }
-    ],
-    "objects": [
-
-        {
-            "chance": 0.001,
-            "density": 3,
-            "place": [
-                "clutter/desert-post1",
-                "clutter/desert-post2",
-                "clutter/desert-post3"
-            ]
-        },
-        {
-            "chance": 0.0000001,
-			"mode": "STILT",
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "pryamid/pyramid-extreme",
-                "void/void",
-                "void/void",
-                "void/void"
-            ],
-            "translate": {
-                "x": 0,
-                "y": -14,
-                "z": 0
-            }
         }
     ],
     "layers": [
@@ -79,6 +43,42 @@
                     "block": "red_terracotta"
                 }
             ]
+        }
+    ],
+    "objects": [
+
+        {
+            "chance": 0.001,
+            "density": 3,
+            "place": [
+                "clutter/desert-post1",
+                "clutter/desert-post2",
+                "clutter/desert-post3"
+            ]
+        },
+        {
+            "chance": 0.000001,
+			"mode": "STILT",
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "pyramid/pyramid-extreme",
+                "void/void",
+                "void/void",
+                "void/void"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -14,
+                "z": 0
+            }
         }
     ],
     "decorators": [

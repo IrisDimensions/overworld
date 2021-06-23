@@ -1,11 +1,62 @@
 {
+    "name": "Frozen Redwood Forest",
+    "derivative": "SNOWY_TAIGA_MOUNTAINS",
     "vanillaDerivative": "SNOWY_TAIGA",
+    "generators": [
+        {
+            "min": 3,
+            "max": 16,
+            "generator": "plain"
+        },
+        {
+            "min": 13,
+            "max": 48,
+            "generator": "mountain"
+        }
+    ],
+    "layers": [
+        {
+            "minHeight": 2,
+            "maxHeight": 3,
+            "palette": [
+                {
+                    "block": "snow_block"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "palette": [
+                {
+                    "block": "packed_ice"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "stone"
+                },
+                {
+                    "block": "andesite"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
+        }
+    ],
     "biomeSkyScatter": [
         "SNOWY_TAIGA",
         "SNOWY_MOUNTAINS"
     ],
     "objects": [
-
         {
             "chance": 0.02,
             "density": 3,
@@ -146,7 +197,6 @@
         }
     ],
     "biomeZoom": 30,
-    "derivative": "SNOWY_TAIGA_MOUNTAINS",
     "biomeStyle": {
         "style": "IRIS"
     },
@@ -185,58 +235,6 @@
             ]
         }
     ],
-    "name": "Frozen Redwoods",
-    "layers": [
-        {
-            "minHeight": 2,
-            "maxHeight": 3,
-            "palette": [
-                {
-                    "block": "snow_block"
-                }
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 4,
-            "palette": [
-                {
-                    "block": "packed_ice"
-                }
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "stone"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "min": 3,
-            "max": 16,
-            "generator": "plain"
-        },
-        {
-            "min": 13,
-            "max": 48,
-            "generator": "mountain"
-        }
-    ],
-    "childShrinkFactor": 20,
     "wall": {
         "style": {
             "style": "STATIC"
@@ -258,6 +256,5 @@
         "TAIGA_HILLS",
         "MOUNTAINS",
         "ICE_SPIKES"
-    ],
-	"rarity": 190
+    ]
 }

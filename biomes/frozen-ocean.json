@@ -1,5 +1,51 @@
 {
+    "name": "Frozen Ocean",
+    "derivative": "FROZEN_OCEAN",
     "vanillaDerivative": "FROZEN_OCEAN",
+    "layers": [
+        {
+            "palette": [
+                {
+                    "block": "dirt"
+                },
+                {
+                    "block": "gravel"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 3,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "weight": 5,
+                    "block": "sand"
+                },
+                {
+                    "block": "clay"
+                },
+                {
+                    "block": "gravel"
+                },
+                {
+                    "block": "dirt"
+                }
+            ]
+        }
+    ],
+    "generators": [
+        {
+            "min": -12,
+            "max": -7,
+            "generator": "plain"
+        }
+    ],
     "seaLayers": [
         {
             "minHeight": 3,
@@ -146,55 +192,9 @@
             }
         }
     ],
-    "name": "Frozen Ocean",
-    "layers": [
-        {
-            "palette": [
-                {
-                    "block": "dirt"
-                },
-                {
-                    "block": "gravel"
-                },
-                {
-                    "block": "stone"
-                }
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 3,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "weight": 5,
-                    "block": "sand"
-                },
-                {
-                    "block": "clay"
-                },
-                {
-                    "block": "gravel"
-                },
-                {
-                    "block": "dirt"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "min": -12,
-            "max": -7,
-            "generator": "plain"
-        }
-    ],
     "loot": {
         "tables": [
             "ocean-clutter"
         ]
-    },
-    "derivative": "FROZEN_OCEAN"
+    }
 }

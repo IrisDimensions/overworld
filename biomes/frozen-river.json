@@ -1,5 +1,60 @@
 {
+    "name": "Frozen River",
+    "derivative": "DEEP_FROZEN_OCEAN",
     "vanillaDerivative": "FROZEN_RIVER",
+    "layers": [
+        {
+            "palette": [
+                {
+                    "block": "dirt"
+                },
+                {
+                    "block": "gravel"
+                },
+                {
+                    "block": "stone"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 3,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "sand"
+                },
+                {
+                    "block": "clay"
+                },
+                {
+                    "block": "sand"
+                },
+                {
+                    "block": "gravel"
+                },
+                {
+                    "block": "sand"
+                },
+                {
+                    "block": "dirt"
+                },
+                {
+                    "weight": 2,
+                    "block": "sand"
+                }
+            ]
+        }
+    ],
+    "generators": [
+        {
+            "generator": "plain",
+            "max": -10,
+            "min": -19
+        }
+    ],
     "seaLayers": [
         {
             "minHeight": 3,
@@ -104,64 +159,9 @@
             }
         }
     ],
-    "name": "Frozen River",
-    "layers": [
-        {
-            "palette": [
-                {
-                    "block": "dirt"
-                },
-                {
-                    "block": "gravel"
-                },
-                {
-                    "block": "stone"
-                }
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 3,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "sand"
-                },
-                {
-                    "block": "clay"
-                },
-                {
-                    "block": "sand"
-                },
-                {
-                    "block": "gravel"
-                },
-                {
-                    "block": "sand"
-                },
-                {
-                    "block": "dirt"
-                },
-                {
-                    "weight": 2,
-                    "block": "sand"
-                }
-            ]
-        }
-    ],
-    "generators": [
-        {
-            "generator": "plain",
-            "max": -10,
-            "min": -19
-        }
-    ],
     "loot": {
         "tables": [
             "ocean-clutter"
         ]
-    },
-    "derivative": "DEEP_FROZEN_OCEAN"
+    }
 }
