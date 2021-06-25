@@ -18,7 +18,8 @@
         "temperate/temperate-oak-beach"
     ],
     "seaBiomes":[
-        "temperate/temperate-river"
+        "temperate/temperate-river",
+        "ocean/ocean-deep"
     ],
     "caveBiomes":[
         "temperate/temperate-old-cavern",
@@ -209,10 +210,16 @@
     },
     "shoreHeightMin":1,
     "shoreHeightMax":5.2,
-    "loot":{
-        "tables":[
+    "loot": {
+        "mode": "ADD",
+        "multiplier": 1,
+        "tables": [
+            "global-clutter",
+            "global-tools",
+            "global-treasure",
+            "temperate-clutter",
             "temperate-food",
-            "global-tools"
+            "forest-food"
         ]
     },
     "shoreHeightZoom":1.14,
