@@ -38,10 +38,23 @@
     ],
     "biomeImplosionRatio": 0.25,
     "objects": [
+        {
+            "heightmap": {
+                "seed": 1337,
+                "style": {
+                    "style": "SIMPLEX",
+                    "multiplier": 10
+                },
+                "offsetY": 10
+            },
+            "chance": 0.9,
+            "edit": [
                 {
-            "chance": 1,
-            "bottom": true,
-            "translate": {"yRandom": 8, "y": 4},
+                    "chance": 0.01,
+                    "find": [{"block": "deepslate"}],
+                    "replace": {"palette": [{"block": "deepslate_coal_ore"},{"block": "deepslate_copper_ore"},{"block": "deepslate_diamond_ore"},{"block": "deepslate_emerald_ore"},{"block": "deepslate_gold_ore"},{"block": "deepslate_iron_ore"},{"block": "deepslate_lapis_ore"},{"block": "deepslate_redstone_ore"}]}
+                }
+            ],
             "place": [
                 "deepslate/ds1",
                 "deepslate/ds2",
@@ -53,9 +66,16 @@
                     "max": 360,
                     "min": 0
                 }
-
         },
         {
+            "heightmap": {
+                "seed": 1337,
+                "style": {
+                    "style": "SIMPLEX",
+                    "multiplier": 15
+                },
+                "offsetY": 19
+            },
             "chance": 0.05,
             "bottom": true,
             "density": 1,
