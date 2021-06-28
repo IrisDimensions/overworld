@@ -19,11 +19,11 @@ We sporadically review these requests so please contact us on Discord if you've 
 # Overworld V2  1.17
 Roadmap
 - [x] Ore implementation for copper 
-- [ ] New implementation for andesite, gravel, granite, and deepslate for the infinite height in 1.17+ (need to objectify them)
-- [ ] Fix implementation of objects in the REGIONS folder. They are not working, Clamp, and Bottom, are not working.
-- [ ] Amythests
+- [X] New implementation for andesite, gravel, granite, and deepslate for the infinite height in 1.17+ (need to objectify them)
+- [X] Fix implementation of objects in the REGIONS folder. They are not working, Clamp, and Bottom, are not working.
+- [X] Amythests
 - [ ] Pretty caves (with whatever new blocks they added!
 - [ ] Biomes that show off the new blocks
-- [ ] Implement all the new blocks
+- [X] Implement all the new blocks
 - [ ] Fix Despawns and rework Spawns
 
