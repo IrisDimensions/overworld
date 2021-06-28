@@ -26,4 +26,5 @@ Roadmap
 - [ ] Biomes that show off the new blocks
 - [X] Implement all the new blocks
 - [ ] Fix Despawns and rework Spawns
+- [WORKING OM THE BRANCH, WILL MERGE SOON] Fix loot and
 
