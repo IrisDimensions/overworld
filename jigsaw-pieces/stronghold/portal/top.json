@@ -132,9 +132,7 @@
             "entityCount": 1,
             "rotateConnector": false,
             "name": "",
-            "pools": [
-                "stronghold/portal-paths"
-            ],
+            "pools": ["stronghold/portal-paths"],
             "position": {
                 "x": 0,
                 "y": -5,
@@ -148,9 +146,7 @@
             "entityCount": 1,
             "rotateConnector": false,
             "name": "",
-            "pools": [
-                "stronghold/portal-paths"
-            ],
+            "pools": ["stronghold/portal-paths"],
             "position": {
                 "x": 14,
                 "y": -5,
@@ -164,9 +160,7 @@
             "entityCount": 1,
             "rotateConnector": false,
             "name": "",
-            "pools": [
-                "stronghold/portal-paths"
-            ],
+            "pools": ["stronghold/portal-paths"],
             "position": {
                 "x": 0,
                 "y": -5,
@@ -180,9 +174,7 @@
             "entityCount": 1,
             "rotateConnector": false,
             "name": "",
-            "pools": [
-                "stronghold/portal-paths"
-            ],
+            "pools": ["stronghold/portal-paths"],
             "position": {
                 "x": -14,
                 "y": -5,
@@ -198,18 +190,61 @@
         "density": 1,
         "boreExtendMinY": 0,
         "edit": [
-                {
-                    "find": [
-                        {"block": "glass"}
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "void_air"
-                            }
-                        ]
+            {
+                "chance": 0.3,
+                "find": [
+                    {
+                        "block": "stone_bricks"
                     }
+                ],
+                "replace": {
+                    "style": {
+                        "multiplier": 1,
+                        "style": "STATIC",
+                        "zoom": 1,
+                        "maxFractureAccuracy": false,
+                        "exponent": 1
+                    },
+                    "zoom": 5,
+                    "palette": [
+                        {
+                            "block": "mossy_stone_bricks"
+                        },
+                        {
+                            "block": "cracked_stone_bricks"
+                        }
+                    ]
+                }
+            },
+            {
+                "chance": 0.4,
+                "find": [{
+                    "debug": false,
+                    "data": {},
+                    "weight": 1,
+                    "block": "stone",
+                    "key": "minecraft"
                 }],
+                "replace": {
+                    "style": {
+                        "multiplier": 1,
+                        "style": "STATIC",
+                        "zoom": 1,
+                        "maxFractureAccuracy": false,
+                        "exponent": 1
+                    },
+                    "zoom": 5,
+                    "palette": [{
+                        "debug": false,
+                        "data": {},
+                        "weight": 1,
+                        "block": "stone_bricks",
+                        "key": "minecraft"
+                    }]
+                },
+                "exact": false
+            }
+        ],
         "bottom": false,
         "translateCenter": false,
         "rotation": {
@@ -261,5 +296,5 @@
             "exponent": 1
         }
     },
-    "object": "stronghold/portal/top"
+    "object": "stronghold/portal/top_new"
 }

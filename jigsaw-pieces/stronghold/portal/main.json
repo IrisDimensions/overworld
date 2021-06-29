@@ -20,37 +20,196 @@
         "density": 1,
         "boreExtendMinY": 0,
         "edit": [
-                {
-                    "find": [
-                        {"block": "glass"}
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "void_air"
-                            }
-                        ]
-                    }
-                },{
-                    "find": [
-                        {"block": "end_portal_frame"}
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "weight": 3,
-                                "block": "end_portal_frame",
-                                "data": {
-                                    "eye": true
-                                }
-                            },
-                            {
-                                "weight": 10,
-                                "block": "end_portal_frame"
-                            }
-                        ]
-                    }
+            {
+                "chance": 0.15,
+                "find": [{
+                    "debug": false,
+                    "data": {"facing": "east"},
+                    "weight": 1,
+                    "block": "end_portal_frame",
+                    "key": "minecraft"
                 }],
+                "replace": {
+                    "style": {
+                        "multiplier": 1,
+                        "style": "STATIC",
+                        "zoom": 1,
+                        "maxFractureAccuracy": false,
+                        "exponent": 1
+                    },
+                    "zoom": 5,
+                    "palette": [{
+                        "debug": false,
+                        "data": {
+                            "eye": "true",
+                            "facing": "east"
+                        },
+                        "weight": 1,
+                        "block": "end_portal_frame",
+                        "key": "minecraft"
+                    }]
+                },
+                "exact": true
+            },
+            {
+                "chance": 0.15,
+                "find": [{
+                    "debug": false,
+                    "data": {"facing": "west"},
+                    "weight": 1,
+                    "block": "end_portal_frame",
+                    "key": "minecraft"
+                }],
+                "replace": {
+                    "style": {
+                        "multiplier": 1,
+                        "style": "STATIC",
+                        "zoom": 1,
+                        "maxFractureAccuracy": false,
+                        "exponent": 1
+                    },
+                    "zoom": 5,
+                    "palette": [{
+                        "debug": false,
+                        "data": {
+                            "eye": "true",
+                            "facing": "west"
+                        },
+                        "weight": 1,
+                        "block": "end_portal_frame",
+                        "key": "minecraft"
+                    }]
+                },
+                "exact": true
+            },
+            {
+                "chance": 0.15,
+                "find": [{
+                    "debug": false,
+                    "data": {"facing": "north"},
+                    "weight": 1,
+                    "block": "end_portal_frame",
+                    "key": "minecraft"
+                }],
+                "replace": {
+                    "style": {
+                        "multiplier": 1,
+                        "style": "STATIC",
+                        "zoom": 1,
+                        "maxFractureAccuracy": false,
+                        "exponent": 1
+                    },
+                    "zoom": 5,
+                    "palette": [{
+                        "debug": false,
+                        "data": {
+                            "eye": "true",
+                            "facing": "north"
+                        },
+                        "weight": 1,
+                        "block": "end_portal_frame",
+                        "key": "minecraft"
+                    }]
+                },
+                "exact": true
+            },
+            {
+                "chance": 0.15,
+                "find": [{
+                    "debug": false,
+                    "data": {"facing": "south"},
+                    "weight": 1,
+                    "block": "end_portal_frame",
+                    "key": "minecraft"
+                }],
+                "replace": {
+                    "style": {
+                        "multiplier": 1,
+                        "style": "STATIC",
+                        "zoom": 1,
+                        "maxFractureAccuracy": false,
+                        "exponent": 1
+                    },
+                    "zoom": 5,
+                    "palette": [{
+                        "debug": false,
+                        "data": {
+                            "eye": "true",
+                            "facing": "south"
+                        },
+                        "weight": 1,
+                        "block": "end_portal_frame",
+                        "key": "minecraft"
+                    }]
+                },
+                "exact": true
+            },
+            {
+                "chance": 0.3,
+                "find": [{
+                    "debug": false,
+                    "data": {},
+                    "weight": 1,
+                    "block": "stone_bricks",
+                    "key": "minecraft"
+                }],
+                "replace": {
+                    "style": {
+                        "multiplier": 1,
+                        "style": "STATIC",
+                        "zoom": 1,
+                        "maxFractureAccuracy": false,
+                        "exponent": 1
+                    },
+                    "zoom": 5,
+                    "palette": [
+                        {
+                            "debug": false,
+                            "data": {},
+                            "weight": 1,
+                            "block": "mossy_stone_bricks",
+                            "key": "minecraft"
+                        },
+                        {
+                            "debug": false,
+                            "data": {},
+                            "weight": 1,
+                            "block": "cracked_stone_bricks",
+                            "key": "minecraft"
+                        }
+                    ]
+                },
+                "exact": false
+            },
+            {
+                "chance": 0.3,
+                "find": [{
+                    "debug": false,
+                    "data": {},
+                    "weight": 1,
+                    "block": "stone",
+                    "key": "minecraft"
+                }],
+                "replace": {
+                    "style": {
+                        "multiplier": 1,
+                        "style": "STATIC",
+                        "zoom": 1,
+                        "maxFractureAccuracy": false,
+                        "exponent": 1
+                    },
+                    "zoom": 4,
+                    "palette": [{
+                        "debug": false,
+                        "data": {},
+                        "weight": 1,
+                        "block": "stone_bricks",
+                        "key": "minecraft"
+                    }]
+                },
+                "exact": false
+            }
+        ],
         "bottom": false,
         "translateCenter": false,
         "rotation": {
