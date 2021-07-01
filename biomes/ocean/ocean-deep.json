@@ -5,7 +5,7 @@
     "generators": [
         {
             "generator": "smooth-dunes",
-            "max": -25,
+            "max": -30,
             "min": -50
         }
     ],
@@ -95,20 +95,32 @@
             ]
         }
     ],
-    "loot": {
-        "tables": [
-            "ocean-clutter",
-            "global-treasure",
-            "cold-food",
-            "tropical-treasure"
-        ]
-    },
     "objects": [
+        {
+            "underwater": true,
+            "waterloggable": true,
+            "chance": 0.008,
+            "mode": "FAST_MIN_HEIGHT",
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": -360,
+                    "max": 360
+                }
+            },
+            "place": [
+                "ships/gall-1",
+                "ships/gall-2",
+                "ships/gall-3"
+            ]
+        },
         {
             "place": [
                 "ships/generic"
             ],
-            "chance": 0.01,
+            "chance": 0.001,
             "onwater": true,
             "translate": {
                 "y": -1
@@ -118,7 +130,7 @@
         {
             "underwater": true,
             "waterloggable": true,
-            "chance": 0.2,
+            "chance": 0.01,
             "mode": "FAST_MIN_HEIGHT",
             "rotation": {
                 "enabled": true,
@@ -151,17 +163,6 @@
                 "shipwreck/upsidedown-backhalf",
                 "shipwreck/upsidedown-backhalf-degraded"
             ]
-        },
-        {
-            "place": [
-                "ships/generic"
-            ],
-            "chance": 0.005,
-            "onwater": true,
-            "translate": {
-                "y": -1
-            },
-            "waterloggable": true
         }
     ]
 }

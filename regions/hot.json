@@ -14,7 +14,8 @@
         "hot/hot-ocean"
     ],
     "caveBiomes": [
-        "hot/hot-sandy-cave"
+        "hot/hot-sandy-cave",
+        "hot/hot-sandy-red-cave"
     ],
     "riverStyle": {
         "style": "VASCULAR",
@@ -27,12 +28,16 @@
     },
     "jigsawStructures": [
         {
-            "rarity": 2000,
+            "rarity": 1000,
             "structure": "pillager"
         },
         {
-            "rarity": 1050,
+            "rarity": 500,
             "structure": "village-hot"
+        },
+        {
+            "rarity": 1500,
+            "structure": "desert-pyramid"
         }
     ],
     "biomeImplosionRatio": 0.25,
@@ -154,6 +159,85 @@
     ],
     "objects": [
         {
+             "heightmap": {
+                "seed": 1337,
+                "style": {
+                    "style": "SIMPLEX",
+                    "multiplier": 5
+                },
+                "offsetY": 7
+            },
+            "chance": 0.9,
+            "edit": [
+                {
+                    "chance": 0.01,
+                    "find": [{"block": "deepslate"}],
+                    "replace": {"palette": [{"block": "deepslate_coal_ore"},{"block": "deepslate_copper_ore"},{"block": "deepslate_diamond_ore"},{"block": "deepslate_emerald_ore"},{"block": "deepslate_gold_ore"},{"block": "deepslate_iron_ore"},{"block": "deepslate_lapis_ore"},{"block": "deepslate_redstone_ore"}]}
+                }
+            ],
+            "place": [
+                "deepslate/ds1",
+                "deepslate/ds2",
+                "deepslate/ds3"
+            ],
+                "enabled": true,
+                "xAxis": {
+                    "interval": 15,
+                    "max": 360,
+                    "min": 0
+                }
+        },
+        {
+            "heightmap": {
+                "seed": 1337,
+                "style": {
+                    "style": "SIMPLEX",
+                    "multiplier": 10
+                },
+                "offsetY": 12
+            },
+            "chance": 0.05,
+            "bottom": true,
+            "density": 1,
+            "place": [
+                "amethyst/ame1",
+                "amethyst/ame2",
+                "amethyst/ame3",
+                "amethyst/ame4",
+                "amethyst/ame5",
+                "amethyst/ame6"
+            ],
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "glass"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "void_air"
+                            }
+                        ]
+                    }
+                }
+            ],
+                "enabled": true,
+                "xAxis": {
+                    "interval": 90,
+                    "max": 360,
+                    "min": 0
+                },
+                "yAxis": {
+                    "interval": 90,
+                    "max": 360,
+                    "min": 0
+                },
+            "translate": {"yRandom": 15, "y": 10}
+
+        },
+        {
             "name": "standard-surface-portals",
             "chance": 0.001,
             "place": [
@@ -240,10 +324,15 @@
     "shoreHeightMin": 3.2,
     "shoreHeightMax": 6.2,
     "loot": {
+        "mode": "ADD",
+        "multiplier": 1,
         "tables": [
+            "global-clutter",
+            "global-tools",
+            "global-treasure",
             "hot-food",
             "hot-treasure",
-            "global-tools"
+            "cactus-clutter"
         ]
     },
     "shoreHeightZoom": 1.14,

@@ -20,15 +20,6 @@
     "riverBiomes": [
         "mesa/mesa-river"
     ],
-    "structures": [
-        {
-            "tileset": "soul-temple",
-            "height": 26,
-            "rarity": 3,
-            "ratio": 0.9,
-            "zoom": 1
-        }
-    ],
     "spotBiomes": [
         {
             "biome": "hot/hot-ocean",
@@ -48,6 +39,87 @@
             "zoom": 5
         }
     },
+    "objects": [
+        {
+             "heightmap": {
+                "seed": 1337,
+                "style": {
+                    "style": "SIMPLEX",
+                    "multiplier": 5
+                },
+                "offsetY": 7
+            },
+            "chance": 0.9,
+            "edit": [
+                {
+                    "chance": 0.01,
+                    "find": [{"block": "deepslate"}],
+                    "replace": {"palette": [{"block": "deepslate_coal_ore"},{"block": "deepslate_copper_ore"},{"block": "deepslate_diamond_ore"},{"block": "deepslate_emerald_ore"},{"block": "deepslate_gold_ore"},{"block": "deepslate_iron_ore"},{"block": "deepslate_lapis_ore"},{"block": "deepslate_redstone_ore"}]}
+                }
+            ],
+            "place": [
+                "deepslate/ds1",
+                "deepslate/ds2",
+                "deepslate/ds3"
+            ],
+                "enabled": true,
+                "xAxis": {
+                    "interval": 15,
+                    "max": 360,
+                    "min": 0
+                }
+        },
+        {
+            "heightmap": {
+                "seed": 1337,
+                "style": {
+                    "style": "SIMPLEX",
+                    "multiplier": 10
+                },
+                "offsetY": 12
+            },
+            "chance": 0.05,
+            "bottom": true,
+            "density": 1,
+            "place": [
+                "amethyst/ame1",
+                "amethyst/ame2",
+                "amethyst/ame3",
+                "amethyst/ame4",
+                "amethyst/ame5",
+                "amethyst/ame6"
+            ],
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "glass"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "void_air"
+                            }
+                        ]
+                    }
+                }
+            ],
+                "enabled": true,
+                "xAxis": {
+                    "interval": 90,
+                    "max": 360,
+                    "min": 0
+                },
+                "yAxis": {
+                    "interval": 90,
+                    "max": 360,
+                    "min": 0
+                },
+            "translate": {"yRandom": 15, "y": 10}
+
+        }
+    ],
     "deposits": [
         {
             "minHeight": 8,
@@ -64,6 +136,17 @@
             "varience": 4
         }
     ],
+        "loot": {
+        "mode": "ADD",
+        "multiplier": 1,
+        "tables": [
+            "global-clutter",
+            "global-tools",
+            "global-treasure",
+            "hot-treasure",
+            "hot-food"
+        ]
+    },
     "riverRarity": 1,
     "landBiomeZoom": 1.5,
     "shoreHeightMin": 4,

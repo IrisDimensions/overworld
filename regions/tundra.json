@@ -43,6 +43,16 @@
             "varience": 2
         }
     ],
+    "jigsawStructures": [
+        {
+            "rarity": 750,
+            "structure": "pillager"
+        },
+        {
+            "rarity": 500,
+            "structure": "village-tundra"
+        }
+    ],
     "riverRarity": 1,
     "landBiomeZoom": 1.25,
     "riverStyle": {
@@ -57,11 +67,97 @@
     "shoreHeightMin": 2.2,
     "shoreHeightMax": 5.2,
     "loot": {
+        "mode": "ADD",
+        "multiplier": 1,
         "tables": [
-            "cold-food",
-            "cold-treasure"
+            "global-clutter",
+            "global-tools",
+            "global-treasure",
+            "cold-treasure",
+            "cold-food"
         ]
     },
+    "objects": [
+        {
+             "heightmap": {
+                "seed": 1337,
+                "style": {
+                    "style": "SIMPLEX",
+                    "multiplier": 5
+                },
+                "offsetY": 7
+            },
+            "chance": 0.9,
+            "edit": [
+                {
+                    "chance": 0.01,
+                    "find": [{"block": "deepslate"}],
+                    "replace": {"palette": [{"block": "deepslate_coal_ore"},{"block": "deepslate_copper_ore"},{"block": "deepslate_diamond_ore"},{"block": "deepslate_emerald_ore"},{"block": "deepslate_gold_ore"},{"block": "deepslate_iron_ore"},{"block": "deepslate_lapis_ore"},{"block": "deepslate_redstone_ore"}]}
+                }
+            ],
+            "place": [
+                "deepslate/ds1",
+                "deepslate/ds2",
+                "deepslate/ds3"
+            ],
+                "enabled": true,
+                "xAxis": {
+                    "interval": 15,
+                    "max": 360,
+                    "min": 0
+                }
+        },
+        {
+            "heightmap": {
+                "seed": 1337,
+                "style": {
+                    "style": "SIMPLEX",
+                    "multiplier": 10
+                },
+                "offsetY": 12
+            },
+            "chance": 0.05,
+            "bottom": true,
+            "density": 1,
+            "place": [
+                "amethyst/ame1",
+                "amethyst/ame2",
+                "amethyst/ame3",
+                "amethyst/ame4",
+                "amethyst/ame5",
+                "amethyst/ame6"
+            ],
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "glass"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "void_air"
+                            }
+                        ]
+                    }
+                }
+            ],
+                "enabled": true,
+                "xAxis": {
+                    "interval": 90,
+                    "max": 360,
+                    "min": 0
+                },
+                "yAxis": {
+                    "interval": 90,
+                    "max": 360,
+                    "min": 0
+                },
+            "translate": {"yRandom": 15, "y": 10}
+
+        }
+    ],
     "shoreHeightZoom": 1.14,
     "riverThickness": 0.025,
     "rarity": 4
