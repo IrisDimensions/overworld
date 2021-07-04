@@ -1,20 +1,14 @@
 {
-    "name": "Frozen Mountains",
+    "name": "Frozen Spruce Plains",
     "derivative": "SNOWY_TAIGA",
     "vanillaDerivative": "SNOWY_TAIGA",
     "children": [
-        "frozen/frozen-mountain-middle",
-        "frozen/frozen-peak",
-        "frozen/frozen-mountain-cliffs"
+        "frozen/spruce-hills"
     ],
     "layers": [
         {
-            "minHeight": 1,
+            "minHeight": 0,
             "maxHeight": 1,
-            "slopeCondition": {
-                "minimumSlope": 0,
-                "maximumSlope": 3.295
-            },
             "palette": [
                 {
                     "block": "snow_block"
@@ -34,32 +28,11 @@
             ]
         },
         {
-            "minHeight": 2,
-            "maxHeight": 4,
-            "slopeCondition": {
-                "minimumSlope": 3.95
-            },
+            "minHeight": 4,
+            "maxHeight": 7,
             "palette": [
                 {
-                    "block": "gravel"
-                },
-                {
-                    "block": "cyan_terracotta"
-                }
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 3,
-            "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "gravel"
+                    "block": "dirt"
                 }
             ]
         },
@@ -98,9 +71,9 @@
     ],
     "generators": [
         {
-            "min": 70,
-            "max": 140,
-            "generator": "plain"
+            "generator": "smooth-dunes",
+            "max": 6,
+            "min": 3
         }
     ],
     "decorators": [
@@ -134,20 +107,48 @@
                 },
                 {
                     "block": "air"
+                },
+                {
+                    "data": {
+                        "layers": 2
+                    },
+                    "block": "snow"
+                },
+                {
+                    "data": {
+                        "layers": 3
+                    },
+                    "block": "snow"
                 }
             ]
         }
     ],
-    "biomeZoom": 30,
-    "biomeStyle": {
-        "style": "IRIS",
-        "zoom": 0.7,
-        "exponent": 4
-    },
-    "biomeScatter": [
-        "PLAINS",
-        "TAIGA_HILLS",
-        "MOUNTAINS"
+    "objects": [
+        {
+            "chance": 0.8,
+            "snow": 1,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "evergreen/fantasy_evergreen_large1",
+                "evergreen/fantasy_evergreen_large1",
+                "evergreen/fantasy_evergreen_medium1",
+                "evergreen/fantasy_evergreen_medium2",
+                "evergreen/fantasy_evergreen_medium3"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -2,
+                "z": 0
+            }
+        }
     ],
     "wall": {
         "palette": [
@@ -158,5 +159,13 @@
                 "block": "andesite"
             }
         ]
-    }
+    },
+    "entityInitialSpawns": [
+        {
+            "entity": "polar-bear",
+            "maxSpawns": 2,
+            "minSpawns": 1,
+            "rarity": 7
+        }
+    ]
 }
