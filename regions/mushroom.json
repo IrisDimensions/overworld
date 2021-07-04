@@ -1,15 +1,15 @@
 {
     "name": "Mushroom",
     "landBiomes": [
-        "mushroom/mushroom-forest",
-        "mushroom/mushroom-forest-hills",
-		"mushroom/mushroom-plains"
+        "mushroom/forest",
+        "mushroom/forest-hills",
+		"mushroom/plains"
     ],
     "shoreBiomes": [
-        "mushroom/mushroom-beach"
+        "mushroom/beach"
     ],
     "seaBiomes": [
-        "mushroom/mushroom-ocean"
+        "mushroom/ocean"
     ],
     "blockDrops": [
         {
@@ -50,20 +50,40 @@
     },
     "spotBiomes": [
         {
-            "biome": "mushroom/mushroom-crimson-forest",
+            "biome": "mushroom/crimson-forest",
             "scale": 0.78,
             "type": "LAND",
             "shuffle": 44,
             "rarity": 52
         },
         {
-            "biome": "mushroom/mushroom-warped-forest",
+            "biome": "mushroom/warped-forest",
             "scale": 0.77,
             "type": "LAND",
             "shuffle": 44,
             "rarity": 31
         }
     ],
+    "deposits": [
+        {
+            "minHeight": 15,
+            "maxPerChunk": 6,
+            "maxHeight": 122,
+            "minPerChunk": 4,
+            "minSize": 3,
+            "maxSize": 5,
+            "palette": [
+                {
+                    "block": "mushroom_stem"
+                },
+                {
+                    "block": "stone"
+                }
+            ],
+            "varience": 4
+        }
+    ],
+
     "objects": [
         {
              "heightmap": {
@@ -159,6 +179,15 @@
             "particleOffset": 2,
             "interval": 50,
             "particleCount": 0
+        },
+        {
+            "volume": 6.2,
+            "minPitch": 0.2,
+            "chance": 8,
+            "maxPitch": 0.3,
+            "sound": "AMBIENT_WARPED_FOREST_ADDITIONS",
+            "interval": 60000,
+            "soundDistance": 3
         }
     ],
     "shoreHeightMin": 3.2,

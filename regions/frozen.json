@@ -1,38 +1,38 @@
 {
     "name": "Frozen",
     "landBiomes": [
-        "frozen/frozen-plains",
-        "frozen/frozen-pines",
-        "frozen/frozen-plains",
-		"frozen/frozen-mountain",
-		"frozen/frozen-redwood-forest",
-		"frozen/frozen-hills",
-        "frozen/frozen-pine-plains",
-        "frozen/frozen-spruce-plains"
+        "frozen/plains",
+        "frozen/pines",
+        "frozen/plains",
+		"frozen/mountain",
+		"frozen/redwood-forest",
+		"frozen/hills",
+        "frozen/pine-plains",
+        "frozen/spruce-plains"
     ],
     "shoreBiomes": [
-        "frozen/frozen-beach"
+        "frozen/beach"
     ],
     "seaBiomes": [
-        "frozen/frozen-river"
+        "frozen/river"
     ],
     "caveBiomes": [
-        "frozen/frozen-ice-cavern",
-        "temperate/temperate-cracked-cavern"
+        "frozen/ice-cavern",
+        "temperate/cracked-cavern"
     ],
     "riverBiomes": [
-        "frozen/frozen-river"
+        "frozen/river"
     ],
     "spotBiomes": [
         {
-            "biome": "frozen/frozen-ocean",
+            "biome": "frozen/ocean",
             "scale": 5,
             "type": "SEA",
             "shuffle": 328,
             "rarity": 36
         },
         {
-            "biome": "frozen/frozen-vander",
+            "biome": "frozen/vander",
             "scale": 5,
             "type": "LAND",
             "shuffle": 328,
@@ -62,6 +62,34 @@
                 }
             ],
             "varience": 4
+        },
+        {
+            "minHeight": 1,
+            "maxPerChunk": 5,
+            "maxHeight": 175,
+            "minPerChunk": 3,
+            "minSize": 5,
+            "maxSize": 10,
+            "palette": [
+                {
+                    "block": "coal_ore"
+                }
+            ],
+            "varience": 9
+        },
+        {
+            "minHeight": 1,
+            "maxPerChunk": 5,
+            "maxHeight": 64,
+            "minPerChunk": 4,
+            "minSize": 4,
+            "maxSize": 9,
+            "palette": [
+                {
+                    "block": "copper_ore"
+                }
+            ],
+            "varience": 7
         }
     ],
     "biomeImplosionRatio": 0.25,
@@ -71,21 +99,18 @@
     "shoreHeightMax": 4.2,
     "loot": {
         "mode": "ADD",
-        "multiplier": 0.8,
+        "multiplier": 1,
         "tables": [
-            "global-clutter",
             "global-tools",
-            "global-treasure",
             "frozen-clutter",
             "frozen-food",
             "snow-clutter",
-            "cold-food",
             "cold-treasure"
         ]
     },
     "objects": [
         {
-             "heightmap": {
+            "heightmap": {
                 "seed": 1337,
                 "style": {
                     "style": "SIMPLEX",

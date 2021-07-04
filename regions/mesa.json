@@ -1,28 +1,28 @@
 {
     "name": "Mesa",
     "landBiomes": [
-        "mesa/mesa-plateau",
-        "mesa/mesa-valleys",
-        "mesa/mesa-plateau-high",
-        "mesa/mesa-valleys",
+        "mesa/plateau",
+        "mesa/valleys",
+        "mesa/plateau-high",
+        "mesa/valleys",
         "mesa/mesa",
-        "mesa/mesa-cliffs"
+        "mesa/cliffs"
     ],
     "shoreBiomes": [
-        "mesa/mesa-beach"
+        "mesa/beach"
     ],
     "seaBiomes": [
-        "mesa/mesa-river"
+        "mesa/river"
     ],
     "caveBiomes": [
-        "temperate/temperate-old-cavern"
+        "temperate/old-cavern"
     ],
     "riverBiomes": [
-        "mesa/mesa-river"
+        "mesa/river"
     ],
     "spotBiomes": [
         {
-            "biome": "hot/hot-ocean",
+            "biome": "hot/ocean",
             "scale": 5,
             "type": "SEA",
             "shuffle": 328,
@@ -122,6 +122,34 @@
     ],
     "deposits": [
         {
+            "minHeight": 25,
+            "maxPerChunk": 9,
+            "maxHeight": 50,
+            "minPerChunk": 3,
+            "minSize": 3,
+            "maxSize": 4,
+            "palette": [
+                {
+                    "block": "gold_ore"
+                }
+            ],
+            "varience": 5
+        },
+        {
+            "minHeight": 15,
+            "maxPerChunk": 4,
+            "maxHeight": 35,
+            "minPerChunk": 2,
+            "minSize": 3,
+            "maxSize": 5,
+            "palette": [
+                {
+                    "block": "lapis_ore"
+                }
+            ],
+            "varience": 5
+        },
+        {
             "minHeight": 8,
             "maxPerChunk": 12,
             "maxHeight": 57,
@@ -142,7 +170,6 @@
         "tables": [
             "global-clutter",
             "global-tools",
-            "global-treasure",
             "hot-treasure",
             "hot-food"
         ]
