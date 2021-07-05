@@ -2,55 +2,29 @@
     "name": "Tundra River Rocky",
     "derivative": "LUKEWARM_OCEAN",
     "vanillaDerivative": "LUKEWARM_OCEAN",
-    "generators": [
-        {
-            "min": -31,
-            "max": -7,
-            "generator": "plain"
-        }
-    ],
+    "generators": [{
+        "min": -31,
+        "max": -7,
+        "generator": "plain"
+    }],
     "layers": [
         {
             "minHeight": 2,
             "maxHeight": 3,
-            "style": {
-                "style": "STATIC"
-            },
+            "style": {"style": "STATIC"},
             "zoom": 0.825,
             "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "clay"
-                },
-                {
-                    "block": "cobblestone"
-                },
-                {
-                    "block": "gravel"
-                },
-                {
-                    "block": "cobblestone"
-                },
-                {
-                    "block": "dirt"
-                },
-                {
-                    "block": "cobblestone"
-                },
-                {
-                    "block": "andesite"
-                }
+                {"block": "stone"},
+                {"block": "clay"},
+                {"block": "cobblestone"},
+                {"block": "gravel"},
+                {"block": "cobblestone"},
+                {"block": "dirt"},
+                {"block": "cobblestone"},
+                {"block": "andesite"}
             ]
         },
-        {
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
-        },
+        {"palette": [{"block": "dirt"}]},
         {
             "minHeight": 1,
             "maxHeight": 3,
@@ -59,106 +33,63 @@
                     "weight": 2,
                     "block": "dirt"
                 },
-                {
-                    "block": "coarse_dirt"
-                }
+                {"block": "coarse_dirt"}
             ]
         }
     ],
     "decorators": [
         {
-            "chance": 0.0006,
-            "variance": {
-                "style": "STATIC"
-            },
+            "chance": 6.0E-4,
+            "variance": {"style": "STATIC"},
             "zoom": 1,
             "palette": [
-                {
-                    "block": "soul_sand"
-                },
-                {
-                    "block": "magma_block"
-                }],
-            "style": {
-                "style": "STATIC"
-            }
+                {"block": "soul_sand"},
+                {"block": "magma_block"}
+            ],
+            "style": {"style": "STATIC"}
         },
         {
             "chance": 0.07,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 5,
-            "palette": [
-                {
-                    "block": "seagrass"
-                }],
-            "style": {
-                "style": "STATIC"
-            }
+            "palette": [{"block": "seagrass"}],
+            "style": {"style": "STATIC"}
         },
         {
             "chance": 0.055,
             "verticalZoom": 20,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "stackMax": 9,
             "zoom": 1,
-            "palette": [
-                {
-                    "block": "kelp_plant"
-                }],
-            "style": {
-                "style": "STATIC"
-            },
-            "heightVariance": {
-                "style": "STATIC"
-            },
+            "palette": [{"block": "kelp_plant"}],
+            "style": {"style": "STATIC"},
+            "heightVariance": {"style": "STATIC"},
             "stackMin": 1
         },
         {
             "chance": 0.001,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 1,
-            "palette": [
-                {
-                    "data": {
-                        "waterlogged": true,
-                        "pickles": 1
-                    },
-                    "block": "sea_pickle"
-                }],
-            "style": {
-                "style": "STATIC"
-            }
+            "palette": [{
+                "data": {
+                    "waterlogged": true,
+                    "pickles": 1
+                },
+                "block": "sea_pickle"
+            }],
+            "style": {"style": "STATIC"}
         }
     ],
     "objects": [
         {
             "chance": 0.67,
-            "edit": [
-                {
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "cave_air"
-                            }
-                        ]
-                    },
-                    "find": [
-                        {
-                            "block": "water"
-                        }
-                    ]
-                }],
+            "edit": [{
+                "replace": {"palette": [{"block": "cave_air"}]},
+                "find": [{"block": "water"}]
+            }],
             "mode": "PAINT",
             "underwater": true,
-            "place": [
-                "underwater/cobble-spike"
-            ]
+            "place": ["underwater/cobble-spike"]
         },
         {
             "chance": 0.01,
@@ -173,22 +104,14 @@
             },
             "underwater": true,
             "place": [
-                "ships/swreck-1","ships/usd-ship-1","ships/usd-ship-2"],
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "oak_stairs"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "oak_planks"
-                            }
-                        ]
-                    }
-                }],
+                "ships/swreck-1",
+                "ships/usd-ship-1",
+                "ships/usd-ship-2"
+            ],
+            "edit": [{
+                "find": [{"block": "oak_stairs"}],
+                "replace": {"palette": [{"block": "oak_planks"}]}
+            }],
             "translate": {
                 "x": 0,
                 "y": -4,
@@ -208,7 +131,12 @@
             },
             "underwater": true,
             "place": [
-                "statue/sub-stat-1","statue/sub-stat-2","statue/sub-stat-3","statue/sub-stat-4","statue/sub-stat-5"],
+                "statue/sub-stat-1",
+                "statue/sub-stat-2",
+                "statue/sub-stat-3",
+                "statue/sub-stat-4",
+                "statue/sub-stat-5"
+            ],
             "translate": {
                 "x": 0,
                 "y": 2,
@@ -217,28 +145,16 @@
         }
     ],
     "wall": {
-        "style": {
-            "style": "IRIS"
-        },
+        "style": {"style": "IRIS"},
         "palette": [
-            {
-                "block": "clay"
-            },
-            {
-                "block": "cobblestone"
-            },
-            {
-                "block": "stone"
-            },
-            {
-                "block": "andesite"
-            }
+            {"block": "clay"},
+            {"block": "cobblestone"},
+            {"block": "stone"},
+            {"block": "andesite"}
         ]
     },
     "slab": {
-        "style": {
-            "style": "STATIC"
-        },
+        "style": {"style": "STATIC"},
         "palette": [
             {
                 "data": {
@@ -247,9 +163,7 @@
                 },
                 "block": "cobblestone_slab"
             },
-            {
-                "block": "air"
-            }
+            {"block": "air"}
         ]
     }
 }

@@ -17,18 +17,14 @@
         "mesa/yellow",
         "mesa/blue"
     ],
-    "generators": [
-        {
-            "min": 25,
-            "max": 60,
-            "generator": "cracked-cliffs"
-        }
-    ],
+    "generators": [{
+        "min": 25,
+        "max": 60,
+        "generator": "cracked-cliffs"
+    }],
     "layers": [
         {
-            "style": {
-                "style": "FRACTAL_SMOKE"
-            },
+            "style": {"style": "FRACTAL_SMOKE"},
             "zoom": 0.6,
             "minHeight": 2,
             "maxHeight": 2,
@@ -70,18 +66,12 @@
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "palette": [
-                {
-                    "block": "light_gray_terracotta"
-                }
-            ]
+            "palette": [{"block": "light_gray_terracotta"}]
         },
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "style": {
-                "style": "STATIC"
-            },
+            "style": {"style": "STATIC"},
             "palette": [
                 {
                     "weight": 1,
@@ -96,36 +86,22 @@
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "palette": [
-                {
-                    "block": "terracotta"
-                }
-            ]
+            "palette": [{"block": "terracotta"}]
         },
         {
             "minHeight": 2,
             "maxHeight": 2,
-            "palette": [
-                {
-                    "block": "orange_terracotta"
-                }
-            ]
+            "palette": [{"block": "orange_terracotta"}]
         },
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "palette": [
-                {
-                    "block": "terracotta"
-                }
-            ]
+            "palette": [{"block": "terracotta"}]
         },
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "style": {
-                "style": "STATIC"
-            },
+            "style": {"style": "STATIC"},
             "palette": [
                 {
                     "weight": 1,
@@ -140,20 +116,12 @@
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "palette": [
-                {
-                    "block": "light_gray_terracotta"
-                }
-            ]
+            "palette": [{"block": "light_gray_terracotta"}]
         },
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "palette": [
-                {
-                    "block": "terracotta"
-                }
-            ]
+            "palette": [{"block": "terracotta"}]
         }
     ],
     "childStyle": {
@@ -166,53 +134,48 @@
             "multiplier": 2
         }
     },
-    "childShrinkFactor": 1.0,
-    "decorators": [
-        {
-            "chance": 0.009,
-            "variance": {
-                "style": "STATIC"
-            },
-            "zoom": 0.3,
-            "palette": [
-                {
-                    "data": {
-                        "face": "floor",        "powered": false,
-                        "facing": "east"
-                    },
-                    "block": "stone_button"
+    "childShrinkFactor": 1,
+    "decorators": [{
+        "chance": 0.009,
+        "variance": {"style": "STATIC"},
+        "zoom": 0.3,
+        "palette": [
+            {
+                "data": {
+                    "face": "floor",
+                    "powered": false,
+                    "facing": "east"
                 },
-                {
-                    "data": {
-                        "face": "floor",        "powered": false,
-                        "facing": "south"
-                    },
-                    "block": "stone_button"
-                }],
-            "style": {
-                "style": "STATIC"
+                "block": "stone_button"
+            },
+            {
+                "data": {
+                    "face": "floor",
+                    "powered": false,
+                    "facing": "south"
+                },
+                "block": "stone_button"
             }
-        }
-    ],
-    "biomeStyle": {
-        "style": "IRIS"
-    },
-    "objects": [
-        {
-            "place": [
-                "desert/tower","desert/tower-twin"],
-            "chance": 0.1,
-            "density": 2,
-            "mode": "FAST_STILT",
-            "rotation": {
+        ],
+        "style": {"style": "STATIC"}
+    }],
+    "biomeStyle": {"style": "IRIS"},
+    "objects": [{
+        "place": [
+            "desert/tower",
+            "desert/tower-twin"
+        ],
+        "chance": 0.1,
+        "density": 2,
+        "mode": "FAST_STILT",
+        "rotation": {
+            "enabled": true,
+            "yAxis": {
                 "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "interval": 90,
-                    "min": -360,
-                    "max": 360
-                }
+                "interval": 90,
+                "min": -360,
+                "max": 360
             }
         }
-    ]
+    }]
 }

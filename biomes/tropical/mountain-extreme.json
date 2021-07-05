@@ -2,9 +2,7 @@
     "name": "Tropical Mountain Extreme",
     "derivative": "MODIFIED_JUNGLE",
     "vanillaDerivative": "MODIFIED_JUNGLE",
-    "children": [
-        "tropical/mountain-water"
-    ],
+    "children": ["tropical/mountain-water"],
     "generators": [
         {
             "generator": "mountain",
@@ -17,7 +15,6 @@
             "min": 30
         }
     ],
-
     "layers": [
         {
             "minHeight": 1,
@@ -26,12 +23,10 @@
                 "minimumSlope": 0,
                 "maximumSlope": 4.5
             },
-            "palette": [
-                {
-                    "weight": 1,
-                    "block": "grass_block"
-                }
-            ]
+            "palette": [{
+                "weight": 1,
+                "block": "grass_block"
+            }]
         },
         {
             "minHeight": 2,
@@ -40,11 +35,7 @@
                 "minimumSlope": 0,
                 "maximumSlope": 4.5
             },
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
+            "palette": [{"block": "dirt"}]
         }
     ],
     "childStyle": {
@@ -70,133 +61,102 @@
         {
             "chance": 0.2,
             "variance": {
-                "style": "CELLULAR","zoom": 0.3,
+                "style": "CELLULAR",
+                "zoom": 0.3,
                 "fracture": {
-                    "style": "SIMPLEX",    "zoom": 0.2,
+                    "style": "SIMPLEX",
+                    "zoom": 0.2,
                     "multiplier": 10,
                     "fracture": {
-                        "style": "STATIC",        "multiplier": 15
+                        "style": "STATIC",
+                        "multiplier": 15
                     }
                 }
             },
             "style": {
-                "style": "TRIOCTAVE_SIMPLEX","zoom": 0.3,
+                "style": "TRIOCTAVE_SIMPLEX",
+                "zoom": 0.3,
                 "fracture": {
-                    "style": "STATIC",    "multiplier": 8
+                    "style": "STATIC",
+                    "multiplier": 8
                 }
             },
             "palette": [
-                {
-                    "block": "dandelion"
-                },
-                {
-                    "block": "poppy"
-                },
-                {
-                    "block": "blue_orchid"
-                },
-                {
-                    "block": "allium"
-                },
-                {
-                    "block": "azure_bluet"
-                },
-                {
-                    "block": "red_tulip"
-                },
-                {
-                    "block": "orange_tulip"
-                },
-                {
-                    "block": "white_tulip"
-                },
-                {
-                    "block": "pink_tulip"
-                },
-                {
-                    "block": "oxeye_daisy"
-                },
-                {
-                    "block": "cornflower"
-                },
-                {
-                    "block": "lily_of_the_valley"
-                }
+                {"block": "dandelion"},
+                {"block": "poppy"},
+                {"block": "blue_orchid"},
+                {"block": "allium"},
+                {"block": "azure_bluet"},
+                {"block": "red_tulip"},
+                {"block": "orange_tulip"},
+                {"block": "white_tulip"},
+                {"block": "pink_tulip"},
+                {"block": "oxeye_daisy"},
+                {"block": "cornflower"},
+                {"block": "lily_of_the_valley"}
             ]
         },
-
         {
             "chance": 0.45,
-            "variance": {
-                "style": "IRIS"
-            },
+            "variance": {"style": "IRIS"},
             "zoom": 0.1,
             "palette": [
                 {
-                    "data": {
-                        "persistent": true
-                    },
+                    "data": {"persistent": true},
                     "block": "jungle_leaves"
                 },
+                {"block": "tall_grass"},
+                {"block": "grass"},
                 {
-                    "block": "tall_grass"
-                },
-                {
-                    "block": "grass"
-                },
-                {
-                    "data": {
-                        "persistent": true
-                    },
+                    "data": {"persistent": true},
                     "block": "jungle_leaves"
                 },
+                {"block": "grass"},
                 {
-                    "block": "grass"
-                },
-                {
-                    "data": {
-                        "persistent": true
-                    },
+                    "data": {"persistent": true},
                     "block": "jungle_leaves"
-                }],
-            "style": {
-                "style": "FRACTAL_BILLOW_IRIS","fracture": {
-                    "style": "STATIC"
                 }
+            ],
+            "style": {
+                "style": "FRACTAL_BILLOW_IRIS",
+                "fracture": {"style": "STATIC"}
             }
         },
         {
             "chance": 0.5,
             "verticalZoom": 88,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 10,
             "palette": [
-                {
-                    "block": "grass"
-                },
-                {
-                    "block": "tall_grass"
-                }],
-            "style": {
-                "style": "STATIC"
-            },
-            "heightVariance": {
-                "style": "STATIC"
-            }
+                {"block": "grass"},
+                {"block": "tall_grass"}
+            ],
+            "style": {"style": "STATIC"},
+            "heightVariance": {"style": "STATIC"}
         }
     ],
     "objects": [
         {
             "place": [
-                "bush/small/1","bush/small/2","bush/small/3"],
+                "bush/small/1",
+                "bush/small/2",
+                "bush/small/3"
+            ],
             "chance": 1,
             "density": 5
         },
         {
             "place": [
-                "tree/jungle/1","tree/jungle/2","tree/jungle/3","tree/jungle/4","tree/jungle/5","tree/jungle/6","tree/jungle/7","tree/jungle/8","tree/jungle/9"],
+                "tree/jungle/1",
+                "tree/jungle/2",
+                "tree/jungle/3",
+                "tree/jungle/4",
+                "tree/jungle/5",
+                "tree/jungle/6",
+                "tree/jungle/7",
+                "tree/jungle/8",
+                "tree/jungle/9"
+            ],
             "chance": 1,
             "rotation": {
                 "enabled": true,
@@ -207,9 +167,7 @@
                     "max": 360
                 }
             },
-            "translate": {
-                "y": -2
-            }
+            "translate": {"y": -2}
         }
     ]
 }

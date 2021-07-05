@@ -2,13 +2,11 @@
     "name": "Tropical River Steep",
     "derivative": "WARM_OCEAN",
     "vanillaDerivative": "WARM_OCEAN",
-    "generators": [
-        {
-            "generator": "river",
-            "max": -6,
-            "min": -15
-        }
-    ],
+    "generators": [{
+        "generator": "river",
+        "max": -6,
+        "min": -15
+    }],
     "layers": [
         {
             "minHeight": 2,
@@ -17,29 +15,15 @@
                 "minimumSlope": 0,
                 "maximumSlope": 3
             },
-            "style": {
-                "style": "FRACTAL_FBM_IRIS"
-            },
+            "style": {"style": "FRACTAL_FBM_IRIS"},
             "zoom": 0.6,
             "palette": [
-                {
-                    "block": "sand"
-                },
-                {
-                    "block": "clay"
-                },
-                {
-                    "block": "sand"
-                },
-                {
-                    "block": "gravel"
-                },
-                {
-                    "block": "sand"
-                },
-                {
-                    "block": "dirt"
-                },
+                {"block": "sand"},
+                {"block": "clay"},
+                {"block": "sand"},
+                {"block": "gravel"},
+                {"block": "sand"},
+                {"block": "dirt"},
                 {
                     "weight": 2,
                     "block": "sand"
@@ -49,52 +33,41 @@
         {
             "minHeight": 2,
             "maxHeight": 2,
-            "palette": [
-                {
-                    "block": "gravel"
-                }
-            ]
+            "palette": [{"block": "gravel"}]
         }
     ],
     "decorators": [
         {
             "chance": 0.1,
-            "palette": [
-                {
-                    "block": "kelp_plant"
-                }],
+            "palette": [{"block": "kelp_plant"}],
             "stackMin": 4,
             "stackMax": 10
         },
         {
             "chance": 0.05,
-            "palette": [
-                {
-                    "block": "seagrass"
-                }
-            ]
+            "palette": [{"block": "seagrass"}]
         },
         {
             "chance": 0.05,
-            "palette": [
-                {
-                    "block": "tall_seagrass",    "data": {
-                        "half": "lower"
-                    }
-                }],
-            "topPalette": [
-                {
-                    "block": "tall_seagrass",    "data": {
-                        "half": "upper"
-                    }
-                }
-            ]
+            "palette": [{
+                "block": "tall_seagrass",
+                "data": {"half": "lower"}
+            }],
+            "topPalette": [{
+                "block": "tall_seagrass",
+                "data": {"half": "upper"}
+            }]
         }
     ],
     "objects": [
         {
             "place": [
-                "landform/stone/1","landform/stone/2","landform/stone/3","landform/stone/4","landform/stone/5"],
+                "landform/stone/1",
+                "landform/stone/2",
+                "landform/stone/3",
+                "landform/stone/4",
+                "landform/stone/5"
+            ],
             "chance": 1,
             "mode": "FAST_MIN_HEIGHT",
             "underwater": true,
@@ -102,79 +75,56 @@
             "edit": [
                 {
                     "find": [
-                        {
-                            "block": "grass_block"
-                        },
-                        {
-                            "block": "dirt"
-                        }
+                        {"block": "grass_block"},
+                        {"block": "dirt"}
                     ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "clay"
-                            }
-                        ]
-                    }
+                    "replace": {"palette": [{"block": "clay"}]}
                 },
                 {
                     "find": [
-                        {
-                            "block": "tall_grass"
-                        },
-                        {
-                            "block": "grass"
-                        }
+                        {"block": "tall_grass"},
+                        {"block": "grass"}
                     ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "seagrass"
-                            }
-                        ]
-                    }
+                    "replace": {"palette": [{"block": "seagrass"}]}
                 }
             ]
         },
         {
-            "place": [
-                "landform/underwater/ellipsoid-1"],
+            "place": ["landform/underwater/ellipsoid-1"],
             "chance": 0.5,
             "underwater": true,
             "mode": "CENTER_HEIGHT",
-            "edit": [
-                {
-                    "find": [
+            "edit": [{
+                "find": [{"block": "clay"}],
+                "replace": {
+                    "style": {
+                        "style": "GLOB",
+                        "zoom": 0.02
+                    },
+                    "palette": [
                         {
+                            "weight": 2,
                             "block": "clay"
-                        }
-                    ],
-                    "replace": {
-                        "style": {
-                            "style": "GLOB",            "zoom": 0.02
                         },
-                        "palette": [
-                            {
-                                "weight": 2,
-                                "block": "clay"
-                            },
-                            {
-                                "weight": 1,
-                                "block": "cave_air"
-                            }
-                        ]
-                    }
+                        {
+                            "weight": 1,
+                            "block": "cave_air"
+                        }
+                    ]
                 }
-            ]
+            }]
         },
         {
             "place": [
-                "ships/generic-w","ships/generic-b","ships/generic-r","ships/generic-u","ships/generic-c"],
+                "ships/generic-w",
+                "ships/generic-b",
+                "ships/generic-r",
+                "ships/generic-u",
+                "ships/generic-c"
+            ],
             "chance": 0.005,
             "onwater": true,
-            "translate": {
-                "y": -2
-            },
+            "translate": {"y": -2},
             "waterloggable": true
         }
     ]

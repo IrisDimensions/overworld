@@ -9,20 +9,14 @@
         "mountain/cliffs",
         "mountain/mountain"
     ],
-    "shoreBiomes": [
-        "mountain/beach"
-    ],
-    "seaBiomes": [
-        "mountain/river-soft"
-    ],
+    "shoreBiomes": ["mountain/beach"],
+    "seaBiomes": ["mountain/river-soft"],
     "caveBiomes": [
         "temperate/old-cavern",
-		"temperate/cracked-cavern",
-		"tundra/cavern"
+        "temperate/cracked-cavern",
+        "tundra/cavern"
     ],
-    "riverBiomes": [
-        "mountain/river"
-    ],
+    "riverBiomes": ["mountain/river"],
     "biomeImplosionRatio": 0.25,
     "deposits": [
         {
@@ -33,12 +27,9 @@
             "minSize": 4,
             "maxSize": 12,
             "palette": [
-                {
-                    "block": "iron_ore"
-                },
-                {
-                    "block": "coal_ore"
-                }],
+                {"block": "iron_ore"},
+                {"block": "coal_ore"}
+            ],
             "varience": 4
         },
         {
@@ -53,9 +44,8 @@
                     "weight": 9,
                     "block": "emerald_ore"
                 },
-                {
-                    "block": "coal_ore"
-                }],
+                {"block": "coal_ore"}
+            ],
             "varience": 4
         }
     ],
@@ -63,32 +53,42 @@
         {
             "heightmap": {
                 "seed": 1337,
-                "style": {
-                    "style": "FLAT"
-                },
+                "style": {"style": "FLAT"},
                 "offsetY": 4
             },
             "chance": 0.9,
-            "edit": [
-                {
-                    "chance": 0.01,
-                    "find": [{"block": "deepslate"}],
-                    "replace": {"palette": [{"block": "deepslate_coal_ore"},{"block": "deepslate_copper_ore"},{"block": "deepslate_diamond_ore"},{"block": "deepslate_emerald_ore"},{"block": "deepslate_gold_ore"},{"block": "deepslate_iron_ore"},{"block": "deepslate_lapis_ore"},{"block": "deepslate_redstone_ore"}]}
-                }],
+            "edit": [{
+                "chance": 0.01,
+                "find": [{"block": "deepslate"}],
+                "replace": {"palette": [
+                    {"block": "deepslate_coal_ore"},
+                    {"block": "deepslate_copper_ore"},
+                    {"block": "deepslate_diamond_ore"},
+                    {"block": "deepslate_emerald_ore"},
+                    {"block": "deepslate_gold_ore"},
+                    {"block": "deepslate_iron_ore"},
+                    {"block": "deepslate_lapis_ore"},
+                    {"block": "deepslate_redstone_ore"}
+                ]}
+            }],
             "place": [
-                "deepslate/ds1","deepslate/ds2","deepslate/ds3"],
-                "enabled": true,
-                "xAxis": {
-                    "interval": 15,
-                    "max": 360,
-                    "min": 0
-                }
+                "deepslate/ds1",
+                "deepslate/ds2",
+                "deepslate/ds3"
+            ],
+            "enabled": true,
+            "xAxis": {
+                "interval": 15,
+                "max": 360,
+                "min": 0
+            }
         },
         {
             "heightmap": {
                 "seed": 1337,
                 "style": {
-                    "style": "SIMPLEX",    "multiplier": 10
+                    "style": "SIMPLEX",
+                    "multiplier": 10
                 },
                 "offsetY": 5
             },
@@ -96,35 +96,32 @@
             "bottom": true,
             "density": 1,
             "place": [
-                "amethyst/ame1","amethyst/ame2","amethyst/ame3","amethyst/ame4","amethyst/ame5","amethyst/ame6"],
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "glass"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "void_air"
-                            }
-                        ]
-                    }
-                }],
-                "enabled": true,
-                "xAxis": {
-                    "interval": 90,
-                    "max": 360,
-                    "min": 0
-                },
-                "yAxis": {
-                    "interval": 90,
-                    "max": 360,
-                    "min": 0
-                },
-            "translate": {"yRandom": 10, "y": 2}
-
+                "amethyst/ame1",
+                "amethyst/ame2",
+                "amethyst/ame3",
+                "amethyst/ame4",
+                "amethyst/ame5",
+                "amethyst/ame6"
+            ],
+            "edit": [{
+                "find": [{"block": "glass"}],
+                "replace": {"palette": [{"block": "void_air"}]}
+            }],
+            "enabled": true,
+            "xAxis": {
+                "interval": 90,
+                "max": 360,
+                "min": 0
+            },
+            "yAxis": {
+                "interval": 90,
+                "max": 360,
+                "min": 0
+            },
+            "translate": {
+                "yRandom": 10,
+                "y": 2
+            }
         }
     ],
     "loot": {

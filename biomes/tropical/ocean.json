@@ -6,22 +6,22 @@
         "tropical/coral-ocean",
         "tropical/coral-ocean-cliffs"
     ],
-    "generators": [
-        {
-            "min": -38,
-            "max": -20,
-            "generator": "river"
-        }
-    ],
+    "generators": [{
+        "min": -38,
+        "max": -20,
+        "generator": "river"
+    }],
     "layers": [
         {
             "minHeight": 2,
             "maxHeight": 2,
             "style": {
-                "style": "VASCULAR","zoom": 0.9,
+                "style": "VASCULAR",
+                "zoom": 0.9,
                 "fracture": {
                     "multiplier": 60,
-                    "style": "IRIS_DOUBLE",    "zoom": 2,
+                    "style": "IRIS_DOUBLE",
+                    "zoom": 2,
                     "fracture": {
                         "multiplier": 50,
                         "style": "STATIC"
@@ -34,24 +34,12 @@
                     "weight": 2,
                     "block": "sand"
                 },
-                {
-                    "block": "dirt"
-                },
-                {
-                    "block": "gravel"
-                },
-                {
-                    "block": "clay"
-                }
+                {"block": "dirt"},
+                {"block": "gravel"},
+                {"block": "clay"}
             ]
         },
-        {
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
-        },
+        {"palette": [{"block": "dirt"}]},
         {
             "minHeight": 1,
             "maxHeight": 3,
@@ -60,217 +48,131 @@
                     "weight": 2,
                     "block": "dirt"
                 },
-                {
-                    "block": "coarse_dirt"
-                }
+                {"block": "coarse_dirt"}
             ]
         }
     ],
-    "effects": [
-        {
-            "particleAltX": 0.3,
-            "particleAltY": 1.960885,
-            "particleAltZ": 0.3,
-            "particleDistanceWidth": 8,
-            "chance": 1,
-            "particleEffect": "BUBBLE_COLUMN_UP",
-            "particleDistance": 5,
-            "particleOffset": 2,
-            "interval": 350,
-            "particleCount": 0
-        }
-    ],
+    "effects": [{
+        "particleAltX": 0.3,
+        "particleAltY": 1.960885,
+        "particleAltZ": 0.3,
+        "particleDistanceWidth": 8,
+        "chance": 1,
+        "particleEffect": "BUBBLE_COLUMN_UP",
+        "particleDistance": 5,
+        "particleOffset": 2,
+        "interval": 350,
+        "particleCount": 0
+    }],
     "childShrinkFactor": 3,
     "decorators": [
         {
             "chance": 0.03,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "stackMax": 3,
             "zoom": 1,
             "palette": [
-                {
-                    "block": "tube_coral_block"
-                },
-                {
-                    "block": "brain_coral_block"
-                },
-                {
-                    "block": "fire_coral_block"
-                },
-                {
-                    "block": "horn_coral_block"
-                },
-                {
-                    "block": "bubble_coral_block"
-                }],
-            "style": {
-                "style": "STATIC"
-            },
+                {"block": "tube_coral_block"},
+                {"block": "brain_coral_block"},
+                {"block": "fire_coral_block"},
+                {"block": "horn_coral_block"},
+                {"block": "bubble_coral_block"}
+            ],
+            "style": {"style": "STATIC"},
             "stackMin": 1
         },
         {
-            "chance": 0.0006,
-            "variance": {
-                "style": "STATIC"
-            },
+            "chance": 6.0E-4,
+            "variance": {"style": "STATIC"},
             "zoom": 1,
             "palette": [
-                {
-                    "block": "soul_sand"
-                },
-                {
-                    "block": "magma_block"
-                }],
-            "style": {
-                "style": "STATIC"
-            }
+                {"block": "soul_sand"},
+                {"block": "magma_block"}
+            ],
+            "style": {"style": "STATIC"}
         },
         {
             "chance": 0.07,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 5,
-            "palette": [
-                {
-                    "block": "seagrass"
-                }],
-            "style": {
-                "style": "STATIC"
-            }
+            "palette": [{"block": "seagrass"}],
+            "style": {"style": "STATIC"}
         },
         {
             "chance": 0.025,
             "verticalZoom": 88,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "stackMax": 24,
             "zoom": 1,
-            "palette": [
-                {
-                    "block": "kelp_plant"
-                }],
-            "style": {
-                "style": "STATIC"
-            },
-            "heightVariance": {
-                "style": "STATIC"
-            },
+            "palette": [{"block": "kelp_plant"}],
+            "style": {"style": "STATIC"},
+            "heightVariance": {"style": "STATIC"},
             "stackMin": 1
         },
         {
             "chance": 0.125,
             "verticalZoom": 20,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "stackMax": 9,
             "zoom": 1,
-            "palette": [
-                {
-                    "block": "kelp_plant"
-                }],
-            "style": {
-                "style": "STATIC"
-            },
-            "heightVariance": {
-                "style": "STATIC"
-            },
+            "palette": [{"block": "kelp_plant"}],
+            "style": {"style": "STATIC"},
+            "heightVariance": {"style": "STATIC"},
             "stackMin": 1
         },
         {
             "chance": 0.1,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 1,
             "palette": [
-                {
-                    "block": "tube_coral"
-                },
-                {
-                    "block": "tube_coral_fan"
-                }],
-            "style": {
-                "style": "STATIC"
-            }
+                {"block": "tube_coral"},
+                {"block": "tube_coral_fan"}
+            ],
+            "style": {"style": "STATIC"}
         },
         {
             "chance": 0.1,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 1,
             "palette": [
-                {
-                    "block": "brain_coral"
-                },
-                {
-                    "block": "brain_coral_fan"
-                }],
-            "style": {
-                "style": "STATIC"
-            }
+                {"block": "brain_coral"},
+                {"block": "brain_coral_fan"}
+            ],
+            "style": {"style": "STATIC"}
         },
         {
             "chance": 0.1,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 1,
             "palette": [
-                {
-                    "block": "bubble_coral"
-                },
-                {
-                    "block": "bubble_coral_fan"
-                }],
-            "style": {
-                "style": "STATIC"
-            }
+                {"block": "bubble_coral"},
+                {"block": "bubble_coral_fan"}
+            ],
+            "style": {"style": "STATIC"}
         },
         {
             "chance": 0.1,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 1,
             "palette": [
-                {
-                    "block": "fire_coral"
-                },
-                {
-                    "block": "fire_coral_fan"
-                }],
-            "style": {
-                "style": "STATIC"
-            }
+                {"block": "fire_coral"},
+                {"block": "fire_coral_fan"}
+            ],
+            "style": {"style": "STATIC"}
         },
         {
             "chance": 0.1,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 1,
             "palette": [
-                {
-                    "block": "horn_coral"
-                },
-                {
-                    "block": "horn_coral_fan"
-                }],
-            "style": {
-                "style": "STATIC"
-            }
+                {"block": "horn_coral"},
+                {"block": "horn_coral_fan"}
+            ],
+            "style": {"style": "STATIC"}
         },
         {
             "chance": 0.0025,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 1,
             "palette": [
                 {
@@ -293,77 +195,51 @@
                         "pickles": 4
                     },
                     "block": "sea_pickle"
-                }],
-            "style": {
-                "style": "STATIC"
-            }
+                }
+            ],
+            "style": {"style": "STATIC"}
         }
     ],
-    "objects": [
-        {
-            "chance": 0.01,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
+    "objects": [{
+        "chance": 0.01,
+        "rotation": {
+            "yAxis": {
+                "min": 0,
+                "max": 0,
+                "interval": 90,
                 "enabled": true
             },
-            "underwater": true,
-            "place": [
-                "ships/swreck-1","ships/usd-ship-1","ships/usd-ship-2"],
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "oak_stairs"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "oak_planks"
-                            }
-                        ]
-                    }
-                }],
-            "translate": {
-                "x": 0,
-                "y": -2,
-                "z": 0
-            }
+            "enabled": true
+        },
+        "underwater": true,
+        "place": [
+            "ships/swreck-1",
+            "ships/usd-ship-1",
+            "ships/usd-ship-2"
+        ],
+        "edit": [{
+            "find": [{"block": "oak_stairs"}],
+            "replace": {"palette": [{"block": "oak_planks"}]}
+        }],
+        "translate": {
+            "x": 0,
+            "y": -2,
+            "z": 0
         }
-    ],
-
+    }],
     "wall": {
         "palette": [
-            {
-                "block": "tube_coral_block"
-            },
-            {
-                "block": "brain_coral_block"
-            },
-            {
-                "block": "fire_coral_block"
-            },
-            {
-                "block": "horn_coral_block"
-            },
-            {
-                "block": "bubble_coral_block"
-            }
+            {"block": "tube_coral_block"},
+            {"block": "brain_coral_block"},
+            {"block": "fire_coral_block"},
+            {"block": "horn_coral_block"},
+            {"block": "bubble_coral_block"}
         ],
-        "style": {
-            "style": "IRIS"
-        },
+        "style": {"style": "IRIS"},
         "zoom": 0.2
     },
     "slab": {
-        "style": {
-            "style": "STATIC"
-        },
+        "style": {"style": "STATIC"},
         "palette": [
             {
                 "data": {

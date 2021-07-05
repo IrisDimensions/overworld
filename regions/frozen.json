@@ -4,25 +4,19 @@
         "frozen/plains",
         "frozen/pines",
         "frozen/plains",
-		"frozen/mountain",
-		"frozen/redwood-forest",
-		"frozen/hills",
+        "frozen/mountain",
+        "frozen/redwood-forest",
+        "frozen/hills",
         "frozen/pine-plains",
         "frozen/spruce-plains"
     ],
-    "shoreBiomes": [
-        "frozen/beach"
-    ],
-    "seaBiomes": [
-        "frozen/river"
-    ],
+    "shoreBiomes": ["frozen/beach"],
+    "seaBiomes": ["frozen/river"],
     "caveBiomes": [
         "frozen/ice-cavern",
         "temperate/cracked-cavern"
     ],
-    "riverBiomes": [
-        "frozen/river"
-    ],
+    "riverBiomes": ["frozen/river"],
     "spotBiomes": [
         {
             "biome": "frozen/ocean",
@@ -56,10 +50,7 @@
             "minPerChunk": 7,
             "minSize": 12,
             "maxSize": 22,
-            "palette": [
-                {
-                    "block": "blackstone"
-                }],
+            "palette": [{"block": "blackstone"}],
             "varience": 4
         },
         {
@@ -69,10 +60,7 @@
             "minPerChunk": 3,
             "minSize": 5,
             "maxSize": 10,
-            "palette": [
-                {
-                    "block": "coal_ore"
-                }],
+            "palette": [{"block": "coal_ore"}],
             "varience": 9
         },
         {
@@ -82,10 +70,7 @@
             "minPerChunk": 4,
             "minSize": 4,
             "maxSize": 9,
-            "palette": [
-                {
-                    "block": "copper_ore"
-                }],
+            "palette": [{"block": "copper_ore"}],
             "varience": 7
         }
     ],
@@ -109,32 +94,42 @@
         {
             "heightmap": {
                 "seed": 1337,
-                "style": {
-                    "style": "FLAT"
-                },
+                "style": {"style": "FLAT"},
                 "offsetY": 4
             },
             "chance": 0.9,
-            "edit": [
-                {
-                    "chance": 0.01,
-                    "find": [{"block": "deepslate"}],
-                    "replace": {"palette": [{"block": "deepslate_coal_ore"},{"block": "deepslate_copper_ore"},{"block": "deepslate_diamond_ore"},{"block": "deepslate_emerald_ore"},{"block": "deepslate_gold_ore"},{"block": "deepslate_iron_ore"},{"block": "deepslate_lapis_ore"},{"block": "deepslate_redstone_ore"}]}
-                }],
+            "edit": [{
+                "chance": 0.01,
+                "find": [{"block": "deepslate"}],
+                "replace": {"palette": [
+                    {"block": "deepslate_coal_ore"},
+                    {"block": "deepslate_copper_ore"},
+                    {"block": "deepslate_diamond_ore"},
+                    {"block": "deepslate_emerald_ore"},
+                    {"block": "deepslate_gold_ore"},
+                    {"block": "deepslate_iron_ore"},
+                    {"block": "deepslate_lapis_ore"},
+                    {"block": "deepslate_redstone_ore"}
+                ]}
+            }],
             "place": [
-                "deepslate/ds1","deepslate/ds2","deepslate/ds3"],
-                "enabled": true,
-                "xAxis": {
-                    "interval": 15,
-                    "max": 360,
-                    "min": 0
-                }
+                "deepslate/ds1",
+                "deepslate/ds2",
+                "deepslate/ds3"
+            ],
+            "enabled": true,
+            "xAxis": {
+                "interval": 15,
+                "max": 360,
+                "min": 0
+            }
         },
         {
             "heightmap": {
                 "seed": 1337,
                 "style": {
-                    "style": "SIMPLEX",    "multiplier": 10
+                    "style": "SIMPLEX",
+                    "multiplier": 10
                 },
                 "offsetY": 5
             },
@@ -142,106 +137,78 @@
             "bottom": true,
             "density": 1,
             "place": [
-                "amethyst/ame1","amethyst/ame2","amethyst/ame3","amethyst/ame4","amethyst/ame5","amethyst/ame6"],
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "glass"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "void_air"
-                            }
-                        ]
-                    }
-                }],
-                "enabled": true,
-                "xAxis": {
-                    "interval": 90,
-                    "max": 360,
-                    "min": 0
-                },
-                "yAxis": {
-                    "interval": 90,
-                    "max": 360,
-                    "min": 0
-                },
-            "translate": {"yRandom": 10, "y": 2}
-
+                "amethyst/ame1",
+                "amethyst/ame2",
+                "amethyst/ame3",
+                "amethyst/ame4",
+                "amethyst/ame5",
+                "amethyst/ame6"
+            ],
+            "edit": [{
+                "find": [{"block": "glass"}],
+                "replace": {"palette": [{"block": "void_air"}]}
+            }],
+            "enabled": true,
+            "xAxis": {
+                "interval": 90,
+                "max": 360,
+                "min": 0
+            },
+            "yAxis": {
+                "interval": 90,
+                "max": 360,
+                "min": 0
+            },
+            "translate": {
+                "yRandom": 10,
+                "y": 2
+            }
         },
         {
             "name": "standard-surface-portals",
             "chance": 0.001,
             "place": [
-                "global-clutter/BigSwordPortal-unlit-1","global-clutter/BigSwordPortal-lit-1","ruined_portal/giant_portal_1","ruined_portal/giant_portal_2","ruined_portal/giant_portal_3","ruined_portal/portal_1","ruined_portal/portal_2","ruined_portal/portal_3","ruined_portal/portal_4","ruined_portal/portal_5","ruined_portal/portal_6","ruined_portal/portal_7","ruined_portal/portal_8","ruined_portal/portal_9","ruined_portal/portal_10"],
+                "global-clutter/BigSwordPortal-unlit-1",
+                "global-clutter/BigSwordPortal-lit-1",
+                "ruined_portal/giant_portal_1",
+                "ruined_portal/giant_portal_2",
+                "ruined_portal/giant_portal_3",
+                "ruined_portal/portal_1",
+                "ruined_portal/portal_2",
+                "ruined_portal/portal_3",
+                "ruined_portal/portal_4",
+                "ruined_portal/portal_5",
+                "ruined_portal/portal_6",
+                "ruined_portal/portal_7",
+                "ruined_portal/portal_8",
+                "ruined_portal/portal_9",
+                "ruined_portal/portal_10"
+            ],
             "edit": [
                 {
-                    "find": [
-                        {
-                            "block": "gold_block"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "air"
-                            }
-                        ]
-                    },
+                    "find": [{"block": "gold_block"}],
+                    "replace": {"palette": [{"block": "air"}]},
                     "chance": 0.1
                 },
                 {
-                    "find": [
-                        {
-                            "block": "netherrack"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "magma_block"
-                            }
-                        ]
-                    },
+                    "find": [{"block": "netherrack"}],
+                    "replace": {"palette": [{"block": "magma_block"}]},
                     "chance": 0.07
                 },
                 {
-                    "find": [
-                        {
-                            "block": "obsidian"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "crying_obsidian"
-                            }
-                        ]
-                    },
+                    "find": [{"block": "obsidian"}],
+                    "replace": {"palette": [{"block": "crying_obsidian"}]},
                     "chance": 0.15
                 },
                 {
-                    "find": [
-                        {
-                            "block": "lava"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "magma_block"
-                            }
-                        ]
-                    },
-                    "chance": 0.20
-                }],
+                    "find": [{"block": "lava"}],
+                    "replace": {"palette": [{"block": "magma_block"}]},
+                    "chance": 0.2
+                }
+            ],
             "mode": "VACUUM",
             "carvingSupport": "SURFACE_ONLY"
         }
-
     ],
     "shoreHeightZoom": 1.14,
     "riverThickness": 0.006,

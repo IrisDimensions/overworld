@@ -2,98 +2,67 @@
     "name": "Hot Sandy Cave",
     "derivative": "DESERT",
     "vanillaDerivative": "DESERT",
-    "generators": [
-        {
-            "min": 4,
-            "max": 6,
-            "generator": "plain"
-        }
-    ],
-    "layers": [
-        {
-            "minHeight": 1,
-            "maxHeight": 2,
-            "palette": [
-                {
-                    "block": "smooth_sandstone"
-                }
-            ]
-        }
-    ],
-    "entitySpawnOverrides": [
-        {
-            "trigger": "SKELETON",
-            "entity": "shroud",
-            "cancelSourceSpawn": true,
-            "rarity": 12
-        }
-    ],
+    "generators": [{
+        "min": 4,
+        "max": 6,
+        "generator": "plain"
+    }],
+    "layers": [{
+        "minHeight": 1,
+        "maxHeight": 2,
+        "palette": [{"block": "smooth_sandstone"}]
+    }],
+    "entitySpawnOverrides": [{
+        "trigger": "SKELETON",
+        "entity": "shroud",
+        "cancelSourceSpawn": true,
+        "rarity": 12
+    }],
     "decorators": [
         {
-            "chance": 0.0001,
-            "palette": [
-                {
-                    "block": "barrel"
-                }
-            ]
+            "chance": 1.0E-4,
+            "palette": [{"block": "barrel"}]
         },
         {
             "verticalZoom": 20,
             "chance": 0.01,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "stackMax": 2,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "cactus"
-                }],
-            "heightVariance": {
-                "style": "IRIS"
-            },
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "cactus"}],
+            "heightVariance": {"style": "IRIS"},
             "stackMin": 1
         },
         {
             "chance": 0.0235,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 0.3,
             "palette": [
                 {
                     "data": {
-                        "face": "floor",        "powered": false,
+                        "face": "floor",
+                        "powered": false,
                         "facing": "east"
                     },
                     "block": "polished_blackstone_button"
                 },
                 {
                     "data": {
-                        "face": "floor",        "powered": false,
+                        "face": "floor",
+                        "powered": false,
                         "facing": "south"
                     },
                     "block": "polished_blackstone_button"
-                }],
-            "style": {
-                "style": "STATIC"
-            }
+                }
+            ],
+            "style": {"style": "STATIC"}
         },
         {
             "chance": 0.012,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 0.3,
-            "palette": [
-                {
-                    "block": "dead_bush"
-                }],
-            "style": {
-                "style": "STATIC"
-            }
+            "palette": [{"block": "dead_bush"}],
+            "style": {"style": "STATIC"}
         }
     ],
     "objects": [
@@ -109,7 +78,12 @@
                 "enabled": true
             },
             "place": [
-                "clutter/oak-clutt-1","clutter/oak-clutt-2","clutter/oak-clutt-3","clutter/oak-clutt-4","clutter/oak-clutt-5"],
+                "clutter/oak-clutt-1",
+                "clutter/oak-clutt-2",
+                "clutter/oak-clutt-3",
+                "clutter/oak-clutt-4",
+                "clutter/oak-clutt-5"
+            ],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -117,7 +91,7 @@
             }
         },
         {
-            "chance": 0.000856,
+            "chance": 8.56E-4,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -127,8 +101,7 @@
                 },
                 "enabled": true
             },
-            "place": [
-                "grave/grave"],
+            "place": ["grave/grave"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -137,9 +110,7 @@
         }
     ],
     "slab": {
-        "style": {
-            "style": "STATIC"
-        },
+        "style": {"style": "STATIC"},
         "palette": [
             {
                 "data": {

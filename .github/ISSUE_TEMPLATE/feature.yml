@@ -1,0 +1,71 @@
+name: Overworld Feature Request
+description: File a feature request for the Iris Dimensions Overworld
+labels: [feature]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to fill this out!
+  - type: textarea
+    id: what
+    attributes:
+      label: How does it looks now?
+      description: Please give a text description of the current state. You should copy-paste screenshots in here.
+      placeholder: Tell us what you see!
+    validations:
+      required: true
+  - type: textarea
+    id: how
+    attributes:
+      label: What should improve?
+      description: Please give a text description of what you think a suitable improvement should be
+      placeholder: Tell us what you want to see!
+    validations:
+      required: true
+  - type: input
+    id: biome
+    attributes:
+      label: Biome
+      description: Which biome are you talking about? Use `/iris what biome` and send the full text here. If this is not related to a biome, omit this.
+      placeholder: IBiome ..... (.....)
+  - type: dropdown
+    id: mcversion
+    attributes:
+      label: Minecraft Version
+      description: What version of Minecraft are you running?
+      options:
+        - 1.14 - 1.16.5
+        - 1.17
+    validations:
+      required: true
+  - type: dropdown
+    id: irisversion
+    attributes:
+      label: Iris Version
+      description: What version of Iris are you running?
+      options:
+        - 1.3.9
+        - 1.3.10-FINAL
+        - 1.3.11-FINAL
+        - 1.4.1
+        - 1.4.2
+        - 1.4.3
+        - 1.4.4
+    validations:
+      required: true
+  - type: checkboxes
+    id: checksum
+    attributes:
+      label: Checklist
+      description: Please ensure you meet each of the requirements below
+      options:
+        - label: I am using an unmodified version of the overworld. (If you modified the overworld and would like to still report, contact [support](discord.gg/volmit))
+          required: true
+        - label: I am using [the latest version of the overworld](../) **OR** I have made sure this feature was not already implemented in the latest version.
+          required: true
+        - label: I am using Spigot, Paper, Tuinity, or Purpur. (If you are not, and still think it is a valid request, contact [support](discord.gg/volmit))
+          required: true
+  - type: markdown
+    id: thanks
+    attributes:
+      value: "Thank you for filling out the form! We will be with you soon. Please do not ask support to review your report."

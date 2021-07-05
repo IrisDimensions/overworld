@@ -2,21 +2,19 @@
     "name": "Tropical Volcanic Plains",
     "derivative": "THE_VOID",
     "vanillaDerivative": "THE_VOID",
-    "children": [
-        "tropical/volcanoes"
-    ],
-    "generators": [
-        {
-            "min": 170,
-            "max": 192,
-            "generator": "plain"
-        }
-    ],
+    "children": ["tropical/volcanoes"],
+    "generators": [{
+        "min": 170,
+        "max": 192,
+        "generator": "plain"
+    }],
     "layers": [
         {
             "style": {
-                "style": "SIMPLEX","fracture": {
-                    "style": "GLOB",    "zoom": 0.2,
+                "style": "SIMPLEX",
+                "fracture": {
+                    "style": "GLOB",
+                    "zoom": 0.2,
                     "multiplier": 40
                 }
             },
@@ -43,30 +41,23 @@
             "maxHeight": 2,
             "palette": [
                 {
-                    "block": "basalt",    "data": {
-                        "axis": "x"
-                    }
+                    "block": "basalt",
+                    "data": {"axis": "x"}
                 },
                 {
-                    "block": "basalt",    "data": {
-                        "axis": "y"
-                    }
+                    "block": "basalt",
+                    "data": {"axis": "y"}
                 },
                 {
-                    "block": "basalt",    "data": {
-                        "axis": "z"
-                    }
+                    "block": "basalt",
+                    "data": {"axis": "z"}
                 }
             ]
         },
         {
             "minHeight": 3,
             "maxHeight": 10,
-            "palette": [
-                {
-                    "block": "blackstone"
-                }
-            ]
+            "palette": [{"block": "blackstone"}]
         }
     ],
     "childStyle": {
@@ -75,42 +66,31 @@
         "exponent": 1.9
     },
     "childShrinkFactor": 1,
-    "objects": [
-        {
-            "place": [
-                "landform/spikes/1","landform/spikes/2","landform/spikes/3"],
-            "chance": 1,
-            "density": 2,
-            "rotation": {
+    "objects": [{
+        "place": [
+            "landform/spikes/1",
+            "landform/spikes/2",
+            "landform/spikes/3"
+        ],
+        "chance": 1,
+        "density": 2,
+        "rotation": {
+            "enabled": true,
+            "yAxis": {
                 "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "interval": 90,
-                    "min": -360,
-                    "max": 360
-                }
-            },
-            "translate": {
-                "y": -20,
-                "yRandom": 20
-            },
-            "mode": "MIN_HEIGHT",
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "stone"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "basalt"
-                            }
-                        ]
-                    }
-                }
-            ]
-        }
-    ]
+                "interval": 90,
+                "min": -360,
+                "max": 360
+            }
+        },
+        "translate": {
+            "y": -20,
+            "yRandom": 20
+        },
+        "mode": "MIN_HEIGHT",
+        "edit": [{
+            "find": [{"block": "stone"}],
+            "replace": {"palette": [{"block": "basalt"}]}
+        }]
+    }]
 }

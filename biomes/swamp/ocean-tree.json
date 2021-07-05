@@ -2,19 +2,18 @@
     "name": "Swamp Ocean tree",
     "derivative": "SWAMP",
     "vanillaDerivative": "OCEAN",
-    "generators": [
-        {
-            "min": -1,
-            "max": 0,
-            "generator": "river"
-        }
-    ],
+    "generators": [{
+        "min": -1,
+        "max": 0,
+        "generator": "river"
+    }],
     "layers": [
         {
             "minHeight": 2,
             "maxHeight": 3,
             "style": {
-                "style": "VASCULAR","zoom": 0.8,
+                "style": "VASCULAR",
+                "zoom": 0.8,
                 "fracture": {
                     "multiplier": 2,
                     "style": "STATIC"
@@ -22,27 +21,13 @@
             },
             "zoom": 0.825,
             "palette": [
-                {
-                    "block": "sand"
-                },
-                {
-                    "block": "dirt"
-                },
-                {
-                    "block": "gravel"
-                },
-                {
-                    "block": "clay"
-                }
+                {"block": "sand"},
+                {"block": "dirt"},
+                {"block": "gravel"},
+                {"block": "clay"}
             ]
         },
-        {
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
-        },
+        {"palette": [{"block": "dirt"}]},
         {
             "minHeight": 1,
             "maxHeight": 3,
@@ -51,9 +36,7 @@
                     "weight": 2,
                     "block": "dirt"
                 },
-                {
-                    "block": "coarse_dirt"
-                }
+                {"block": "coarse_dirt"}
             ]
         }
     ],
@@ -61,94 +44,53 @@
         {
             "partOf": "SEA_SURFACE",
             "chance": 0.025,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 2.25,
-            "palette": [
-                {
-                    "block": "lily_pad"
-                }],
-            "style": {
-                "style": "STATIC"
-            }
+            "palette": [{"block": "lily_pad"}],
+            "style": {"style": "STATIC"}
         },
         {
             "chance": 0.07,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 20,
-            "palette": [
-                {
-                    "block": "seagrass"
-                }],
-            "style": {
-                "style": "STATIC"
-            }
+            "palette": [{"block": "seagrass"}],
+            "style": {"style": "STATIC"}
         },
         {
-            "chance": 0.0006,
-            "variance": {
-                "style": "STATIC"
-            },
+            "chance": 6.0E-4,
+            "variance": {"style": "STATIC"},
             "zoom": 1,
             "palette": [
-                {
-                    "block": "soul_sand"
-                },
-                {
-                    "block": "magma_block"
-                }],
-            "style": {
-                "style": "STATIC"
-            }
+                {"block": "soul_sand"},
+                {"block": "magma_block"}
+            ],
+            "style": {"style": "STATIC"}
         },
         {
             "chance": 0.0013,
             "verticalZoom": 88,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "stackMax": 24,
             "zoom": 1,
-            "palette": [
-                {
-                    "block": "kelp_plant"
-                }],
-            "style": {
-                "style": "STATIC"
-            },
-            "heightVariance": {
-                "style": "IRIS"
-            },
+            "palette": [{"block": "kelp_plant"}],
+            "style": {"style": "STATIC"},
+            "heightVariance": {"style": "IRIS"},
             "stackMin": 2
         },
         {
             "chance": 0.0095,
             "verticalZoom": 20,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "stackMax": 9,
             "zoom": 1,
-            "palette": [
-                {
-                    "block": "kelp_plant"
-                }],
-            "style": {
-                "style": "STATIC"
-            },
-            "heightVariance": {
-                "style": "STATIC"
-            },
+            "palette": [{"block": "kelp_plant"}],
+            "style": {"style": "STATIC"},
+            "heightVariance": {"style": "STATIC"},
             "stackMin": 1
         },
         {
             "chance": 0.004,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 1,
             "palette": [
                 {
@@ -164,10 +106,9 @@
                         "pickles": 2
                     },
                     "block": "sea_pickle"
-                }],
-            "style": {
-                "style": "STATIC"
-            }
+                }
+            ],
+            "style": {"style": "STATIC"}
         }
     ],
     "objects": [
@@ -185,92 +126,54 @@
             },
             "underwater": true,
             "place": [
-                "ships/swreck-1","ships/usd-ship-1","ships/usd-ship-2"],
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "oak_stairs"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "oak_planks"
-                            }
-                        ]
-                    }
-                }],
+                "ships/swreck-1",
+                "ships/usd-ship-1",
+                "ships/usd-ship-2"
+            ],
+            "edit": [{
+                "find": [{"block": "oak_stairs"}],
+                "replace": {"palette": [{"block": "oak_planks"}]}
+            }],
             "translate": {
                 "x": 0,
                 "y": 4,
                 "z": 0
             }
         },
-		{
+        {
             "mode": "FAST_MIN_HEIGHT",
             "place": [
-                "tree/jungle/1","tree/jungle/2","tree/jungle/3","tree/jungle/4","tree/jungle/5","tree/jungle/7","tree/jungle/8","tree/jungle/9"],
+                "tree/jungle/1",
+                "tree/jungle/2",
+                "tree/jungle/3",
+                "tree/jungle/4",
+                "tree/jungle/5",
+                "tree/jungle/7",
+                "tree/jungle/8",
+                "tree/jungle/9"
+            ],
             "chance": 0.3,
             "edit": [
                 {
-                    "find": [
-                        {
-                            "block": "jungle_leaves"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "oak_leaves",                "data": {
-                                    "persistent": true
-                                }
-                            }
-                        ]
-                    }
+                    "find": [{"block": "jungle_leaves"}],
+                    "replace": {"palette": [{
+                        "block": "oak_leaves",
+                        "data": {"persistent": true}
+                    }]}
                 },
                 {
-                    "find": [
-                        {
-                            "block": "jungle_wood"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "dark_oak_wood"
-                            }
-                        ]
-                    }
+                    "find": [{"block": "jungle_wood"}],
+                    "replace": {"palette": [{"block": "dark_oak_wood"}]}
                 },
                 {
-                    "find": [
-                        {
-                            "block": "vine"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "air"
-                            }
-                        ]
-                    }
+                    "find": [{"block": "vine"}],
+                    "replace": {"palette": [{"block": "air"}]}
                 },
                 {
-                    "find": [
-                        {
-                            "block": "jungle_log"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "dark_oak_wood"
-                            }
-                        ]
-                    }
-                }],
+                    "find": [{"block": "jungle_log"}],
+                    "replace": {"palette": [{"block": "dark_oak_wood"}]}
+                }
+            ],
             "onwater": true,
             "rotation": {
                 "enabled": true,
@@ -281,32 +184,22 @@
                     "max": 360
                 }
             },
-            "translate": {
-                "y": -6
-            }
+            "translate": {"y": -6}
         }
     ],
     "wall": {
-        "style": {
-            "style": "IRIS"
-        },
+        "style": {"style": "IRIS"},
         "palette": [
-            {
-                "block": "clay"
-            },
+            {"block": "clay"},
             {
                 "weight": 2,
                 "block": "smooth_sandstone"
             },
-            {
-                "block": "sand"
-            }
+            {"block": "sand"}
         ]
     },
     "slab": {
-        "style": {
-            "style": "STATIC"
-        },
+        "style": {"style": "STATIC"},
         "palette": [
             {
                 "data": {

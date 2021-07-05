@@ -2,13 +2,11 @@
     "name": "Ocean Deep",
     "derivative": "DEEP_OCEAN",
     "vanillaDerivative": "DEEP_OCEAN",
-    "generators": [
-        {
-            "generator": "smooth-dunes",
-            "max": -30,
-            "min": -50
-        }
-    ],
+    "generators": [{
+        "generator": "smooth-dunes",
+        "max": -30,
+        "min": -50
+    }],
     "layers": [
         {
             "minHeight": 2,
@@ -17,29 +15,15 @@
                 "minimumSlope": 0,
                 "maximumSlope": 3
             },
-            "style": {
-                "style": "FRACTAL_FBM_IRIS"
-            },
+            "style": {"style": "FRACTAL_FBM_IRIS"},
             "zoom": 0.6,
             "palette": [
-                {
-                    "block": "sand"
-                },
-                {
-                    "block": "clay"
-                },
-                {
-                    "block": "sand"
-                },
-                {
-                    "block": "gravel"
-                },
-                {
-                    "block": "sand"
-                },
-                {
-                    "block": "dirt"
-                },
+                {"block": "sand"},
+                {"block": "clay"},
+                {"block": "sand"},
+                {"block": "gravel"},
+                {"block": "sand"},
+                {"block": "dirt"},
                 {
                     "weight": 2,
                     "block": "sand"
@@ -49,46 +33,30 @@
         {
             "minHeight": 2,
             "maxHeight": 10,
-            "palette": [
-                {
-                    "block": "gravel"
-                }
-            ]
+            "palette": [{"block": "gravel"}]
         }
     ],
     "decorators": [
         {
             "chance": 0.09,
-            "palette": [
-                {
-                    "block": "kelp_plant"
-                }],
+            "palette": [{"block": "kelp_plant"}],
             "stackMin": 2,
             "stackMax": 12
         },
         {
             "chance": 0.2,
-            "palette": [
-                {
-                    "block": "seagrass"
-                }
-            ]
+            "palette": [{"block": "seagrass"}]
         },
         {
             "chance": 0.2,
-            "palette": [
-                {
-                    "block": "tall_seagrass",    "data": {
-                        "half": "lower"
-                    }
-                }],
-            "topPalette": [
-                {
-                    "block": "tall_seagrass",    "data": {
-                        "half": "upper"
-                    }
-                }
-            ]
+            "palette": [{
+                "block": "tall_seagrass",
+                "data": {"half": "lower"}
+            }],
+            "topPalette": [{
+                "block": "tall_seagrass",
+                "data": {"half": "upper"}
+            }]
         }
     ],
     "objects": [
@@ -107,17 +75,22 @@
                 }
             },
             "place": [
-                "ships/gall-1","ships/gall-2","ships/gall-3"
+                "ships/gall-1",
+                "ships/gall-2",
+                "ships/gall-3"
             ]
         },
         {
             "place": [
-                "ships/generic-w","ships/generic-b","ships/generic-r","ships/generic-u","ships/generic-c"],
+                "ships/generic-w",
+                "ships/generic-b",
+                "ships/generic-r",
+                "ships/generic-u",
+                "ships/generic-c"
+            ],
             "chance": 0.001,
             "onwater": true,
-            "translate": {
-                "y": -1
-            },
+            "translate": {"y": -1},
             "waterloggable": true
         },
         {
@@ -135,7 +108,26 @@
                 }
             },
             "place": [
-                "shipwreck/with-mast","shipwreck/with-mast-degraded","shipwreck/rightsideup-full","shipwreck/rightsideup-full-degraded","shipwreck/rightsideup-fronthalf","shipwreck/rightsideup-fronthalf-degraded","shipwreck/rightsideup-backhalf","shipwreck/rightsideup-backhalf-degraded","shipwreck/sideways-full","shipwreck/sideways-full-degraded","shipwreck/sideways-fronthalf","shipwreck/sideways-fronthalf-degraded","shipwreck/sideways-backhalf","shipwreck/sideways-backhalf-degraded","shipwreck/upsidedown-full","shipwreck/upsidedown-full-degraded","shipwreck/upsidedown-fronthalf","shipwreck/upsidedown-fronthalf-degraded","shipwreck/upsidedown-backhalf","shipwreck/upsidedown-backhalf-degraded"
+                "shipwreck/with-mast",
+                "shipwreck/with-mast-degraded",
+                "shipwreck/rightsideup-full",
+                "shipwreck/rightsideup-full-degraded",
+                "shipwreck/rightsideup-fronthalf",
+                "shipwreck/rightsideup-fronthalf-degraded",
+                "shipwreck/rightsideup-backhalf",
+                "shipwreck/rightsideup-backhalf-degraded",
+                "shipwreck/sideways-full",
+                "shipwreck/sideways-full-degraded",
+                "shipwreck/sideways-fronthalf",
+                "shipwreck/sideways-fronthalf-degraded",
+                "shipwreck/sideways-backhalf",
+                "shipwreck/sideways-backhalf-degraded",
+                "shipwreck/upsidedown-full",
+                "shipwreck/upsidedown-full-degraded",
+                "shipwreck/upsidedown-fronthalf",
+                "shipwreck/upsidedown-fronthalf-degraded",
+                "shipwreck/upsidedown-backhalf",
+                "shipwreck/upsidedown-backhalf-degraded"
             ]
         }
     ]
