@@ -6,48 +6,29 @@
         {
             "minHeight": 0,
             "maxHeight": 2,
-            "palette": [
-                {
-                    "block": "snow_block"
-                }
-            ]
+            "palette": [{"block": "snow_block"}]
         },
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "palette": [
-                {
-                    "block": "grass_block",    "data": {
-                        "snowy": true
-                    }
-                }
-            ]
+            "palette": [{
+                "block": "grass_block",
+                "data": {"snowy": true}
+            }]
         },
         {
             "minHeight": 7,
             "maxHeight": 18,
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
+            "palette": [{"block": "dirt"}]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
+            "style": {"style": "STATIC"},
             "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "stone"
-                }
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
             ]
         }
     ],
@@ -92,7 +73,17 @@
                 "enabled": true
             },
             "place": [
-                "wonderland/twirlSpruce-1","wonderland/twirlSpruce-2","wonderland/twirlSpruce-3","wonderland/twirlSpruce-4","wonderland/twirlSpruce-5","wonderland/twirlSpruce-6","wonderland/twirlSpruce-7","wonderland/twirlSpruce-8","wonderland/twirlSpruce-9","wonderland/twirlSpruce-10"],
+                "wonderland/twirlSpruce-1",
+                "wonderland/twirlSpruce-2",
+                "wonderland/twirlSpruce-3",
+                "wonderland/twirlSpruce-4",
+                "wonderland/twirlSpruce-5",
+                "wonderland/twirlSpruce-6",
+                "wonderland/twirlSpruce-7",
+                "wonderland/twirlSpruce-8",
+                "wonderland/twirlSpruce-9",
+                "wonderland/twirlSpruce-10"
+            ],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -101,21 +92,10 @@
         },
         {
             "chance": 0.005,
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "vine"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "air"
-                            }
-                        ]
-                    }
-                }],
+            "edit": [{
+                "find": [{"block": "vine"}],
+                "replace": {"palette": [{"block": "air"}]}
+            }],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -126,7 +106,14 @@
                 "enabled": true
             },
             "place": [
-                "stone-clutt/obelisk-1","stone-clutt/obelisk-2","stone-clutt/obelisk-3","stone-clutt/obelisk-4","stone-clutt/obelisk-5","stone-clutt/obelisk-6","stone-clutt/obelisk-7"],
+                "stone-clutt/obelisk-1",
+                "stone-clutt/obelisk-2",
+                "stone-clutt/obelisk-3",
+                "stone-clutt/obelisk-4",
+                "stone-clutt/obelisk-5",
+                "stone-clutt/obelisk-6",
+                "stone-clutt/obelisk-7"
+            ],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -134,56 +121,37 @@
             }
         }
     ],
-    "decorators": [
-        {
-            "chance": 1,
-            "variance": {
-                "style": "IRIS","zoom": 0.2
-            },
-            "palette": [
-                {
-                    "data": {
-                        "layers": 1
-                    },
-                    "block": "snow"
-                },
-                {
-                    "data": {
-                        "layers": 1
-                    },
-                    "block": "snow"
-                },
-                {
-                    "block": "air"
-                },
-                {
-                    "data": {
-                        "layers": 1
-                    },
-                    "block": "snow"
-                },
-                {
-                    "block": "air"
-                }
-            ]
-        }
-    ],
-    "wall": {
+    "decorators": [{
+        "chance": 1,
+        "variance": {
+            "style": "IRIS",
+            "zoom": 0.2
+        },
         "palette": [
             {
-                "block": "stone"
+                "data": {"layers": 1},
+                "block": "snow"
             },
             {
-                "block": "andesite"
-            }
+                "data": {"layers": 1},
+                "block": "snow"
+            },
+            {"block": "air"},
+            {
+                "data": {"layers": 1},
+                "block": "snow"
+            },
+            {"block": "air"}
         ]
-    },
-    "entityInitialSpawns": [
-        {
-            "entity": "polar-bear",
-            "maxSpawns": 2,
-            "minSpawns": 1,
-            "rarity": 7
-        }
-    ]
+    }],
+    "wall": {"palette": [
+        {"block": "stone"},
+        {"block": "andesite"}
+    ]},
+    "entityInitialSpawns": [{
+        "entity": "polar-bear",
+        "maxSpawns": 2,
+        "minSpawns": 1,
+        "rarity": 7
+    }]
 }

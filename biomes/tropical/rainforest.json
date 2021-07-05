@@ -6,28 +6,19 @@
         "tropical/rainforest-hills",
         "tropical/jungle-denmyre"
     ],
-    "generators": [
-        {
-            "min": 20,
-            "max": 35,
-            "generator": "plain"
-        }
-    ],
-
+    "generators": [{
+        "min": 20,
+        "max": 35,
+        "generator": "plain"
+    }],
     "layers": [
         {
-            "style": {
-                "style": "FRACTAL_BILLOW_IRIS"
-            },
+            "style": {"style": "FRACTAL_BILLOW_IRIS"},
             "zoom": 0.6,
             "palette": [
+                {"block": "grass_block"},
                 {
-                    "block": "grass_block"
-                },
-                {
-                    "data": {
-                        "persistent": true
-                    },
+                    "data": {"persistent": true},
                     "block": "jungle_leaves"
                 },
                 {
@@ -39,43 +30,29 @@
         {
             "minHeight": 2,
             "maxHeight": 4,
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
+            "palette": [{"block": "dirt"}]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
+            "style": {"style": "STATIC"},
             "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "stone"
-                }
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
             ]
         }
     ],
-    "effects": [
-        {
-            "particleAltX": 0.301,
-            "particleAltY": -0.33885,
-            "particleAltZ": 0.301,
-            "chance": 3,
-            "particleEffect": "TOTEM",
-            "particleOffset": 12,
-            "interval": 550,
-            "particleCount": 3
-        }
-    ],
+    "effects": [{
+        "particleAltX": 0.301,
+        "particleAltY": -0.33885,
+        "particleAltZ": 0.301,
+        "chance": 3,
+        "particleEffect": "TOTEM",
+        "particleOffset": 12,
+        "interval": 550,
+        "particleCount": 3
+    }],
     "entityInitialSpawns": [
         {
             "entity": "chicken",
@@ -93,95 +70,68 @@
     "decorators": [
         {
             "chance": 0.45,
-            "variance": {
-                "style": "IRIS"
-            },
+            "variance": {"style": "IRIS"},
             "zoom": 0.1,
             "palette": [
                 {
-                    "data": {
-                        "persistent": true
-                    },
+                    "data": {"persistent": true},
                     "block": "jungle_leaves"
                 },
+                {"block": "tall_grass"},
+                {"block": "grass"},
                 {
-                    "block": "tall_grass"
-                },
-                {
-                    "block": "grass"
-                },
-                {
-                    "data": {
-                        "persistent": true
-                    },
+                    "data": {"persistent": true},
                     "block": "jungle_leaves"
                 },
+                {"block": "grass"},
                 {
-                    "block": "grass"
-                },
-                {
-                    "data": {
-                        "persistent": true
-                    },
+                    "data": {"persistent": true},
                     "block": "jungle_leaves"
-                }],
-            "style": {
-                "style": "FRACTAL_BILLOW_IRIS","fracture": {
-                    "style": "STATIC"
                 }
+            ],
+            "style": {
+                "style": "FRACTAL_BILLOW_IRIS",
+                "fracture": {"style": "STATIC"}
             }
         },
         {
             "chance": 0.003,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "palette": [
                 {
                     "data": {
-                        "face": "floor",        "powered": false,
+                        "face": "floor",
+                        "powered": false,
                         "facing": "east"
                     },
                     "block": "stone_button"
                 },
                 {
                     "data": {
-                        "face": "floor",        "powered": false,
+                        "face": "floor",
+                        "powered": false,
                         "facing": "south"
                     },
                     "block": "stone_button"
-                }],
-            "style": {
-                "style": "STATIC"
-            },
-            "heightVariance": {
-                "style": "IRIS"
-            }
+                }
+            ],
+            "style": {"style": "STATIC"},
+            "heightVariance": {"style": "IRIS"}
         },
         {
             "chance": 0.5,
             "verticalZoom": 88,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 10,
             "palette": [
-                {
-                    "block": "grass"
-                },
-                {
-                    "block": "tall_grass"
-                }],
-            "style": {
-                "style": "STATIC"
-            },
-            "heightVariance": {
-                "style": "STATIC"
-            }
+                {"block": "grass"},
+                {"block": "tall_grass"}
+            ],
+            "style": {"style": "STATIC"},
+            "heightVariance": {"style": "STATIC"}
         }
     ],
     "objects": [
-
         {
             "mode": "PAINT",
             "chance": 0.0025,
@@ -194,8 +144,7 @@
                 },
                 "enabled": true
             },
-            "place": [
-                "camp/barrel-bin"],
+            "place": ["camp/barrel-bin"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -213,8 +162,7 @@
                 },
                 "enabled": true
             },
-            "place": [
-                "camp/camp"],
+            "place": ["camp/camp"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -234,7 +182,18 @@
                 "enabled": true
             },
             "place": [
-                "jungle-remade/jcoco-2","jungle-remade/jcoco-3","jungle-remade/jcoco-4","jungle-remade/jcoco-5","jungle-remade/J6","jungle-remade/J7","jungle-remade/J8","jungle-remade/J9","jungle-remade/J11","jungle-remade/J12","jungle-remade/J13"],
+                "jungle-remade/jcoco-2",
+                "jungle-remade/jcoco-3",
+                "jungle-remade/jcoco-4",
+                "jungle-remade/jcoco-5",
+                "jungle-remade/J6",
+                "jungle-remade/J7",
+                "jungle-remade/J8",
+                "jungle-remade/J9",
+                "jungle-remade/J11",
+                "jungle-remade/J12",
+                "jungle-remade/J13"
+            ],
             "translate": {
                 "x": 0,
                 "y": -2,
@@ -253,7 +212,11 @@
                 "enabled": true
             },
             "place": [
-                "jungle-remade/sjungle-1","jungle-remade/sjungle-2","jungle-remade/sjungle-3","jungle-remade/sjungle-4"],
+                "jungle-remade/sjungle-1",
+                "jungle-remade/sjungle-2",
+                "jungle-remade/sjungle-3",
+                "jungle-remade/sjungle-4"
+            ],
             "translate": {
                 "x": 0,
                 "y": -2,
@@ -272,7 +235,14 @@
                 "enabled": true
             },
             "place": [
-                "boulder/boulder1","boulder/boulder2","boulder/boulder4","boulder/boulder5","boulder/boulder6","boulder/boulder7","boulder/boulder8"],
+                "boulder/boulder1",
+                "boulder/boulder2",
+                "boulder/boulder4",
+                "boulder/boulder5",
+                "boulder/boulder6",
+                "boulder/boulder7",
+                "boulder/boulder8"
+            ],
             "translate": {
                 "x": 0,
                 "y": -2,
@@ -293,7 +263,12 @@
                 "enabled": true
             },
             "place": [
-                "jungle-remade/bjungle-1","jungle-remade/bjungle-2","jungle-remade/bjungle-3","jungle-remade/bjungle-4","jungle-remade/bjungle-5"],
+                "jungle-remade/bjungle-1",
+                "jungle-remade/bjungle-2",
+                "jungle-remade/bjungle-3",
+                "jungle-remade/bjungle-4",
+                "jungle-remade/bjungle-5"
+            ],
             "translate": {
                 "x": 0,
                 "y": -12,
@@ -302,41 +277,25 @@
         }
     ],
     "wall": {
-        "style": {
-            "style": "IRIS"
-        },
+        "style": {"style": "IRIS"},
         "zoom": 0.1,
         "palette": [
+            {"block": "stripped_jungle_wood"},
             {
-                "block": "stripped_jungle_wood"
-            },
-            {
-                "data": {
-                    "persistent": true
-                },
+                "data": {"persistent": true},
                 "block": "jungle_leaves"
             },
+            {"block": "stripped_jungle_wood"},
             {
-                "block": "stripped_jungle_wood"
-            },
-            {
-                "data": {
-                    "persistent": true
-                },
+                "data": {"persistent": true},
                 "block": "jungle_leaves"
             },
+            {"block": "stripped_jungle_wood"},
             {
-                "block": "stripped_jungle_wood"
-            },
-            {
-                "data": {
-                    "persistent": true
-                },
+                "data": {"persistent": true},
                 "block": "jungle_leaves"
             },
-            {
-                "block": "stripped_jungle_wood"
-            }
+            {"block": "stripped_jungle_wood"}
         ]
     }
 }

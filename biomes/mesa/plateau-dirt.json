@@ -2,9 +2,7 @@
     "name": "Mesa Plateau Dirt",
     "derivative": "BADLANDS",
     "vanillaDerivative": "BADLANDS",
-    "biomeScatter": [
-        "BADLANDS"
-    ],
+    "biomeScatter": ["BADLANDS"],
     "generators": [
         {
             "min": 33,
@@ -30,23 +28,13 @@
                 "minimumSlope": 0,
                 "maximumSlope": 3
             },
-            "style": {
-                "style": "CELLULAR"
-            },
+            "style": {"style": "CELLULAR"},
             "zoom": 0.7,
             "palette": [
-                {
-                    "block": "grass_block"
-                },
-                {
-                    "block": "coarse_dirt"
-                },
-                {
-                    "block": "dirt"
-                },
-                {
-                    "block": "grass_block"
-                }
+                {"block": "grass_block"},
+                {"block": "coarse_dirt"},
+                {"block": "dirt"},
+                {"block": "grass_block"}
             ]
         },
         {
@@ -56,11 +44,7 @@
                 "minimumSlope": 3,
                 "maximumSlope": 255
             },
-            "palette": [
-                {
-                    "block": "terracotta"
-                }
-            ]
+            "palette": [{"block": "terracotta"}]
         },
         {
             "minHeight": 2,
@@ -69,11 +53,7 @@
                 "minimumSlope": 3,
                 "maximumSlope": 255
             },
-            "palette": [
-                {
-                    "block": "orange_terracotta"
-                }
-            ]
+            "palette": [{"block": "orange_terracotta"}]
         },
         {
             "minHeight": 1,
@@ -82,11 +62,7 @@
                 "minimumSlope": 3,
                 "maximumSlope": 255
             },
-            "palette": [
-                {
-                    "block": "white_terracotta"
-                }
-            ]
+            "palette": [{"block": "white_terracotta"}]
         },
         {
             "minHeight": 4,
@@ -95,11 +71,7 @@
                 "minimumSlope": 3,
                 "maximumSlope": 255
             },
-            "palette": [
-                {
-                    "block": "terracotta"
-                }
-            ]
+            "palette": [{"block": "terracotta"}]
         },
         {
             "minHeight": 3,
@@ -108,11 +80,7 @@
                 "minimumSlope": 3,
                 "maximumSlope": 255
             },
-            "palette": [
-                {
-                    "block": "yellow_terracotta"
-                }
-            ]
+            "palette": [{"block": "yellow_terracotta"}]
         },
         {
             "minHeight": 1,
@@ -121,11 +89,7 @@
                 "minimumSlope": 3,
                 "maximumSlope": 255
             },
-            "palette": [
-                {
-                    "block": "orange_terracotta"
-                }
-            ]
+            "palette": [{"block": "orange_terracotta"}]
         },
         {
             "minHeight": 5,
@@ -134,11 +98,7 @@
                 "minimumSlope": 3,
                 "maximumSlope": 255
             },
-            "palette": [
-                {
-                    "block": "terracotta"
-                }
-            ]
+            "palette": [{"block": "terracotta"}]
         },
         {
             "minHeight": 3,
@@ -147,11 +107,7 @@
                 "minimumSlope": 3,
                 "maximumSlope": 255
             },
-            "palette": [
-                {
-                    "block": "brown_terracotta"
-                }
-            ]
+            "palette": [{"block": "brown_terracotta"}]
         },
         {
             "minHeight": 2,
@@ -160,11 +116,7 @@
                 "minimumSlope": 3,
                 "maximumSlope": 255
             },
-            "palette": [
-                {
-                    "block": "terracotta"
-                }
-            ]
+            "palette": [{"block": "terracotta"}]
         },
         {
             "minHeight": 3,
@@ -173,11 +125,7 @@
                 "minimumSlope": 3,
                 "maximumSlope": 255
             },
-            "palette": [
-                {
-                    "block": "red_terracotta"
-                }
-            ]
+            "palette": [{"block": "red_terracotta"}]
         },
         {
             "minHeight": 3,
@@ -186,27 +134,15 @@
                 "minimumSlope": 3,
                 "maximumSlope": 255
             },
-            "palette": [
-                {
-                    "block": "terracotta"
-                }
-            ]
+            "palette": [{"block": "terracotta"}]
         }
     ],
-    "decorators": [
-        {
-            "chance": 0.05,
-            "palette": [
-                {
-                    "block": "tall_grass"
-                }
-            ]
-        }
-    ],
+    "decorators": [{
+        "chance": 0.05,
+        "palette": [{"block": "tall_grass"}]
+    }],
     "lockLayers": true,
-    "biomeStyle": {
-        "style": "IRIS"
-    },
+    "biomeStyle": {"style": "IRIS"},
     "entityInitialSpawns": [
         {
             "entity": "cow",
@@ -236,8 +172,10 @@
     "objects": [
         {
             "place": [
-                "desert/tower","desert/tower-twin"],
-            "chance": 0.0005,
+                "desert/tower",
+                "desert/tower-twin"
+            ],
+            "chance": 5.0E-4,
             "density": 2,
             "mode": "FAST_STILT",
             "rotation": {
@@ -252,26 +190,18 @@
         },
         {
             "place": [
-                "tree/acacia/1","tree/acacia/2","tree/acacia/3"],
+                "tree/acacia/1",
+                "tree/acacia/2",
+                "tree/acacia/3"
+            ],
             "chance": 0.2,
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "acacia_planks"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "acacia_wood",                "data": {
-                                    "axis": "y"
-                                }
-                            }
-                        ]
-                    }
-                }
-            ]
+            "edit": [{
+                "find": [{"block": "acacia_planks"}],
+                "replace": {"palette": [{
+                    "block": "acacia_wood",
+                    "data": {"axis": "y"}
+                }]}
+            }]
         }
     ]
 }

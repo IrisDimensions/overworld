@@ -2,45 +2,33 @@
     "name": "Tropical Beach Bamboo",
     "derivative": "JUNGLE",
     "vanillaDerivative": "BEACH",
-    "generators": [
-        {
-            "min": -5,
-            "max": 1,
-            "generator": "plain"
-        }
-    ],
+    "generators": [{
+        "min": -5,
+        "max": 1,
+        "generator": "plain"
+    }],
     "layers": [
         {
             "minHeight": 3,
             "maxHeight": 6,
-            "palette": [
-                {
-                    "block": "sand"
-                }
-            ]
+            "palette": [{"block": "sand"}]
         },
         {
             "minHeight": 1,
             "maxHeight": 3,
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
+            "palette": [{"block": "dirt"}]
         }
     ],
-    "effects": [
-        {
-            "particleAltX": 0.301,
-            "particleAltY": -0.33885,
-            "particleAltZ": 0.301,
-            "chance": 1,
-            "particleEffect": "TOTEM",
-            "particleOffset": 12,
-            "interval": 550,
-            "particleCount": 0
-        }
-    ],
+    "effects": [{
+        "particleAltX": 0.301,
+        "particleAltY": -0.33885,
+        "particleAltZ": 0.301,
+        "chance": 1,
+        "particleEffect": "TOTEM",
+        "particleOffset": 12,
+        "interval": 550,
+        "particleCount": 0
+    }],
     "entityInitialSpawns": [
         {
             "entity": "chicken",
@@ -58,39 +46,34 @@
     "decorators": [
         {
             "chance": 0.03,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 0.3,
             "palette": [
                 {
                     "data": {
-                        "face": "floor",        "powered": false,
+                        "face": "floor",
+                        "powered": false,
                         "facing": "east"
                     },
                     "block": "jungle_button"
                 },
-                {
-                    "block": "air"
-                },
+                {"block": "air"},
                 {
                     "data": {
-                        "face": "floor",        "powered": false,
+                        "face": "floor",
+                        "powered": false,
                         "facing": "south"
                     },
                     "block": "jungle_button"
-                }],
-            "style": {
-                "style": "STATIC"
-            }
+                }
+            ],
+            "style": {"style": "STATIC"}
         },
         {
             "stackMin": 1,
             "stackMax": 7,
             "chance": 0.09,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "palette": [
                 {
                     "data": {
@@ -187,17 +170,10 @@
                         "leaves": "large"
                     },
                     "block": "bamboo"
-                }],
-            "style": {
-                "style": "STATIC"
-            }
+                }
+            ],
+            "style": {"style": "STATIC"}
         }
     ],
-    "wall": {
-        "palette": [
-            {
-                "block": "smooth_sandstone"
-            }
-        ]
-    }
+    "wall": {"palette": [{"block": "smooth_sandstone"}]}
 }

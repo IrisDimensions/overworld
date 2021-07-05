@@ -2,56 +2,32 @@
     "name": "Temperate Ocean",
     "derivative": "LUKEWARM_OCEAN",
     "vanillaDerivative": "OCEAN",
-    "children": [
-        "temperate/ocean-deep"
-    ],
-    "generators": [
-        {
-            "min": -31,
-            "max": -7,
-            "generator": "plain"
-        }
-    ],
+    "children": ["temperate/ocean-deep"],
+    "generators": [{
+        "min": -31,
+        "max": -7,
+        "generator": "plain"
+    }],
     "layers": [
         {
             "minHeight": 2,
             "maxHeight": 3,
-            "style": {
-                "style": "FRACTAL_FBM_IRIS"
-            },
+            "style": {"style": "FRACTAL_FBM_IRIS"},
             "zoom": 0.825,
             "palette": [
-                {
-                    "block": "sand"
-                },
-                {
-                    "block": "clay"
-                },
-                {
-                    "block": "sand"
-                },
-                {
-                    "block": "gravel"
-                },
-                {
-                    "block": "sand"
-                },
-                {
-                    "block": "dirt"
-                },
+                {"block": "sand"},
+                {"block": "clay"},
+                {"block": "sand"},
+                {"block": "gravel"},
+                {"block": "sand"},
+                {"block": "dirt"},
                 {
                     "weight": 2,
                     "block": "sand"
                 }
             ]
         },
-        {
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
-        },
+        {"palette": [{"block": "dirt"}]},
         {
             "minHeight": 1,
             "maxHeight": 3,
@@ -60,81 +36,51 @@
                     "weight": 2,
                     "block": "dirt"
                 },
-                {
-                    "block": "coarse_dirt"
-                }
+                {"block": "coarse_dirt"}
             ]
         }
     ],
     "decorators": [
         {
-            "chance": 0.0006,
-            "variance": {
-                "style": "STATIC"
-            },
+            "chance": 6.0E-4,
+            "variance": {"style": "STATIC"},
             "zoom": 1,
             "palette": [
-                {
-                    "block": "soul_sand"
-                },
-                {
-                    "block": "magma_block"
-                }],
-            "style": {
-                "style": "STATIC"
-            }
+                {"block": "soul_sand"},
+                {"block": "magma_block"}
+            ],
+            "style": {"style": "STATIC"}
         },
         {
             "chance": 0.07,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 5,
-            "palette": [
-                {
-                    "block": "seagrass"
-                }],
-            "style": {
-                "style": "STATIC"
-            }
+            "palette": [{"block": "seagrass"}],
+            "style": {"style": "STATIC"}
         },
         {
             "chance": 0.013,
             "verticalZoom": 88,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "stackMax": 6,
             "zoom": 1,
-            "palette": [
-                {
-                    "block": "kelp_plant"
-                }],
-            "style": {
-                "style": "STATIC"
-            },
-            "heightVariance": {
-                "style": "IRIS"
-            },
+            "palette": [{"block": "kelp_plant"}],
+            "style": {"style": "STATIC"},
+            "heightVariance": {"style": "IRIS"},
             "stackMin": 2
         },
         {
             "chance": 0.001,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 1,
-            "palette": [
-                {
-                    "data": {
-                        "waterlogged": true,
-                        "pickles": 1
-                    },
-                    "block": "sea_pickle"
-                }],
-            "style": {
-                "style": "STATIC"
-            }
+            "palette": [{
+                "data": {
+                    "waterlogged": true,
+                    "pickles": 1
+                },
+                "block": "sea_pickle"
+            }],
+            "style": {"style": "STATIC"}
         }
     ],
     "objects": [
@@ -152,22 +98,14 @@
             },
             "underwater": true,
             "place": [
-                "ships/swreck-1","ships/usd-ship-1","ships/usd-ship-2"],
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "oak_stairs"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "oak_planks"
-                            }
-                        ]
-                    }
-                }],
+                "ships/swreck-1",
+                "ships/usd-ship-1",
+                "ships/usd-ship-2"
+            ],
+            "edit": [{
+                "find": [{"block": "oak_stairs"}],
+                "replace": {"palette": [{"block": "oak_planks"}]}
+            }],
             "translate": {
                 "x": 0,
                 "y": -4,
@@ -187,7 +125,12 @@
             },
             "underwater": true,
             "place": [
-                "statue/sub-stat-1","statue/sub-stat-2","statue/sub-stat-3","statue/sub-stat-4","statue/sub-stat-5"],
+                "statue/sub-stat-1",
+                "statue/sub-stat-2",
+                "statue/sub-stat-3",
+                "statue/sub-stat-4",
+                "statue/sub-stat-5"
+            ],
             "translate": {
                 "x": 0,
                 "y": 2,
@@ -206,7 +149,14 @@
                 "enabled": true
             },
             "place": [
-                "stone-clutt/obelisk-1","stone-clutt/obelisk-2","stone-clutt/obelisk-3","stone-clutt/obelisk-4","stone-clutt/obelisk-5","stone-clutt/obelisk-6","stone-clutt/obelisk-7"],
+                "stone-clutt/obelisk-1",
+                "stone-clutt/obelisk-2",
+                "stone-clutt/obelisk-3",
+                "stone-clutt/obelisk-4",
+                "stone-clutt/obelisk-5",
+                "stone-clutt/obelisk-6",
+                "stone-clutt/obelisk-7"
+            ],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -214,11 +164,8 @@
             }
         }
     ],
-
     "slab": {
-        "style": {
-            "style": "STATIC"
-        },
+        "style": {"style": "STATIC"},
         "palette": [
             {
                 "data": {

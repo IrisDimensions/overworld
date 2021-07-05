@@ -2,127 +2,90 @@
     "name": "Hot Beach Grass",
     "derivative": "FOREST",
     "vanillaDerivative": "DESERT_LAKES",
-    "children": [
-        "ocean/ocean"
-    ],
+    "children": ["ocean/ocean"],
     "layers": [
         {
             "minHeight": 1,
             "maxHeight": 6,
-            "palette": [
-                {
-                    "block": "grass_block"
-                }
-            ]
+            "palette": [{"block": "grass_block"}]
         },
         {
             "minHeight": 1,
             "maxHeight": 3,
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
+            "palette": [{"block": "dirt"}]
         }
     ],
-    "generators": [
-        {
-            "min": 0,
-            "max": 1,
-            "generator": "plain"
-        }
-    ],
+    "generators": [{
+        "min": 0,
+        "max": 1,
+        "generator": "plain"
+    }],
     "decorators": [
         {
             "chance": 0.01,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 0.3,
             "palette": [
                 {
                     "data": {
-                        "face": "floor",        "powered": false,
+                        "face": "floor",
+                        "powered": false,
                         "facing": "east"
                     },
                     "block": "jungle_button"
                 },
-                {
-                    "block": "air"
-                },
+                {"block": "air"},
                 {
                     "data": {
-                        "face": "floor",        "powered": false,
+                        "face": "floor",
+                        "powered": false,
                         "facing": "south"
                     },
                     "block": "jungle_button"
-                }],
-            "style": {
-                "style": "STATIC"
-            }
+                }
+            ],
+            "style": {"style": "STATIC"}
         },
         {
             "partOf": "SHORE_LINE",
             "verticalZoom": 0.2,
             "chance": 0.08,
-            "variance": {
-                "style": "SIMPLEX"
-            },
+            "variance": {"style": "SIMPLEX"},
             "stackMax": 6,
             "zoom": 5,
-            "palette": [
-                {
-                    "block": "sugar_cane"
-                }],
-            "style": {
-                "style": "STATIC"
-            },
-            "heightVariance": {
-                "style": "IRIS"
-            },
+            "palette": [{"block": "sugar_cane"}],
+            "style": {"style": "STATIC"},
+            "heightVariance": {"style": "IRIS"},
             "stackMin": 1
         },
         {
             "chance": 0.01,
-            "palette": [
-                {
-                    "block": "tall_grass"
-                }
-            ]
+            "palette": [{"block": "tall_grass"}]
         },
         {
             "chance": 0.5,
-            "palette": [
-                {
-                    "block": "grass"
-                }
-            ]
+            "palette": [{"block": "grass"}]
         }
     ],
     "wall": {
-        "style": {
-            "style": "STATIC"
-        },
+        "style": {"style": "STATIC"},
         "palette": [
-            {
-                "block": "smooth_sandstone"
-            },
-            {
-                "block": "sand"
-            },
-            {
-                "block": "smooth_sandstone"
-            }
+            {"block": "smooth_sandstone"},
+            {"block": "sand"},
+            {"block": "smooth_sandstone"}
         ]
     },
-    "objects": [
-        {
-            "density": 3,
-            "mode": "STILT",
-            "chance": 1,
-            "place": [
-                "palm/palm1","palm/palm2","palm/palm3","palm/palm4","palm/palm6","palm/palm7"
-            ]
-        }
-    ]
+    "objects": [{
+        "density": 3,
+        "mode": "STILT",
+        "chance": 1,
+        "place": [
+            "palm/palm1",
+            "palm/palm2",
+            "palm/palm3",
+            "palm/palm4",
+            "palm/palm6",
+            "palm/palm7"
+        ]
+    }]
 }

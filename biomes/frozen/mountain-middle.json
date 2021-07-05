@@ -2,9 +2,7 @@
     "name": "Frozen Mountain Middle",
     "derivative": "SNOWY_TAIGA",
     "vanillaDerivative": "SNOWY_TAIGA",
-    "children": [
-        "frozen/mountain-cliffs"
-    ],
+    "children": ["frozen/mountain-cliffs"],
     "generators": [
         {
             "generator": "mountain",
@@ -25,43 +23,25 @@
                 "minimumSlope": 0,
                 "maximumSlope": 3.295
             },
+            "palette": [{"block": "snow_block"}]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "slopeCondition": {"minimumSlope": 3.95},
             "palette": [
-                {
-                    "block": "snow_block"
-                }
+                {"block": "gravel"},
+                {"block": "cyan_terracotta"}
             ]
         },
         {
             "minHeight": 2,
             "maxHeight": 4,
-            "slopeCondition": {
-                "minimumSlope": 3.95
-            },
+            "slopeCondition": {"minimumSlope": 3.95},
             "palette": [
-                {
-                    "block": "gravel"
-                },
-                {
-                    "block": "cyan_terracotta"
-                }
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 4,
-            "slopeCondition": {
-                "minimumSlope": 3.95
-            },
-            "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "cobblestone"
-                }
+                {"block": "stone"},
+                {"block": "stone"},
+                {"block": "cobblestone"}
             ]
         },
         {
@@ -71,11 +51,7 @@
                 "minimumSlope": 0,
                 "maximumSlope": 4
             },
-            "palette": [
-                {
-                    "block": "snow_block"
-                }
-            ]
+            "palette": [{"block": "snow_block"}]
         },
         {
             "minHeight": 3,
@@ -84,47 +60,32 @@
                 "minimumSlope": 0,
                 "maximumSlope": 3
             },
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
+            "palette": [{"block": "dirt"}]
         }
     ],
-    "decorators": [
-        {
-            "chance": 1,
-            "variance": {
-                "style": "IRIS","zoom": 0.2
+    "decorators": [{
+        "chance": 1,
+        "variance": {
+            "style": "IRIS",
+            "zoom": 0.2
+        },
+        "palette": [
+            {
+                "data": {"layers": 1},
+                "block": "snow"
             },
-            "palette": [
-                {
-                    "data": {
-                        "layers": 1
-                    },
-                    "block": "snow"
-                },
-                {
-                    "data": {
-                        "layers": 1
-                    },
-                    "block": "snow"
-                },
-                {
-                    "block": "air"
-                },
-                {
-                    "data": {
-                        "layers": 1
-                    },
-                    "block": "snow"
-                },
-                {
-                    "block": "air"
-                }
-            ]
-        }
-    ],
+            {
+                "data": {"layers": 1},
+                "block": "snow"
+            },
+            {"block": "air"},
+            {
+                "data": {"layers": 1},
+                "block": "snow"
+            },
+            {"block": "air"}
+        ]
+    }],
     "biomeScatter": [
         "PLAINS",
         "FOREST"
@@ -139,24 +100,12 @@
             "zoom": 0.9
         }
     },
-    "biomeStyle": {
-        "style": "SIMPLEX"
-    },
+    "biomeStyle": {"style": "SIMPLEX"},
     "biomeZoom": 0.4,
-    "biomeSkyScatter": [
-        "MOUNTAINS"
-    ],
-    "wall": {
-        "palette": [
-            {
-                "block": "ice"
-            },
-            {
-                "block": "ice"
-            },
-            {
-                "block": "cave_air"
-            }
-        ]
-    }
+    "biomeSkyScatter": ["MOUNTAINS"],
+    "wall": {"palette": [
+        {"block": "ice"},
+        {"block": "ice"},
+        {"block": "cave_air"}
+    ]}
 }

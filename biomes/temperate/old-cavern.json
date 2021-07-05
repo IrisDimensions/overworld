@@ -2,13 +2,11 @@
     "name": "Temperate Old Cavern",
     "derivative": "FOREST",
     "vanillaDerivative": "THE_VOID",
-    "generators": [
-        {
-            "generator": "plain",
-            "max": 3,
-            "min": 4
-        }
-    ],
+    "generators": [{
+        "generator": "plain",
+        "max": 3,
+        "min": 4
+    }],
     "layers": [
         {
             "slopeCondition": {
@@ -17,51 +15,46 @@
             },
             "maxHeight": 1,
             "minHeight": 1,
+            "palette": [{"block": "grass_block"}]
+        },
+        {
+            "maxHeight": 1,
+            "minHeight": 1,
+            "style": {"style": "STATIC"},
+            "zoom": 0.08,
             "palette": [
                 {
-                    "block": "grass_block"
+                    "block": "stone",
+                    "weight": 8
+                },
+                {
+                    "block": "andesite",
+                    "weight": 6
                 }
             ]
         },
         {
             "maxHeight": 1,
             "minHeight": 1,
-            "style": {
-                "style": "STATIC"
-            },
+            "style": {"style": "STATIC"},
             "zoom": 0.08,
             "palette": [
                 {
-                    "block": "stone",    "weight": 8
+                    "block": "stone",
+                    "weight": 18
                 },
                 {
-                    "block": "andesite",    "weight": 6
-                }
-            ]
-        },
-        {
-            "maxHeight": 1,
-            "minHeight": 1,
-            "style": {
-                "style": "STATIC"
-            },
-            "zoom": 0.08,
-            "palette": [
-                {
-                    "block": "stone",    "weight": 18
+                    "block": "andesite",
+                    "weight": 8
                 },
                 {
-                    "block": "andesite",    "weight": 8
+                    "block": "jungle_leaves",
+                    "weight": 1,
+                    "data": {"persistent": true}
                 },
                 {
-                    "block": "jungle_leaves",    "weight": 1,
-                    "data": {
-                        "persistent": true
-                    }
-
-                },
-                {
-                    "block": "shroomlight",    "weight": 1
+                    "block": "shroomlight",
+                    "weight": 1
                 }
             ]
         }
@@ -69,198 +62,118 @@
     "decorators": [
         {
             "chance": 0.02,
-            "palette": [
-                {
-                    "block": "andesite_wall"
-                }],
+            "palette": [{"block": "andesite_wall"}],
             "stackMax": 5,
             "stackMin": 1
         },
-		{
+        {
             "forcePlace": true,
             "chance": 0.06,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 0.14,
-            "palette": [
-                {
-                    "block": "grass"
-                }],
-            "style": {
-                "style": "STATIC"
-            }
+            "palette": [{"block": "grass"}],
+            "style": {"style": "STATIC"}
         },
         {
             "chance": 0.004,
-            "palette": [
-                {
-                    "block": "crimson_fungus"
-
-                }
-            ]
+            "palette": [{"block": "crimson_fungus"}]
         },
         {
             "chance": 0.004,
-            "palette": [
-                {
-                    "block": "red_mushroom"
-
-                }
-            ]
+            "palette": [{"block": "red_mushroom"}]
         },
         {
             "chance": 0.004,
-            "palette": [
-                {
-                    "block": "brown_mushroom"
-
-                }
-            ]
+            "palette": [{"block": "brown_mushroom"}]
         },
         {
             "chance": 0.004,
-            "palette": [
-                {
-                    "block": "warped_fungus"
-
-                }
-            ]
+            "palette": [{"block": "warped_fungus"}]
         },
         {
-            "style": {
-                "style": "STATIC"
-            },
+            "style": {"style": "STATIC"},
             "chance": 0.03,
-            "palette": [
-                {
-                    "block": "stone_button",    "data": {
-                        "face": "floor",        "facing": "south"
-                    }
+            "palette": [{
+                "block": "stone_button",
+                "data": {
+                    "face": "floor",
+                    "facing": "south"
                 }
-            ]
+            }]
         },
         {
             "forcePlace": true,
             "chance": 0.006,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 0.02,
             "palette": [
-                {
-                    "block": "nether_sprouts"
-                },
-                {
-                    "block": "warped_roots"
-                }],
-            "style": {
-                "style": "STATIC"
-            }
+                {"block": "nether_sprouts"},
+                {"block": "warped_roots"}
+            ],
+            "style": {"style": "STATIC"}
         },
         {
             "chance": 0.034,
-            "palette": [
-                {
-                    "block": "jungle_leaves",    "data": {
-                        "persistent": true
-                    }
-
-                }
-            ]
+            "palette": [{
+                "block": "jungle_leaves",
+                "data": {"persistent": true}
+            }]
         },
         {
             "chance": 0.0013,
-            "palette": [
-                {
-                    "block": "lava"
-                }],
+            "palette": [{"block": "lava"}],
             "stackMax": 11,
             "stackMin": 10
         },
         {
             "chance": 0.003,
-            "palette": [
-                {
-                    "block": "water"
-                }],
+            "palette": [{"block": "water"}],
             "stackMax": 11,
             "stackMin": 10
         },
         {
             "chance": 0.005,
-            "palette": [
-                {
-                    "block": "stone"
-                }],
+            "palette": [{"block": "stone"}],
             "stackMax": 16,
             "stackMin": 15
         },
         {
             "chance": 0.004,
-            "palette": [
-                {
-                    "block": "crimson_fungus"
-
-                }
-            ]
+            "palette": [{"block": "crimson_fungus"}]
         },
         {
             "chance": 0.004,
-            "palette": [
-                {
-                    "block": "red_mushroom"
-
-                }
-            ]
+            "palette": [{"block": "red_mushroom"}]
         },
         {
             "chance": 0.004,
-            "palette": [
-                {
-                    "block": "brown_mushroom"
-
-                }
-            ]
+            "palette": [{"block": "brown_mushroom"}]
         },
         {
             "chance": 0.004,
-            "palette": [
-                {
-                    "block": "warped_fungus"
-
-                }
-            ]
+            "palette": [{"block": "warped_fungus"}]
         },
         {
-            "style": {
-                "style": "STATIC"
-            },
+            "style": {"style": "STATIC"},
             "chance": 0.03,
-            "palette": [
-                {
-                    "block": "stone_button",    "data": {
-                        "face": "floor",        "facing": "south"
-                    }
+            "palette": [{
+                "block": "stone_button",
+                "data": {
+                    "face": "floor",
+                    "facing": "south"
                 }
-            ]
+            }]
         }
     ],
     "slab": {
-        "style": {
-            "style": "STATIC"
-        },
+        "style": {"style": "STATIC"},
         "palette": [
             {
-                "data": {
-                    "type": "bottom"
-                },
+                "data": {"type": "bottom"},
                 "block": "cobblestone_slab"
             },
             {
-                "data": {
-                    "type": "bottom"
-                },
+                "data": {"type": "bottom"},
                 "block": "stone_slab"
             },
             {
@@ -281,8 +194,7 @@
                 },
                 "enabled": true
             },
-            "place": [
-                "camp/camp"],
+            "place": ["camp/camp"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -301,8 +213,7 @@
                 },
                 "enabled": true
             },
-            "place": [
-                "camp/barrel-bin"],
+            "place": ["camp/barrel-bin"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -321,9 +232,7 @@
                 },
                 "enabled": true
             },
-            "place": [
-                "camp/camp"
-            ]
+            "place": ["camp/camp"]
         }
     ]
 }

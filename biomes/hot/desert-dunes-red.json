@@ -2,41 +2,29 @@
     "name": "Hot Desert Dunes Red",
     "derivative": "DESERT",
     "vanillaDerivative": "DESERT",
-    "generators": [
-        {
-            "generator": "smooth-dunes",
-            "max": 30,
-            "min": 10
-        }
-    ],
+    "generators": [{
+        "generator": "smooth-dunes",
+        "max": 30,
+        "min": 10
+    }],
     "layers": [
         {
             "minHeight": 5,
             "maxHeight": 6,
-            "palette": [
-                {
-                    "weight": 1,
-                    "block": "sand"
-                }
-            ]
+            "palette": [{
+                "weight": 1,
+                "block": "sand"
+            }]
         },
         {
             "minHeight": 3,
             "maxHeight": 4,
-            "palette": [
-                {
-                    "block": "red_sandstone"
-                }
-            ]
+            "palette": [{"block": "red_sandstone"}]
         },
         {
             "minHeight": 2,
             "maxHeight": 5,
-            "palette": [
-                {
-                    "block": "red_terracotta"
-                }
-            ]
+            "palette": [{"block": "red_terracotta"}]
         }
     ],
     "jigsawStructures": [
@@ -58,11 +46,13 @@
             "chance": 0.001,
             "density": 3,
             "place": [
-                "clutter/desert-post1","clutter/desert-post2","clutter/desert-post3"
+                "clutter/desert-post1",
+                "clutter/desert-post2",
+                "clutter/desert-post3"
             ]
         },
         {
-            "chance": 0.000001,
+            "chance": 1.0E-6,
             "mode": "STILT",
             "rotation": {
                 "yAxis": {
@@ -74,7 +64,11 @@
                 "enabled": true
             },
             "place": [
-                "pyramid/pyramid-extreme","void/void","void/void","void/void"],
+                "pyramid/pyramid-extreme",
+                "void/void",
+                "void/void",
+                "void/void"
+            ],
             "translate": {
                 "x": 0,
                 "y": -14,
@@ -86,29 +80,16 @@
         {
             "verticalZoom": 5,
             "chance": 0.004,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "stackMax": 5,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "cactus"
-                }],
-            "heightVariance": {
-                "style": "IRIS"
-            },
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "cactus"}],
+            "heightVariance": {"style": "IRIS"},
             "stackMin": 1
         },
         {
             "chance": 0.005,
-            "palette": [
-                {
-                    "block": "dead_bush"
-                }
-            ]
+            "palette": [{"block": "dead_bush"}]
         }
     ]
 }

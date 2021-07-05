@@ -6,62 +6,39 @@
         {
             "minHeight": 0,
             "maxHeight": 1,
-            "palette": [
-                {
-                    "block": "snow_block"
-                }
-            ]
+            "palette": [{"block": "snow_block"}]
         },
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "palette": [
-                {
-                    "block": "grass_block",    "data": {
-                        "snowy": true
-                    }
-                }
-            ]
+            "palette": [{
+                "block": "grass_block",
+                "data": {"snowy": true}
+            }]
         },
         {
             "minHeight": 2,
             "maxHeight": 4,
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
+            "palette": [{"block": "dirt"}]
         }
     ],
-    "generators": [
-        {
-            "min": -5,
-            "max": 1,
-            "generator": "plain"
-        }
-    ],
-    "seaLayers": [
-        {
-            "minHeight": 1,
-            "maxHeight": 7,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "packed_ice"
-                }
-            ]
-        }
-    ],
-    "entityInitialSpawns": [
-        {
-            "entity": "wolf",
-            "maxSpawns": 2,
-            "minSpawns": 1,
-            "rarity": 6
-        }
-    ],
+    "generators": [{
+        "min": -5,
+        "max": 1,
+        "generator": "plain"
+    }],
+    "seaLayers": [{
+        "minHeight": 1,
+        "maxHeight": 7,
+        "style": {"style": "STATIC"},
+        "palette": [{"block": "packed_ice"}]
+    }],
+    "entityInitialSpawns": [{
+        "entity": "wolf",
+        "maxSpawns": 2,
+        "minSpawns": 1,
+        "rarity": 6
+    }],
     "jigsawStructures": [
         {
             "rarity": 1700,
@@ -91,7 +68,27 @@
                 "enabled": true
             },
             "place": [
-                "ice-spikes/ic-1","ice-spikes/ic-2","ice-spikes/ic-3","ice-spikes/ic-4","ice-spikes/ic-5","ice-spikes/ic-6","ice-spikes/ic-7","ice-spikes/ic-8","ice-spikes/ic-9","ice-spikes/ic-10","ice-spikes/ic-11","ice-spikes/sp-1","ice-spikes/sp-2","ice-spikes/sp-3","ice-spikes/sp-4","ice-spikes/sp-5","ice-spikes/tp-1","ice-spikes/tp-2","ice-spikes/tp-3","ice-spikes/tp-4"],
+                "ice-spikes/ic-1",
+                "ice-spikes/ic-2",
+                "ice-spikes/ic-3",
+                "ice-spikes/ic-4",
+                "ice-spikes/ic-5",
+                "ice-spikes/ic-6",
+                "ice-spikes/ic-7",
+                "ice-spikes/ic-8",
+                "ice-spikes/ic-9",
+                "ice-spikes/ic-10",
+                "ice-spikes/ic-11",
+                "ice-spikes/sp-1",
+                "ice-spikes/sp-2",
+                "ice-spikes/sp-3",
+                "ice-spikes/sp-4",
+                "ice-spikes/sp-5",
+                "ice-spikes/tp-1",
+                "ice-spikes/tp-2",
+                "ice-spikes/tp-3",
+                "ice-spikes/tp-4"
+            ],
             "translate": {
                 "x": 0,
                 "y": -1,
@@ -112,7 +109,16 @@
                 "enabled": true
             },
             "place": [
-                "ice-spikes/smol-ice-spike-1","ice-spikes/smol-ice-spike-2","ice-spikes/smol-ice-spike-3","ice-spikes/smol-ice-spike-4","ice-spikes/smol-ice-spike-5","ice-spikes/smol-ice-spike-6","ice-spikes/smol-ice-spike-7","ice-spikes/smol-ice-spike-8","ice-spikes/smol-ice-spike-9"],
+                "ice-spikes/smol-ice-spike-1",
+                "ice-spikes/smol-ice-spike-2",
+                "ice-spikes/smol-ice-spike-3",
+                "ice-spikes/smol-ice-spike-4",
+                "ice-spikes/smol-ice-spike-5",
+                "ice-spikes/smol-ice-spike-6",
+                "ice-spikes/smol-ice-spike-7",
+                "ice-spikes/smol-ice-spike-8",
+                "ice-spikes/smol-ice-spike-9"
+            ],
             "translate": {
                 "x": 0,
                 "y": -1,
@@ -133,7 +139,12 @@
                 "enabled": true
             },
             "place": [
-                "ice-spikes/ice-spec-1","ice-spikes/ice-spec-2","ice-spikes/ice-spec-3","ice-spikes/ice-spec-4","ice-spikes/ice-spec-5"],
+                "ice-spikes/ice-spec-1",
+                "ice-spikes/ice-spec-2",
+                "ice-spikes/ice-spec-3",
+                "ice-spikes/ice-spec-4",
+                "ice-spikes/ice-spec-5"
+            ],
             "translate": {
                 "x": 0,
                 "y": -1,
@@ -143,8 +154,7 @@
         {
             "chance": 0.0125,
             "density": 1,
-            "place": [
-                "snowy/snowulder"],
+            "place": ["snowy/snowulder"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -152,51 +162,34 @@
             }
         }
     ],
-    "decorators": [
-        {
-            "chance": 1,
-            "variance": {
-                "style": "IRIS","zoom": 0.2
-            },
-            "palette": [
-                {
-                    "data": {
-                        "layers": 1
-                    },
-                    "block": "snow"
-                },
-                {
-                    "data": {
-                        "layers": 1
-                    },
-                    "block": "snow"
-                },
-                {
-                    "block": "air"
-                },
-                {
-                    "data": {
-                        "layers": 1
-                    },
-                    "block": "snow"
-                },
-                {
-                    "block": "air"
-                }
-            ]
-        }
-    ],
-    "slab": {
-        "style": {
-            "style": "STATIC"
+    "decorators": [{
+        "chance": 1,
+        "variance": {
+            "style": "IRIS",
+            "zoom": 0.2
         },
         "palette": [
             {
-                "data": {
-                    "layers": 5
-                },
+                "data": {"layers": 1},
                 "block": "snow"
-            }
+            },
+            {
+                "data": {"layers": 1},
+                "block": "snow"
+            },
+            {"block": "air"},
+            {
+                "data": {"layers": 1},
+                "block": "snow"
+            },
+            {"block": "air"}
         ]
+    }],
+    "slab": {
+        "style": {"style": "STATIC"},
+        "palette": [{
+            "data": {"layers": 5},
+            "block": "snow"
+        }]
     }
 }

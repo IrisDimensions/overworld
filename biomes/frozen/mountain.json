@@ -15,69 +15,42 @@
                 "minimumSlope": 0,
                 "maximumSlope": 3.295
             },
-            "palette": [
-                {
-                    "block": "snow_block"
-                }
-            ]
+            "palette": [{"block": "snow_block"}]
         },
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "palette": [
-                {
-                    "block": "grass_block",    "data": {
-                        "snowy": true
-                    }
-                }
-            ]
+            "palette": [{
+                "block": "grass_block",
+                "data": {"snowy": true}
+            }]
         },
         {
             "minHeight": 2,
             "maxHeight": 4,
-            "slopeCondition": {
-                "minimumSlope": 3.95
-            },
+            "slopeCondition": {"minimumSlope": 3.95},
             "palette": [
-                {
-                    "block": "gravel"
-                },
-                {
-                    "block": "cyan_terracotta"
-                }
+                {"block": "gravel"},
+                {"block": "cyan_terracotta"}
             ]
         },
         {
             "minHeight": 2,
             "maxHeight": 3,
             "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "gravel"
-                }
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "gravel"}
             ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
+            "style": {"style": "STATIC"},
             "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "stone"
-                }
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
             ]
         }
     ],
@@ -95,47 +68,34 @@
             "structure": "village-snowy"
         }
     ],
-    "generators": [
-        {
-            "min": 70,
-            "max": 140,
-            "generator": "plain"
-        }
-    ],
-    "decorators": [
-        {
-            "chance": 1,
-            "variance": {
-                "style": "IRIS","zoom": 0.2
+    "generators": [{
+        "min": 70,
+        "max": 140,
+        "generator": "plain"
+    }],
+    "decorators": [{
+        "chance": 1,
+        "variance": {
+            "style": "IRIS",
+            "zoom": 0.2
+        },
+        "palette": [
+            {
+                "data": {"layers": 1},
+                "block": "snow"
             },
-            "palette": [
-                {
-                    "data": {
-                        "layers": 1
-                    },
-                    "block": "snow"
-                },
-                {
-                    "data": {
-                        "layers": 1
-                    },
-                    "block": "snow"
-                },
-                {
-                    "block": "air"
-                },
-                {
-                    "data": {
-                        "layers": 1
-                    },
-                    "block": "snow"
-                },
-                {
-                    "block": "air"
-                }
-            ]
-        }
-    ],
+            {
+                "data": {"layers": 1},
+                "block": "snow"
+            },
+            {"block": "air"},
+            {
+                "data": {"layers": 1},
+                "block": "snow"
+            },
+            {"block": "air"}
+        ]
+    }],
     "biomeZoom": 30,
     "biomeStyle": {
         "style": "IRIS",
@@ -147,14 +107,8 @@
         "TAIGA_HILLS",
         "MOUNTAINS"
     ],
-    "wall": {
-        "palette": [
-            {
-                "block": "stone"
-            },
-            {
-                "block": "andesite"
-            }
-        ]
-    }
+    "wall": {"palette": [
+        {"block": "stone"},
+        {"block": "andesite"}
+    ]}
 }

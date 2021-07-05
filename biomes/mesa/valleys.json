@@ -2,13 +2,11 @@
     "name": "Mesa Valley",
     "derivative": "SAVANNA",
     "vanillaDerivative": "BADLANDS",
-    "generators": [
-        {
-            "min": 5,
-            "max": 15,
-            "generator": "smooth-dunes"
-        }
-    ],
+    "generators": [{
+        "min": 5,
+        "max": 15,
+        "generator": "smooth-dunes"
+    }],
     "layers": [
         {
             "minHeight": 1,
@@ -17,11 +15,7 @@
                 "minimumSlope": 2,
                 "maximumSlope": 10
             },
-            "palette": [
-                {
-                    "block": "terracotta"
-                }
-            ]
+            "palette": [{"block": "terracotta"}]
         },
         {
             "slopeCondition": {
@@ -29,12 +23,15 @@
                 "maximumSlope": 2
             },
             "style": {
-                "style": "SIMPLEX","zoom": 1.4,
+                "style": "SIMPLEX",
+                "zoom": 1.4,
                 "fracture": {
-                    "style": "FRACTAL_BILLOW_SIMPLEX",    "zoom": 0.4,
+                    "style": "FRACTAL_BILLOW_SIMPLEX",
+                    "zoom": 0.4,
                     "multiplier": 50,
                     "fracture": {
-                        "style": "STATIC",        "multiplier": 3
+                        "style": "STATIC",
+                        "multiplier": 3
                     }
                 }
             },
@@ -59,18 +56,12 @@
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "palette": [
-                {
-                    "block": "light_gray_terracotta"
-                }
-            ]
+            "palette": [{"block": "light_gray_terracotta"}]
         },
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "style": {
-                "style": "STATIC"
-            },
+            "style": {"style": "STATIC"},
             "palette": [
                 {
                     "weight": 1,
@@ -85,36 +76,22 @@
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "palette": [
-                {
-                    "block": "terracotta"
-                }
-            ]
+            "palette": [{"block": "terracotta"}]
         },
         {
             "minHeight": 2,
             "maxHeight": 2,
-            "palette": [
-                {
-                    "block": "orange_terracotta"
-                }
-            ]
+            "palette": [{"block": "orange_terracotta"}]
         },
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "palette": [
-                {
-                    "block": "terracotta"
-                }
-            ]
+            "palette": [{"block": "terracotta"}]
         },
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "style": {
-                "style": "STATIC"
-            },
+            "style": {"style": "STATIC"},
             "palette": [
                 {
                     "weight": 1,
@@ -129,20 +106,12 @@
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "palette": [
-                {
-                    "block": "light_gray_terracotta"
-                }
-            ]
+            "palette": [{"block": "light_gray_terracotta"}]
         },
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "palette": [
-                {
-                    "block": "terracotta"
-                }
-            ]
+            "palette": [{"block": "terracotta"}]
         }
     ],
     "entityInitialSpawns": [
@@ -175,79 +144,58 @@
         {
             "chance": 0.2,
             "variance": {
-                "style": "CELLULAR","zoom": 0.3,
+                "style": "CELLULAR",
+                "zoom": 0.3,
                 "fracture": {
-                    "style": "SIMPLEX",    "zoom": 0.2,
+                    "style": "SIMPLEX",
+                    "zoom": 0.2,
                     "multiplier": 10,
                     "fracture": {
-                        "style": "STATIC",        "multiplier": 15
+                        "style": "STATIC",
+                        "multiplier": 15
                     }
                 }
             },
             "style": {
-                "style": "TRIOCTAVE_SIMPLEX","zoom": 0.3,
+                "style": "TRIOCTAVE_SIMPLEX",
+                "zoom": 0.3,
                 "fracture": {
-                    "style": "STATIC",    "multiplier": 8
+                    "style": "STATIC",
+                    "multiplier": 8
                 }
             },
             "palette": [
-                {
-                    "block": "white_tulip"
-                },
-                {
-                    "block": "red_tulip"
-                },
-                {
-                    "block": "orange_tulip"
-                },
-                {
-                    "block": "dandelion"
-                },
-                {
-                    "block": "poppy"
-                }
+                {"block": "white_tulip"},
+                {"block": "red_tulip"},
+                {"block": "orange_tulip"},
+                {"block": "dandelion"},
+                {"block": "poppy"}
             ]
         },
         {
             "chance": 0.01,
-            "palette": [
-                {
-                    "block": "tall_grass"
-                }
-            ]
+            "palette": [{"block": "tall_grass"}]
         },
         {
             "chance": 0.5,
-            "palette": [
-                {
-                    "block": "grass"
-                }
-            ]
+            "palette": [{"block": "grass"}]
         }
     ],
     "objects": [
         {
             "place": [
-                "tree/acacia/1","tree/acacia/2","tree/acacia/3"],
+                "tree/acacia/1",
+                "tree/acacia/2",
+                "tree/acacia/3"
+            ],
             "chance": 0.4,
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "acacia_planks"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "acacia_wood",                "data": {
-                                    "axis": "y"
-                                }
-                            }
-                        ]
-                    }
-                }
-            ]
+            "edit": [{
+                "find": [{"block": "acacia_planks"}],
+                "replace": {"palette": [{
+                    "block": "acacia_wood",
+                    "data": {"axis": "y"}
+                }]}
+            }]
         },
         {
             "chance": 0.00175,
@@ -260,8 +208,7 @@
                 },
                 "enabled": true
             },
-            "place": [
-                "camp/camp"],
+            "place": ["camp/camp"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -280,8 +227,7 @@
                 },
                 "enabled": true
             },
-            "place": [
-                "camp/barrel-bin"],
+            "place": ["camp/barrel-bin"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -300,7 +246,10 @@
                 "enabled": true
             },
             "place": [
-                "savanna-gen/savannaD-1","savanna-gen/savannaD-2","savanna-gen/savannaD-3"],
+                "savanna-gen/savannaD-1",
+                "savanna-gen/savannaD-2",
+                "savanna-gen/savannaD-3"
+            ],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -319,7 +268,20 @@
                 "enabled": true
             },
             "place": [
-                "savanna-gen/savannaF-1","savanna-gen/savannaF-2","savanna-gen/savannaF-3","savanna-gen/savannaF-4","savanna-gen/savannaF-5","savanna-gen/savannaF-6","savanna-gen/savannaF-7","savanna-gen/savannaF-8","savanna-gen/savannaF-9","savanna-gen/savannaF-10","savanna-gen/savannaF-11","savanna-gen/savannaF-13","savanna-gen/savannaF-14"],
+                "savanna-gen/savannaF-1",
+                "savanna-gen/savannaF-2",
+                "savanna-gen/savannaF-3",
+                "savanna-gen/savannaF-4",
+                "savanna-gen/savannaF-5",
+                "savanna-gen/savannaF-6",
+                "savanna-gen/savannaF-7",
+                "savanna-gen/savannaF-8",
+                "savanna-gen/savannaF-9",
+                "savanna-gen/savannaF-10",
+                "savanna-gen/savannaF-11",
+                "savanna-gen/savannaF-13",
+                "savanna-gen/savannaF-14"
+            ],
             "translate": {
                 "x": 0,
                 "y": -1,
@@ -338,7 +300,19 @@
                 "enabled": true
             },
             "place": [
-                "savanna-gen/savannaS-1","savanna-gen/savannaS-2","savanna-gen/savannaS-3","savanna-gen/savannaS-4","savanna-gen/savannaS-5","savanna-gen/savannaS-6","savanna-gen/savannaS-7","savanna-gen/savannaS-8","savanna-gen/savannas-9","savanna-gen/savannas-10","savanna-gen/savannas-11","savanna-gen/savannas-12"],
+                "savanna-gen/savannaS-1",
+                "savanna-gen/savannaS-2",
+                "savanna-gen/savannaS-3",
+                "savanna-gen/savannaS-4",
+                "savanna-gen/savannaS-5",
+                "savanna-gen/savannaS-6",
+                "savanna-gen/savannaS-7",
+                "savanna-gen/savannaS-8",
+                "savanna-gen/savannas-9",
+                "savanna-gen/savannas-10",
+                "savanna-gen/savannas-11",
+                "savanna-gen/savannas-12"
+            ],
             "translate": {
                 "x": 0,
                 "y": 0,

@@ -2,9 +2,7 @@
     "name": "Frozen Plains",
     "derivative": "SNOWY_TAIGA",
     "vanillaDerivative": "SNOWY_TAIGA",
-    "children": [
-        "frozen/hills"
-    ],
+    "children": ["frozen/hills"],
     "generators": [
         {
             "min": 4,
@@ -21,48 +19,29 @@
         {
             "minHeight": 0,
             "maxHeight": 1,
-            "palette": [
-                {
-                    "block": "snow_block"
-                }
-            ]
+            "palette": [{"block": "snow_block"}]
         },
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "palette": [
-                {
-                    "block": "grass_block",    "data": {
-                        "snowy": true
-                    }
-                }
-            ]
+            "palette": [{
+                "block": "grass_block",
+                "data": {"snowy": true}
+            }]
         },
         {
             "minHeight": 4,
             "maxHeight": 7,
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
+            "palette": [{"block": "dirt"}]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
+            "style": {"style": "STATIC"},
             "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "stone"
-                }
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
             ]
         }
     ],
@@ -80,43 +59,32 @@
             "structure": "village-snowy"
         }
     ],
-    "decorators": [
-        {
-            "chance": 1,
-            "variance": {
-                "style": "IRIS","zoom": 0.2
+    "decorators": [{
+        "chance": 1,
+        "variance": {
+            "style": "IRIS",
+            "zoom": 0.2
+        },
+        "palette": [
+            {
+                "data": {"layers": 1},
+                "block": "snow"
             },
-            "palette": [
-                {
-                    "data": {
-                        "layers": 1
-                    },
-                    "block": "snow"
-                },
-                {
-                    "data": {
-                        "layers": 1
-                    },
-                    "block": "snow"
-                },
-                {
-                    "block": "air"
-                },
-                {
-                    "data": {
-                        "layers": 1
-                    },
-                    "block": "snow"
-                },
-                {
-                    "block": "air"
-                }
-            ]
-        }
-    ],
+            {
+                "data": {"layers": 1},
+                "block": "snow"
+            },
+            {"block": "air"},
+            {
+                "data": {"layers": 1},
+                "block": "snow"
+            },
+            {"block": "air"}
+        ]
+    }],
     "objects": [
         {
-            "chance": 0.000256,
+            "chance": 2.56E-4,
             "snow": 0.25,
             "rotation": {
                 "yAxis": {
@@ -127,8 +95,7 @@
                 },
                 "enabled": true
             },
-            "place": [
-                "grave/grave"],
+            "place": ["grave/grave"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -137,21 +104,10 @@
         },
         {
             "chance": 0.005,
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "vine"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "air"
-                            }
-                        ]
-                    }
-                }],
+            "edit": [{
+                "find": [{"block": "vine"}],
+                "replace": {"palette": [{"block": "air"}]}
+            }],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -162,7 +118,14 @@
                 "enabled": true
             },
             "place": [
-                "stone-clutt/obelisk-1","stone-clutt/obelisk-2","stone-clutt/obelisk-3","stone-clutt/obelisk-4","stone-clutt/obelisk-5","stone-clutt/obelisk-6","stone-clutt/obelisk-7"],
+                "stone-clutt/obelisk-1",
+                "stone-clutt/obelisk-2",
+                "stone-clutt/obelisk-3",
+                "stone-clutt/obelisk-4",
+                "stone-clutt/obelisk-5",
+                "stone-clutt/obelisk-6",
+                "stone-clutt/obelisk-7"
+            ],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -183,7 +146,27 @@
                 "enabled": true
             },
             "place": [
-                "ice-spikes/ic-1","ice-spikes/ic-2","ice-spikes/ic-3","ice-spikes/ic-4","ice-spikes/ic-5","ice-spikes/ic-6","ice-spikes/ic-7","ice-spikes/ic-8","ice-spikes/ic-9","ice-spikes/ic-10","ice-spikes/ic-11","ice-spikes/sp-1","ice-spikes/sp-2","ice-spikes/sp-3","ice-spikes/sp-4","ice-spikes/sp-5","ice-spikes/tp-1","ice-spikes/tp-2","ice-spikes/tp-3","ice-spikes/tp-4"],
+                "ice-spikes/ic-1",
+                "ice-spikes/ic-2",
+                "ice-spikes/ic-3",
+                "ice-spikes/ic-4",
+                "ice-spikes/ic-5",
+                "ice-spikes/ic-6",
+                "ice-spikes/ic-7",
+                "ice-spikes/ic-8",
+                "ice-spikes/ic-9",
+                "ice-spikes/ic-10",
+                "ice-spikes/ic-11",
+                "ice-spikes/sp-1",
+                "ice-spikes/sp-2",
+                "ice-spikes/sp-3",
+                "ice-spikes/sp-4",
+                "ice-spikes/sp-5",
+                "ice-spikes/tp-1",
+                "ice-spikes/tp-2",
+                "ice-spikes/tp-3",
+                "ice-spikes/tp-4"
+            ],
             "translate": {
                 "x": 0,
                 "y": -4,
@@ -204,7 +187,17 @@
                 "enabled": true
             },
             "place": [
-                "wonderland/twirlSpruce-1","wonderland/twirlSpruce-2","wonderland/twirlSpruce-3","wonderland/twirlSpruce-4","wonderland/twirlSpruce-5","wonderland/twirlSpruce-6","wonderland/twirlSpruce-7","wonderland/twirlSpruce-8","wonderland/twirlSpruce-9","wonderland/twirlSpruce-10"],
+                "wonderland/twirlSpruce-1",
+                "wonderland/twirlSpruce-2",
+                "wonderland/twirlSpruce-3",
+                "wonderland/twirlSpruce-4",
+                "wonderland/twirlSpruce-5",
+                "wonderland/twirlSpruce-6",
+                "wonderland/twirlSpruce-7",
+                "wonderland/twirlSpruce-8",
+                "wonderland/twirlSpruce-9",
+                "wonderland/twirlSpruce-10"
+            ],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -225,7 +218,12 @@
                 "enabled": true
             },
             "place": [
-                "ice-spikes/ice-spec-1","ice-spikes/ice-spec-2","ice-spikes/ice-spec-3","ice-spikes/ice-spec-4","ice-spikes/ice-spec-5"],
+                "ice-spikes/ice-spec-1",
+                "ice-spikes/ice-spec-2",
+                "ice-spikes/ice-spec-3",
+                "ice-spikes/ice-spec-4",
+                "ice-spikes/ice-spec-5"
+            ],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -244,8 +242,7 @@
                 },
                 "enabled": true
             },
-            "place": [
-                "camp/camp"],
+            "place": ["camp/camp"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -266,7 +263,12 @@
                 "enabled": true
             },
             "place": [
-                "ice-spikes/ice-spec-1","ice-spikes/ice-spec-2","ice-spikes/ice-spec-3","ice-spikes/ice-spec-4","ice-spikes/ice-spec-5"],
+                "ice-spikes/ice-spec-1",
+                "ice-spikes/ice-spec-2",
+                "ice-spikes/ice-spec-3",
+                "ice-spikes/ice-spec-4",
+                "ice-spikes/ice-spec-5"
+            ],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -276,8 +278,7 @@
         {
             "chance": 0.0125,
             "density": 1,
-            "place": [
-                "snowy/snowulder"],
+            "place": ["snowy/snowulder"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -285,16 +286,10 @@
             }
         }
     ],
-    "wall": {
-        "palette": [
-            {
-                "block": "stone"
-            },
-            {
-                "block": "andesite"
-            }
-        ]
-    },
+    "wall": {"palette": [
+        {"block": "stone"},
+        {"block": "andesite"}
+    ]},
     "entityInitialSpawns": [
         {
             "entity": "polar-bear",

@@ -2,70 +2,48 @@
     "name": "Tropical Cavern",
     "derivative": "FOREST",
     "vanillaDerivative": "FOREST",
-    "generators": [
-        {
-            "min": 4,
-            "max": 6,
-            "generator": "plain"
-        }
-    ],
-    "layers": [
-        {
-            "minHeight": 1,
-            "maxHeight": 2,
-            "style": {
-                "style": "STATIC"
+    "generators": [{
+        "min": 4,
+        "max": 6,
+        "generator": "plain"
+    }],
+    "layers": [{
+        "minHeight": 1,
+        "maxHeight": 2,
+        "style": {"style": "STATIC"},
+        "zoom": 0.1,
+        "palette": [
+            {
+                "weight": 2,
+                "block": "stone"
             },
-            "zoom": 0.1,
-            "palette": [
-                {
-                    "weight": 2,
-                    "block": "stone"
-                },
-                {
-                    "block": "jungle_leaves",
-			        "data": {
-                        "persistent": true
-                    }
-                },
-                {
-                    "weight": 2,
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "weight": 2,
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "stone"
-                }
-            ]
-        }
-    ],
-    "entitySpawnOverrides": [
-        {
-            "trigger": "SKELETON",
-            "entity": "shroud",
-            "cancelSourceSpawn": true,
-            "rarity": 12
-        }
-    ],
-    "decorators": [
-        {
-            "chance": 0.00001,
-            "palette": [
-                {
-                    "block": "barrel"
-                }
-            ]
-        }
-    ],
+            {
+                "block": "jungle_leaves",
+                "data": {"persistent": true}
+            },
+            {
+                "weight": 2,
+                "block": "stone"
+            },
+            {"block": "andesite"},
+            {
+                "weight": 2,
+                "block": "stone"
+            },
+            {"block": "andesite"},
+            {"block": "stone"}
+        ]
+    }],
+    "entitySpawnOverrides": [{
+        "trigger": "SKELETON",
+        "entity": "shroud",
+        "cancelSourceSpawn": true,
+        "rarity": 12
+    }],
+    "decorators": [{
+        "chance": 1.0E-5,
+        "palette": [{"block": "barrel"}]
+    }],
     "objects": [
         {
             "chance": 0.00175,
@@ -78,8 +56,7 @@
                 },
                 "enabled": true
             },
-            "place": [
-                "camp/camp"],
+            "place": ["camp/camp"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -98,8 +75,7 @@
                 },
                 "enabled": true
             },
-            "place": [
-                "camp/barrel-bin"],
+            "place": ["camp/barrel-bin"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -118,7 +94,22 @@
                 "enabled": true
             },
             "place": [
-                "boulder/boulder1","boulder/boulder2","boulder/boulder3","boulder/boulder4","boulder/boulder5","boulder/boulder6","boulder/boulder7","boulder/boulder8","boulder/boulder9","boulder/boulder10","boulder/boulder11","boulder/boulder12","boulder/boulder13","boulder/boulder14","boulder/boulder15"],
+                "boulder/boulder1",
+                "boulder/boulder2",
+                "boulder/boulder3",
+                "boulder/boulder4",
+                "boulder/boulder5",
+                "boulder/boulder6",
+                "boulder/boulder7",
+                "boulder/boulder8",
+                "boulder/boulder9",
+                "boulder/boulder10",
+                "boulder/boulder11",
+                "boulder/boulder12",
+                "boulder/boulder13",
+                "boulder/boulder14",
+                "boulder/boulder15"
+            ],
             "translate": {
                 "x": 0,
                 "y": -2,
@@ -126,11 +117,8 @@
             }
         }
     ],
-
     "slab": {
-        "style": {
-            "style": "STATIC"
-        },
+        "style": {"style": "STATIC"},
         "palette": [
             {
                 "data": {

@@ -2,43 +2,29 @@
     "name": "Swamp Beach",
     "derivative": "SWAMP",
     "vanillaDerivative": "BEACH",
-    "generators": [
-        {
-            "min": -5,
-            "max": 3,
-            "generator": "plain"
-        }
-    ],
+    "generators": [{
+        "min": -5,
+        "max": 3,
+        "generator": "plain"
+    }],
     "layers": [
         {
             "minHeight": 3,
             "maxHeight": 6,
-            "style": {
-                "style": "STATIC"
-            },
+            "style": {"style": "STATIC"},
             "zoom": 0.25,
             "palette": [
-                {
-                    "block": "dirt"
-                },
-                {
-                    "block": "podzol"
-                },
-                {
-                    "block": "coarse_dirt"
-                },
-                {
-                    "block": "podzol"
-                }
+                {"block": "dirt"},
+                {"block": "podzol"},
+                {"block": "coarse_dirt"},
+                {"block": "podzol"}
             ]
         },
         {
             "minHeight": 1,
             "maxHeight": 3,
             "palette": [
-                {
-                    "block": "dirt"
-                },
+                {"block": "dirt"},
                 {
                     "weight": 2,
                     "block": "coarse_dirt"
@@ -49,68 +35,44 @@
     "decorators": [
         {
             "chance": 0.004,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 0.3,
             "palette": [
                 {
                     "data": {
-                        "face": "floor",        "powered": false,
+                        "face": "floor",
+                        "powered": false,
                         "facing": "east"
                     },
                     "block": "dark_oak_button"
                 },
-                {
-                    "block": "air"
-                }],
-            "style": {
-                "style": "STATIC"
-            }
+                {"block": "air"}
+            ],
+            "style": {"style": "STATIC"}
         },
         {
-            "chance": 0.00009,
-            "variance": {
-                "style": "STATIC"
-            },
+            "chance": 9.0E-5,
+            "variance": {"style": "STATIC"},
             "zoom": 0.3,
             "palette": [
-                {
-                    "block": "wither_rose"
-                },
-                {
-                    "block": "red_mushroom"
-                },
-                {
-                    "block": "brown_mushroom"
-                },
-                {
-                    "block": "poppy"
-                }],
-            "style": {
-                "style": "STATIC"
-            }
+                {"block": "wither_rose"},
+                {"block": "red_mushroom"},
+                {"block": "brown_mushroom"},
+                {"block": "poppy"}
+            ],
+            "style": {"style": "STATIC"}
         },
         {
             "partOf": "SHORE_LINE",
             "chance": 0.009,
             "verticalZoom": 0.2,
-            "variance": {
-                "style": "SIMPLEX"
-            },
+            "variance": {"style": "SIMPLEX"},
             "stackMax": 4,
             "stackMin": 1,
             "zoom": 5,
-            "palette": [
-                {
-                    "block": "sugar_cane"
-                }],
-            "style": {
-                "style": "STATIC"
-            },
-            "heightVariance": {
-                "style": "STATIC"
-            }
+            "palette": [{"block": "sugar_cane"}],
+            "style": {"style": "STATIC"},
+            "heightVariance": {"style": "STATIC"}
         }
     ],
     "entityInitialSpawns": [
@@ -127,68 +89,44 @@
             "rarity": 6
         }
     ],
-    "objects": [
-		{
-            "place": [
-                "tree/jungle/1","tree/jungle/2","tree/jungle/3","tree/jungle/4","tree/jungle/5","tree/jungle/7","tree/jungle/8","tree/jungle/9"],
-            "chance": 1,
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "jungle_leaves"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "oak_leaves",                "data": {
-                                    "persistent": true
-                                }
-                            }
-                        ]
-                    }
-                },
-                {
-                    "find": [
-                        {
-                            "block": "jungle_wood"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "dark_oak_wood"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "find": [
-                        {
-                            "block": "jungle_log"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "dark_oak_wood"
-                            }
-                        ]
-                    }
-                }],
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "interval": 90,
-                    "min": -360,
-                    "max": 360
-                }
+    "objects": [{
+        "place": [
+            "tree/jungle/1",
+            "tree/jungle/2",
+            "tree/jungle/3",
+            "tree/jungle/4",
+            "tree/jungle/5",
+            "tree/jungle/7",
+            "tree/jungle/8",
+            "tree/jungle/9"
+        ],
+        "chance": 1,
+        "edit": [
+            {
+                "find": [{"block": "jungle_leaves"}],
+                "replace": {"palette": [{
+                    "block": "oak_leaves",
+                    "data": {"persistent": true}
+                }]}
             },
-            "translate": {
-                "y": -3
+            {
+                "find": [{"block": "jungle_wood"}],
+                "replace": {"palette": [{"block": "dark_oak_wood"}]}
+            },
+            {
+                "find": [{"block": "jungle_log"}],
+                "replace": {"palette": [{"block": "dark_oak_wood"}]}
             }
-        }
-    ]
+        ],
+        "rotation": {
+            "enabled": true,
+            "yAxis": {
+                "enabled": true,
+                "interval": 90,
+                "min": -360,
+                "max": 360
+            }
+        },
+        "translate": {"y": -3}
+    }]
 }

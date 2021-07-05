@@ -2,26 +2,21 @@
     "name": "Mushroom Forest Hills",
     "derivative": "MUSHROOM_FIELDS",
     "vanillaDerivative": "MUSHROOM_FIELDS",
-    "generators": [
-        {
-            "min": 12,
-            "max": 46,
-            "generator": "plain"
-        }
-    ],
+    "generators": [{
+        "min": 12,
+        "max": 46,
+        "generator": "plain"
+    }],
     "layers": [
         {
             "minHeight": 3,
             "maxHeight": 5,
-            "slopeCondition": {
-                "minimumSlope": 6.9
-            },
+            "slopeCondition": {"minimumSlope": 6.9},
             "palette": [
+                {"block": "gravel"},
                 {
-                    "block": "gravel"
-                },
-                {
-                    "block": "red_mushroom_block",    "data": {
+                    "block": "red_mushroom_block",
+                    "data": {
                         "down": true,
                         "up": true,
                         "north": true,
@@ -35,15 +30,12 @@
         {
             "minHeight": 3,
             "maxHeight": 5,
-            "slopeCondition": {
-                "minimumSlope": 4.6
-            },
+            "slopeCondition": {"minimumSlope": 4.6},
             "palette": [
+                {"block": "gravel"},
                 {
-                    "block": "gravel"
-                },
-                {
-                    "block": "brown_mushroom_block",    "data": {
+                    "block": "brown_mushroom_block",
+                    "data": {
                         "down": true,
                         "up": true,
                         "north": true,
@@ -56,17 +48,13 @@
         },
         {
             "zoom": 0.5,
-            "style": {
-                "style": "IRIS"
-            },
+            "style": {"style": "IRIS"},
             "palette": [
                 {
                     "weight": 4,
                     "block": "mycelium"
                 },
-                {
-                    "block": "gravel"
-                },
+                {"block": "gravel"},
                 {
                     "weight": 3,
                     "block": "mycelium"
@@ -77,83 +65,61 @@
             "minHeight": 2,
             "maxHeight": 4,
             "palette": [
-                {
-                    "block": "dirt"
-                },
-                {
-                    "block": "coarse_dirt"
-                }
+                {"block": "dirt"},
+                {"block": "coarse_dirt"}
             ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
+            "style": {"style": "STATIC"},
             "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "stone"
-                }
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
             ]
         }
     ],
-    "entityInitialSpawns": [
-        {
-            "maxSpawns": 5,
-            "minSpawns": 2,
-            "entity": "mooshroom",
-            "rarity": 5
-        }
-    ],
+    "entityInitialSpawns": [{
+        "maxSpawns": 5,
+        "minSpawns": 2,
+        "entity": "mooshroom",
+        "rarity": 5
+    }],
     "decorators": [
         {
             "chance": 0.009,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 0.3,
             "palette": [
                 {
                     "data": {
-                        "face": "floor",        "powered": false,
+                        "face": "floor",
+                        "powered": false,
                         "facing": "east"
                     },
                     "block": "stone_button"
                 },
                 {
                     "data": {
-                        "face": "floor",        "powered": false,
+                        "face": "floor",
+                        "powered": false,
                         "facing": "south"
                     },
                     "block": "stone_button"
-                }],
-            "style": {
-                "style": "STATIC"
-            }
+                }
+            ],
+            "style": {"style": "STATIC"}
         },
         {
             "chance": 0.05,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 0.3,
             "palette": [
-                {
-                    "block": "red_mushroom"
-                },
-                {
-                    "block": "brown_mushroom"
-                }],
-            "style": {
-                "style": "STATIC"
-            }
+                {"block": "red_mushroom"},
+                {"block": "brown_mushroom"}
+            ],
+            "style": {"style": "STATIC"}
         }
     ],
     "objects": [
@@ -170,7 +136,17 @@
                 "enabled": true
             },
             "place": [
-                "mushroom-red/small-organell-r-1","mushroom-red/small-organell-r-2","mushroom-red/small-organell-r-3","mushroom-red/small-organell-r-4","mushroom-red/small-organell-r-5","mushroom-red/small-organell-r-6","mushroom-red/small-organell-r-7","mushroom-red/small-organell-r-8","mushroom-red/small-organell-r-9","mushroom-red/small-organell-r-10"],
+                "mushroom-red/small-organell-r-1",
+                "mushroom-red/small-organell-r-2",
+                "mushroom-red/small-organell-r-3",
+                "mushroom-red/small-organell-r-4",
+                "mushroom-red/small-organell-r-5",
+                "mushroom-red/small-organell-r-6",
+                "mushroom-red/small-organell-r-7",
+                "mushroom-red/small-organell-r-8",
+                "mushroom-red/small-organell-r-9",
+                "mushroom-red/small-organell-r-10"
+            ],
             "mode": "MIN_HEIGHT",
             "translate": {
                 "x": 0,
@@ -181,21 +157,10 @@
         {
             "chance": 0.18,
             "density": 2,
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "red_mushroom_block"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "brown_mushroom_block"
-                            }
-                        ]
-                    }
-                }],
+            "edit": [{
+                "find": [{"block": "red_mushroom_block"}],
+                "replace": {"palette": [{"block": "brown_mushroom_block"}]}
+            }],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -206,7 +171,17 @@
                 "enabled": true
             },
             "place": [
-                "mushroom-red/small-organell-r-1","mushroom-red/small-organell-r-2","mushroom-red/small-organell-r-3","mushroom-red/small-organell-r-4","mushroom-red/small-organell-r-5","mushroom-red/small-organell-r-6","mushroom-red/small-organell-r-7","mushroom-red/small-organell-r-8","mushroom-red/small-organell-r-9","mushroom-red/small-organell-r-10"],
+                "mushroom-red/small-organell-r-1",
+                "mushroom-red/small-organell-r-2",
+                "mushroom-red/small-organell-r-3",
+                "mushroom-red/small-organell-r-4",
+                "mushroom-red/small-organell-r-5",
+                "mushroom-red/small-organell-r-6",
+                "mushroom-red/small-organell-r-7",
+                "mushroom-red/small-organell-r-8",
+                "mushroom-red/small-organell-r-9",
+                "mushroom-red/small-organell-r-10"
+            ],
             "translate": {
                 "x": 0,
                 "y": -1,
@@ -226,7 +201,18 @@
                 "enabled": true
             },
             "place": [
-                "mushroom-red/organell-b-1","mushroom-red/organell-b-2","mushroom-red/organell-r-3","mushroom-red/organell-r-4","mushroom-red/organell-r-5","mushroom-red/organell-r-6","mushroom-red/organell-r-7","mushroom-red/organell-r-8","mushroom-red/organell-r-9","mushroom-red/organell-r-10","mushroom-red/organell-r-11"],
+                "mushroom-red/organell-b-1",
+                "mushroom-red/organell-b-2",
+                "mushroom-red/organell-r-3",
+                "mushroom-red/organell-r-4",
+                "mushroom-red/organell-r-5",
+                "mushroom-red/organell-r-6",
+                "mushroom-red/organell-r-7",
+                "mushroom-red/organell-r-8",
+                "mushroom-red/organell-r-9",
+                "mushroom-red/organell-r-10",
+                "mushroom-red/organell-r-11"
+            ],
             "translate": {
                 "x": 0,
                 "y": -1,
@@ -236,21 +222,10 @@
         {
             "chance": 0.05,
             "density": 2,
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "red_mushroom_block"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "brown_mushroom_block"
-                            }
-                        ]
-                    }
-                }],
+            "edit": [{
+                "find": [{"block": "red_mushroom_block"}],
+                "replace": {"palette": [{"block": "brown_mushroom_block"}]}
+            }],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -261,7 +236,18 @@
                 "enabled": true
             },
             "place": [
-                "mushroom-red/illuminorganell-r-1","mushroom-red/illuminorganell-r-2","mushroom-red/illuminorganell-r-3","mushroom-red/illuminorganell-r-4","mushroom-red/illuminorganell-r-5","mushroom-red/illuminorganell-r-6","mushroom-red/illuminorganell-r-7","mushroom-red/illuminorganell-r-8","mushroom-red/illuminorganell-r-9","mushroom-red/illuminorganell-r-10","mushroom-red/illuminorganell-r-11"],
+                "mushroom-red/illuminorganell-r-1",
+                "mushroom-red/illuminorganell-r-2",
+                "mushroom-red/illuminorganell-r-3",
+                "mushroom-red/illuminorganell-r-4",
+                "mushroom-red/illuminorganell-r-5",
+                "mushroom-red/illuminorganell-r-6",
+                "mushroom-red/illuminorganell-r-7",
+                "mushroom-red/illuminorganell-r-8",
+                "mushroom-red/illuminorganell-r-9",
+                "mushroom-red/illuminorganell-r-10",
+                "mushroom-red/illuminorganell-r-11"
+            ],
             "translate": {
                 "x": 0,
                 "y": -1,
@@ -271,21 +257,10 @@
         {
             "chance": 0.5,
             "density": 2,
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "red_mushroom_block"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "brown_mushroom_block"
-                            }
-                        ]
-                    }
-                }],
+            "edit": [{
+                "find": [{"block": "red_mushroom_block"}],
+                "replace": {"palette": [{"block": "brown_mushroom_block"}]}
+            }],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -296,7 +271,18 @@
                 "enabled": true
             },
             "place": [
-                "mushroom-red/organell-b-1","mushroom-red/organell-b-2","mushroom-red/organell-r-3","mushroom-red/organell-r-4","mushroom-red/organell-r-5","mushroom-red/organell-r-6","mushroom-red/organell-r-7","mushroom-red/organell-r-8","mushroom-red/organell-r-9","mushroom-red/organell-r-10","mushroom-red/organell-r-11"],
+                "mushroom-red/organell-b-1",
+                "mushroom-red/organell-b-2",
+                "mushroom-red/organell-r-3",
+                "mushroom-red/organell-r-4",
+                "mushroom-red/organell-r-5",
+                "mushroom-red/organell-r-6",
+                "mushroom-red/organell-r-7",
+                "mushroom-red/organell-r-8",
+                "mushroom-red/organell-r-9",
+                "mushroom-red/organell-r-10",
+                "mushroom-red/organell-r-11"
+            ],
             "translate": {
                 "x": 0,
                 "y": -1,
@@ -306,21 +292,10 @@
         {
             "chance": 0.025,
             "density": 1,
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "red_mushroom_block"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "brown_mushroom_block"
-                            }
-                        ]
-                    }
-                }],
+            "edit": [{
+                "find": [{"block": "red_mushroom_block"}],
+                "replace": {"palette": [{"block": "brown_mushroom_block"}]}
+            }],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -331,7 +306,12 @@
                 "enabled": true
             },
             "place": [
-                "shroom/mushclutt1","shroom/mushclutt2","shroom/mushclutt3","shroom/mushclutt4","shroom/mushclutt5"],
+                "shroom/mushclutt1",
+                "shroom/mushclutt2",
+                "shroom/mushclutt3",
+                "shroom/mushclutt4",
+                "shroom/mushclutt5"
+            ],
             "translate": {
                 "x": 0,
                 "y": -1,
@@ -351,7 +331,12 @@
                 "enabled": true
             },
             "place": [
-                "shroom/mushclutt1","shroom/mushclutt2","shroom/mushclutt3","shroom/mushclutt4","shroom/mushclutt5"],
+                "shroom/mushclutt1",
+                "shroom/mushclutt2",
+                "shroom/mushclutt3",
+                "shroom/mushclutt4",
+                "shroom/mushclutt5"
+            ],
             "translate": {
                 "x": 0,
                 "y": -1,
@@ -360,25 +345,15 @@
         }
     ],
     "wall": {
-        "style": {
-            "style": "STATIC"
-        },
+        "style": {"style": "STATIC"},
         "palette": [
-            {
-                "block": "stone"
-            },
-            {
-                "block": "andesite"
-            },
-            {
-                "block": "stone"
-            }
+            {"block": "stone"},
+            {"block": "andesite"},
+            {"block": "stone"}
         ]
     },
     "slab": {
-        "style": {
-            "style": "STATIC"
-        },
+        "style": {"style": "STATIC"},
         "palette": [
             {
                 "weight": 8,

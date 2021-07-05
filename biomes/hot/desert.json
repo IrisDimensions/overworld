@@ -2,16 +2,12 @@
     "name": "Hot Desert",
     "derivative": "DESERT",
     "vanillaDerivative": "DESERT",
-    "children": [
-        "hot/oasis"
-    ],
-    "generators": [
-        {
-            "generator": "smooth-dunes",
-            "max": 18,
-            "min": -8
-        }
-    ],
+    "children": ["hot/oasis"],
+    "generators": [{
+        "generator": "smooth-dunes",
+        "max": 18,
+        "min": -8
+    }],
     "layers": [
         {
             "minHeight": 3,
@@ -20,25 +16,17 @@
                 "minimumSlope": 4.5,
                 "maximumSlope": 20
             },
-            "palette": [
-                {
-                    "block": "terracotta"
-                }
-            ]
+            "palette": [{"block": "terracotta"}]
         },
         {
             "minHeight": 5,
             "maxHeight": 5,
-            "style": {
-                "style": "FRACTAL_WATER"
-            },
+            "style": {"style": "FRACTAL_WATER"},
             "zoom": 0.7,
-            "palette": [
-                {
-                    "weight": 1,
-                    "block": "sand"
-                }
-            ]
+            "palette": [{
+                "weight": 1,
+                "block": "sand"
+            }]
         }
     ],
     "jigsawStructures": [
@@ -74,11 +62,13 @@
             "chance": 0.001,
             "density": 3,
             "place": [
-                "clutter/desert-post1","clutter/desert-post2","clutter/desert-post3"
+                "clutter/desert-post1",
+                "clutter/desert-post2",
+                "clutter/desert-post3"
             ]
         },
         {
-            "chance": 0.0001,
+            "chance": 1.0E-4,
             "mode": "VACUUM",
             "rotation": {
                 "yAxis": {
@@ -90,7 +80,9 @@
                 "enabled": true
             },
             "place": [
-                "global-clutter/sphinxToomb-1","global-clutter/BrokSphinxToomb-1"],
+                "global-clutter/sphinxToomb-1",
+                "global-clutter/BrokSphinxToomb-1"
+            ],
             "translate": {
                 "x": 0,
                 "y": -3,
@@ -102,29 +94,16 @@
         {
             "verticalZoom": 5,
             "chance": 0.005,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "stackMax": 5,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "cactus"
-                }],
-            "heightVariance": {
-                "style": "IRIS"
-            },
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "cactus"}],
+            "heightVariance": {"style": "IRIS"},
             "stackMin": 1
         },
         {
             "chance": 0.005,
-            "palette": [
-                {
-                    "block": "dead_bush"
-                }
-            ]
+            "palette": [{"block": "dead_bush"}]
         }
     ]
 }
