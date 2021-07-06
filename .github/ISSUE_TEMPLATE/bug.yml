@@ -34,31 +34,19 @@ body:
       label: Object Id
       description: What object are you talking about? (Use `/iris object dust`, and right click on the structure thats misbehaving) and send a screenshot link (imgur or related)
       placeholder: Ships/Generic-1@5976587650987...
-  - type: dropdown
+  - type: input
     id: mcversion
     attributes:
       label: Minecraft Version
       description: What version of Minecraft are you running?
-      options:
-        - 1.14 - 1.16
-        - 1.17+
+      placeholder: Minecarft 1.17
     validations:
       required: true
-  - type: dropdown
+  - type: input
     id: irisversion
     attributes:
       label: Iris Version
-      description: What version of Iris are you running?
-      options:
-        - Earlier-or-Not-supported
-        - 1.3.9
-        - 1.3.10-FINAL
-        - 1.3.11-FINAL
-        - 1.4.1
-        - 1.4.7
-        - 1.4.8
-        - 1.4.9
-        - More Current Other
+      description: What version of Iris are you running? (see console)
     validations:
       required: true
   - type: input
