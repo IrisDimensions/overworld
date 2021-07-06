@@ -4,16 +4,26 @@
     "derivative": "DESERT_LAKES",
     "generators": [{
         "generator": "plain",
-        "max": -5,
-        "min": -15
+        "max": -15,
+        "min": -5
     }],
     "layers": [
         {
-            "style": {"style": "FRACTAL_WATER"},
-            "zoom": 0.5,
+            "minHeight": 2,
+            "maxHeight": 3,
+            "style": {"style": "VASCULAR"},
+            "zoom": 0.4,
             "palette": [
                 {"block": "sand"},
-                {"block": "sandstone"}
+                {"block": "clay"},
+                {"block": "sand"},
+                {"block": "gravel"},
+                {"block": "sand"},
+                {"block": "dirt"},
+                {
+                    "weight": 2,
+                    "block": "sand"
+                }
             ]
         },
         {

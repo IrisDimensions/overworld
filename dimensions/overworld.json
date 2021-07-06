@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "OVERWORLD-VERSION": 2.285,
+    "OVERWORLD-VERSION": 3,
     "name": "Overworld",
     "environment": "NORMAL",
     "fluidHeight": 63,
@@ -43,24 +43,18 @@
             }
         }
     },
+    "islandBiomeChanceStyle": {
+        "style": "FRACTAL_FBM_IRIS",
+        "zoom": 5
+    },
     "SEAS": "Sea settings (for the biomes that are oceans).",
     "seaZoom": 1.25,
-    "seaBiomeStyle": {"style": "CELLULAR_IRIS_DOUBLE"},
+    "seaBiomeStyle": {"style": "FRACTAL_FBM_IRIS"},
     "LAND": "Land settings (for the biomes that are non-ocean).",
-    "landZoom": 3.15,
+    "landZoom": 3.2,
     "landBiomeStyle": {
-        "style": "CELLULAR",
-        "fracture": {
-            "multiplier": 18,
-            "maxFractureAccuracy": true,
-            "style": "FRACTAL_WATER",
-            "zoom": 0.255,
-            "fracture": {
-                "maxFractureAccuracy": true,
-                "style": "STATIC",
-                "multiplier": 4
-            }
-        }
+        "style": "FRACTAL_SMOKE",
+        "zoom": 1
     },
     "LOOT": "Contains a list of loot tables that are attempted to be applied to all chests that spawn.",
     "lootTries": 32,
@@ -280,7 +274,7 @@
         }
     ],
     "caveBiomeStyle": {"style": "CELLULAR_IRIS_DOUBLE"},
-    "CARVING": "Carving layers that cut off certain parts of the world",
+    "CAVERNS//CARVING": "Carving layers that cut off certain parts of the world",
     "carving": true,
     "carveLayers": [
         {
@@ -293,10 +287,10 @@
                     "zoom": 0.5
                 }
             },
-            "fullPercent": 0.01,
-            "threshold": 0.75,
+            "fullPercent": 0.007,
+            "threshold": 0.8,
             "minHeight": -40,
-            "maxHeight": 100
+            "maxHeight": 110
         },
         {
             "style": {
@@ -311,7 +305,7 @@
             "fullPercent": 0.5,
             "threshold": 0.68,
             "minHeight": -50,
-            "maxHeight": 100
+            "maxHeight": 110
         }
     ],
     "RAVINES": "Settings regarding ravines. Iris does not know when and where they spawn, so it may look weird (with cave fluids)",

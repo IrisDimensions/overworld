@@ -1,6 +1,6 @@
 {
     "name": "Frozen River",
-    "derivative": "DEEP_FROZEN_OCEAN",
+    "derivative": "FROZEN_RIVER",
     "vanillaDerivative": "FROZEN_RIVER",
     "layers": [
         {"palette": [
@@ -71,9 +71,35 @@
     ],
     "objects": [
         {
-            "chance": 0.01,
+            "chance": 0.05,
             "density": 3,
             "snow": 0.45,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "onwater": true,
+            "place": [
+                "ice-spikes/tp-1",
+                "ice-spikes/tp-2",
+                "ice-spikes/tp-3",
+                "ice-spikes/tp-4"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -4,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.2,
+            "density": 3,
+            "snow": 0.01,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -90,32 +116,6 @@
                 "ice-spikes/sp-3",
                 "ice-spikes/sp-4",
                 "ice-spikes/sp-5",
-                "ice-spikes/tp-1",
-                "ice-spikes/tp-2",
-                "ice-spikes/tp-3",
-                "ice-spikes/tp-4"
-            ],
-            "translate": {
-                "x": 0,
-                "y": -4,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.1,
-            "density": 3,
-            "snow": 0.01,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "onwater": true,
-            "place": [
                 "ice-spikes/ice-spec-1",
                 "ice-spikes/ice-spec-2",
                 "ice-spikes/ice-spec-3",
