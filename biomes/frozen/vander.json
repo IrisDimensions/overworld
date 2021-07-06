@@ -1,11 +1,7 @@
 {
     "name": "Frozen Vander",
-    "derivative": "SNOWY_TAIGA_MOUNTAINS",
+    "derivative": "SNOWY_MOUNTAINS",
     "vanillaDerivative": "SNOWY_MOUNTAINS",
-    "biomeSkyScatter": [
-        "SNOWY_TAIGA",
-        "SNOWY_MOUNTAINS"
-    ],
     "children": [
         "frozen/peak",
         "frozen/mountains",
@@ -91,7 +87,8 @@
     ],
     "objects": [
         {
-            "chance": 0.03,
+            "chance": 0.07,
+            "mode": "FAST_MIN_HEIGHT",
             "density": 3,
             "rotation": {
                 "yAxis": {
@@ -121,7 +118,8 @@
             }
         },
         {
-            "chance": 0.05,
+            "chance": 0.1,
+            "mode": "FAST_MIN_HEIGHT",
             "density": 3,
             "rotation": {
                 "yAxis": {
@@ -196,7 +194,8 @@
             }
         },
         {
-            "chance": 0.05,
+            "chance": 0.1,
+            "mode": "FAST_MIN_HEIGHT",
             "density": 3,
             "snow": 0.35,
             "rotation": {
@@ -209,6 +208,11 @@
                 "enabled": true
             },
             "place": [
+                "ice-spikes/sp-1",
+                "ice-spikes/sp-2",
+                "ice-spikes/sp-3",
+                "ice-spikes/sp-4",
+                "ice-spikes/sp-5",
                 "ice-spikes/ice-spec-1",
                 "ice-spikes/ice-spec-2",
                 "ice-spikes/ice-spec-3",
@@ -219,8 +223,7 @@
                 "x": 0,
                 "y": 0,
                 "z": 0
-            },
-            "mode": "VACUUM"
+            }
         }
     ],
     "entityInitialSpawns": [
