@@ -37,14 +37,19 @@ body:
       placeholder: Remove those honey blocks from.....
     validations:
       required: true
-  - type: dropdown
+  - type: input
     id: mcversion
     attributes:
       label: Minecraft Version
       description: What version of Minecraft are you running?
-      options:
-        - 1.14 - 1.16.5
-        - 1.17+
+      placeholder: Minecarft 1.17
+    validations:
+      required: true
+  - type: input
+    id: irisversion
+    attributes:
+      label: Iris Version
+      description: What version of Iris are you running? (see console)
     validations:
       required: true
   - type: checkboxes
