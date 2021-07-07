@@ -5,39 +5,32 @@
     "childStyle": {
         "style": "IRIS",
         "zoom": 0.5,
-        "exponent": 2.0
+        "exponent": 2
     },
-
-    "generators": [
-        {
-            "min": 4,
-            "max": 7,
-            "generator": "plain"
-        }
-    ],
-    "decorators": [
-        {
-            "chance": 0.8,
-            "palette": [
-                {
-                    "data": {
-                        "age": 7
-                    },
-                    "block": "wheat",
-                    "weight": 45
-                },
-                {
-                    "block": "grass",
-                    "weight": 4
-                },
-                {
-                    "block": "tall_grass",
-                    "weight": 1
-                }
-            ],
-            "forcePlace": false
-        }
-    ],
+    "generators": [{
+        "min": 4,
+        "max": 7,
+        "generator": "plain"
+    }],
+    "decorators": [{
+        "chance": 0.8,
+        "palette": [
+            {
+                "data": {"age": 7},
+                "block": "wheat",
+                "weight": 45
+            },
+            {
+                "block": "grass",
+                "weight": 4
+            },
+            {
+                "block": "tall_grass",
+                "weight": 1
+            }
+        ],
+        "forcePlace": false
+    }],
     "objects": [
         {
             "mode": "MIN_HEIGHT",
@@ -111,7 +104,7 @@
             }
         },
         {
-            "chance": 0.0000002,
+            "chance": 2.0E-7,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -175,47 +168,27 @@
         }
     ],
     "layers": [
-        {
-            "palette": [
-                {
-                    "block": "grass_block"
-                }
-            ]
-        },
+        {"palette": [{"block": "grass_block"}]},
         {
             "minHeight": 2,
             "maxHeight": 2,
-            "palette": [
-                {
-                    "block": "dirt"
-                }
-            ]
+            "palette": [{"block": "dirt"}]
         },
         {
             "minHeight": 1,
             "maxHeight": 3,
             "palette": [
-                {
-                    "block": "dirt"
-                },
-                {
-                    "block": "coarse_dirt"
-                }
+                {"block": "dirt"},
+                {"block": "coarse_dirt"}
             ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
+            "style": {"style": "STATIC"},
             "palette": [
-                {
-                    "block": "dirt"
-                },
-                {
-                    "block": "stone"
-                }
+                {"block": "dirt"},
+                {"block": "stone"}
             ]
         }
     ],
@@ -246,17 +219,9 @@
         }
     ],
     "biomeZoom": 60,
-    "biomeStyle": {
-        "style": "IRIS"
-    },
-    "wall": {
-        "palette": [
-            {
-                "block": "stone"
-            },
-            {
-                "block": "andesite"
-            }
-        ]
-    }
+    "biomeStyle": {"style": "IRIS"},
+    "wall": {"palette": [
+        {"block": "stone"},
+        {"block": "andesite"}
+    ]}
 }
