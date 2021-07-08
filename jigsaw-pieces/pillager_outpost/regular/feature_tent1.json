@@ -3,12 +3,11 @@
         {
             "targetName": "minecraft:feature",
             "innerConnector": false,
-            "entityCount": 1,
             "rotateConnector": false,
             "name": "minecraft:feature",
             "pools": [],
             "position": {
-                "x": -2,
+                "x": -3,
                 "y": -2,
                 "z": -2
             },
@@ -17,26 +16,24 @@
         {
             "targetName": "minecraft:feature",
             "innerConnector": false,
-            "entityCount": 1,
             "rotateConnector": false,
             "name": "minecraft:feature",
             "pools": [],
             "position": {
-                "x": -2,
+                "x": -3,
                 "y": -2,
-                "z": 3
+                "z": 2
             },
             "direction": "SOUTH_POSITIVE_Z"
         },
         {
             "targetName": "minecraft:feature",
             "innerConnector": false,
-            "entityCount": 1,
             "rotateConnector": false,
             "name": "minecraft:feature",
             "pools": [],
             "position": {
-                "x": 3,
+                "x": 2,
                 "y": -2,
                 "z": -2
             },
@@ -45,31 +42,15 @@
         {
             "targetName": "minecraft:feature",
             "innerConnector": false,
-            "entityCount": 1,
             "rotateConnector": false,
             "name": "minecraft:feature",
             "pools": [],
             "position": {
-                "x": 3,
+                "x": 2,
                 "y": -2,
-                "z": 3
+                "z": 2
             },
             "direction": "SOUTH_POSITIVE_Z"
-        },
-        {
-            "targetName": "*",
-            "innerConnector": false,
-            "entityCount": 1,
-            "rotateConnector": false,
-            "spawnEntity": "iron_golem",
-            "name": "",
-            "pools": [],
-            "position": {
-                "x": 0,
-                "y": -2,
-                "z": 0
-            },
-            "direction": "UP_POSITIVE_Y"
         }
     ],
     "placementOptions": {
@@ -77,8 +58,10 @@
         "chance": 1,
         "meld": false,
         "density": 1,
-        "boreExtendMinY": 0,
-        "edit": [],
+        "edit": [{
+            "find": [{"block": "glass"}],
+            "replace": {"palette": [{"block": "air"}]}
+        }],
         "bottom": false,
         "translateCenter": false,
         "rotation": {
@@ -102,21 +85,22 @@
             },
             "enabled": true
         },
-        "boreExtendMaxY": 0,
+        "boreExtendMinY": 0,
         "smartBore": false,
         "waterloggable": false,
-        "bore": true,
+        "bore": false,
         "translate": {
             "yRandom": 0,
             "x": 0,
             "y": 0,
             "z": 0
         },
-        "mode": "FAST_MIN_HEIGHT",
+        "mode": "PAINT",
         "carvingSupport": "SURFACE_ONLY",
         "snow": 0,
         "underwater": false,
         "place": [],
+        "boreExtendMaxY": 0,
         "onwater": false,
         "clamp": {
             "minimumHeight": 0,
@@ -130,5 +114,5 @@
             "exponent": 1
         }
     },
-    "object": "pillager_outpost/feature_cage1"
+    "object": "pillager_outpost/regular/feature_tent1"
 }
