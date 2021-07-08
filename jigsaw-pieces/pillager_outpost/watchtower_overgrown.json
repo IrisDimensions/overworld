@@ -4,29 +4,29 @@
             "targetName": "*",
             "innerConnector": false,
             "entityCount": 1,
-            "spawnEntity:": "pillager",
+            "spawnEntity:": "",
             "rotateConnector": false,
             "name": "",
-            "pools": ["pillager_outpost/features"],
+            "pools": ["pillager_outpost/features-overgrown"],
             "position": {
                 "x": -3,
-                "y": -9,
-                "z": -6
+                "y": -10,
+                "z": -7
             },
             "direction": "NORTH_NEGATIVE_Z"
         },
         {
             "targetName": "*",
-            "innerConnector": false,
+            "innerConnector": true,
             "entityCount": 1,
-            "spawnEntity:": "pillager",
+            "spawnEntity:": "",
             "rotateConnector": false,
             "name": "",
             "pools": [],
             "position": {
                 "x": 3,
-                "y": -9,
-                "z": -6
+                "y": -10,
+                "z": -7
             },
             "direction": "NORTH_NEGATIVE_Z"
         },
@@ -34,13 +34,13 @@
             "targetName": "*",
             "innerConnector": false,
             "entityCount": 1,
-            "spawnEntity:": "pillager",
+            "spawnEntity:": "",
             "rotateConnector": false,
             "name": "",
-            "pools": ["pillager_outpost/features"],
+            "pools": ["pillager_outpost/features-overgrown"],
             "position": {
-                "x": 6,
-                "y": -9,
+                "x": 7,
+                "y": -10,
                 "z": -3
             },
             "direction": "EAST_POSITIVE_X"
@@ -49,13 +49,13 @@
             "targetName": "*",
             "innerConnector": false,
             "entityCount": 1,
-            "spawnEntity:": "pillager",
+            "spawnEntity:": "",
             "rotateConnector": false,
             "name": "",
-            "pools": ["pillager_outpost/features"],
+            "pools": ["pillager_outpost/features-overgrown"],
             "position": {
-                "x": 6,
-                "y": -9,
+                "x": 7,
+                "y": -10,
                 "z": 3
             },
             "direction": "EAST_POSITIVE_X"
@@ -64,14 +64,14 @@
             "targetName": "*",
             "innerConnector": false,
             "entityCount": 1,
-            "spawnEntity:": "pillager",
+            "spawnEntity:": "",
             "rotateConnector": false,
             "name": "",
-            "pools": ["pillager_outpost/features"],
+            "pools": ["pillager_outpost/features-overgrown"],
             "position": {
                 "x": 3,
-                "y": -9,
-                "z": 6
+                "y": -10,
+                "z": 7
             },
             "direction": "SOUTH_POSITIVE_Z"
         },
@@ -79,14 +79,14 @@
             "targetName": "*",
             "innerConnector": false,
             "entityCount": 1,
-            "spawnEntity:": "pillager",
+            "spawnEntity:": "",
             "rotateConnector": false,
             "name": "",
-            "pools": ["pillager_outpost/features"],
+            "pools": ["pillager_outpost/features-overgrown"],
             "position": {
                 "x": -3,
-                "y": -9,
-                "z": 6
+                "y": -10,
+                "z": 7
             },
             "direction": "SOUTH_POSITIVE_Z"
         },
@@ -94,13 +94,13 @@
             "targetName": "*",
             "innerConnector": false,
             "entityCount": 1,
-            "spawnEntity:": "pillager",
+            "spawnEntity:": "",
             "rotateConnector": false,
             "name": "",
-            "pools": ["pillager_outpost/features"],
+            "pools": ["pillager_outpost/features-overgrown"],
             "position": {
-                "x": -6,
-                "y": -9,
+                "x": -7,
+                "y": -10,
                 "z": 3
             },
             "direction": "WEST_NEGATIVE_X"
@@ -109,13 +109,13 @@
             "targetName": "*",
             "innerConnector": false,
             "entityCount": 1,
-            "spawnEntity:": "pillager",
+            "spawnEntity:": "",
             "rotateConnector": false,
             "name": "",
-            "pools": ["pillager_outpost/features"],
+            "pools": ["pillager_outpost/features-overgrown"],
             "position": {
-                "x": -6,
-                "y": -9,
+                "x": -7,
+                "y": -10,
                 "z": -3
             },
             "direction": "WEST_NEGATIVE_X"
@@ -127,7 +127,98 @@
         "meld": false,
         "density": 1,
         "boreExtendMinY": 0,
-        "edit": [],
+        "edit": [
+            {
+                "find": [{
+                    "block": "oak_planks"
+                }],
+                "replace": {
+                    "palette": [
+                        {
+                            "block": "birch_planks",
+                            "weight": 5
+                        },
+                        {
+                            "block": "void_air",
+                            "weight": 2
+                        }
+                    ]
+                },
+                "chance": 1
+            },
+            {
+                "find": [{
+                    "block": "oak_slab"
+                }],
+                "replace": {
+                    "palette": [
+                        {
+                            "block": "birch_slab",
+                            "weight": 5
+                        },
+                        {
+                            "block": "void_air",
+                            "weight": 2
+                        }
+                    ]
+                },
+                "chance": 1
+            },
+            {
+                "find": [{
+                    "block": "spruce_planks"
+                }],
+                "replace": {
+                    "palette": [
+                        {
+                            "block": "dark_oak_planks",
+                            "weight": 5
+                        },
+                        {
+                            "block": "void_air",
+                            "weight": 2
+                        }
+                    ]
+                },
+                "chance": 1
+            },
+            {
+                "find": [{
+                    "block": "spruce_slab"
+                }],
+                "replace": {
+                    "palette": [
+                        {
+                            "block": "dark_oak_slab",
+                            "weight": 5
+                        },
+                        {
+                            "block": "void_air",
+                            "weight": 2
+                        }
+                    ]
+                },
+                "chance": 1
+            },
+            {
+                "find": [{
+                    "block": "cobblestone"
+                }],
+                "replace": {
+                    "palette": [
+                        {
+                            "block": "cobblestone",
+                            "weight": 5
+                        },
+                        {
+                            "block": "mossy_cobblestone",
+                            "weight": 2
+                        }
+                    ]
+                },
+                "chance": 1
+            }
+        ],
         "bottom": false,
         "translateCenter": false,
         "rotation": {
@@ -154,11 +245,11 @@
         "boreExtendMaxY": 0,
         "smartBore": false,
         "waterloggable": false,
-        "bore": true,
+        "bore": false,
         "translate": {
             "yRandom": 0,
             "x": 0,
-            "y": 0,
+            "y": -1,
             "z": 0
         },
         "mode": "VACUUM",

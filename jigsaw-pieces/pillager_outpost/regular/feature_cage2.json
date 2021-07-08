@@ -3,25 +3,27 @@
         {
             "targetName": "minecraft:feature",
             "innerConnector": false,
+            "entityCount": 1,
             "rotateConnector": false,
             "name": "minecraft:feature",
             "pools": [],
             "position": {
-                "x": -3,
-                "y": -1,
-                "z": -3
+                "x": -2,
+                "y": 0,
+                "z": -2
             },
             "direction": "SOUTH_POSITIVE_Z"
         },
         {
             "targetName": "minecraft:feature",
             "innerConnector": false,
+            "entityCount": 1,
             "rotateConnector": false,
             "name": "minecraft:feature",
             "pools": [],
             "position": {
-                "x": -3,
-                "y": -1,
+                "x": -2,
+                "y": 0,
                 "z": 3
             },
             "direction": "SOUTH_POSITIVE_Z"
@@ -29,28 +31,45 @@
         {
             "targetName": "minecraft:feature",
             "innerConnector": false,
+            "entityCount": 1,
             "rotateConnector": false,
             "name": "minecraft:feature",
             "pools": [],
             "position": {
-                "x": 2,
-                "y": -1,
-                "z": -3
+                "x": 3,
+                "y": 0,
+                "z": -2
             },
             "direction": "SOUTH_POSITIVE_Z"
         },
         {
-            "targetName": "minecraft:feature",
-            "innerConnector": false,
+            "targetName": "*",
+            "innerConnector": true,
+            "entityCount": 1,
             "rotateConnector": false,
-            "name": "minecraft:feature",
+            "name": "",
             "pools": [],
             "position": {
-                "x": 2,
-                "y": -1,
-                "z": 3
+                "x": 1,
+                "y": 0,
+                "z": 0
             },
-            "direction": "SOUTH_POSITIVE_Z"
+            "direction": "UP_POSITIVE_Y"
+        },
+        {
+            "targetName": "*",
+            "innerConnector": false,
+            "entityCount": 1,
+            "rotateConnector": false,
+            "spawnEntity": "iron_golem",
+            "name": "",
+            "pools": [],
+            "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "direction": "UP_POSITIVE_Y"
         }
     ],
     "placementOptions": {
@@ -58,6 +77,7 @@
         "chance": 1,
         "meld": false,
         "density": 1,
+        "boreExtendMinY": 0,
         "edit": [],
         "bottom": false,
         "translateCenter": false,
@@ -82,22 +102,21 @@
             },
             "enabled": true
         },
-        "boreExtendMinY": 0,
+        "boreExtendMaxY": 0,
         "smartBore": false,
         "waterloggable": false,
-        "bore": false,
+        "bore": true,
         "translate": {
             "yRandom": 0,
             "x": 0,
             "y": 1,
             "z": 0
         },
-        "mode": "CENTER_HEIGHT",
+        "mode": "FAST_MIN_HEIGHT",
         "carvingSupport": "SURFACE_ONLY",
         "snow": 0,
         "underwater": false,
         "place": [],
-        "boreExtendMaxY": 0,
         "onwater": false,
         "clamp": {
             "minimumHeight": 0,
@@ -111,5 +130,5 @@
             "exponent": 1
         }
     },
-    "object": "pillager_outpost/feature_logs"
+    "object": "pillager_outpost/regular/feature_cage2"
 }
