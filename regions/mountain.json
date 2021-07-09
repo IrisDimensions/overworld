@@ -1,22 +1,22 @@
 {
     "name": "Mountains",
     "landBiomes": [
-        "mountain/mountain",
-        "mountain/hills",
-        "mountain/forest-hills",
-        "mountain/forest",
-        "mountain/plains",
-        "mountain/cliffs",
-        "mountain/mountain"
+        "mountain/mtn-mountain",
+        "mountain/mtn-hills",
+        "mountain/mtn-forest-hills",
+        "mountain/mtn-forest",
+        "mountain/mtn-plains",
+        "mountain/mtn-cliffs",
+        "mountain/mtn-mountain"
     ],
-    "shoreBiomes": ["mountain/beach"],
-    "seaBiomes": ["mountain/river-soft"],
+    "shoreBiomes": ["mountain/mtn-beach"],
+    "seaBiomes": ["ocean/oce-mtn-river-soft"],
     "caveBiomes": [
         "cave/old-cavern",
         "cave/cracked-cavern",
         "cave/tundra-cavern"
     ],
-    "riverBiomes": ["mountain/river"],
+    "riverBiomes": ["ocean/oce-mtn-river"],
     "biomeImplosionRatio": 0.25,
     "deposits": [
         {
@@ -49,49 +49,46 @@
             "varience": 4
         }
     ],
-    "objects": [
-
-        {
-            "heightmap": {
-                "seed": 1337,
-                "style": {
-                    "style": "SIMPLEX",
-                    "multiplier": 10
-                },
-                "offsetY": 5
+    "objects": [{
+        "heightmap": {
+            "seed": 1337,
+            "style": {
+                "style": "SIMPLEX",
+                "multiplier": 10
             },
-            "chance": 0.05,
-            "bottom": true,
-            "density": 1,
-            "place": [
-                "amethyst/ame1",
-                "amethyst/ame2",
-                "amethyst/ame3",
-                "amethyst/ame4",
-                "amethyst/ame5",
-                "amethyst/ame6"
-            ],
-            "edit": [{
-                "find": [{"block": "glass"}],
-                "replace": {"palette": [{"block": "void_air"}]}
-            }],
-            "enabled": true,
-            "xAxis": {
-                "interval": 90,
-                "max": 360,
-                "min": 0
-            },
-            "yAxis": {
-                "interval": 90,
-                "max": 360,
-                "min": 0
-            },
-            "translate": {
-                "yRandom": 10,
-                "y": 2
-            }
+            "offsetY": 5
+        },
+        "chance": 0.05,
+        "bottom": true,
+        "density": 1,
+        "place": [
+            "amethyst/ame1",
+            "amethyst/ame2",
+            "amethyst/ame3",
+            "amethyst/ame4",
+            "amethyst/ame5",
+            "amethyst/ame6"
+        ],
+        "edit": [{
+            "find": [{"block": "glass"}],
+            "replace": {"palette": [{"block": "void_air"}]}
+        }],
+        "enabled": true,
+        "xAxis": {
+            "interval": 90,
+            "max": 360,
+            "min": 0
+        },
+        "yAxis": {
+            "interval": 90,
+            "max": 360,
+            "min": 0
+        },
+        "translate": {
+            "yRandom": 10,
+            "y": 2
         }
-    ],
+    }],
     "loot": {
         "mode": "ADD",
         "multiplier": 1,

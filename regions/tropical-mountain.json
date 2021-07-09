@@ -1,67 +1,63 @@
 {
     "name": "Tropical mountain",
     "landBiomes": [
-        "tropical/plains",
-        "tropical/mountain",
-        "temperate/wilds",
-        "tropical/plains",
-        "tropical/mountain-extreme",
-        "tropical/wilds",
-        "tropical/plains-hills"
+        "tropical/tro-plains",
+        "tropical/tro-mountain",
+        "tropical/tro-plains",
+        "tropical/tro-mountain-extreme",
+        "tropical/tro-wilds",
+        "tropical/tro-plains-hills"
     ],
-    "shoreBiomes": ["tropical/beach"],
+    "shoreBiomes": ["tropical/tro-beach"],
     "seaBiomes": [
-        "tropical/river-steep",
-        "tropical/river-soft"
+        "ocean/oce-tro-river-steep",
+        "ocean/oce-tro-river-soft"
     ],
     "riverBiomes": [
-        "tropical/river-steep",
-        "tropical/river-soft"
+        "ocean/oce-tro-river-steep",
+        "ocean/oce-tro-river-soft"
     ],
     "biomeImplosionRatio": 0.25,
-    "objects": [
-
-        {
-            "heightmap": {
-                "seed": 1337,
-                "style": {
-                    "style": "SIMPLEX",
-                    "multiplier": 10
-                },
-                "offsetY": 5
+    "objects": [{
+        "heightmap": {
+            "seed": 1337,
+            "style": {
+                "style": "SIMPLEX",
+                "multiplier": 10
             },
-            "chance": 0.05,
-            "bottom": true,
-            "density": 1,
-            "place": [
-                "amethyst/ame1",
-                "amethyst/ame2",
-                "amethyst/ame3",
-                "amethyst/ame4",
-                "amethyst/ame5",
-                "amethyst/ame6"
-            ],
-            "edit": [{
-                "find": [{"block": "glass"}],
-                "replace": {"palette": [{"block": "void_air"}]}
-            }],
-            "enabled": true,
-            "xAxis": {
-                "interval": 90,
-                "max": 360,
-                "min": 0
-            },
-            "yAxis": {
-                "interval": 90,
-                "max": 360,
-                "min": 0
-            },
-            "translate": {
-                "yRandom": 10,
-                "y": 2
-            }
+            "offsetY": 5
+        },
+        "chance": 0.05,
+        "bottom": true,
+        "density": 1,
+        "place": [
+            "amethyst/ame1",
+            "amethyst/ame2",
+            "amethyst/ame3",
+            "amethyst/ame4",
+            "amethyst/ame5",
+            "amethyst/ame6"
+        ],
+        "edit": [{
+            "find": [{"block": "glass"}],
+            "replace": {"palette": [{"block": "void_air"}]}
+        }],
+        "enabled": true,
+        "xAxis": {
+            "interval": 90,
+            "max": 360,
+            "min": 0
+        },
+        "yAxis": {
+            "interval": 90,
+            "max": 360,
+            "min": 0
+        },
+        "translate": {
+            "yRandom": 10,
+            "y": 2
         }
-    ],
+    }],
     "loot": {
         "mode": "ADD",
         "multiplier": 1,

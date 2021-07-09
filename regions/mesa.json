@@ -1,23 +1,23 @@
 {
     "name": "Mesa",
     "landBiomes": [
-        "mesa/plateau",
-        "mesa/valleys",
-        "mesa/plateau-high",
-        "mesa/valleys",
-        "mesa/mesa",
-        "mesa/cliffs"
+        "mesa/msa-plateau",
+        "mesa/msa-valleys",
+        "mesa/msa-plateau-high",
+        "mesa/msa-valleys",
+        "mesa/msa-mesa",
+        "mesa/msa-cliffs"
     ],
-    "shoreBiomes": ["mesa/beach"],
-    "seaBiomes": ["mesa/river"],
+    "shoreBiomes": ["mesa/msa-beach"],
+    "seaBiomes": ["ocean/oce-hot-river"],
     "caveBiomes": [
         "cave/old-cavern",
         "cave/sandy-cave",
         "cave/sandy-red-cave"
     ],
-    "riverBiomes": ["mesa/river"],
+    "riverBiomes": ["ocean/oce-hot-river"],
     "spotBiomes": [{
-        "biome": "hot/ocean",
+        "biome": "ocean/oce-hot-ocean",
         "scale": 5,
         "type": "SEA",
         "shuffle": 328,
@@ -33,49 +33,46 @@
             "zoom": 5
         }
     },
-    "objects": [
-
-        {
-            "heightmap": {
-                "seed": 1337,
-                "style": {
-                    "style": "SIMPLEX",
-                    "multiplier": 10
-                },
-                "offsetY": 5
+    "objects": [{
+        "heightmap": {
+            "seed": 1337,
+            "style": {
+                "style": "SIMPLEX",
+                "multiplier": 10
             },
-            "chance": 0.05,
-            "bottom": true,
-            "density": 1,
-            "place": [
-                "amethyst/ame1",
-                "amethyst/ame2",
-                "amethyst/ame3",
-                "amethyst/ame4",
-                "amethyst/ame5",
-                "amethyst/ame6"
-            ],
-            "edit": [{
-                "find": [{"block": "glass"}],
-                "replace": {"palette": [{"block": "void_air"}]}
-            }],
-            "enabled": true,
-            "xAxis": {
-                "interval": 90,
-                "max": 360,
-                "min": 0
-            },
-            "yAxis": {
-                "interval": 90,
-                "max": 360,
-                "min": 0
-            },
-            "translate": {
-                "yRandom": 10,
-                "y": 2
-            }
+            "offsetY": 5
+        },
+        "chance": 0.05,
+        "bottom": true,
+        "density": 1,
+        "place": [
+            "amethyst/ame1",
+            "amethyst/ame2",
+            "amethyst/ame3",
+            "amethyst/ame4",
+            "amethyst/ame5",
+            "amethyst/ame6"
+        ],
+        "edit": [{
+            "find": [{"block": "glass"}],
+            "replace": {"palette": [{"block": "void_air"}]}
+        }],
+        "enabled": true,
+        "xAxis": {
+            "interval": 90,
+            "max": 360,
+            "min": 0
+        },
+        "yAxis": {
+            "interval": 90,
+            "max": 360,
+            "min": 0
+        },
+        "translate": {
+            "yRandom": 10,
+            "y": 2
         }
-    ],
+    }],
     "deposits": [
         {
             "minHeight": 25,

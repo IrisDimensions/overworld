@@ -1,27 +1,23 @@
 {
     "name": "Tundra",
     "landBiomes": [
-        "tundra/taiga",
-        "tundra/redwood-forest",
-        "tundra/sequia-redwoods",
-        "tundra/forest",
-        "tundra/spruce-denmyre",
-        "tundra/lake",
-        "tundra/mountains",
-        "tundra/mountains",
-        "tundra/mountains-cliffs",
-        "mountain/forest"
+        "tundra/tun-taiga",
+        "tundra/tun-redwood-forest",
+        "tundra/tun-sequia-redwoods",
+        "tundra/tun-forest",
+        "tundra/tun-spruce-denmyre",
+        "tundra/tun-lake",
+        "tundra/tun-mountains",
+        "tundra/tun-mountains",
+        "tundra/tun-mountains-cliffs"
     ],
-    "shoreBiomes": [
-        "tundra/beach",
-        "tundra/beach-stone"
-    ],
-    "seaBiomes": ["tundra/river"],
+    "shoreBiomes": ["tundra/tun-beach"],
+    "seaBiomes": ["ocean/oce-tun-river"],
     "caveBiomes": [
         "cave/tundra-cavern",
         "cave/spiked-cavern"
     ],
-    "riverBiomes": ["tundra/river"],
+    "riverBiomes": ["ocean/oce-tun-river"],
     "biomeImplosionRatio": 0.25,
     "deposits": [{
         "minHeight": 15,
@@ -56,49 +52,46 @@
             "cold-food"
         ]
     },
-    "objects": [
-
-        {
-            "heightmap": {
-                "seed": 1337,
-                "style": {
-                    "style": "SIMPLEX",
-                    "multiplier": 10
-                },
-                "offsetY": 5
+    "objects": [{
+        "heightmap": {
+            "seed": 1337,
+            "style": {
+                "style": "SIMPLEX",
+                "multiplier": 10
             },
-            "chance": 0.05,
-            "bottom": true,
-            "density": 1,
-            "place": [
-                "amethyst/ame1",
-                "amethyst/ame2",
-                "amethyst/ame3",
-                "amethyst/ame4",
-                "amethyst/ame5",
-                "amethyst/ame6"
-            ],
-            "edit": [{
-                "find": [{"block": "glass"}],
-                "replace": {"palette": [{"block": "void_air"}]}
-            }],
-            "enabled": true,
-            "xAxis": {
-                "interval": 90,
-                "max": 360,
-                "min": 0
-            },
-            "yAxis": {
-                "interval": 90,
-                "max": 360,
-                "min": 0
-            },
-            "translate": {
-                "yRandom": 10,
-                "y": 2
-            }
+            "offsetY": 5
+        },
+        "chance": 0.05,
+        "bottom": true,
+        "density": 1,
+        "place": [
+            "amethyst/ame1",
+            "amethyst/ame2",
+            "amethyst/ame3",
+            "amethyst/ame4",
+            "amethyst/ame5",
+            "amethyst/ame6"
+        ],
+        "edit": [{
+            "find": [{"block": "glass"}],
+            "replace": {"palette": [{"block": "void_air"}]}
+        }],
+        "enabled": true,
+        "xAxis": {
+            "interval": 90,
+            "max": 360,
+            "min": 0
+        },
+        "yAxis": {
+            "interval": 90,
+            "max": 360,
+            "min": 0
+        },
+        "translate": {
+            "yRandom": 10,
+            "y": 2
         }
-    ],
+    }],
     "shoreHeightZoom": 1.14,
     "riverThickness": 0.025,
     "rarity": 4
