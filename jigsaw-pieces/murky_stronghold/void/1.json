@@ -1,25 +1,19 @@
 {
-    "object": "murky_stronghold/fc-nsw-2",
+    "object": "void/void",
     "connectors": [{
         "name": "",
         "targetName": "*",
         "rotateConnector": false,
         "innerConnector": false,
-        "pools": [
-            "murky_stronghold/stronghold-fc-corner",
-            "murky_stronghold/stronghold-fc-cross",
-            "murky_stronghold/stronghold-fc-end",
-            "murky_stronghold/stronghold-fc-hall",
-            "murky_stronghold/stronghold-fc-three"
-        ],
+        "pools": ["murky_stronghold/stronghold-start-pool"],
         "keepEntity": false,
         "entityCount": 1,
         "position": {
-            "x": 2,
-            "y": -3,
+            "x": 0,
+            "y": -50,
             "z": 0
         },
-        "direction": "EAST_POSITIVE_X"
+        "direction": "DOWN_NEGATIVE_Y"
     }],
     "placementOptions": {
         "place": [],
@@ -32,7 +26,7 @@
                 "interval": 0
             },
             "yAxis": {
-                "enabled": false,
+                "enabled": true,
                 "min": 0,
                 "max": 0,
                 "interval": 90
@@ -56,7 +50,7 @@
         "boreExtendMinY": 0,
         "underwater": false,
         "carvingSupport": "SURFACE_ONLY",
-        "smartBore": true,
+        "smartBore": false,
         "waterloggable": false,
         "onwater": false,
         "meld": false,
@@ -74,8 +68,8 @@
         "edit": [],
         "translate": {
             "x": 0,
-            "y": 0,
-            "yRandom": 0,
+            "y": -55,
+            "yRandom": 6,
             "z": 0
         },
         "loot": []
