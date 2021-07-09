@@ -1,0 +1,44 @@
+{
+    "name": "Tropical Volcanoes Lava",
+    "derivative": "THE_VOID",
+    "vanillaDerivative": "THE_VOID",
+    "generators": [
+        {
+            "generator": "mountain",
+            "max": 100,
+            "min": 0
+        },
+        {
+            "generator": "plain",
+            "max": 80,
+            "min": 30
+        }
+    ],
+    "layers": [
+        {
+            "minHeight": 2,
+            "maxHeight": 3,
+            "palette": [{"block": "cave_air"}]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "palette": [{
+                "block": "lava",
+                "data": {"level": 1}
+            }]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [{
+                "block": "lava",
+                "data": {"level": 0}
+            }]
+        }
+    ],
+    "wall": {"palette": [{
+        "block": "lava",
+        "data": {"level": 1}
+    }]}
+}

@@ -1,12 +1,23 @@
 {
     "name": "Mushroom",
     "landBiomes": [
-        "mushroom/forest",
-        "mushroom/forest-hills",
-        "mushroom/plains"
+        "mushroom/mus-forest",
+        "mushroom/mus-forest-hills",
+        "mushroom/mus-plains"
     ],
-    "shoreBiomes": ["mushroom/beach"],
-    "seaBiomes": ["mushroom/ocean"],
+    "shoreBiomes": ["mushroom/mus-beach"],
+    "jigsawStructures": [
+        {
+            "structure": "murky_stronghold",
+            "rarity": 750
+        }
+    ],
+    "seaBiomes": ["ocean/oce-mus-ocean"],
+    "caveBiomes": [
+        "cave/tundra-cavern",
+        "cave/murky-cavern-gleaming",
+        "cave/spiked-cavern"
+    ],
     "blockDrops": [{
         "drops": [
             {
@@ -36,14 +47,14 @@
     },
     "spotBiomes": [
         {
-            "biome": "mushroom/crimson-forest",
+            "biome": "mushroom/mus-crimson-forest",
             "scale": 0.78,
             "type": "LAND",
             "shuffle": 44,
             "rarity": 52
         },
         {
-            "biome": "mushroom/warped-forest",
+            "biome": "mushroom/mus-warped-forest",
             "scale": 0.77,
             "type": "LAND",
             "shuffle": 44,
@@ -63,81 +74,46 @@
         ],
         "varience": 4
     }],
-    "objects": [
-        {
-            "heightmap": {
-                "seed": 1337,
-                "style": {"style": "FLAT"},
-                "offsetY": 4
+    "objects": [{
+        "heightmap": {
+            "seed": 1337,
+            "style": {
+                "style": "SIMPLEX",
+                "multiplier": 10
             },
-            "chance": 0.9,
-            "edit": [{
-                "chance": 0.01,
-                "find": [{"block": "deepslate"}],
-                "replace": {"palette": [
-                    {"block": "deepslate_coal_ore"},
-                    {"block": "deepslate_copper_ore"},
-                    {"block": "deepslate_diamond_ore"},
-                    {"block": "deepslate_emerald_ore"},
-                    {"block": "deepslate_gold_ore"},
-                    {"block": "deepslate_iron_ore"},
-                    {"block": "deepslate_lapis_ore"},
-                    {"block": "deepslate_redstone_ore"}
-                ]}
-            }],
-            "place": [
-                "deepslate/ds1",
-                "deepslate/ds2",
-                "deepslate/ds3"
-            ],
-            "enabled": true,
-            "xAxis": {
-                "interval": 15,
-                "max": 360,
-                "min": 0
-            }
+            "offsetY": 5
         },
-        {
-            "heightmap": {
-                "seed": 1337,
-                "style": {
-                    "style": "SIMPLEX",
-                    "multiplier": 10
-                },
-                "offsetY": 5
-            },
-            "chance": 0.05,
-            "bottom": true,
-            "density": 1,
-            "place": [
-                "amethyst/ame1",
-                "amethyst/ame2",
-                "amethyst/ame3",
-                "amethyst/ame4",
-                "amethyst/ame5",
-                "amethyst/ame6"
-            ],
-            "edit": [{
-                "find": [{"block": "glass"}],
-                "replace": {"palette": [{"block": "void_air"}]}
-            }],
-            "enabled": true,
-            "xAxis": {
-                "interval": 90,
-                "max": 360,
-                "min": 0
-            },
-            "yAxis": {
-                "interval": 90,
-                "max": 360,
-                "min": 0
-            },
-            "translate": {
-                "yRandom": 10,
-                "y": 2
-            }
+        "chance": 0.05,
+        "bottom": true,
+        "density": 1,
+        "place": [
+            "amethyst/ame1",
+            "amethyst/ame2",
+            "amethyst/ame3",
+            "amethyst/ame4",
+            "amethyst/ame5",
+            "amethyst/ame6"
+        ],
+        "edit": [{
+            "find": [{"block": "glass"}],
+            "replace": {"palette": [{"block": "void_air"}]}
+        }],
+        "enabled": true,
+        "xAxis": {
+            "interval": 90,
+            "max": 360,
+            "min": 0
+        },
+        "yAxis": {
+            "interval": 90,
+            "max": 360,
+            "min": 0
+        },
+        "translate": {
+            "yRandom": 10,
+            "y": 2
         }
-    ],
+    }],
     "biomeImplosionRatio": 0.25,
     "landBiomeZoom": 1.25,
     "effects": [

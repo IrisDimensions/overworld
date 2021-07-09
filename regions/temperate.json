@@ -1,40 +1,36 @@
 {
     "name": "Temperate",
     "landBiomes": [
-        "temperate/plateau",
-        "temperate/flower-forest",
-        "temperate/longtree-forest",
-        "temperate/oak",
-        "temperate/plains",
-        "temperate/oak-forest",
-        "temperate/wilds",
-        "temperate/birch-forest"
+        "temperate/tem-plateau",
+        "temperate/tem-flower-forest",
+        "temperate/tem-stranged-plains",
+        "temperate/tem-longtree-forest",
+        "temperate/tem-oak",
+        "temperate/tem-plains",
+        "temperate/tem-oak-forest",
+        "temperate/tem-wilds",
+        "temperate/tem-birch-forest"
     ],
     "shoreBiomes": [
-        "temperate/oak-beach",
-        "temperate/oak-beach",
-        "temperate/oak-beach",
-        "temperate/beach",
-        "temperate/oak-beach"
+        "temperate/tem-beach",
+        "temperate/tem-oak-beach"
     ],
     "seaBiomes": [
-        "temperate/river",
-        "ocean/deep"
+        "ocean/oce-tem-river",
+        "ocean/oce-deep"
     ],
     "caveBiomes": [
-        "temperate/old-cavern",
-        "temperate/cracked-cavern",
-        "temperate/lit-cavern"
+        "cave/old-cavern",
+        "cave/cracked-cavern",
+        "cave/lit-cavern"
     ],
-    "riverBiomes": ["temperate/river"],
-    "spotBiomes": [{
-        "as": "LAND",
-        "biome": "temperate/island",
-        "scale": 1.65,
-        "type": "SEA",
-        "rarity": 119
-    }],
-
+    "riverBiomes": ["ocean/oce-tem-river"],
+    "jigsawStructures": [
+        {
+            "structure": "murky_stronghold",
+            "rarity": 750
+        }
+    ],
     "biomeImplosionRatio": 0.25,
     "deposits": [{
         "minHeight": 15,
@@ -50,39 +46,6 @@
         "varience": 4
     }],
     "objects": [
-        {
-            "heightmap": {
-                "seed": 1337,
-                "style": {"style": "FLAT"},
-                "offsetY": 4
-            },
-            "chance": 0.9,
-            "edit": [{
-                "chance": 0.01,
-                "find": [{"block": "deepslate"}],
-                "replace": {"palette": [
-                    {"block": "deepslate_coal_ore"},
-                    {"block": "deepslate_copper_ore"},
-                    {"block": "deepslate_diamond_ore"},
-                    {"block": "deepslate_emerald_ore"},
-                    {"block": "deepslate_gold_ore"},
-                    {"block": "deepslate_iron_ore"},
-                    {"block": "deepslate_lapis_ore"},
-                    {"block": "deepslate_redstone_ore"}
-                ]}
-            }],
-            "place": [
-                "deepslate/ds1",
-                "deepslate/ds2",
-                "deepslate/ds3"
-            ],
-            "enabled": true,
-            "xAxis": {
-                "interval": 15,
-                "max": 360,
-                "min": 0
-            }
-        },
         {
             "heightmap": {
                 "seed": 1337,

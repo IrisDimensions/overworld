@@ -1,0 +1,42 @@
+{
+    "name": "Hot Oasis",
+    "derivative": "DESERT",
+    "vanillaDerivative": "DESERT",
+    "generators": [{
+        "generator": "plain",
+        "max": 7,
+        "min": -2
+    }],
+    "layers": [{
+        "minHeight": 5,
+        "maxHeight": 5,
+        "style": {"style": "FRACTAL_WATER"},
+        "zoom": 0.7,
+        "palette": [
+            {
+                "weight": 1,
+                "block": "grass_block"
+            },
+            {
+                "weight": 1,
+                "block": "moss_block"
+            }
+        ]
+    }],
+    "decorators": [
+        {
+            "verticalZoom": 5,
+            "chance": 0.005,
+            "variance": {"style": "STATIC"},
+            "stackMax": 5,
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "cactus"}],
+            "heightVariance": {"style": "IRIS"},
+            "stackMin": 1
+        },
+        {
+            "chance": 0.005,
+            "palette": [{"block": "dead_bush"}]
+        }
+    ]
+}

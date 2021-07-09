@@ -1,16 +1,14 @@
 {
     "name": "Hot",
     "landBiomes": [
-        "hot/desert-dunes",
-        "hot/desert-dunes-red"
+        "hot/hot-desert-dunes",
+        "hot/hot-desert-dunes-red"
     ],
-    "shoreBiomes": [
-        "hot/beach"
-    ],
-    "seaBiomes": ["hot/ocean"],
+    "shoreBiomes": ["hot/hot-beach"],
+    "seaBiomes": ["ocean/oce-hot-ocean"],
     "caveBiomes": [
-        "hot/sandy-cave",
-        "hot/sandy-red-cave"
+        "cave/sandy-cave",
+        "cave/sandy-red-cave"
     ],
     "riverStyle": {
         "style": "VASCULAR",
@@ -21,15 +19,19 @@
             "zoom": 5
         }
     },
-        "spotBiomes": [
+    "spotBiomes": [{
+        "biome": "hot/hot-oasis",
+        "scale": 5,
+        "type": "SEA",
+        "shuffle": 328,
+        "rarity": 36
+    }],
+    "jigsawStructures": [
         {
-            "biome": "hot/oasis",
-            "scale": 5,
-            "type": "SEA",
-            "shuffle": 328,
-            "rarity": 36
+            "structure": "murky_stronghold",
+            "rarity": 750
         }
-        ],
+    ],
     "biomeImplosionRatio": 0.25,
     "deposits": [
         {
@@ -124,39 +126,6 @@
         "replaceVanillaDrops": true
     }],
     "objects": [
-        {
-            "heightmap": {
-                "seed": 1337,
-                "style": {"style": "FLAT"},
-                "offsetY": 4
-            },
-            "chance": 0.9,
-            "edit": [{
-                "chance": 0.01,
-                "find": [{"block": "deepslate"}],
-                "replace": {"palette": [
-                    {"block": "deepslate_coal_ore"},
-                    {"block": "deepslate_copper_ore"},
-                    {"block": "deepslate_diamond_ore"},
-                    {"block": "deepslate_emerald_ore"},
-                    {"block": "deepslate_gold_ore"},
-                    {"block": "deepslate_iron_ore"},
-                    {"block": "deepslate_lapis_ore"},
-                    {"block": "deepslate_redstone_ore"}
-                ]}
-            }],
-            "place": [
-                "deepslate/ds1",
-                "deepslate/ds2",
-                "deepslate/ds3"
-            ],
-            "enabled": true,
-            "xAxis": {
-                "interval": 15,
-                "max": 360,
-                "min": 0
-            }
-        },
         {
             "heightmap": {
                 "seed": 1337,

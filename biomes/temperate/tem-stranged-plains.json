@@ -1,0 +1,227 @@
+{
+    "name": "Stranged Plains",
+    "derivative": "PLAINS",
+    "vanillaDerivative": "PLAINS",
+    "childStyle": {
+        "style": "IRIS",
+        "zoom": 0.5,
+        "exponent": 2
+    },
+    "generators": [{
+        "min": 4,
+        "max": 7,
+        "generator": "plain"
+    }],
+    "decorators": [{
+        "chance": 0.7,
+        "palette": [
+            {
+                "data": {"age": 7},
+                "block": "wheat",
+                "weight": 45
+            },
+            {
+                "block": "grass",
+                "weight": 4
+            },
+            {
+                "block": "tall_grass",
+                "weight": 1
+            }
+        ],
+        "forcePlace": false
+    }],
+    "objects": [
+        {
+            "mode": "MIN_HEIGHT",
+            "chance": 0.00975,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "camp/camp",
+                "camp/camp3",
+                "camp/camp4",
+                "camp/camp5"
+            ]
+        },
+        {
+            "chance": 0.01,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "hazel-oak/hoak-3",
+                "hazel-oak/hoak-4",
+                "hazel-oak/hoak-5",
+                "hazel-oak/hoak-6",
+                "hazel-oak/hoak-7",
+                "hazel-oak/hoak-8",
+                "hazel-oak/hoak-9",
+                "hazel-oak/hoak-1",
+                "hazel-oak/s-hoak-3",
+                "hazel-oak/s-hoak-4",
+                "hazel-oak/s-hoak-5",
+                "hazel-oak/s-hoak-6",
+                "hazel-oak/s-hoak-7",
+                "hazel-oak/s-hoak-8",
+                "hazel-oak/s-hoak-9",
+                "hazel-oak/s-hoak-1",
+                "hazel-oak/s-hoak-2"
+            ]
+        },
+        {
+            "chance": 0.009,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "plains/tree1",
+                "plains/tree2"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -3,
+                "z": 0
+            }
+        },
+        {
+            "chance": 2.0E-7,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "void/void",
+                "void/void",
+                "void/void",
+                "sm-tree/oakw-oakl"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            }
+        },
+        {
+            "place": [
+                "tree/oak/1",
+                "tree/oak/2",
+                "tree/oak/3",
+                "tree/oak/4",
+                "tree/oak/5",
+                "tree/oak/6"
+            ],
+            "chance": 0.07,
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": -360,
+                    "max": 360
+                }
+            }
+        },
+        {
+            "place": [
+                "landform/stone/1",
+                "landform/stone/2",
+                "landform/stone/3",
+                "landform/stone/4",
+                "landform/stone/5"
+            ],
+            "chance": 0.02,
+            "mode": "MIN_HEIGHT",
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": -360,
+                    "max": 360
+                }
+            }
+        }
+    ],
+    "layers": [
+        {"palette": [{"block": "grass_block"}]},
+        {
+            "minHeight": 2,
+            "maxHeight": 2,
+            "palette": [{"block": "dirt"}]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {"block": "dirt"},
+                {"block": "coarse_dirt"}
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "dirt"},
+                {"block": "stone"}
+            ]
+        }
+    ],
+    "entityInitialSpawns": [
+        {
+            "entity": "cow",
+            "maxSpawns": 3,
+            "minSpawns": 1,
+            "rarity": 7
+        },
+        {
+            "entity": "pig",
+            "maxSpawns": 3,
+            "minSpawns": 1,
+            "rarity": 7
+        },
+        {
+            "entity": "chicken",
+            "maxSpawns": 3,
+            "minSpawns": 1,
+            "rarity": 7
+        },
+        {
+            "entity": "sheep",
+            "maxSpawns": 3,
+            "minSpawns": 1,
+            "rarity": 7
+        }
+    ],
+    "biomeZoom": 60,
+    "biomeStyle": {"style": "IRIS"},
+    "wall": {"palette": [
+        {"block": "stone"},
+        {"block": "andesite"}
+    ]}
+}

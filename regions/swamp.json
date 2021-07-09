@@ -1,20 +1,26 @@
 {
     "name": "Swamp",
     "landBiomes": [
-        "swamp/roofed-forest",
-        "swamp/willow-forest",
-        "swamp/lake",
-        "swamp/roofed-wayward",
-        "swamp/marsh"
+        "swamp/swa-roofed-forest",
+        "swamp/swa-willow-forest",
+        "swamp/swa-lake",
+        "swamp/swa-roofed-wayward",
+        "swamp/swa-marsh"
     ],
-    "shoreBiomes": ["swamp/beach"],
+    "shoreBiomes": ["swamp/swa-beach"],
+    "jigsawStructures": [
+        {
+            "structure": "murky_stronghold",
+            "rarity": 750
+        }
+    ],
     "seaBiomes": [
-        "swamp/ocean",
-        "swamp/ocean-tree"
+        "ocean/oce-swa-ocean",
+        "ocean/oce-swa-ocean-tree"
     ],
     "caveBiomes": [
-        "swamp/murky-cavern",
-        "swamp/murky-cavern-gleaming"
+        "cave/murky-cavern",
+        "cave/murky-cavern-gleaming"
     ],
     "riverStyle": {
         "style": "VASCULAR",
@@ -48,81 +54,46 @@
             "varience": 4
         }
     ],
-    "objects": [
-        {
-            "heightmap": {
-                "seed": 1337,
-                "style": {"style": "FLAT"},
-                "offsetY": 4
+    "objects": [{
+        "heightmap": {
+            "seed": 1337,
+            "style": {
+                "style": "SIMPLEX",
+                "multiplier": 10
             },
-            "chance": 0.9,
-            "edit": [{
-                "chance": 0.01,
-                "find": [{"block": "deepslate"}],
-                "replace": {"palette": [
-                    {"block": "deepslate_coal_ore"},
-                    {"block": "deepslate_copper_ore"},
-                    {"block": "deepslate_diamond_ore"},
-                    {"block": "deepslate_emerald_ore"},
-                    {"block": "deepslate_gold_ore"},
-                    {"block": "deepslate_iron_ore"},
-                    {"block": "deepslate_lapis_ore"},
-                    {"block": "deepslate_redstone_ore"}
-                ]}
-            }],
-            "place": [
-                "deepslate/ds1",
-                "deepslate/ds2",
-                "deepslate/ds3"
-            ],
-            "enabled": true,
-            "xAxis": {
-                "interval": 15,
-                "max": 360,
-                "min": 0
-            }
+            "offsetY": 5
         },
-        {
-            "heightmap": {
-                "seed": 1337,
-                "style": {
-                    "style": "SIMPLEX",
-                    "multiplier": 10
-                },
-                "offsetY": 5
-            },
-            "chance": 0.05,
-            "bottom": true,
-            "density": 1,
-            "place": [
-                "amethyst/ame1",
-                "amethyst/ame2",
-                "amethyst/ame3",
-                "amethyst/ame4",
-                "amethyst/ame5",
-                "amethyst/ame6"
-            ],
-            "edit": [{
-                "find": [{"block": "glass"}],
-                "replace": {"palette": [{"block": "void_air"}]}
-            }],
-            "enabled": true,
-            "xAxis": {
-                "interval": 90,
-                "max": 360,
-                "min": 0
-            },
-            "yAxis": {
-                "interval": 90,
-                "max": 360,
-                "min": 0
-            },
-            "translate": {
-                "yRandom": 10,
-                "y": 2
-            }
+        "chance": 0.05,
+        "bottom": true,
+        "density": 1,
+        "place": [
+            "amethyst/ame1",
+            "amethyst/ame2",
+            "amethyst/ame3",
+            "amethyst/ame4",
+            "amethyst/ame5",
+            "amethyst/ame6"
+        ],
+        "edit": [{
+            "find": [{"block": "glass"}],
+            "replace": {"palette": [{"block": "void_air"}]}
+        }],
+        "enabled": true,
+        "xAxis": {
+            "interval": 90,
+            "max": 360,
+            "min": 0
+        },
+        "yAxis": {
+            "interval": 90,
+            "max": 360,
+            "min": 0
+        },
+        "translate": {
+            "yRandom": 10,
+            "y": 2
         }
-    ],
+    }],
     "landBiomeZoom": 1.25,
     "shoreHeightMin": 0.02,
     "shoreHeightMax": 1.2,

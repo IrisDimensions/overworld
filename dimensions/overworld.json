@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "OVERWORLD-VERSION": 3,
+    "OVERWORLD-VERSION": 3.134,
     "name": "Overworld",
     "environment": "NORMAL",
     "fluidHeight": 63,
@@ -54,7 +54,7 @@
     "landZoom": 3.2,
     "landBiomeStyle": {
         "style": "FRACTAL_SMOKE",
-        "zoom": 1
+        "zoom": 2.5
     },
     "LOOT": "Contains a list of loot tables that are attempted to be applied to all chests that spawn.",
     "lootTries": 32,
@@ -106,27 +106,33 @@
             "varience": 2
         },
         {
-            "minHeight": 0,
-            "maxPerChunk": 2,
+            "minHeight": 5,
+            "maxPerChunk": 128,
             "maxHeight": 13,
-            "minPerChunk": 0,
-            "minSize": 5,
-            "maxSize": 10,
+            "minPerChunk": 128,
+            "minSize": 8,
+            "maxSize": 4,
             "palette": [{"block": "deepslate"}],
-            "varience": 2
+            "varience": 4
         },
         {
-            "minHeight": 0,
-            "maxPerChunk": 4,
-            "maxHeight": 28,
-            "minPerChunk": 1,
-            "minSize": 25,
-            "maxSize": 25,
+            "minHeight": 5,
+            "maxPerChunk": 5,
+            "maxHeight": 13,
+            "minPerChunk": 5,
+            "minSize": 8,
+            "maxSize": 4,
             "palette": [
-                {"block": "dirt"},
-                {"block": "coarse_dirt"}
+                {"block": "deepslate_copper_ore"},
+                {"block": "deepslate_diamond_ore"},
+                {"block": "deepslate_emerald_ore"},
+                {"block": "deepslate_gold_ore"},
+                {"block": "deepslate_iron_ore"},
+                {"block": "deepslate_coal_ore"},
+                {"block": "deepslate_redstone_ore"},
+                {"block": "deepslate_lapis_ore"}
             ],
-            "varience": 2
+            "varience": 4
         },
         {
             "minHeight": 2,
@@ -295,14 +301,14 @@
         {
             "style": {
                 "style": "PERLIN_IRIS_HALF",
-                "zoom": 0.3,
+                "zoom": 0.2,
                 "fracture": {
                     "multiplier": 5,
                     "style": "FRACTAL_SMOKE",
                     "zoom": 0.5
                 }
             },
-            "fullPercent": 0.5,
+            "fullPercent": 0.01,
             "threshold": 0.68,
             "minHeight": -50,
             "maxHeight": 110

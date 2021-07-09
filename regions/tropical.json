@@ -1,27 +1,29 @@
 {
     "name": "Tropical",
     "landBiomes": [
-        "tropical/rainforest",
-        "tropical/plains",
-        "tropical/bamboo-forest",
-        "tropical/plains",
-        "tropical/rainforest-wicked",
-        "tropical/wilds",
-        "tropical/volcanic-plains"
+        "tropical/tro-rainforest",
+        "tropical/tro-plains",
+        "tropical/tro-bamboo-forest",
+        "tropical/tro-plains",
+        "tropical/tro-rainforest-wicked",
+        "tropical/tro-wilds",
+        "tropical/tro-volcanic-plains",
+        "tropical/tro-mountain-extreme",
+        "tropical/tro-mountain"
     ],
     "shoreBiomes": [
-        "tropical/island-beach",
-        "tropical/beach",
-        "tropical/beach-bamboo"
+        "tropical/tro-island-beach",
+        "tropical/tro-beach",
+        "tropical/tro-beach-bamboo"
     ],
     "seaBiomes": [
-        "tropical/ocean",
-        "tropical/river-soft"
+        "ocean/oce-tro-ocean",
+        "ocean/oce-tro-river-soft"
     ],
     "caveBiomes": [
-        "tropical/cavern",
-        "tropical/cavern-coral",
-        "tropical/cavern-root"
+        "cave/tropical-cavern",
+        "cave/cavern-coral",
+        "cave/cavern-root"
     ],
     "biomeImplosionRatio": 0.25,
     "riverStyle": {
@@ -33,21 +35,10 @@
             "zoom": 5
         }
     },
-    "spotBiomes": [
+    "jigsawStructures": [
         {
-            "as": "SEA",
-            "biome": "tropical/submerged-volcanic",
-            "scale": 10,
-            "type": "SEA",
-            "shuffle": 1,
-            "rarity": 286
-        },
-        {
-            "as": "LAND",
-            "biome": "tropical/rainforest-island",
-            "scale": 2.65,
-            "type": "SEA",
-            "rarity": 139
+            "structure": "murky_stronghold",
+            "rarity": 750
         }
     ],
     "deposits": [{
@@ -75,39 +66,6 @@
         ]
     },
     "objects": [
-        {
-            "heightmap": {
-                "seed": 1337,
-                "style": {"style": "FLAT"},
-                "offsetY": 4
-            },
-            "chance": 0.9,
-            "edit": [{
-                "chance": 0.01,
-                "find": [{"block": "deepslate"}],
-                "replace": {"palette": [
-                    {"block": "deepslate_coal_ore"},
-                    {"block": "deepslate_copper_ore"},
-                    {"block": "deepslate_diamond_ore"},
-                    {"block": "deepslate_emerald_ore"},
-                    {"block": "deepslate_gold_ore"},
-                    {"block": "deepslate_iron_ore"},
-                    {"block": "deepslate_lapis_ore"},
-                    {"block": "deepslate_redstone_ore"}
-                ]}
-            }],
-            "place": [
-                "deepslate/ds1",
-                "deepslate/ds2",
-                "deepslate/ds3"
-            ],
-            "enabled": true,
-            "xAxis": {
-                "interval": 15,
-                "max": 360,
-                "min": 0
-            }
-        },
         {
             "heightmap": {
                 "seed": 1337,

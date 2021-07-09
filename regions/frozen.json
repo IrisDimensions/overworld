@@ -1,38 +1,35 @@
 {
     "name": "Frozen",
     "landBiomes": [
-        "frozen/plains",
-        "frozen/pines",
-        "frozen/plains",
-        "frozen/mountain",
-        "frozen/redwood-forest",
-        "frozen/hills",
-        "frozen/pine-plains",
-        "frozen/spruce-plains"
+        "frozen/fzn-plains",
+        "frozen/fzn-pines",
+        "frozen/fzn-plains",
+        "frozen/fzn-mountain",
+        "frozen/fzn-redwood-forest",
+        "frozen/fzn-hills",
+        "frozen/fzn-pine-plains",
+        "frozen/fzn-spruce-plains"
     ],
-    "shoreBiomes": ["frozen/beach"],
-    "seaBiomes": ["frozen/river"],
+    "shoreBiomes": ["frozen/fzn-beach"],
+    "seaBiomes": ["ocean/oce-fzn-river"],
     "caveBiomes": [
-        "frozen/ice-cavern",
-        "temperate/cracked-cavern"
+        "cave/ice-cavern",
+        "cave/cracked-cavern"
     ],
-    "riverBiomes": ["frozen/river"],
-    "spotBiomes": [
+    "riverBiomes": ["ocean/oce-fzn-river"],
+    "jigsawStructures": [
         {
-            "biome": "frozen/ocean",
-            "scale": 5,
-            "type": "SEA",
-            "shuffle": 328,
-            "rarity": 36
-        },
-        {
-            "biome": "frozen/vander",
-            "scale": 5,
-            "type": "LAND",
-            "shuffle": 328,
-            "rarity": 10
+            "structure": "murky_stronghold",
+            "rarity": 750
         }
     ],
+    "spotBiomes": [{
+        "biome": "frozen/fzn-vander",
+        "scale": 5,
+        "type": "LAND",
+        "shuffle": 328,
+        "rarity": 5
+    }],
     "riverStyle": {
         "style": "VASCULAR",
         "zoom": 4.77,
@@ -91,39 +88,6 @@
         ]
     },
     "objects": [
-        {
-            "heightmap": {
-                "seed": 1337,
-                "style": {"style": "FLAT"},
-                "offsetY": 4
-            },
-            "chance": 0.9,
-            "edit": [{
-                "chance": 0.01,
-                "find": [{"block": "deepslate"}],
-                "replace": {"palette": [
-                    {"block": "deepslate_coal_ore"},
-                    {"block": "deepslate_copper_ore"},
-                    {"block": "deepslate_diamond_ore"},
-                    {"block": "deepslate_emerald_ore"},
-                    {"block": "deepslate_gold_ore"},
-                    {"block": "deepslate_iron_ore"},
-                    {"block": "deepslate_lapis_ore"},
-                    {"block": "deepslate_redstone_ore"}
-                ]}
-            }],
-            "place": [
-                "deepslate/ds1",
-                "deepslate/ds2",
-                "deepslate/ds3"
-            ],
-            "enabled": true,
-            "xAxis": {
-                "interval": 15,
-                "max": 360,
-                "min": 0
-            }
-        },
         {
             "heightmap": {
                 "seed": 1337,
