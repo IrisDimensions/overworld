@@ -30,21 +30,16 @@
         "mesa"
     ],
     "regionStyle": {
-        "style": "CELLULAR_IRIS_DOUBLE",
+        "style": "NOWHERE_CELLULAR",
         "fracture": {
             "multiplier": 18,
             "maxFractureAccuracy": true,
-            "style": "FRACTAL_WATER",
-            "zoom": 0.255,
-            "fracture": {
-                "maxFractureAccuracy": true,
-                "style": "STATIC",
-                "multiplier": 4
-            }
+            "style": "IRIS",
+            "zoom": 0.255
         }
     },
     "islandBiomeChanceStyle": {
-        "style": "FRACTAL_FBM_IRIS",
+        "style": "NOWHERE_CELLULAR",
         "zoom": 5
     },
     "SEAS": "Sea settings (for the biomes that are oceans).",
@@ -53,8 +48,8 @@
     "LAND": "Land settings (for the biomes that are non-ocean).",
     "landZoom": 3.2,
     "landBiomeStyle": {
-        "style": "FRACTAL_SMOKE",
-        "zoom": 2.5
+        "style": "NOWHERE_FRACTAL",
+        "zoom": 3
     },
     "LOOT": "Contains a list of loot tables that are attempted to be applied to all chests that spawn.",
     "lootTries": 32,
@@ -283,21 +278,6 @@
     "CAVERNS//CARVING": "Carving layers that cut off certain parts of the world",
     "carving": true,
     "carveLayers": [
-        {
-            "style": {
-                "style": "IRIS_DOUBLE",
-                "zoom": 1,
-                "fracture": {
-                    "multiplier": 5,
-                    "style": "FRACTAL_SMOKE",
-                    "zoom": 0.5
-                }
-            },
-            "fullPercent": 0.007,
-            "threshold": 0.8,
-            "minHeight": -40,
-            "maxHeight": 110
-        },
         {
             "style": {
                 "style": "PERLIN_IRIS_HALF",
