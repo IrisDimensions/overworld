@@ -2,19 +2,15 @@
     "name": "Sleepy Klarus Deep",
     "derivative": "SWAMP_HILLS",
     "vanillaDerivative": "SWAMP",
-    "generators": [
-        {
-            "min": 1,
-            "max": 2,
-            "generator": "plain"
-        }
-    ],
+    "generators": [{
+        "min": 1,
+        "max": 2,
+        "generator": "plain"
+    }],
     "layers": [
         {
             "zoom": 0.5,
-            "style": {
-                "style": "IRIS"
-            },
+            "style": {"style": "IRIS"},
             "palette": [
                 {
                     "weight": 5,
@@ -30,87 +26,51 @@
             "minHeight": 1,
             "maxHeight": 3,
             "palette": [
-                {
-                    "block": "dirt"
-                },
-                {
-                    "block": "coarse_dirt"
-                }
+                {"block": "dirt"},
+                {"block": "coarse_dirt"}
             ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
+            "style": {"style": "STATIC"},
             "palette": [
-                {
-                    "block": "stone"
-                },
-                {
-                    "block": "andesite"
-                },
-                {
-                    "block": "stone"
-                }
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
             ]
         }
     ],
     "decorators": [
         {
             "chance": 0.005,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 0.02,
             "palette": [
-                {
-                    "block": "brown_mushroom"
-                },
-                {
-                    "block": "red_mushroom"
-                }
+                {"block": "brown_mushroom"},
+                {"block": "red_mushroom"}
             ],
-            "style": {
-                "style": "STATIC"
-            }
+            "style": {"style": "STATIC"}
         },
         {
             "chance": 0.13,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 0.2,
             "palette": [
-                {
-                    "block": "large_fern"
-                },
-                {
-                    "block": "tall_grass"
-                }
+                {"block": "large_fern"},
+                {"block": "tall_grass"}
             ],
-            "style": {
-                "style": "STATIC"
-            }
+            "style": {"style": "STATIC"}
         },
         {
             "chance": 0.15,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 0.3,
             "palette": [
-                {
-                    "block": "dead_bush"
-                },
-                {
-                    "block": "fern"
-                }
+                {"block": "dead_bush"},
+                {"block": "fern"}
             ],
-            "style": {
-                "style": "STATIC"
-            }
+            "style": {"style": "STATIC"}
         }
     ],
     "entityInitialSpawns": [
@@ -195,41 +155,27 @@
             },
             "edit": [
                 {
-                    "find": [
+                    "find": [{"block": "oak_leaves"}],
+                    "replace": {"palette": [
                         {
-                            "block": "oak_leaves"
+                            "block": "oak_leaves",
+                            "data": {"persistent": true}
+                        },
+                        {
+                            "block": "spruce_leaves",
+                            "data": {"persistent": true}
                         }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "oak_leaves",
-                                "data": {"persistent": true}
-                            },
-                            {
-                                "block": "spruce_leaves",
-                                "data": {"persistent": true}
-                            }
-                        ]
-                    }
+                    ]}
                 },
                 {
-                    "find": [
+                    "find": [{"block": "oak_log"}],
+                    "replace": {"palette": [
+                        {"block": "dark_oak_wood"},
                         {
-                            "block": "oak_log"
+                            "block": "spruce_leaves",
+                            "data": {"persistent": true}
                         }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "dark_oak_wood"
-                            },
-                            {
-                                "block": "spruce_leaves",
-                                "data": {"persistent": true}
-                            }
-                        ]
-                    }
+                    ]}
                 }
             ]
         },
@@ -261,23 +207,13 @@
         }
     ],
     "biomeZoom": 9,
-    "biomeStyle": {
-        "style": "IRIS"
-    },
+    "biomeStyle": {"style": "IRIS"},
     "wall": {
-        "style": {
-            "style": "STATIC"
-        },
+        "style": {"style": "STATIC"},
         "palette": [
-            {
-                "block": "stone"
-            },
-            {
-                "block": "andesite"
-            },
-            {
-                "block": "stone"
-            }
+            {"block": "stone"},
+            {"block": "andesite"},
+            {"block": "stone"}
         ]
     }
 }
