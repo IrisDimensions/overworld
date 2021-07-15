@@ -31,11 +31,12 @@
     ],
     "regionStyle": {
         "style": "NOWHERE_CELLULAR",
+        "zoom": 1,
         "fracture": {
             "multiplier": 18,
             "maxFractureAccuracy": true,
-            "style": "IRIS",
-            "zoom": 0.255
+            "style": "FRACTAL_SMOKE",
+            "zoom": 1
         }
     },
     "islandBiomeChanceStyle": {
@@ -277,23 +278,21 @@
     "caveBiomeStyle": {"style": "CELLULAR_IRIS_DOUBLE"},
     "CAVERNS//CARVING": "Carving layers that cut off certain parts of the world",
     "carving": true,
-    "carveLayers": [
-        {
-            "style": {
-                "style": "PERLIN_IRIS_HALF",
-                "zoom": 0.2,
-                "fracture": {
-                    "multiplier": 5,
-                    "style": "FRACTAL_SMOKE",
-                    "zoom": 0.5
-                }
-            },
-            "fullPercent": 0.01,
-            "threshold": 0.68,
-            "minHeight": -50,
-            "maxHeight": 110
-        }
-    ],
+    "carveLayers": [{
+        "style": {
+            "style": "PERLIN_IRIS_HALF",
+            "zoom": 0.2,
+            "fracture": {
+                "multiplier": 5,
+                "style": "FRACTAL_SMOKE",
+                "zoom": 0.5
+            }
+        },
+        "fullPercent": 0.01,
+        "threshold": 0.68,
+        "minHeight": -50,
+        "maxHeight": 110
+    }],
     "RAVINES": "Settings regarding ravines. Iris does not know when and where they spawn, so it may look weird (with cave fluids)",
     "ravines": false,
     "ravineRarity": 500,

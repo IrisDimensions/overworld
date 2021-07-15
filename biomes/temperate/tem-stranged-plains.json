@@ -7,30 +7,61 @@
         "zoom": 0.5,
         "exponent": 2
     },
+    "customDerivitives": [{
+        "id": "pemstrangeplains",
+        "foliageColor": "#65A528",
+        "waterColor": "#2873A5",
+        "grassColor": "#A4C646",
+        "category": "forest"
+    }],
     "generators": [{
         "min": 4,
         "max": 7,
         "generator": "plain"
     }],
-    "decorators": [{
-        "chance": 0.7,
-        "palette": [
-            {
-                "data": {"age": 7},
-                "block": "wheat",
-                "weight": 45
+    "decorators": [
+        {
+            "chance": 0.4,
+            "style": {
+                "style": "IRIS",
+                "zoom": 0.2
             },
-            {
-                "block": "grass",
-                "weight": 4
+            "palette": [
+                {
+                    "data": {"age": 7},
+                    "block": "wheat",
+                    "weight": 45
+                },
+                {
+                    "block": "grass",
+                    "weight": 4
+                },
+                {
+                    "block": "tall_grass",
+                    "weight": 1
+                }
+            ],
+            "forcePlace": false
+        },
+        {
+            "chance": 0.4,
+            "style": {
+                "style": "IRIS",
+                "zoom": 0.4
             },
-            {
-                "block": "tall_grass",
-                "weight": 1
-            }
-        ],
-        "forcePlace": false
-    }],
+            "palette": [
+                {
+                    "block": "grass",
+                    "weight": 4
+                },
+                {
+                    "block": "tall_grass",
+                    "weight": 1
+                }
+            ],
+            "forcePlace": false
+        }
+    ],
     "objects": [
         {
             "mode": "MIN_HEIGHT",
