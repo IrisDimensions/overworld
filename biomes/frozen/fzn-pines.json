@@ -36,9 +36,10 @@
     ],
     "customDerivitives": [{
         "id": "fznpines",
-        "waterColor": "#429DFF",
+        "waterColor": "#216FC4",
         "fogColor": "#A6D1FF",
-        "waterFogColor": "#3C6280",
+        "waterFogColor": "#216FC4",
+        "foliageColor": "#B8D0E1",
         "grassColor": "#D0E1FF"
     }],
     "generators": [
@@ -81,6 +82,12 @@
                 },
                 "enabled": true
             },
+            "edit": [
+                {
+                    "find": [{"block": "spruce_leaves"}],
+                    "replace": {"style":{"style": "PERLIN", "zoom": 0.2}, "palette":[{"block": "oak_leaves", "data": {"persistent": true}}, {"block": "dark_oak_leaves", "data": {"persistent": true}}]}
+                }
+            ],
             "place": [
                 "ice-spikes/ic-1",
                 "ice-spikes/ic-2",
@@ -109,12 +116,10 @@
             "chance": 0.8,
             "snow": 1,
             "edit": [{
-                "find": [{"block": "spruce_leaves"}],
-                "replace": {"palette": [{
-                    "block": "spruce_leaves",
-                    "data": {"persistent": true}
-                }]}
-            }],
+                    "find": [{"block": "spruce_leaves"}],
+                    "replace": {"style":{"style": "PERLIN", "zoom": 0.2}, "palette":[{"block": "oak_leaves", "data": {"persistent": true}}, {"block": "dark_oak_leaves", "data": {"persistent": true}}]}
+                }
+            ],
             "rotation": {
                 "yAxis": {
                     "min": 0,

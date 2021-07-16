@@ -30,9 +30,10 @@
     ],
     "customDerivitives": [{
         "id": "fznvander",
-        "waterColor": "#429DFF",
+        "waterColor": "#216FC4",
         "fogColor": "#A6D1FF",
-        "waterFogColor": "#3C6280",
+        "waterFogColor": "#216FC4",
+        "foliageColor": "#B8D0E1",
         "grassColor": "#D0E1FF"
     }],
     "jigsawStructures": [
@@ -80,7 +81,7 @@
     ],
     "objects": [
         {
-            "chance": 0.07,
+            "chance": 0.02,
             "mode": "FAST_MIN_HEIGHT",
             "density": 3,
             "rotation": {
@@ -92,6 +93,7 @@
                 },
                 "enabled": true
             },
+
             "place": [
                 "wonderland/wonder-1",
                 "wonderland/wonder-2",
@@ -155,6 +157,10 @@
                 {
                     "find": [{"block": "spruce_fence"}],
                     "replace": {"palette": [{"block": "dark_oak_fence"}]}
+                },
+                {
+                    "find": [{"block": "spruce_leaves"}],
+                    "replace": {"style":{"style": "PERLIN", "zoom": 0.2}, "palette":[{"block": "oak_leaves", "data": {"persistent": true}}, {"block": "dark_oak_leaves", "data": {"persistent": true}}]}
                 }
             ],
             "rotation": {

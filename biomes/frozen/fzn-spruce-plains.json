@@ -32,9 +32,9 @@
     ],
     "customDerivitives": [{
         "id": "fznspruceplains",
-        "waterColor": "#429DFF",
+        "waterFogColor": "#216FC4",
+        "foliageColor": "#B8D0E1",
         "fogColor": "#A6D1FF",
-        "waterFogColor": "#3C6280",
         "grassColor": "#D0E1FF"
     }],
     "jigsawStructures": [
@@ -90,6 +90,12 @@
             },
             "enabled": true
         },
+        "edit": [
+                {
+                    "find": [{"block": "spruce_leaves"}],
+                    "replace": {"style":{"style": "PERLIN", "zoom": 0.2}, "palette":[{"block": "oak_leaves", "data": {"persistent": true}}, {"block": "dark_oak_leaves", "data": {"persistent": true}}]}
+                }
+            ],
         "place": [
             "evergreen/fantasy_evergreen_large1",
             "evergreen/fantasy_evergreen_large1",
