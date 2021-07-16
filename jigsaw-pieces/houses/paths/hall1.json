@@ -1,20 +1,37 @@
 {
-    "object": "houses/jap/j2",
-    "connectors": [{
-        "name": "",
-        "targetName": "*",
-        "rotateConnector": false,
-        "innerConnector": true,
-        "pools": ["jap_houses/paths-all"],
-        "keepEntity": false,
-        "entityCount": 1,
-        "position": {
-            "x": -6,
-            "y": -7,
-            "z": -1
+    "object": "houses/paths/hall1",
+    "connectors": [
+        {
+            "name": "",
+            "targetName": "*",
+            "rotateConnector": false,
+            "innerConnector": false,
+            "pools": ["jap_houses/paths-all"],
+            "keepEntity": false,
+            "entityCount": 1,
+            "position": {
+                "x": -3,
+                "y": -1,
+                "z": 0
+            },
+            "direction": "WEST_NEGATIVE_X"
         },
-        "direction": "WEST_NEGATIVE_X"
-    }],
+        {
+            "name": "",
+            "targetName": "*",
+            "rotateConnector": false,
+            "innerConnector": false,
+            "pools": ["jap_houses/paths-all", "jap_houses/houses"],
+            "keepEntity": false,
+            "entityCount": 1,
+            "position": {
+                "x": 3,
+                "y": -1,
+                "z": 0
+            },
+            "direction": "EAST_POSITIVE_X"
+        }
+    ],
     "placementOptions": {
         "place": [],
         "rotation": {
@@ -64,8 +81,8 @@
             "exponent": 1
         },
         "translateCenter": false,
-        "mode": "STILT",
-        "edit": [{"find": [{"block": "blue_concrete"}], "replace": {"palette": [{"block": "pink_concrete"}]}}],
+        "mode": "PAINT",
+        "edit": [],
         "translate": {
             "x": 0,
             "y": 0,
