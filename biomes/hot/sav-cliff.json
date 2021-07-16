@@ -1,18 +1,19 @@
 {
-    "name": "Savanna Plateau",
-    "derivative": "SAVANNA_PLATEAU",
+    "name": "Savanna Cliffs",
+    "derivative": "SAVANNA",
     "vanillaDerivative": "SAVANNA",
+    "children": ["hot/sav-acacia-denmyre"],
     "customDerivitives": [{
-        "id": "savplateau",
-        "grassColor": "#CACC45",
+        "id": "savcliff",
+        "grassColor": "#DFD545",
         "foliageColor": "#D6A513",
-        "waterColor": "#8DFFE8",
+        "waterColor": "#E2EF3B",
         "downfallType": "none"
     }],
     "generators": [{
-        "min": 13,
-        "max": 26,
-        "generator": "canyon-steep"
+        "min": 9,
+        "max": 28,
+        "generator": "plain"
     }],
     "jigsawStructures": [
         {
@@ -29,13 +30,17 @@
             "minHeight": 3,
             "maxHeight": 5,
             "slopeCondition": {"minimumSlope": 6.9},
-            "palette": [{"block": "granite"}]
+            "palette": [
+                {"block": "sandstone"},
+                {"block": "sand"}
+            ]
         },
         {
             "minHeight": 3,
             "maxHeight": 5,
             "slopeCondition": {"minimumSlope": 4.6},
             "palette": [
+                {"block": "sand"},
                 {"block": "coarse_dirt"},
                 {"block": "gravel"}
             ]
@@ -64,20 +69,6 @@
     "biomeSkyScatter": [
         "DESERT",
         "SAVANNA"
-    ],
-    "entityInitialSpawns": [
-        {
-            "entity": "cow",
-            "maxSpawns": 1,
-            "minSpawns": 1,
-            "rarity": 6
-        },
-        {
-            "entity": "chicken",
-            "maxSpawns": 1,
-            "minSpawns": 1,
-            "rarity": 6
-        }
     ],
     "decorators": [
         {
@@ -110,44 +101,21 @@
             "style": {"style": "STATIC"}
         }
     ],
+    "entityInitialSpawns": [
+        {
+            "entity": "cow",
+            "maxSpawns": 1,
+            "minSpawns": 1,
+            "rarity": 6
+        },
+        {
+            "entity": "chicken",
+            "maxSpawns": 1,
+            "minSpawns": 1,
+            "rarity": 6
+        }
+    ],
     "objects": [
-        {
-            "chance": 0.00175,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": ["camp/camp"],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "mode": "PAINT",
-            "chance": 0.005,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": ["camp/barrel-bin"],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
         {
             "chance": 0.07,
             "rotation": {
@@ -261,7 +229,7 @@
             }
         }
     ],
-    "biomeZoom": 60,
+    "biomeZoom": 20,
     "biomeStyle": {"style": "IRIS"},
     "wall": {
         "style": {"style": "STATIC"},
