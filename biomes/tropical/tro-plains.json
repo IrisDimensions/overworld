@@ -1,6 +1,8 @@
 {
     "name": "Tropical Plains",
     "derivative": "JUNGLE",
+    "rarity": 1,
+    "color": "#5EBF40",
     "vanillaDerivative": "JUNGLE",
     "children": ["tropical/tro-plains-hills"],
     "generators": [{
@@ -10,7 +12,7 @@
     }],
     "customDerivitives": [{
         "id": "troplain",
-        "foliageColor": "#1B8D09",
+        "foliageColor": "#40C42B",
         "grassColor": "#41A726",
         "category": "jungle",
         "waterColor": "#3AB2A2",
@@ -86,6 +88,30 @@
         }
     ],
     "objects": [
+        {
+            "chance": 0.4,
+            "density": 2,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "jungle-remade/jcoco-2",
+                "jungle-remade/jcoco-3",
+                "jungle-remade/jcoco-4",
+                "jungle-remade/jcoco-5"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -5,
+                "z": 0
+            }
+        },
         {
             "mode": "PAINT",
             "place": [
