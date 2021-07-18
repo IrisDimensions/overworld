@@ -5,10 +5,23 @@
     "derivative": "SWAMP_HILLS",
     "vanillaDerivative": "SWAMP",
     "generators": [{
-        "min": 7,
-        "max": 3,
-        "generator": "mountain"
+        "min": -5,
+        "max": 4,
+        "generator": "plain"
     }],
+    "customDerivitives": [
+        {
+            "id": "swamprottenmarsh",
+            "waterColor": "#684D1A",
+            "grassColor": "#5C581A",
+            "spawnRarity": 20,
+            "spawns": [
+                {
+                    "type": "SLIME"
+                }
+            ]
+        }
+    ],
     "layers": [
         {
             "style": {"style": "IRIS"},
@@ -78,20 +91,7 @@
             "style": {"style": "STATIC"}
         }
     ],
-    "entityInitialSpawns": [
-        {
-            "entity": "cow",
-            "maxSpawns": 1,
-            "minSpawns": 1,
-            "rarity": 6
-        },
-        {
-            "entity": "pig",
-            "maxSpawns": 1,
-            "minSpawns": 1,
-            "rarity": 6
-        }
-    ],
+
     "objects": [
         {
             "chance": 0.4,
