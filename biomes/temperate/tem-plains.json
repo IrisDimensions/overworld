@@ -138,10 +138,10 @@
                 "enabled": true
             },
             "place": [
-                "clutter/camp1",
-                "clutter/camp3",
-                "clutter/camp4",
-                "clutter/camp5"
+                "camp/camp",
+                "camp/camp3",
+                "camp/camp4",
+                "camp/camp5"
             ],
             "translate": {
                 "x": 0,
@@ -161,7 +161,7 @@
                 },
                 "enabled": true
             },
-            "place": ["clutter/camp2"],
+            "place": ["camp/camp2"],
             "translate": {
                 "x": 0,
                 "y": 0,
@@ -180,10 +180,32 @@
                 },
                 "enabled": true
             },
-            "place": ["clutter/camp2"],
+            "place": ["camp/camp2"],
             "translate": {
                 "x": 0,
                 "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.002,
+            "edit": [{
+                "find": [{"block": "glass"}],
+                "replace": {"palette": [{"block": "void_air"}]}
+            }],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": ["caves/cave2"],
+            "translate": {
+                "x": 0,
+                "y": -57,
                 "z": 0
             }
         },
@@ -199,23 +221,23 @@
                 "enabled": true
             },
             "place": [
-                "trees/oak/hoakgeneric3",
-                "trees/oak/hoakgeneric4",
-                "trees/oak/hoakgeneric5",
-                "trees/oak/hoakgeneric6",
-                "trees/oak/hoakgeneric7",
-                "trees/oak/hoakgeneric8",
-                "trees/oak/hoakgeneric9",
-                "trees/oak/hoakgeneric1",
-                "trees/oak/shoakgeneric3",
-                "trees/oak/shoakgeneric4",
-                "trees/oak/shoakgeneric5",
-                "trees/oak/shoakgeneric6",
-                "trees/oak/shoakgeneric7",
-                "trees/oak/shoakgeneric8",
-                "trees/oak/shoakgeneric9",
-                "trees/oak/shoakgeneric1",
-                "trees/oak/shoakgeneric2"
+                "hazel-oak/hoak-3",
+                "hazel-oak/hoak-4",
+                "hazel-oak/hoak-5",
+                "hazel-oak/hoak-6",
+                "hazel-oak/hoak-7",
+                "hazel-oak/hoak-8",
+                "hazel-oak/hoak-9",
+                "hazel-oak/hoak-1",
+                "hazel-oak/s-hoak-3",
+                "hazel-oak/s-hoak-4",
+                "hazel-oak/s-hoak-5",
+                "hazel-oak/s-hoak-6",
+                "hazel-oak/s-hoak-7",
+                "hazel-oak/s-hoak-8",
+                "hazel-oak/s-hoak-9",
+                "hazel-oak/s-hoak-1",
+                "hazel-oak/s-hoak-2"
             ],
             "translate": {
                 "x": 0,
@@ -275,13 +297,13 @@
                 "enabled": true
             },
             "place": [
-                "clutter/obelisk1",
-                "clutter/obelisk2",
-                "clutter/obelisk3",
-                "clutter/obelisk4",
-                "clutter/obelisk5",
-                "clutter/obelisk6",
-                "clutter/obelisk7"
+                "stone-clutt/obelisk-1",
+                "stone-clutt/obelisk-2",
+                "stone-clutt/obelisk-3",
+                "stone-clutt/obelisk-4",
+                "stone-clutt/obelisk-5",
+                "stone-clutt/obelisk-6",
+                "stone-clutt/obelisk-7"
             ],
             "translate": {
                 "x": 0,
@@ -302,11 +324,11 @@
                 "enabled": true
             },
             "place": [
-                "clutter/genericpeak1",
-                "clutter/genericpeak2",
-                "clutter/genericpeak3",
-                "clutter/genericpeak5",
-                "clutter/genericpeak6"
+                "peaks/p1",
+                "peaks/p2",
+                "peaks/p3",
+                "peaks/p5",
+                "peaks/p6"
             ],
             "translate": {
                 "x": 0,
@@ -340,7 +362,7 @@
                 "void/void",
                 "void/void",
                 "void/void",
-                "trees/mixed/smoakog80"
+                "sm-tree/oakw-oakl-80"
             ],
             "translate": {
                 "x": 0,
@@ -370,11 +392,11 @@
         },
         {
             "place": [
-                "objects/structures/landstone1",
-                "objects/structures/landstone2",
-                "objects/structures/landstone3",
-                "objects/structures/landstone4",
-                "objects/structures/landstone5"
+                "landform/stone/1",
+                "landform/stone/2",
+                "landform/stone/3",
+                "landform/stone/4",
+                "landform/stone/5"
             ],
             "chance": 0.02,
             "mode": "MIN_HEIGHT",
@@ -389,7 +411,32 @@
             }
         }
     ],
-
+    "entityInitialSpawns": [
+        {
+            "entity": "cow",
+            "maxSpawns": 3,
+            "minSpawns": 1,
+            "rarity": 7
+        },
+        {
+            "entity": "pig",
+            "maxSpawns": 3,
+            "minSpawns": 1,
+            "rarity": 7
+        },
+        {
+            "entity": "chicken",
+            "maxSpawns": 3,
+            "minSpawns": 1,
+            "rarity": 7
+        },
+        {
+            "entity": "sheep",
+            "maxSpawns": 3,
+            "minSpawns": 1,
+            "rarity": 7
+        }
+    ],
     "biomeStyle": {"style": "IRIS"},
     "wall": {"palette": [
         {"block": "stone"},
