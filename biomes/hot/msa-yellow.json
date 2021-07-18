@@ -1,0 +1,127 @@
+{
+    "name": "Mesa Yellow",
+    "derivative": "SHATTERED_SAVANNA",
+    "rarity": 1,
+    "color": "#BDBF05",
+    "vanillaDerivative": "BADLANDS",
+    "children": ["hot/msa-dark"],
+    "generators": [
+        {
+            "min": 9,
+            "max": 16,
+            "generator": "plain-cliffs"
+        },
+        {
+            "min": 11,
+            "max": 33,
+            "generator": "mountain"
+        }
+    ],
+    "layers": [
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "terracotta"}]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "white_terracotta"}]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "terracotta"}]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "red_terracotta"}]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 2,
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "terracotta"}]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "yellow_terracotta"}]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "terracotta"}]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "brown_terracotta"}]
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.009,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "east"
+                    },
+                    "block": "stone_button"
+                },
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "south"
+                    },
+                    "block": "stone_button"
+                }
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.01,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [{"block": "dead_bush"}],
+            "style": {"style": "STATIC"}
+        }
+    ],
+
+    "objects": [{
+        "rotation": {
+            "yAxis": {
+                "min": 0,
+                "max": 0,
+                "interval": 90,
+                "enabled": true
+            },
+            "enabled": true
+        },
+        "chance": 0.1,
+        "translate": {"y": -2},
+        "place": ["clutter/tntower1"]
+    }],
+    "lockLayers": true,
+    "wall": {
+        "style": {"style": "IRIS"},
+        "palette": [
+            {"block": "red_terracotta"},
+            {"block": "gray_terracotta"},
+            {"block": "yellow_terracotta"}
+        ]
+    }
+}
