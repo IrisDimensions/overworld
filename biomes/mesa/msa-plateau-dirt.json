@@ -1,0 +1,136 @@
+{
+    "name": "Mesa Plateau Dirt",
+    "rarity": 1,
+    "color": "#7A5716",
+    "derivative": "BADLANDS",
+    "vanillaDerivative": "BADLANDS",
+    "biomeScatter": ["BADLANDS"],
+    "generators": [
+        {
+            "min": 33,
+            "max": 35,
+            "generator": "canyon-steep"
+        },
+        {
+            "min": 2,
+            "max": 3,
+            "generator": "smooth-dunes"
+        },
+        {
+            "min": 2,
+            "max": 6,
+            "generator": "cracked-cliffs"
+        }
+    ],
+    "layers": [
+        {
+            "minHeight": 5,
+            "maxHeight": 5,
+            "style": {"style": "CELLULAR"},
+            "zoom": 0.7,
+            "palette": [
+                {"block": "grass_block"},
+                {"block": "coarse_dirt"},
+                {"block": "dirt"},
+                {"block": "grass_block"}
+            ]
+        },
+        {
+            "minHeight": 3,
+            "maxHeight": 8,
+            "palette": [{"block": "terracotta"}]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 8,
+            "palette": [{"block": "orange_terracotta"}]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 8,
+            "palette": [{"block": "white_terracotta"}]
+        },
+        {
+            "minHeight": 4,
+            "maxHeight": 8,
+            "palette": [{"block": "terracotta"}]
+        },
+        {
+            "minHeight": 3,
+            "maxHeight": 8,
+            "palette": [{"block": "yellow_terracotta"}]
+        },
+        {
+            "minHeight": 3,
+            "maxHeight": 8,
+            "palette": [{"block": "brown_terracotta"}]
+        }
+    ],
+    "decorators": [{
+        "chance": 0.05,
+        "palette": [{"block": "tall_grass"}]
+    }],
+    "lockLayers": true,
+    "biomeStyle": {"style": "IRIS"},
+    "entityInitialSpawns": [
+        {
+            "entity": "cow",
+            "maxSpawns": 3,
+            "minSpawns": 1,
+            "rarity": 7
+        },
+        {
+            "entity": "pig",
+            "maxSpawns": 3,
+            "minSpawns": 1,
+            "rarity": 7
+        },
+        {
+            "entity": "chicken",
+            "maxSpawns": 3,
+            "minSpawns": 1,
+            "rarity": 7
+        },
+        {
+            "entity": "sheep",
+            "maxSpawns": 3,
+            "minSpawns": 1,
+            "rarity": 7
+        }
+    ],
+    "objects": [
+        {
+            "place": [
+                "desert/tower",
+                "desert/tower-twin"
+            ],
+            "chance": 5.0E-4,
+            "density": 2,
+            "mode": "FAST_STILT",
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": -360,
+                    "max": 360
+                }
+            }
+        },
+        {
+            "place": [
+                "tree/acacia/1",
+                "tree/acacia/2",
+                "tree/acacia/3"
+            ],
+            "chance": 0.2,
+            "edit": [{
+                "find": [{"block": "acacia_planks"}],
+                "replace": {"palette": [{
+                    "block": "acacia_wood",
+                    "data": {"axis": "y"}
+                }]}
+            }]
+        }
+    ]
+}

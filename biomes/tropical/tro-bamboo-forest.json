@@ -12,7 +12,7 @@
     }],
     "customDerivitives": [{
         "id": "trobamboo",
-        "foliageColor": "#20A52F",
+        "foliageColor": "#44A906",
         "grassColor": "#1E7307",
         "waterColor": "#3AB2A2",
         "waterFogColor": "#3AB2A2",
@@ -99,7 +99,7 @@
                     "replace": {"palette": [{"block": "air"}]}
                 },
                 {
-                    "find": [{"block": "birch_leaves"}],
+                    "find": [{"block": "acacia_leaves"}],
                     "replace": {"palette": [{
                         "block": "jungle_leaves",
                         "data": {"persistent": true}
@@ -107,11 +107,11 @@
                 },
                 {
                     "find": [{"block": "stripped_birch_log"}],
-                    "replace": {"palette": [{"block": "jungle_wood"}]}
+                    "replace": {"palette": [{"block": "stripped_jungle_log"}]}
                 },
                 {
                     "find": [{"block": "stripped_birch_wood"}],
-                    "replace": {"palette": [{"block": "oak_wood"}]}
+                    "replace": {"palette": [{"block": "stripped_jungle_wood"}]}
                 }
             ],
             "place": [
@@ -176,7 +176,32 @@
             }
         }
     ],
-
+    "entityInitialSpawns": [
+        {
+            "entity": "cow",
+            "maxSpawns": 1,
+            "minSpawns": 1,
+            "rarity": 7
+        },
+        {
+            "entity": "pig",
+            "maxSpawns": 1,
+            "minSpawns": 1,
+            "rarity": 7
+        },
+        {
+            "entity": "chicken",
+            "maxSpawns": 1,
+            "minSpawns": 1,
+            "rarity": 7
+        },
+        {
+            "entity": "sheep",
+            "maxSpawns": 1,
+            "minSpawns": 1,
+            "rarity": 7
+        }
+    ],
     "biomeZoom": 10,
     "biomeStyle": {"style": "IRIS"},
     "effects": [{
