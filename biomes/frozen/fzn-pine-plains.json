@@ -26,7 +26,6 @@
         "waterFogColor": "#216FC4",
         "foliageColor": "#B8D0E1",
         "grassColor": "#D0E1FF"
-
     }],
     "layers": [
         {
@@ -88,12 +87,25 @@
         {"block": "andesite"}
     ]},
     "objects": [{
-        "edit": [
-                {
-                    "find": [{"block": "spruce_leaves"}],
-                    "replace": {"style":{"style": "PERLIN", "zoom": 0.2}, "palette":[{"block": "oak_leaves", "data": {"persistent": true}}, {"block": "dark_oak_leaves", "data": {"persistent": true}}]}
-                }
-            ],
+        "edit": [{
+            "find": [{"block": "spruce_leaves"}],
+            "replace": {
+                "style": {
+                    "style": "PERLIN",
+                    "zoom": 0.2
+                },
+                "palette": [
+                    {
+                        "block": "oak_leaves",
+                        "data": {"persistent": true}
+                    },
+                    {
+                        "block": "dark_oak_leaves",
+                        "data": {"persistent": true}
+                    }
+                ]
+            }
+        }],
         "place": [
             "trees/spruce/pine1",
             "trees/spruce/pine2",
