@@ -1,12 +1,12 @@
 {
-    "name": "Temperate Oak Denmyre",
-    "rarity": 1,
+    "name": "Oak Denmyre",
+    "rarity": 6,
     "color": "#C8FF00",
     "derivative": "FOREST",
     "vanillaDerivative": "FOREST",
     "generators": [{
-        "min": 4,
-        "max": 7,
+        "min": 5,
+        "max": 12,
         "generator": "plain"
     }],
     "layers": [
@@ -121,7 +121,7 @@
             "rotation": {
                 "yAxis": {
                     "min": 0,
-                    "max": 0,
+                    "max": 360,
                     "interval": 90,
                     "enabled": true
                 },
@@ -135,7 +135,7 @@
             }
         },
         {
-            "chance": 0.5,
+            "chance": 0.2,
             "density": 2,
             "edit": [
                 {
@@ -161,7 +161,7 @@
             "rotation": {
                 "yAxis": {
                     "min": 0,
-                    "max": 0,
+                    "max": 360,
                     "interval": 90,
                     "enabled": true
                 },
@@ -183,56 +183,23 @@
             }
         },
         {
-            "edit": [
-                {
-                    "find": [{"block": "birch_leaves"}],
-                    "replace": {"palette": [{
-                        "block": "oak_leaves",
-                        "data": {"persistent": true}
-                    }]}
-                },
-                {
-                    "find": [{"block": "spruce_leaves"}],
-                    "replace": {"palette": [{
-                        "block": "oak_leaves",
-                        "data": {"persistent": true}
-                    }]}
-                },
-                {
-                    "find": [{"block": "spruce_wood"}],
-                    "replace": {"palette": [{
-                        "block": "oak_leaves",
-                        "data": {"persistent": true}
-                    }]}
-                }
-            ],
-            "chance": 0.3,
-            "density": 2,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
             "place": [
-                "clutter/oakdenclutt1",
-                "clutter/oakdenclutt2",
-                "clutter/oakdenclutt3",
-                "clutter/oakdenclutt4",
-                "clutter/oakdenclutt5",
-                "clutter/oakdenclutt6",
-                "clutter/oakdenclutt7",
-                "clutter/oakdenclutt8",
-                "clutter/oakdenclutt9",
-                "clutter/oakdenclutt10"
+                "trees/oak/generic1",
+                "trees/oak/generic2",
+                "trees/oak/generic3",
+                "trees/oak/generic4",
+                "trees/oak/generic5",
+                "trees/oak/generic6"
             ],
-            "translate": {
-                "x": 0,
-                "y": -1,
-                "z": 0
+            "chance": 0.4,
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": 0,
+                    "max": 360
+                }
             }
         }
     ],

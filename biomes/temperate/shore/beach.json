@@ -50,14 +50,24 @@
         {
             "partOf": "SHORE_LINE",
             "chance": 0.09,
-            "verticalZoom": 0.2,
-            "variance": {"style": "SIMPLEX"},
-            "stackMax": 2,
             "stackMin": 1,
-            "zoom": 5,
+            "stackMax": 4,
             "palette": [{"block": "sugar_cane"}],
-            "style": {"style": "STATIC"},
-            "heightVariance": {"style": "STATIC"}
+            "style": {
+                "style": "IRIS",
+                "zoom": 0.65
+            },
+            "heightVariance": {
+                "style": "STATIC"
+            }
+        }
+    ],
+    "entityInitialSpawns": [
+        {
+            "entity": "turtle",
+            "maxSpawns": 3,
+            "minSpawns": 1,
+            "rarity": 80
         }
     ],
     "objects": [{

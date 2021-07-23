@@ -1,14 +1,23 @@
 {
-    "name": "Plains",
-    "derivative": "PLAINS",
-    "vanillaDerivative": "PLAINS",
-    "color": "#9BAF50",
+    "name": "Lush Plains",
+    "derivative": "JUNGLE_EDGE",
+    "vanillaDerivative": "JUNGLE_EDGE",
+    "color": "#68de35",
     "generators": [{
         "min": 4,
-        "max": 10,
+        "max": 7,
         "generator": "plain"
     }],
-    "rarity": 2,
+    "rarity": 3,
+    "biomeZoom": 30,
+    "children": [
+        "temperate/lush-plains-yellow",
+        "temperate/lush-plains-red"
+    ],
+    "childStyle": {
+        "style": "CELLULAR_IRIS_THICK",
+        "zoom": 20
+    },
     "jigsawStructures": [
         {
             "rarity": 1700,
@@ -46,32 +55,28 @@
     ],
     "decorators": [
         {
-            "chance": 0.004,
+            "chance": 0.06,
             "variance": {
-                "style": "TRIOCTAVE_SIMPLEX",
-                "zoom": 6,
-                "fracture": {
-                    "style": "STATIC",
-                    "zoom": 0.2,
-                    "multiplier": 10
-                }
+                "style": "STATIC"
             },
             "style": {
                 "style": "STATIC"
             },
             "palette": [
+                {"block": "orange_tulip"},
+                {"block": "white_tulip"},
                 {"block": "dandelion"},
                 {"block": "poppy"},
                 {"block": "blue_orchid"},
-                {"block": "allium"},
                 {"block": "azure_bluet"},
                 {"block": "red_tulip"},
-                {"block": "orange_tulip"},
-                {"block": "white_tulip"},
+                {"block": "allium"},
                 {"block": "pink_tulip"},
                 {"block": "oxeye_daisy"},
                 {"block": "cornflower"},
-                {"block": "lily_of_the_valley"}
+                {"block": "lily_of_the_valley"},
+                {"block": "rose_bush"},
+                {"block": "lilac"}
             ]
         },
         {
@@ -80,7 +85,31 @@
         },
         {
             "chance": 0.5,
-            "palette": [{"block": "grass"}]
+            "palette": [
+                {
+                    "block": "grass",
+                    "weight": 15
+                },
+                {
+                    "block": "fern",
+                    "weight": 1
+                }
+            ]
+        },
+        {
+            "chance": 0.08,
+            "palette": [
+                {
+                    "block": "oak_leaves",
+                    "data": {
+                        "persistent": true
+                    }
+                }
+            ],
+            "style": {
+                "style": "STATIC",
+                "zoom": 0.8
+            }
         }
     ],
     "objects": [
@@ -90,7 +119,7 @@
             "rotation": {
                 "yAxis": {
                     "min": 0,
-                    "max": 0,
+                    "max": 360,
                     "interval": 90,
                     "enabled": true
                 },
@@ -257,12 +286,12 @@
         },
         {
             "place": [
-                "trees/oak/truegeneric1",
-                "trees/oak/truegeneric2",
-                "trees/oak/truegeneric3",
-                "trees/oak/truegeneric4",
-                "trees/oak/truegeneric5",
-                "trees/oak/truegeneric6"
+                "trees/oak/generic1",
+                "trees/oak/generic2",
+                "trees/oak/generic3",
+                "trees/oak/generic4",
+                "trees/oak/generic5",
+                "trees/oak/generic6"
             ],
             "chance": 0.07,
             "rotation": {
@@ -310,47 +339,6 @@
                     "max": 360
                 }
             }
-        },
-        {
-            "place": [
-                "structures/ruins-greek-temple"
-            ],
-            "chance": 0.0005,
-            "mode": "VACUUM",
-            "translate": {
-                "y": -4
-            },
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "interval": 90,
-                    "min": 0,
-                    "max": 360,
-                    "enabled": true
-                }
-            },
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "gold_block"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "chest",
-                                "weight": 1
-                            },
-                            {
-                                "block": "dirt",
-                                "weight": 5
-                            }
-                        ]
-                    },
-                    "chance": 1
-                }
-            ]
         }
     ],
     "entityInitialSpawns": [
@@ -377,12 +365,6 @@
             "maxSpawns": 3,
             "minSpawns": 1,
             "rarity": 7
-        },
-        {
-            "entity": "horse",
-            "minSpawns": 2,
-            "maxSpawns": 5,
-            "rarity": 120
         }
     ],
     "biomeStyle": {"style": "IRIS"},

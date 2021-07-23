@@ -1,27 +1,15 @@
 {
-    "name": "Temperate Sakura Pink Forest",
-    "derivative": "FLOWER_FOREST",
-    "rarity": 4,
-    "color": "#DF4FE8",
+    "name": "Combo Forest",
+    "derivative": "FOREST",
     "vanillaDerivative": "FOREST",
-    "children": ["temperate/sakura-pink-child"],
-    "childStyle": {
-        "style": "IRIS",
-        "zoom": 0.3,
-        "multiplier": 4
-    },
-    "customDerivitives": [{
-        "id": "temsakurapink",
-        "foliageColor": "#FFADF0",
-        "waterColor": "#A5FFED",
-        "grassColor": "#A8FF98",
-        "category": "forest"
-    }],
+    "children": ["temperate/oak-denmyre"],
     "generators": [{
-        "min": 4,
-        "max": 7,
+        "min": 5,
+        "max": 12,
         "generator": "plain"
     }],
+    "rarity": 3,
+    "biomeZoom": 50,
     "layers": [
         {
             "style": {"style": "STATIC"},
@@ -47,28 +35,54 @@
             ]
         }
     ],
-    "entityInitialSpawns": [{
-        "entity": "bee",
-        "maxSpawns": 5,
-        "minSpawns": 2,
-        "rarity": 3
-    }],
+    "jigsawStructures": [
+        {
+            "rarity": 1700,
+            "structure": "pillager_outpost"
+        },
+        {
+            "rarity": 1500,
+            "structure": "village-temperate"
+        }
+    ],
+    "entityInitialSpawns": [
+        {
+            "entity": "cow",
+            "maxSpawns": 1,
+            "minSpawns": 1,
+            "rarity": 7
+        },
+        {
+            "entity": "pig",
+            "maxSpawns": 1,
+            "minSpawns": 1,
+            "rarity": 7
+        },
+        {
+            "entity": "chicken",
+            "maxSpawns": 1,
+            "minSpawns": 1,
+            "rarity": 7
+        },
+        {
+            "entity": "sheep",
+            "maxSpawns": 1,
+            "minSpawns": 1,
+            "rarity": 7
+        }
+    ],
     "objects": [
         {
-            "chance": 0.1,
+            "chance": 0.07,
             "rotation": {
                 "yAxis": {
                     "min": 0,
-                    "max": 0,
+                    "max": 360,
                     "interval": 90,
                     "enabled": true
                 },
                 "enabled": true
             },
-            "edit": [{
-                "find": [{"block": "oak_wood"}],
-                "replace": {"palette": [{"block": "stripped_birch_log"}]}
-            }],
             "place": [
                 "trees/oak/hoakgeneric3",
                 "trees/oak/hoakgeneric4",
@@ -100,7 +114,7 @@
             "rotation": {
                 "yAxis": {
                     "min": 0,
-                    "max": 0,
+                    "max": 360,
                     "interval": 90,
                     "enabled": true
                 },
@@ -119,8 +133,7 @@
             }
         },
         {
-            "chance": 0.7,
-            "mode": "FAST_MIN_HEIGHT",
+            "chance": 1,
             "density": 2,
             "rotation": {
                 "yAxis": {
@@ -131,25 +144,98 @@
                 },
                 "enabled": true
             },
+            "edit": [
+                {
+                    "find": [
+                        {"block": "birch_wood"},
+                        {"block": "birch_log"}
+                    ],
+                    "replace": {"palette": [{"block": "oak_wood"}]}
+                },
+                {
+                    "find": [{"block": "birch_leaves"}],
+                    "replace": {"palette": [{
+                        "block": "oak_leaves",
+                        "data": {"persistent": true}
+                    }]}
+                }
+            ],
             "place": [
-                "trees/sakura/genericsak1",
-                "trees/sakura/genericsak2",
-                "trees/sakura/genericsak3",
-                "trees/sakura/genericsak4",
-                "trees/sakura/genericsak5"
+                "trees/birch/antioch3",
+                "trees/birch/antioch4",
+                "trees/birch/antioch5",
+                "trees/birch/antioch6",
+                "trees/birch/antioch7",
+                "trees/birch/antioch8",
+                "trees/birch/antioch9",
+                "trees/birch/antioch10",
+                "trees/birch/antioch11",
+                "trees/birch/antioch12",
+                "trees/birch/antioch13"
             ],
             "translate": {
                 "x": 0,
-                "y": -1,
+                "y": 0,
                 "z": 0
             }
         },
         {
-            "chance": 0.002,
+            "chance": 0.9,
+            "density": 1,
             "rotation": {
                 "yAxis": {
                     "min": 0,
-                    "max": 0,
+                    "max": 360,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "trees/birch/antioch3",
+                "trees/birch/antioch4",
+                "trees/birch/antioch5",
+                "trees/birch/antioch6",
+                "trees/birch/antioch7",
+                "trees/birch/antioch8",
+                "trees/birch/antioch9",
+                "trees/birch/antioch10",
+                "trees/birch/antioch11",
+                "trees/birch/antioch12",
+                "trees/birch/antioch13"
+            ]
+        },
+        {
+            "chance": 0.18,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 360,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "trees/oak/toak1",
+                "trees/oak/toak2",
+                "trees/oak/toak3",
+                "trees/oak/toak4",
+                "trees/oak/toak8",
+                "trees/oak/toak10"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.001,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 360,
                     "interval": 90,
                     "enabled": true
                 },
@@ -175,7 +261,7 @@
             "rotation": {
                 "yAxis": {
                     "min": 0,
-                    "max": 0,
+                    "max": 360,
                     "interval": 90,
                     "enabled": true
                 },
@@ -194,7 +280,6 @@
             }
         }
     ],
-    "biomeZoom": 60,
     "biomeStyle": {"style": "IRIS"},
     "decorators": [
         {
@@ -230,10 +315,28 @@
             "palette": [{"block": "tall_grass"}]
         },
         {
-            "chance": 0.06,
+            "chance": 0.03,
             "variance": {"style": "STATIC"},
             "zoom": 0.2,
-            "palette": [{"block": "allium"}]
+            "palette": [{"block": "rose_bush"}]
+        },
+        {
+            "chance": 0.05,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.2,
+            "palette": [{
+                "chance": 3,
+                "block": "red_mushroom"
+            }]
+        },
+        {
+            "chance": 0.05,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.2,
+            "palette": [{
+                "chance": 3,
+                "block": "poppy"
+            }]
         },
         {
             "chance": 0.03,
