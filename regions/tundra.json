@@ -23,15 +23,11 @@
         "tundra/shore/beach",
         "tundra/shore/beach-stone"
     ],
-    "seaBiomes": [
-        "mountain/sea/lake"
-    ],
-    "jigsawStructures": [
-        {
-            "structure": "murky_stronghold",
-            "rarity": 750
-        }
-    ],
+    "seaBiomes": ["mountain/sea/lake"],
+    "jigsawStructures": [{
+        "structure": "murky_stronghold",
+        "rarity": 750
+    }],
     "caveBiomes": [
         "cave/tundra-cavern",
         "cave/spiked-cavern"
@@ -81,22 +77,16 @@
         "mountain/sea/river-soft"
     ],
     "biomeImplosionRatio": 0.25,
-    "deposits": [
-        {
-            "minHeight": 15,
-            "maxPerChunk": 3,
-            "maxHeight": 60,
-            "minPerChunk": 2,
-            "minSize": 1,
-            "maxSize": 2,
-            "palette": [
-                {
-                    "block": "emerald_ore"
-                }
-            ],
-            "varience": 2
-        }
-    ],
+    "deposits": [{
+        "minHeight": 15,
+        "maxPerChunk": 3,
+        "maxHeight": 60,
+        "minPerChunk": 2,
+        "minSize": 1,
+        "maxSize": 2,
+        "palette": [{"block": "emerald_ore"}],
+        "varience": 2
+    }],
     "riverRarity": 1,
     "landBiomeZoom": 1.85,
     "riverStyle": {
@@ -120,60 +110,46 @@
             "cold-food"
         ]
     },
-    "objects": [
-        {
-            "heightmap": {
-                "seed": 1337,
-                "style": {
-                    "style": "SIMPLEX",
-                    "multiplier": 10
-                },
-                "offsetY": 5
+    "objects": [{
+        "heightmap": {
+            "seed": 1337,
+            "style": {
+                "style": "SIMPLEX",
+                "multiplier": 10
             },
-            "chance": 0.05,
-            "bottom": true,
-            "density": 1,
-            "place": [
-                "structures/amethyst1",
-                "structures/amethyst2",
-                "structures/amethyst3",
-                "structures/amethyst4",
-                "structures/amethyst5",
-                "structures/amethyst6"
-            ],
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "glass"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "void_air"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "enabled": true,
-            "xAxis": {
-                "interval": 90,
-                "max": 360,
-                "min": 0
-            },
-            "yAxis": {
-                "interval": 90,
-                "max": 360,
-                "min": 0
-            },
-            "translate": {
-                "yRandom": 10,
-                "y": 2
-            }
+            "offsetY": 5
+        },
+        "chance": 0.05,
+        "bottom": true,
+        "density": 1,
+        "place": [
+            "structures/amethyst1",
+            "structures/amethyst2",
+            "structures/amethyst3",
+            "structures/amethyst4",
+            "structures/amethyst5",
+            "structures/amethyst6"
+        ],
+        "edit": [{
+            "find": [{"block": "glass"}],
+            "replace": {"palette": [{"block": "void_air"}]}
+        }],
+        "enabled": true,
+        "xAxis": {
+            "interval": 90,
+            "max": 360,
+            "min": 0
+        },
+        "yAxis": {
+            "interval": 90,
+            "max": 360,
+            "min": 0
+        },
+        "translate": {
+            "yRandom": 10,
+            "y": 2
         }
-    ],
+    }],
     "shoreHeightZoom": 1.14,
     "riverThickness": 0.025,
     "rarity": 2
