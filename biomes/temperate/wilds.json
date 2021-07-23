@@ -1,0 +1,187 @@
+{
+    "name": "Temperate Wilds",
+    "derivative": "PLAINS",
+    "rarity": 1,
+    "color": "#B6CF68",
+    "vanillaDerivative": "PLAINS",
+    "children": ["temperate/highlands"],
+    "customDerivitives": [{
+        "id": "wilds",
+        "foliageColor": "#237031",
+        "waterColor": "#236270",
+        "grassColor": "#28A538",
+        "category": "forest"
+    }],
+    "jigsawStructures": [
+        {
+            "rarity": 1700,
+            "structure": "pillager_outpost"
+        },
+        {
+            "rarity": 1500,
+            "structure": "village-temperate"
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.22,
+            "palette": [{"block": "tall_grass"}]
+        },
+        {
+            "chance": 0.42,
+            "palette": [
+                {"block": "grass"},
+                {"block": "fern"}
+            ]
+        },
+        {
+            "chance": 0.003,
+            "palette": [
+                {"block": "oxeye_daisy"},
+                {"block": "pink_tulip"},
+                {"block": "lily_of_the_valley"}
+            ]
+        },
+        {
+            "chance": 0.02,
+            "palette": [
+                {"block": "dandelion"},
+                {"block": "poppy"},
+                {"block": "rose_bush"}
+            ]
+        },
+        {
+            "chance": 0.01,
+            "variance": {"style": "IRIS"},
+            "zoom": 0.5,
+            "palette": [{
+                "data": {"age": 7},
+                "block": "potatoes"
+            }],
+            "style": {"style": "IRIS"}
+        },
+        {
+            "chance": 0.01,
+            "variance": {"style": "IRIS"},
+            "zoom": 0.5,
+            "palette": [{
+                "data": {"age": 7},
+                "block": "carrots"
+            }],
+            "style": {"style": "IRIS"}
+        },
+        {
+            "chance": 0.01,
+            "variance": {"style": "IRIS"},
+            "zoom": 0.5,
+            "palette": [{
+                "data": {"age": 7},
+                "block": "beetroots"
+            }],
+            "style": {"style": "IRIS"}
+        }
+    ],
+    "effects": [{
+        "interval": 250,
+        "chance": 5,
+        "particleEffect": "TOTEM",
+        "particleOffset": 2,
+        "particleAltY": 0.2,
+        "particleCount": 5
+    }],
+    "objects": [
+        {
+            "chance": 0.125,
+            "place": [
+                "clutter/oakshrub1",
+                "clutter/oakshrub2",
+                "clutter/oakshrub3"
+            ],
+            "translate": {"y": -1}
+        },
+        {
+            "chance": 0.001,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/obelisk1",
+                "clutter/obelisk2",
+                "clutter/obelisk3",
+                "clutter/obelisk4",
+                "clutter/obelisk5",
+                "clutter/obelisk6",
+                "clutter/obelisk7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.001,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/camp1",
+                "clutter/bincluster1"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        }
+    ],
+    "layers": [
+        {"palette": [{"block": "grass_block"}]},
+        {"palette": [{"block": "dirt"}]},
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {"block": "dirt"},
+                {"block": "coarse_dirt"}
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
+            ]
+        }
+    ],
+    "generators": [{
+        "min": 4,
+        "max": 7,
+        "generator": "plain"
+    }],
+    "biomeStyle": {"style": "IRIS"},
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {"block": "stone"},
+            {"block": "andesite"},
+            {"block": "stone"}
+        ]
+    },
+    "biomeZoom": 40
+}

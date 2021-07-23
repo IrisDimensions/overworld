@@ -1,0 +1,112 @@
+{
+    "name": "Savanna Beach",
+    "derivative": "SAVANNA",
+    "rarity": 1,
+    "color": "#DF9F39",
+    "vanillaDerivative": "SAVANNA",
+    "customDerivitives": [{
+        "id": "savanna_beach",
+        "grassColor": "#E2EF3B",
+        "foliageColor": "#D6A513",
+        "waterColor": "#8DFFE8",
+        "downfallType": "none"
+    }],
+    "generators": [{
+        "min": 0,
+        "max": 0,
+        "generator": "plain"
+    }],
+    "layers": [
+        {
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "grass_block"}]
+        },
+        {"palette": [{"block": "dirt"}]},
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {"block": "dirt"},
+                {"block": "coarse_dirt"}
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
+            ]
+        }
+    ],
+    "objects": [
+        {
+            "chance": 0.001,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/obelisk1",
+                "clutter/obelisk2",
+                "clutter/obelisk3",
+                "clutter/obelisk4",
+                "clutter/obelisk5",
+                "clutter/obelisk6",
+                "clutter/obelisk7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.001,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/literalgarbage1",
+                "clutter/literalgarbage2",
+                "clutter/literalgarbage3",
+                "clutter/literalgarbage4"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        }
+    ],
+    "biomeZoom": 60,
+    "biomeStyle": {"style": "IRIS"},
+    "decorators": [{
+        "chance": 0.35,
+        "variance": {"style": "STATIC"},
+        "zoom": 0.3,
+        "palette": [{"block": "grass"}],
+        "style": {"style": "STATIC"}
+    }],
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {"block": "stone"},
+            {"block": "andesite"},
+            {"block": "stone"}
+        ]
+    }
+}

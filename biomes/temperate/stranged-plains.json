@@ -1,0 +1,211 @@
+{
+    "name": "Stranged Plains",
+    "rarity": 5,
+    "color": "#F7F448",
+    "derivative": "PLAINS",
+    "vanillaDerivative": "PLAINS",
+    "childStyle": {
+        "style": "IRIS",
+        "zoom": 0.5,
+        "exponent": 2
+    },
+    "customDerivitives": [{
+        "id": "estrangedplains",
+        "category": "plains",
+        "humidity": 0.45,
+        "temperature": 0.875,
+        "grassColor": "#b9bf4e"
+    }],
+    "generators": [{
+        "min": 4,
+        "max": 10,
+        "generator": "plain"
+    }],
+    "decorators": [
+        {
+            "chance": 0.4,
+            "style": {
+                "style": "IRIS",
+                "zoom": 0.2
+            },
+            "palette": [
+                {
+                    "data": {"age": 7},
+                    "block": "wheat",
+                    "weight": 45
+                },
+                {
+                    "block": "grass",
+                    "weight": 4
+                },
+                {
+                    "block": "tall_grass",
+                    "weight": 1
+                }
+            ],
+            "forcePlace": false
+        },
+        {
+            "chance": 0.4,
+            "style": {
+                "style": "IRIS",
+                "zoom": 0.4
+            },
+            "palette": [
+                {
+                    "block": "grass",
+                    "weight": 4
+                },
+                {
+                    "block": "tall_grass",
+                    "weight": 1
+                }
+            ],
+            "forcePlace": false
+        }
+    ],
+    "objects": [
+        {
+            "mode": "MIN_HEIGHT",
+            "chance": 0.00975,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/camp1",
+                "clutter/camp3",
+                "clutter/camp4",
+                "clutter/camp5"
+            ]
+        },
+        {
+            "chance": 0.01,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "trees/oak/hoakgeneric3",
+                "trees/oak/hoakgeneric4",
+                "trees/oak/hoakgeneric5",
+                "trees/oak/hoakgeneric6",
+                "trees/oak/hoakgeneric7",
+                "trees/oak/hoakgeneric8",
+                "trees/oak/hoakgeneric9",
+                "trees/oak/hoakgeneric1",
+                "trees/oak/shoakgeneric3",
+                "trees/oak/shoakgeneric4",
+                "trees/oak/shoakgeneric5",
+                "trees/oak/shoakgeneric6",
+                "trees/oak/shoakgeneric7",
+                "trees/oak/shoakgeneric8",
+                "trees/oak/shoakgeneric9",
+                "trees/oak/shoakgeneric1",
+                "trees/oak/shoakgeneric2"
+            ]
+        },
+        {
+            "chance": 2.0E-7,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "void/void",
+                "void/void",
+                "void/void",
+                "trees/mixed/smoakog80"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            }
+        },
+        {
+            "place": [
+                "trees/oak/generic1",
+                "trees/oak/generic2",
+                "trees/oak/generic3",
+                "trees/oak/generic4",
+                "trees/oak/generic5",
+                "trees/oak/generic6"
+            ],
+            "chance": 0.07,
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": -360,
+                    "max": 360
+                }
+            }
+        },
+        {
+            "place": [
+                "structures/landstone1",
+                "structures/landstone2",
+                "structures/landstone3",
+                "structures/landstone4",
+                "structures/landstone5"
+            ],
+            "chance": 0.02,
+            "mode": "MIN_HEIGHT",
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": -360,
+                    "max": 360
+                }
+            }
+        }
+    ],
+    "layers": [
+        {"palette": [{"block": "grass_block"}]},
+        {
+            "minHeight": 2,
+            "maxHeight": 2,
+            "palette": [{"block": "dirt"}]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {"block": "dirt"},
+                {"block": "coarse_dirt"}
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "dirt"},
+                {"block": "stone"}
+            ]
+        }
+    ],
+    "wall": {"palette": [
+        {"block": "stone"},
+        {"block": "andesite"}
+    ]}
+}

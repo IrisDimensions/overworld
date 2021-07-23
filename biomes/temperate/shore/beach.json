@@ -1,0 +1,115 @@
+{
+    "name": "Temperate Beach",
+    "derivative": "BEACH",
+    "rarity": 1,
+    "color": "#EDFF00",
+    "vanillaDerivative": "BEACH",
+    "generators": [{
+        "min": -5,
+        "max": 1,
+        "generator": "plain"
+    }],
+    "layers": [
+        {
+            "minHeight": 3,
+            "maxHeight": 6,
+            "palette": [{"block": "sand"}]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [{"block": "dirt"}]
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.003,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "east"
+                    },
+                    "block": "stone_button"
+                },
+                {"block": "air"},
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "south"
+                    },
+                    "block": "stone_button"
+                }
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "partOf": "SHORE_LINE",
+            "chance": 0.09,
+            "stackMin": 1,
+            "stackMax": 4,
+            "palette": [{"block": "sugar_cane"}],
+            "style": {
+                "style": "IRIS",
+                "zoom": 0.65
+            },
+            "heightVariance": {
+                "style": "STATIC"
+            }
+        }
+    ],
+    "entityInitialSpawns": [
+        {
+            "entity": "turtle",
+            "maxSpawns": 3,
+            "minSpawns": 1,
+            "rarity": 80
+        }
+    ],
+    "objects": [{
+        "mode": "PAINT",
+        "chance": 0.0025,
+        "rotation": {
+            "yAxis": {
+                "min": 0,
+                "max": 0,
+                "interval": 90,
+                "enabled": true
+            },
+            "enabled": true
+        },
+        "place": ["clutter/bincluster1"],
+        "translate": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        }
+    }],
+    "slab": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "sandstone_slab"
+            },
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "smooth_sandstone_slab"
+            },
+            {
+                "weight": 2,
+                "block": "air"
+            }
+        ]
+    }
+}

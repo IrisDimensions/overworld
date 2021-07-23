@@ -1,0 +1,220 @@
+{
+    "name": "Tundra Mountains",
+    "derivative": "MOUNTAINS",
+    "rarity": 1,
+    "color": "#3AD0B2",
+    "vanillaDerivative": "TAIGA_MOUNTAINS",
+    "children": ["tundra/mountains-cliffs"],
+    "generators": [{
+        "min": 66,
+        "max": 89,
+        "generator": "mountain"
+    }],
+    "jigsawStructures": [
+        {
+            "rarity": 1700,
+            "structure": "pillager_outpost"
+        },
+        {
+            "rarity": 1000,
+            "structure": "village-tundra"
+        }
+    ],
+    "customDerivitives": [{
+        "id": "tundra_mountains",
+        "grassColor": "#B0A747",
+        "waterColor": "#80B4C6",
+        "waterFogColor": "#80B4C6",
+        "fogColor": "#8091C6"
+    }],
+    "layers": [
+        {
+            "minHeight": 3,
+            "maxHeight": 5,
+            "slopeCondition": {"minimumSlope": 6.9},
+            "palette": [
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "gravel"}
+            ]
+        },
+        {
+            "minHeight": 3,
+            "maxHeight": 5,
+            "slopeCondition": {"minimumSlope": 5.3},
+            "palette": [
+                {"block": "dirt"},
+                {"block": "coarse_dirt"},
+                {"block": "gravel"}
+            ]
+        },
+        {"palette": [{"block": "grass_block"}]},
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
+            ]
+        }
+    ],
+    "biomeSkyScatter": [
+        "SNOWY_TAIGA",
+        "SNOWY_MOUNTAINS"
+    ],
+    "objects": [
+        {
+            "place": [
+                "clutter/gravelsplotch1",
+                "clutter/gravelsplotch2",
+                "clutter/gravelsplotch3",
+                "clutter/gravelsplotch4"
+            ],
+            "chance": 0.75,
+            "mode": "PAINT"
+        },
+        {
+            "chance": 0.8,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "trees/spruce/levergreen1",
+                "trees/spruce/levergreen2",
+                "trees/spruce/levergreen1",
+                "trees/spruce/levergreen2",
+                "trees/spruce/levergreen1",
+                "trees/spruce/levergreen2",
+                "trees/spruce/levergreen3",
+                "trees/spruce/levergreen4",
+                "trees/spruce/levergreen5",
+                "trees/spruce/levergreen6",
+                "trees/spruce/mevergreen1",
+                "trees/spruce/mevergreen2",
+                "trees/spruce/mevergreen3"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -2,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.005,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/obelisk1",
+                "clutter/obelisk2",
+                "clutter/obelisk3",
+                "clutter/obelisk4",
+                "clutter/obelisk5",
+                "clutter/obelisk6",
+                "clutter/obelisk7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.25,
+            "place": [
+                "trees/spruce/pine1",
+                "trees/spruce/pine2",
+                "trees/spruce/pine3",
+                "trees/spruce/pine4",
+                "trees/spruce/pine5",
+                "trees/spruce/pine6",
+                "trees/spruce/pine7",
+                "trees/spruce/pine8",
+                "trees/spruce/pine9",
+                "trees/spruce/pine10",
+                "trees/spruce/pine11",
+                "trees/spruce/pine12"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        }
+    ],
+    "biomeZoom": 30,
+    "biomeStyle": {"style": "IRIS"},
+    "decorators": [
+        {
+            "chance": 0.01,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.1,
+            "palette": [
+                {"block": "white_tulip"},
+                {"block": "blue_orchid"},
+                {"block": "poppy"}
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.001,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "data": {"age": 0},
+                    "block": "sweet_berry_bush"
+                },
+                {
+                    "data": {"age": 1},
+                    "block": "sweet_berry_bush"
+                },
+                {
+                    "data": {"age": 2},
+                    "block": "sweet_berry_bush"
+                },
+                {
+                    "data": {"age": 3},
+                    "block": "sweet_berry_bush"
+                }
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.2,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [{"block": "grass"}],
+            "style": {"style": "STATIC"}
+        }
+    ],
+    "childShrinkFactor": 8,
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {"block": "stone"},
+            {"block": "andesite"},
+            {"block": "stone"}
+        ]
+    },
+    "biomeScatter": [
+        "PLAINS",
+        "TAIGA_HILLS",
+        "MOUNTAINS",
+        "SWAMP"
+    ]
+}

@@ -1,0 +1,132 @@
+{
+    "name": "Tropical River Steep",
+    "derivative": "WARM_OCEAN",
+    "color": "#5341FF",
+    "vanillaDerivative": "WARM_OCEAN",
+    "generators": [{
+        "generator": "river",
+        "max": -6,
+        "min": -15
+    }],
+    "layers": [
+        {
+            "minHeight": 2,
+            "maxHeight": 2,
+            "slopeCondition": {
+                "minimumSlope": 0,
+                "maximumSlope": 3
+            },
+            "style": {"style": "FRACTAL_FBM_IRIS"},
+            "zoom": 0.6,
+            "palette": [
+                {"block": "sand"},
+                {"block": "clay"},
+                {"block": "sand"},
+                {"block": "gravel"},
+                {"block": "sand"},
+                {"block": "dirt"},
+                {
+                    "weight": 2,
+                    "block": "sand"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 2,
+            "palette": [{"block": "gravel"}]
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.1,
+            "palette": [{"block": "kelp_plant"}],
+            "stackMin": 4,
+            "stackMax": 10
+        },
+        {
+            "chance": 0.05,
+            "palette": [{"block": "seagrass"}]
+        },
+        {
+            "chance": 0.05,
+            "palette": [{
+                "block": "tall_seagrass",
+                "data": {"half": "lower"}
+            }],
+            "topPalette": [{
+                "block": "tall_seagrass",
+                "data": {"half": "upper"}
+            }]
+        }
+    ],
+    "objects": [
+        {
+            "place": [
+                "structures/landstone1",
+                "structures/landstone2",
+                "structures/landstone3",
+                "structures/landstone4",
+                "structures/landstone5"
+            ],
+            "chance": 1,
+            "mode": "FAST_MIN_HEIGHT",
+            "underwater": true,
+            "waterloggable": true,
+            "edit": [
+                {
+                    "find": [
+                        {"block": "grass_block"},
+                        {"block": "dirt"}
+                    ],
+                    "replace": {"palette": [{"block": "clay"}]}
+                },
+                {
+                    "find": [
+                        {"block": "tall_grass"},
+                        {"block": "grass"}
+                    ],
+                    "replace": {"palette": [{"block": "seagrass"}]}
+                }
+            ]
+        },
+        {
+            "place": ["clutter/ellipsoid1"],
+            "chance": 0.5,
+            "underwater": true,
+            "mode": "CENTER_HEIGHT",
+            "edit": [{
+                "find": [{"block": "clay"}],
+                "replace": {
+                    "style": {
+                        "style": "GLOB",
+                        "zoom": 0.02
+                    },
+                    "palette": [
+                        {
+                            "weight": 2,
+                            "block": "clay"
+                        },
+                        {
+                            "weight": 1,
+                            "block": "cave_air"
+                        }
+                    ]
+                }
+            }]
+        },
+        {
+            "place": [
+                "structures/genericw",
+                "structures/genericc",
+                "structures/genericr",
+                "structures/genericu",
+                "structures/genericc"
+            ],
+            "chance": 0.005,
+            "onwater": true,
+            "translate": {"y": -2},
+            "waterloggable": true
+        }
+    ]
+}

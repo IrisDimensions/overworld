@@ -1,0 +1,243 @@
+{
+    "name": "Mushroom Plains",
+    "rarity": 1,
+    "color": "#9F939F",
+    "derivative": "MUSHROOM_FIELDS",
+    "vanillaDerivative": "MUSHROOM_FIELDS",
+    "customDerivitives": [{
+        "id": "mushroom_plains",
+        "waterColor": "#B4B2FF",
+        "foliageColor": "#C9A9FF",
+        "waterFogColor": "#BD94DF",
+        "grassColor": "#A2A2FF",
+        "fogColor": "#CACDFF"
+    }],
+    "layers": [
+        {
+            "zoom": 0.3,
+            "style": {"style": "IRIS"},
+            "palette": [
+                {
+                    "weight": 7,
+                    "block": "mycelium"
+                },
+                {
+                    "weight": 9,
+                    "block": "mycelium"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "palette": [
+                {"block": "dirt"},
+                {"block": "coarse_dirt"}
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
+            ]
+        }
+    ],
+    "generators": [{
+        "min": 6,
+        "max": 14,
+        "generator": "plain"
+    }],
+    "jigsawStructures": [{
+        "rarity": 150,
+        "structure": "mush-huts"
+    }],
+    "decorators": [
+        {
+            "chance": 0.005,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "east"
+                    },
+                    "block": "stone_button"
+                },
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "south"
+                    },
+                    "block": "stone_button"
+                }
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.007,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [
+                {"block": "red_mushroom"},
+                {"block": "brown_mushroom"}
+            ],
+            "style": {"style": "STATIC"}
+        }
+    ],
+    "objects": [
+        {
+            "chance": 0.08,
+            "density": 2,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "trees/mushroom/mushclut1",
+                "trees/mushroom/mushclut2",
+                "trees/mushroom/mushclut3",
+                "trees/mushroom/mushclut4",
+                "trees/mushroom/mushclut5",
+                "trees/mushroom/mushclut6",
+                "trees/mushroom/mushclut7",
+                "trees/mushroom/mushclut8",
+                "trees/mushroom/mushclut9",
+                "trees/mushroom/mushclut10"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.08,
+            "density": 2,
+            "edit": [{
+                "find": [{"block": "red_mushroom_block"}],
+                "replace": {"palette": [{"block": "brown_mushroom_block"}]}
+            }],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "trees/mushroom/mushclut1",
+                "trees/mushroom/mushclut2",
+                "trees/mushroom/mushclut3",
+                "trees/mushroom/mushclut4",
+                "trees/mushroom/mushclut5",
+                "trees/mushroom/mushclut6",
+                "trees/mushroom/mushclut7",
+                "trees/mushroom/mushclut8",
+                "trees/mushroom/mushclut9",
+                "trees/mushroom/mushclut10"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.025,
+            "density": 1,
+            "edit": [{
+                "find": [{"block": "red_mushroom_block"}],
+                "replace": {"palette": [{"block": "brown_mushroom_block"}]}
+            }],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "trees/mushroom/smolshroom1",
+                "trees/mushroom/smolshroom2",
+                "trees/mushroom/smolshroom3",
+                "trees/mushroom/smolshroom4",
+                "trees/mushroom/smolshroom5"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.1,
+            "density": 1,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "trees/mushroom/smolshroom1",
+                "trees/mushroom/smolshroom2",
+                "trees/mushroom/smolshroom3",
+                "trees/mushroom/smolshroom4",
+                "trees/mushroom/smolshroom5"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            }
+        }
+    ],
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {"block": "stone"},
+            {"block": "andesite"},
+            {"block": "stone"}
+        ]
+    },
+    "slab": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {
+                "weight": 2,
+                "block": "air"
+            },
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "weight": 2,
+                "block": "cobblestone_slab"
+            },
+            {
+                "weight": 3,
+                "block": "air"
+            }
+        ]
+    }
+}

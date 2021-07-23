@@ -1,0 +1,228 @@
+{
+    "name": "Birch Thin Forest",
+    "derivative": "BIRCH_FOREST",
+    "vanillaDerivative": "BIRCH_FOREST",
+    "color": "#e3fa93",
+    "rarity": 4,
+    "generators": [{
+        "min": 5,
+        "max": 15,
+        "generator": "highplains"
+    },
+    {
+        "min": 0,
+        "max": 40,
+        "generator": "rare-hills"
+    }],
+    "jigsawStructures": [
+        {
+            "rarity": 900,
+            "structure": "pillager_outpost"
+        },
+        {
+            "rarity": 1100,
+            "structure": "village-temperate"
+        }
+    ],
+    "layers": [
+        {
+            "style": {"style": "STATIC"},
+            "palette": [
+                {
+                    "block": "grass_block",
+                    "weight": 30
+                },
+                {
+                    "block": "coarse_dirt"
+                }
+            ]
+        },
+        {"palette": [{"block": "dirt"}]},
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {"block": "dirt"},
+                {"block": "coarse_dirt"}
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
+            ]
+        }
+    ],
+    "entityInitialSpawns": [
+        {
+            "entity": "cow",
+            "maxSpawns": 1,
+            "minSpawns": 1,
+            "rarity": 7
+        },
+        {
+            "entity": "pig",
+            "maxSpawns": 1,
+            "minSpawns": 1,
+            "rarity": 7
+        },
+        {
+            "entity": "chicken",
+            "maxSpawns": 1,
+            "minSpawns": 1,
+            "rarity": 7
+        },
+        {
+            "entity": "sheep",
+            "maxSpawns": 1,
+            "minSpawns": 1,
+            "rarity": 7
+        },
+        {
+            "entity": "bee",
+            "maxSpawns": 3,
+            "minSpawns": 1,
+            "rarity": 50
+        }
+    ],
+    "objects": [
+        {
+            "mode": "PAINT",
+            "chance": 0.0025,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": ["clutter/bincluster1"],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "mode": "PAINT",
+            "chance": 0.00375,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": ["clutter/camp1"],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.9,
+            "density": 1,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "trees/birch/antioch3",
+                "trees/birch/antioch4",
+                "trees/birch/antioch5",
+                "trees/birch/antioch6",
+                "trees/birch/antioch7",
+                "trees/birch/antioch8",
+                "trees/birch/antioch9",
+                "trees/birch/antioch10",
+                "trees/birch/antioch11",
+                "trees/birch/antioch12",
+                "trees/birch/antioch13"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.08,
+            "density": 1,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "trees/birch/antioch3b",
+                "trees/birch/antioch4b",
+                "trees/birch/antioch5b",
+                "trees/birch/antioch6b"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        }
+    ],
+    "biomeZoom": 50,
+    "biomeStyle": {"style": "IRIS"},
+    "decorators": [
+        {
+            "chance": 0.03,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.1,
+            "palette": [
+                {"block": "grass"},
+                {"block": "allium"},
+                {"block": "poppy"},
+                {"block": "dandelion"},
+                {"block": "azure_bluet"},
+                {"block": "pink_tulip"},
+                {"block": "lily_of_the_valley"}
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.4,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [{"block": "grass", "weight": 10}, {"block": "fern"}],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.017,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [{"block": "tall_grass"}],
+            "style": {"style": "STATIC"}
+        }
+    ],
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {"block": "stone"},
+            {"block": "andesite"},
+            {"block": "stone"}
+        ]
+    }
+}
