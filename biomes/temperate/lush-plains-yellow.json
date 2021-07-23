@@ -1,14 +1,14 @@
 {
-    "name": "Plains",
-    "derivative": "PLAINS",
-    "vanillaDerivative": "PLAINS",
-    "color": "#9BAF50",
+    "name": "Lush Plains Yellow",
+    "derivative": "FOREST",
+    "vanillaDerivative": "FOREST",
+    "color": "#d8e310",
+    "rarity": 5,
     "generators": [{
         "min": 4,
-        "max": 10,
+        "max": 7,
         "generator": "plain"
     }],
-    "rarity": 2,
     "jigsawStructures": [
         {
             "rarity": 1700,
@@ -46,32 +46,13 @@
     ],
     "decorators": [
         {
-            "chance": 0.004,
-            "variance": {
-                "style": "TRIOCTAVE_SIMPLEX",
-                "zoom": 6,
-                "fracture": {
-                    "style": "STATIC",
-                    "zoom": 0.2,
-                    "multiplier": 10
-                }
-            },
+            "chance": 0.05,
             "style": {
                 "style": "STATIC"
             },
             "palette": [
-                {"block": "dandelion"},
-                {"block": "poppy"},
-                {"block": "blue_orchid"},
-                {"block": "allium"},
-                {"block": "azure_bluet"},
-                {"block": "red_tulip"},
-                {"block": "orange_tulip"},
-                {"block": "white_tulip"},
-                {"block": "pink_tulip"},
-                {"block": "oxeye_daisy"},
-                {"block": "cornflower"},
-                {"block": "lily_of_the_valley"}
+                {"block": "dandelion", "weight": 8},
+                {"block": "sunflower", "weight": 1}
             ]
         },
         {
@@ -80,7 +61,27 @@
         },
         {
             "chance": 0.5,
-            "palette": [{"block": "grass"}]
+            "palette": [
+                {
+                    "block": "grass",
+                    "weight": 15
+                },
+                {
+                    "block": "fern",
+                    "weight": 1
+                }
+            ]
+        },
+        {
+            "chance": 0.08,
+            "palette": [
+                {
+                    "block": "oak_leaves",
+                    "data": {
+                        "persistent": true
+                    }
+                }
+            ]
         }
     ],
     "objects": [
@@ -90,7 +91,7 @@
             "rotation": {
                 "yAxis": {
                     "min": 0,
-                    "max": 0,
+                    "max": 360,
                     "interval": 90,
                     "enabled": true
                 },
@@ -277,7 +278,7 @@
         },
         {
             "place": [
-                "structures/landstone1",
+                 "structures/landstone1",
                 "structures/landstone2",
                 "structures/landstone3",
                 "structures/landstone4",
@@ -310,47 +311,6 @@
                     "max": 360
                 }
             }
-        },
-        {
-            "place": [
-                "structures/ruins-greek-temple"
-            ],
-            "chance": 0.0005,
-            "mode": "VACUUM",
-            "translate": {
-                "y": -4
-            },
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "interval": 90,
-                    "min": 0,
-                    "max": 360,
-                    "enabled": true
-                }
-            },
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "gold_block"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "chest",
-                                "weight": 1
-                            },
-                            {
-                                "block": "dirt",
-                                "weight": 5
-                            }
-                        ]
-                    },
-                    "chance": 1
-                }
-            ]
         }
     ],
     "entityInitialSpawns": [
@@ -377,12 +337,6 @@
             "maxSpawns": 3,
             "minSpawns": 1,
             "rarity": 7
-        },
-        {
-            "entity": "horse",
-            "minSpawns": 2,
-            "maxSpawns": 5,
-            "rarity": 120
         }
     ],
     "biomeStyle": {"style": "IRIS"},

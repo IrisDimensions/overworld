@@ -1,47 +1,19 @@
 {
-    "name": "Temperate Oak Forest",
-    "derivative": "DEEP_LUKEWARM_OCEAN",
-    "rarity": 1,
-    "color": "#BFEF10",
+    "name": "Oak Forest",
+    "derivative": "FOREST",
+    "color": "#ADCF30",
     "vanillaDerivative": "FOREST",
-    "children": ["temperate/oak-denmyre"],
-    "customDerivitives": [{
-        "id": "oak_forest",
-        "foliageColor": "#80B918",
-        "waterColor": "#25638E",
-        "grassColor": "#698E25",
-        "category": "forest"
-    }],
     "generators": [{
-        "min": 4,
-        "max": 7,
-        "generator": "plain"
+        "generator": "smooth-dunes",
+        "max": 12,
+        "min": 5
+    },
+    {
+        "generator": "rare-hills",
+        "max": 40,
+        "min": 0
     }],
-    "layers": [
-        {
-            "style": {"style": "STATIC"},
-            "palette": [{"block": "grass_block"}]
-        },
-        {"palette": [{"block": "dirt"}]},
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                {"block": "dirt"},
-                {"block": "coarse_dirt"}
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {"style": "STATIC"},
-            "palette": [
-                {"block": "stone"},
-                {"block": "andesite"},
-                {"block": "stone"}
-            ]
-        }
-    ],
+    "rarity": 3,
     "jigsawStructures": [
         {
             "rarity": 1700,
@@ -52,285 +24,254 @@
             "structure": "village-temperate"
         }
     ],
-    "objects": [
+    "layers": [
         {
-            "chance": 0.07,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "trees/oak/hoakgeneric3",
-                "trees/oak/hoakgeneric4",
-                "trees/oak/hoakgeneric5",
-                "trees/oak/hoakgeneric6",
-                "trees/oak/hoakgeneric7",
-                "trees/oak/hoakgeneric8",
-                "trees/oak/hoakgeneric9",
-                "trees/oak/hoakgeneric1",
-                "trees/oak/shoakgeneric3",
-                "trees/oak/shoakgeneric4",
-                "trees/oak/shoakgeneric5",
-                "trees/oak/shoakgeneric6",
-                "trees/oak/shoakgeneric7",
-                "trees/oak/shoakgeneric8",
-                "trees/oak/shoakgeneric9",
-                "trees/oak/shoakgeneric1",
-                "trees/oak/shoakgeneric2"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "mode": "PAINT",
-            "chance": 0.00975,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "clutter/camp1",
-                "clutter/camp4",
-                "clutter/camp5",
-                "clutter/camp3"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "chance": 1,
-            "density": 2,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "edit": [
-                {
-                    "find": [
-                        {"block": "birch_wood"},
-                        {"block": "birch_log"}
-                    ],
-                    "replace": {"palette": [{"block": "oak_wood"}]}
-                },
-                {
-                    "find": [{"block": "birch_leaves"}],
-                    "replace": {"palette": [{"block": "oak_leaves"}]}
-                }
-            ],
-            "place": [
-                "trees/birch/antioch3",
-                "trees/birch/antioch4",
-                "trees/birch/antioch5",
-                "trees/birch/antioch6",
-                "trees/birch/antioch7",
-                "trees/birch/antioch8",
-                "trees/birch/antioch9",
-                "trees/birch/antioch10",
-                "trees/birch/antioch11",
-                "trees/birch/antioch12",
-                "trees/birch/antioch13"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.18,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "trees/oak/thoakgeneric1",
-                "trees/oak/thoakgeneric2",
-                "trees/oak/thoakgeneric3",
-                "trees/oak/thoakgeneric4",
-                "trees/oak/thoakgeneric8",
-                "trees/oak/thoakgeneric10"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.001,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "clutter/obelisk1",
-                "clutter/obelisk2",
-                "clutter/obelisk3",
-                "clutter/obelisk4",
-                "clutter/obelisk5",
-                "clutter/obelisk6",
-                "clutter/obelisk7"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.001,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "clutter/literalgarbage1",
-                "clutter/literalgarbage2",
-                "clutter/literalgarbage3",
-                "clutter/literalgarbage4"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.0015,
-            "edit": [
-                {
-                    "find": [{"block": "white_wool"}],
-                    "replace": {"palette": [{"block": "oak_wood"}]}
-                },
-                {
-                    "find": [{"block": "black_wool"}],
-                    "replace": {"palette": [{"block": "oak_wood"}]}
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "mode": "MIN_HEIGHT",
-            "place": ["trees/mixed/smoakog80"],
-            "translate": {
-                "x": 0,
-                "y": -4,
-                "z": 0
-            }
-        }
-    ],
-    "biomeZoom": 60,
-    "biomeStyle": {"style": "IRIS"},
-    "decorators": [
-        {
-            "chance": 0.8,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.2,
+            "style": {"style": "STATIC"},
+            "zoom": 0.656,
             "palette": [
                 {
-                    "weight": 1,
-                    "block": "grass"
+                    "weight": 19,
+                    "block": "grass_block"
                 },
-                {"block": "grass"},
-                {"block": "grass"},
+                {"block": "coarse_dirt"},
+                {"block": "gravel"},
                 {
-                    "chance": 7,
-                    "block": "grass"
+                    "weight": 19,
+                    "block": "grass_block"
                 }
             ]
         },
         {
-            "chance": 0.03,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.2,
-            "palette": [{"block": "oak_leaves"}]
+            "minHeight": 2,
+            "maxHeight": 2,
+            "palette": [{"block": "dirt"}]
         },
         {
-            "chance": 0.02,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.2,
+            "style": {"style": "STATIC"},
+            "minHeight": 1,
+            "maxHeight": 1,
+            "palette": [
+                {"block": "dirt"},
+                {"block": "stone"}
+            ]
+        }
+    ],
+    "wall": {"palette": [
+        {"block": "stone"},
+        {"block": "andesite"},
+        {"block": "cobblestone"},
+        {"block": "mossy_cobblestone"}
+    ]},
+    "decorators": [
+        {
+            "chance": 0.2,
+            "variance": {
+                "style": "CELLULAR",
+                "zoom": 0.3,
+                "fracture": {
+                    "style": "SIMPLEX",
+                    "zoom": 0.2,
+                    "multiplier": 10
+                }
+            },
+            "style": {
+                "style": "TRIOCTAVE_SIMPLEX",
+                "zoom": 0.35,
+                "fracture": {
+                    "style": "STATIC",
+                    "multiplier": 8
+                }
+            },
+            "palette": [
+                {"block": "dandelion"},
+                {"block": "poppy"},
+                {"block": "blue_orchid"},
+                {"block": "allium"},
+                {"block": "azure_bluet"},
+                {"block": "red_tulip"},
+                {"block": "orange_tulip"},
+                {"block": "white_tulip"},
+                {"block": "pink_tulip"},
+                {"block": "oxeye_daisy"},
+                {"block": "cornflower"},
+                {"block": "lily_of_the_valley"}
+            ]
+        },
+        {
+            "chance": 0.03,
             "palette": [{"block": "tall_grass"}]
         },
         {
-            "chance": 0.03,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.2,
-            "palette": [{"block": "rose_bush"}]
+            "chance": 0.5,
+            "palette": [{"block": "grass"}]
+        },
+        {
+            "chance": 0.06,
+            "palette": [{"block": "fern"}]
+        },
+        {
+            "chance": 0.04,
+            "palette": [{"block": "red_mushroom"}]
+        },
+        {
+            "chance": 0.1,
+            "palette": [{"block": "large_fern"}]
         },
         {
             "chance": 0.05,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.2,
-            "palette": [{
-                "chance": 3,
-                "block": "red_mushroom"
-            }]
-        },
-        {
-            "chance": 0.05,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.2,
-            "palette": [{
-                "chance": 3,
-                "block": "poppy"
-            }]
-        },
-        {
-            "chance": 0.03,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.2,
             "palette": [{"block": "cobblestone_slab"}]
         }
     ],
-    "wall": {
-        "style": {"style": "STATIC"},
-        "palette": [
-            {"block": "stone"},
-            {"block": "andesite"},
-            {"block": "stone"}
-        ]
-    },
-    "biomeScatter": ["FOREST"]
+    "objects": [
+        {
+            "place": [
+                "clutter/boulder1",
+                "clutter/boulder2",
+                "clutter/boulder3",
+                "clutter/boulder4",
+                "clutter/boulder5",
+                "clutter/boulder6",
+                "clutter/boulder7",
+                "clutter/boulder8",
+                "clutter/boulder9",
+                "clutter/boulder10"
+            ],
+            "chance": 0.1,
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": -360,
+                    "max": 360
+                }
+            },
+            "translate": {
+                "x": 0,
+                "y": -3,
+                "z": 0
+            }
+        },
+        {
+            "place": [
+                "trees/oak/hoakgeneric1",
+                "trees/oak/hoakgeneric2",
+                "trees/oak/hoakgeneric3",
+                "trees/oak/hoakgeneric4",
+                "trees/oak/hoakgeneric5"
+            ],
+            "chance": 0.08,
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": 0,
+                    "max": 360
+                }
+            }
+        },
+        {
+            "place": [
+                "trees/oak/generic1",
+                "trees/oak/generic2",
+                "trees/oak/generic3",
+                "trees/oak/generic4",
+                "trees/oak/generic5",
+                "trees/oak/generic6"
+            ],
+            "chance": 0.6,
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": -360,
+                    "max": 360
+                }
+            }
+        },
+        {
+            "place": [
+                "trees/oak/shoakgeneric1",
+                "trees/oak/shoakgeneric2",
+                "trees/oak/shoakgeneric3",
+                "trees/oak/shoakgeneric4",
+                "trees/oak/shoakgeneric4"
+            ],
+            "chance": 0.1,
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": -360,
+                    "max": 360
+                }
+            }
+        },
+        {
+            "place": [
+                "trees/oak/toak1",
+                "trees/oak/toak2",
+                "trees/oak/toak3",
+                "trees/oak/toak4",
+                "trees/oak/toak5",
+                "trees/oak/toak6",
+                "trees/oak/toak7",
+                "trees/oak/toak8",
+                "trees/oak/toak9",
+                "trees/oak/toak10",
+                "trees/oak/toak11"
+            ],
+            "chance": 0.1,
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": 0,
+                    "max": 360
+                }
+            }
+        },
+        {
+            "place": [
+                "clutter/sbush1",
+                "clutter/sbush2",
+                "clutter/sbush3"
+            ],
+            "chance": 0.6,
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": 0,
+                    "max": 360
+                }
+            }
+        },
+        {
+            "place": [
+                "trees/oak/massivegeneric1",
+                "trees/oak/massivegeneric2",
+                "trees/oak/massivegeneric3"
+            ],
+            "chance": 0.00001,
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": 0,
+                    "max": 360
+                }
+            },
+            "scale": {
+                "minimumScale": 0.6,
+                "maximumScale": 0.6
+            }
+        }
+    ]
 }
