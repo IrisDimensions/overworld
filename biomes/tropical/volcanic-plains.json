@@ -1,0 +1,105 @@
+{
+    "name": "Tropical Volcanic Plains",
+    "derivative": "THE_VOID",
+    "rarity": 1,
+    "color": "#40BF43",
+    "vanillaDerivative": "THE_VOID",
+    "children": ["tropical/volcanoes"],
+    "generators": [{
+        "min": 120,
+        "max": 190,
+        "generator": "mountain"
+    }],
+    "customDerivitives": [{
+        "id": "trovolcanoplains",
+        "grassColor": "#9BC20D",
+        "foliageColor": "#9CD320",
+        "fogColor": "#DD793C",
+        "downfallType": "none"
+    }],
+    "layers": [
+        {
+            "style": {
+                "style": "SIMPLEX",
+                "fracture": {
+                    "style": "GLOB",
+                    "zoom": 0.2,
+                    "multiplier": 40
+                }
+            },
+            "zoom": 0.8,
+            "minHeight": 1,
+            "maxHeight": 5,
+            "palette": [
+                {
+                    "weight": 1,
+                    "block": "magma_block"
+                },
+                {
+                    "weight": 3,
+                    "block": "basalt"
+                },
+                {
+                    "weight": 1,
+                    "block": "magma_block"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 2,
+            "palette": [
+                {
+                    "block": "basalt",
+                    "data": {"axis": "x"}
+                },
+                {
+                    "block": "basalt",
+                    "data": {"axis": "y"}
+                },
+                {
+                    "block": "basalt",
+                    "data": {"axis": "z"}
+                }
+            ]
+        },
+        {
+            "minHeight": 3,
+            "maxHeight": 10,
+            "palette": [{"block": "blackstone"}]
+        }
+    ],
+    "childStyle": {
+        "style": "SIMPLEX",
+        "zoom": 1.3,
+        "exponent": 1.9
+    },
+    "childShrinkFactor": 1,
+    "objects": [{
+        "place": [
+            "structures/landspike1",
+            "structures/landspike2",
+            "structures/landspike3"
+        ],
+        "chance": 1,
+        "density": 2,
+        "rotation": {
+            "enabled": true,
+            "yAxis": {
+                "enabled": true,
+                "interval": 90,
+                "min": -360,
+                "max": 360
+            }
+        },
+        "translate": {
+            "y": -20,
+            "yRandom": 20
+        },
+        "mode": "MIN_HEIGHT",
+        "edit": [{
+            "find": [{"block": "stone"}],
+            "replace": {"palette": [{"block": "basalt"}]}
+        }]
+    }]
+}

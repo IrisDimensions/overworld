@@ -1,0 +1,151 @@
+{
+    "name": "Mesa Dark",
+    "rarity": 1,
+    "color": "#050240",
+    "derivative": "SHATTERED_SAVANNA",
+    "vanillaDerivative": "ERODED_BADLANDS",
+    "children": [
+        "mesa/cliffs",
+        "mesa/red",
+        "mesa/green",
+        "mesa/blue"
+    ],
+    "generators": [
+        {
+            "min": 9,
+            "max": 16,
+            "generator": "plain-cliffs"
+        },
+        {
+            "min": 11,
+            "max": 33,
+            "generator": "mountain"
+        }
+    ],
+    "layers": [
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "terracotta"}]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "brown_terracotta"}]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "gray_terracotta"}]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "black_terracotta"}]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "gray_terracotta"}]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "brown_terracotta"}]
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.009,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "east"
+                    },
+                    "block": "stone_button"
+                },
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "south"
+                    },
+                    "block": "stone_button"
+                }
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.01,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [{"block": "dead_bush"}],
+            "style": {"style": "STATIC"}
+        }
+    ],
+    "objects": [{
+        "name": "standard-surface-portals",
+        "chance": 0.00505,
+        "place": [
+            "clutter/swordnp2",
+            "clutter/swordnp1",
+            "structures/giantportal1",
+            "structures/giantportal2",
+            "structures/giantportal3",
+            "structures/portal1",
+            "structures/portal2",
+            "structures/portal3",
+            "structures/portal4",
+            "structures/portal5",
+            "structures/portal6",
+            "structures/portal7",
+            "structures/portal8",
+            "structures/portal9",
+            "structures/portal10"
+        ],
+        "edit": [
+            {
+                "find": [{"block": "gold_block"}],
+                "replace": {"palette": [{"block": "air"}]},
+                "chance": 0.1
+            },
+            {
+                "find": [{"block": "netherrack"}],
+                "replace": {"palette": [{"block": "magma_block"}]},
+                "chance": 0.07
+            },
+            {
+                "find": [{"block": "obsidian"}],
+                "replace": {"palette": [{"block": "crying_obsidian"}]},
+                "chance": 0.15
+            },
+            {
+                "find": [{"block": "lava"}],
+                "replace": {"palette": [{"block": "magma_block"}]},
+                "chance": 0.2
+            }
+        ],
+        "mode": "VACUUM",
+        "carvingSupport": "SURFACE_ONLY"
+    }],
+    "childShrinkFactor": 0.35,
+    "lockLayers": true,
+    "wall": {
+        "style": {"style": "IRIS"},
+        "palette": [
+            {"block": "brown_terracotta"},
+            {"block": "gray_terracotta"},
+            {"block": "black_terracotta"}
+        ]
+    }
+}

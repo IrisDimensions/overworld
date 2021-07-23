@@ -1,0 +1,172 @@
+{
+    "name": "Tropical Mountain Extreme",
+    "derivative": "MODIFIED_JUNGLE",
+    "rarity": 1,
+    "color": "#838F70",
+    "vanillaDerivative": "MODIFIED_JUNGLE",
+    "children": ["tropical/mountain-water"],
+    "generators": [{
+        "generator": "mountain",
+        "max": 190,
+        "min": 85
+    }],
+    "customDerivitives": [{
+        "id": "tromtnextreme",
+        "foliageColor": "#478F04",
+        "grassColor": "#41A726",
+        "waterColor": "#3AB2A2",
+        "waterFogColor": "#3FE727",
+        "category": "jungle"
+    }],
+    "layers": [
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "slopeCondition": {
+                "minimumSlope": 0,
+                "maximumSlope": 4.5
+            },
+            "palette": [{
+                "weight": 1,
+                "block": "grass_block"
+            }]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 2,
+            "slopeCondition": {
+                "minimumSlope": 0,
+                "maximumSlope": 4.5
+            },
+            "palette": [{"block": "dirt"}]
+        }
+    ],
+    "childStyle": {
+        "style": "GLOB",
+        "zoom": 0.29,
+        "exponent": 7.6
+    },
+    "childShrinkFactor": 1,
+    "decorators": [
+        {
+            "chance": 0.7,
+            "palette": [
+                {
+                    "weight": 2,
+                    "block": "grass"
+                },
+                {
+                    "weight": 1,
+                    "block": "tall_grass"
+                }
+            ]
+        },
+        {
+            "chance": 0.2,
+            "variance": {
+                "style": "CELLULAR",
+                "zoom": 0.3,
+                "fracture": {
+                    "style": "SIMPLEX",
+                    "zoom": 0.2,
+                    "multiplier": 10
+                }
+            },
+            "style": {
+                "style": "TRIOCTAVE_SIMPLEX",
+                "zoom": 0.3,
+                "fracture": {
+                    "style": "STATIC",
+                    "multiplier": 8
+                }
+            },
+            "palette": [
+                {"block": "dandelion"},
+                {"block": "poppy"},
+                {"block": "blue_orchid"},
+                {"block": "allium"},
+                {"block": "azure_bluet"},
+                {"block": "red_tulip"},
+                {"block": "orange_tulip"},
+                {"block": "white_tulip"},
+                {"block": "pink_tulip"},
+                {"block": "oxeye_daisy"},
+                {"block": "cornflower"},
+                {"block": "lily_of_the_valley"}
+            ]
+        },
+        {
+            "chance": 0.45,
+            "variance": {"style": "IRIS"},
+            "zoom": 0.1,
+            "palette": [
+                {
+                    "data": {"persistent": true},
+                    "block": "jungle_leaves"
+                },
+                {"block": "tall_grass"},
+                {"block": "grass"},
+                {
+                    "data": {"persistent": true},
+                    "block": "jungle_leaves"
+                },
+                {"block": "grass"},
+                {
+                    "data": {"persistent": true},
+                    "block": "jungle_leaves"
+                }
+            ],
+            "style": {
+                "style": "FRACTAL_BILLOW_IRIS",
+                "fracture": {"style": "STATIC"}
+            }
+        },
+        {
+            "chance": 0.5,
+            "verticalZoom": 88,
+            "variance": {"style": "STATIC"},
+            "zoom": 10,
+            "palette": [
+                {"block": "grass"},
+                {"block": "tall_grass"}
+            ],
+            "style": {"style": "STATIC"},
+            "heightVariance": {"style": "STATIC"}
+        }
+    ],
+    "objects": [
+        {
+            "place": [
+                "clutter/sbush1",
+                "clutter/sbush2",
+                "clutter/sbush3"
+            ],
+            "chance": 1,
+            "density": 5
+        },
+        {
+            "place": [
+                "trees/jungle/lgeneric1",
+                "trees/jungle/lgeneric2",
+                "trees/jungle/lgeneric3",
+                "trees/jungle/lgeneric4",
+                "trees/jungle/lgeneric5",
+                "trees/jungle/lgeneric6",
+                "trees/jungle/lgeneric7",
+                "trees/jungle/lgeneric8",
+                "trees/jungle/lgeneric9"
+            ],
+            "chance": 1,
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": -360,
+                    "max": 360
+                }
+            },
+            "translate": {"y": -2}
+        }
+    ]
+}
