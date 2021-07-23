@@ -4,27 +4,49 @@
     "color": "#ECE363",
     "derivative": "WARM_OCEAN",
     "vanillaDerivative": "DESERT_LAKES",
+    "customDerivitives": [
+        {
+            "foliageColor": "#e3b76f",
+            "category": "beach",
+            "downfallType": "none",
+            "humidity": 0,
+            "temperature": 0.95,
+            "id": "hot_beach"
+        }
+    ],
     "layers": [
         {
             "minHeight": 3,
             "maxHeight": 6,
-            "palette": [{"block": "sand"}]
+            "palette": [
+                {
+                    "block": "sand"
+                }
+            ]
         },
         {
             "minHeight": 1,
             "maxHeight": 3,
-            "palette": [{"block": "dirt"}]
+            "palette": [
+                {
+                    "block": "dirt"
+                }
+            ]
         }
     ],
-    "generators": [{
-        "min": 0,
-        "max": 1,
-        "generator": "plain"
-    }],
+    "generators": [
+        {
+            "min": 0,
+            "max": 1,
+            "generator": "plain"
+        }
+    ],
     "decorators": [
         {
             "chance": 0.01,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 0.3,
             "palette": [
                 {
@@ -35,7 +57,9 @@
                     },
                     "block": "jungle_button"
                 },
-                {"block": "air"},
+                {
+                    "block": "air"
+                },
                 {
                     "data": {
                         "face": "floor",
@@ -45,14 +69,20 @@
                     "block": "jungle_button"
                 }
             ],
-            "style": {"style": "STATIC"}
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
             "partOf": "SHORE_LINE",
             "chance": 0.09,
             "stackMin": 1,
             "stackMax": 4,
-            "palette": [{"block": "sugar_cane"}],
+            "palette": [
+                {
+                    "block": "sugar_cane"
+                }
+            ],
             "style": {
                 "style": "IRIS",
                 "zoom": 0.65
@@ -63,23 +93,33 @@
         }
     ],
     "wall": {
-        "style": {"style": "STATIC"},
+        "style": {
+            "style": "STATIC"
+        },
         "palette": [
-            {"block": "smooth_sandstone"},
-            {"block": "sand"},
-            {"block": "smooth_sandstone"}
+            {
+                "block": "smooth_sandstone"
+            },
+            {
+                "block": "sand"
+            },
+            {
+                "block": "smooth_sandstone"
+            }
         ]
     },
-    "objects": [{
-        "density": 3,
-        "chance": 1,
-        "place": [
-            "trees/jungle/palm1",
-            "trees/jungle/palm2",
-            "trees/jungle/palm3",
-            "trees/jungle/palm4",
-            "trees/jungle/palm6",
-            "trees/jungle/palm7"
-        ]
-    }]
+    "objects": [
+        {
+            "density": 3,
+            "chance": 1,
+            "place": [
+                "trees/jungle/palm1",
+                "trees/jungle/palm2",
+                "trees/jungle/palm3",
+                "trees/jungle/palm4",
+                "trees/jungle/palm6",
+                "trees/jungle/palm7"
+            ]
+        }
+    ]
 }
