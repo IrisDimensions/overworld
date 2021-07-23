@@ -1,5 +1,5 @@
 {
-    "name": "Tundra Autumn",
+    "name": "Tundra Redwood Forest",
     "derivative": "TAIGA",
     "rarity": 1,
     "color": "#23EBA3",
@@ -11,45 +11,12 @@
         "generator": "smooth-dunes"
     }],
     "customDerivitives": [{
-        "grassColor": "#bf4d24",
-        "id": "autumna",
-        "category": "forest",
-        "humidity": 0.3,
-        "downfallType": "rain",
-        "temperature": 0.6,
-        "foliageColor": "#bf2811",
-        "waterColor": "#80B4C6",
-        "waterFogColor": "#80B4C6",
-        "fogColor": "#8091C6"
-    },
-    {
-        "grassColor": "#BF8924",
-        "id": "tunautumnb",
-        "category": "forest",
-        "humidity": 0.3,
-        "downfallType": "rain",
-        "temperature": 0.6,
-        "foliageColor": "#eb6e07",
-        "waterColor": "#80B4C6",
-        "waterFogColor": "#80B4C6",
-        "fogColor": "#8091C6"
-    },
-    {
-        "grassColor": "#bf6724",
-        "id": "autumnc",
-        "category": "forest",
-        "humidity": 0.3,
-        "downfallType": "rain",
-        "temperature": 0.6,
-        "foliageColor": "#ebc107",
+        "grassColor": "#AC7B1F",
+        "id": "tunredwoodfrst",
         "waterColor": "#80B4C6",
         "waterFogColor": "#80B4C6",
         "fogColor": "#8091C6"
     }],
-    "biomeStyle": {
-        "style": "STATIC",
-        "zoom": 1
-    },
     "jigsawStructures": [
         {
             "rarity": 1700,
@@ -230,35 +197,6 @@
                 },
                 "enabled": true
             },
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "birch_leaves"
-                        },
-                        {
-                            "block": "spruce_leaves"
-                        }
-                    ],
-                    "exact": false,
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "jungle_leaves"
-                            },
-                            {
-                                "block": "acacia_leaves"
-                            },
-                            {
-                                "block": "oak_leaves"
-                            },
-                            {
-                                "block": "dark_oak_leaves"
-                            }
-                        ]
-                    }
-                }
-            ],
             "place": [
                 "trees/mixed/tredwood1",
                 "trees/mixed/tredwood2",
@@ -306,6 +244,13 @@
         },
         {
             "chance": 0.45,
+            "edit": [{
+                "find": [{"block": "oak_leaves"}],
+                "replace": {"palette": [{
+                    "data": {"persistent": true},
+                    "block": "birch_leaves"
+                }]}
+            }],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -315,35 +260,6 @@
                 },
                 "enabled": true
             },
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "birch_leaves"
-                        },
-                        {
-                            "block": "spruce_leaves"
-                        }
-                    ],
-                    "exact": false,
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "jungle_leaves"
-                            },
-                            {
-                                "block": "acacia_leaves"
-                            },
-                            {
-                                "block": "oak_leaves"
-                            },
-                            {
-                                "block": "dark_oak_leaves"
-                            }
-                        ]
-                    }
-                }
-            ],
             "place": [
                 "trees/mixed/tredwoodsmol1",
                 "trees/mixed/tredwoodsmol2",
@@ -371,35 +287,6 @@
                 },
                 "enabled": true
             },
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "birch_leaves"
-                        },
-                        {
-                            "block": "spruce_leaves"
-                        }
-                    ],
-                    "exact": false,
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "jungle_leaves"
-                            },
-                            {
-                                "block": "acacia_leaves"
-                            },
-                            {
-                                "block": "oak_leaves"
-                            },
-                            {
-                                "block": "dark_oak_leaves"
-                            }
-                        ]
-                    }
-                }
-            ],
             "place": [
                 "clutter/spruceclutt1",
                 "clutter/spruceclutt2",
@@ -424,35 +311,6 @@
                 },
                 "enabled": true
             },
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "birch_leaves"
-                        },
-                        {
-                            "block": "spruce_leaves"
-                        }
-                    ],
-                    "exact": false,
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "jungle_leaves"
-                            },
-                            {
-                                "block": "acacia_leaves"
-                            },
-                            {
-                                "block": "oak_leaves"
-                            },
-                            {
-                                "block": "dark_oak_leaves"
-                            }
-                        ]
-                    }
-                }
-            ],
             "place": [
                 "clutter/rshrub1",
                 "clutter/rshrub2"
@@ -479,35 +337,6 @@
                 "trees/mixed/tredwoodbee2",
                 "trees/mixed/tredwoodbee3",
                 "trees/mixed/tredwoodbee4"
-            ],
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "birch_leaves"
-                        },
-                        {
-                            "block": "spruce_leaves"
-                        }
-                    ],
-                    "exact": false,
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "jungle_leaves"
-                            },
-                            {
-                                "block": "acacia_leaves"
-                            },
-                            {
-                                "block": "oak_leaves"
-                            },
-                            {
-                                "block": "dark_oak_leaves"
-                            }
-                        ]
-                    }
-                }
             ],
             "translate": {
                 "x": 0,
