@@ -23,7 +23,7 @@
         "downfallType": "snow",
         "temperature": -3,
         "waterFogColor": "#216FC4",
-        "foliageColor": "#B8D0E1",
+        "foliageColor": "#6FA6CE",
         "grassColor": "#D0E1FF"
     }],
     "layers": [
@@ -107,34 +107,14 @@
         {
             "chance": 0.4,
             "density": 2,
-            "edit": [
-                {
-                    "find": [{"block": "spruce_leaves"}],
-                    "replace": {
-                        "style": {
-                            "style": "PERLIN",
-                            "zoom": 0.2
-                        },
-                        "palette": [
-                            {"block": "oak_leaves"},
-                            {"block": "dark_oak_leaves"}
-                        ]
-                    }
-                },
-                {
-                    "find": [
-                        {"block": "birch_leaves"},
-                        {"block": "oak_leaves"}
-                    ],
-                    "replace": {"palette": [
-                        {
-                            "weight": 4,
-                            "block": "ice"
-                        },
-                        {"block": "packed_ice"}
-                    ]}
-                }
-            ],
+            "edit": [{
+                "find": [{"block": "birch_leaves"}],
+                "replace": {"palette": [{"block": "oak_leaves", "data": {"persistent": true}}]}
+            },
+            {
+                "find": [{"block": "spruce_leaves"}],
+                "replace": {"palette": [{"block": "dark_oak_leaves", "data": {"persistent": true}}]}
+            }],
             "snow": 1,
             "rotation": {
                 "yAxis": {
