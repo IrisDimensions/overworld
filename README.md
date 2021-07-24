@@ -16,14 +16,16 @@ If you want to contribute as well, feel free to make a fork and pull requests.
 We sporadically review these requests so please contact us on Discord if you've made any.
 
 
-# Overworld V2  1.17
+# Overworld V2  1.17+
 Roadmap
+- [ ] Fill regions with more content, swamp, cold, etc...
+- [ ] Fix straight lines...
 - [x] Ore implementation for copper 
 - [X] New implementation for andesite, gravel, granite, and deepslate for the infinite height in 1.17+ (need to objectify them)
 - [X] Fix implementation of objects in the REGIONS folder. They are not working, Clamp, and Bottom, are not working.
 - [X] Amythests
 - [ ] Pretty caves (with whatever new blocks they added!
-- [-] Biomes that show off the new blocks
+- [ ] Biomes that show off the new blocks *
 - [X] Implement all the new blocks
 - [X] Fix Despawns and rework Spawns
 
