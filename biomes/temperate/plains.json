@@ -85,7 +85,7 @@
     ],
     "objects": [
         {
-            "mode": "VACUUM",
+            "mode": "PAINT",
             "chance": 0.00975,
             "rotation": {
                 "yAxis": {
@@ -109,7 +109,7 @@
             }
         },
         {
-            "mode": "VACUUM",
+            "mode": "PAINT",
             "chance": 0.00675,
             "rotation": {
                 "yAxis": {
@@ -187,7 +187,7 @@
         },
         {
             "chance": 1.0E-4,
-            "mode": "VACUUM",
+            "mode": "STILT",
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -310,47 +310,6 @@
                     "max": 360
                 }
             }
-        },
-        {
-            "place": [
-                "structures/ruins-greek-temple"
-            ],
-            "chance": 0.0005,
-            "mode": "VACUUM",
-            "translate": {
-                "y": -4
-            },
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "interval": 90,
-                    "min": 0,
-                    "max": 360,
-                    "enabled": true
-                }
-            },
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "gold_block"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "chest",
-                                "weight": 1
-                            },
-                            {
-                                "block": "dirt",
-                                "weight": 5
-                            }
-                        ]
-                    },
-                    "chance": 1
-                }
-            ]
         }
     ],
     "entityInitialSpawns": [
@@ -385,7 +344,7 @@
             "rarity": 120
         }
     ],
-    "biomeStyle": {"style": "IRIS"},
+    "biomeStyle": {"style": "SIMPLEX"},
     "wall": {"palette": [
         {"block": "stone"},
         {"block": "andesite"}
