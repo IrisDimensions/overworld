@@ -406,17 +406,8 @@
             }
         },
         {
-            "chance": 3.6E-4,
-            "edit": [
-                {
-                    "find": [{"block": "white_wool"}],
-                    "replace": {"palette": [{"block": "oak_wood"}]}
-                },
-                {
-                    "find": [{"block": "black_wool"}],
-                    "replace": {"palette": [{"block": "oak_wood"}]}
-                }
-            ],
+            "chance": 2.0E-7,
+            "mode": "MIN_HEIGHT",
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -426,16 +417,20 @@
                 },
                 "enabled": true
             },
-            "place": ["trees/mixed/smoakog80"],
-            "mode": "MIN_HEIGHT",
+            "place": [
+                "void/void",
+                "void/void",
+                "void/void",
+                "trees/mixed/smoakog80"
+            ],
             "translate": {
                 "x": 0,
-                "y": -4,
+                "y": -5,
                 "z": 0
             }
         }
     ],
-    "biomeStyle": {"style": "IRIS"},
+    "biomeStyle": {"style": "SIMPLEX"},
     "decorators": [
         {
             "chance": 0.3,
