@@ -35,6 +35,7 @@
             ]
         }
     ],
+
     "jigsawStructures": [
         {
             "rarity": 1700,
@@ -45,30 +46,69 @@
             "structure": "village-temperate"
         }
     ],
-    "entityInitialSpawns": [
+    "biomeStyle": {"style": "SIMPLEX"},
+    "decorators": [
         {
-            "entity": "cow",
-            "maxSpawns": 1,
-            "minSpawns": 1,
-            "rarity": 7
+            "chance": 0.8,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.2,
+            "palette": [
+                {
+                    "weight": 1,
+                    "block": "grass"
+                },
+                {"block": "grass"},
+                {"block": "grass"},
+                {
+                    "chance": 7,
+                    "block": "grass"
+                }
+            ]
         },
         {
-            "entity": "pig",
-            "maxSpawns": 1,
-            "minSpawns": 1,
-            "rarity": 7
+            "chance": 0.03,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.2,
+            "palette": [{
+                "block": "oak_leaves",
+                "data": {"persistent": true}
+            }]
         },
         {
-            "entity": "chicken",
-            "maxSpawns": 1,
-            "minSpawns": 1,
-            "rarity": 7
+            "chance": 0.02,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.2,
+            "palette": [{"block": "tall_grass"}]
         },
         {
-            "entity": "sheep",
-            "maxSpawns": 1,
-            "minSpawns": 1,
-            "rarity": 7
+            "chance": 0.03,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.2,
+            "palette": [{"block": "rose_bush"}]
+        },
+        {
+            "chance": 0.05,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.2,
+            "palette": [{
+                "chance": 3,
+                "block": "red_mushroom"
+            }]
+        },
+        {
+            "chance": 0.05,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.2,
+            "palette": [{
+                "chance": 3,
+                "block": "poppy"
+            }]
+        },
+        {
+            "chance": 0.03,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.2,
+            "palette": [{"block": "cobblestone_slab"}]
         }
     ],
     "objects": [
@@ -250,71 +290,6 @@
             ]
         }
     ],
-    "biomeStyle": {"style": "SIMPLEX"},
-    "decorators": [
-        {
-            "chance": 0.8,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.2,
-            "palette": [
-                {
-                    "weight": 1,
-                    "block": "grass"
-                },
-                {"block": "grass"},
-                {"block": "grass"},
-                {
-                    "chance": 7,
-                    "block": "grass"
-                }
-            ]
-        },
-        {
-            "chance": 0.03,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.2,
-            "palette": [{
-                "block": "oak_leaves",
-                "data": {"persistent": true}
-            }]
-        },
-        {
-            "chance": 0.02,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.2,
-            "palette": [{"block": "tall_grass"}]
-        },
-        {
-            "chance": 0.03,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.2,
-            "palette": [{"block": "rose_bush"}]
-        },
-        {
-            "chance": 0.05,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.2,
-            "palette": [{
-                "chance": 3,
-                "block": "red_mushroom"
-            }]
-        },
-        {
-            "chance": 0.05,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.2,
-            "palette": [{
-                "chance": 3,
-                "block": "poppy"
-            }]
-        },
-        {
-            "chance": 0.03,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.2,
-            "palette": [{"block": "cobblestone_slab"}]
-        }
-    ],
     "wall": {
         "style": {"style": "STATIC"},
         "palette": [
@@ -323,5 +298,25 @@
             {"block": "stone"}
         ]
     },
-    "biomeScatter": ["FOREST"]
+    "biomeScatter": ["FOREST"],
+    "entityInitialSpawns": [
+        {
+            "entity": "sheep",
+            "minSpawns": 1,
+            "maxSpawns": 2,
+            "rarity": 10
+        },
+        {
+            "entity": "wolf",
+            "minSpawns": 2,
+            "maxSpawns": 5,
+            "rarity": 70
+        },
+        {
+            "entity": "fox",
+            "maxSpawns": 1,
+            "minSpawns": 3,
+            "rarity": 70
+        }
+    ]
 }
