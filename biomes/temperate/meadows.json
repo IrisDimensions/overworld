@@ -107,7 +107,7 @@
     "objects": [
         {
             "mode": "VACUUM",
-            "chance": 0.00975,
+            "chance": 0.009,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -121,54 +121,10 @@
                 "clutter/camp1",
                 "clutter/camp3",
                 "clutter/camp4",
-                "clutter/camp5"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "mode": "VACUUM",
-            "chance": 0.00675,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 360,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": ["clutter/camp2"],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.002,
-            "edit": [{
-                "find": [{"block": "glass"}],
-                "replace": {"palette": [{"block": "void_air"}]}
-            }],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": ["structures/cave2"],
-            "translate": {
-                "x": 0,
-                "y": -57,
-                "z": 0
-            }
+                "clutter/camp5",
+                "clutter/camp2"
+            ]
+
         },
         {
             "chance": 0.01,
@@ -198,13 +154,15 @@
                 "trees/oak/shoakgeneric8",
                 "trees/oak/shoakgeneric9",
                 "trees/oak/shoakgeneric1",
-                "trees/oak/shoakgeneric2"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
+                "trees/oak/shoakgeneric2",
+                "trees/oak/generic1",
+                "trees/oak/generic2",
+                "trees/oak/generic3",
+                "trees/oak/generic4",
+                "trees/oak/generic5",
+                "trees/oak/generic6"
+            ]
+
         },
         {
             "chance": 1.0E-4,
@@ -218,15 +176,11 @@
                 },
                 "enabled": true
             },
-            "place": ["structures/ruin1"],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
+            "place": ["structures/ruin1"]
+
         },
         {
-            "chance": 0.005,
+            "chance": 0.004,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -243,115 +197,20 @@
                 "clutter/obelisk4",
                 "clutter/obelisk5",
                 "clutter/obelisk6",
-                "clutter/obelisk7"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "mode": "PAINT",
-            "chance": 0.002,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 360,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
+                "clutter/obelisk7",
                 "clutter/genericpeak1",
                 "clutter/genericpeak2",
                 "clutter/genericpeak3",
                 "clutter/genericpeak5",
-                "clutter/genericpeak6"
-            ],
-            "translate": {
-                "x": 0,
-                "y": -4,
-                "z": 0
-            }
-        },
-        {
-            "place": [
-                "trees/oak/generic1",
-                "trees/oak/generic2",
-                "trees/oak/generic3",
-                "trees/oak/generic4",
-                "trees/oak/generic5",
-                "trees/oak/generic6"
-            ],
-            "chance": 0.02,
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "interval": 90,
-                    "min": 0,
-                    "max": 360
-                }
-            }
-        },
-        {
-            "place": [
+                "clutter/genericpeak6",
+                "structures/landstone1",
+                "structures/landstone2",
+                "structures/landstone3",
+                "structures/landstone4",
+                "structures/landstone5",
                 "clutter/statue-villager-plains"
-            ],
-            "chance": 0.008,
-            "mode": "MIN_HEIGHT",
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "interval": 90,
-                    "min": 0,
-                    "max": 360
-                }
-            }
-        },
-        {
-            "place": [
-                "structures/ruins-greek-temple"
-            ],
-            "chance": 0.0005,
-            "mode": "VACUUM",
-            "translate": {
-                "y": -5
-            },
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "interval": 90,
-                    "min": 0,
-                    "max": 360,
-                    "enabled": true
-                }
-            },
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "gold_block"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "chest",
-                                "weight": 1
-                            },
-                            {
-                                "block": "dirt",
-                                "weight": 5
-                            }
-                        ]
-                    },
-                    "chance": 1
-                }
             ]
+
         }
     ],
     "entityInitialSpawns": [

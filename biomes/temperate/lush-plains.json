@@ -1,7 +1,7 @@
 {
     "name": "Lush Plains",
-    "derivative": "JUNGLE_EDGE",
-    "vanillaDerivative": "JUNGLE_EDGE",
+    "derivative": "FLOWER_FOREST",
+    "vanillaDerivative": "FLOWER_FOREST",
     "color": "#68de35",
     "generators": [{
         "min": 4,
@@ -55,7 +55,7 @@
     ],
     "decorators": [
         {
-            "chance": 0.06,
+            "chance": 0.05,
             "variance": {
                 "style": "STATIC"
             },
@@ -97,7 +97,7 @@
             ]
         },
         {
-            "chance": 0.08,
+            "chance": 0.05,
             "palette": [
                 {
                     "block": "oak_leaves",
@@ -115,7 +115,7 @@
     "objects": [
         {
             "mode": "VACUUM",
-            "chance": 0.00975,
+            "chance": 0.009,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -129,46 +129,10 @@
                 "clutter/camp1",
                 "clutter/camp3",
                 "clutter/camp4",
-                "clutter/camp5"
+                "clutter/camp5",
+                "clutter/camp2"
             ]
 
-        },
-        {
-            "mode": "VACUUM",
-            "chance": 0.00675,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 360,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": ["clutter/camp2"]
-
-        },
-        {
-            "chance": 0.002,
-            "edit": [{
-                "find": [{"block": "glass"}],
-                "replace": {"palette": [{"block": "void_air"}]}
-            }],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 360,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": ["structures/cave2"],
-            "translate": {
-                "x": 0,
-                "y": -57,
-                "z": 0
-            }
         },
         {
             "chance": 0.01,
@@ -198,7 +162,13 @@
                 "trees/oak/shoakgeneric8",
                 "trees/oak/shoakgeneric9",
                 "trees/oak/shoakgeneric1",
-                "trees/oak/shoakgeneric2"
+                "trees/oak/shoakgeneric2",
+                "trees/oak/generic1",
+                "trees/oak/generic2",
+                "trees/oak/generic3",
+                "trees/oak/generic4",
+                "trees/oak/generic5",
+                "trees/oak/generic6"
             ]
 
         },
@@ -218,7 +188,7 @@
 
         },
         {
-            "chance": 0.005,
+            "chance": 0.004,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -235,116 +205,20 @@
                 "clutter/obelisk4",
                 "clutter/obelisk5",
                 "clutter/obelisk6",
-                "clutter/obelisk7"
-            ]
-
-        },
-        {
-            "mode": "PAINT",
-            "chance": 0.002,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 360,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
+                "clutter/obelisk7",
                 "clutter/genericpeak1",
                 "clutter/genericpeak2",
                 "clutter/genericpeak3",
                 "clutter/genericpeak5",
-                "clutter/genericpeak6"
-            ],
-            "translate": {
-                "x": 0,
-                "y": -4,
-                "z": 0
-            }
-        },
-        {
-            "place": [
-                "trees/oak/generic1",
-                "trees/oak/generic2",
-                "trees/oak/generic3",
-                "trees/oak/generic4",
-                "trees/oak/generic5",
-                "trees/oak/generic6"
-            ],
-            "chance": 0.07,
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "interval": 90,
-                    "min": 0,
-                    "max": 360
-                }
-            }
-        },
-        {
-            "place": [
+                "clutter/genericpeak6",
                 "structures/landstone1",
                 "structures/landstone2",
                 "structures/landstone3",
                 "structures/landstone4",
-                "structures/landstone5"
-            ],
-            "chance": 0.02,
-            "mode": "MIN_HEIGHT",
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "interval": 90,
-                    "min": 0,
-                    "max": 360
-                }
-            }
-        },
-        {
-            "place": [
+                "structures/landstone5",
                 "clutter/statue-villager-plains"
-            ],
-            "chance": 0.008,
-            "mode": "MIN_HEIGHT",
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "interval": 90,
-                    "min": 0,
-                    "max": 360
-                }
-            }
-        }
-    ],
-    "entityInitialSpawns": [
-        {
-            "entity": "cow",
-            "maxSpawns": 3,
-            "minSpawns": 1,
-            "rarity": 7
-        },
-        {
-            "entity": "pig",
-            "maxSpawns": 3,
-            "minSpawns": 1,
-            "rarity": 7
-        },
-        {
-            "entity": "chicken",
-            "maxSpawns": 3,
-            "minSpawns": 1,
-            "rarity": 7
-        },
-        {
-            "entity": "sheep",
-            "maxSpawns": 3,
-            "minSpawns": 1,
-            "rarity": 7
+            ]
+
         }
     ],
     "biomeStyle": {"style": "SIMPLEX"},
