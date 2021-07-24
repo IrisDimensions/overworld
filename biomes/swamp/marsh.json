@@ -1,0 +1,160 @@
+{
+    "name": "Swamp Marsh",
+    "derivative": "SWAMP",
+    "rarity": 1,
+    "color": "#36A300",
+    "vanillaDerivative": "SWAMP",
+    "children": ["swamp/marsh-rotten"],
+    "generators": [{
+        "min": 3,
+        "max": 6,
+        "generator": "mountain"
+    }],
+    "customDerivitives": [{
+        "id": "swamp_marsh_rotten",
+        "waterColor": "#684D1A",
+        "grassColor": "#5C581A",
+        "spawnRarity": 20,
+        "spawns": [{"type": "SLIME"}]
+    }],
+    "layers": [
+        {
+            "style": {"style": "IRIS"},
+            "zoom": 0.5,
+            "palette": [
+                {
+                    "weight": 3,
+                    "block": "grass_block"
+                },
+                {"block": "podzol"},
+                {
+                    "weight": 4,
+                    "block": "grass_block"
+                }
+            ]
+        },
+        {"palette": [{"block": "dirt"}]},
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {"block": "dirt"},
+                {"block": "coarse_dirt"}
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
+            ]
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.003,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.02,
+            "palette": [
+                {"block": "brown_mushroom"},
+                {"block": "red_mushroom"}
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.122,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.2,
+            "palette": [
+                {"block": "large_fern"},
+                {"block": "tall_grass"}
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.142,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [
+                {"block": "grass"},
+                {"block": "fern"}
+            ],
+            "style": {"style": "STATIC"}
+        }
+    ],
+    "objects": [
+        {
+            "place": [
+                "trees/jungle/lgeneric1",
+                "trees/jungle/lgeneric2",
+                "trees/jungle/lgeneric3",
+                "trees/jungle/lgeneric4",
+                "trees/jungle/lgeneric5",
+                "trees/jungle/lgeneric7",
+                "trees/jungle/lgeneric8",
+                "trees/jungle/lgeneric9"
+            ],
+            "chance": 0.8,
+            "edit": [
+                {
+                    "find": [{"block": "jungle_leaves"}],
+                    "replace": {"palette": [{"block": "oak_leaves"}]}
+                },
+                {
+                    "find": [{"block": "jungle_wood"}],
+                    "replace": {"palette": [{"block": "dark_oak_wood"}]}
+                },
+                {
+                    "find": [{"block": "jungle_log"}],
+                    "replace": {"palette": [{"block": "dark_oak_wood"}]}
+                }
+            ],
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": -360,
+                    "max": 360
+                }
+            },
+            "translate": {"y": -3}
+        },
+        {
+            "chance": 0.35,
+            "density": 2,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/oakclutt1",
+                "clutter/oakclutt2",
+                "clutter/oakclutt3"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -2,
+                "z": 0
+            }
+        }
+    ],
+    "biomeZoom": 9,
+    "biomeStyle": {"style": "SIMPLEX"},
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {"block": "stone"},
+            {"block": "andesite"},
+            {"block": "stone"}
+        ]
+    }
+}

@@ -1,0 +1,110 @@
+{
+    "name": "Ocean Beach",
+    "derivative": "PLAINS",
+    "vanillaDerivative": "PLAINS",
+    "color": "#39ABDF",
+    "generators": [{
+        "generator": "ocean",
+        "max": -20,
+        "min": -30
+    }],
+    "layers": [
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "palette": [{"block": "grass_block"}]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {"block": "dirt"},
+                {"block": "coarse_dirt"}
+            ]
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.2,
+            "variance": {
+                "style": "CELLULAR",
+                "zoom": 0.25,
+                "fracture": {
+                    "style": "SIMPLEX",
+                    "zoom": 0.2,
+                    "multiplier": 10
+                }
+            },
+            "style": {
+                "style": "SIMPLEX",
+                "zoom": 0.2,
+                "fracture": {
+                    "style": "STATIC",
+                    "multiplier": 8
+                }
+            },
+            "palette": [
+                {"block": "dandelion"},
+                {"block": "poppy"},
+                {"block": "blue_orchid"},
+                {"block": "allium"},
+                {"block": "azure_bluet"},
+                {"block": "red_tulip"},
+                {"block": "orange_tulip"},
+                {"block": "white_tulip"},
+                {"block": "pink_tulip"},
+                {"block": "oxeye_daisy"},
+                {"block": "cornflower"},
+                {"block": "lily_of_the_valley"}
+            ]
+        },
+        {
+            "partOf": "SHORE_LINE",
+            "chance": 0.09,
+            "stackMin": 1,
+            "stackMax": 4,
+            "palette": [{"block": "sugar_cane"}],
+            "style": {
+                "style": "IRIS",
+                "zoom": 0.65
+            },
+            "heightVariance": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "chance": 0.01,
+            "palette": [{"block": "tall_grass"}]
+        },
+        {
+            "chance": 0.5,
+            "palette": [{"block": "grass"}]
+        }
+    ],
+    "objects": [{
+        "place": [
+            "structures/landstone1",
+            "structures/landstone2",
+            "structures/landstone3",
+            "structures/landstone4",
+            "structures/landstone5"
+        ],
+        "chance": 0.02,
+        "mode": "MIN_HEIGHT",
+        "rotation": {
+            "enabled": true,
+            "yAxis": {
+                "enabled": true,
+                "interval": 90,
+                "min": -360,
+                "max": 360
+            }
+        }
+    }],
+    "biomeZoom": 60,
+    "biomeStyle": {"style": "SIMPLEX"},
+    "wall": {"palette": [
+        {"block": "stone"},
+        {"block": "andesite"}
+    ]}
+}

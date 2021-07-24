@@ -1,5 +1,5 @@
 {
-    "version": 2,
+    "version": 2001,
     "OVERWORLD-VERSION": 3.134,
     "name": "Overworld",
     "environment": "NORMAL",
@@ -18,12 +18,12 @@
     "regions": [
         "mushroom",
         "swamp",
-        "frozen",
-        "tundra",
         "temperate",
-        "ocean",
+        "hot",
         "tropical",
-        "hot"
+        "temperate",
+        "frozen",
+        "tundra"
     ],
     "regionStyle": {
         "style": "NOWHERE_CELLULAR",
@@ -40,9 +40,7 @@
     },
     "SEAS": "Sea settings (for the biomes that are oceans).",
     "seaZoom": 1.25,
-    "seaBiomeStyle": {
-        "style": "FRACTAL_FBM_IRIS"
-    },
+    "seaBiomeStyle": {"style": "NOWHERE_CELLULAR"},
     "LAND": "Land settings (for the biomes that are non-ocean).",
     "landZoom": 3.2,
     "landBiomeStyle": {
@@ -56,13 +54,11 @@
     },
     "LOOT": "Contains a list of loot tables that are attempted to be applied to all chests that spawn.",
     "lootTries": 32,
-    "loot": {
-        "tables": [
-            "global-treasure",
-            "global-tools",
-            "global-clutter"
-        ]
-    },
+    "loot": {"tables": [
+        "global-treasure",
+        "global-tools",
+        "global-clutter"
+    ]},
     "ORES": "All settings in regards to deposits. Contains the ores spawning in your world.",
     "deposits": [
         {
@@ -72,11 +68,7 @@
             "minPerChunk": 1,
             "minSize": 25,
             "maxSize": 25,
-            "palette": [
-                {
-                    "block": "granite"
-                }
-            ],
+            "palette": [{"block": "granite"}],
             "varience": 2
         },
         {
@@ -86,11 +78,7 @@
             "minPerChunk": 1,
             "minSize": 25,
             "maxSize": 25,
-            "palette": [
-                {
-                    "block": "andesite"
-                }
-            ],
+            "palette": [{"block": "andesite"}],
             "varience": 2
         },
         {
@@ -100,11 +88,7 @@
             "minPerChunk": 1,
             "minSize": 25,
             "maxSize": 25,
-            "palette": [
-                {
-                    "block": "diorite"
-                }
-            ],
+            "palette": [{"block": "diorite"}],
             "varience": 2
         },
         {
@@ -114,11 +98,7 @@
             "minPerChunk": 1,
             "minSize": 25,
             "maxSize": 25,
-            "palette": [
-                {
-                    "block": "gravel"
-                }
-            ],
+            "palette": [{"block": "gravel"}],
             "varience": 2
         },
         {
@@ -128,11 +108,7 @@
             "minPerChunk": 128,
             "minSize": 8,
             "maxSize": 4,
-            "palette": [
-                {
-                    "block": "deepslate"
-                }
-            ],
+            "palette": [{"block": "deepslate"}],
             "varience": 4
         },
         {
@@ -143,30 +119,14 @@
             "minSize": 8,
             "maxSize": 4,
             "palette": [
-                {
-                    "block": "deepslate_copper_ore"
-                },
-                {
-                    "block": "deepslate_diamond_ore"
-                },
-                {
-                    "block": "deepslate_emerald_ore"
-                },
-                {
-                    "block": "deepslate_gold_ore"
-                },
-                {
-                    "block": "deepslate_iron_ore"
-                },
-                {
-                    "block": "deepslate_coal_ore"
-                },
-                {
-                    "block": "deepslate_redstone_ore"
-                },
-                {
-                    "block": "deepslate_lapis_ore"
-                }
+                {"block": "deepslate_copper_ore"},
+                {"block": "deepslate_diamond_ore"},
+                {"block": "deepslate_emerald_ore"},
+                {"block": "deepslate_gold_ore"},
+                {"block": "deepslate_iron_ore"},
+                {"block": "deepslate_coal_ore"},
+                {"block": "deepslate_redstone_ore"},
+                {"block": "deepslate_lapis_ore"}
             ],
             "varience": 4
         },
@@ -177,11 +137,7 @@
             "minPerChunk": 0,
             "minSize": 3,
             "maxSize": 6,
-            "palette": [
-                {
-                    "block": "diamond_ore"
-                }
-            ],
+            "palette": [{"block": "diamond_ore"}],
             "varience": 5
         },
         {
@@ -191,14 +147,10 @@
             "minPerChunk": 3,
             "minSize": 6,
             "maxSize": 10,
-            "palette": [
-                {
-                    "data": {
-                        "lit": false
-                    },
-                    "block": "redstone_ore"
-                }
-            ],
+            "palette": [{
+                "data": {"lit": false},
+                "block": "redstone_ore"
+            }],
             "varience": 7
         },
         {
@@ -208,11 +160,7 @@
             "minPerChunk": 1,
             "minSize": 3,
             "maxSize": 5,
-            "palette": [
-                {
-                    "block": "gold_ore"
-                }
-            ],
+            "palette": [{"block": "gold_ore"}],
             "varience": 3
         },
         {
@@ -222,11 +170,7 @@
             "minPerChunk": 2,
             "minSize": 3,
             "maxSize": 8,
-            "palette": [
-                {
-                    "block": "lapis_ore"
-                }
-            ],
+            "palette": [{"block": "lapis_ore"}],
             "varience": 5
         },
         {
@@ -236,11 +180,7 @@
             "minPerChunk": 8,
             "minSize": 4,
             "maxSize": 8,
-            "palette": [
-                {
-                    "block": "iron_ore"
-                }
-            ],
+            "palette": [{"block": "iron_ore"}],
             "varience": 7
         },
         {
@@ -250,11 +190,7 @@
             "minPerChunk": 8,
             "minSize": 4,
             "maxSize": 9,
-            "palette": [
-                {
-                    "block": "copper_ore"
-                }
-            ],
+            "palette": [{"block": "copper_ore"}],
             "varience": 7
         },
         {
@@ -264,11 +200,7 @@
             "minPerChunk": 9,
             "minSize": 6,
             "maxSize": 10,
-            "palette": [
-                {
-                    "block": "coal_ore"
-                }
-            ],
+            "palette": [{"block": "coal_ore"}],
             "varience": 9
         }
     ],
@@ -339,34 +271,28 @@
             },
             "fluid": {
                 "fluidHeight": 12,
-                "fluidType": {
-                    "block": "lava"
-                }
+                "fluidType": {"block": "lava"}
             }
         }
     ],
-    "caveBiomeStyle": {
-        "style": "CELLULAR_IRIS_DOUBLE"
-    },
+    "caveBiomeStyle": {"style": "CELLULAR_IRIS_DOUBLE"},
     "CAVERNS//CARVING": "Carving layers that cut off certain parts of the world",
     "carving": true,
-    "carveLayers": [
-        {
-            "style": {
-                "style": "PERLIN_IRIS_HALF",
-                "zoom": 0.2,
-                "fracture": {
-                    "multiplier": 5,
-                    "style": "PERLIN",
-                    "zoom": 0.5
-                }
-            },
-            "fullPercent": 0.01,
-            "threshold": 0.68,
-            "minHeight": -50,
-            "maxHeight": 110
-        }
-    ],
+    "carveLayers": [{
+        "style": {
+            "style": "PERLIN_IRIS_HALF",
+            "zoom": 0.2,
+            "fracture": {
+                "multiplier": 5,
+                "style": "PERLIN",
+                "zoom": 0.5
+            }
+        },
+        "fullPercent": 0.01,
+        "threshold": 0.68,
+        "minHeight": -50,
+        "maxHeight": 110
+    }],
     "RAVINES": "Settings regarding ravines. Iris does not know when and where they spawn, so it may look weird (with cave fluids)",
     "ravines": false,
     "ravineRarity": 500,
@@ -409,12 +335,8 @@
             "trigger": "PHANTOM"
         }
     ],
-    "skylandBiomeStyle": {
-        "style": "CELLULAR_IRIS_DOUBLE"
-    },
-    "islandBiomeStyle": {
-        "style": "CELLULAR_IRIS_DOUBLE"
-    },
+    "skylandBiomeStyle": {"style": "CELLULAR_IRIS_DOUBLE"},
+    "islandBiomeStyle": {"style": "CELLULAR_IRIS_DOUBLE"},
     "shoreBiomeStyle": {
         "style": "CELLULAR",
         "fracture": {

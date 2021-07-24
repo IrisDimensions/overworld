@@ -1,0 +1,175 @@
+{
+    "name": "Ocean Warm",
+    "derivative": "WARM_OCEAN",
+    "vanillaDerivative": "WARM_OCEAN",
+    "color": "#2A2180",
+    "children": ["ocean/warm-bottom"],
+    "generators": [{
+        "generator": "plain",
+        "max": -10,
+        "min": -19
+    }],
+    "layers": [{
+        "minHeight": 2,
+        "maxHeight": 10,
+        "style": {"style": "FRACTAL_FBM_IRIS"},
+        "zoom": 0.6,
+        "palette": [
+            {"block": "sand"},
+            {"block": "clay"},
+            {"block": "sand"},
+            {"block": "gravel"},
+            {"block": "sand"},
+            {"block": "dirt"},
+            {
+                "weight": 2,
+                "block": "sand"
+            }
+        ]
+    }],
+    "childStyle": {
+        "style": "GLOB",
+        "zoom": 1,
+        "exponent": 1.3
+    },
+    "childShrinkFactor": 1,
+    "decorators": [
+        {
+            "chance": 0.02,
+            "palette": [{"block": "kelp_plant"}],
+            "stackMin": 2,
+            "stackMax": 6,
+            "partOf": "SEA_FLOOR"
+        },
+        {
+            "chance": 0.05,
+            "palette": [{"block": "seagrass"}]
+        },
+        {
+            "chance": 0.05,
+            "palette": [{
+                "block": "tall_seagrass",
+                "data": {"half": "lower"}
+            }],
+            "topPalette": [{
+                "block": "tall_seagrass",
+                "data": {"half": "upper"}
+            }],
+            "partOf": "SEA_FLOOR"
+        }
+    ],
+    "objects": [
+        {
+            "place": [
+                "clutter/coralpink1",
+                "clutter/coralpink2",
+                "clutter/coralpink3",
+                "clutter/coralpink4",
+                "clutter/coralpurp1",
+                "clutter/coralpurp2",
+                "clutter/coralpurp3",
+                "clutter/coralred1",
+                "clutter/coralby1",
+                "clutter/coralby2",
+                "clutter/coralby3",
+                "clutter/coralby4"
+            ],
+            "chance": 1,
+            "density": 2,
+            "underwater": true,
+            "mode": "CENTER_HEIGHT",
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "max": 360,
+                    "min": -360
+                }
+            }
+        },
+        {
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ],
+            "chance": 0.5,
+            "density": 2,
+            "underwater": true,
+            "mode": "CENTER_HEIGHT",
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "max": 360,
+                    "min": -360
+                }
+            },
+            "edit": [{
+                "find": [
+                    {"block": "stone"},
+                    {"block": "dirt"}
+                ],
+                "replace": {
+                    "palette": [
+                        {"block": "brain_coral_block"},
+                        {"block": "horn_coral_block"},
+                        {"block": "tube_coral_block"},
+                        {"block": "fire_coral_block"},
+                        {"block": "bubble_coral_block"}
+                    ],
+                    "style": {"style": "CELLULAR"},
+                    "zoom": 0.07
+                }
+            }]
+        },
+        {
+            "place": [
+                "structures/landstone1",
+                "structures/landstone2",
+                "structures/landstone3",
+                "structures/landstone4",
+                "structures/landstone5"
+            ],
+            "chance": 1,
+            "mode": "FAST_MIN_HEIGHT",
+            "underwater": true,
+            "waterloggable": true,
+            "edit": [
+                {
+                    "find": [
+                        {"block": "grass_block"},
+                        {"block": "dirt"}
+                    ],
+                    "replace": {"palette": [{"block": "clay"}]}
+                },
+                {
+                    "find": [
+                        {"block": "tall_grass"},
+                        {"block": "grass"}
+                    ],
+                    "replace": {"palette": [{"block": "seagrass"}]}
+                }
+            ]
+        },
+        {
+            "place": [
+                "structures/genericw",
+                "structures/genericc",
+                "structures/genericr",
+                "structures/genericu",
+                "structures/genericc"
+            ],
+            "chance": 0.005,
+            "onwater": true,
+            "translate": {"y": -1},
+            "waterloggable": true
+        }
+    ]
+}

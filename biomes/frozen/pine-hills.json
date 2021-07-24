@@ -1,0 +1,123 @@
+{
+    "name": "Frozen Pine Hills",
+    "color": "#498EB7",
+    "rarity": 1,
+    "derivative": "SNOWY_TAIGA",
+    "vanillaDerivative": "SNOWY_TAIGA",
+    "layers": [
+        {
+            "minHeight": 0,
+            "maxHeight": 1,
+            "palette": [{"block": "snow_block"}]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "palette": [{"block": "grass_block"}]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 28,
+            "palette": [{"block": "dirt"}]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
+            ]
+        }
+    ],
+    "customDerivitives": [{
+        "id": "frozen_pine_hills",
+        "downfallType": "snow",
+        "temperature": -3,
+        "waterColor": "#216FC4",
+        "fogColor": "#A6D1FF",
+        "waterFogColor": "#216FC4",
+        "foliageColor": "#B8D0E1",
+        "grassColor": "#D0E1FF"
+    }],
+    "generators": [{
+        "generator": "smooth-dunes",
+        "max": 20,
+        "min": 6
+    }],
+    "jigsawStructures": [
+        {
+            "rarity": 1700,
+            "structure": "igloo"
+        },
+        {
+            "rarity": 1700,
+            "structure": "pillager_outpost"
+        },
+        {
+            "rarity": 1500,
+            "structure": "village-snowy"
+        }
+    ],
+    "decorators": [{
+        "chance": 1,
+        "variance": {
+            "style": "IRIS",
+            "zoom": 0.23
+        },
+        "palette": [
+            {
+                "data": {"layers": 1},
+                "block": "snow"
+            },
+            {"block": "air"}
+        ]
+    }],
+    "wall": {"palette": [
+        {"block": "stone"},
+        {"block": "andesite"}
+    ]},
+    "objects": [{
+        "edit": [{
+            "find": [{"block": "spruce_leaves"}],
+            "replace": {
+                "style": {
+                    "style": "PERLIN",
+                    "zoom": 0.2
+                },
+                "palette": [
+                    {"block": "oak_leaves"},
+                    {"block": "dark_oak_leaves"}
+                ]
+            }
+        }],
+        "place": [
+            "trees/spruce/pine1",
+            "trees/spruce/pine2",
+            "trees/spruce/pine3",
+            "trees/spruce/pine4",
+            "trees/spruce/pine5",
+            "trees/spruce/pine6",
+            "trees/spruce/pine7",
+            "trees/spruce/pine8",
+            "trees/spruce/pine9"
+        ],
+        "chance": 0.9,
+        "rotation": {
+            "enabled": true,
+            "yAxis": {
+                "enabled": true,
+                "interval": 90,
+                "min": -360,
+                "max": 360
+            }
+        },
+        "warp": {
+            "style": "IRIS_DOUBLE",
+            "exponent": 1.2,
+            "zoom": 0.4
+        },
+        "snow": 0.1
+    }]
+}

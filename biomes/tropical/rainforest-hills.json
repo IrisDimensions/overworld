@@ -1,0 +1,260 @@
+{
+    "name": "Rainforest Hills",
+    "derivative": "JUNGLE",
+    "rarity": 1,
+    "color": "#67AF50",
+    "vanillaDerivative": "JUNGLE_HILLS",
+    "generators": [{
+        "min": 32,
+        "max": 65,
+        "generator": "plain-cliffs"
+    }],
+    "customDerivitives": [{
+        "id": "tropical_raionforest_hills",
+        "foliageColor": "#258F04",
+        "grassColor": "#41A726",
+        "category": "jungle",
+        "waterColor": "#3AB2A2",
+        "waterFogColor": "#3AB2A2"
+    }],
+    "jigsawStructures": [
+        {
+            "rarity": 1700,
+            "structure": "pillager_outpost"
+        },
+        {
+            "rarity": 1000,
+            "structure": "village-tundra"
+        },
+        {
+            "rarity": 1200,
+            "structure": "jungle-pyramid"
+        }
+    ],
+    "layers": [
+        {
+            "style": {"style": "STATIC"},
+            "zoom": 0.35,
+            "palette": [
+                {"block": "grass_block"},
+                {"block": "jungle_leaves"},
+                {
+                    "weight": 2,
+                    "block": "grass_block"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "palette": [{"block": "dirt"}]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
+            ]
+        }
+    ],
+    "effects": [{
+        "particleAltX": 0.301,
+        "particleAltY": -0.33885,
+        "particleAltZ": 0.301,
+        "chance": 1,
+        "particleEffect": "TOTEM",
+        "particleOffset": 12,
+        "interval": 550,
+        "particleCount": 0
+    }],
+    "decorators": [
+        {
+            "chance": 0.45,
+            "variance": {"style": "IRIS"},
+            "zoom": 0.1,
+            "palette": [
+                {"block": "jungle_leaves"},
+                {"block": "tall_grass"},
+                {"block": "grass"},
+                {"block": "jungle_leaves"},
+                {"block": "grass"},
+                {"block": "jungle_leaves"}
+            ],
+            "style": {
+                "style": "FRACTAL_BILLOW_IRIS",
+                "fracture": {"style": "STATIC"}
+            }
+        },
+        {
+            "chance": 0.25,
+            "verticalZoom": 88,
+            "variance": {"style": "STATIC"},
+            "stackMax": 1,
+            "zoom": 10,
+            "palette": [
+                {"block": "grass"},
+                {"block": "tall_grass"}
+            ],
+            "style": {"style": "STATIC"},
+            "heightVariance": {"style": "STATIC"},
+            "stackMin": 1
+        },
+        {
+            "chance": 1.0E-4,
+            "verticalZoom": 88,
+            "variance": {"style": "STATIC"},
+            "stackMax": 1,
+            "zoom": 10,
+            "palette": [{"block": "jungle_sapling"}],
+            "style": {"style": "STATIC"},
+            "heightVariance": {"style": "STATIC"},
+            "stackMin": 1
+        }
+    ],
+    "objects": [
+        {
+            "mode": "PAINT",
+            "chance": 0.0025,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": ["clutter/bincluster1"]
+        },
+        {
+            "chance": 0.7,
+            "density": 2,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "trees/jungle/cocogeneric2",
+                "trees/jungle/cocogeneric3",
+                "trees/jungle/cocogeneric4",
+                "trees/jungle/cocogeneric5",
+                "trees/jungle/spire1",
+                "trees/jungle/spire2",
+                "trees/jungle/spire3",
+                "trees/jungle/spire4",
+                "trees/jungle/spire5",
+                "trees/jungle/spire6",
+                "trees/jungle/spire7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -5,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.4,
+            "density": 2,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "trees/jungle/cocogeneric2",
+                "trees/jungle/cocogeneric3",
+                "trees/jungle/cocogeneric4",
+                "trees/jungle/cocogeneric5",
+                "trees/jungle/lgeneric6",
+                "trees/jungle/lgeneric7",
+                "trees/jungle/lgeneric8",
+                "trees/jungle/lgeneric9",
+                "trees/jungle/lgeneric1",
+                "trees/jungle/lgeneric2",
+                "trees/jungle/lgeneric3"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -5,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.4,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/boulder1",
+                "clutter/boulder2",
+                "clutter/boulder4",
+                "clutter/boulder5",
+                "clutter/boulder6",
+                "clutter/boulder7",
+                "clutter/boulder8"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.035,
+            "mode": "FAST_MIN_HEIGHT",
+            "density": 3,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "trees/jungle/largegeneric1",
+                "trees/jungle/largegeneric2",
+                "trees/jungle/largegeneric3",
+                "trees/jungle/largegeneric4",
+                "trees/jungle/largegeneric5"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -11,
+                "z": 0
+            }
+        }
+    ],
+    "wall": {
+        "style": {"style": "IRIS"},
+        "zoom": 0.1,
+        "palette": [
+            {"block": "stripped_jungle_wood"},
+            {"block": "jungle_leaves"},
+            {"block": "stripped_jungle_wood"},
+            {"block": "jungle_leaves"},
+            {"block": "stripped_jungle_wood"},
+            {"block": "jungle_leaves"},
+            {"block": "stripped_jungle_wood"}
+        ]
+    }
+}

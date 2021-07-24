@@ -1,0 +1,996 @@
+{
+    "name": "Tropical Coral Ocean",
+    "derivative": "LUKEWARM_OCEAN",
+    "color": "#213780",
+    "vanillaDerivative": "WARM_OCEAN",
+    "generators": [{
+        "min": -51,
+        "max": -37,
+        "generator": "plain"
+    }],
+    "layers": [
+        {
+            "minHeight": 2,
+            "maxHeight": 6,
+            "palette": [{"block": "sand"}]
+        },
+        {"palette": [{"block": "dirt"}]},
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {
+                    "weight": 2,
+                    "block": "dirt"
+                },
+                {"block": "coarse_dirt"}
+            ]
+        }
+    ],
+    "effects": [{
+        "particleAltX": 0.3,
+        "particleAltY": 1.960885,
+        "particleAltZ": 0.3,
+        "particleDistanceWidth": 8,
+        "chance": 1,
+        "particleEffect": "BUBBLE_COLUMN_UP",
+        "particleDistance": 5,
+        "particleOffset": 2,
+        "interval": 250,
+        "particleCount": 0
+    }],
+    "decorators": [
+        {
+            "chance": 0.005,
+            "variance": {"style": "STATIC"},
+            "stackMax": 3,
+            "zoom": 1,
+            "palette": [
+                {"block": "tube_coral_block"},
+                {"block": "brain_coral_block"},
+                {"block": "fire_coral_block"},
+                {"block": "horn_coral_block"},
+                {"block": "bubble_coral_block"}
+            ],
+            "style": {"style": "STATIC"},
+            "stackMin": 1
+        },
+        {
+            "chance": 6.0E-4,
+            "variance": {"style": "STATIC"},
+            "zoom": 1,
+            "palette": [
+                {"block": "soul_sand"},
+                {"block": "magma_block"}
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.04,
+            "variance": {"style": "STATIC"},
+            "zoom": 5,
+            "palette": [{"block": "seagrass"}],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.012,
+            "verticalZoom": 88,
+            "variance": {"style": "STATIC"},
+            "stackMax": 21,
+            "zoom": 1,
+            "palette": [{"block": "kelp_plant"}],
+            "style": {"style": "STATIC"},
+            "heightVariance": {"style": "IRIS"},
+            "stackMin": 2
+        },
+        {
+            "chance": 0.05,
+            "variance": {"style": "STATIC"},
+            "zoom": 1,
+            "palette": [
+                {"block": "tube_coral"},
+                {"block": "tube_coral_fan"}
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.05,
+            "variance": {"style": "STATIC"},
+            "zoom": 1,
+            "palette": [
+                {"block": "brain_coral"},
+                {"block": "brain_coral_fan"}
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.05,
+            "variance": {"style": "STATIC"},
+            "zoom": 1,
+            "palette": [
+                {"block": "bubble_coral"},
+                {"block": "bubble_coral_fan"}
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.05,
+            "variance": {"style": "STATIC"},
+            "zoom": 1,
+            "palette": [
+                {"block": "fire_coral"},
+                {"block": "fire_coral_fan"}
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.05,
+            "variance": {"style": "STATIC"},
+            "zoom": 1,
+            "palette": [
+                {"block": "horn_coral"},
+                {"block": "horn_coral_fan"}
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.008,
+            "variance": {"style": "STATIC"},
+            "zoom": 1,
+            "palette": [
+                {
+                    "data": {
+                        "waterlogged": true,
+                        "pickles": 2
+                    },
+                    "block": "sea_pickle"
+                },
+                {
+                    "data": {
+                        "waterlogged": true,
+                        "pickles": 3
+                    },
+                    "block": "sea_pickle"
+                },
+                {
+                    "data": {
+                        "waterlogged": true,
+                        "pickles": 4
+                    },
+                    "block": "sea_pickle"
+                }
+            ],
+            "style": {"style": "STATIC"}
+        }
+    ],
+    "objects": [
+        {
+            "chance": 0.0025,
+            "edit": [
+                {
+                    "find": [{"block": "stone"}],
+                    "replace": {"palette": [{"block": "fire_coral_block"}]}
+                },
+                {
+                    "find": [{"block": "dirt"}],
+                    "replace": {"palette": [{"block": "bubble_coral_block"}]}
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ],
+            "clamp": {"minimumHeight": 0}
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": [{"block": "stone"}],
+                    "replace": {"palette": [{"block": "fire_coral_block"}]}
+                },
+                {
+                    "find": [{"block": "dirt"}],
+                    "replace": {"palette": [{"block": "horn_coral_block"}]}
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": [{"block": "stone"}],
+                    "replace": {"palette": [{"block": "fire_coral_block"}]}
+                },
+                {
+                    "find": [{"block": "dirt"}],
+                    "replace": {"palette": [{"block": "tube_coral_block"}]}
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": [{"block": "stone"}],
+                    "replace": {"palette": [{"block": "fire_coral_block"}]}
+                },
+                {
+                    "find": [{"block": "dirt"}],
+                    "replace": {"palette": [{"block": "brain_coral_block"}]}
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": [{"block": "stone"}],
+                    "replace": {"palette": [{"block": "fire_coral_block"}]}
+                },
+                {
+                    "find": [{"block": "dirt"}],
+                    "replace": {"palette": [{"block": "fire_coral_block"}]}
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.005,
+            "edit": [
+                {
+                    "find": [{"block": "stone"}],
+                    "replace": {"palette": [{"block": "bubble_coral_block"}]}
+                },
+                {
+                    "find": [{"block": "dirt"}],
+                    "replace": {"palette": [{"block": "bubble_coral_block"}]}
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.0025,
+            "edit": [
+                {
+                    "find": [{"block": "stone"}],
+                    "replace": {"palette": [{"block": "bubble_coral_block"}]}
+                },
+                {
+                    "find": [{"block": "dirt"}],
+                    "replace": {"palette": [{"block": "horn_coral_block"}]}
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.0025,
+            "edit": [
+                {
+                    "find": [{"block": "stone"}],
+                    "replace": {"palette": [{"block": "bubble_coral_block"}]}
+                },
+                {
+                    "find": [{"block": "dirt"}],
+                    "replace": {"palette": [{"block": "tube_coral_block"}]}
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.0025,
+            "edit": [
+                {
+                    "find": [{"block": "stone"}],
+                    "replace": {"palette": [{"block": "bubble_coral_block"}]}
+                },
+                {
+                    "find": [{"block": "dirt"}],
+                    "replace": {"palette": [{"block": "brain_coral_block"}]}
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.0025,
+            "edit": [
+                {
+                    "find": [{"block": "stone"}],
+                    "replace": {"palette": [{"block": "bubble_coral_block"}]}
+                },
+                {
+                    "find": [{"block": "dirt"}],
+                    "replace": {"palette": [{"block": "bubble_coral_block"}]}
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.0025,
+            "edit": [
+                {
+                    "find": [{"block": "stone"}],
+                    "replace": {"palette": [{"block": "horn_coral_block"}]}
+                },
+                {
+                    "find": [{"block": "dirt"}],
+                    "replace": {"palette": [{"block": "bubble_coral_block"}]}
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": [{"block": "stone"}],
+                    "replace": {"palette": [{"block": "horn_coral_block"}]}
+                },
+                {
+                    "find": [{"block": "dirt"}],
+                    "replace": {"palette": [{"block": "horn_coral_block"}]}
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": [{"block": "stone"}],
+                    "replace": {"palette": [{"block": "horn_coral_block"}]}
+                },
+                {
+                    "find": [{"block": "dirt"}],
+                    "replace": {"palette": [{"block": "tube_coral_block"}]}
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": [{"block": "stone"}],
+                    "replace": {"palette": [{"block": "horn_coral_block"}]}
+                },
+                {
+                    "find": [{"block": "dirt"}],
+                    "replace": {"palette": [{"block": "brain_coral_block"}]}
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": [{"block": "stone"}],
+                    "replace": {"palette": [{"block": "horn_coral_block"}]}
+                },
+                {
+                    "find": [{"block": "dirt"}],
+                    "replace": {"palette": [{"block": "horn_coral_block"}]}
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": [{"block": "stone"}],
+                    "replace": {"palette": [{"block": "tube_coral_block"}]}
+                },
+                {
+                    "find": [{"block": "dirt"}],
+                    "replace": {"palette": [{"block": "bubble_coral_block"}]}
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": [{"block": "stone"}],
+                    "replace": {"palette": [{"block": "tube_coral_block"}]}
+                },
+                {
+                    "find": [{"block": "dirt"}],
+                    "replace": {"palette": [{"block": "horn_coral_block"}]}
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": [{"block": "stone"}],
+                    "replace": {"palette": [{"block": "tube_coral_block"}]}
+                },
+                {
+                    "find": [{"block": "dirt"}],
+                    "replace": {"palette": [{"block": "tube_coral_block"}]}
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": [{"block": "stone"}],
+                    "replace": {"palette": [{"block": "tube_coral_block"}]}
+                },
+                {
+                    "find": [{"block": "dirt"}],
+                    "replace": {"palette": [{"block": "brain_coral_block"}]}
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": [{"block": "stone"}],
+                    "replace": {"palette": [{"block": "tube_coral_block"}]}
+                },
+                {
+                    "find": [{"block": "dirt"}],
+                    "replace": {"palette": [{"block": "tube_coral_block"}]}
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": [{"block": "stone"}],
+                    "replace": {"palette": [{"block": "brain_coral_block"}]}
+                },
+                {
+                    "find": [{"block": "dirt"}],
+                    "replace": {"palette": [{"block": "bubble_coral_block"}]}
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": [{"block": "stone"}],
+                    "replace": {"palette": [{"block": "brain_coral_block"}]}
+                },
+                {
+                    "find": [{"block": "dirt"}],
+                    "replace": {"palette": [{"block": "horn_coral_block"}]}
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": [{"block": "stone"}],
+                    "replace": {"palette": [{"block": "brain_coral_block"}]}
+                },
+                {
+                    "find": [{"block": "dirt"}],
+                    "replace": {"palette": [{"block": "tube_coral_block"}]}
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": [{"block": "stone"}],
+                    "replace": {"palette": [{"block": "brain_coral_block"}]}
+                },
+                {
+                    "find": [{"block": "dirt"}],
+                    "replace": {"palette": [{"block": "brain_coral_block"}]}
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": [{"block": "stone"}],
+                    "replace": {"palette": [{"block": "brain_coral_block"}]}
+                },
+                {
+                    "find": [{"block": "dirt"}],
+                    "replace": {"palette": [{"block": "brain_coral_block"}]}
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        }
+    ],
+    "wall": {
+        "palette": [
+            {"block": "tube_coral_block"},
+            {"block": "brain_coral_block"},
+            {"block": "fire_coral_block"},
+            {"block": "horn_coral_block"},
+            {"block": "bubble_coral_block"}
+        ],
+        "style": {"style": "IRIS"},
+        "zoom": 0.1
+    },
+    "slab": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {
+                "data": {
+                    "waterlogged": true,
+                    "type": "bottom"
+                },
+                "block": "prismarine_slab"
+            },
+            {
+                "weight": 2,
+                "block": "air"
+            }
+        ]
+    }
+}

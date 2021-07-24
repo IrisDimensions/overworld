@@ -1,0 +1,266 @@
+{
+    "name": "Mesa Valley",
+    "derivative": "SAVANNA",
+    "rarity": 1,
+    "color": "#644F29",
+    "vanillaDerivative": "BADLANDS",
+    "generators": [{
+        "min": 5,
+        "max": 15,
+        "generator": "smooth-dunes"
+    }],
+    "layers": [
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "slopeCondition": {
+                "minimumSlope": 2,
+                "maximumSlope": 10
+            },
+            "palette": [{"block": "terracotta"}]
+        },
+        {
+            "slopeCondition": {
+                "minimumSlope": 0,
+                "maximumSlope": 2
+            },
+            "style": {
+                "style": "IRIS",
+                "zoom": 1.4
+            },
+            "zoom": 0.9,
+            "minHeight": 1,
+            "maxHeight": 1,
+            "palette": [
+                {
+                    "weight": 3,
+                    "block": "red_sand"
+                },
+                {
+                    "weight": 2,
+                    "block": "orange_terracotta"
+                },
+                {
+                    "weight": 7,
+                    "block": "grass_block"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "palette": [{"block": "light_gray_terracotta"}]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {
+                    "weight": 1,
+                    "block": "terracotta"
+                },
+                {
+                    "weight": 1,
+                    "block": "light_gray_terracotta"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "palette": [{"block": "terracotta"}]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 2,
+            "palette": [{"block": "orange_terracotta"}]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "palette": [{"block": "terracotta"}]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {
+                    "weight": 1,
+                    "block": "terracotta"
+                },
+                {
+                    "weight": 1,
+                    "block": "light_gray_terracotta"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "palette": [{"block": "light_gray_terracotta"}]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "palette": [{"block": "terracotta"}]
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.189,
+            "variance": {
+                "style": "CELLULAR",
+                "zoom": 0.3,
+                "fracture": {
+                    "style": "SIMPLEX",
+                    "zoom": 0.2,
+                    "multiplier": 10
+                }
+            },
+            "style": {
+                "style": "SIMPLEX",
+                "zoom": 0.3,
+                "fracture": {
+                    "style": "STATIC",
+                    "multiplier": 8
+                }
+            },
+            "palette": [
+                {"block": "white_tulip"},
+                {"block": "red_tulip"},
+                {"block": "orange_tulip"},
+                {"block": "dandelion"},
+                {"block": "poppy"}
+            ]
+        },
+        {
+            "chance": 0.01,
+            "palette": [{"block": "tall_grass"}]
+        },
+        {
+            "chance": 0.5,
+            "palette": [{"block": "grass"}]
+        }
+    ],
+    "objects": [
+        {
+            "place": [
+                "trees/acacia/vexed1",
+                "trees/acacia/vexed2",
+                "trees/acacia/vexed3"
+            ],
+            "chance": 0.4,
+            "edit": [{
+                "find": [{"block": "acacia_planks"}],
+                "replace": {"palette": [{
+                    "block": "acacia_wood",
+                    "data": {"axis": "y"}
+                }]}
+            }]
+        },
+        {
+            "chance": 0.00175,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": ["clutter/camp1"]
+        },
+        {
+            "mode": "PAINT",
+            "chance": 0.005,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": ["clutter/bincluster1"]
+        },
+        {
+            "chance": 0.07,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "trees/acacia/savannaD1",
+                "trees/acacia/savannaD2",
+                "trees/acacia/savannaD3"
+            ]
+        },
+        {
+            "chance": 0.2,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "trees/acacia/savannaF1",
+                "trees/acacia/savannaF2",
+                "trees/acacia/savannaF3",
+                "trees/acacia/savannaF4",
+                "trees/acacia/savannaF5",
+                "trees/acacia/savannaF6",
+                "trees/acacia/savannaF7",
+                "trees/acacia/savannaF8",
+                "trees/acacia/savannaF9",
+                "trees/acacia/savannaF10",
+                "trees/acacia/savannaF11",
+                "trees/acacia/savannaF13",
+                "trees/acacia/savannaF14"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.04,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "trees/acacia/savannaS1",
+                "trees/acacia/savannaS2",
+                "trees/acacia/savannaS3",
+                "trees/acacia/savannaS4",
+                "trees/acacia/savannaS5",
+                "trees/acacia/savannaS6",
+                "trees/acacia/savannaS7",
+                "trees/acacia/savannaS8",
+                "trees/acacia/savannas9",
+                "trees/acacia/savannas10",
+                "trees/acacia/savannas11",
+                "trees/acacia/savannas12"
+            ]
+        }
+    ]
+}

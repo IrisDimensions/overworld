@@ -1,0 +1,265 @@
+{
+    "name": "Frozen Mountain Cliffs",
+    "derivative": "SNOWY_MOUNTAINS",
+    "rarity": 3,
+    "vanillaDerivative": "SNOWY_MOUNTAINS",
+    "color": "#447AFF",
+    "layers": [
+        {
+            "minHeight": 0,
+            "maxHeight": 2,
+            "palette": [{"block": "snow_block"}]
+        },
+        {
+            "minHeight": 0,
+            "maxHeight": 1,
+            "palette": [{"block": "grass_block"}]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 5,
+            "palette": [{"block": "packed_ice"}]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "andesite"},
+                {
+                    "weight": 2,
+                    "block": "stone"
+                }
+            ]
+        }
+    ],
+    "customDerivitives": [{
+        "id": "frozen_mountaincliff",
+        "downfallType": "snow",
+        "temperature": -3,
+        "waterColor": "#216FC4",
+        "fogColor": "#B8D0E1",
+        "waterFogColor": "#216FC4",
+        "foliageColor": "#B8D0E1",
+        "grassColor": "#D0E1FF"
+    }],
+    "jigsawStructures": [
+        {
+            "rarity": 1700,
+            "structure": "igloo"
+        },
+        {
+            "rarity": 1700,
+            "structure": "pillager_outpost"
+        },
+        {
+            "rarity": 1500,
+            "structure": "village-snowy"
+        }
+    ],
+    "generators": [{
+        "min": 14,
+        "max": 65,
+        "generator": "plain-cliffs"
+    }],
+    "biomeScatter": [
+        "ICE_SPIKES",
+        "FROZEN_OCEAN",
+        "FROZEN_RIVER"
+    ],
+    "objects": [
+        {
+            "chance": 0.003,
+            "mode": "FAST_MIN_HEIGHT",
+            "density": 3,
+            "snow": 0.35,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/singleicespike5",
+                "clutter/twoicespike1",
+                "clutter/twoicespike2",
+                "clutter/twoicespike3",
+                "clutter/twoicespike4"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -4,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.5,
+            "mode": "FAST_MIN_HEIGHT",
+            "density": 3,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": false
+                },
+                "enabled": true
+            },
+            "edit": [{
+                "find": [{"block": "spruce_leaves"}],
+                "replace": {
+                    "style": {
+                        "style": "PERLIN",
+                        "zoom": 0.2
+                    },
+                    "palette": [
+                        {"block": "oak_leaves"},
+                        {"block": "dark_oak_leaves"}
+                    ]
+                }
+            }],
+            "place": [
+                "trees/spruce/lfrostgeneric5",
+                "trees/spruce/lfrostgeneric6",
+                "trees/spruce/lfrostgeneric7",
+                "trees/spruce/lfrostgeneric8",
+                "trees/spruce/lfrostgeneric9",
+                "trees/spruce/lfrostgeneric10",
+                "trees/spruce/lfrostgeneric12",
+                "trees/spruce/lfrostgeneric13",
+                "trees/spruce/lfrostgeneric14",
+                "trees/spruce/lfrostgeneric15",
+                "trees/spruce/lfrostgeneric16",
+                "trees/spruce/lfrostgeneric17",
+                "trees/spruce/lfrostgeneric18",
+                "trees/spruce/lfrostgeneric19",
+                "trees/spruce/lfrostgeneric20",
+                "trees/spruce/lfrostgeneric21",
+                "trees/spruce/lfrostgeneric22",
+                "trees/spruce/lfrostgeneric23",
+                "trees/spruce/lfrostgeneric24",
+                "trees/spruce/lfrostgeneric25"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.01,
+            "mode": "FAST_MIN_HEIGHT",
+            "density": 3,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": false
+                },
+                "enabled": true
+            },
+            "edit": [{
+                "find": [{"block": "spruce_leaves"}],
+                "replace": {
+                    "style": {
+                        "style": "PERLIN",
+                        "zoom": 0.2
+                    },
+                    "palette": [
+                        {"block": "oak_leaves"},
+                        {"block": "dark_oak_leaves"}
+                    ]
+                }
+            }],
+            "place": [
+                "trees/spruce/lfrostgeneric22",
+                "trees/spruce/lfrostgeneric23",
+                "trees/spruce/lfrostgeneric24",
+                "trees/spruce/lfrostgeneric25"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.05,
+            "mode": "FAST_MIN_HEIGHT",
+            "density": 3,
+            "snow": 0.35,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/icespec1",
+                "clutter/icespec2",
+                "clutter/icespec3",
+                "clutter/icespec4",
+                "clutter/icespec5",
+                "clutter/icecluster1",
+                "clutter/icecluster2",
+                "clutter/icecluster3",
+                "clutter/icecluster4",
+                "clutter/icecluster5",
+                "clutter/icecluster6",
+                "clutter/icecluster7",
+                "clutter/icecluster8",
+                "clutter/icecluster9",
+                "clutter/icecluster10",
+                "clutter/icecluster11",
+                "clutter/singleicespike1",
+                "clutter/singleicespike2",
+                "clutter/singleicespike3",
+                "clutter/singleicespike4",
+                "clutter/singleicespike5"
+            ]
+        }
+    ],
+    "biomeZoom": 30,
+    "biomeStyle": {"style": "SIMPLEX"},
+    "decorators": [{
+        "chance": 1,
+        "variance": {
+            "style": "IRIS",
+            "zoom": 0.5
+        },
+        "palette": [
+            {
+                "data": {"layers": 1},
+                "block": "snow"
+            },
+            {"block": "air"},
+            {
+                "data": {"layers": 5},
+                "block": "snow"
+            },
+            {
+                "data": {"layers": 6},
+                "block": "snow"
+            },
+            {
+                "data": {"layers": 7},
+                "block": "snow"
+            },
+            {
+                "data": {"layers": 8},
+                "block": "snow"
+            }
+        ]
+    }],
+    "wall": {
+        "style": {"style": "IRIS"},
+        "palette": [{"block": "packed_ice"}]
+    }
+}

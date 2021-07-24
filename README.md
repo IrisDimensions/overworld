@@ -23,8 +23,8 @@ Roadmap
 - [X] Fix implementation of objects in the REGIONS folder. They are not working, Clamp, and Bottom, are not working.
 - [X] Amythests
 - [ ] Pretty caves (with whatever new blocks they added!
-- [ ] Biomes that show off the new blocks
+- [-] Biomes that show off the new blocks
 - [X] Implement all the new blocks
-- [ ] Fix Despawns and rework Spawns
-- [WORKING ON THE BRANCH, WILL MERGE SOON] Fix loot and
+- [X] Fix Despawns and rework Spawns
+
 

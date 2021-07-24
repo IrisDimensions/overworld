@@ -1,0 +1,328 @@
+{
+    "name": "Tropical Bamboo Forest",
+    "derivative": "DESERT",
+    "rarity": 1,
+    "color": "#9BFF00",
+    "vanillaDerivative": "BAMBOO_JUNGLE",
+    "children": ["tropical/wilds"],
+    "generators": [{
+        "min": 5,
+        "max": 9,
+        "generator": "plain"
+    }],
+    "customDerivitives": [{
+        "id": "tropical_bamboo_forest",
+        "foliageColor": "#20A52F",
+        "grassColor": "#1E7307",
+        "waterColor": "#3AB2A2",
+        "waterFogColor": "#3AB2A2",
+        "category": "jungle"
+    }],
+    "jigsawStructures": [
+        {
+            "rarity": 1700,
+            "structure": "pillager_outpost"
+        },
+        {
+            "rarity": 1000,
+            "structure": "village-tundra"
+        },
+        {
+            "rarity": 1200,
+            "structure": "jungle-pyramid"
+        }
+    ],
+    "layers": [
+        {"palette": [{"block": "grass_block"}]},
+        {"palette": [{"block": "dirt"}]},
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {"block": "dirt"},
+                {"block": "coarse_dirt"}
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
+            ]
+        }
+    ],
+    "biomeSkyScatter": ["BAMBOO_JUNGLE"],
+    "objects": [
+        {
+            "chance": 0.5,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/boulder1",
+                "clutter/boulder2",
+                "clutter/boulder4",
+                "clutter/boulder5",
+                "clutter/boulder6",
+                "clutter/boulder7",
+                "clutter/boulder8"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -2,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.5,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "edit": [
+                {
+                    "find": [{"block": "birch_fence"}],
+                    "replace": {"palette": [{"block": "air"}]}
+                },
+                {
+                    "find": [{"block": "birch_leaves"}],
+                    "replace": {"palette": [{"block": "jungle_leaves"}]}
+                },
+                {
+                    "find": [{"block": "stripped_birch_log"}],
+                    "replace": {"palette": [{"block": "jungle_wood"}]}
+                },
+                {
+                    "find": [{"block": "stripped_birch_wood"}],
+                    "replace": {"palette": [{"block": "oak_wood"}]}
+                }
+            ],
+            "place": [
+                "trees/jungle/bmbogeneric1",
+                "trees/jungle/bmbogeneric2",
+                "trees/jungle/bmbogeneric3",
+                "trees/jungle/bmbogeneric4",
+                "trees/jungle/bmbogeneric5",
+                "trees/jungle/bmbogeneric6",
+                "trees/jungle/bmbogeneric7",
+                "trees/jungle/bmbogeneric8",
+                "trees/jungle/bmbogeneric9"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -2,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.35,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "edit": [
+                {
+                    "find": [{"block": "birch_fence"}],
+                    "replace": {"palette": [{"block": "air"}]}
+                },
+                {
+                    "find": [{"block": "birch_leaves"}],
+                    "replace": {"palette": [{"block": "jungle_leaves"}]}
+                },
+                {
+                    "find": [{"block": "stripped_birch_log"}],
+                    "replace": {"palette": [{"block": "stripped_jungle_log"}]}
+                },
+                {
+                    "find": [{"block": "stripped_birch_wood"}],
+                    "replace": {"palette": [{"block": "stripped_jungle_wood"}]}
+                }
+            ],
+            "place": [
+                "trees/jungle/spire1",
+                "trees/jungle/spire2",
+                "trees/jungle/spire3",
+                "trees/jungle/spire4",
+                "trees/jungle/spire5",
+                "trees/jungle/spire6",
+                "trees/jungle/spire7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -2,
+                "z": 0
+            }
+        }
+    ],
+    "biomeZoom": 10,
+    "biomeStyle": {"style": "SIMPLEX"},
+    "effects": [{
+        "particleAltX": 0.301,
+        "particleAltY": -0.33885,
+        "particleAltZ": 0.301,
+        "chance": 1,
+        "particleEffect": "TOTEM",
+        "particleOffset": 12,
+        "interval": 550,
+        "particleCount": 0
+    }],
+    "decorators": [
+        {
+            "chance": 0.25,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "weight": 3,
+                    "block": "grass"
+                },
+                {"block": "tall_grass"}
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "stackMin": 1,
+            "stackMax": 11,
+            "chance": 0.07,
+            "variance": {
+                "style": "STATIC",
+                "zoom": 0.1
+            },
+            "topPalette": [{
+                "data": {
+                    "stage": 0,
+                    "age": 0,
+                    "leaves": "small"
+                },
+                "block": "bamboo"
+            }],
+            "palette": [
+                {
+                    "data": {
+                        "stage": 0,
+                        "age": 0,
+                        "leaves": "none"
+                    },
+                    "block": "bamboo"
+                },
+                {
+                    "data": {
+                        "stage": 1,
+                        "age": 0,
+                        "leaves": "none"
+                    },
+                    "block": "bamboo"
+                },
+                {
+                    "data": {
+                        "stage": 0,
+                        "age": 1,
+                        "leaves": "none"
+                    },
+                    "block": "bamboo"
+                },
+                {
+                    "data": {
+                        "stage": 1,
+                        "age": 1,
+                        "leaves": "none"
+                    },
+                    "block": "bamboo"
+                },
+                {
+                    "data": {
+                        "stage": 0,
+                        "age": 0,
+                        "leaves": "small"
+                    },
+                    "block": "bamboo"
+                },
+                {
+                    "data": {
+                        "stage": 1,
+                        "age": 0,
+                        "leaves": "small"
+                    },
+                    "block": "bamboo"
+                },
+                {
+                    "data": {
+                        "stage": 0,
+                        "age": 1,
+                        "leaves": "small"
+                    },
+                    "block": "bamboo"
+                },
+                {
+                    "data": {
+                        "stage": 1,
+                        "age": 1,
+                        "leaves": "small"
+                    },
+                    "block": "bamboo"
+                },
+                {
+                    "data": {
+                        "stage": 0,
+                        "age": 0,
+                        "leaves": "large"
+                    },
+                    "block": "bamboo"
+                },
+                {
+                    "data": {
+                        "stage": 1,
+                        "age": 0,
+                        "leaves": "large"
+                    },
+                    "block": "bamboo"
+                },
+                {
+                    "data": {
+                        "stage": 0,
+                        "age": 1,
+                        "leaves": "large"
+                    },
+                    "block": "bamboo"
+                },
+                {
+                    "data": {
+                        "stage": 1,
+                        "age": 1,
+                        "leaves": "large"
+                    },
+                    "block": "bamboo"
+                }
+            ],
+            "style": {"style": "STATIC"}
+        }
+    ],
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {"block": "stone"},
+            {"block": "andesite"},
+            {"block": "stone"}
+        ]
+    },
+    "biomeScatter": ["BAMBOO_JUNGLE"]
+}

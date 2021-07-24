@@ -1,0 +1,345 @@
+{
+    "name": "Temperate Plateau",
+    "derivative": "DEEP_LUKEWARM_OCEAN",
+    "rarity": 4,
+    "color": "#929F60",
+    "vanillaDerivative": "FOREST",
+    "customDerivitives": [{
+        "id": "plateau",
+        "foliageColor": "#44A528",
+        "waterColor": "#2883A5",
+        "grassColor": "#21BF4C",
+        "category": "forest"
+    }],
+    "generators": [
+        {
+            "min": 25,
+            "max": 37,
+            "generator": "canyon-steep"
+        },
+        {
+            "min": 2,
+            "max": 3,
+            "generator": "smooth-dunes"
+        },
+        {
+            "min": 2,
+            "max": 6,
+            "generator": "plain"
+        }
+    ],
+    "jigsawStructures": [
+        {
+            "rarity": 1700,
+            "structure": "pillager_outpost"
+        },
+        {
+            "rarity": 1500,
+            "structure": "village-temperate"
+        }
+    ],
+    "layers": [
+        {
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "grass_block"}]
+        },
+        {"palette": [{"block": "dirt"}]},
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {"block": "dirt"},
+                {"block": "coarse_dirt"}
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
+            ]
+        }
+    ],
+    "objects": [
+        {
+            "name": "standard-surface-portals",
+            "chance": 0.005,
+            "place": [
+                "clutter/swordnp2",
+                "clutter/swordnp1",
+                "structures/giantportal1",
+                "structures/giantportal2",
+                "structures/giantportal3",
+                "structures/portal1",
+                "structures/portal2",
+                "structures/portal3",
+                "structures/portal4",
+                "structures/portal5",
+                "structures/portal6",
+                "structures/portal7",
+                "structures/portal8",
+                "structures/portal9",
+                "structures/portal10"
+            ],
+            "edit": [
+                {
+                    "find": [{"block": "gold_block"}],
+                    "replace": {"palette": [{"block": "air"}]},
+                    "chance": 0.1
+                },
+                {
+                    "find": [{"block": "netherrack"}],
+                    "replace": {"palette": [{"block": "magma_block"}]},
+                    "chance": 0.07
+                },
+                {
+                    "find": [{"block": "obsidian"}],
+                    "replace": {"palette": [{"block": "crying_obsidian"}]},
+                    "chance": 0.15
+                },
+                {
+                    "find": [{"block": "lava"}],
+                    "replace": {"palette": [{"block": "magma_block"}]},
+                    "chance": 0.2
+                }
+            ],
+            "mode": "VACUUM",
+            "carvingSupport": "SURFACE_ONLY"
+        },
+        {
+            "chance": 0.07,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "trees/oak/hoakgeneric3",
+                "trees/oak/hoakgeneric4",
+                "trees/oak/hoakgeneric5",
+                "trees/oak/hoakgeneric6",
+                "trees/oak/hoakgeneric7",
+                "trees/oak/hoakgeneric8",
+                "trees/oak/hoakgeneric9",
+                "trees/oak/hoakgeneric1",
+                "trees/oak/shoakgeneric3",
+                "trees/oak/shoakgeneric4",
+                "trees/oak/shoakgeneric5",
+                "trees/oak/shoakgeneric6",
+                "trees/oak/shoakgeneric7",
+                "trees/oak/shoakgeneric8",
+                "trees/oak/shoakgeneric9",
+                "trees/oak/shoakgeneric1",
+                "trees/oak/shoakgeneric2"
+            ]
+        },
+        {
+            "mode": "PAINT",
+            "chance": 0.00975,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": ["clutter/camp1"]
+        },
+        {
+            "chance": 1,
+            "mode": "MIN_HEIGHT",
+            "density": 2,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "edit": [
+                {
+                    "find": [
+                        {"block": "birch_wood"},
+                        {"block": "birch_log"}
+                    ],
+                    "replace": {"palette": [{"block": "oak_wood"}]}
+                },
+                {
+                    "find": [{"block": "birch_leaves"}],
+                    "replace": {"palette": [{"block": "oak_leaves"}]}
+                }
+            ],
+            "place": [
+                "trees/birch/antioch3",
+                "trees/birch/antioch4",
+                "trees/birch/antioch5",
+                "trees/birch/antioch6",
+                "trees/birch/antioch7",
+                "trees/birch/antioch8",
+                "trees/birch/antioch9",
+                "trees/birch/antioch10",
+                "trees/birch/antioch11",
+                "trees/birch/antioch12",
+                "trees/birch/antioch13"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.18,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "mode": "MIN_HEIGHT",
+            "place": [
+                "trees/oak/thoakgeneric1",
+                "trees/oak/thoakgeneric2",
+                "trees/oak/thoakgeneric3",
+                "trees/oak/thoakgeneric4",
+                "trees/oak/thoakgeneric8",
+                "trees/oak/thoakgeneric10"
+            ]
+        },
+        {
+            "chance": 0.001,
+            "mode": "MIN_HEIGHT",
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/obelisk1",
+                "clutter/obelisk2",
+                "clutter/obelisk3",
+                "clutter/obelisk4",
+                "clutter/obelisk5",
+                "clutter/obelisk6",
+                "clutter/obelisk7"
+            ]
+        },
+        {
+            "chance": 0.001,
+            "mode": "MIN_HEIGHT",
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/literalgarbage1",
+                "clutter/literalgarbage2",
+                "clutter/literalgarbage3",
+                "clutter/literalgarbage4"
+            ]
+        }
+    ],
+    "biomeStyle": {"style": "SIMPLEX"},
+    "decorators": [
+        {
+            "chance": 0.5,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.2,
+            "palette": [{
+                "chance": 7,
+                "block": "grass"
+            }]
+        },
+        {
+            "chance": 0.025,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.2,
+            "palette": [
+                {"block": "oak_leaves"},
+                {"block": "rose_bush"},
+                {"block": "cobblestone_slab"},
+                {"block": "dandelion"},
+                {"block": "grass"},
+                {"block": "poppy"},
+                {"block": "blue_orchid"},
+                {"block": "allium"},
+                {"block": "azure_bluet"},
+                {"block": "red_tulip"},
+                {"block": "orange_tulip"},
+                {"block": "white_tulip"},
+                {"block": "pink_tulip"},
+                {"block": "oxeye_daisy"},
+                {"block": "cornflower"},
+                {"block": "lily_of_the_valley"}
+            ]
+        },
+        {
+            "chance": 0.02,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.2,
+            "palette": [
+                {"block": "tall_grass"},
+                {
+                    "chance": 3,
+                    "block": "red_mushroom"
+                },
+                {
+                    "chance": 3,
+                    "block": "poppy"
+                }
+            ]
+        }
+    ],
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {"block": "stone"},
+            {"block": "andesite"},
+            {"block": "stone"}
+        ]
+    },
+    "biomeScatter": ["FOREST"],
+    "entityInitialSpawns": [
+        {
+            "entity": "sheep",
+            "minSpawns": 1,
+            "maxSpawns": 2,
+            "rarity": 10
+        },
+        {
+            "entity": "wolf",
+            "minSpawns": 2,
+            "maxSpawns": 5,
+            "rarity": 70
+        },
+        {
+            "entity": "goat",
+            "maxSpawns": 1,
+            "minSpawns": 3,
+            "rarity": 90
+        }
+    ]
+}

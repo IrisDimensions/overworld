@@ -1,0 +1,119 @@
+{
+    "name": "Swamp Beach",
+    "derivative": "SWAMP",
+    "rarity": 1,
+    "color": "#55A300",
+    "vanillaDerivative": "BEACH",
+    "generators": [{
+        "min": 1,
+        "max": 3,
+        "generator": "plain"
+    }],
+    "layers": [
+        {
+            "minHeight": 3,
+            "maxHeight": 6,
+            "style": {"style": "STATIC"},
+            "zoom": 0.25,
+            "palette": [
+                {"block": "dirt"},
+                {"block": "podzol"},
+                {"block": "coarse_dirt"},
+                {"block": "podzol"}
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {"block": "dirt"},
+                {
+                    "weight": 2,
+                    "block": "coarse_dirt"
+                }
+            ]
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.004,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "east"
+                    },
+                    "block": "dark_oak_button"
+                },
+                {"block": "air"}
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 9.0E-5,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [
+                {"block": "wither_rose"},
+                {"block": "red_mushroom"},
+                {"block": "brown_mushroom"},
+                {"block": "poppy"}
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "partOf": "SHORE_LINE",
+            "chance": 0.09,
+            "stackMin": 1,
+            "stackMax": 4,
+            "palette": [{"block": "sugar_cane"}],
+            "style": {
+                "style": "IRIS",
+                "zoom": 0.65
+            },
+            "heightVariance": {
+                "style": "STATIC"
+            }
+        }
+    ],
+    "objects": [{
+        "place": [
+            "trees/jungle/lgeneric1",
+            "trees/jungle/lgeneric2",
+            "trees/jungle/lgeneric3",
+            "trees/jungle/lgeneric4",
+            "trees/jungle/lgeneric5",
+            "trees/jungle/lgeneric7",
+            "trees/jungle/lgeneric8",
+            "trees/jungle/lgeneric9"
+        ],
+        "chance": 1,
+        "edit": [
+            {
+                "find": [{"block": "jungle_leaves"}],
+                "replace": {"palette": [{"block": "oak_leaves"}]}
+            },
+            {
+                "find": [{"block": "jungle_wood"}],
+                "replace": {"palette": [{"block": "dark_oak_wood"}]}
+            },
+            {
+                "find": [{"block": "jungle_log"}],
+                "replace": {"palette": [{"block": "dark_oak_wood"}]}
+            }
+        ],
+        "rotation": {
+            "enabled": true,
+            "yAxis": {
+                "enabled": true,
+                "interval": 90,
+                "min": -360,
+                "max": 360
+            }
+        },
+        "translate": {"y": -3}
+    }]
+}

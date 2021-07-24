@@ -1,0 +1,243 @@
+{
+    "name": "Lush Plains",
+    "derivative": "FLOWER_FOREST",
+    "vanillaDerivative": "FLOWER_FOREST",
+    "color": "#68de35",
+    "generators": [{
+        "min": 4,
+        "max": 7,
+        "generator": "plain"
+    }],
+    "rarity": 3,
+    "biomeZoom": 30,
+    "children": [
+        "temperate/lush-plains-yellow",
+        "temperate/lush-plains-red"
+    ],
+    "childStyle": {
+        "style": "CELLULAR_IRIS_THICK",
+        "zoom": 20
+    },
+    "jigsawStructures": [
+        {
+            "rarity": 1700,
+            "structure": "pillager_outpost"
+        },
+        {
+            "rarity": 1500,
+            "structure": "village-temperate"
+        }
+    ],
+    "layers": [
+        {"palette": [{"block": "grass_block"}]},
+        {
+            "minHeight": 2,
+            "maxHeight": 2,
+            "palette": [{"block": "dirt"}]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {"block": "dirt"},
+                {"block": "coarse_dirt"}
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "dirt"},
+                {"block": "stone"}
+            ]
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.05,
+            "variance": {
+                "style": "STATIC"
+            },
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {"block": "orange_tulip"},
+                {"block": "white_tulip"},
+                {"block": "dandelion"},
+                {"block": "poppy"},
+                {"block": "blue_orchid"},
+                {"block": "azure_bluet"},
+                {"block": "red_tulip"},
+                {"block": "allium"},
+                {"block": "pink_tulip"},
+                {"block": "oxeye_daisy"},
+                {"block": "cornflower"},
+                {"block": "lily_of_the_valley"},
+                {"block": "rose_bush"},
+                {"block": "lilac"}
+            ]
+        },
+        {
+            "chance": 0.01,
+            "palette": [{"block": "tall_grass"}]
+        },
+        {
+            "chance": 0.5,
+            "palette": [
+                {
+                    "block": "grass",
+                    "weight": 15
+                },
+                {
+                    "block": "fern",
+                    "weight": 1
+                }
+            ]
+        },
+        {
+            "chance": 0.05,
+            "palette": [
+                {
+                    "block": "oak_leaves",
+                    "data": {
+                        "persistent": true
+                    }
+                }
+            ],
+            "style": {
+                "style": "STATIC",
+                "zoom": 0.8
+            }
+        }
+    ],
+    "objects": [
+        {
+            "mode": "VACUUM",
+            "chance": 0.009,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 360,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/camp1",
+                "clutter/camp3",
+                "clutter/camp4",
+                "clutter/camp5",
+                "clutter/camp2"
+            ]
+
+        },
+        {
+            "chance": 0.01,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 360,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "trees/oak/hoakgeneric3",
+                "trees/oak/hoakgeneric4",
+                "trees/oak/hoakgeneric5",
+                "trees/oak/hoakgeneric6",
+                "trees/oak/hoakgeneric7",
+                "trees/oak/hoakgeneric8",
+                "trees/oak/hoakgeneric9",
+                "trees/oak/hoakgeneric1",
+                "trees/oak/shoakgeneric3",
+                "trees/oak/shoakgeneric4",
+                "trees/oak/shoakgeneric5",
+                "trees/oak/shoakgeneric6",
+                "trees/oak/shoakgeneric7",
+                "trees/oak/shoakgeneric8",
+                "trees/oak/shoakgeneric9",
+                "trees/oak/shoakgeneric1",
+                "trees/oak/shoakgeneric2",
+                "trees/oak/generic1",
+                "trees/oak/generic2",
+                "trees/oak/generic3",
+                "trees/oak/generic4",
+                "trees/oak/generic5",
+                "trees/oak/generic6"
+            ]
+
+        },
+        {
+            "chance": 1.0E-4,
+            "mode": "VACUUM",
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 360,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": ["structures/ruin1"]
+
+        },
+        {
+            "chance": 0.004,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 360,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/obelisk1",
+                "clutter/obelisk2",
+                "clutter/obelisk3",
+                "clutter/obelisk4",
+                "clutter/obelisk5",
+                "clutter/obelisk6",
+                "clutter/obelisk7",
+                "clutter/genericpeak1",
+                "clutter/genericpeak2",
+                "clutter/genericpeak3",
+                "clutter/genericpeak5",
+                "clutter/genericpeak6",
+                "structures/landstone1",
+                "structures/landstone2",
+                "structures/landstone3",
+                "structures/landstone4",
+                "structures/landstone5",
+                "clutter/statue-villager-plains"
+            ]
+
+        }
+    ],
+    "biomeStyle": {"style": "SIMPLEX"},
+    "wall": {"palette": [
+        {"block": "stone"},
+        {"block": "andesite"}
+    ]},
+    "entityInitialSpawns": [
+        {
+            "entity": "horse",
+            "minSpawns": 2,
+            "maxSpawns": 5,
+            "rarity": 80
+        },
+        {
+            "entity": "sheep",
+            "minSpawns": 1,
+            "maxSpawns": 2,
+            "rarity": 10
+        }
+    ]
+}

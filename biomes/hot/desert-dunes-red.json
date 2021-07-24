@@ -1,0 +1,117 @@
+{
+    "name": "Hot Desert Dunes Red",
+    "rarity": 1,
+    "color": "#EC8B63",
+    "derivative": "DESERT",
+    "vanillaDerivative": "DESERT",
+    "generators": [{
+        "generator": "smooth-dunes",
+        "max": 23,
+        "min": 10
+    }],
+    "layers": [
+        {
+            "minHeight": 3,
+            "maxHeight": 10,
+            "slopeCondition": {
+                "minimumSlope": 4.5,
+                "maximumSlope": 20
+            },
+            "palette": [{"block": "orange_terracotta"}]
+        },
+        {
+            "minHeight": 5,
+            "maxHeight": 5,
+            "zoom": 0.7,
+            "palette": [{
+                "weight": 1,
+                "block": "red_sand"
+            }]
+        }
+    ],
+    "jigsawStructures": [
+        {
+            "rarity": 1700,
+            "structure": "pillager_outpost"
+        },
+        {
+            "rarity": 1500,
+            "structure": "village-hot"
+        },
+        {
+            "rarity": 1900,
+            "structure": "desert-pyramid"
+        }
+    ],
+    "objects": [
+        {
+            "chance": 0.001,
+            "density": 3,
+            "place": [
+                "clutter/rdesertpost1",
+                "clutter/rdesertpost2",
+                "clutter/rdesertpost3"
+            ]
+        },
+        {
+            "chance": 0.0015,
+            "mode": "STILT",
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "jigsaw/pyramid/rpyramid-extreme",
+                "jigsaw/pyramid/rpyramid"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -9,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.0015,
+            "mode": "STILT",
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/rsphinx1",
+                "clutter/rbrksphinx1"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -2,
+                "z": 0
+            }
+        }
+    ],
+    "decorators": [
+        {
+            "verticalZoom": 5,
+            "chance": 0.004,
+            "variance": {"style": "STATIC"},
+            "stackMax": 5,
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "cactus"}],
+            "heightVariance": {"style": "IRIS"},
+            "stackMin": 1
+        },
+        {
+            "chance": 0.005,
+            "palette": [{"block": "dead_bush"}]
+        }
+    ]
+}

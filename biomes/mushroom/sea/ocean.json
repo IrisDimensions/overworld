@@ -1,0 +1,222 @@
+{
+    "name": "Mushroom Ocean",
+    "derivative": "OCEAN",
+    "vanillaDerivative": "OCEAN",
+    "color": "#295E9F",
+    "layers": [
+        {
+            "minHeight": 2,
+            "maxHeight": 3,
+            "style": {"style": "STATIC"},
+            "zoom": 0.825,
+            "palette": [
+                {"block": "clay"},
+                {"block": "stone"},
+                {"block": "cobblestone"},
+                {"block": "andesite"},
+                {"block": "gravel"}
+            ]
+        },
+        {"palette": [{"block": "dirt"}]},
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {
+                    "weight": 2,
+                    "block": "dirt"
+                },
+                {"block": "coarse_dirt"}
+            ]
+        }
+    ],
+    "generators": [{
+        "min": -51,
+        "max": -39,
+        "generator": "ocean"
+    }],
+    "decorators": [
+        {
+            "chance": 0.06,
+            "variance": {"style": "STATIC"},
+            "zoom": 20,
+            "palette": [{"block": "seagrass"}],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 6.0E-4,
+            "variance": {"style": "STATIC"},
+            "zoom": 1,
+            "palette": [
+                {"block": "soul_sand"},
+                {"block": "magma_block"}
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.1,
+            "verticalZoom": 20,
+            "variance": {"style": "STATIC"},
+            "stackMax": 9,
+            "zoom": 1,
+            "palette": [{"block": "kelp_plant"}],
+            "style": {"style": "STATIC"},
+            "heightVariance": {"style": "STATIC"},
+            "stackMin": 1
+        },
+        {
+            "chance": 0.005,
+            "variance": {"style": "STATIC"},
+            "zoom": 1,
+            "palette": [
+                {
+                    "data": {
+                        "waterlogged": true,
+                        "pickles": 1
+                    },
+                    "block": "sea_pickle"
+                },
+                {
+                    "data": {
+                        "waterlogged": true,
+                        "pickles": 2
+                    },
+                    "block": "sea_pickle"
+                },
+                {
+                    "data": {
+                        "waterlogged": true,
+                        "pickles": 3
+                    },
+                    "block": "sea_pickle"
+                },
+                {
+                    "data": {
+                        "waterlogged": true,
+                        "pickles": 4
+                    },
+                    "block": "sea_pickle"
+                }
+            ],
+            "style": {"style": "STATIC"}
+        }
+    ],
+    "objects": [
+        {
+            "chance": 0.1,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "structures/swreck1",
+                "structures/usdship1",
+                "structures/usdship2"
+            ],
+            "edit": [{
+                "find": [{"block": "oak_stairs"}],
+                "replace": {"palette": [{"block": "oak_planks"}]}
+            }],
+            "translate": {
+                "x": 0,
+                "y": -4,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.3,
+            "edit": [{
+                "find": [{"block": "shroomlight"}],
+                "replace": {"palette": [{"block": "mushroom_stem"}]}
+            }],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "trees/mushroom/lumo1",
+                "trees/mushroom/lumo2",
+                "trees/mushroom/lumo3",
+                "trees/mushroom/lumo4",
+                "trees/mushroom/lumo5",
+                "trees/mushroom/lumo6",
+                "trees/mushroom/lumo7",
+                "trees/mushroom/lumo8",
+                "trees/mushroom/lumo9",
+                "trees/mushroom/lumo10"
+            ]
+        },
+        {
+            "chance": 0.25,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "trees/mushroom/lumo1",
+                "trees/mushroom/lumo2",
+                "trees/mushroom/lumo3",
+                "trees/mushroom/lumo4",
+                "trees/mushroom/lumo5",
+                "trees/mushroom/lumo6",
+                "trees/mushroom/lumo7",
+                "trees/mushroom/lumo8",
+                "trees/mushroom/lumo9",
+                "trees/mushroom/lumo10"
+            ]
+        }
+    ],
+    "wall": {
+        "style": {"style": "IRIS"},
+        "palette": [
+            {"block": "clay"},
+            {"block": "smooth_sandstone"},
+            {"block": "red_sand"},
+            {"block": "smooth_red_sandstone"},
+            {"block": "smooth_sandstone"},
+            {"block": "sand"},
+            {"block": "smooth_red_sandstone"}
+        ]
+    },
+    "slab": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "stone_slab"
+            },
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "andesite_slab"
+            },
+            {
+                "weight": 1,
+                "block": "air"
+            }
+        ]
+    }
+}

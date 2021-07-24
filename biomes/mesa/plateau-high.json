@@ -1,0 +1,99 @@
+{
+    "name": "Mesa Plateau High",
+    "rarity": 1,
+    "color": "#5B4111",
+    "derivative": "BADLANDS",
+    "vanillaDerivative": "BADLANDS",
+    "biomeScatter": [
+        "BADLANDS",
+        "BADLANDS_PLATEAU",
+        "ERODED_BADLANDS"
+    ],
+    "children": ["mesa/plateau-dirt-high"],
+    "generators": [
+        {
+            "min": 55,
+            "max": 45,
+            "generator": "canyon-steep"
+        },
+        {
+            "min": 2,
+            "max": 3,
+            "generator": "smooth-dunes"
+        },
+        {
+            "min": 2,
+            "max": 6,
+            "generator": "cracked-cliffs"
+        }
+    ],
+    "layers": [
+        {
+            "minHeight": 5,
+            "maxHeight": 5,
+            "style": {"style": "IRIS"},
+            "zoom": 0.4,
+            "palette": [
+                {"block": "red_terracotta"},
+                {"block": "terracotta"},
+                {"block": "terracotta"},
+                {"block": "terracotta"},
+                {"block": "terracotta"}
+            ]
+        },
+        {
+            "minHeight": 3,
+            "maxHeight": 8,
+            "palette": [{"block": "terracotta"}]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 8,
+            "palette": [{"block": "orange_terracotta"}]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 8,
+            "palette": [{"block": "white_terracotta"}]
+        },
+        {
+            "minHeight": 4,
+            "maxHeight": 8,
+            "palette": [{"block": "terracotta"}]
+        },
+        {
+            "minHeight": 3,
+            "maxHeight": 8,
+            "palette": [{"block": "yellow_terracotta"}]
+        },
+        {
+            "minHeight": 3,
+            "maxHeight": 8,
+            "palette": [{"block": "brown_terracotta"}]
+        }
+    ],
+    "lockLayers": true,
+    "decorators": [{
+        "chance": 0.05,
+        "palette": [{"block": "tall_grass"}]
+    }],
+    "biomeStyle": {"style": "SIMPLEX"},
+    "objects": [{
+        "place": [
+            "structures/tower",
+            "structures/tower-twin"
+        ],
+        "chance": 5.0E-4,
+        "density": 2,
+        "mode": "FAST_STILT",
+        "rotation": {
+            "enabled": true,
+            "yAxis": {
+                "enabled": true,
+                "interval": 90,
+                "min": -360,
+                "max": 360
+            }
+        }
+    }]
+}

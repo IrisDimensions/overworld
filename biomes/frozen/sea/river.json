@@ -1,0 +1,122 @@
+{
+    "name": "Frozen River",
+    "derivative": "FROZEN_RIVER",
+    "vanillaDerivative": "FROZEN_RIVER",
+    "color": "#216280",
+    "layers": [
+        {"palette": [
+            {"block": "dirt"},
+            {"block": "gravel"},
+            {"block": "stone"}
+        ]},
+        {
+            "minHeight": 2,
+            "maxHeight": 3,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "sand"},
+                {"block": "clay"},
+                {"block": "sand"},
+                {"block": "gravel"},
+                {"block": "sand"},
+                {"block": "dirt"},
+                {
+                    "weight": 2,
+                    "block": "sand"
+                }
+            ]
+        }
+    ],
+    "generators": [{
+        "generator": "plain",
+        "max": -10,
+        "min": -19
+    }],
+    "seaLayers": [
+        {
+            "minHeight": 3,
+            "maxHeight": 6,
+            "style": {"style": "IRIS"},
+            "zoom": 1.16,
+            "palette": [
+                {
+                    "weight": 2,
+                    "block": "ice"
+                },
+                {
+                    "weight": 3,
+                    "block": "packed_ice"
+                },
+                {"block": "blue_ice"},
+                {
+                    "weight": 3,
+                    "block": "packed_ice"
+                },
+                {
+                    "weight": 2,
+                    "block": "ice"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 2,
+            "palette": [{"block": "packed_ice"}]
+        }
+    ],
+    "objects": [
+        {
+            "chance": 0.003,
+            "density": 3,
+            "snow": 0.45,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "onwater": true,
+            "place": [
+                "clutter/twoicespike1",
+                "clutter/twoicespike2",
+                "clutter/twoicespike3",
+                "clutter/twoicespike4"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -4,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.2,
+            "density": 3,
+            "snow": 0.01,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "onwater": true,
+            "place": [
+                "clutter/singleicespike1",
+                "clutter/singleicespike2",
+                "clutter/singleicespike3",
+                "clutter/singleicespike4",
+                "clutter/singleicespike5",
+                "clutter/icespec1",
+                "clutter/icespec2",
+                "clutter/icespec3",
+                "clutter/icespec4",
+                "clutter/icespec5"
+            ]
+        }
+    ]
+}

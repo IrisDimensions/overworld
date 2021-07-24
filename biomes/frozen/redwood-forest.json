@@ -1,0 +1,218 @@
+{
+    "name": "Frozen Redwood Forest",
+    "derivative": "SNOWY_TAIGA",
+    "color": "#586B89",
+    "rarity": 1,
+    "vanillaDerivative": "SNOWY_TAIGA",
+    "generators": [
+        {
+            "min": 3,
+            "max": 16,
+            "generator": "plain"
+        },
+        {
+            "min": 13,
+            "max": 48,
+            "generator": "mountain"
+        }
+    ],
+    "customDerivitives": [{
+        "id": "frozen_redwood_forest",
+        "waterColor": "#216FC4",
+        "fogColor": "#A6D1FF",
+        "downfallType": "snow",
+        "temperature": -3,
+        "waterFogColor": "#216FC4",
+        "foliageColor": "#B8D0E1",
+        "grassColor": "#D0E1FF"
+    }],
+    "layers": [
+        {
+            "maxHeight": 3,
+            "palette": [{"block": "snow_block"}]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "palette": [{"block": "grass_block"}]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "palette": [{"block": "packed_ice"}]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
+            ]
+        }
+    ],
+    "jigsawStructures": [
+        {
+            "rarity": 1700,
+            "structure": "igloo"
+        },
+        {
+            "rarity": 1700,
+            "structure": "pillager_outpost"
+        },
+        {
+            "rarity": 1500,
+            "structure": "village-snowy"
+        }
+    ],
+    "objects": [
+        {
+            "chance": 0.02,
+            "density": 3,
+            "snow": 0.35,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/icecluster1",
+                "clutter/icecluster2",
+                "clutter/icecluster3",
+                "clutter/icecluster4",
+                "clutter/icecluster5",
+                "clutter/icecluster6",
+                "clutter/icecluster7",
+                "clutter/icecluster8",
+                "clutter/icecluster9",
+                "clutter/icecluster10",
+                "clutter/icecluster11",
+                "clutter/singleicespike1",
+                "clutter/singleicespike2",
+                "clutter/singleicespike3",
+                "clutter/singleicespike4",
+                "clutter/singleicespike5"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -4,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.4,
+            "density": 2,
+            "edit": [
+                {
+                    "find": [{"block": "spruce_leaves"}],
+                    "replace": {
+                        "style": {
+                            "style": "PERLIN",
+                            "zoom": 0.2
+                        },
+                        "palette": [
+                            {"block": "oak_leaves"},
+                            {"block": "dark_oak_leaves"}
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {"block": "birch_leaves"},
+                        {"block": "oak_leaves"}
+                    ],
+                    "replace": {"palette": [
+                        {
+                            "weight": 4,
+                            "block": "ice"
+                        },
+                        {"block": "packed_ice"}
+                    ]}
+                }
+            ],
+            "snow": 1,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "trees/mixed/tredwood1",
+                "trees/mixed/tredwood2",
+                "trees/mixed/tredwood3",
+                "trees/mixed/tredwood4",
+                "trees/mixed/tredwood5",
+                "trees/mixed/tredwood6",
+                "trees/mixed/tredwood7",
+                "trees/mixed/tredwood8",
+                "trees/mixed/tredwood9",
+                "trees/mixed/tredwood10"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -10,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.05,
+            "density": 3,
+            "snow": 0.35,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/icespec1",
+                "clutter/icespec2",
+                "clutter/icespec3",
+                "clutter/icespec4",
+                "clutter/icespec5"
+            ]
+        }
+    ],
+    "biomeZoom": 30,
+    "biomeStyle": {"style": "SIMPLEX"},
+    "decorators": [{
+        "chance": 1,
+        "variance": {
+            "style": "IRIS",
+            "zoom": 0.23
+        },
+        "palette": [
+            {
+                "data": {"layers": 1},
+                "block": "snow"
+            },
+            {"block": "air"}
+        ]
+    }],
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {"block": "stone"},
+            {"block": "andesite"},
+            {"block": "stone"}
+        ]
+    },
+    "biomeScatter": [
+        "SNOWY_TAIGA_MOUNTAINS",
+        "TAIGA_HILLS",
+        "MOUNTAINS",
+        "ICE_SPIKES"
+    ]
+}
