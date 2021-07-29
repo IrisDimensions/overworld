@@ -1,6 +1,6 @@
 {
     "vanillaDerivative": "FOREST",
-    "rarity": 5,
+    "rarity": 3,
     "color": "#9B9F60",
     "name": "Long tree forest",
     "effects": [{
@@ -12,6 +12,12 @@
         "particleOffset": 12,
         "interval": 550,
         "particleCount": 3
+    }],
+    "customDerivitives": [{
+        "id": "longtree_forest",
+        "foliageColor": "#58AB24",
+        "grassColor": "#4AB71C",
+        "category": "forest"
     }],
     "jigsawStructures": [
         {
@@ -251,7 +257,7 @@
     ],
     "objects": [
         {
-            "chance": 0.7,
+            "chance": 0.5,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -361,6 +367,27 @@
                 "x": 0,
                 "y": -2,
                 "z": 0
+            }
+        },
+        {
+            "chance": 0.008,
+            "mode": "PAINT",
+            "place": [
+                "clutter/pumpkins1",
+                "clutter/pumpkins2",
+                "clutter/pumpkins3",
+                "clutter/pumpkins4",
+                "clutter/pumpkins5",
+                "clutter/pumpkins6"
+            ],
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "max": 360,
+                    "min": 0,
+                    "interval": 90
+                }
             }
         }
     ],

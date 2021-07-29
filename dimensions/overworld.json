@@ -1,57 +1,80 @@
 {
-    "version": 2001,
+    "version": 2002,
     "OVERWORLD-VERSION": 3.134,
     "name": "Overworld",
     "environment": "NORMAL",
     "fluidHeight": 63,
     "CONTINENTS": "Continent settings containing placement of the continents.",
     "continentZoom": 1,
-    "landChance": 0.69,
-    "biomeZoom": 7,
     "continentalStyle": {
-        "style": "CELLULAR_HEIGHT_IRIS_DOUBLE",
-        "zoom": 12.925,
-        "exponent": 10.1
+        "style": "NOWHERE_CELLULAR",
+
+        "zoom": 5
     },
+    "landChance": 0.69,
+    "biomeZoom": 4,
     "REGIONS": "Contains the list of regions and their placement style",
-    "regionZoom": 7.25,
+    "regionStyle": {
+        "style": "CELLULAR_IRIS_DOUBLE",
+        "fracture": {
+            "multiplier": 600,
+            "axialFracturing": true,
+            "style": "NOWHERE_CUBIC",
+            "zoom": 1.25,
+            "fracture": {
+                "style": "NOWHERE",
+                "axialFracturing": true,
+                "zoom": 0.1,
+                "multiplier": 24.8
+            }
+        }
+    },
+    "regionZoom": 6,
     "regions": [
         "mushroom",
         "swamp",
-        "temperate",
         "hot",
+        "temperate",
         "tropical",
         "temperate",
         "frozen",
         "tundra"
     ],
-    "regionStyle": {
-        "style": "NOWHERE_CELLULAR",
-        "fracture": {
-            "style": "NOWHERE",
-            "zoom": 0.115,
-            "multiplier": 16
-        },
-        "zoom": 1
-    },
     "islandBiomeChanceStyle": {
         "style": "NOWHERE_CELLULAR",
         "zoom": 5
     },
+    "TREE SETTINGS":  "This is where you can change tree inheritance from saplings.",
+    "treeSettings": {
+        "enabled": true,
+        "mode": "FIRST"
+    },
+
     "SEAS": "Sea settings (for the biomes that are oceans).",
     "seaZoom": 1.25,
-    "seaBiomeStyle": {"style": "NOWHERE_CELLULAR"},
+    "seaBiomeStyle": {"style": "FRACTAL_FBM_IRIS"},
     "LAND": "Land settings (for the biomes that are non-ocean).",
     "landZoom": 3.2,
+
     "landBiomeStyle": {
         "style": "NOWHERE_CELLULAR",
         "fracture": {
-            "style": "NOWHERE",
-            "zoom": 0.03,
-            "multiplier": 12
-        },
-        "zoom": 3
+            "multiplier": 725,
+            "axialFracturing": true,
+            "style": "NOWHERE_CUBIC",
+            "zoom": 1.18,
+            "fracture": {
+                "style": "NOWHERE",
+                "axialFracturing": true,
+                "zoom": 0.1141,
+                "multiplier": 44.8
+            }
+        }
     },
+    "shoreBiomeStyle": {
+        "style": "NOWHERE_CELLULAR"
+    },
+
     "LOOT": "Contains a list of loot tables that are attempted to be applied to all chests that spawn.",
     "lootTries": 32,
     "loot": {"tables": [
@@ -336,37 +359,5 @@
         }
     ],
     "skylandBiomeStyle": {"style": "CELLULAR_IRIS_DOUBLE"},
-    "islandBiomeStyle": {"style": "CELLULAR_IRIS_DOUBLE"},
-    "shoreBiomeStyle": {
-        "style": "CELLULAR",
-        "fracture": {
-            "multiplier": 18,
-            "maxFractureAccuracy": true,
-            "style": "FRACTAL_WATER",
-            "zoom": 0.255,
-            "fracture": {
-                "maxFractureAccuracy": true,
-                "style": "STATIC",
-                "multiplier": 4
-            }
-        }
-    },
-    "overlayNoise": [
-        {
-            "min": 0,
-            "max": 6,
-            "generator": {
-                "style": "FRACTAL_WATER",
-                "zoom": 8
-            }
-        },
-        {
-            "min": 0,
-            "max": 6,
-            "generator": {
-                "style": "IRIS_DOUBLE",
-                "zoom": 1.1
-            }
-        }
-    ]
+    "islandBiomeStyle": {"style": "CELLULAR_IRIS_DOUBLE"}
 }
