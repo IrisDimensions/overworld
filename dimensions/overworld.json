@@ -6,9 +6,29 @@
     "fluidHeight": 63,
     "CONTINENTS": "Continent settings containing placement of the continents.",
     "continentZoom": 1,
+    "continentalStyle": {
+        "style": "NOWHERE_CELLULAR",
+
+        "zoom": 5
+    },
     "landChance": 0.69,
     "biomeZoom": 4,
     "REGIONS": "Contains the list of regions and their placement style",
+    "regionStyle": {
+        "style": "CELLULAR_IRIS_DOUBLE",
+        "fracture": {
+            "multiplier": 600,
+            "axialFracturing": true,
+            "style": "NOWHERE_CUBIC",
+            "zoom": 1.25,
+            "fracture": {
+                "style": "NOWHERE",
+                "axialFracturing": true,
+                "zoom": 0.1,
+                "multiplier": 24.8
+            }
+        }
+    },
     "regionZoom": 6,
     "regions": [
         "mushroom",
@@ -35,21 +55,7 @@
     "seaBiomeStyle": {"style": "FRACTAL_FBM_IRIS"},
     "LAND": "Land settings (for the biomes that are non-ocean).",
     "landZoom": 3.2,
-    "regionStyle": {
-        "style": "NOWHERE_CELLULAR",
-        "fracture": {
-            "multiplier": 600,
-            "axialFracturing": true,
-            "style": "NOWHERE_CUBIC",
-            "zoom": 1.25,
-            "fracture": {
-                "style": "NOWHERE",
-                "axialFracturing": true,
-                "zoom": 0.1,
-                "multiplier": 24.8
-            }
-        }
-    },
+
     "landBiomeStyle": {
         "style": "NOWHERE_CELLULAR",
         "fracture": {
@@ -68,10 +74,7 @@
     "shoreBiomeStyle": {
         "style": "NOWHERE_CELLULAR"
     },
-    "continentalStyle": {
-        "style": "NOWHERE_CELLULAR",
-        "zoom": 5
-    },
+
     "LOOT": "Contains a list of loot tables that are attempted to be applied to all chests that spawn.",
     "lootTries": 32,
     "loot": {"tables": [
