@@ -8,13 +8,8 @@
     "continentZoom": 1,
     "landChance": 0.69,
     "biomeZoom": 7,
-    "continentalStyle": {
-        "style": "NOWHERE_SUPERFRACTAL",
-        "zoom": 5,
-        "exponent": 7.5
-    },
     "REGIONS": "Contains the list of regions and their placement style",
-    "regionZoom": 7.35,
+    "regionZoom": 6.35,
     "regions": [
         "mushroom",
         "swamp",
@@ -25,15 +20,6 @@
         "frozen",
         "tundra"
     ],
-    "regionStyle": {
-        "style": "CELLULAR",
-        "fracture": {
-            "style": "NOWHERE",
-            "zoom": 2,
-            "multiplier": 16
-        },
-        "zoom": 1
-    },
     "islandBiomeChanceStyle": {
         "style": "NOWHERE_CELLULAR",
         "zoom": 5
@@ -49,14 +35,42 @@
     "seaBiomeStyle": {"style": "FRACTAL_FBM_IRIS"},
     "LAND": "Land settings (for the biomes that are non-ocean).",
     "landZoom": 3.2,
+    "regionStyle": {
+        "style": "NOWHERE_CELLULAR",
+        "fracture": {
+            "multiplier": 600,
+            "axialFracturing": true,
+            "style": "NOWHERE_CUBIC",
+            "zoom": 1.25,
+            "fracture": {
+                "style": "NOWHERE",
+                "axialFracturing": true,
+                "zoom": 0.1,
+                "multiplier": 24.8
+            }
+        }
+    },
     "landBiomeStyle": {
         "style": "NOWHERE_CELLULAR",
         "fracture": {
-            "style": "NOWHERE",
-            "zoom": 0.03,
-            "multiplier": 12
-        },
-        "zoom": 3
+            "multiplier": 725,
+            "axialFracturing": true,
+            "style": "NOWHERE_CUBIC",
+            "zoom": 1.18,
+            "fracture": {
+                "style": "NOWHERE",
+                "axialFracturing": true,
+                "zoom": 0.1141,
+                "multiplier": 44.8
+            }
+        }
+    },
+    "shoreBiomeStyle": {
+        "style": "NOWHERE_CELLULAR"
+    },
+    "continentalStyle": {
+        "style": "NOWHERE_CELLULAR",
+        "zoom": 5
     },
     "LOOT": "Contains a list of loot tables that are attempted to be applied to all chests that spawn.",
     "lootTries": 32,
@@ -342,17 +356,5 @@
         }
     ],
     "skylandBiomeStyle": {"style": "CELLULAR_IRIS_DOUBLE"},
-    "islandBiomeStyle": {"style": "CELLULAR_IRIS_DOUBLE"},
-    "shoreBiomeStyle": {
-        "style": "CELLULAR",
-        "fracture": {
-            "multiplier": 18,
-            "style": "FRACTAL_WATER",
-            "zoom": 0.255,
-            "fracture": {
-                "style": "STATIC",
-                "multiplier": 4
-            }
-        }
-    }
+    "islandBiomeStyle": {"style": "CELLULAR_IRIS_DOUBLE"}
 }
