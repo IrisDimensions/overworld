@@ -86,7 +86,31 @@
             "varience": 4
         }
     ],
-    "objects": [{
+    "objects": [
+        {
+            "chance": 0,
+            "rotation": {"enabled": true, "yAxis": {"enabled": true, "interval":90, "max": 360, "min": 0 }},
+            "translate": {"y": 0, "yRandom": -1},
+            "trees": [{"anySize":true, "treeTypes": ["TREE", "BIG_TREE" , "REDWOOD", "MEGA_REDWOOD", "TALL_REDWOOD", "DARK_OAK"], "sizes": [{"depth": 1, "width": 1}, {"width": 2, "depth": 2}]}],
+            "edit": [
+                {"find": [{"block": "spruce_fence"}, {"block": "spruce_slab"}], "replace": {"palette": [{"block": "spruce_wood"}]}},{"find": [{"block": "oak_wood"}, {"block": "dark_oak_wood"}], "replace": {"palette": [{"block": "dark_oak_wood"},{"block": "spruce_wood"}], "style": {"style": "SIMPLEX", "zoom": 0.25}}}, {"find": [{"block": "oak_leaves"}], "replace": {"palette": [{"block": "dark_oak_leaves"}]}}],
+            "place": [
+                "trees/oak/truegeneric1",
+                "trees/oak/truegeneric2",
+                "trees/oak/truegeneric3",
+                "trees/oak/truegeneric4",
+                "trees/oak/truegeneric5",
+                "trees/oak/hoakgeneric1",
+                "trees/oak/hoakgeneric2",
+                "trees/oak/hoakgeneric3",
+                "trees/oak/hoakgeneric4",
+                "trees/oak/hoakgeneric5",
+                "trees/oak/hoakgeneric6",
+                "trees/oak/hoakgeneric7",
+                "trees/oak/hoakgeneric8"
+            ]
+        },
+        {
         "heightmap": {
             "seed": 1337,
             "style": {
