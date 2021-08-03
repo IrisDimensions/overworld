@@ -2,8 +2,7 @@
     "connectors": [{
         "targetName": "*",
         "innerConnector": true,
-        "spawnEntity": "villager",
-        "entityCount": 1,
+
         "rotateConnector": false,
         "name": "",
         "pools": ["mush_huts/paths"],
@@ -16,6 +15,15 @@
         "direction": "WEST_NEGATIVE_X"
     }],
     "placementOptions": {
+        "addFeatures": [
+            {
+                "rarity": 1,
+                "zone": {
+                    "entitySpawners": ["villager"],
+                    "blockRadius": 3
+                }
+            }
+        ],
         "overStilt": 0,
         "chance": 1,
         "meld": false,
