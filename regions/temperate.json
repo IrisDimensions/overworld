@@ -31,32 +31,11 @@
         "structure": "murky_stronghold",
         "rarity": 750
     }],
-    "ENTITY_SPAWNS": "Sheep is purposely missing from this list so it doesn't spawn in estranged plains",
-    "entityInitialSpawns": [
-        {
-            "entity": "chicken",
-            "maxSpawns": 2,
-            "minSpawns": 1,
-            "rarity": 10
-        },
-        {
-            "entity": "cow",
-            "maxSpawns": 2,
-            "minSpawns": 1,
-            "rarity": 10
-        },
-        {
-            "entity": "pig",
-            "maxSpawns": 2,
-            "minSpawns": 1,
-            "rarity": 10
-        },
-        {
-            "entity": "bee",
-            "maxSpawns": 3,
-            "minSpawns": 2,
-            "rarity": 60
-        }
+    "ENTITY_SPAWNS": "ALL ENTITY SPAWNS FOR THE REGION",
+    "entitySpawners": [
+        "temperate/land-passive",
+        "temperate/land-hostile",
+        "temperate/land-cave"
     ],
     "shoreRatio": 0.1,
     "shoreBiomeZoom": 0.15,
@@ -77,16 +56,50 @@
     "objects": [
         {
             "chance": 0,
-            "mode": "MIN_HEIGHT",
             "rotation": {"enabled": true, "yAxis": {"enabled": true, "interval":90, "max": 360, "min": 0}},
-            "trees": [ {"sizes": [ {"depth": 1, "width": 1} ], "treeTypes": ["TREE"]}],
-            "translate": {"y": 7},
+            "trees": [ {"sizes": [ {"depth": 1, "width": 1} ], "treeTypes": ["TREE", "BIG_TREE"]}],
             "place": [
                 "trees/oak/truegeneric1",
                 "trees/oak/truegeneric2",
                 "trees/oak/truegeneric3",
                 "trees/oak/truegeneric4",
                 "trees/oak/truegeneric5"
+            ]
+        },
+        {
+            "chance": 0,
+            "rotation": {"enabled": true, "yAxis": {"enabled": true, "interval":90, "max": 360, "min": 0}},
+            "trees": [ {"sizes": [ {"depth": 1, "width": 1} ], "treeTypes": ["TREE", "BIG_TREE"]}],
+            "place": [
+                "trees/oak/antioch3",
+                "trees/oak/antioch4",
+                "trees/oak/antioch5",
+                "trees/oak/antioch6",
+                "trees/oak/antioch7",
+                "trees/oak/antioch8",
+                "trees/oak/antioch9",
+                "trees/oak/antioch10",
+                "trees/oak/antioch11",
+                "trees/oak/antioch12",
+                "trees/oak/antioch13"
+            ]
+        },
+        {
+            "chance": 0,
+            "rotation": {"enabled": true, "yAxis": {"enabled": true, "interval":90, "max": 360, "min": 0}},
+            "trees": [ {"sizes": [ {"depth": 1, "width": 1} ], "treeTypes": ["BIRCH"]}],
+            "place": [
+                "trees/birch/antioch3",
+                "trees/birch/antioch4",
+                "trees/birch/antioch5",
+                "trees/birch/antioch6",
+                "trees/birch/antioch7",
+                "trees/birch/antioch8",
+                "trees/birch/antioch9",
+                "trees/birch/antioch10",
+                "trees/birch/antioch11",
+                "trees/birch/antioch12",
+                "trees/birch/antioch13"
             ]
         },
         {

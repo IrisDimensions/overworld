@@ -4,19 +4,18 @@
     "rarity": 3,
     "color": "#5DA899",
     "vanillaDerivative": "DARK_FOREST",
-    "generators": [
-        {
-            "min": 15,
-            "max": 25,
-            "generator": "mountain"
-        },
-        {
-            "min": 12,
-            "max": 25,
-            "generator": "plain-cliffs"
-        }
-    ],
+    "generators": [{
+        "min": 4,
+        "max": 10,
+        "generator": "plain-cliffs"
+    },
+    {
+        "min": 10,
+        "max": 40,
+        "generator": "mountain"
+    }],
     "customDerivitives": [{
+        "category": "forest",
         "id": "tundra_redwood_cliffs",
         "grassColor": "#A17E3C",
         "waterColor": "#80B4C6",
@@ -409,20 +408,6 @@
                 }
             ],
             "mode": "VACUUM"
-        }
-    ],
-    "entityInitialSpawns": [
-        {
-            "entity": "wolf",
-            "minSpawns": 2,
-            "maxSpawns": 5,
-            "rarity": 90
-        },
-        {
-            "entity": "goat",
-            "maxSpawns": 1,
-            "minSpawns": 3,
-            "rarity": 60
         }
     ]
 }

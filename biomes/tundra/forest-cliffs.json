@@ -4,19 +4,18 @@
     "rarity": 3,
     "color": "#3E8F7A",
     "vanillaDerivative": "TAIGA_MOUNTAINS",
-    "generators": [
-        {
-            "generator": "smooth-dunes",
-            "max": 14,
-            "min": 8
-        },
-        {
-            "min": 12,
-            "max": 17,
-            "generator": "plain-cliffs"
-        }
-    ],
+    "generators": [{
+        "min": 4,
+        "max": 10,
+        "generator": "plain-cliffs"
+    },
+    {
+        "min": 10,
+        "max": 40,
+        "generator": "mountain"
+    }],
     "customDerivitives": [{
+        "category": "forest",
         "id": "tundra_forest_cliffs",
         "grassColor": "#56B16F",
         "waterColor": "#80B4C6",
@@ -266,6 +265,9 @@
                     "min": 0,
                     "interval": 90
                 }
+            },
+            "translate": {
+                "y": 1
             }
         }
     ],

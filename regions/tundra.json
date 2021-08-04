@@ -23,7 +23,7 @@
         "tundra/shore/beach",
         "tundra/shore/beach-stone"
     ],
-    "seaBiomes": ["mountain/sea/lake"],
+    "seaBiomes": ["mountain/sea/river"],
     "jigsawStructures": [{
         "structure": "murky_stronghold",
         "rarity": 750
@@ -32,37 +32,10 @@
         "cave/tundra-cavern",
         "cave/spiked-cavern"
     ],
-    "entityInitialSpawns": [
-        {
-            "entity": "chicken",
-            "maxSpawns": 2,
-            "minSpawns": 1,
-            "rarity": 14
-        },
-        {
-            "entity": "cow",
-            "maxSpawns": 2,
-            "minSpawns": 1,
-            "rarity": 14
-        },
-        {
-            "entity": "pig",
-            "maxSpawns": 2,
-            "minSpawns": 1,
-            "rarity": 14
-        },
-        {
-            "entity": "sheep",
-            "maxSpawns": 2,
-            "minSpawns": 1,
-            "rarity": 14
-        },
-        {
-            "entity": "wolf",
-            "maxSpawns": 2,
-            "minSpawns": 1,
-            "rarity": 29
-        }
+    "entitySpawners": [
+        "tundra/land-passive",
+        "tundra/land-hostile",
+        "tundra/land-cave"
     ],
     "riverBiomes": [
         "tundra/sea/river",
@@ -104,7 +77,31 @@
             "cold-food"
         ]
     },
-    "objects": [{
+    "objects": [
+        {
+            "chance": 0,
+            "rotation": {"enabled": true, "yAxis": {"enabled": true, "interval":90, "max": 360, "min": 0 }},
+            "translate": {"y": 0, "yRandom": -1},
+            "trees": [{"anySize":true, "treeTypes": ["REDWOOD", "MEGA_REDWOOD", "TALL_REDWOOD"], "sizes": [{"depth": 1, "width": 1}, {"width": 2, "depth": 2}]}],
+            "edit": [
+                {"find": [{"block": "spruce_fence"}, {"block": "spruce_slab"}], "replace": {"palette": [{"block": "spruce_wood"}]}},{"find": [{"block": "oak_wood"}, {"block": "dark_oak_wood"}], "replace": {"palette": [{"block": "spruce_wood"}]}}, {"find": [{"block": "oak_leaves"}], "replace": {"palette": [{"block": "spruce_leaves"}]}}],
+            "place": [
+                "trees/oak/truegeneric1",
+                "trees/oak/truegeneric2",
+                "trees/oak/truegeneric3",
+                "trees/oak/truegeneric4",
+                "trees/oak/truegeneric5",
+                "trees/oak/hoakgeneric6",
+                "trees/oak/hoakgeneric7",
+                "trees/oak/hoakgeneric8",
+                "trees/spruce/vgeneric1",
+                "trees/spruce/vgeneric2",
+                "trees/spruce/vgeneric3",
+                "trees/spruce/vgeneric4",
+                "trees/spruce/vgeneric5"
+            ]
+        },
+        {
         "heightmap": {
             "seed": 1337,
             "style": {

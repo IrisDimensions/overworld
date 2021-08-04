@@ -59,7 +59,142 @@
         ],
         "varience": 4
     }],
-    "objects": [{
+    "objects": [
+        {
+            "chance": 0,
+            "rotation": {"enabled": true, "yAxis": {"enabled": true, "interval":90, "max": 360, "min": 0}},
+            "trees": [ {"sizes": [ {"depth": 1, "width": 1} ], "treeTypes": ["RED_MUSHROOM"]}],
+            "edit": [{"find": [{"block": "brown_mushroom_block"}],"replace": {"palette": [{"block": "brown_mushroom_block"}]}}],
+            "place": [
+                "trees/mushroom/redgeneric3",
+                "trees/mushroom/redgeneric4",
+                "trees/mushroom/redgeneric5",
+                "trees/mushroom/redgeneric6",
+                "trees/mushroom/redgeneric7",
+                "trees/mushroom/redgeneric8",
+                "trees/mushroom/redgeneric9",
+                "trees/mushroom/redgeneric10",
+                "trees/mushroom/redgeneric11"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -2,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0,
+            "rotation": {"enabled": true, "yAxis": {"enabled": true, "interval":90, "max": 360, "min": 0}},
+            "trees": [ {"sizes": [ {"depth": 1, "width": 1} ], "treeTypes": ["BROWN_MUSHROOM"]}],
+            "edit": [{"find": [{"block": "red_mushroom_block"}],"replace": {"palette": [{"block": "brown_mushroom_block"}]}}],
+            "place": [
+                "trees/mushroom/redgeneric3",
+                "trees/mushroom/redgeneric4",
+                "trees/mushroom/redgeneric5",
+                "trees/mushroom/redgeneric6",
+                "trees/mushroom/redgeneric7",
+                "trees/mushroom/redgeneric8",
+                "trees/mushroom/redgeneric9",
+                "trees/mushroom/redgeneric10",
+                "trees/mushroom/redgeneric11"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -2,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0,
+            "density": 2,
+            "trees": [ {"sizes": [ {"depth": 1, "width": 1} ], "treeTypes": ["WARPED_FUNGUS"]}],
+            "edit": [
+                {
+                    "find": [{"block": "brown_mushroom_block"}],
+                    "replace": {"palette": [{"block": "warped_hyphae"}]}
+                },
+                {
+                    "find": [{"block": "red_mushroom_block"}],
+                    "replace": {"palette": [{"block": "warped_wart_block"}]}
+                },
+                {
+                    "find": [{"block": "mushroom_stem"}],
+                    "replace": {"palette": [{"block": "blackstone"}]}
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "trees/mushroom/redgeneric1",
+                "trees/mushroom/redgeneric2",
+                "trees/mushroom/browngeneric1",
+                "trees/mushroom/browngeneric2",
+                "trees/mushroom/redgeneric3",
+                "trees/mushroom/redgeneric4",
+                "trees/mushroom/redgeneric5",
+                "trees/mushroom/redgeneric6",
+                "trees/mushroom/redgeneric7",
+                "trees/mushroom/redgeneric8",
+                "trees/mushroom/redgeneric9",
+                "trees/mushroom/redgeneric10"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0,
+            "density": 2,
+            "trees": [ {"sizes": [ {"depth": 1, "width": 1} ], "treeTypes": ["CRIMSON_FUNGUS"]}],
+            "edit": [
+                {
+                    "find": [{"block": "brown_mushroom_block"}],
+                    "replace": {"palette": [{"block": "crimson_hyphae"}]}
+                },
+                {
+                    "find": [{"block": "red_mushroom_block"}],
+                    "replace": {"palette": [{"block": "nether_wart_block"}]}
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "trees/mushroom/redgeneric1",
+                "trees/mushroom/redgeneric2",
+                "trees/mushroom/browngeneric1",
+                "trees/mushroom/browngeneric2",
+                "trees/mushroom/redgeneric3",
+                "trees/mushroom/redgeneric4",
+                "trees/mushroom/redgeneric5",
+                "trees/mushroom/redgeneric6",
+                "trees/mushroom/redgeneric7",
+                "trees/mushroom/redgeneric8",
+                "trees/mushroom/redgeneric9",
+                "trees/mushroom/redgeneric10"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            }
+        },
+        {
         "heightmap": {
             "seed": 1337,
             "style": {
@@ -124,18 +259,10 @@
             "soundDistance": 3
         }
     ],
-    "entityInitialSpawns": [
-        {
-            "entity": "mooshroom",
-            "maxSpawns": 4,
-            "minSpawns": 1,
-            "rarity": 12
-        },
-        {
-            "entity": "cow",
-            "maxSpawns": 2,
-            "rarity": 20
-        }
+    "entitySpawners": [
+        "mushroom/land-passive",
+        "mushroom/land-hostile",
+        "mushroom/land-cave"
     ],
     "shoreHeightMin": 3.2,
     "shoreHeightMax": 6.2,

@@ -61,17 +61,6 @@
             "structure": "village-temperate"
         }
     ],
-    "entityInitialSpawns": [{
-        "entity": "bee",
-        "maxSpawns": 5,
-        "minSpawns": 2,
-        "rarity": 20
-    }, {
-        "entity": "sheep",
-        "maxSpawns": 2,
-        "minSpawns": 1,
-        "rarity": 10
-    }],
     "objects": [
         {
             "chance": 0.07,
@@ -123,6 +112,17 @@
         {
             "mode": "FAST_MIN_HEIGHT",
             "chance": 0.33,
+            "addFeatures": [
+                {
+                    "rarity": 1,
+                    "zone": {
+                        "blockRadius": 8,
+                        "entitySpawners": [
+                            "hives"
+                        ]
+                    }
+                }
+            ],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -148,31 +148,18 @@
                 },
                 "enabled": true
             },
-            "edit": [
-                {
-                    "find": [
-                        {"block": "birch_wood"},
-                        {"block": "birch_log"}
-                    ],
-                    "replace": {"palette": [{"block": "oak_wood"}]}
-                },
-                {
-                    "find": [{"block": "birch_leaves"}],
-                    "replace": {"palette": [{"block": "oak_leaves"}]}
-                }
-            ],
             "place": [
-                "trees/birch/antioch3",
-                "trees/birch/antioch4",
-                "trees/birch/antioch5",
-                "trees/birch/antioch6",
-                "trees/birch/antioch7",
-                "trees/birch/antioch8",
-                "trees/birch/antioch9",
-                "trees/birch/antioch10",
-                "trees/birch/antioch11",
-                "trees/birch/antioch12",
-                "trees/birch/antioch13"
+                "trees/oak/antioch3",
+                "trees/oak/antioch4",
+                "trees/oak/antioch5",
+                "trees/oak/antioch6",
+                "trees/oak/antioch7",
+                "trees/oak/antioch8",
+                "trees/oak/antioch9",
+                "trees/oak/antioch10",
+                "trees/oak/antioch11",
+                "trees/oak/antioch12",
+                "trees/oak/antioch13"
             ]
 
         },
@@ -389,6 +376,9 @@
                     "min": 0,
                     "interval": 90
                 }
+            },
+            "translate": {
+                "y": 1
             }
         }
     ],
