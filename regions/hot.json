@@ -2,8 +2,12 @@
     "name": "Hot",
     "color": "#E7D900",
     "landBiomes": [
-        "hot/desert-dunes","hot/desert-dunes","hot/desert-dunes",
-        "hot/desert-dunes-red","hot/desert-dunes-red","hot/desert-dunes-red",
+        "hot/desert-dunes",
+        "hot/desert-dunes",
+        "hot/desert-dunes",
+        "hot/desert-dunes-red",
+        "hot/desert-dunes-red",
+        "hot/desert-dunes-red",
         "savanna/forest",
         "savanna/savanna",
         "savanna/forest",
@@ -143,9 +147,27 @@
     "objects": [
         {
             "chance": 0,
-            "rotation": {"enabled": true, "yAxis": {"enabled": true, "interval":90, "max": 360, "min": 0 }},
-            "translate": {"y": 0, "yRandom": -1},
-            "trees": [{"anySize":true, "treeTypes": ["ACACIA"], "sizes": [{"depth": 1, "width": 1}]}],
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "max": 360,
+                    "min": 0
+                }
+            },
+            "translate": {
+                "y": 0,
+                "yRandom": -1
+            },
+            "trees": [{
+                "anySize": true,
+                "treeTypes": ["ACACIA"],
+                "sizes": [{
+                    "depth": 1,
+                    "width": 1
+                }]
+            }],
             "place": [
                 "trees/acacia/savannaF1",
                 "trees/acacia/savannaF2",
@@ -164,11 +186,59 @@
         },
         {
             "chance": 0,
-            "rotation": {"enabled": true, "yAxis": {"enabled": true, "interval":90, "max": 360, "min": 0 }},
-            "translate": {"y": 0, "yRandom": -1},
-            "trees": [{"anySize":true, "treeTypes": ["TREE", "BIG_TREE"], "sizes": [{"depth": 1, "width": 1}, {"width": 2, "depth": 2}]}],
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "max": 360,
+                    "min": 0
+                }
+            },
+            "translate": {
+                "y": 0,
+                "yRandom": -1
+            },
+            "trees": [{
+                "anySize": true,
+                "treeTypes": [
+                    "TREE",
+                    "BIG_TREE"
+                ],
+                "sizes": [
+                    {
+                        "depth": 1,
+                        "width": 1
+                    },
+                    {
+                        "width": 2,
+                        "depth": 2
+                    }
+                ]
+            }],
             "edit": [
-                {"find": [{"block": "spruce_fence"}, {"block": "spruce_slab"}], "replace": {"palette": [{"block": "acacia_wood"}]}},{"find": [{"block": "oak_wood"}, {"block": "dark_oak_wood"}], "replace": {"palette": [{"block": "acacia_wood"}]}}, {"find": [{"block": "oak_leaves"},{"block": "dark_oak_leaves"}], "replace": {"palette": [{"block": "acacia_leaves"}]}}],
+                {
+                    "find": [
+                        {"block": "spruce_fence"},
+                        {"block": "spruce_slab"}
+                    ],
+                    "replace": {"palette": [{"block": "acacia_wood"}]}
+                },
+                {
+                    "find": [
+                        {"block": "oak_wood"},
+                        {"block": "dark_oak_wood"}
+                    ],
+                    "replace": {"palette": [{"block": "acacia_wood"}]}
+                },
+                {
+                    "find": [
+                        {"block": "oak_leaves"},
+                        {"block": "dark_oak_leaves"}
+                    ],
+                    "replace": {"palette": [{"block": "acacia_leaves"}]}
+                }
+            ],
             "place": [
                 "trees/oak/truegeneric1",
                 "trees/oak/truegeneric2",

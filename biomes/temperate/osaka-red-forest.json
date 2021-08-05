@@ -4,8 +4,7 @@
     "rarity": 4,
     "color": "#DF4FE8",
     "vanillaDerivative": "FOREST",
-    "effects": [
-        {
+    "effects": [{
         "particleAltX": 0.301,
         "particleAltY": -0.33885,
         "particleAltZ": 0.301,
@@ -14,26 +13,27 @@
         "particleOffset": 12,
         "interval": 550,
         "particleCount": 0
+    }],
+    "customDerivitives": [
+        {
+            "id": "osaka_red",
+            "foliageColor": "#D42828",
+            "downfallType": "snow",
+            "temperature": -3,
+            "waterColor": "#A5FFED",
+            "grassColor": "#64A522",
+            "category": "forest"
+        },
+        {
+            "id": "osaka_red_child_forest",
+            "foliageColor": "#AA2323",
+            "downfallType": "snow",
+            "temperature": -3,
+            "waterColor": "#A5FFED",
+            "grassColor": "#64A522",
+            "category": "forest"
         }
     ],
-    "customDerivitives": [{
-        "id": "osaka_red",
-        "foliageColor": "#D42828",
-        "downfallType": "snow",
-        "temperature": -3,
-        "waterColor": "#A5FFED",
-        "grassColor": "#64A522",
-        "category": "forest"
-    },
-    {
-        "id": "osaka_red_child_forest",
-        "foliageColor": "#AA2323",
-        "downfallType": "snow",
-        "temperature": -3,
-        "waterColor": "#A5FFED",
-        "grassColor": "#64A522",
-        "category": "forest"
-    }],
     "generators": [{
         "min": 4,
         "max": 7,
@@ -132,12 +132,10 @@
                 },
                 "enabled": true
             },
-            "edit": [
-                {
+            "edit": [{
                 "find": [{"block": "stripped_birch_wood"}],
                 "replace": {"palette": [{"block": "spruce_wood"}]}
-                }
-            ],
+            }],
             "place": [
                 "trees/sakura/genericsak1",
                 "trees/sakura/genericsak2",
@@ -210,9 +208,7 @@
                     "interval": 90
                 }
             },
-            "translate": {
-                "y": 1
-            }
+            "translate": {"y": 1}
         }
     ],
     "biomeZoom": 60,

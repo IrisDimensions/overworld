@@ -62,11 +62,69 @@
     "objects": [
         {
             "chance": 0,
-            "rotation": {"enabled": true, "yAxis": {"enabled": true, "interval":90, "max": 360, "min": 0 }},
-            "translate": {"y": 0, "yRandom": -1},
-            "trees": [{"anySize":true, "treeTypes": ["TREE", "BIG_TREE" , "REDWOOD", "MEGA_REDWOOD", "TALL_REDWOOD", "DARK_OAK"], "sizes": [{"depth": 1, "width": 1}, {"width": 2, "depth": 2}]}],
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "max": 360,
+                    "min": 0
+                }
+            },
+            "translate": {
+                "y": 0,
+                "yRandom": -1
+            },
+            "trees": [{
+                "anySize": true,
+                "treeTypes": [
+                    "TREE",
+                    "BIG_TREE",
+                    "REDWOOD",
+                    "MEGA_REDWOOD",
+                    "TALL_REDWOOD",
+                    "DARK_OAK"
+                ],
+                "sizes": [
+                    {
+                        "depth": 1,
+                        "width": 1
+                    },
+                    {
+                        "width": 2,
+                        "depth": 2
+                    }
+                ]
+            }],
             "edit": [
-                {"find": [{"block": "spruce_fence"}, {"block": "spruce_slab"}], "replace": {"palette": [{"block": "spruce_wood"}]}},{"find": [{"block": "oak_wood"}, {"block": "dark_oak_wood"}], "replace": {"palette": [{"block": "dark_oak_wood"},{"block": "spruce_wood"}], "style": {"style": "SIMPLEX", "zoom": 0.25}}}, {"find": [{"block": "oak_leaves"}], "replace": {"palette": [{"block": "dark_oak_leaves"}]}}],
+                {
+                    "find": [
+                        {"block": "spruce_fence"},
+                        {"block": "spruce_slab"}
+                    ],
+                    "replace": {"palette": [{"block": "spruce_wood"}]}
+                },
+                {
+                    "find": [
+                        {"block": "oak_wood"},
+                        {"block": "dark_oak_wood"}
+                    ],
+                    "replace": {
+                        "palette": [
+                            {"block": "dark_oak_wood"},
+                            {"block": "spruce_wood"}
+                        ],
+                        "style": {
+                            "style": "SIMPLEX",
+                            "zoom": 0.25
+                        }
+                    }
+                },
+                {
+                    "find": [{"block": "oak_leaves"}],
+                    "replace": {"palette": [{"block": "dark_oak_leaves"}]}
+                }
+            ],
             "place": [
                 "trees/oak/truegeneric1",
                 "trees/oak/truegeneric2",
@@ -84,45 +142,46 @@
             ]
         },
         {
-        "heightmap": {
-            "seed": 1337,
-            "style": {
-                "style": "SIMPLEX",
-                "multiplier": 10
+            "heightmap": {
+                "seed": 1337,
+                "style": {
+                    "style": "SIMPLEX",
+                    "multiplier": 10
+                },
+                "offsetY": 5
             },
-            "offsetY": 5
-        },
-        "chance": 0.05,
-        "bottom": true,
-        "density": 1,
-        "place": [
-            "structures/amethyst1",
-            "structures/amethyst2",
-            "structures/amethyst3",
-            "structures/amethyst4",
-            "structures/amethyst5",
-            "structures/amethyst6"
-        ],
-        "edit": [{
-            "find": [{"block": "glass"}],
-            "replace": {"palette": [{"block": "void_air"}]}
-        }],
-        "enabled": true,
-        "xAxis": {
-            "interval": 90,
-            "max": 360,
-            "min": 0
-        },
-        "yAxis": {
-            "interval": 90,
-            "max": 360,
-            "min": 0
-        },
-        "translate": {
-            "yRandom": 10,
-            "y": 2
+            "chance": 0.05,
+            "bottom": true,
+            "density": 1,
+            "place": [
+                "structures/amethyst1",
+                "structures/amethyst2",
+                "structures/amethyst3",
+                "structures/amethyst4",
+                "structures/amethyst5",
+                "structures/amethyst6"
+            ],
+            "edit": [{
+                "find": [{"block": "glass"}],
+                "replace": {"palette": [{"block": "void_air"}]}
+            }],
+            "enabled": true,
+            "xAxis": {
+                "interval": 90,
+                "max": 360,
+                "min": 0
+            },
+            "yAxis": {
+                "interval": 90,
+                "max": 360,
+                "min": 0
+            },
+            "translate": {
+                "yRandom": 10,
+                "y": 2
+            }
         }
-    }],
+    ],
     "landBiomeZoom": 1.85,
     "shoreHeightMin": 0.02,
     "shoreHeightMax": 1.2,

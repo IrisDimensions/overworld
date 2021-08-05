@@ -77,9 +77,38 @@
     "objects": [
         {
             "chance": 0,
-            "rotation": {"enabled": true, "yAxis": {"enabled": true, "interval":90, "max": 360, "min": 0}},
-            "trees": [ {"sizes": [ {"depth":1, "width": 1} ], "treeTypes": ["JUNGLE", "JUNGLE_BUSH"]}],
-            "edit": [{"find": [{"block": "jungle_log"}], "replace": {"palette": [{"block": "jungle_wood"}]}},{"find": [{"block": "oak_log"}, {"block": "oak_wood"}], "replace": {"palette": [{"block": "jungle_wood"}]}}],
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "max": 360,
+                    "min": 0
+                }
+            },
+            "trees": [{
+                "sizes": [{
+                    "depth": 1,
+                    "width": 1
+                }],
+                "treeTypes": [
+                    "JUNGLE",
+                    "JUNGLE_BUSH"
+                ]
+            }],
+            "edit": [
+                {
+                    "find": [{"block": "jungle_log"}],
+                    "replace": {"palette": [{"block": "jungle_wood"}]}
+                },
+                {
+                    "find": [
+                        {"block": "oak_log"},
+                        {"block": "oak_wood"}
+                    ],
+                    "replace": {"palette": [{"block": "jungle_wood"}]}
+                }
+            ],
             "translate": {"y": -1},
             "place": [
                 "trees/jungle/cocogeneric2",
