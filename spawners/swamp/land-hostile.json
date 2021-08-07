@@ -1,15 +1,14 @@
 {
     "group": "NORMAL",
     "maximumRate": {
-        "amount": 8,
-        "per": {
-            "seconds": 30
-        }
+        "amount": 10,
+        "per": {"seconds": 30}
     },
     "timeBlock": {
         "startHour": 20,
         "endHour": 3
     },
+    "maxEntitiesPerChunk": 2,
     "energyMultiplier": 0.95,
     "weather": "ANY",
     "spawns": [
@@ -20,6 +19,11 @@
         },
         {
             "entity": "standard/hostile/skeleton",
+            "energyMultiplier": 1.35,
+            "rarity": 4
+        },
+        {
+            "entity": "standard/hostile/slime",
             "energyMultiplier": 1.35,
             "rarity": 4
         },

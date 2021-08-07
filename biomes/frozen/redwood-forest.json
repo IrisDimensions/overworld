@@ -4,14 +4,11 @@
     "color": "#586B89",
     "rarity": 1,
     "vanillaDerivative": "SNOWY_TAIGA",
-    "generators": [
-
-        {
-            "min": 16,
-            "max": 64,
-            "generator": "mountain"
-        }
-    ],
+    "generators": [{
+        "min": 16,
+        "max": 64,
+        "generator": "mountain"
+    }],
     "customDerivitives": [{
         "category": "icy",
         "id": "frozen_redwood_forest",
@@ -104,14 +101,22 @@
         {
             "chance": 0.4,
             "density": 2,
-            "edit": [{
-                "find": [{"block": "birch_leaves"}],
-                "replace": {"palette": [{"block": "oak_leaves", "data": {"persistent": true}}]}
-            },
-            {
-                "find": [{"block": "spruce_leaves"}],
-                "replace": {"palette": [{"block": "dark_oak_leaves", "data": {"persistent": true}}]}
-            }],
+            "edit": [
+                {
+                    "find": [{"block": "birch_leaves"}],
+                    "replace": {"palette": [{
+                        "block": "oak_leaves",
+                        "data": {"persistent": true}
+                    }]}
+                },
+                {
+                    "find": [{"block": "spruce_leaves"}],
+                    "replace": {"palette": [{
+                        "block": "dark_oak_leaves",
+                        "data": {"persistent": true}
+                    }]}
+                }
+            ],
             "snow": 1,
             "rotation": {
                 "yAxis": {

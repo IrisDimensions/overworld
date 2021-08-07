@@ -62,9 +62,26 @@
     "objects": [
         {
             "chance": 0,
-            "rotation": {"enabled": true, "yAxis": {"enabled": true, "interval":90, "max": 360, "min": 0}},
-            "trees": [ {"sizes": [ {"depth": 1, "width": 1} ], "treeTypes": ["RED_MUSHROOM"]}],
-            "edit": [{"find": [{"block": "brown_mushroom_block"}],"replace": {"palette": [{"block": "brown_mushroom_block"}]}}],
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "max": 360,
+                    "min": 0
+                }
+            },
+            "trees": [{
+                "sizes": [{
+                    "depth": 1,
+                    "width": 1
+                }],
+                "treeTypes": ["RED_MUSHROOM"]
+            }],
+            "edit": [{
+                "find": [{"block": "brown_mushroom_block"}],
+                "replace": {"palette": [{"block": "brown_mushroom_block"}]}
+            }],
             "place": [
                 "trees/mushroom/redgeneric3",
                 "trees/mushroom/redgeneric4",
@@ -84,9 +101,26 @@
         },
         {
             "chance": 0,
-            "rotation": {"enabled": true, "yAxis": {"enabled": true, "interval":90, "max": 360, "min": 0}},
-            "trees": [ {"sizes": [ {"depth": 1, "width": 1} ], "treeTypes": ["BROWN_MUSHROOM"]}],
-            "edit": [{"find": [{"block": "red_mushroom_block"}],"replace": {"palette": [{"block": "brown_mushroom_block"}]}}],
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "max": 360,
+                    "min": 0
+                }
+            },
+            "trees": [{
+                "sizes": [{
+                    "depth": 1,
+                    "width": 1
+                }],
+                "treeTypes": ["BROWN_MUSHROOM"]
+            }],
+            "edit": [{
+                "find": [{"block": "red_mushroom_block"}],
+                "replace": {"palette": [{"block": "brown_mushroom_block"}]}
+            }],
             "place": [
                 "trees/mushroom/redgeneric3",
                 "trees/mushroom/redgeneric4",
@@ -107,7 +141,13 @@
         {
             "chance": 0,
             "density": 2,
-            "trees": [ {"sizes": [ {"depth": 1, "width": 1} ], "treeTypes": ["WARPED_FUNGUS"]}],
+            "trees": [{
+                "sizes": [{
+                    "depth": 1,
+                    "width": 1
+                }],
+                "treeTypes": ["WARPED_FUNGUS"]
+            }],
             "edit": [
                 {
                     "find": [{"block": "brown_mushroom_block"}],
@@ -154,7 +194,13 @@
         {
             "chance": 0,
             "density": 2,
-            "trees": [ {"sizes": [ {"depth": 1, "width": 1} ], "treeTypes": ["CRIMSON_FUNGUS"]}],
+            "trees": [{
+                "sizes": [{
+                    "depth": 1,
+                    "width": 1
+                }],
+                "treeTypes": ["CRIMSON_FUNGUS"]
+            }],
             "edit": [
                 {
                     "find": [{"block": "brown_mushroom_block"}],
@@ -195,45 +241,46 @@
             }
         },
         {
-        "heightmap": {
-            "seed": 1337,
-            "style": {
-                "style": "SIMPLEX",
-                "multiplier": 10
+            "heightmap": {
+                "seed": 1337,
+                "style": {
+                    "style": "SIMPLEX",
+                    "multiplier": 10
+                },
+                "offsetY": 5
             },
-            "offsetY": 5
-        },
-        "chance": 0.05,
-        "bottom": true,
-        "density": 1,
-        "place": [
-            "structures/amethyst1",
-            "structures/amethyst2",
-            "structures/amethyst3",
-            "structures/amethyst4",
-            "structures/amethyst5",
-            "structures/amethyst6"
-        ],
-        "edit": [{
-            "find": [{"block": "glass"}],
-            "replace": {"palette": [{"block": "void_air"}]}
-        }],
-        "enabled": true,
-        "xAxis": {
-            "interval": 90,
-            "max": 360,
-            "min": 0
-        },
-        "yAxis": {
-            "interval": 90,
-            "max": 360,
-            "min": 0
-        },
-        "translate": {
-            "yRandom": 10,
-            "y": 2
+            "chance": 0.05,
+            "bottom": true,
+            "density": 1,
+            "place": [
+                "structures/amethyst1",
+                "structures/amethyst2",
+                "structures/amethyst3",
+                "structures/amethyst4",
+                "structures/amethyst5",
+                "structures/amethyst6"
+            ],
+            "edit": [{
+                "find": [{"block": "glass"}],
+                "replace": {"palette": [{"block": "void_air"}]}
+            }],
+            "enabled": true,
+            "xAxis": {
+                "interval": 90,
+                "max": 360,
+                "min": 0
+            },
+            "yAxis": {
+                "interval": 90,
+                "max": 360,
+                "min": 0
+            },
+            "translate": {
+                "yRandom": 10,
+                "y": 2
+            }
         }
-    }],
+    ],
     "biomeImplosionRatio": 0.25,
     "landBiomeZoom": 1.85,
     "effects": [

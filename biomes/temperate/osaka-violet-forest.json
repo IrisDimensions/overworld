@@ -1,0 +1,250 @@
+{
+    "name": "Osaka Violet Forest",
+    "derivative": "FLOWER_FOREST",
+    "rarity": 4,
+    "color": "#DF4FE8",
+    "vanillaDerivative": "FOREST",
+    "customDerivitives": [
+        {
+            "id": "sakura_pink",
+            "foliageColor": "#E78DFD",
+            "waterColor": "#A5FFED",
+            "grassColor": "#A8FF98",
+            "category": "forest"
+        },
+        {
+            "id": "sakura_child_forest",
+            "foliageColor": "#D260EE",
+            "waterColor": "#A5FFED",
+            "grassColor": "#64A522",
+            "category": "forest"
+        }
+    ],
+    "generators": [{
+        "min": 4,
+        "max": 7,
+        "generator": "plain"
+    }],
+    "layers": [
+        {
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "grass_block"}]
+        },
+        {"palette": [{"block": "dirt"}]},
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {"block": "dirt"},
+                {"block": "coarse_dirt"}
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "stone"},
+                {"block": "andesite"},
+                {"block": "stone"}
+            ]
+        }
+    ],
+    "objects": [
+        {
+            "chance": 0.2,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "edit": [{
+                "find": [{"block": "oak_wood"}],
+                "replace": {"palette": [{"block": "stripped_birch_log"}]}
+            }],
+            "place": [
+                "trees/oak/hoakgeneric3",
+                "trees/oak/hoakgeneric4",
+                "trees/oak/hoakgeneric5",
+                "trees/oak/hoakgeneric6",
+                "trees/oak/hoakgeneric7",
+                "trees/oak/hoakgeneric8",
+                "trees/oak/hoakgeneric9",
+                "trees/oak/hoakgeneric1",
+                "trees/oak/shoakgeneric3",
+                "trees/oak/shoakgeneric4",
+                "trees/oak/shoakgeneric5",
+                "trees/oak/shoakgeneric6",
+                "trees/oak/shoakgeneric7",
+                "trees/oak/shoakgeneric8",
+                "trees/oak/shoakgeneric9",
+                "trees/oak/shoakgeneric1",
+                "trees/oak/shoakgeneric2"
+            ]
+        },
+        {
+            "mode": "PAINT",
+            "chance": 0.008,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/camp1",
+                "clutter/camp4",
+                "clutter/camp5",
+                "clutter/camp3"
+            ]
+        },
+        {
+            "chance": 0.7,
+            "mode": "FAST_MIN_HEIGHT",
+            "density": 2,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 360,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "trees/sakura/genericsak1",
+                "trees/sakura/genericsak2",
+                "trees/sakura/genericsak3",
+                "trees/sakura/genericsak4",
+                "trees/sakura/genericsak5"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.003,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/obelisk1",
+                "clutter/obelisk2",
+                "clutter/obelisk3",
+                "clutter/obelisk4",
+                "clutter/obelisk5",
+                "clutter/obelisk6",
+                "clutter/obelisk7"
+            ]
+        },
+        {
+            "chance": 0.001,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/literalgarbage1",
+                "clutter/literalgarbage2",
+                "clutter/literalgarbage3",
+                "clutter/literalgarbage4"
+            ]
+        },
+        {
+            "chance": 0.008,
+            "mode": "PAINT",
+            "place": [
+                "clutter/pumpkins1",
+                "clutter/pumpkins2",
+                "clutter/pumpkins3",
+                "clutter/pumpkins4",
+                "clutter/pumpkins5",
+                "clutter/pumpkins6"
+            ],
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "max": 360,
+                    "min": 0,
+                    "interval": 90
+                }
+            },
+            "translate": {"y": 1}
+        }
+    ],
+    "biomeZoom": 60,
+    "biomeStyle": {"style": "SIMPLEX"},
+    "decorators": [
+        {
+            "chance": 0.6,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.2,
+            "palette": [
+                {
+                    "weight": 1,
+                    "block": "grass"
+                },
+                {"block": "grass"},
+                {"block": "grass"},
+                {
+                    "chance": 7,
+                    "block": "grass"
+                }
+            ]
+        },
+        {
+            "chance": 0.03,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.2,
+            "palette": [{"block": "oak_leaves"}]
+        },
+        {
+            "chance": 0.02,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.2,
+            "palette": [{"block": "tall_grass"}]
+        },
+        {
+            "chance": 0.06,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.2,
+            "palette": [{"block": "allium"}]
+        },
+        {
+            "chance": 0.03,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.2,
+            "palette": [{"block": "cobblestone_slab"}]
+        }
+    ],
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {"block": "stone"},
+            {"block": "andesite"},
+            {"block": "stone"}
+        ]
+    },
+    "biomeScatter": ["FOREST"]
+}

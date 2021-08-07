@@ -1,7 +1,8 @@
 {
-    "version": 2004,
+    "version": 2005,
     "OVERWORLD-VERSION": 3.134,
     "name": "Overworld",
+    "focus": "hot/desert-dunes",
     "environment": "NORMAL",
     "fluidHeight": 63,
     "CONTINENTS": "Continent settings containing placement of the continents.",
@@ -11,24 +12,22 @@
         "zoom": 5
     },
     "landChance": 0.69,
-    "biomeZoom": 4,
+    "biomeZoom": 5,
     "REGIONS": "Contains the list of regions and their placement style",
     "regionStyle": {
-        "style": "CELLULAR_IRIS_DOUBLE",
+        "style": "NOWHERE_CELLULAR",
         "fracture": {
             "multiplier": 600,
             "axialFracturing": true,
-            "style": "NOWHERE_CUBIC",
+            "style": "NOWHERE",
             "zoom": 1.25,
-            "fracture": {
-                "style": "NOWHERE",
-                "axialFracturing": true,
-                "zoom": 0.1,
-                "multiplier": 24.8
+                "fracture": {
+                    "style": "STATIC",
+                    "multiplier": 1.25
             }
         }
     },
-    "regionZoom": 6,
+    "regionZoom": 6.15,
     "regions": [
         "mushroom",
         "swamp",
@@ -43,37 +42,25 @@
         "style": "NOWHERE_CELLULAR",
         "zoom": 5
     },
-    "TREE SETTINGS":  "This is where you can change tree inheritance from saplings.",
+    "TREE SETTINGS": "This is where you can change tree inheritance from saplings.",
     "treeSettings": {
         "enabled": true,
         "mode": "FIRST"
     },
-
     "SEAS": "Sea settings (for the biomes that are oceans).",
     "seaZoom": 1.25,
     "seaBiomeStyle": {"style": "FRACTAL_FBM_IRIS"},
     "LAND": "Land settings (for the biomes that are non-ocean).",
     "landZoom": 3.2,
-
     "landBiomeStyle": {
         "style": "NOWHERE_CELLULAR",
-        "fracture": {
-            "multiplier": 725,
-            "axialFracturing": true,
-            "style": "NOWHERE_CUBIC",
-            "zoom": 1.18,
+        "axialFracturing": true,
             "fracture": {
-                "style": "NOWHERE",
-                "axialFracturing": true,
-                "zoom": 0.1141,
-                "multiplier": 44.8
+                "style": "STATIC",
+                "multiplier": 3
             }
-        }
     },
-    "shoreBiomeStyle": {
-        "style": "NOWHERE_CELLULAR"
-    },
-
+    "shoreBiomeStyle": {"style": "NOWHERE_CELLULAR"},
     "LOOT": "Contains a list of loot tables that are attempted to be applied to all chests that spawn.",
     "lootTries": 32,
     "loot": {"tables": [
