@@ -19,43 +19,43 @@
             "style": {"style": "FRACTAL_FBM_IRIS"},
             "zoom": 0.6,
             "palette": [
-                {"block": "sand"},
-                {"block": "clay"},
-                {"block": "sand"},
-                {"block": "gravel"},
-                {"block": "sand"},
-                {"block": "dirt"},
+                {"block": "minecraft:sand"},
+                {"block": "minecraft:clay"},
+                {"block": "minecraft:sand"},
+                {"block": "minecraft:gravel"},
+                {"block": "minecraft:sand"},
+                {"block": "minecraft:dirt"},
                 {
                     "weight": 2,
-                    "block": "sand"
+                    "block": "minecraft:sand"
                 }
             ]
         },
         {
             "minHeight": 2,
             "maxHeight": 2,
-            "palette": [{"block": "gravel"}]
+            "palette": [{"block": "minecraft:gravel"}]
         }
     ],
     "decorators": [
         {
             "chance": 0.1,
-            "palette": [{"block": "kelp_plant"}],
+            "palette": [{"block": "minecraft:kelp_plant"}],
             "stackMin": 4,
             "stackMax": 10
         },
         {
             "chance": 0.05,
-            "palette": [{"block": "seagrass"}]
+            "palette": [{"block": "minecraft:seagrass"}]
         },
         {
             "chance": 0.05,
             "palette": [{
-                "block": "tall_seagrass",
+                "block": "minecraft:tall_seagrass",
                 "data": {"half": "lower"}
             }],
             "topPalette": [{
-                "block": "tall_seagrass",
+                "block": "minecraft:tall_seagrass",
                 "data": {"half": "upper"}
             }]
         }
@@ -76,17 +76,17 @@
             "edit": [
                 {
                     "find": [
-                        {"block": "grass_block"},
-                        {"block": "dirt"}
+                        {"block": "minecraft:grass_block"},
+                        {"block": "minecraft:dirt"}
                     ],
-                    "replace": {"palette": [{"block": "clay"}]}
+                    "replace": {"palette": [{"block": "minecraft:clay"}]}
                 },
                 {
                     "find": [
-                        {"block": "tall_grass"},
-                        {"block": "grass"}
+                        {"block": "minecraft:tall_grass"},
+                        {"block": "minecraft:grass"}
                     ],
-                    "replace": {"palette": [{"block": "seagrass"}]}
+                    "replace": {"palette": [{"block": "minecraft:seagrass"}]}
                 }
             ]
         },
@@ -96,7 +96,7 @@
             "underwater": true,
             "mode": "CENTER_HEIGHT",
             "edit": [{
-                "find": [{"block": "clay"}],
+                "find": [{"block": "minecraft:clay"}],
                 "replace": {
                     "style": {
                         "style": "GLOB",
@@ -105,11 +105,11 @@
                     "palette": [
                         {
                             "weight": 2,
-                            "block": "clay"
+                            "block": "minecraft:clay"
                         },
                         {
                             "weight": 1,
-                            "block": "cave_air"
+                            "block": "minecraft:cave_air"
                         }
                     ]
                 }
