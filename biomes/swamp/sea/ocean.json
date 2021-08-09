@@ -43,7 +43,6 @@
             "partOf": "SEA_SURFACE",
             "chance": 0.025,
             "variance": {"style": "STATIC"},
-            "forcePlace": true,
             "zoom": 2.25,
             "palette": [{"block": "minecraft:lily_pad"}],
             "style": {"style": "STATIC"}
@@ -110,34 +109,45 @@
             "style": {"style": "STATIC"}
         }
     ],
-    "objects": [{
-        "chance": 0.05,
-        "density": 1,
-        "rotation": {
-            "yAxis": {
-                "min": 0,
-                "max": 0,
-                "interval": 90,
+    "objects": [
+        {
+            "mode": "PAINT",
+            "onwater": true,
+            "place": ["clutter/lilly"],
+            "chance": 0.5,
+            "density": 5,
+            "underwater": false,
+            "translate": {"y": 1}
+        },
+        {
+            "chance": 0.05,
+            "density": 1,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
                 "enabled": true
             },
-            "enabled": true
-        },
-        "underwater": true,
-        "place": [
-            "structures/swreck1",
-            "structures/usdship1",
-            "structures/usdship2"
-        ],
-        "edit": [{
-            "find": [{"block": "minecraft:oak_stairs"}],
-            "replace": {"palette": [{"block": "minecraft:oak_planks"}]}
-        }],
-        "translate": {
-            "x": 0,
-            "y": -4,
-            "z": 0
+            "underwater": true,
+            "place": [
+                "structures/swreck1",
+                "structures/usdship1",
+                "structures/usdship2"
+            ],
+            "edit": [{
+                "find": [{"block": "minecraft:oak_stairs"}],
+                "replace": {"palette": [{"block": "minecraft:oak_planks"}]}
+            }],
+            "translate": {
+                "x": 0,
+                "y": -4,
+                "z": 0
+            }
         }
-    }],
+    ],
     "wall": {
         "style": {"style": "IRIS"},
         "palette": [

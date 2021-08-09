@@ -103,6 +103,17 @@
                 },
                 "enabled": true
             },
+            "edit": [{
+                "chance": 0.01,
+                "find": [
+                    {"block": "minecraft:oak_leaves"},
+                    {"block": "minecraft:birch_leaves"}
+                ],
+                "replace": {
+                    "style": {"style": "STATIC"},
+                    "palette": [{"block": "minecraft:jungle_leaves"}]
+                }
+            }],
             "place": [
                 "trees/oak/hoakgeneric3",
                 "trees/oak/hoakgeneric4",
@@ -155,10 +166,23 @@
                 },
                 "enabled": true
             },
-            "edit": [{
-                "find": [{"block": "minecraft:stripped_birch_wood"}],
-                "replace": {"palette": [{"block": "minecraft:oak_wood"}]}
-            }],
+            "edit": [
+                {
+                    "find": [{"block": "minecraft:stripped_birch_wood"}],
+                    "replace": {"palette": [{"block": "minecraft:oak_wood"}]}
+                },
+                {
+                    "chance": 0.01,
+                    "find": [
+                        {"block": "minecraft:oak_leaves"},
+                        {"block": "minecraft:birch_leaves"}
+                    ],
+                    "replace": {
+                        "style": {"style": "STATIC"},
+                        "palette": [{"block": "minecraft:jungle_leaves"}]
+                    }
+                }
+            ],
             "place": [
                 "trees/sakura/genericsak1",
                 "trees/sakura/genericsak2",
