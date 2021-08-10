@@ -42,15 +42,15 @@
     "layers": [
         {
             "style": {"style": "STATIC"},
-            "palette": [{"block": "grass_block"}]
+            "palette": [{"block": "minecraft:grass_block"}]
         },
-        {"palette": [{"block": "dirt"}]},
+        {"palette": [{"block": "minecraft:dirt"}]},
         {
             "minHeight": 1,
             "maxHeight": 3,
             "palette": [
-                {"block": "dirt"},
-                {"block": "coarse_dirt"}
+                {"block": "minecraft:dirt"},
+                {"block": "minecraft:coarse_dirt"}
             ]
         },
         {
@@ -58,9 +58,9 @@
             "maxHeight": 18,
             "style": {"style": "STATIC"},
             "palette": [
-                {"block": "stone"},
-                {"block": "andesite"},
-                {"block": "stone"}
+                {"block": "minecraft:stone"},
+                {"block": "minecraft:andesite"},
+                {"block": "minecraft:stone"}
             ]
         }
     ],
@@ -76,10 +76,23 @@
                 },
                 "enabled": true
             },
-            "edit": [{
-                "find": [{"block": "oak_wood"}],
-                "replace": {"palette": [{"block": "spruce_wood"}]}
-            }],
+            "edit": [
+                {
+                    "find": [{"block": "minecraft:oak_wood"}],
+                    "replace": {"palette": [{"block": "minecraft:spruce_wood"}]}
+                },
+                {
+                    "chance": 0.05,
+                    "find": [
+                        {"block": "minecraft:oak_leaves"},
+                        {"block": "minecraft:birch_leaves"}
+                    ],
+                    "replace": {
+                        "style": {"style": "STATIC"},
+                        "palette": [{"block": "minecraft:jungle_leaves"}]
+                    }
+                }
+            ],
             "place": [
                 "trees/oak/hoakgeneric3",
                 "trees/oak/hoakgeneric4",
@@ -132,10 +145,23 @@
                 },
                 "enabled": true
             },
-            "edit": [{
-                "find": [{"block": "stripped_birch_wood"}],
-                "replace": {"palette": [{"block": "spruce_wood"}]}
-            }],
+            "edit": [
+                {
+                    "find": [{"block": "minecraft:stripped_birch_wood"}],
+                    "replace": {"palette": [{"block": "minecraft:spruce_wood"}]}
+                },
+                {
+                    "chance": 0.05,
+                    "find": [
+                        {"block": "minecraft:oak_leaves"},
+                        {"block": "minecraft:birch_leaves"}
+                    ],
+                    "replace": {
+                        "style": {"style": "STATIC"},
+                        "palette": [{"block": "minecraft:jungle_leaves"}]
+                    }
+                }
+            ],
             "place": [
                 "trees/sakura/genericsak1",
                 "trees/sakura/genericsak2",
@@ -221,13 +247,13 @@
             "palette": [
                 {
                     "weight": 1,
-                    "block": "grass"
+                    "block": "minecraft:grass"
                 },
-                {"block": "grass"},
-                {"block": "grass"},
+                {"block": "minecraft:grass"},
+                {"block": "minecraft:grass"},
                 {
                     "chance": 7,
-                    "block": "grass"
+                    "block": "minecraft:grass"
                 }
             ]
         },
@@ -235,33 +261,33 @@
             "chance": 0.03,
             "variance": {"style": "STATIC"},
             "zoom": 0.2,
-            "palette": [{"block": "oak_leaves"}]
+            "palette": [{"block": "minecraft:oak_leaves"}]
         },
         {
             "chance": 0.02,
             "variance": {"style": "STATIC"},
             "zoom": 0.2,
-            "palette": [{"block": "tall_grass"}]
+            "palette": [{"block": "minecraft:tall_grass"}]
         },
         {
             "chance": 0.06,
             "variance": {"style": "STATIC"},
             "zoom": 0.2,
-            "palette": [{"block": "poppy"}]
+            "palette": [{"block": "minecraft:poppy"}]
         },
         {
             "chance": 0.01,
             "variance": {"style": "STATIC"},
             "zoom": 0.2,
-            "palette": [{"block": "blackstone_slab"}]
+            "palette": [{"block": "minecraft:blackstone_slab"}]
         }
     ],
     "wall": {
         "style": {"style": "STATIC"},
         "palette": [
-            {"block": "stone"},
-            {"block": "andesite"},
-            {"block": "stone"}
+            {"block": "minecraft:stone"},
+            {"block": "minecraft:andesite"},
+            {"block": "minecraft:stone"}
         ]
     },
     "biomeScatter": ["FOREST"]
