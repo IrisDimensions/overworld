@@ -63,16 +63,14 @@
     }],
     "decorators": [
         {
-            "chance": 0.45,
-            "variance": {"style": "IRIS"},
+            "chance": 0.35,
+            "variance": {"style": "IRIS", "fracture": {"style": "STATIC", "multiplier": 3}},
             "zoom": 0.1,
             "palette": [
-                {"block": "minecraft:jungle_leaves"},
                 {"block": "minecraft:tall_grass"},
                 {"block": "minecraft:grass"},
                 {"block": "minecraft:jungle_leaves"},
-                {"block": "minecraft:grass"},
-                {"block": "minecraft:jungle_leaves"}
+                {"block": "minecraft:fern"}
             ],
             "style": {
                 "style": "FRACTAL_BILLOW_IRIS",
@@ -94,12 +92,31 @@
             "stackMin": 1
         },
         {
-            "chance": 1.0E-4,
+            "chance": 0.05,
             "verticalZoom": 88,
             "variance": {"style": "STATIC"},
             "stackMax": 1,
-            "zoom": 10,
             "palette": [{"block": "minecraft:jungle_sapling"}],
+            "style": {"style": "STATIC"},
+            "heightVariance": {"style": "STATIC"},
+            "stackMin": 1
+        },
+        {
+            "chance": 0.1,
+            "verticalZoom": 88,
+            "variance": {"style": "STATIC"},
+            "stackMax": 1,
+            "palette": [{"block": "minecraft:fern"}],
+            "style": {"style": "STATIC"},
+            "heightVariance": {"style": "STATIC"},
+            "stackMin": 1
+        },
+        {
+            "chance": 0.1,
+            "verticalZoom": 88,
+            "variance": {"style": "STATIC"},
+            "stackMax": 1,
+            "palette": [{"block": "minecraft:dead_bush"}],
             "style": {"style": "STATIC"},
             "heightVariance": {"style": "STATIC"},
             "stackMin": 1
@@ -147,7 +164,7 @@
             ],
             "translate": {
                 "x": 0,
-                "y": -5,
+                "y": -1,
                 "z": 0
             }
         },
@@ -178,7 +195,7 @@
             ],
             "translate": {
                 "x": 0,
-                "y": -5,
+                "y": -1,
                 "z": 0
             }
         },
@@ -235,7 +252,7 @@
             }
         },
         {
-            "chance": 0.008,
+            "chance": 0.01,
             "mode": "PAINT",
             "place": [
                 "clutter/melons1",
