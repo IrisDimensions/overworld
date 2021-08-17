@@ -1,265 +1,278 @@
 {
+    "object": "jigsaw/stronghold/portal/main",
     "connectors": [{
-        "targetName": "portal-top",
-        "innerConnector": true,
-        "entityCount": 1,
-        "rotateConnector": false,
         "name": "",
+        "targetName": "*",
+        "rotateConnector": false,
+        "innerConnector": true,
         "pools": ["stronghold/portalroom"],
+        "keepEntity": false,
+        "entityCount": 1,
         "position": {
             "x": 0,
-            "y": -48,
+            "y": 7,
             "z": 5
         },
-        "direction": "NORTH_NEGATIVE_Z"
+        "direction": "UP_POSITIVE_Y"
     }],
     "placementOptions": {
-        "overStilt": 0,
+        "place": [],
+        "rotation": {
+            "enabled": true,
+            "xAxis": {
+                "enabled": false,
+                "min": 0,
+                "max": 0,
+                "interval": 0
+            },
+            "yAxis": {
+                "enabled": true,
+                "min": 0,
+                "max": 0,
+                "interval": 90
+            },
+            "zAxis": {
+                "enabled": false,
+                "min": 0,
+                "max": 0,
+                "interval": 0
+            }
+        },
+        "clamp": {
+            "minimumHeight": 0,
+            "maximumHeight": 255
+        },
+        "addFeatures": [],
+        "snow": 0,
         "chance": 1,
-        "meld": false,
         "density": 1,
+        "overStilt": 0,
+        "boreExtendMaxY": 0,
         "boreExtendMinY": 0,
+        "vacuumInterpolationRadius": 16,
+        "vacuumInterpolationMethod": "BILINEAR_STARCAST_9",
+        "underwater": false,
+        "carvingSupport": "SURFACE_ONLY",
+        "smartBore": false,
+        "waterloggable": false,
+        "onwater": false,
+        "meld": false,
+        "bottom": false,
+        "bore": false,
+        "warp": {
+            "style": "FLAT",
+            "zoom": 1,
+            "multiplier": 1,
+            "axialFracturing": false,
+            "exponent": 1
+        },
+        "translateCenter": false,
+        "mode": "FAST_MAX_HEIGHT",
         "edit": [
             {
-                "chance": 0.15,
                 "find": [{
-                    "debug": false,
-                    "data": {"facing": "east"},
-                    "weight": 1,
                     "block": "minecraft:end_portal_frame",
-                    "key": "minecraft"
+                    "debug": false,
+                    "weight": 1,
+                    "data": {"facing": "east"},
+                    "preprocessors": []
                 }],
                 "replace": {
                     "style": {
-                        "multiplier": 1,
                         "style": "STATIC",
                         "zoom": 1,
-                        "maxFractureAccuracy": false,
+                        "multiplier": 1,
+                        "axialFracturing": false,
                         "exponent": 1
                     },
                     "zoom": 5,
                     "palette": [{
+                        "block": "minecraft:end_portal_frame",
                         "debug": false,
+                        "weight": 1,
                         "data": {
                             "eye": "true",
                             "facing": "east"
                         },
-                        "weight": 1,
-                        "block": "minecraft:end_portal_frame",
-                        "key": "minecraft"
+                        "preprocessors": []
                     }]
                 },
-                "exact": true
+                "exact": true,
+                "chance": 0.15
             },
             {
-                "chance": 0.15,
                 "find": [{
-                    "debug": false,
-                    "data": {"facing": "west"},
-                    "weight": 1,
                     "block": "minecraft:end_portal_frame",
-                    "key": "minecraft"
+                    "debug": false,
+                    "weight": 1,
+                    "data": {"facing": "west"},
+                    "preprocessors": []
                 }],
                 "replace": {
                     "style": {
-                        "multiplier": 1,
                         "style": "STATIC",
                         "zoom": 1,
-                        "maxFractureAccuracy": false,
+                        "multiplier": 1,
+                        "axialFracturing": false,
                         "exponent": 1
                     },
                     "zoom": 5,
                     "palette": [{
+                        "block": "minecraft:end_portal_frame",
                         "debug": false,
+                        "weight": 1,
                         "data": {
                             "eye": "true",
                             "facing": "west"
                         },
-                        "weight": 1,
-                        "block": "minecraft:end_portal_frame",
-                        "key": "minecraft"
+                        "preprocessors": []
                     }]
                 },
-                "exact": true
+                "exact": true,
+                "chance": 0.15
             },
             {
-                "chance": 0.15,
                 "find": [{
-                    "debug": false,
-                    "data": {"facing": "north"},
-                    "weight": 1,
                     "block": "minecraft:end_portal_frame",
-                    "key": "minecraft"
+                    "debug": false,
+                    "weight": 1,
+                    "data": {"facing": "north"},
+                    "preprocessors": []
                 }],
                 "replace": {
                     "style": {
-                        "multiplier": 1,
                         "style": "STATIC",
                         "zoom": 1,
-                        "maxFractureAccuracy": false,
+                        "multiplier": 1,
+                        "axialFracturing": false,
                         "exponent": 1
                     },
                     "zoom": 5,
                     "palette": [{
+                        "block": "minecraft:end_portal_frame",
                         "debug": false,
+                        "weight": 1,
                         "data": {
                             "eye": "true",
                             "facing": "north"
                         },
-                        "weight": 1,
-                        "block": "minecraft:end_portal_frame",
-                        "key": "minecraft"
+                        "preprocessors": []
                     }]
                 },
-                "exact": true
+                "exact": true,
+                "chance": 0.15
             },
             {
-                "chance": 0.15,
                 "find": [{
-                    "debug": false,
-                    "data": {"facing": "south"},
-                    "weight": 1,
                     "block": "minecraft:end_portal_frame",
-                    "key": "minecraft"
+                    "debug": false,
+                    "weight": 1,
+                    "data": {"facing": "south"},
+                    "preprocessors": []
                 }],
                 "replace": {
                     "style": {
-                        "multiplier": 1,
                         "style": "STATIC",
                         "zoom": 1,
-                        "maxFractureAccuracy": false,
+                        "multiplier": 1,
+                        "axialFracturing": false,
                         "exponent": 1
                     },
                     "zoom": 5,
                     "palette": [{
+                        "block": "minecraft:end_portal_frame",
                         "debug": false,
+                        "weight": 1,
                         "data": {
                             "eye": "true",
                             "facing": "south"
                         },
-                        "weight": 1,
-                        "block": "minecraft:end_portal_frame",
-                        "key": "minecraft"
+                        "preprocessors": []
                     }]
                 },
-                "exact": true
+                "exact": true,
+                "chance": 0.15
             },
             {
-                "chance": 0.3,
                 "find": [{
-                    "debug": false,
-                    "data": {},
-                    "weight": 1,
                     "block": "minecraft:stone_bricks",
-                    "key": "minecraft"
+                    "debug": false,
+                    "weight": 1,
+                    "data": {},
+                    "preprocessors": []
                 }],
                 "replace": {
                     "style": {
-                        "multiplier": 1,
                         "style": "STATIC",
                         "zoom": 1,
-                        "maxFractureAccuracy": false,
+                        "multiplier": 1,
+                        "axialFracturing": false,
                         "exponent": 1
                     },
                     "zoom": 5,
                     "palette": [
                         {
-                            "debug": false,
-                            "data": {},
-                            "weight": 1,
                             "block": "minecraft:mossy_stone_bricks",
-                            "key": "minecraft"
+                            "debug": false,
+                            "weight": 1,
+                            "data": {},
+                            "preprocessors": []
                         },
                         {
-                            "debug": false,
-                            "data": {},
-                            "weight": 1,
                             "block": "minecraft:cracked_stone_bricks",
-                            "key": "minecraft"
+                            "debug": false,
+                            "weight": 1,
+                            "data": {},
+                            "preprocessors": []
                         }
                     ]
                 },
-                "exact": false
+                "exact": false,
+                "chance": 0.3
             },
             {
-                "chance": 0.3,
                 "find": [{
-                    "debug": false,
-                    "data": {},
-                    "weight": 1,
                     "block": "minecraft:stone",
-                    "key": "minecraft"
+                    "debug": false,
+                    "weight": 1,
+                    "data": {},
+                    "preprocessors": []
                 }],
                 "replace": {
                     "style": {
-                        "multiplier": 1,
                         "style": "STATIC",
                         "zoom": 1,
-                        "maxFractureAccuracy": false,
+                        "multiplier": 1,
+                        "axialFracturing": false,
                         "exponent": 1
                     },
                     "zoom": 4,
                     "palette": [{
-                        "debug": false,
-                        "data": {},
-                        "weight": 1,
                         "block": "minecraft:stone_bricks",
-                        "key": "minecraft"
+                        "debug": false,
+                        "weight": 1,
+                        "data": {},
+                        "preprocessors": []
                     }]
                 },
-                "exact": false
+                "exact": false,
+                "chance": 0.3
             }
         ],
-        "bottom": false,
-        "translateCenter": false,
-        "rotation": {
-            "yAxis": {
-                "min": 0,
-                "max": 0,
-                "interval": 90,
-                "enabled": true
-            },
-            "xAxis": {
-                "min": 0,
-                "max": 0,
-                "interval": 0,
-                "enabled": false
-            },
-            "zAxis": {
-                "min": 0,
-                "max": 0,
-                "interval": 0,
-                "enabled": false
-            },
-            "enabled": true
-        },
-        "boreExtendMaxY": 0,
-        "smartBore": false,
-        "waterloggable": false,
-        "bore": false,
         "translate": {
-            "yRandom": 0,
             "x": 0,
-            "y": -55,
+            "y": 0,
+            "yRandom": 0,
             "z": 0
         },
-        "mode": "FAST_MAX_HEIGHT",
-        "carvingSupport": "SURFACE_ONLY",
-        "snow": 0,
-        "underwater": false,
-        "place": [],
-        "onwater": false,
-        "clamp": {
-            "minimumHeight": 0,
-            "maximumHeight": 255
+        "scale": {
+            "variations": 7,
+            "minimumScale": 1,
+            "maximumScale": 1,
+            "interpolation": "NONE"
         },
-        "warp": {
-            "multiplier": 1,
-            "style": "FLAT",
-            "zoom": 1,
-            "maxFractureAccuracy": false,
-            "exponent": 1
-        }
+        "loot": [],
+        "trees": []
     },
-    "object": "jigsaw/stronghold/portal/main"
+    "preprocessors": []
 }
