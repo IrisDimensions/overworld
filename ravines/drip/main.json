@@ -28,28 +28,35 @@
             "max": 3,
             "min": 3
         },
-        "maxDistance": 32,
-        "maxIterations": 32
+        "maxDistance": 128,
+        "maxIterations": 128
     },
+    "customBiome": "cave/drip-cavern",
     "fork": {
         "caves": [
             {
-                "cave": "small",
-                "rarity": 7,
+                "cave": "drip/main",
+                "rarity": 17,
                 "breakSurface": false
+            }
+        ],
+        "ravines": [
+            {
+                "rarity": 3,
+                "ravine": "drip/small"
             }
         ]
     },
-    "nodeThreshold": 8,
+    "nodeThreshold": 40,
     "depthStyle": {
             "generator": {
                 "style": "PERLIN"
             },
-            "max": 13,
-            "min": 7
+            "max": 34,
+            "min": 28
         },
-        "angle": 90,
-        "topAngle": 90,
+        "angle": 50,
+        "topAngle": 70,
         "ribThickness": 5,
         "baseWidthStyle": {
             "generator": {
