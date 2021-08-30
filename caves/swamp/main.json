@@ -3,10 +3,10 @@
         "block": "minecraft:cave_air"
     },
     "verticalRange": {
-        "max": 50,
+        "max": 80,
         "min": 5
     },
-    "customBiome": "subterrestrial-palette/deepslate-cavern",
+    "customBiome": "subterrestrial-palette/swamp-cavern",
     "fork": {
         "ravines": [
             {
@@ -23,6 +23,11 @@
                 "breakSurface": false,
                 "cave": "amethyst/small",
                 "rarity": 110
+            },
+            {
+                "breakSurface": true,
+                "cave": "swamp/small",
+                "rarity": 7
             }
         ],
         "elipsoids": [
@@ -39,18 +44,18 @@
     "worm": {
         "girth": {
             "max": 5,
-            "min": 2,
+            "min": 1,
             "style": {
-                "style": "NOWHERE"
+                "style": "SIMPLEX_CELLS"
             }
         },
-        "maxDistance": 129,
+        "maxDistance": 70,
         "yStyle": {
             "min": -3,
             "max": 1,
             "generator": {
                 "zoom": 3,
-                "style": "PERLIN"
+                "style": "STATIC"
             }
         },
         "xStyle": {
@@ -66,7 +71,7 @@
             "max": 9,
             "generator": {
                 "zoom": 0.6,
-                "style": "IRIS"
+                "style": "NOWHERE"
             }
         }
     }
