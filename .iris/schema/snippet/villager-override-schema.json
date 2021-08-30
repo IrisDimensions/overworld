@@ -20,7 +20,6 @@
         },
         {"type": "string"}
     ],
-    "description": "Override cartographer map trades with others or disable the trade altogether",
     "definitions": {
         "enum-org-bukkit-material": {"enum": [
             "AIR",
@@ -1724,45 +1723,42 @@
             "type": "object",
             "properties": {}
         },
-        "obj-com-volmit-iris-engine-object-irisvillagertrade": {
-            "anyOf": [
-                {
-                    "description": "Represents a villager trade.",
-                    "type": "object",
-                    "properties": {
-                        "ingredient1": {
-                            "type": "object",
-                            "$ref": "#/definitions/obj-org-bukkit-inventory-itemstack",
-                            "description": "ingredient1\nThe first, required, ingredient for the trade.\nNote: this MUST be an item, and may not be a non-obtainable block!\n   \nItemStack (Object)\n"
-                        },
-                        "ingredient2": {
-                            "type": "object",
-                            "$ref": "#/definitions/obj-org-bukkit-inventory-itemstack",
-                            "description": "ingredient2\nThe second, optional, ingredient for the trade.\nNote: this MUST be an item, and may not be a non-obtainable block!\n   \nItemStack (Object)\n"
-                        },
-                        "result": {
-                            "type": "object",
-                            "$ref": "#/definitions/obj-org-bukkit-inventory-itemstack",
-                            "description": "result\nThe result of the trade.\nNote: this MUST be an item, and may not be a non-obtainable block!\n   \nItemStack (Object)\n"
-                        },
-                        "minTrades": {
-                            "type": "integer",
-                            "minimum": 1,
-                            "maximum": 64,
-                            "description": "minTrades\nThe min amount of times this trade can be done. Default 3\n   \nInteger\n\n    \n* Default Value is 3\n* Minimum allowed is 1\n* Maximum allowed is 64"
-                        },
-                        "maxTrades": {
-                            "type": "integer",
-                            "minimum": 1,
-                            "maximum": 64,
-                            "description": "maxTrades\nThe max amount of times this trade can be done. Default 5\n   \nInteger\n\n    \n* Default Value is 5\n* Minimum allowed is 1\n* Maximum allowed is 64"
-                        }
+        "obj-com-volmit-iris-engine-object-irisvillagertrade": {"anyOf": [
+            {
+                "description": "Represents a villager trade.",
+                "type": "object",
+                "properties": {
+                    "ingredient1": {
+                        "type": "object",
+                        "$ref": "#/definitions/obj-org-bukkit-inventory-itemstack",
+                        "description": "ingredient1\nThe first, required, ingredient for the trade.\nNote: this MUST be an item, and may not be a non-obtainable block!\n   \nItemStack (Object)\n"
+                    },
+                    "ingredient2": {
+                        "type": "object",
+                        "$ref": "#/definitions/obj-org-bukkit-inventory-itemstack",
+                        "description": "ingredient2\nThe second, optional, ingredient for the trade.\nNote: this MUST be an item, and may not be a non-obtainable block!\n   \nItemStack (Object)\n"
+                    },
+                    "result": {
+                        "type": "object",
+                        "$ref": "#/definitions/obj-org-bukkit-inventory-itemstack",
+                        "description": "result\nThe result of the trade.\nNote: this MUST be an item, and may not be a non-obtainable block!\n   \nItemStack (Object)\n"
+                    },
+                    "minTrades": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 64,
+                        "description": "minTrades\nThe min amount of times this trade can be done. Default 3\n   \nInteger\n\n    \n* Default Value is 3\n* Minimum allowed is 1\n* Maximum allowed is 64"
+                    },
+                    "maxTrades": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 64,
+                        "description": "maxTrades\nThe max amount of times this trade can be done. Default 5\n   \nInteger\n\n    \n* Default Value is 5\n* Minimum allowed is 1\n* Maximum allowed is 64"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "Represents a villager trade."
-        },
+                }
+            },
+            {"type": "string"}
+        ]},
         "obj-org-bukkit-material-materialdata": {
             "description": "",
             "type": "object",

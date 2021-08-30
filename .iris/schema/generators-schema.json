@@ -66,7 +66,8 @@
                 },
                 {
                     "type": "string",
-                    "$ref": "#/definitions/enum-snippet-interpolator"
+                    "$ref": "#/definitions/enum-snippet-interpolator",
+                    "description": "interpolator\nThe interpolator to use when smoothing this generator into other regions & generators\n   \nInterpolator (Object)\nConfigures rotation for iris\n    \nYou can instead specify \"snippet/interpolator/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
                 }
             ],
             "description": "interpolator\nThe interpolator to use when smoothing this generator into other regions & generators\n   \nInterpolator (Object)\nConfigures rotation for iris\n    \nYou can instead specify \"snippet/interpolator/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
@@ -99,125 +100,121 @@
                 },
                 {
                     "type": "string",
-                    "$ref": "#/definitions/enum-snippet-generator"
+                    "$ref": "#/definitions/enum-snippet-generator",
+                    "description": "cliffHeightGenerator\nThe noise gen for cliff height.\n   \nNoiseGenerator (Object)\nA noise generator\n    \nYou can instead specify \"snippet/generator/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
                 }
             ],
             "description": "cliffHeightGenerator\nThe noise gen for cliff height.\n   \nNoiseGenerator (Object)\nA noise generator\n    \nYou can instead specify \"snippet/generator/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
         }
     },
     "definitions": {
-        "obj-com-volmit-iris-engine-object-irisnoisegenerator": {
-            "anyOf": [
-                {
-                    "description": "A noise generator",
-                    "type": "object",
-                    "properties": {
-                        "zoom": {
-                            "type": "number",
-                            "minimum": 1.0E-4,
-                            "description": "zoom\nThe coordinate input zoom\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 1.0E-4"
-                        },
-                        "negative": {
-                            "type": "boolean",
-                            "description": "negative\nReverse the output. So that noise = -noise + opacity\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "opacity": {
-                            "type": "number",
-                            "minimum": 0,
-                            "maximum": 1,
-                            "description": "opacity\nThe output multiplier\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.0\n* Maximum allowed is 1.0"
-                        },
-                        "offsetX": {
-                            "type": "number",
-                            "description": "offsetX\nCoordinate offset x\n   \nNumber\n\n    \n* Default Value is 0.0"
-                        },
-                        "offsetY": {
-                            "type": "number",
-                            "description": "offsetY\nHeight output offset y. Avoid using with terrain generation.\n   \nNumber\n\n    \n* Default Value is 0.0"
-                        },
-                        "offsetZ": {
-                            "type": "number",
-                            "description": "offsetZ\nCoordinate offset z\n   \nNumber\n\n    \n* Default Value is 0.0"
-                        },
-                        "seed": {
-                            "type": "integer",
-                            "description": "seed\nThe seed\n   \nInteger\n\n    \n* Default Value is 0"
-                        },
-                        "parametric": {
-                            "type": "boolean",
-                            "description": "parametric\nApply a parametric curve on the output\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "bezier": {
-                            "type": "boolean",
-                            "description": "bezier\nApply a bezier curve on the output\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "sinCentered": {
-                            "type": "boolean",
-                            "description": "sinCentered\nApply a sin-center curve on the output (0, and 1 = 0 and 0.5 = 1.0 using a sinoid shape.)\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "exponent": {
-                            "type": "number",
-                            "description": "exponent\nThe exponent noise^EXPONENT\n   \nNumber\n\n    \n* Default Value is 1.0"
-                        },
-                        "enabled": {
-                            "type": "boolean",
-                            "description": "enabled\nEnable / disable. Outputs offsetY if disabled\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "style": {
-                            "anyOf": [
-                                {
-                                    "!required": true,
-                                    "type": "object",
-                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
-                                    "description": "style\nThe Noise Style\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                                },
-                                {
-                                    "type": "string",
-                                    "$ref": "#/definitions/enum-snippet-style"
-                                }
-                            ],
-                            "description": "style\nThe Noise Style\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "octaves": {
-                            "type": "integer",
-                            "minimum": 1,
-                            "description": "octaves\nMultiple octaves for multple generators of changing zooms added together\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1"
-                        },
-                        "fracture": {
-                            "type": "array",
-                            "minItems": 1,
-                            "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisnoisegenerator"},
-                            "description": "fracture\nApply a child noise generator to fracture the input coordinates of this generator\n   \nList of NoiseGenerators (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
-                        }
+        "obj-com-volmit-iris-engine-object-irisnoisegenerator": {"anyOf": [
+            {
+                "description": "A noise generator",
+                "type": "object",
+                "properties": {
+                    "zoom": {
+                        "type": "number",
+                        "minimum": 1.0E-4,
+                        "description": "zoom\nThe coordinate input zoom\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 1.0E-4"
+                    },
+                    "negative": {
+                        "type": "boolean",
+                        "description": "negative\nReverse the output. So that noise = -noise + opacity\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "opacity": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1,
+                        "description": "opacity\nThe output multiplier\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.0\n* Maximum allowed is 1.0"
+                    },
+                    "offsetX": {
+                        "type": "number",
+                        "description": "offsetX\nCoordinate offset x\n   \nNumber\n\n    \n* Default Value is 0.0"
+                    },
+                    "offsetY": {
+                        "type": "number",
+                        "description": "offsetY\nHeight output offset y. Avoid using with terrain generation.\n   \nNumber\n\n    \n* Default Value is 0.0"
+                    },
+                    "offsetZ": {
+                        "type": "number",
+                        "description": "offsetZ\nCoordinate offset z\n   \nNumber\n\n    \n* Default Value is 0.0"
+                    },
+                    "seed": {
+                        "type": "integer",
+                        "description": "seed\nThe seed\n   \nInteger\n\n    \n* Default Value is 0"
+                    },
+                    "parametric": {
+                        "type": "boolean",
+                        "description": "parametric\nApply a parametric curve on the output\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "bezier": {
+                        "type": "boolean",
+                        "description": "bezier\nApply a bezier curve on the output\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "sinCentered": {
+                        "type": "boolean",
+                        "description": "sinCentered\nApply a sin-center curve on the output (0, and 1 = 0 and 0.5 = 1.0 using a sinoid shape.)\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "exponent": {
+                        "type": "number",
+                        "description": "exponent\nThe exponent noise^EXPONENT\n   \nNumber\n\n    \n* Default Value is 1.0"
+                    },
+                    "enabled": {
+                        "type": "boolean",
+                        "description": "enabled\nEnable / disable. Outputs offsetY if disabled\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "style": {
+                        "anyOf": [
+                            {
+                                "!required": true,
+                                "type": "object",
+                                "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
+                                "description": "style\nThe Noise Style\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            },
+                            {
+                                "type": "string",
+                                "$ref": "#/definitions/enum-snippet-style",
+                                "description": "style\nThe Noise Style\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            }
+                        ],
+                        "description": "style\nThe Noise Style\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "octaves": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "description": "octaves\nMultiple octaves for multple generators of changing zooms added together\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1"
+                    },
+                    "fracture": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisnoisegenerator"},
+                        "description": "fracture\nApply a child noise generator to fracture the input coordinates of this generator\n   \nList of NoiseGenerators (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "A noise generator"
-        },
-        "obj-com-volmit-iris-engine-object-irisinterpolator": {
-            "anyOf": [
-                {
-                    "description": "Configures rotation for iris",
-                    "type": "object",
-                    "properties": {
-                        "function": {
-                            "type": "string",
-                            "$ref": "#/definitions/oneof-enum-com-volmit-iris-util-interpolation-interpolationmethod",
-                            "description": "function\nThe interpolation method when two biomes use different heights but this same generator\n   \nInterpolationMethod\nAn interpolation method (or function) is simply a method of smoothing a position based on surrounding points on a grid. Bicubic for example is smoother, but has 4 times the checks than Bilinear for example. Try using BILINEAR_STARCAST_9 for beautiful results.\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid InterpolationMethod (use ctrl+space for auto complete!)"
-                        },
-                        "horizontalScale": {
-                            "type": "number",
-                            "minimum": 1,
-                            "maximum": 8192,
-                            "description": "horizontalScale\nThe range checked horizontally. Smaller ranges yeild more detail but are not as smooth.\n   \nNumber\n\n    \n* Default Value is 7.0\n* Minimum allowed is 1.0\n* Maximum allowed is 8192.0"
-                        }
+                }
+            },
+            {"type": "string"}
+        ]},
+        "obj-com-volmit-iris-engine-object-irisinterpolator": {"anyOf": [
+            {
+                "description": "Configures rotation for iris",
+                "type": "object",
+                "properties": {
+                    "function": {
+                        "type": "string",
+                        "$ref": "#/definitions/oneof-enum-com-volmit-iris-util-interpolation-interpolationmethod",
+                        "description": "function\nThe interpolation method when two biomes use different heights but this same generator\n   \nInterpolationMethod\nAn interpolation method (or function) is simply a method of smoothing a position based on surrounding points on a grid. Bicubic for example is smoother, but has 4 times the checks than Bilinear for example. Try using BILINEAR_STARCAST_9 for beautiful results.\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid InterpolationMethod (use ctrl+space for auto complete!)"
+                    },
+                    "horizontalScale": {
+                        "type": "number",
+                        "minimum": 1,
+                        "maximum": 8192,
+                        "description": "horizontalScale\nThe range checked horizontally. Smaller ranges yeild more detail but are not as smooth.\n   \nNumber\n\n    \n* Default Value is 7.0\n* Minimum allowed is 1.0\n* Maximum allowed is 8192.0"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "Configures rotation for iris"
-        },
+                }
+            },
+            {"type": "string"}
+        ]},
         "oneof-enum-com-volmit-iris-engine-object-noisestyle": {"oneOf": [
             {
                 "const": "STATIC",
@@ -895,62 +892,60 @@
         "erzexpressions": {"enum": []},
         "enum-snippet-style": {"enum": []},
         "erzscripts": {"enum": []},
-        "obj-com-volmit-iris-engine-object-irisgeneratorstyle": {
-            "anyOf": [
-                {
-                    "description": "A gen style",
-                    "type": "object",
-                    "properties": {
-                        "style": {
-                            "type": "string",
-                            "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-noisestyle",
-                            "description": "style\nThe chance is 1 in CHANCE per interval\n   \nNoiseStyle\nStyles of noise\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid NoiseStyle (use ctrl+space for auto complete!)"
-                        },
-                        "zoom": {
-                            "type": "number",
-                            "minimum": 1.0E-5,
-                            "description": "zoom\nThe zoom of this style\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 1.0E-5"
-                        },
-                        "expression": {
-                            "type": "string",
-                            "$ref": "#/definitions/erzexpressions",
-                            "description": "expression\nInstead of using the style property, use a custom expression to represent this style.\n   \nIris Expression\n\nMust be a valid expressions (use ctrl+space for auto complete!)"
-                        },
-                        "multiplier": {
-                            "type": "number",
-                            "minimum": 1.0E-5,
-                            "description": "multiplier\nThe Output multiplier. Only used if parent is fracture.\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 1.0E-5"
-                        },
-                        "axialFracturing": {
-                            "type": "boolean",
-                            "description": "axialFracturing\nIf set to true, each dimension will be fractured with a different order of input coordinates. This is usually 2 or 3 times slower than normal.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "fracture": {
-                            "anyOf": [
-                                {
-                                    "!required": false,
-                                    "type": "object",
-                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
-                                    "description": "fracture\nApply a generator to the coordinate field fed into this parent generator. I.e. Distort your generator with another generator.\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
-                                },
-                                {
-                                    "type": "string",
-                                    "$ref": "#/definitions/enum-snippet-style"
-                                }
-                            ],
-                            "description": "fracture\nApply a generator to the coordinate field fed into this parent generator. I.e. Distort your generator with another generator.\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
-                        },
-                        "exponent": {
-                            "type": "number",
-                            "minimum": 0.01562,
-                            "maximum": 64,
-                            "description": "exponent\nThe exponent\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.01562\n* Maximum allowed is 64.0"
-                        }
+        "obj-com-volmit-iris-engine-object-irisgeneratorstyle": {"anyOf": [
+            {
+                "description": "A gen style",
+                "type": "object",
+                "properties": {
+                    "style": {
+                        "type": "string",
+                        "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-noisestyle",
+                        "description": "style\nThe chance is 1 in CHANCE per interval\n   \nNoiseStyle\nStyles of noise\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid NoiseStyle (use ctrl+space for auto complete!)"
+                    },
+                    "zoom": {
+                        "type": "number",
+                        "minimum": 1.0E-5,
+                        "description": "zoom\nThe zoom of this style\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 1.0E-5"
+                    },
+                    "expression": {
+                        "type": "string",
+                        "$ref": "#/definitions/erzexpressions",
+                        "description": "expression\nInstead of using the style property, use a custom expression to represent this style.\n   \nIris Expression\n\nMust be a valid expressions (use ctrl+space for auto complete!)"
+                    },
+                    "multiplier": {
+                        "type": "number",
+                        "minimum": 1.0E-5,
+                        "description": "multiplier\nThe Output multiplier. Only used if parent is fracture.\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 1.0E-5"
+                    },
+                    "axialFracturing": {
+                        "type": "boolean",
+                        "description": "axialFracturing\nIf set to true, each dimension will be fractured with a different order of input coordinates. This is usually 2 or 3 times slower than normal.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "fracture": {
+                        "anyOf": [
+                            {
+                                "!required": false,
+                                "type": "object",
+                                "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
+                                "description": "fracture\nApply a generator to the coordinate field fed into this parent generator. I.e. Distort your generator with another generator.\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
+                            },
+                            {
+                                "type": "string",
+                                "$ref": "#/definitions/enum-snippet-style",
+                                "description": "fracture\nApply a generator to the coordinate field fed into this parent generator. I.e. Distort your generator with another generator.\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
+                            }
+                        ],
+                        "description": "fracture\nApply a generator to the coordinate field fed into this parent generator. I.e. Distort your generator with another generator.\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
+                    },
+                    "exponent": {
+                        "type": "number",
+                        "minimum": 0.01562,
+                        "maximum": 64,
+                        "description": "exponent\nThe exponent\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.01562\n* Maximum allowed is 64.0"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "A gen style"
-        }
+                }
+            },
+            {"type": "string"}
+        ]}
     }
 }

@@ -20,7 +20,8 @@
                 },
                 {
                     "type": "string",
-                    "$ref": "#/definitions/enum-snippet-worm"
+                    "$ref": "#/definitions/enum-snippet-worm",
+                    "description": "worm\nDefine the shape of this ravine (2d, ignores Y)\n   \nWorm (Object)\nGenerate worms\n    \nYou can instead specify \"snippet/worm/some-name.json\" to use a snippet file instead of specifying it here."
                 }
             ],
             "description": "worm\nDefine the shape of this ravine (2d, ignores Y)\n   \nWorm (Object)\nGenerate worms\n    \nYou can instead specify \"snippet/worm/some-name.json\" to use a snippet file instead of specifying it here."
@@ -40,7 +41,8 @@
                 },
                 {
                     "type": "string",
-                    "$ref": "#/definitions/enum-snippet-carving"
+                    "$ref": "#/definitions/enum-snippet-carving",
+                    "description": "fork\nDefine potential forking features\n   \nCarving (Object)\nRepresents a carving configuration\n    \nYou can instead specify \"snippet/carving/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
                 }
             ],
             "description": "fork\nDefine potential forking features\n   \nCarving (Object)\nRepresents a carving configuration\n    \nYou can instead specify \"snippet/carving/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
@@ -55,7 +57,8 @@
                 },
                 {
                     "type": "string",
-                    "$ref": "#/definitions/enum-snippet-shaped-style"
+                    "$ref": "#/definitions/enum-snippet-shaped-style",
+                    "description": "depthStyle\nThe style used to determine the curvature of this worm's y\n   \nShapedGeneratorStyle (Object)\nThis represents a generator with a min and max height\n    \nYou can instead specify \"snippet/shaped-style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
                 }
             ],
             "description": "depthStyle\nThe style used to determine the curvature of this worm's y\n   \nShapedGeneratorStyle (Object)\nThis represents a generator with a min and max height\n    \nYou can instead specify \"snippet/shaped-style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
@@ -70,7 +73,8 @@
                 },
                 {
                     "type": "string",
-                    "$ref": "#/definitions/enum-snippet-shaped-style"
+                    "$ref": "#/definitions/enum-snippet-shaped-style",
+                    "description": "baseWidthStyle\nThe style used to determine the curvature of this worm's y\n   \nShapedGeneratorStyle (Object)\nThis represents a generator with a min and max height\n    \nYou can instead specify \"snippet/shaped-style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
                 }
             ],
             "description": "baseWidthStyle\nThe style used to determine the curvature of this worm's y\n   \nShapedGeneratorStyle (Object)\nThis represents a generator with a min and max height\n    \nYou can instead specify \"snippet/shaped-style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
@@ -100,115 +104,113 @@
     },
     "definitions": {
         "enum-snippet-worm": {"enum": []},
-        "obj-com-volmit-iris-engine-object-iriscaveplacer": {
-            "anyOf": [
-                {
-                    "description": "Translate objects",
-                    "type": "object",
-                    "properties": {
-                        "rarity": {
-                            "type": "integer",
-                            "minimum": 1,
-                            "description": "rarity\nTypically a 1 in RARITY on a per chunk/fork basis\n   \nInteger\n\n    \n* Default Value is 15\n* Minimum allowed is 1"
-                        },
-                        "cave": {
-                            "type": "string",
-                            "minLength": 1,
-                            "$ref": "#/definitions/erzcaves",
-                            "description": "cave\nThe cave to place\n   \nIris Cave\n\n* Minimum Length allowed is 1\nMust be a valid caves (use ctrl+space for auto complete!)"
-                        },
-                        "breakSurface": {
-                            "type": "boolean",
-                            "description": "breakSurface\nIf set to true, this cave is allowed to break the surface\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "caveStartHeight": {
-                            "anyOf": [
-                                {
-                                    "!required": false,
-                                    "type": "object",
-                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisstyledrange",
-                                    "description": "caveStartHeight\nThe height range this cave can spawn at. If breakSurface is false, the output of this range will be clamped by the current world height to prevent surface breaking.\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                                },
-                                {
-                                    "type": "string",
-                                    "$ref": "#/definitions/enum-snippet-style-range"
-                                }
-                            ],
-                            "description": "caveStartHeight\nThe height range this cave can spawn at. If breakSurface is false, the output of this range will be clamped by the current world height to prevent surface breaking.\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                        }
+        "obj-com-volmit-iris-engine-object-iriscaveplacer": {"anyOf": [
+            {
+                "description": "Translate objects",
+                "type": "object",
+                "properties": {
+                    "rarity": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "description": "rarity\nTypically a 1 in RARITY on a per chunk/fork basis\n   \nInteger\n\n    \n* Default Value is 15\n* Minimum allowed is 1"
+                    },
+                    "cave": {
+                        "type": "string",
+                        "minLength": 1,
+                        "$ref": "#/definitions/erzcaves",
+                        "description": "cave\nThe cave to place\n   \nIris Cave\n\n* Minimum Length allowed is 1\nMust be a valid caves (use ctrl+space for auto complete!)"
+                    },
+                    "breakSurface": {
+                        "type": "boolean",
+                        "description": "breakSurface\nIf set to true, this cave is allowed to break the surface\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "caveStartHeight": {
+                        "anyOf": [
+                            {
+                                "!required": false,
+                                "type": "object",
+                                "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisstyledrange",
+                                "description": "caveStartHeight\nThe height range this cave can spawn at. If breakSurface is false, the output of this range will be clamped by the current world height to prevent surface breaking.\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            },
+                            {
+                                "type": "string",
+                                "$ref": "#/definitions/enum-snippet-style-range",
+                                "description": "caveStartHeight\nThe height range this cave can spawn at. If breakSurface is false, the output of this range will be clamped by the current world height to prevent surface breaking.\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            }
+                        ],
+                        "description": "caveStartHeight\nThe height range this cave can spawn at. If breakSurface is false, the output of this range will be clamped by the current world height to prevent surface breaking.\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "Translate objects"
-        },
-        "obj-com-volmit-iris-engine-object-iriselipsoid": {
-            "anyOf": [
-                {
-                    "description": "Represents an procedural eliptical shape",
-                    "type": "object",
-                    "properties": {
-                        "rarity": {
-                            "type": "integer",
-                            "minimum": 1,
-                            "description": "rarity\nTypically a 1 in RARITY on a per fork basis\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1"
-                        },
-                        "customBiome": {
-                            "type": "string",
-                            "$ref": "#/definitions/erzbiomes",
-                            "description": "customBiome\nForce this cave to only generate the specified custom biome\n   \nIris Biome\n\n    \n* Default Value is \nMust be a valid biomes (use ctrl+space for auto complete!)"
-                        },
-                        "xRadius": {
-                            "anyOf": [
-                                {
-                                    "!required": false,
-                                    "type": "object",
-                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisstyledrange",
-                                    "description": "xRadius\nThe styled random radius for x\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                                },
-                                {
-                                    "type": "string",
-                                    "$ref": "#/definitions/enum-snippet-style-range"
-                                }
-                            ],
-                            "description": "xRadius\nThe styled random radius for x\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "yRadius": {
-                            "anyOf": [
-                                {
-                                    "!required": false,
-                                    "type": "object",
-                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisstyledrange",
-                                    "description": "yRadius\nThe styled random radius for y\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                                },
-                                {
-                                    "type": "string",
-                                    "$ref": "#/definitions/enum-snippet-style-range"
-                                }
-                            ],
-                            "description": "yRadius\nThe styled random radius for y\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "zRadius": {
-                            "anyOf": [
-                                {
-                                    "!required": false,
-                                    "type": "object",
-                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisstyledrange",
-                                    "description": "zRadius\nThe styled random radius for z\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                                },
-                                {
-                                    "type": "string",
-                                    "$ref": "#/definitions/enum-snippet-style-range"
-                                }
-                            ],
-                            "description": "zRadius\nThe styled random radius for z\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                        }
+                }
+            },
+            {"type": "string"}
+        ]},
+        "obj-com-volmit-iris-engine-object-iriselipsoid": {"anyOf": [
+            {
+                "description": "Represents an procedural eliptical shape",
+                "type": "object",
+                "properties": {
+                    "rarity": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "description": "rarity\nTypically a 1 in RARITY on a per fork basis\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1"
+                    },
+                    "customBiome": {
+                        "type": "string",
+                        "$ref": "#/definitions/erzbiomes",
+                        "description": "customBiome\nForce this cave to only generate the specified custom biome\n   \nIris Biome\n\n    \n* Default Value is \nMust be a valid biomes (use ctrl+space for auto complete!)"
+                    },
+                    "xRadius": {
+                        "anyOf": [
+                            {
+                                "!required": false,
+                                "type": "object",
+                                "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisstyledrange",
+                                "description": "xRadius\nThe styled random radius for x\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            },
+                            {
+                                "type": "string",
+                                "$ref": "#/definitions/enum-snippet-style-range",
+                                "description": "xRadius\nThe styled random radius for x\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            }
+                        ],
+                        "description": "xRadius\nThe styled random radius for x\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "yRadius": {
+                        "anyOf": [
+                            {
+                                "!required": false,
+                                "type": "object",
+                                "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisstyledrange",
+                                "description": "yRadius\nThe styled random radius for y\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            },
+                            {
+                                "type": "string",
+                                "$ref": "#/definitions/enum-snippet-style-range",
+                                "description": "yRadius\nThe styled random radius for y\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            }
+                        ],
+                        "description": "yRadius\nThe styled random radius for y\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "zRadius": {
+                        "anyOf": [
+                            {
+                                "!required": false,
+                                "type": "object",
+                                "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisstyledrange",
+                                "description": "zRadius\nThe styled random radius for z\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            },
+                            {
+                                "type": "string",
+                                "$ref": "#/definitions/enum-snippet-style-range",
+                                "description": "zRadius\nThe styled random radius for z\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            }
+                        ],
+                        "description": "zRadius\nThe styled random radius for z\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "Represents an procedural eliptical shape"
-        },
+                }
+            },
+            {"type": "string"}
+        ]},
         "oneof-enum-com-volmit-iris-engine-object-noisestyle": {"oneOf": [
             {
                 "const": "STATIC",
@@ -772,287 +774,276 @@
             }
         ]},
         "enum-snippet-shaped-style": {"enum": []},
-        "obj-com-volmit-iris-engine-object-irisworm": {
-            "anyOf": [
-                {
-                    "description": "Generate worms",
-                    "type": "object",
-                    "properties": {
-                        "xStyle": {
-                            "anyOf": [
-                                {
-                                    "!required": false,
-                                    "type": "object",
-                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisshapedgeneratorstyle",
-                                    "description": "xStyle\nThe style used to determine the curvature of this worm's x\n   \nShapedGeneratorStyle (Object)\nThis represents a generator with a min and max height\n    \nYou can instead specify \"snippet/shaped-style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                                },
-                                {
-                                    "type": "string",
-                                    "$ref": "#/definitions/enum-snippet-shaped-style"
-                                }
-                            ],
-                            "description": "xStyle\nThe style used to determine the curvature of this worm's x\n   \nShapedGeneratorStyle (Object)\nThis represents a generator with a min and max height\n    \nYou can instead specify \"snippet/shaped-style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "yStyle": {
-                            "anyOf": [
-                                {
-                                    "!required": false,
-                                    "type": "object",
-                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisshapedgeneratorstyle",
-                                    "description": "yStyle\nThe style used to determine the curvature of this worm's y\n   \nShapedGeneratorStyle (Object)\nThis represents a generator with a min and max height\n    \nYou can instead specify \"snippet/shaped-style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                                },
-                                {
-                                    "type": "string",
-                                    "$ref": "#/definitions/enum-snippet-shaped-style"
-                                }
-                            ],
-                            "description": "yStyle\nThe style used to determine the curvature of this worm's y\n   \nShapedGeneratorStyle (Object)\nThis represents a generator with a min and max height\n    \nYou can instead specify \"snippet/shaped-style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "zStyle": {
-                            "anyOf": [
-                                {
-                                    "!required": false,
-                                    "type": "object",
-                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisshapedgeneratorstyle",
-                                    "description": "zStyle\nThe style used to determine the curvature of this worm's z\n   \nShapedGeneratorStyle (Object)\nThis represents a generator with a min and max height\n    \nYou can instead specify \"snippet/shaped-style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                                },
-                                {
-                                    "type": "string",
-                                    "$ref": "#/definitions/enum-snippet-shaped-style"
-                                }
-                            ],
-                            "description": "zStyle\nThe style used to determine the curvature of this worm's z\n   \nShapedGeneratorStyle (Object)\nThis represents a generator with a min and max height\n    \nYou can instead specify \"snippet/shaped-style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "maxDistance": {
-                            "type": "integer",
-                            "description": "maxDistance\nThe max block distance this worm can travel from its start. This can have performance implications at ranges over 1,000 blocks but it's not too serious, test.\n   \nInteger\n\n    \n* Default Value is 128"
-                        },
-                        "maxIterations": {
-                            "type": "integer",
-                            "description": "maxIterations\nThe iterations this worm can make\n   \nInteger\n\n    \n* Default Value is 512"
-                        },
-                        "allowLoops": {
-                            "type": "boolean",
-                            "description": "allowLoops\nBy default if a worm loops back into itself, it stops at that point and does not continue. This is an optimization, to prevent this turn this option on.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "girth": {
-                            "anyOf": [
-                                {
-                                    "!required": false,
-                                    "type": "object",
-                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisstyledrange",
-                                    "description": "girth\nThe thickness of the worms. Each individual worm has the same thickness while traveling however, each spawned worm will vary in thickness.\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                                },
-                                {
-                                    "type": "string",
-                                    "$ref": "#/definitions/enum-snippet-style-range"
-                                }
-                            ],
-                            "description": "girth\nThe thickness of the worms. Each individual worm has the same thickness while traveling however, each spawned worm will vary in thickness.\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                        }
+        "obj-com-volmit-iris-engine-object-irisworm": {"anyOf": [
+            {
+                "description": "Generate worms",
+                "type": "object",
+                "properties": {
+                    "xStyle": {
+                        "anyOf": [
+                            {
+                                "!required": false,
+                                "type": "object",
+                                "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisshapedgeneratorstyle",
+                                "description": "xStyle\nThe style used to determine the curvature of this worm's x\n   \nShapedGeneratorStyle (Object)\nThis represents a generator with a min and max height\n    \nYou can instead specify \"snippet/shaped-style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            },
+                            {
+                                "type": "string",
+                                "$ref": "#/definitions/enum-snippet-shaped-style",
+                                "description": "xStyle\nThe style used to determine the curvature of this worm's x\n   \nShapedGeneratorStyle (Object)\nThis represents a generator with a min and max height\n    \nYou can instead specify \"snippet/shaped-style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            }
+                        ],
+                        "description": "xStyle\nThe style used to determine the curvature of this worm's x\n   \nShapedGeneratorStyle (Object)\nThis represents a generator with a min and max height\n    \nYou can instead specify \"snippet/shaped-style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "yStyle": {
+                        "anyOf": [
+                            {
+                                "!required": false,
+                                "type": "object",
+                                "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisshapedgeneratorstyle",
+                                "description": "yStyle\nThe style used to determine the curvature of this worm's y\n   \nShapedGeneratorStyle (Object)\nThis represents a generator with a min and max height\n    \nYou can instead specify \"snippet/shaped-style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            },
+                            {
+                                "type": "string",
+                                "$ref": "#/definitions/enum-snippet-shaped-style",
+                                "description": "yStyle\nThe style used to determine the curvature of this worm's y\n   \nShapedGeneratorStyle (Object)\nThis represents a generator with a min and max height\n    \nYou can instead specify \"snippet/shaped-style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            }
+                        ],
+                        "description": "yStyle\nThe style used to determine the curvature of this worm's y\n   \nShapedGeneratorStyle (Object)\nThis represents a generator with a min and max height\n    \nYou can instead specify \"snippet/shaped-style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "zStyle": {
+                        "anyOf": [
+                            {
+                                "!required": false,
+                                "type": "object",
+                                "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisshapedgeneratorstyle",
+                                "description": "zStyle\nThe style used to determine the curvature of this worm's z\n   \nShapedGeneratorStyle (Object)\nThis represents a generator with a min and max height\n    \nYou can instead specify \"snippet/shaped-style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            },
+                            {
+                                "type": "string",
+                                "$ref": "#/definitions/enum-snippet-shaped-style",
+                                "description": "zStyle\nThe style used to determine the curvature of this worm's z\n   \nShapedGeneratorStyle (Object)\nThis represents a generator with a min and max height\n    \nYou can instead specify \"snippet/shaped-style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            }
+                        ],
+                        "description": "zStyle\nThe style used to determine the curvature of this worm's z\n   \nShapedGeneratorStyle (Object)\nThis represents a generator with a min and max height\n    \nYou can instead specify \"snippet/shaped-style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "maxDistance": {
+                        "type": "integer",
+                        "description": "maxDistance\nThe max block distance this worm can travel from its start. This can have performance implications at ranges over 1,000 blocks but it's not too serious, test.\n   \nInteger\n\n    \n* Default Value is 128"
+                    },
+                    "maxIterations": {
+                        "type": "integer",
+                        "description": "maxIterations\nThe iterations this worm can make\n   \nInteger\n\n    \n* Default Value is 512"
+                    },
+                    "allowLoops": {
+                        "type": "boolean",
+                        "description": "allowLoops\nBy default if a worm loops back into itself, it stops at that point and does not continue. This is an optimization, to prevent this turn this option on.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "girth": {
+                        "anyOf": [
+                            {
+                                "!required": false,
+                                "type": "object",
+                                "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisstyledrange",
+                                "description": "girth\nThe thickness of the worms. Each individual worm has the same thickness while traveling however, each spawned worm will vary in thickness.\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            },
+                            {
+                                "type": "string",
+                                "$ref": "#/definitions/enum-snippet-style-range",
+                                "description": "girth\nThe thickness of the worms. Each individual worm has the same thickness while traveling however, each spawned worm will vary in thickness.\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            }
+                        ],
+                        "description": "girth\nThe thickness of the worms. Each individual worm has the same thickness while traveling however, each spawned worm will vary in thickness.\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "Generate worms"
-        },
-        "obj-com-volmit-iris-engine-object-irispyramid": {
-            "anyOf": [
-                {
-                    "description": "Represents an procedural eliptical shape",
-                    "type": "object",
-                    "properties": {
-                        "rarity": {
-                            "type": "integer",
-                            "minimum": 1,
-                            "description": "rarity\nTypically a 1 in RARITY on a per fork basis\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1"
-                        },
-                        "customBiome": {
-                            "type": "string",
-                            "$ref": "#/definitions/erzbiomes",
-                            "description": "customBiome\nForce this cave to only generate the specified custom biome\n   \nIris Biome\n\n    \n* Default Value is \nMust be a valid biomes (use ctrl+space for auto complete!)"
-                        },
-                        "baseWidth": {
-                            "anyOf": [
-                                {
-                                    "!required": false,
-                                    "type": "object",
-                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisstyledrange",
-                                    "description": "baseWidth\nThe styled random radius for x\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                                },
-                                {
-                                    "type": "string",
-                                    "$ref": "#/definitions/enum-snippet-style-range"
-                                }
-                            ],
-                            "description": "baseWidth\nThe styled random radius for x\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                        }
+                }
+            },
+            {"type": "string"}
+        ]},
+        "obj-com-volmit-iris-engine-object-irispyramid": {"anyOf": [
+            {
+                "description": "Represents an procedural eliptical shape",
+                "type": "object",
+                "properties": {
+                    "rarity": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "description": "rarity\nTypically a 1 in RARITY on a per fork basis\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1"
+                    },
+                    "customBiome": {
+                        "type": "string",
+                        "$ref": "#/definitions/erzbiomes",
+                        "description": "customBiome\nForce this cave to only generate the specified custom biome\n   \nIris Biome\n\n    \n* Default Value is \nMust be a valid biomes (use ctrl+space for auto complete!)"
+                    },
+                    "baseWidth": {
+                        "anyOf": [
+                            {
+                                "!required": false,
+                                "type": "object",
+                                "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisstyledrange",
+                                "description": "baseWidth\nThe styled random radius for x\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            },
+                            {
+                                "type": "string",
+                                "$ref": "#/definitions/enum-snippet-style-range",
+                                "description": "baseWidth\nThe styled random radius for x\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            }
+                        ],
+                        "description": "baseWidth\nThe styled random radius for x\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "Represents an procedural eliptical shape"
-        },
-        "obj-com-volmit-iris-engine-object-irissphere": {
-            "anyOf": [
-                {
-                    "description": "Represents an procedural eliptical shape",
-                    "type": "object",
-                    "properties": {
-                        "rarity": {
-                            "type": "integer",
-                            "minimum": 1,
-                            "description": "rarity\nTypically a 1 in RARITY on a per fork basis\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1"
-                        },
-                        "customBiome": {
-                            "type": "string",
-                            "$ref": "#/definitions/erzbiomes",
-                            "description": "customBiome\nForce this cave to only generate the specified custom biome\n   \nIris Biome\n\n    \n* Default Value is \nMust be a valid biomes (use ctrl+space for auto complete!)"
-                        },
-                        "radius": {
-                            "anyOf": [
-                                {
-                                    "!required": false,
-                                    "type": "object",
-                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisstyledrange",
-                                    "description": "radius\nThe styled random radius for x\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                                },
-                                {
-                                    "type": "string",
-                                    "$ref": "#/definitions/enum-snippet-style-range"
-                                }
-                            ],
-                            "description": "radius\nThe styled random radius for x\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                        }
+                }
+            },
+            {"type": "string"}
+        ]},
+        "obj-com-volmit-iris-engine-object-irissphere": {"anyOf": [
+            {
+                "description": "Represents an procedural eliptical shape",
+                "type": "object",
+                "properties": {
+                    "rarity": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "description": "rarity\nTypically a 1 in RARITY on a per fork basis\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1"
+                    },
+                    "customBiome": {
+                        "type": "string",
+                        "$ref": "#/definitions/erzbiomes",
+                        "description": "customBiome\nForce this cave to only generate the specified custom biome\n   \nIris Biome\n\n    \n* Default Value is \nMust be a valid biomes (use ctrl+space for auto complete!)"
+                    },
+                    "radius": {
+                        "anyOf": [
+                            {
+                                "!required": false,
+                                "type": "object",
+                                "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisstyledrange",
+                                "description": "radius\nThe styled random radius for x\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            },
+                            {
+                                "type": "string",
+                                "$ref": "#/definitions/enum-snippet-style-range",
+                                "description": "radius\nThe styled random radius for x\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            }
+                        ],
+                        "description": "radius\nThe styled random radius for x\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "Represents an procedural eliptical shape"
-        },
-        "obj-com-volmit-iris-engine-object-irisravineplacer": {
-            "anyOf": [
-                {
-                    "description": "Translate objects",
-                    "type": "object",
-                    "properties": {
-                        "rarity": {
-                            "type": "integer",
-                            "minimum": 1,
-                            "description": "rarity\nTypically a 1 in RARITY on a per chunk/fork basis\n   \nInteger\n\n    \n* Default Value is 15\n* Minimum allowed is 1"
-                        },
-                        "ravine": {
-                            "type": "string",
-                            "minLength": 1,
-                            "$ref": "#/definitions/erzravines",
-                            "description": "ravine\nThe ravine to place\n   \nIris Ravine\n\n* Minimum Length allowed is 1\nMust be a valid ravines (use ctrl+space for auto complete!)"
-                        }
+                }
+            },
+            {"type": "string"}
+        ]},
+        "obj-com-volmit-iris-engine-object-irisravineplacer": {"anyOf": [
+            {
+                "description": "Translate objects",
+                "type": "object",
+                "properties": {
+                    "rarity": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "description": "rarity\nTypically a 1 in RARITY on a per chunk/fork basis\n   \nInteger\n\n    \n* Default Value is 15\n* Minimum allowed is 1"
+                    },
+                    "ravine": {
+                        "type": "string",
+                        "minLength": 1,
+                        "$ref": "#/definitions/erzravines",
+                        "description": "ravine\nThe ravine to place\n   \nIris Ravine\n\n* Minimum Length allowed is 1\nMust be a valid ravines (use ctrl+space for auto complete!)"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "Translate objects"
-        },
+                }
+            },
+            {"type": "string"}
+        ]},
         "erzscripts": {"enum": []},
-        "obj-com-volmit-iris-engine-object-irisgeneratorstyle": {
-            "anyOf": [
-                {
-                    "description": "A gen style",
-                    "type": "object",
-                    "properties": {
-                        "style": {
-                            "type": "string",
-                            "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-noisestyle",
-                            "description": "style\nThe chance is 1 in CHANCE per interval\n   \nNoiseStyle\nStyles of noise\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid NoiseStyle (use ctrl+space for auto complete!)"
-                        },
-                        "zoom": {
-                            "type": "number",
-                            "minimum": 1.0E-5,
-                            "description": "zoom\nThe zoom of this style\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 1.0E-5"
-                        },
-                        "expression": {
-                            "type": "string",
-                            "$ref": "#/definitions/erzexpressions",
-                            "description": "expression\nInstead of using the style property, use a custom expression to represent this style.\n   \nIris Expression\n\nMust be a valid expressions (use ctrl+space for auto complete!)"
-                        },
-                        "multiplier": {
-                            "type": "number",
-                            "minimum": 1.0E-5,
-                            "description": "multiplier\nThe Output multiplier. Only used if parent is fracture.\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 1.0E-5"
-                        },
-                        "axialFracturing": {
-                            "type": "boolean",
-                            "description": "axialFracturing\nIf set to true, each dimension will be fractured with a different order of input coordinates. This is usually 2 or 3 times slower than normal.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "fracture": {
-                            "anyOf": [
-                                {
-                                    "!required": false,
-                                    "type": "object",
-                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
-                                    "description": "fracture\nApply a generator to the coordinate field fed into this parent generator. I.e. Distort your generator with another generator.\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
-                                },
-                                {
-                                    "type": "string",
-                                    "$ref": "#/definitions/enum-snippet-style"
-                                }
-                            ],
-                            "description": "fracture\nApply a generator to the coordinate field fed into this parent generator. I.e. Distort your generator with another generator.\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
-                        },
-                        "exponent": {
-                            "type": "number",
-                            "minimum": 0.01562,
-                            "maximum": 64,
-                            "description": "exponent\nThe exponent\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.01562\n* Maximum allowed is 64.0"
-                        }
+        "obj-com-volmit-iris-engine-object-irisgeneratorstyle": {"anyOf": [
+            {
+                "description": "A gen style",
+                "type": "object",
+                "properties": {
+                    "style": {
+                        "type": "string",
+                        "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-noisestyle",
+                        "description": "style\nThe chance is 1 in CHANCE per interval\n   \nNoiseStyle\nStyles of noise\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid NoiseStyle (use ctrl+space for auto complete!)"
+                    },
+                    "zoom": {
+                        "type": "number",
+                        "minimum": 1.0E-5,
+                        "description": "zoom\nThe zoom of this style\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 1.0E-5"
+                    },
+                    "expression": {
+                        "type": "string",
+                        "$ref": "#/definitions/erzexpressions",
+                        "description": "expression\nInstead of using the style property, use a custom expression to represent this style.\n   \nIris Expression\n\nMust be a valid expressions (use ctrl+space for auto complete!)"
+                    },
+                    "multiplier": {
+                        "type": "number",
+                        "minimum": 1.0E-5,
+                        "description": "multiplier\nThe Output multiplier. Only used if parent is fracture.\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 1.0E-5"
+                    },
+                    "axialFracturing": {
+                        "type": "boolean",
+                        "description": "axialFracturing\nIf set to true, each dimension will be fractured with a different order of input coordinates. This is usually 2 or 3 times slower than normal.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "fracture": {
+                        "anyOf": [
+                            {
+                                "!required": false,
+                                "type": "object",
+                                "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
+                                "description": "fracture\nApply a generator to the coordinate field fed into this parent generator. I.e. Distort your generator with another generator.\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
+                            },
+                            {
+                                "type": "string",
+                                "$ref": "#/definitions/enum-snippet-style",
+                                "description": "fracture\nApply a generator to the coordinate field fed into this parent generator. I.e. Distort your generator with another generator.\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
+                            }
+                        ],
+                        "description": "fracture\nApply a generator to the coordinate field fed into this parent generator. I.e. Distort your generator with another generator.\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
+                    },
+                    "exponent": {
+                        "type": "number",
+                        "minimum": 0.01562,
+                        "maximum": 64,
+                        "description": "exponent\nThe exponent\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.01562\n* Maximum allowed is 64.0"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "A gen style"
-        },
-        "obj-com-volmit-iris-engine-object-iriscarving": {
-            "anyOf": [
-                {
-                    "description": "Represents a carving configuration",
-                    "type": "object",
-                    "properties": {
-                        "caves": {
-                            "type": "array",
-                            "minItems": 1,
-                            "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-iriscaveplacer"},
-                            "description": "caves\nDefine cave placers\n   \nList of CavePlacers (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
-                        },
-                        "ravines": {
-                            "type": "array",
-                            "minItems": 1,
-                            "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisravineplacer"},
-                            "description": "ravines\nDefine ravine placers\n   \nList of RavinePlacers (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
-                        },
-                        "elipsoids": {
-                            "type": "array",
-                            "minItems": 1,
-                            "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-iriselipsoid"},
-                            "description": "elipsoids\nDefine elipsoids\n   \nList of Elipsoids (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
-                        },
-                        "spheres": {
-                            "type": "array",
-                            "minItems": 1,
-                            "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-irissphere"},
-                            "description": "spheres\nDefine spheres\n   \nList of Spheres (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
-                        },
-                        "pyramids": {
-                            "type": "array",
-                            "minItems": 1,
-                            "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-irispyramid"},
-                            "description": "pyramids\nDefine pyramids\n   \nList of Pyramids (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
-                        }
+                }
+            },
+            {"type": "string"}
+        ]},
+        "obj-com-volmit-iris-engine-object-iriscarving": {"anyOf": [
+            {
+                "description": "Represents a carving configuration",
+                "type": "object",
+                "properties": {
+                    "caves": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-iriscaveplacer"},
+                        "description": "caves\nDefine cave placers\n   \nList of CavePlacers (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
+                    },
+                    "ravines": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisravineplacer"},
+                        "description": "ravines\nDefine ravine placers\n   \nList of RavinePlacers (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
+                    },
+                    "elipsoids": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-iriselipsoid"},
+                        "description": "elipsoids\nDefine elipsoids\n   \nList of Elipsoids (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
+                    },
+                    "spheres": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-irissphere"},
+                        "description": "spheres\nDefine spheres\n   \nList of Spheres (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
+                    },
+                    "pyramids": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-irispyramid"},
+                        "description": "pyramids\nDefine pyramids\n   \nList of Pyramids (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "Represents a carving configuration"
-        },
+                }
+            },
+            {"type": "string"}
+        ]},
         "erzravines": {"enum": [
             "sandstone/main",
             "drip/main",
@@ -1068,8 +1059,10 @@
             "volcanic/main",
             "drip/small",
             "calcite/small",
+            "mixed-sandstone/main",
             "calcite/main",
-            "rocky/small"
+            "rocky/small",
+            "mixed-sandstone/small"
         ]},
         "erzbiomes": {"enum": [
             "mountain/hills",
@@ -1266,82 +1259,78 @@
             "mixed-sandstone/small"
         ]},
         "enum-snippet-carving": {"enum": []},
-        "obj-com-volmit-iris-engine-object-irisshapedgeneratorstyle": {
-            "anyOf": [
-                {
-                    "description": "This represents a generator with a min and max height",
-                    "type": "object",
-                    "properties": {
-                        "generator": {
-                            "anyOf": [
-                                {
-                                    "!required": true,
-                                    "type": "object",
-                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
-                                    "description": "generator\nThe generator id\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                                },
-                                {
-                                    "type": "string",
-                                    "$ref": "#/definitions/enum-snippet-style"
-                                }
-                            ],
-                            "description": "generator\nThe generator id\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "min": {
-                            "type": "integer",
-                            "minimum": -256,
-                            "maximum": 256,
-                            "description": "min\nThe min block value\n   \nInteger\n\n    \n* Default Value is 0\n* Minimum allowed is -256\n* Maximum allowed is 256"
-                        },
-                        "max": {
-                            "type": "integer",
-                            "minimum": -256,
-                            "maximum": 256,
-                            "description": "max\nThe max block value\n   \nInteger\n\n    \n* Default Value is 0\n* Minimum allowed is -256\n* Maximum allowed is 256"
-                        }
+        "obj-com-volmit-iris-engine-object-irisshapedgeneratorstyle": {"anyOf": [
+            {
+                "description": "This represents a generator with a min and max height",
+                "type": "object",
+                "properties": {
+                    "generator": {
+                        "anyOf": [
+                            {
+                                "!required": true,
+                                "type": "object",
+                                "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
+                                "description": "generator\nThe generator id\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            },
+                            {
+                                "type": "string",
+                                "$ref": "#/definitions/enum-snippet-style",
+                                "description": "generator\nThe generator id\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            }
+                        ],
+                        "description": "generator\nThe generator id\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "min": {
+                        "type": "integer",
+                        "minimum": -256,
+                        "maximum": 256,
+                        "description": "min\nThe min block value\n   \nInteger\n\n    \n* Default Value is 0\n* Minimum allowed is -256\n* Maximum allowed is 256"
+                    },
+                    "max": {
+                        "type": "integer",
+                        "minimum": -256,
+                        "maximum": 256,
+                        "description": "max\nThe max block value\n   \nInteger\n\n    \n* Default Value is 0\n* Minimum allowed is -256\n* Maximum allowed is 256"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "This represents a generator with a min and max height"
-        },
+                }
+            },
+            {"type": "string"}
+        ]},
         "erzexpressions": {"enum": []},
         "enum-snippet-style": {"enum": []},
         "enum-snippet-style-range": {"enum": []},
-        "obj-com-volmit-iris-engine-object-irisstyledrange": {
-            "anyOf": [
-                {
-                    "description": "Represents a range styled with a custom generator",
-                    "type": "object",
-                    "properties": {
-                        "min": {
-                            "type": "number",
-                            "description": "min\nThe minimum value\n   \nNumber\n\n    \n* Default Value is 16.0"
-                        },
-                        "max": {
-                            "type": "number",
-                            "description": "max\nThe maximum value\n   \nNumber\n\n    \n* Default Value is 32.0"
-                        },
-                        "style": {
-                            "anyOf": [
-                                {
-                                    "!required": false,
-                                    "type": "object",
-                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
-                                    "description": "style\nThe style to pick the range\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                                },
-                                {
-                                    "type": "string",
-                                    "$ref": "#/definitions/enum-snippet-style"
-                                }
-                            ],
-                            "description": "style\nThe style to pick the range\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                        }
+        "obj-com-volmit-iris-engine-object-irisstyledrange": {"anyOf": [
+            {
+                "description": "Represents a range styled with a custom generator",
+                "type": "object",
+                "properties": {
+                    "min": {
+                        "type": "number",
+                        "description": "min\nThe minimum value\n   \nNumber\n\n    \n* Default Value is 16.0"
+                    },
+                    "max": {
+                        "type": "number",
+                        "description": "max\nThe maximum value\n   \nNumber\n\n    \n* Default Value is 32.0"
+                    },
+                    "style": {
+                        "anyOf": [
+                            {
+                                "!required": false,
+                                "type": "object",
+                                "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
+                                "description": "style\nThe style to pick the range\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            },
+                            {
+                                "type": "string",
+                                "$ref": "#/definitions/enum-snippet-style",
+                                "description": "style\nThe style to pick the range\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            }
+                        ],
+                        "description": "style\nThe style to pick the range\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "Represents a range styled with a custom generator"
-        }
+                }
+            },
+            {"type": "string"}
+        ]}
     }
 }

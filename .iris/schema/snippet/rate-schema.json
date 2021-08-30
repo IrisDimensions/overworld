@@ -20,7 +20,8 @@
                         },
                         {
                             "type": "string",
-                            "$ref": "#/definitions/enum-snippet-duration"
+                            "$ref": "#/definitions/enum-snippet-duration",
+                            "description": "per\nThe time interval. Leave blank for infinite 0 (meaning always spawn all the time)\n   \nDuration (Object)\nRepresents a combined duration. Fill each property to add time into a single duration\n    \nYou can instead specify \"snippet/duration/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
                         }
                     ],
                     "description": "per\nThe time interval. Leave blank for infinite 0 (meaning always spawn all the time)\n   \nDuration (Object)\nRepresents a combined duration. Fill each property to add time into a single duration\n    \nYou can instead specify \"snippet/duration/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
@@ -29,60 +30,56 @@
         },
         {"type": "string"}
     ],
-    "description": "Represents a count of something per time duration",
     "definitions": {
-        "obj-com-volmit-iris-engine-object-irisduration": {
-            "anyOf": [
-                {
-                    "description": "Represents a combined duration. Fill each property to add time into a single duration",
-                    "type": "object",
-                    "properties": {
-                        "milliseconds": {
-                            "type": "integer",
-                            "description": "milliseconds\nMilliseconds (1000ms = 1 second)\n   \nInteger\n\n    \n* Default Value is 0"
-                        },
-                        "minecraftTicks": {
-                            "type": "integer",
-                            "description": "minecraftTicks\nMinecraft Ticks (20 minecraft ticks = 1 second\n   \nInteger\n\n    \n* Default Value is 0"
-                        },
-                        "seconds": {
-                            "type": "integer",
-                            "description": "seconds\nSeconds (60 seconds = 1 minute)\n   \nInteger\n\n    \n* Default Value is 0"
-                        },
-                        "minutes": {
-                            "type": "integer",
-                            "description": "minutes\nMinutes (60 minutes = 1 hour)\n   \nInteger\n\n    \n* Default Value is 0"
-                        },
-                        "minecraftHours": {
-                            "type": "integer",
-                            "description": "minecraftHours\nMinecraft Hours (about 50 real seconds)\n   \nInteger\n\n    \n* Default Value is 0"
-                        },
-                        "hours": {
-                            "type": "integer",
-                            "description": "hours\nHours (24 hours = 1 day)\n   \nInteger\n\n    \n* Default Value is 0"
-                        },
-                        "minecraftDays": {
-                            "type": "integer",
-                            "description": "minecraftDays\nMinecraft Days (1 minecraft day = 20 real minutes)\n   \nInteger\n\n    \n* Default Value is 0"
-                        },
-                        "minecraftWeeks": {
-                            "type": "integer",
-                            "description": "minecraftWeeks\nMinecraft Weeks (1 minecraft week = 2 real hours and 18 real minutes)\n   \nInteger\n\n    \n* Default Value is 0"
-                        },
-                        "minecraftLunarCycles": {
-                            "type": "integer",
-                            "description": "minecraftLunarCycles\nMinecraft Lunar Cycles (1 minecraft lunar cycle = 2 real hours and 36 real minutes)\n   \nInteger\n\n    \n* Default Value is 0"
-                        },
-                        "days": {
-                            "type": "integer",
-                            "description": "days\nREAL (not minecraft) Days\n   \nInteger\n\n    \n* Default Value is 0"
-                        }
+        "obj-com-volmit-iris-engine-object-irisduration": {"anyOf": [
+            {
+                "description": "Represents a combined duration. Fill each property to add time into a single duration",
+                "type": "object",
+                "properties": {
+                    "milliseconds": {
+                        "type": "integer",
+                        "description": "milliseconds\nMilliseconds (1000ms = 1 second)\n   \nInteger\n\n    \n* Default Value is 0"
+                    },
+                    "minecraftTicks": {
+                        "type": "integer",
+                        "description": "minecraftTicks\nMinecraft Ticks (20 minecraft ticks = 1 second\n   \nInteger\n\n    \n* Default Value is 0"
+                    },
+                    "seconds": {
+                        "type": "integer",
+                        "description": "seconds\nSeconds (60 seconds = 1 minute)\n   \nInteger\n\n    \n* Default Value is 0"
+                    },
+                    "minutes": {
+                        "type": "integer",
+                        "description": "minutes\nMinutes (60 minutes = 1 hour)\n   \nInteger\n\n    \n* Default Value is 0"
+                    },
+                    "minecraftHours": {
+                        "type": "integer",
+                        "description": "minecraftHours\nMinecraft Hours (about 50 real seconds)\n   \nInteger\n\n    \n* Default Value is 0"
+                    },
+                    "hours": {
+                        "type": "integer",
+                        "description": "hours\nHours (24 hours = 1 day)\n   \nInteger\n\n    \n* Default Value is 0"
+                    },
+                    "minecraftDays": {
+                        "type": "integer",
+                        "description": "minecraftDays\nMinecraft Days (1 minecraft day = 20 real minutes)\n   \nInteger\n\n    \n* Default Value is 0"
+                    },
+                    "minecraftWeeks": {
+                        "type": "integer",
+                        "description": "minecraftWeeks\nMinecraft Weeks (1 minecraft week = 2 real hours and 18 real minutes)\n   \nInteger\n\n    \n* Default Value is 0"
+                    },
+                    "minecraftLunarCycles": {
+                        "type": "integer",
+                        "description": "minecraftLunarCycles\nMinecraft Lunar Cycles (1 minecraft lunar cycle = 2 real hours and 36 real minutes)\n   \nInteger\n\n    \n* Default Value is 0"
+                    },
+                    "days": {
+                        "type": "integer",
+                        "description": "days\nREAL (not minecraft) Days\n   \nInteger\n\n    \n* Default Value is 0"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "Represents a combined duration. Fill each property to add time into a single duration"
-        },
+                }
+            },
+            {"type": "string"}
+        ]},
         "enum-snippet-duration": {"enum": []}
     }
 }

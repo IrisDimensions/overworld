@@ -53,7 +53,8 @@
                         },
                         {
                             "type": "string",
-                            "$ref": "#/definitions/enum-snippet-position-3d"
+                            "$ref": "#/definitions/enum-snippet-position-3d",
+                            "description": "position\nThe relative position this connector is located at for connecting to other pieces\n   \nPosition (Object)\nRepresents a position\n    \nYou can instead specify \"snippet/position-3d/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
                         }
                     ],
                     "description": "position\nThe relative position this connector is located at for connecting to other pieces\n   \nPosition (Object)\nRepresents a position\n    \nYou can instead specify \"snippet/position-3d/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
@@ -68,7 +69,8 @@
                         },
                         {
                             "type": "string",
-                            "$ref": "#/definitions/enum-snippet-position-3d"
+                            "$ref": "#/definitions/enum-snippet-position-3d",
+                            "description": "entityPosition\nThe relative position to this connector to place entities at\n   \nPosition (Object)\nRepresents a position\n    \nYou can instead specify \"snippet/position-3d/some-name.json\" to use a snippet file instead of specifying it here."
                         }
                     ],
                     "description": "entityPosition\nThe relative position to this connector to place entities at\n   \nPosition (Object)\nRepresents a position\n    \nYou can instead specify \"snippet/position-3d/some-name.json\" to use a snippet file instead of specifying it here."
@@ -82,7 +84,6 @@
         },
         {"type": "string"}
     ],
-    "description": "Represents a structure tile",
     "definitions": {
         "enum-snippet-position-3d": {"enum": []},
         "erzjigsaw-pools": {"enum": [
@@ -366,29 +367,26 @@
             "unique/iron_golem",
             "standard/hostile/skeleton"
         ]},
-        "obj-com-volmit-iris-engine-object-irisposition": {
-            "anyOf": [
-                {
-                    "description": "Represents a position",
-                    "type": "object",
-                    "properties": {
-                        "x": {
-                            "type": "integer",
-                            "description": "x\nThe x position\n   \nInteger\n\n    \n* Default Value is 0"
-                        },
-                        "y": {
-                            "type": "integer",
-                            "description": "y\nThe y position\n   \nInteger\n\n    \n* Default Value is 0"
-                        },
-                        "z": {
-                            "type": "integer",
-                            "description": "z\nThe z position\n   \nInteger\n\n    \n* Default Value is 0"
-                        }
+        "obj-com-volmit-iris-engine-object-irisposition": {"anyOf": [
+            {
+                "description": "Represents a position",
+                "type": "object",
+                "properties": {
+                    "x": {
+                        "type": "integer",
+                        "description": "x\nThe x position\n   \nInteger\n\n    \n* Default Value is 0"
+                    },
+                    "y": {
+                        "type": "integer",
+                        "description": "y\nThe y position\n   \nInteger\n\n    \n* Default Value is 0"
+                    },
+                    "z": {
+                        "type": "integer",
+                        "description": "z\nThe z position\n   \nInteger\n\n    \n* Default Value is 0"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "Represents a position"
-        }
+                }
+            },
+            {"type": "string"}
+        ]}
     }
 }

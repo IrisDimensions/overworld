@@ -24,7 +24,8 @@
                         },
                         {
                             "type": "string",
-                            "$ref": "#/definitions/enum-snippet-feature"
+                            "$ref": "#/definitions/enum-snippet-feature",
+                            "description": "feature\nThe Terrain Feature to apply\n   \nFeature (Object)\nRepresents an Iris zone\n    \nYou can instead specify \"snippet/feature/some-name.json\" to use a snippet file instead of specifying it here."
                         }
                     ],
                     "description": "feature\nThe Terrain Feature to apply\n   \nFeature (Object)\nRepresents an Iris zone\n    \nYou can instead specify \"snippet/feature/some-name.json\" to use a snippet file instead of specifying it here."
@@ -33,7 +34,6 @@
         },
         {"type": "string"}
     ],
-    "description": "Represents an Iris zone",
     "definitions": {
         "oneof-enum-com-volmit-iris-engine-object-noisestyle": {"oneOf": [
             {
@@ -881,91 +881,89 @@
             "frozen/mountain-middle",
             "tropical/sea/coral-ocean"
         ]},
-        "obj-com-volmit-iris-engine-object-irisfeature": {
-            "anyOf": [
-                {
-                    "description": "Represents an Iris zone",
-                    "type": "object",
-                    "properties": {
-                        "blockRadius": {
-                            "type": "number",
-                            "description": "blockRadius\nThe block radius of this zone\n   \nNumber\n\n    \n* Default Value is 32.0"
-                        },
-                        "objectChance": {
-                            "type": "number",
-                            "minimum": 0,
-                            "maximum": 1,
-                            "description": "objectChance\nThe chance an object that should be place actually will place. Set to below 1 to affect objects in this zone\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.0\n* Maximum allowed is 1.0"
-                        },
-                        "customBiome": {
-                            "type": "string",
-                            "$ref": "#/definitions/erzbiomes",
-                            "description": "customBiome\nApply a custom biome here\n   \nIris Biome\n\nMust be a valid biomes (use ctrl+space for auto complete!)"
-                        },
-                        "biomeStrengthThreshold": {
-                            "type": "number",
-                            "minimum": 0,
-                            "maximum": 1,
-                            "description": "biomeStrengthThreshold\nHow much strength before the biome is applied.\n   \nNumber\n\n    \n* Default Value is 0.75\n* Minimum allowed is 0.0\n* Maximum allowed is 1.0"
-                        },
-                        "interpolationRadius": {
-                            "type": "number",
-                            "description": "interpolationRadius\nThe interpolation radius of this zone\n   \nNumber\n\n    \n* Default Value is 7.0"
-                        },
-                        "strength": {
-                            "type": "number",
-                            "minimum": 0,
-                            "maximum": 1,
-                            "description": "strength\nThe strength of this effect\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.0\n* Maximum allowed is 1.0"
-                        },
-                        "interpolator": {
-                            "type": "string",
-                            "$ref": "#/definitions/oneof-enum-com-volmit-iris-util-interpolation-interpolationmethod",
-                            "description": "interpolator\nThe interpolator to use for smoothing the strength\n   \nInterpolationMethod\nAn interpolation method (or function) is simply a method of smoothing a position based on surrounding points on a grid. Bicubic for example is smoother, but has 4 times the checks than Bilinear for example. Try using BILINEAR_STARCAST_9 for beautiful results.\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid InterpolationMethod (use ctrl+space for auto complete!)"
-                        },
-                        "shiftHeight": {
-                            "type": "number",
-                            "description": "shiftHeight\nIf set, this will shift the terrain height in blocks (up or down)\n   \nNumber\n\n    \n* Default Value is 0.0"
-                        },
-                        "convergeToHeight": {
-                            "type": "number",
-                            "description": "convergeToHeight\nIf set, this will force the terrain closer to the specified height.\n   \nNumber\n\n    \n* Default Value is -1.0"
-                        },
-                        "multiplyHeight": {
-                            "type": "number",
-                            "description": "multiplyHeight\nMultiplies the input noise\n   \nNumber\n\n    \n* Default Value is 1.0"
-                        },
-                        "invertZone": {
-                            "type": "boolean",
-                            "description": "invertZone\nInvert the zone so that anything outside this zone is affected.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "fractureRadius": {
-                            "anyOf": [
-                                {
-                                    "!required": false,
-                                    "type": "object",
-                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
-                                    "description": "fractureRadius\nFracture the radius ring with additional noise\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
-                                },
-                                {
-                                    "type": "string",
-                                    "$ref": "#/definitions/enum-snippet-style"
-                                }
-                            ],
-                            "description": "fractureRadius\nFracture the radius ring with additional noise\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
-                        },
-                        "entitySpawners": {
-                            "type": "array",
-                            "minItems": 1,
-                            "items": {"$ref": "#/definitions/erzspawners"},
-                            "description": "entitySpawners\nWithin this noise feature, use the following spawners\n   \nList<Spawner>\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list.\nMust be a valid Spawner (use ctrl+space for auto complete!)"
-                        }
+        "obj-com-volmit-iris-engine-object-irisfeature": {"anyOf": [
+            {
+                "description": "Represents an Iris zone",
+                "type": "object",
+                "properties": {
+                    "blockRadius": {
+                        "type": "number",
+                        "description": "blockRadius\nThe block radius of this zone\n   \nNumber\n\n    \n* Default Value is 32.0"
+                    },
+                    "objectChance": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1,
+                        "description": "objectChance\nThe chance an object that should be place actually will place. Set to below 1 to affect objects in this zone\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.0\n* Maximum allowed is 1.0"
+                    },
+                    "customBiome": {
+                        "type": "string",
+                        "$ref": "#/definitions/erzbiomes",
+                        "description": "customBiome\nApply a custom biome here\n   \nIris Biome\n\nMust be a valid biomes (use ctrl+space for auto complete!)"
+                    },
+                    "biomeStrengthThreshold": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1,
+                        "description": "biomeStrengthThreshold\nHow much strength before the biome is applied.\n   \nNumber\n\n    \n* Default Value is 0.75\n* Minimum allowed is 0.0\n* Maximum allowed is 1.0"
+                    },
+                    "interpolationRadius": {
+                        "type": "number",
+                        "description": "interpolationRadius\nThe interpolation radius of this zone\n   \nNumber\n\n    \n* Default Value is 7.0"
+                    },
+                    "strength": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1,
+                        "description": "strength\nThe strength of this effect\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.0\n* Maximum allowed is 1.0"
+                    },
+                    "interpolator": {
+                        "type": "string",
+                        "$ref": "#/definitions/oneof-enum-com-volmit-iris-util-interpolation-interpolationmethod",
+                        "description": "interpolator\nThe interpolator to use for smoothing the strength\n   \nInterpolationMethod\nAn interpolation method (or function) is simply a method of smoothing a position based on surrounding points on a grid. Bicubic for example is smoother, but has 4 times the checks than Bilinear for example. Try using BILINEAR_STARCAST_9 for beautiful results.\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid InterpolationMethod (use ctrl+space for auto complete!)"
+                    },
+                    "shiftHeight": {
+                        "type": "number",
+                        "description": "shiftHeight\nIf set, this will shift the terrain height in blocks (up or down)\n   \nNumber\n\n    \n* Default Value is 0.0"
+                    },
+                    "convergeToHeight": {
+                        "type": "number",
+                        "description": "convergeToHeight\nIf set, this will force the terrain closer to the specified height.\n   \nNumber\n\n    \n* Default Value is -1.0"
+                    },
+                    "multiplyHeight": {
+                        "type": "number",
+                        "description": "multiplyHeight\nMultiplies the input noise\n   \nNumber\n\n    \n* Default Value is 1.0"
+                    },
+                    "invertZone": {
+                        "type": "boolean",
+                        "description": "invertZone\nInvert the zone so that anything outside this zone is affected.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "fractureRadius": {
+                        "anyOf": [
+                            {
+                                "!required": false,
+                                "type": "object",
+                                "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
+                                "description": "fractureRadius\nFracture the radius ring with additional noise\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
+                            },
+                            {
+                                "type": "string",
+                                "$ref": "#/definitions/enum-snippet-style",
+                                "description": "fractureRadius\nFracture the radius ring with additional noise\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
+                            }
+                        ],
+                        "description": "fractureRadius\nFracture the radius ring with additional noise\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
+                    },
+                    "entitySpawners": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {"$ref": "#/definitions/erzspawners"},
+                        "description": "entitySpawners\nWithin this noise feature, use the following spawners\n   \nList<Spawner>\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list.\nMust be a valid Spawner (use ctrl+space for auto complete!)"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "Represents an Iris zone"
-        },
+                }
+            },
+            {"type": "string"}
+        ]},
         "erzexpressions": {"enum": []},
         "enum-snippet-style": {"enum": []},
         "erzspawners": {"enum": [
@@ -999,62 +997,60 @@
             "hot/land-hostile",
             "tropical/land-passive"
         ]},
-        "obj-com-volmit-iris-engine-object-irisgeneratorstyle": {
-            "anyOf": [
-                {
-                    "description": "A gen style",
-                    "type": "object",
-                    "properties": {
-                        "style": {
-                            "type": "string",
-                            "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-noisestyle",
-                            "description": "style\nThe chance is 1 in CHANCE per interval\n   \nNoiseStyle\nStyles of noise\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid NoiseStyle (use ctrl+space for auto complete!)"
-                        },
-                        "zoom": {
-                            "type": "number",
-                            "minimum": 1.0E-5,
-                            "description": "zoom\nThe zoom of this style\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 1.0E-5"
-                        },
-                        "expression": {
-                            "type": "string",
-                            "$ref": "#/definitions/erzexpressions",
-                            "description": "expression\nInstead of using the style property, use a custom expression to represent this style.\n   \nIris Expression\n\nMust be a valid expressions (use ctrl+space for auto complete!)"
-                        },
-                        "multiplier": {
-                            "type": "number",
-                            "minimum": 1.0E-5,
-                            "description": "multiplier\nThe Output multiplier. Only used if parent is fracture.\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 1.0E-5"
-                        },
-                        "axialFracturing": {
-                            "type": "boolean",
-                            "description": "axialFracturing\nIf set to true, each dimension will be fractured with a different order of input coordinates. This is usually 2 or 3 times slower than normal.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "fracture": {
-                            "anyOf": [
-                                {
-                                    "!required": false,
-                                    "type": "object",
-                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
-                                    "description": "fracture\nApply a generator to the coordinate field fed into this parent generator. I.e. Distort your generator with another generator.\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
-                                },
-                                {
-                                    "type": "string",
-                                    "$ref": "#/definitions/enum-snippet-style"
-                                }
-                            ],
-                            "description": "fracture\nApply a generator to the coordinate field fed into this parent generator. I.e. Distort your generator with another generator.\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
-                        },
-                        "exponent": {
-                            "type": "number",
-                            "minimum": 0.01562,
-                            "maximum": 64,
-                            "description": "exponent\nThe exponent\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.01562\n* Maximum allowed is 64.0"
-                        }
+        "obj-com-volmit-iris-engine-object-irisgeneratorstyle": {"anyOf": [
+            {
+                "description": "A gen style",
+                "type": "object",
+                "properties": {
+                    "style": {
+                        "type": "string",
+                        "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-noisestyle",
+                        "description": "style\nThe chance is 1 in CHANCE per interval\n   \nNoiseStyle\nStyles of noise\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid NoiseStyle (use ctrl+space for auto complete!)"
+                    },
+                    "zoom": {
+                        "type": "number",
+                        "minimum": 1.0E-5,
+                        "description": "zoom\nThe zoom of this style\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 1.0E-5"
+                    },
+                    "expression": {
+                        "type": "string",
+                        "$ref": "#/definitions/erzexpressions",
+                        "description": "expression\nInstead of using the style property, use a custom expression to represent this style.\n   \nIris Expression\n\nMust be a valid expressions (use ctrl+space for auto complete!)"
+                    },
+                    "multiplier": {
+                        "type": "number",
+                        "minimum": 1.0E-5,
+                        "description": "multiplier\nThe Output multiplier. Only used if parent is fracture.\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 1.0E-5"
+                    },
+                    "axialFracturing": {
+                        "type": "boolean",
+                        "description": "axialFracturing\nIf set to true, each dimension will be fractured with a different order of input coordinates. This is usually 2 or 3 times slower than normal.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "fracture": {
+                        "anyOf": [
+                            {
+                                "!required": false,
+                                "type": "object",
+                                "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
+                                "description": "fracture\nApply a generator to the coordinate field fed into this parent generator. I.e. Distort your generator with another generator.\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
+                            },
+                            {
+                                "type": "string",
+                                "$ref": "#/definitions/enum-snippet-style",
+                                "description": "fracture\nApply a generator to the coordinate field fed into this parent generator. I.e. Distort your generator with another generator.\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
+                            }
+                        ],
+                        "description": "fracture\nApply a generator to the coordinate field fed into this parent generator. I.e. Distort your generator with another generator.\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
+                    },
+                    "exponent": {
+                        "type": "number",
+                        "minimum": 0.01562,
+                        "maximum": 64,
+                        "description": "exponent\nThe exponent\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.01562\n* Maximum allowed is 64.0"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "A gen style"
-        }
+                }
+            },
+            {"type": "string"}
+        ]}
     }
 }

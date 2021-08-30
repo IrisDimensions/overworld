@@ -65,7 +65,8 @@
                 },
                 {
                     "type": "string",
-                    "$ref": "#/definitions/enum-snippet-loot"
+                    "$ref": "#/definitions/enum-snippet-loot",
+                    "description": "helmet\nEntity helmet equipment\n   \nLoot (Object)\nRepresents a loot entry\n    \nYou can instead specify \"snippet/loot/some-name.json\" to use a snippet file instead of specifying it here."
                 }
             ],
             "description": "helmet\nEntity helmet equipment\n   \nLoot (Object)\nRepresents a loot entry\n    \nYou can instead specify \"snippet/loot/some-name.json\" to use a snippet file instead of specifying it here."
@@ -80,7 +81,8 @@
                 },
                 {
                     "type": "string",
-                    "$ref": "#/definitions/enum-snippet-loot"
+                    "$ref": "#/definitions/enum-snippet-loot",
+                    "description": "chestplate\nEntity chestplate equipment\n   \nLoot (Object)\nRepresents a loot entry\n    \nYou can instead specify \"snippet/loot/some-name.json\" to use a snippet file instead of specifying it here."
                 }
             ],
             "description": "chestplate\nEntity chestplate equipment\n   \nLoot (Object)\nRepresents a loot entry\n    \nYou can instead specify \"snippet/loot/some-name.json\" to use a snippet file instead of specifying it here."
@@ -95,7 +97,8 @@
                 },
                 {
                     "type": "string",
-                    "$ref": "#/definitions/enum-snippet-loot"
+                    "$ref": "#/definitions/enum-snippet-loot",
+                    "description": "boots\nEntity boots equipment\n   \nLoot (Object)\nRepresents a loot entry\n    \nYou can instead specify \"snippet/loot/some-name.json\" to use a snippet file instead of specifying it here."
                 }
             ],
             "description": "boots\nEntity boots equipment\n   \nLoot (Object)\nRepresents a loot entry\n    \nYou can instead specify \"snippet/loot/some-name.json\" to use a snippet file instead of specifying it here."
@@ -110,7 +113,8 @@
                 },
                 {
                     "type": "string",
-                    "$ref": "#/definitions/enum-snippet-loot"
+                    "$ref": "#/definitions/enum-snippet-loot",
+                    "description": "leggings\nEntity leggings equipment\n   \nLoot (Object)\nRepresents a loot entry\n    \nYou can instead specify \"snippet/loot/some-name.json\" to use a snippet file instead of specifying it here."
                 }
             ],
             "description": "leggings\nEntity leggings equipment\n   \nLoot (Object)\nRepresents a loot entry\n    \nYou can instead specify \"snippet/loot/some-name.json\" to use a snippet file instead of specifying it here."
@@ -125,7 +129,8 @@
                 },
                 {
                     "type": "string",
-                    "$ref": "#/definitions/enum-snippet-loot"
+                    "$ref": "#/definitions/enum-snippet-loot",
+                    "description": "mainHand\nEntity main hand equipment\n   \nLoot (Object)\nRepresents a loot entry\n    \nYou can instead specify \"snippet/loot/some-name.json\" to use a snippet file instead of specifying it here."
                 }
             ],
             "description": "mainHand\nEntity main hand equipment\n   \nLoot (Object)\nRepresents a loot entry\n    \nYou can instead specify \"snippet/loot/some-name.json\" to use a snippet file instead of specifying it here."
@@ -140,7 +145,8 @@
                 },
                 {
                     "type": "string",
-                    "$ref": "#/definitions/enum-snippet-loot"
+                    "$ref": "#/definitions/enum-snippet-loot",
+                    "description": "offHand\nEntity off hand equipment\n   \nLoot (Object)\nRepresents a loot entry\n    \nYou can instead specify \"snippet/loot/some-name.json\" to use a snippet file instead of specifying it here."
                 }
             ],
             "description": "offHand\nEntity off hand equipment\n   \nLoot (Object)\nRepresents a loot entry\n    \nYou can instead specify \"snippet/loot/some-name.json\" to use a snippet file instead of specifying it here."
@@ -167,7 +173,8 @@
                 },
                 {
                     "type": "string",
-                    "$ref": "#/definitions/enum-snippet-loot-registry"
+                    "$ref": "#/definitions/enum-snippet-loot-registry",
+                    "description": "loot\nLoot tables for drops\n   \nLootReference (Object)\nRepresents a loot entry\n    \nYou can instead specify \"snippet/loot-registry/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
                 }
             ],
             "description": "loot\nLoot tables for drops\n   \nLootReference (Object)\nRepresents a loot entry\n    \nYou can instead specify \"snippet/loot-registry/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
@@ -187,7 +194,8 @@
                 },
                 {
                     "type": "string",
-                    "$ref": "#/definitions/enum-snippet-effect"
+                    "$ref": "#/definitions/enum-snippet-effect",
+                    "description": "spawnEffect\nIf specified, this entity will spawn with an effect\n   \nEffect (Object)\nAn iris effect\n    \nYou can instead specify \"snippet/effect/some-name.json\" to use a snippet file instead of specifying it here."
                 }
             ],
             "description": "spawnEffect\nIf specified, this entity will spawn with an effect\n   \nEffect (Object)\nAn iris effect\n    \nYou can instead specify \"snippet/effect/some-name.json\" to use a snippet file instead of specifying it here."
@@ -252,240 +260,234 @@
             "HORSE_JUMP_STRENGTH",
             "ZOMBIE_SPAWN_REINFORCEMENTS"
         ]},
-        "obj-com-volmit-iris-engine-object-irisloot": {
-            "anyOf": [
-                {
-                    "description": "Represents a loot entry",
-                    "type": "object",
-                    "properties": {
-                        "slotTypes": {
-                            "type": "string",
-                            "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-inventoryslottype",
-                            "description": "slotTypes\nThe target inventory slot types to fill this loot with\n   \nInventorySlotType\nAn inventory slot type is used to represent a type of slot for items to fit into in any given inventory.\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid InventorySlotType (use ctrl+space for auto complete!)"
-                        },
-                        "rarity": {
-                            "type": "integer",
-                            "minimum": 1,
-                            "description": "rarity\nThe sub rarity of this loot. Calculated after this loot table has been picked.\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1"
-                        },
-                        "minAmount": {
-                            "type": "integer",
-                            "minimum": 1,
-                            "description": "minAmount\nMinimum amount of this loot\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1"
-                        },
-                        "maxAmount": {
-                            "type": "integer",
-                            "minimum": 1,
-                            "description": "maxAmount\nMaximum amount of this loot\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1"
-                        },
-                        "displayName": {
-                            "type": "string",
-                            "minLength": 1,
-                            "description": "displayName\nThe display name of this item\n   \nText\n\n* Minimum Length allowed is 1"
-                        },
-                        "minDurability": {
-                            "type": "number",
-                            "minimum": 0,
-                            "maximum": 1,
-                            "description": "minDurability\nMinimum durability percent\n   \nNumber\n\n    \n* Default Value is 0.0\n* Minimum allowed is 0.0\n* Maximum allowed is 1.0"
-                        },
-                        "maxDurability": {
-                            "type": "number",
-                            "minimum": 0,
-                            "maximum": 1,
-                            "description": "maxDurability\nMaximum durability percent\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.0\n* Maximum allowed is 1.0"
-                        },
-                        "customModel": {
-                            "type": "integer",
-                            "description": "customModel\nDefine a custom model identifier 1.14+ only\n   \nInteger\n"
-                        },
-                        "unbreakable": {
-                            "type": "boolean",
-                            "description": "unbreakable\nSet this to true to prevent it from being broken\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "itemFlags": {
-                            "type": "array",
-                            "minItems": 1,
-                            "items": {"$ref": "#/definitions/enum-org-bukkit-inventory-itemflag"},
-                            "description": "itemFlags\nThe item flags to add\n   \nList of ItemFlags\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list.\nMust be a valid ItemFlag (use ctrl+space for auto complete!)"
-                        },
-                        "enchantments": {
-                            "type": "array",
-                            "minItems": 1,
-                            "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisenchantment"},
-                            "description": "enchantments\nApply enchantments to this item\n   \nList of Enchantments (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
-                        },
-                        "attributes": {
-                            "type": "array",
-                            "minItems": 1,
-                            "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisattributemodifier"},
-                            "description": "attributes\nApply attribute modifiers to this item\n   \nList of AttributeModifiers (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
-                        },
-                        "lore": {
-                            "type": "array",
-                            "minItems": 1,
-                            "description": "lore\nAdd lore to this item\n   \nList of Text\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
-                        },
-                        "type": {
-                            "type": "string",
-                            "$ref": "#/definitions/enum-item-type",
-                            "description": "type\nThis is the item or block type. Does not accept minecraft:*. Only materials such as DIAMOND_SWORD or DIRT.\n   \nItem Type\n\n    \n* Default Value is \nMust be a valid Item Type (use ctrl+space for auto complete!)"
-                        },
-                        "dyeColor": {
-                            "type": "string",
-                            "$ref": "#/definitions/enum-org-bukkit-dyecolor",
-                            "description": "dyeColor\nThe dye color\n   \nDyeColor\n\nMust be a valid DyeColor (use ctrl+space for auto complete!)"
-                        },
-                        "leatherColor": {
-                            "type": "string",
-                            "description": "leatherColor\nThe leather armor color\n   \nText\n"
-                        }
+        "obj-com-volmit-iris-engine-object-irisloot": {"anyOf": [
+            {
+                "description": "Represents a loot entry",
+                "type": "object",
+                "properties": {
+                    "slotTypes": {
+                        "type": "string",
+                        "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-inventoryslottype",
+                        "description": "slotTypes\nThe target inventory slot types to fill this loot with\n   \nInventorySlotType\nAn inventory slot type is used to represent a type of slot for items to fit into in any given inventory.\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid InventorySlotType (use ctrl+space for auto complete!)"
+                    },
+                    "rarity": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "description": "rarity\nThe sub rarity of this loot. Calculated after this loot table has been picked.\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1"
+                    },
+                    "minAmount": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "description": "minAmount\nMinimum amount of this loot\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1"
+                    },
+                    "maxAmount": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "description": "maxAmount\nMaximum amount of this loot\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1"
+                    },
+                    "displayName": {
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "displayName\nThe display name of this item\n   \nText\n\n* Minimum Length allowed is 1"
+                    },
+                    "minDurability": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1,
+                        "description": "minDurability\nMinimum durability percent\n   \nNumber\n\n    \n* Default Value is 0.0\n* Minimum allowed is 0.0\n* Maximum allowed is 1.0"
+                    },
+                    "maxDurability": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1,
+                        "description": "maxDurability\nMaximum durability percent\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.0\n* Maximum allowed is 1.0"
+                    },
+                    "customModel": {
+                        "type": "integer",
+                        "description": "customModel\nDefine a custom model identifier 1.14+ only\n   \nInteger\n"
+                    },
+                    "unbreakable": {
+                        "type": "boolean",
+                        "description": "unbreakable\nSet this to true to prevent it from being broken\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "itemFlags": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {"$ref": "#/definitions/enum-org-bukkit-inventory-itemflag"},
+                        "description": "itemFlags\nThe item flags to add\n   \nList of ItemFlags\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list.\nMust be a valid ItemFlag (use ctrl+space for auto complete!)"
+                    },
+                    "enchantments": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisenchantment"},
+                        "description": "enchantments\nApply enchantments to this item\n   \nList of Enchantments (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
+                    },
+                    "attributes": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisattributemodifier"},
+                        "description": "attributes\nApply attribute modifiers to this item\n   \nList of AttributeModifiers (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
+                    },
+                    "lore": {
+                        "type": "array",
+                        "minItems": 1,
+                        "description": "lore\nAdd lore to this item\n   \nList of Text\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
+                    },
+                    "type": {
+                        "type": "string",
+                        "$ref": "#/definitions/enum-item-type",
+                        "description": "type\nThis is the item or block type. Does not accept minecraft:*. Only materials such as DIAMOND_SWORD or DIRT.\n   \nItem Type\n\n    \n* Default Value is \nMust be a valid Item Type (use ctrl+space for auto complete!)"
+                    },
+                    "dyeColor": {
+                        "type": "string",
+                        "$ref": "#/definitions/enum-org-bukkit-dyecolor",
+                        "description": "dyeColor\nThe dye color\n   \nDyeColor\n\nMust be a valid DyeColor (use ctrl+space for auto complete!)"
+                    },
+                    "leatherColor": {
+                        "type": "string",
+                        "description": "leatherColor\nThe leather armor color\n   \nText\n"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "Represents a loot entry"
-        },
-        "obj-com-volmit-iris-engine-object-iriseffect": {
-            "anyOf": [
-                {
-                    "description": "An iris effect",
-                    "type": "object",
-                    "properties": {
-                        "potionEffect": {
-                            "type": "string",
-                            "description": "potionEffect\nThe potion effect to apply in this area\n   \nText\n\n    \n* Default Value is "
-                        },
-                        "particleEffect": {
-                            "type": "string",
-                            "$ref": "#/definitions/enum-org-bukkit-particle",
-                            "description": "particleEffect\nThe particle effect to apply in the area\n   \nParticle\n\nMust be a valid Particle (use ctrl+space for auto complete!)"
-                        },
-                        "particleOffset": {
-                            "type": "integer",
-                            "minimum": -32,
-                            "maximum": 32,
-                            "description": "particleOffset\nRandomly offset from the surface to this surface+value\n   \nInteger\n\n    \n* Default Value is 0\n* Minimum allowed is -32\n* Maximum allowed is 32"
-                        },
-                        "particleAltX": {
-                            "type": "number",
-                            "minimum": -8,
-                            "maximum": 8,
-                            "description": "particleAltX\nThe alt x, usually represents motion if the particle count is zero. Otherwise an offset.\n   \nNumber\n\n    \n* Default Value is 0.0\n* Minimum allowed is -8.0\n* Maximum allowed is 8.0"
-                        },
-                        "particleAltY": {
-                            "type": "number",
-                            "minimum": -8,
-                            "maximum": 8,
-                            "description": "particleAltY\nThe alt y, usually represents motion if the particle count is zero. Otherwise an offset.\n   \nNumber\n\n    \n* Default Value is 0.0\n* Minimum allowed is -8.0\n* Maximum allowed is 8.0"
-                        },
-                        "particleAltZ": {
-                            "type": "number",
-                            "minimum": -8,
-                            "maximum": 8,
-                            "description": "particleAltZ\nThe alt z, usually represents motion if the particle count is zero. Otherwise an offset.\n   \nNumber\n\n    \n* Default Value is 0.0\n* Minimum allowed is -8.0\n* Maximum allowed is 8.0"
-                        },
-                        "randomAltX": {
-                            "type": "boolean",
-                            "description": "randomAltX\nRandomize the altX by -altX to altX\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "randomAltY": {
-                            "type": "boolean",
-                            "description": "randomAltY\nRandomize the altY by -altY to altY\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "randomAltZ": {
-                            "type": "boolean",
-                            "description": "randomAltZ\nRandomize the altZ by -altZ to altZ\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "sound": {
-                            "type": "string",
-                            "$ref": "#/definitions/enum-org-bukkit-sound",
-                            "description": "sound\nThe sound to play\n   \nSound\n\nMust be a valid Sound (use ctrl+space for auto complete!)"
-                        },
-                        "soundDistance": {
-                            "type": "integer",
-                            "minimum": 0,
-                            "maximum": 512,
-                            "description": "soundDistance\nThe max distance from the player the sound will play\n   \nInteger\n\n    \n* Default Value is 12\n* Minimum allowed is 0\n* Maximum allowed is 512"
-                        },
-                        "minPitch": {
-                            "type": "number",
-                            "minimum": 0.01,
-                            "maximum": 1.99,
-                            "description": "minPitch\nThe minimum sound pitch\n   \nNumber\n\n    \n* Default Value is 0.5\n* Minimum allowed is 0.01\n* Maximum allowed is 1.99"
-                        },
-                        "maxPitch": {
-                            "type": "number",
-                            "minimum": 0.01,
-                            "maximum": 1.99,
-                            "description": "maxPitch\nThe max sound pitch\n   \nNumber\n\n    \n* Default Value is 1.5\n* Minimum allowed is 0.01\n* Maximum allowed is 1.99"
-                        },
-                        "volume": {
-                            "type": "number",
-                            "minimum": 0.001,
-                            "maximum": 512,
-                            "description": "volume\nThe sound volume.\n   \nNumber\n\n    \n* Default Value is 1.5\n* Minimum allowed is 0.001\n* Maximum allowed is 512.0"
-                        },
-                        "particleCount": {
-                            "type": "integer",
-                            "minimum": 0,
-                            "maximum": 512,
-                            "description": "particleCount\nThe particle count. Try setting to zero for using the alt xyz to a motion value instead of an offset\n   \nInteger\n\n    \n* Default Value is 0\n* Minimum allowed is 0\n* Maximum allowed is 512"
-                        },
-                        "particleDistance": {
-                            "type": "integer",
-                            "minimum": 0,
-                            "maximum": 64,
-                            "description": "particleDistance\nHow far away from the player particles can play\n   \nInteger\n\n    \n* Default Value is 20\n* Minimum allowed is 0\n* Maximum allowed is 64"
-                        },
-                        "particleDistanceWidth": {
-                            "type": "integer",
-                            "minimum": 0,
-                            "maximum": 128,
-                            "description": "particleDistanceWidth\nHow wide the particles can play (player's view left and right) RADIUS\n   \nInteger\n\n    \n* Default Value is 24\n* Minimum allowed is 0\n* Maximum allowed is 128"
-                        },
-                        "extra": {
-                            "type": "number",
-                            "description": "extra\nAn extra value for some particles... Which bukkit doesn't even document.\n   \nNumber\n\n    \n* Default Value is 0.0"
-                        },
-                        "potionStrength": {
-                            "type": "integer",
-                            "minimum": -1,
-                            "maximum": 1024,
-                            "description": "potionStrength\nThe Potion Strength or -1 to disable\n   \nInteger\n\n    \n* Default Value is -1\n* Minimum allowed is -1\n* Maximum allowed is 1024"
-                        },
-                        "potionTicksMax": {
-                            "type": "integer",
-                            "minimum": 1,
-                            "description": "potionTicksMax\nThe max time the potion will last for\n   \nInteger\n\n    \n* Default Value is 155\n* Minimum allowed is 1"
-                        },
-                        "potionTicksMin": {
-                            "type": "integer",
-                            "minimum": 1,
-                            "description": "potionTicksMin\nThe min time the potion will last for\n   \nInteger\n\n    \n* Default Value is 75\n* Minimum allowed is 1"
-                        },
-                        "interval": {
-                            "type": "integer",
-                            "minimum": 0,
-                            "description": "interval\nThe effect interval in milliseconds\n   \nInteger\n\n    \n* Default Value is 150\n* Minimum allowed is 0"
-                        },
-                        "particleAway": {
-                            "type": "integer",
-                            "minimum": 0,
-                            "maximum": 16,
-                            "description": "particleAway\nThe effect distance start away\n   \nInteger\n\n    \n* Default Value is 5\n* Minimum allowed is 0\n* Maximum allowed is 16"
-                        },
-                        "chance": {
-                            "type": "integer",
-                            "minimum": 1,
-                            "description": "chance\nThe chance is 1 in CHANCE per interval\n   \nInteger\n\n    \n* Default Value is 50\n* Minimum allowed is 1"
-                        }
+                }
+            },
+            {"type": "string"}
+        ]},
+        "obj-com-volmit-iris-engine-object-iriseffect": {"anyOf": [
+            {
+                "description": "An iris effect",
+                "type": "object",
+                "properties": {
+                    "potionEffect": {
+                        "type": "string",
+                        "description": "potionEffect\nThe potion effect to apply in this area\n   \nText\n\n    \n* Default Value is "
+                    },
+                    "particleEffect": {
+                        "type": "string",
+                        "$ref": "#/definitions/enum-org-bukkit-particle",
+                        "description": "particleEffect\nThe particle effect to apply in the area\n   \nParticle\n\nMust be a valid Particle (use ctrl+space for auto complete!)"
+                    },
+                    "particleOffset": {
+                        "type": "integer",
+                        "minimum": -32,
+                        "maximum": 32,
+                        "description": "particleOffset\nRandomly offset from the surface to this surface+value\n   \nInteger\n\n    \n* Default Value is 0\n* Minimum allowed is -32\n* Maximum allowed is 32"
+                    },
+                    "particleAltX": {
+                        "type": "number",
+                        "minimum": -8,
+                        "maximum": 8,
+                        "description": "particleAltX\nThe alt x, usually represents motion if the particle count is zero. Otherwise an offset.\n   \nNumber\n\n    \n* Default Value is 0.0\n* Minimum allowed is -8.0\n* Maximum allowed is 8.0"
+                    },
+                    "particleAltY": {
+                        "type": "number",
+                        "minimum": -8,
+                        "maximum": 8,
+                        "description": "particleAltY\nThe alt y, usually represents motion if the particle count is zero. Otherwise an offset.\n   \nNumber\n\n    \n* Default Value is 0.0\n* Minimum allowed is -8.0\n* Maximum allowed is 8.0"
+                    },
+                    "particleAltZ": {
+                        "type": "number",
+                        "minimum": -8,
+                        "maximum": 8,
+                        "description": "particleAltZ\nThe alt z, usually represents motion if the particle count is zero. Otherwise an offset.\n   \nNumber\n\n    \n* Default Value is 0.0\n* Minimum allowed is -8.0\n* Maximum allowed is 8.0"
+                    },
+                    "randomAltX": {
+                        "type": "boolean",
+                        "description": "randomAltX\nRandomize the altX by -altX to altX\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "randomAltY": {
+                        "type": "boolean",
+                        "description": "randomAltY\nRandomize the altY by -altY to altY\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "randomAltZ": {
+                        "type": "boolean",
+                        "description": "randomAltZ\nRandomize the altZ by -altZ to altZ\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "sound": {
+                        "type": "string",
+                        "$ref": "#/definitions/enum-org-bukkit-sound",
+                        "description": "sound\nThe sound to play\n   \nSound\n\nMust be a valid Sound (use ctrl+space for auto complete!)"
+                    },
+                    "soundDistance": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 512,
+                        "description": "soundDistance\nThe max distance from the player the sound will play\n   \nInteger\n\n    \n* Default Value is 12\n* Minimum allowed is 0\n* Maximum allowed is 512"
+                    },
+                    "minPitch": {
+                        "type": "number",
+                        "minimum": 0.01,
+                        "maximum": 1.99,
+                        "description": "minPitch\nThe minimum sound pitch\n   \nNumber\n\n    \n* Default Value is 0.5\n* Minimum allowed is 0.01\n* Maximum allowed is 1.99"
+                    },
+                    "maxPitch": {
+                        "type": "number",
+                        "minimum": 0.01,
+                        "maximum": 1.99,
+                        "description": "maxPitch\nThe max sound pitch\n   \nNumber\n\n    \n* Default Value is 1.5\n* Minimum allowed is 0.01\n* Maximum allowed is 1.99"
+                    },
+                    "volume": {
+                        "type": "number",
+                        "minimum": 0.001,
+                        "maximum": 512,
+                        "description": "volume\nThe sound volume.\n   \nNumber\n\n    \n* Default Value is 1.5\n* Minimum allowed is 0.001\n* Maximum allowed is 512.0"
+                    },
+                    "particleCount": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 512,
+                        "description": "particleCount\nThe particle count. Try setting to zero for using the alt xyz to a motion value instead of an offset\n   \nInteger\n\n    \n* Default Value is 0\n* Minimum allowed is 0\n* Maximum allowed is 512"
+                    },
+                    "particleDistance": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 64,
+                        "description": "particleDistance\nHow far away from the player particles can play\n   \nInteger\n\n    \n* Default Value is 20\n* Minimum allowed is 0\n* Maximum allowed is 64"
+                    },
+                    "particleDistanceWidth": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 128,
+                        "description": "particleDistanceWidth\nHow wide the particles can play (player's view left and right) RADIUS\n   \nInteger\n\n    \n* Default Value is 24\n* Minimum allowed is 0\n* Maximum allowed is 128"
+                    },
+                    "extra": {
+                        "type": "number",
+                        "description": "extra\nAn extra value for some particles... Which bukkit doesn't even document.\n   \nNumber\n\n    \n* Default Value is 0.0"
+                    },
+                    "potionStrength": {
+                        "type": "integer",
+                        "minimum": -1,
+                        "maximum": 1024,
+                        "description": "potionStrength\nThe Potion Strength or -1 to disable\n   \nInteger\n\n    \n* Default Value is -1\n* Minimum allowed is -1\n* Maximum allowed is 1024"
+                    },
+                    "potionTicksMax": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "description": "potionTicksMax\nThe max time the potion will last for\n   \nInteger\n\n    \n* Default Value is 155\n* Minimum allowed is 1"
+                    },
+                    "potionTicksMin": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "description": "potionTicksMin\nThe min time the potion will last for\n   \nInteger\n\n    \n* Default Value is 75\n* Minimum allowed is 1"
+                    },
+                    "interval": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "description": "interval\nThe effect interval in milliseconds\n   \nInteger\n\n    \n* Default Value is 150\n* Minimum allowed is 0"
+                    },
+                    "particleAway": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 16,
+                        "description": "particleAway\nThe effect distance start away\n   \nInteger\n\n    \n* Default Value is 5\n* Minimum allowed is 0\n* Maximum allowed is 16"
+                    },
+                    "chance": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "description": "chance\nThe chance is 1 in CHANCE per interval\n   \nInteger\n\n    \n* Default Value is 50\n* Minimum allowed is 1"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "An iris effect"
-        },
+                }
+            },
+            {"type": "string"}
+        ]},
         "oneof-enum-com-volmit-iris-engine-object-irissurface": {"oneOf": [
             {
                 "const": "LAND",
@@ -1767,38 +1769,35 @@
             "tropical-food"
         ]},
         "enum-snippet-effect": {"enum": []},
-        "obj-com-volmit-iris-engine-object-irisenchantment": {
-            "anyOf": [
-                {
-                    "description": "Represents an enchantment & level",
-                    "type": "object",
-                    "properties": {
-                        "enchantment": {
-                            "type": "string",
-                            "description": "enchantment\nThe enchantment\n   \nText\n\n    \n* Default Value is "
-                        },
-                        "minLevel": {
-                            "type": "integer",
-                            "minimum": 1,
-                            "description": "minLevel\nMinimum amount of this loot\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1"
-                        },
-                        "maxLevel": {
-                            "type": "integer",
-                            "minimum": 1,
-                            "description": "maxLevel\nMaximum amount of this loot\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1"
-                        },
-                        "chance": {
-                            "type": "number",
-                            "minimum": 0,
-                            "maximum": 1,
-                            "description": "chance\nThe chance that this enchantment is applied (0 to 1)\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.0\n* Maximum allowed is 1.0"
-                        }
+        "obj-com-volmit-iris-engine-object-irisenchantment": {"anyOf": [
+            {
+                "description": "Represents an enchantment & level",
+                "type": "object",
+                "properties": {
+                    "enchantment": {
+                        "type": "string",
+                        "description": "enchantment\nThe enchantment\n   \nText\n\n    \n* Default Value is "
+                    },
+                    "minLevel": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "description": "minLevel\nMinimum amount of this loot\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1"
+                    },
+                    "maxLevel": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "description": "maxLevel\nMaximum amount of this loot\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1"
+                    },
+                    "chance": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1,
+                        "description": "chance\nThe chance that this enchantment is applied (0 to 1)\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.0\n* Maximum allowed is 1.0"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "Represents an enchantment & level"
-        },
+                }
+            },
+            {"type": "string"}
+        ]},
         "enum-reg-specialentity": {"enum": []},
         "enum-org-bukkit-inventory-itemflag": {"enum": [
             "HIDE_ENCHANTS",
@@ -1954,47 +1953,44 @@
                 "description": "Used for the cook slot in smokers"
             }
         ]},
-        "obj-com-volmit-iris-engine-object-irisattributemodifier": {
-            "anyOf": [
-                {
-                    "description": "Represents an attribute modifier for an item or an entity. This allows you to create modifications to basic game attributes such as MAX_HEALTH or ARMOR_VALUE.",
-                    "type": "object",
-                    "properties": {
-                        "attribute": {
-                            "type": "string",
-                            "$ref": "#/definitions/enum-org-bukkit-attribute-attribute",
-                            "description": "attribute\nThe Attribute type. This type is pulled from the game attributes. Zombie & Horse attributes will not work on non-zombie/horse entities.\nUsing an attribute on an item will have affects when held, or worn. There is no way to specify further granularity as the game picks this depending on the item type.\n   \nAttribute\n\nMust be a valid Attribute (use ctrl+space for auto complete!)"
-                        },
-                        "name": {
-                            "type": "string",
-                            "minLength": 2,
-                            "description": "name\nThe Attribute Name is used internally only for the game. This value should be unique to all other attributes applied to this item/entity. It is not shown in game.\n   \nText\n\n    \n* Default Value is \n* Minimum Length allowed is 2"
-                        },
-                        "operation": {
-                            "type": "string",
-                            "$ref": "#/definitions/enum-org-bukkit-attribute-attributemodifier-operation",
-                            "description": "operation\nThe application operation (add number is default). Add Number adds to the default value. \nAdd scalar_1 will multiply by 1 for example if the health is 20 and you multiply_scalar_1 by 0.5, the health will result in 30, not 10. Use negative values to achieve that.\n   \nOperation\n\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid Operation (use ctrl+space for auto complete!)"
-                        },
-                        "minAmount": {
-                            "type": "number",
-                            "description": "minAmount\nMinimum amount for this modifier. Iris randomly chooses an amount, this is the minimum it can choose randomly for this attribute.\n   \nNumber\n\n    \n* Default Value is 1.0"
-                        },
-                        "maxAmount": {
-                            "type": "number",
-                            "description": "maxAmount\nMaximum amount for this modifier Iris randomly chooses an amount, this is the maximum it can choose randomly for this attribute.\n   \nNumber\n\n    \n* Default Value is 1.0"
-                        },
-                        "chance": {
-                            "type": "number",
-                            "minimum": 0,
-                            "maximum": 1,
-                            "description": "chance\nThe chance that this attribute is applied (0 to 1). If the chance is 0.5 (50%), then Iris will only apply this attribute 50% of the time.\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.0\n* Maximum allowed is 1.0"
-                        }
+        "obj-com-volmit-iris-engine-object-irisattributemodifier": {"anyOf": [
+            {
+                "description": "Represents an attribute modifier for an item or an entity. This allows you to create modifications to basic game attributes such as MAX_HEALTH or ARMOR_VALUE.",
+                "type": "object",
+                "properties": {
+                    "attribute": {
+                        "type": "string",
+                        "$ref": "#/definitions/enum-org-bukkit-attribute-attribute",
+                        "description": "attribute\nThe Attribute type. This type is pulled from the game attributes. Zombie & Horse attributes will not work on non-zombie/horse entities.\nUsing an attribute on an item will have affects when held, or worn. There is no way to specify further granularity as the game picks this depending on the item type.\n   \nAttribute\n\nMust be a valid Attribute (use ctrl+space for auto complete!)"
+                    },
+                    "name": {
+                        "type": "string",
+                        "minLength": 2,
+                        "description": "name\nThe Attribute Name is used internally only for the game. This value should be unique to all other attributes applied to this item/entity. It is not shown in game.\n   \nText\n\n    \n* Default Value is \n* Minimum Length allowed is 2"
+                    },
+                    "operation": {
+                        "type": "string",
+                        "$ref": "#/definitions/enum-org-bukkit-attribute-attributemodifier-operation",
+                        "description": "operation\nThe application operation (add number is default). Add Number adds to the default value. \nAdd scalar_1 will multiply by 1 for example if the health is 20 and you multiply_scalar_1 by 0.5, the health will result in 30, not 10. Use negative values to achieve that.\n   \nOperation\n\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid Operation (use ctrl+space for auto complete!)"
+                    },
+                    "minAmount": {
+                        "type": "number",
+                        "description": "minAmount\nMinimum amount for this modifier. Iris randomly chooses an amount, this is the minimum it can choose randomly for this attribute.\n   \nNumber\n\n    \n* Default Value is 1.0"
+                    },
+                    "maxAmount": {
+                        "type": "number",
+                        "description": "maxAmount\nMaximum amount for this modifier Iris randomly chooses an amount, this is the maximum it can choose randomly for this attribute.\n   \nNumber\n\n    \n* Default Value is 1.0"
+                    },
+                    "chance": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1,
+                        "description": "chance\nThe chance that this attribute is applied (0 to 1). If the chance is 0.5 (50%), then Iris will only apply this attribute 50% of the time.\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.0\n* Maximum allowed is 1.0"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "Represents an attribute modifier for an item or an entity. This allows you to create modifications to basic game attributes such as MAX_HEALTH or ARMOR_VALUE."
-        },
+                }
+            },
+            {"type": "string"}
+        ]},
         "enum-org-bukkit-dyecolor": {"enum": [
             "WHITE",
             "ORANGE",
@@ -2078,7 +2074,8 @@
                         },
                         {
                             "type": "string",
-                            "$ref": "#/definitions/enum-snippet-loot"
+                            "$ref": "#/definitions/enum-snippet-loot",
+                            "description": "helmet\nEntity helmet equipment\n   \nLoot (Object)\nRepresents a loot entry\n    \nYou can instead specify \"snippet/loot/some-name.json\" to use a snippet file instead of specifying it here."
                         }
                     ],
                     "description": "helmet\nEntity helmet equipment\n   \nLoot (Object)\nRepresents a loot entry\n    \nYou can instead specify \"snippet/loot/some-name.json\" to use a snippet file instead of specifying it here."
@@ -2093,7 +2090,8 @@
                         },
                         {
                             "type": "string",
-                            "$ref": "#/definitions/enum-snippet-loot"
+                            "$ref": "#/definitions/enum-snippet-loot",
+                            "description": "chestplate\nEntity chestplate equipment\n   \nLoot (Object)\nRepresents a loot entry\n    \nYou can instead specify \"snippet/loot/some-name.json\" to use a snippet file instead of specifying it here."
                         }
                     ],
                     "description": "chestplate\nEntity chestplate equipment\n   \nLoot (Object)\nRepresents a loot entry\n    \nYou can instead specify \"snippet/loot/some-name.json\" to use a snippet file instead of specifying it here."
@@ -2108,7 +2106,8 @@
                         },
                         {
                             "type": "string",
-                            "$ref": "#/definitions/enum-snippet-loot"
+                            "$ref": "#/definitions/enum-snippet-loot",
+                            "description": "boots\nEntity boots equipment\n   \nLoot (Object)\nRepresents a loot entry\n    \nYou can instead specify \"snippet/loot/some-name.json\" to use a snippet file instead of specifying it here."
                         }
                     ],
                     "description": "boots\nEntity boots equipment\n   \nLoot (Object)\nRepresents a loot entry\n    \nYou can instead specify \"snippet/loot/some-name.json\" to use a snippet file instead of specifying it here."
@@ -2123,7 +2122,8 @@
                         },
                         {
                             "type": "string",
-                            "$ref": "#/definitions/enum-snippet-loot"
+                            "$ref": "#/definitions/enum-snippet-loot",
+                            "description": "leggings\nEntity leggings equipment\n   \nLoot (Object)\nRepresents a loot entry\n    \nYou can instead specify \"snippet/loot/some-name.json\" to use a snippet file instead of specifying it here."
                         }
                     ],
                     "description": "leggings\nEntity leggings equipment\n   \nLoot (Object)\nRepresents a loot entry\n    \nYou can instead specify \"snippet/loot/some-name.json\" to use a snippet file instead of specifying it here."
@@ -2138,7 +2138,8 @@
                         },
                         {
                             "type": "string",
-                            "$ref": "#/definitions/enum-snippet-loot"
+                            "$ref": "#/definitions/enum-snippet-loot",
+                            "description": "mainHand\nEntity main hand equipment\n   \nLoot (Object)\nRepresents a loot entry\n    \nYou can instead specify \"snippet/loot/some-name.json\" to use a snippet file instead of specifying it here."
                         }
                     ],
                     "description": "mainHand\nEntity main hand equipment\n   \nLoot (Object)\nRepresents a loot entry\n    \nYou can instead specify \"snippet/loot/some-name.json\" to use a snippet file instead of specifying it here."
@@ -2153,7 +2154,8 @@
                         },
                         {
                             "type": "string",
-                            "$ref": "#/definitions/enum-snippet-loot"
+                            "$ref": "#/definitions/enum-snippet-loot",
+                            "description": "offHand\nEntity off hand equipment\n   \nLoot (Object)\nRepresents a loot entry\n    \nYou can instead specify \"snippet/loot/some-name.json\" to use a snippet file instead of specifying it here."
                         }
                     ],
                     "description": "offHand\nEntity off hand equipment\n   \nLoot (Object)\nRepresents a loot entry\n    \nYou can instead specify \"snippet/loot/some-name.json\" to use a snippet file instead of specifying it here."
@@ -2180,7 +2182,8 @@
                         },
                         {
                             "type": "string",
-                            "$ref": "#/definitions/enum-snippet-loot-registry"
+                            "$ref": "#/definitions/enum-snippet-loot-registry",
+                            "description": "loot\nLoot tables for drops\n   \nLootReference (Object)\nRepresents a loot entry\n    \nYou can instead specify \"snippet/loot-registry/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
                         }
                     ],
                     "description": "loot\nLoot tables for drops\n   \nLootReference (Object)\nRepresents a loot entry\n    \nYou can instead specify \"snippet/loot-registry/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
@@ -2200,7 +2203,8 @@
                         },
                         {
                             "type": "string",
-                            "$ref": "#/definitions/enum-snippet-effect"
+                            "$ref": "#/definitions/enum-snippet-effect",
+                            "description": "spawnEffect\nIf specified, this entity will spawn with an effect\n   \nEffect (Object)\nAn iris effect\n    \nYou can instead specify \"snippet/effect/some-name.json\" to use a snippet file instead of specifying it here."
                         }
                     ],
                     "description": "spawnEffect\nIf specified, this entity will spawn with an effect\n   \nEffect (Object)\nAn iris effect\n    \nYou can instead specify \"snippet/effect/some-name.json\" to use a snippet file instead of specifying it here."
@@ -3563,33 +3567,30 @@
             "WEATHER_RAIN",
             "WEATHER_RAIN_ABOVE"
         ]},
-        "obj-com-volmit-iris-engine-object-irislootreference": {
-            "anyOf": [
-                {
-                    "description": "Represents a loot entry",
-                    "type": "object",
-                    "properties": {
-                        "mode": {
-                            "type": "string",
-                            "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-irislootmode",
-                            "description": "mode\nAdd = add on top of parent tables, Replace = clear first then add these. Clear = Remove all and dont add loot from this or parent.\n   \nLootMode\nA loot mode is used to describe what to do with the existing loot layers before adding this loot. Using ADD will simply add this table to the building list of tables (i.e. add dimension tables, region tables then biome tables). By using clear or replace, you remove the parent tables before and add just your tables.\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid LootMode (use ctrl+space for auto complete!)"
-                        },
-                        "tables": {
-                            "type": "array",
-                            "minItems": 1,
-                            "items": {"$ref": "#/definitions/erzloot"},
-                            "description": "tables\nAdd loot table registries here\n   \nList<Loot>\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list.\nMust be a valid Loot (use ctrl+space for auto complete!)"
-                        },
-                        "multiplier": {
-                            "type": "number",
-                            "minimum": 0,
-                            "description": "multiplier\nIncrease the chance of loot in this area\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.0"
-                        }
+        "obj-com-volmit-iris-engine-object-irislootreference": {"anyOf": [
+            {
+                "description": "Represents a loot entry",
+                "type": "object",
+                "properties": {
+                    "mode": {
+                        "type": "string",
+                        "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-irislootmode",
+                        "description": "mode\nAdd = add on top of parent tables, Replace = clear first then add these. Clear = Remove all and dont add loot from this or parent.\n   \nLootMode\nA loot mode is used to describe what to do with the existing loot layers before adding this loot. Using ADD will simply add this table to the building list of tables (i.e. add dimension tables, region tables then biome tables). By using clear or replace, you remove the parent tables before and add just your tables.\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid LootMode (use ctrl+space for auto complete!)"
+                    },
+                    "tables": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {"$ref": "#/definitions/erzloot"},
+                        "description": "tables\nAdd loot table registries here\n   \nList<Loot>\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list.\nMust be a valid Loot (use ctrl+space for auto complete!)"
+                    },
+                    "multiplier": {
+                        "type": "number",
+                        "minimum": 0,
+                        "description": "multiplier\nIncrease the chance of loot in this area\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.0"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "Represents a loot entry"
-        }
+                }
+            },
+            {"type": "string"}
+        ]}
     }
 }

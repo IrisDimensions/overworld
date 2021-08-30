@@ -40,7 +40,8 @@
                 },
                 {
                     "type": "string",
-                    "$ref": "#/definitions/enum-snippet-time-block"
+                    "$ref": "#/definitions/enum-snippet-time-block",
+                    "description": "timeBlock\nThe block of 24 hour time to contain this spawn in.\n   \nTimeBlock (Object)\nRepresents a time of day (24h time, not 12h am/pm). Set both to the same number for any time. If they are both set to -1, it will always be not allowed.\n    \nYou can instead specify \"snippet/time-block/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
                 }
             ],
             "description": "timeBlock\nThe block of 24 hour time to contain this spawn in.\n   \nTimeBlock (Object)\nRepresents a time of day (24h time, not 12h am/pm). Set both to the same number for any time. If they are both set to -1, it will always be not allowed.\n    \nYou can instead specify \"snippet/time-block/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
@@ -60,7 +61,8 @@
                 },
                 {
                     "type": "string",
-                    "$ref": "#/definitions/enum-snippet-rate"
+                    "$ref": "#/definitions/enum-snippet-rate",
+                    "description": "maximumRate\nThe maximum rate this spawner can fire\n   \nRate (Object)\nRepresents a count of something per time duration\n    \nYou can instead specify \"snippet/rate/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
                 }
             ],
             "description": "maximumRate\nThe maximum rate this spawner can fire\n   \nRate (Object)\nRepresents a count of something per time duration\n    \nYou can instead specify \"snippet/rate/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
@@ -75,7 +77,8 @@
                 },
                 {
                     "type": "string",
-                    "$ref": "#/definitions/enum-snippet-rate"
+                    "$ref": "#/definitions/enum-snippet-rate",
+                    "description": "maximumRatePerChunk\nThe maximum rate this spawner can fire on a specific chunk\n   \nRate (Object)\nRepresents a count of something per time duration\n    \nYou can instead specify \"snippet/rate/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
                 }
             ],
             "description": "maximumRatePerChunk\nThe maximum rate this spawner can fire on a specific chunk\n   \nRate (Object)\nRepresents a count of something per time duration\n    \nYou can instead specify \"snippet/rate/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
@@ -90,7 +93,8 @@
                 },
                 {
                     "type": "string",
-                    "$ref": "#/definitions/enum-snippet-range"
+                    "$ref": "#/definitions/enum-snippet-range",
+                    "description": "allowedLightLevels\nThe light levels this spawn is allowed to run in (0-15 inclusive)\n   \nRange (Object)\nRepresents a range\n    \nYou can instead specify \"snippet/range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
                 }
             ],
             "description": "allowedLightLevels\nThe light levels this spawn is allowed to run in (0-15 inclusive)\n   \nRange (Object)\nRepresents a range\n    \nYou can instead specify \"snippet/range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
@@ -102,26 +106,23 @@
         }
     },
     "definitions": {
-        "obj-com-volmit-iris-engine-object-irisrange": {
-            "anyOf": [
-                {
-                    "description": "Represents a range",
-                    "type": "object",
-                    "properties": {
-                        "min": {
-                            "type": "number",
-                            "description": "min\nThe minimum value\n   \nNumber\n\n    \n* Default Value is 16.0"
-                        },
-                        "max": {
-                            "type": "number",
-                            "description": "max\nThe maximum value\n   \nNumber\n\n    \n* Default Value is 32.0"
-                        }
+        "obj-com-volmit-iris-engine-object-irisrange": {"anyOf": [
+            {
+                "description": "Represents a range",
+                "type": "object",
+                "properties": {
+                    "min": {
+                        "type": "number",
+                        "description": "min\nThe minimum value\n   \nNumber\n\n    \n* Default Value is 16.0"
+                    },
+                    "max": {
+                        "type": "number",
+                        "description": "max\nThe maximum value\n   \nNumber\n\n    \n* Default Value is 32.0"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "Represents a range"
-        },
+                }
+            },
+            {"type": "string"}
+        ]},
         "oneof-enum-com-volmit-iris-engine-object-irisspawngroup": {"oneOf": [
             {
                 "const": "NORMAL",
@@ -142,26 +143,23 @@
         ]},
         "enum-snippet-time-block": {"enum": []},
         "enum-snippet-duration": {"enum": []},
-        "obj-com-volmit-iris-engine-object-iristimeblock": {
-            "anyOf": [
-                {
-                    "description": "Represents a time of day (24h time, not 12h am/pm). Set both to the same number for any time. If they are both set to -1, it will always be not allowed.",
-                    "type": "object",
-                    "properties": {
-                        "startHour": {
-                            "type": "number",
-                            "description": "startHour\nThe beginning hour. Set both to the same number for any time. If they are both set to -1, it will always be not allowed.\n   \nNumber\n\n    \n* Default Value is 0.0"
-                        },
-                        "endHour": {
-                            "type": "number",
-                            "description": "endHour\nThe ending hour. Set both to the same number for any time. If they are both set to -1, it will always be not allowed.\n   \nNumber\n\n    \n* Default Value is 0.0"
-                        }
+        "obj-com-volmit-iris-engine-object-iristimeblock": {"anyOf": [
+            {
+                "description": "Represents a time of day (24h time, not 12h am/pm). Set both to the same number for any time. If they are both set to -1, it will always be not allowed.",
+                "type": "object",
+                "properties": {
+                    "startHour": {
+                        "type": "number",
+                        "description": "startHour\nThe beginning hour. Set both to the same number for any time. If they are both set to -1, it will always be not allowed.\n   \nNumber\n\n    \n* Default Value is 0.0"
+                    },
+                    "endHour": {
+                        "type": "number",
+                        "description": "endHour\nThe ending hour. Set both to the same number for any time. If they are both set to -1, it will always be not allowed.\n   \nNumber\n\n    \n* Default Value is 0.0"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "Represents a time of day (24h time, not 12h am/pm). Set both to the same number for any time. If they are both set to -1, it will always be not allowed."
-        },
+                }
+            },
+            {"type": "string"}
+        ]},
         "erzscripts": {"enum": []},
         "erzentities": {"enum": [
             "standard/passive/cow",
@@ -209,89 +207,84 @@
             "standard/hostile/skeleton"
         ]},
         "enum-snippet-rate": {"enum": []},
-        "obj-com-volmit-iris-engine-object-irisrate": {
-            "anyOf": [
-                {
-                    "description": "Represents a count of something per time duration",
-                    "type": "object",
-                    "properties": {
-                        "amount": {
-                            "type": "integer",
-                            "description": "amount\nThe amount of things. Leave 0 for infinite (meaning always spawn whenever)\n   \nInteger\n\n    \n* Default Value is 0"
-                        },
-                        "per": {
-                            "anyOf": [
-                                {
-                                    "!required": false,
-                                    "type": "object",
-                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisduration",
-                                    "description": "per\nThe time interval. Leave blank for infinite 0 (meaning always spawn all the time)\n   \nDuration (Object)\nRepresents a combined duration. Fill each property to add time into a single duration\n    \nYou can instead specify \"snippet/duration/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                                },
-                                {
-                                    "type": "string",
-                                    "$ref": "#/definitions/enum-snippet-duration"
-                                }
-                            ],
-                            "description": "per\nThe time interval. Leave blank for infinite 0 (meaning always spawn all the time)\n   \nDuration (Object)\nRepresents a combined duration. Fill each property to add time into a single duration\n    \nYou can instead specify \"snippet/duration/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                        }
+        "obj-com-volmit-iris-engine-object-irisrate": {"anyOf": [
+            {
+                "description": "Represents a count of something per time duration",
+                "type": "object",
+                "properties": {
+                    "amount": {
+                        "type": "integer",
+                        "description": "amount\nThe amount of things. Leave 0 for infinite (meaning always spawn whenever)\n   \nInteger\n\n    \n* Default Value is 0"
+                    },
+                    "per": {
+                        "anyOf": [
+                            {
+                                "!required": false,
+                                "type": "object",
+                                "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisduration",
+                                "description": "per\nThe time interval. Leave blank for infinite 0 (meaning always spawn all the time)\n   \nDuration (Object)\nRepresents a combined duration. Fill each property to add time into a single duration\n    \nYou can instead specify \"snippet/duration/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            },
+                            {
+                                "type": "string",
+                                "$ref": "#/definitions/enum-snippet-duration",
+                                "description": "per\nThe time interval. Leave blank for infinite 0 (meaning always spawn all the time)\n   \nDuration (Object)\nRepresents a combined duration. Fill each property to add time into a single duration\n    \nYou can instead specify \"snippet/duration/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            }
+                        ],
+                        "description": "per\nThe time interval. Leave blank for infinite 0 (meaning always spawn all the time)\n   \nDuration (Object)\nRepresents a combined duration. Fill each property to add time into a single duration\n    \nYou can instead specify \"snippet/duration/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "Represents a count of something per time duration"
-        },
-        "obj-com-volmit-iris-engine-object-irisduration": {
-            "anyOf": [
-                {
-                    "description": "Represents a combined duration. Fill each property to add time into a single duration",
-                    "type": "object",
-                    "properties": {
-                        "milliseconds": {
-                            "type": "integer",
-                            "description": "milliseconds\nMilliseconds (1000ms = 1 second)\n   \nInteger\n\n    \n* Default Value is 0"
-                        },
-                        "minecraftTicks": {
-                            "type": "integer",
-                            "description": "minecraftTicks\nMinecraft Ticks (20 minecraft ticks = 1 second\n   \nInteger\n\n    \n* Default Value is 0"
-                        },
-                        "seconds": {
-                            "type": "integer",
-                            "description": "seconds\nSeconds (60 seconds = 1 minute)\n   \nInteger\n\n    \n* Default Value is 0"
-                        },
-                        "minutes": {
-                            "type": "integer",
-                            "description": "minutes\nMinutes (60 minutes = 1 hour)\n   \nInteger\n\n    \n* Default Value is 0"
-                        },
-                        "minecraftHours": {
-                            "type": "integer",
-                            "description": "minecraftHours\nMinecraft Hours (about 50 real seconds)\n   \nInteger\n\n    \n* Default Value is 0"
-                        },
-                        "hours": {
-                            "type": "integer",
-                            "description": "hours\nHours (24 hours = 1 day)\n   \nInteger\n\n    \n* Default Value is 0"
-                        },
-                        "minecraftDays": {
-                            "type": "integer",
-                            "description": "minecraftDays\nMinecraft Days (1 minecraft day = 20 real minutes)\n   \nInteger\n\n    \n* Default Value is 0"
-                        },
-                        "minecraftWeeks": {
-                            "type": "integer",
-                            "description": "minecraftWeeks\nMinecraft Weeks (1 minecraft week = 2 real hours and 18 real minutes)\n   \nInteger\n\n    \n* Default Value is 0"
-                        },
-                        "minecraftLunarCycles": {
-                            "type": "integer",
-                            "description": "minecraftLunarCycles\nMinecraft Lunar Cycles (1 minecraft lunar cycle = 2 real hours and 36 real minutes)\n   \nInteger\n\n    \n* Default Value is 0"
-                        },
-                        "days": {
-                            "type": "integer",
-                            "description": "days\nREAL (not minecraft) Days\n   \nInteger\n\n    \n* Default Value is 0"
-                        }
+                }
+            },
+            {"type": "string"}
+        ]},
+        "obj-com-volmit-iris-engine-object-irisduration": {"anyOf": [
+            {
+                "description": "Represents a combined duration. Fill each property to add time into a single duration",
+                "type": "object",
+                "properties": {
+                    "milliseconds": {
+                        "type": "integer",
+                        "description": "milliseconds\nMilliseconds (1000ms = 1 second)\n   \nInteger\n\n    \n* Default Value is 0"
+                    },
+                    "minecraftTicks": {
+                        "type": "integer",
+                        "description": "minecraftTicks\nMinecraft Ticks (20 minecraft ticks = 1 second\n   \nInteger\n\n    \n* Default Value is 0"
+                    },
+                    "seconds": {
+                        "type": "integer",
+                        "description": "seconds\nSeconds (60 seconds = 1 minute)\n   \nInteger\n\n    \n* Default Value is 0"
+                    },
+                    "minutes": {
+                        "type": "integer",
+                        "description": "minutes\nMinutes (60 minutes = 1 hour)\n   \nInteger\n\n    \n* Default Value is 0"
+                    },
+                    "minecraftHours": {
+                        "type": "integer",
+                        "description": "minecraftHours\nMinecraft Hours (about 50 real seconds)\n   \nInteger\n\n    \n* Default Value is 0"
+                    },
+                    "hours": {
+                        "type": "integer",
+                        "description": "hours\nHours (24 hours = 1 day)\n   \nInteger\n\n    \n* Default Value is 0"
+                    },
+                    "minecraftDays": {
+                        "type": "integer",
+                        "description": "minecraftDays\nMinecraft Days (1 minecraft day = 20 real minutes)\n   \nInteger\n\n    \n* Default Value is 0"
+                    },
+                    "minecraftWeeks": {
+                        "type": "integer",
+                        "description": "minecraftWeeks\nMinecraft Weeks (1 minecraft week = 2 real hours and 18 real minutes)\n   \nInteger\n\n    \n* Default Value is 0"
+                    },
+                    "minecraftLunarCycles": {
+                        "type": "integer",
+                        "description": "minecraftLunarCycles\nMinecraft Lunar Cycles (1 minecraft lunar cycle = 2 real hours and 36 real minutes)\n   \nInteger\n\n    \n* Default Value is 0"
+                    },
+                    "days": {
+                        "type": "integer",
+                        "description": "days\nREAL (not minecraft) Days\n   \nInteger\n\n    \n* Default Value is 0"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "Represents a combined duration. Fill each property to add time into a single duration"
-        },
+                }
+            },
+            {"type": "string"}
+        ]},
         "enum-snippet-range": {"enum": []},
         "oneof-enum-com-volmit-iris-engine-object-irisweather": {"oneOf": [
             {
@@ -311,41 +304,38 @@
                 "description": "Any weather"
             }
         ]},
-        "obj-com-volmit-iris-engine-object-irisentityspawn": {
-            "anyOf": [
-                {
-                    "description": "Represents an entity spawn during initial chunk generation",
-                    "type": "object",
-                    "properties": {
-                        "entity": {
-                            "type": "string",
-                            "$ref": "#/definitions/erzentities",
-                            "description": "entity\nThe entity\n   \nIris Entity\n\n    \n* Default Value is \nMust be a valid entities (use ctrl+space for auto complete!)"
-                        },
-                        "energyMultiplier": {
-                            "type": "number",
-                            "description": "energyMultiplier\nThe energy multiplier when calculating spawn energy usage\n   \nNumber\n\n    \n* Default Value is 1.0"
-                        },
-                        "rarity": {
-                            "type": "integer",
-                            "minimum": 1,
-                            "description": "rarity\nThe 1 in RARITY chance for this entity to spawn\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1"
-                        },
-                        "minSpawns": {
-                            "type": "integer",
-                            "minimum": 1,
-                            "description": "minSpawns\nThe minumum of this entity to spawn\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1"
-                        },
-                        "maxSpawns": {
-                            "type": "integer",
-                            "minimum": 1,
-                            "description": "maxSpawns\nThe max of this entity to spawn\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1"
-                        }
+        "obj-com-volmit-iris-engine-object-irisentityspawn": {"anyOf": [
+            {
+                "description": "Represents an entity spawn during initial chunk generation",
+                "type": "object",
+                "properties": {
+                    "entity": {
+                        "type": "string",
+                        "$ref": "#/definitions/erzentities",
+                        "description": "entity\nThe entity\n   \nIris Entity\n\n    \n* Default Value is \nMust be a valid entities (use ctrl+space for auto complete!)"
+                    },
+                    "energyMultiplier": {
+                        "type": "number",
+                        "description": "energyMultiplier\nThe energy multiplier when calculating spawn energy usage\n   \nNumber\n\n    \n* Default Value is 1.0"
+                    },
+                    "rarity": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "description": "rarity\nThe 1 in RARITY chance for this entity to spawn\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1"
+                    },
+                    "minSpawns": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "description": "minSpawns\nThe minumum of this entity to spawn\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1"
+                    },
+                    "maxSpawns": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "description": "maxSpawns\nThe max of this entity to spawn\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "Represents an entity spawn during initial chunk generation"
-        }
+                }
+            },
+            {"type": "string"}
+        ]}
     }
 }

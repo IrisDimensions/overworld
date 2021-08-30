@@ -584,51 +584,49 @@
                 "description": "Vascular noise gets higher as the position nears a cell border. Cells are distorted using Iris styled wispy noise."
             }
         ]},
-        "obj-com-volmit-iris-engine-object-irisexpressionload": {
-            "anyOf": [
-                {
-                    "description": "Represents a variable to use in your expression. Do not set the name to x, y, or z, also don't duplicate names.",
-                    "type": "object",
-                    "properties": {
-                        "name": {
-                            "type": "string",
-                            "description": "name\nThe variable to assign this value to. Do not set the name to x, y, or z\n   \nText\n\n    \n* Default Value is "
-                        },
-                        "staticValue": {
-                            "type": "number",
-                            "description": "staticValue\nIf the style value is not defined, this value will be used\n   \nNumber\n\n    \n* Default Value is -1.0"
-                        },
-                        "styleValue": {
-                            "anyOf": [
-                                {
-                                    "!required": false,
-                                    "type": "object",
-                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
-                                    "description": "styleValue\nIf defined, this variable will use a generator style as it's value\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
-                                },
-                                {
-                                    "type": "string",
-                                    "$ref": "#/definitions/enum-snippet-style"
-                                }
-                            ],
-                            "description": "styleValue\nIf defined, this variable will use a generator style as it's value\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
-                        },
-                        "engineStreamValue": {
-                            "type": "string",
-                            "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-irisenginestreamtype",
-                            "description": "engineStreamValue\nIf defined, iris will use an internal stream from the engine as it's value\n   \nEngineStreamType\nRepresents a stream from the engine\nMust be a valid EngineStreamType (use ctrl+space for auto complete!)"
-                        },
-                        "engineValue": {
-                            "type": "string",
-                            "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-irisenginevaluetype",
-                            "description": "engineValue\nIf defined, iris will use an internal value from the engine as it's value\n   \nEngineValueType\nRepresents a value from the engine\nMust be a valid EngineValueType (use ctrl+space for auto complete!)"
-                        }
+        "obj-com-volmit-iris-engine-object-irisexpressionload": {"anyOf": [
+            {
+                "description": "Represents a variable to use in your expression. Do not set the name to x, y, or z, also don't duplicate names.",
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "name\nThe variable to assign this value to. Do not set the name to x, y, or z\n   \nText\n\n    \n* Default Value is "
+                    },
+                    "staticValue": {
+                        "type": "number",
+                        "description": "staticValue\nIf the style value is not defined, this value will be used\n   \nNumber\n\n    \n* Default Value is -1.0"
+                    },
+                    "styleValue": {
+                        "anyOf": [
+                            {
+                                "!required": false,
+                                "type": "object",
+                                "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
+                                "description": "styleValue\nIf defined, this variable will use a generator style as it's value\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
+                            },
+                            {
+                                "type": "string",
+                                "$ref": "#/definitions/enum-snippet-style",
+                                "description": "styleValue\nIf defined, this variable will use a generator style as it's value\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
+                            }
+                        ],
+                        "description": "styleValue\nIf defined, this variable will use a generator style as it's value\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
+                    },
+                    "engineStreamValue": {
+                        "type": "string",
+                        "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-irisenginestreamtype",
+                        "description": "engineStreamValue\nIf defined, iris will use an internal stream from the engine as it's value\n   \nEngineStreamType\nRepresents a stream from the engine\nMust be a valid EngineStreamType (use ctrl+space for auto complete!)"
+                    },
+                    "engineValue": {
+                        "type": "string",
+                        "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-irisenginevaluetype",
+                        "description": "engineValue\nIf defined, iris will use an internal value from the engine as it's value\n   \nEngineValueType\nRepresents a value from the engine\nMust be a valid EngineValueType (use ctrl+space for auto complete!)"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "Represents a variable to use in your expression. Do not set the name to x, y, or z, also don't duplicate names."
-        },
+                }
+            },
+            {"type": "string"}
+        ]},
         "erzexpressions": {"enum": []},
         "enum-snippet-style": {"enum": []},
         "erzscripts": {"enum": []},
@@ -674,63 +672,61 @@
                 "description": "Represents the identity of regions. Each region has a unique number (very large numbers)"
             }
         ]},
-        "obj-com-volmit-iris-engine-object-irisgeneratorstyle": {
-            "anyOf": [
-                {
-                    "description": "A gen style",
-                    "type": "object",
-                    "properties": {
-                        "style": {
-                            "type": "string",
-                            "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-noisestyle",
-                            "description": "style\nThe chance is 1 in CHANCE per interval\n   \nNoiseStyle\nStyles of noise\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid NoiseStyle (use ctrl+space for auto complete!)"
-                        },
-                        "zoom": {
-                            "type": "number",
-                            "minimum": 1.0E-5,
-                            "description": "zoom\nThe zoom of this style\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 1.0E-5"
-                        },
-                        "expression": {
-                            "type": "string",
-                            "$ref": "#/definitions/erzexpressions",
-                            "description": "expression\nInstead of using the style property, use a custom expression to represent this style.\n   \nIris Expression\n\nMust be a valid expressions (use ctrl+space for auto complete!)"
-                        },
-                        "multiplier": {
-                            "type": "number",
-                            "minimum": 1.0E-5,
-                            "description": "multiplier\nThe Output multiplier. Only used if parent is fracture.\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 1.0E-5"
-                        },
-                        "axialFracturing": {
-                            "type": "boolean",
-                            "description": "axialFracturing\nIf set to true, each dimension will be fractured with a different order of input coordinates. This is usually 2 or 3 times slower than normal.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "fracture": {
-                            "anyOf": [
-                                {
-                                    "!required": false,
-                                    "type": "object",
-                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
-                                    "description": "fracture\nApply a generator to the coordinate field fed into this parent generator. I.e. Distort your generator with another generator.\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
-                                },
-                                {
-                                    "type": "string",
-                                    "$ref": "#/definitions/enum-snippet-style"
-                                }
-                            ],
-                            "description": "fracture\nApply a generator to the coordinate field fed into this parent generator. I.e. Distort your generator with another generator.\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
-                        },
-                        "exponent": {
-                            "type": "number",
-                            "minimum": 0.01562,
-                            "maximum": 64,
-                            "description": "exponent\nThe exponent\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.01562\n* Maximum allowed is 64.0"
-                        }
+        "obj-com-volmit-iris-engine-object-irisgeneratorstyle": {"anyOf": [
+            {
+                "description": "A gen style",
+                "type": "object",
+                "properties": {
+                    "style": {
+                        "type": "string",
+                        "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-noisestyle",
+                        "description": "style\nThe chance is 1 in CHANCE per interval\n   \nNoiseStyle\nStyles of noise\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid NoiseStyle (use ctrl+space for auto complete!)"
+                    },
+                    "zoom": {
+                        "type": "number",
+                        "minimum": 1.0E-5,
+                        "description": "zoom\nThe zoom of this style\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 1.0E-5"
+                    },
+                    "expression": {
+                        "type": "string",
+                        "$ref": "#/definitions/erzexpressions",
+                        "description": "expression\nInstead of using the style property, use a custom expression to represent this style.\n   \nIris Expression\n\nMust be a valid expressions (use ctrl+space for auto complete!)"
+                    },
+                    "multiplier": {
+                        "type": "number",
+                        "minimum": 1.0E-5,
+                        "description": "multiplier\nThe Output multiplier. Only used if parent is fracture.\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 1.0E-5"
+                    },
+                    "axialFracturing": {
+                        "type": "boolean",
+                        "description": "axialFracturing\nIf set to true, each dimension will be fractured with a different order of input coordinates. This is usually 2 or 3 times slower than normal.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "fracture": {
+                        "anyOf": [
+                            {
+                                "!required": false,
+                                "type": "object",
+                                "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
+                                "description": "fracture\nApply a generator to the coordinate field fed into this parent generator. I.e. Distort your generator with another generator.\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
+                            },
+                            {
+                                "type": "string",
+                                "$ref": "#/definitions/enum-snippet-style",
+                                "description": "fracture\nApply a generator to the coordinate field fed into this parent generator. I.e. Distort your generator with another generator.\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
+                            }
+                        ],
+                        "description": "fracture\nApply a generator to the coordinate field fed into this parent generator. I.e. Distort your generator with another generator.\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
+                    },
+                    "exponent": {
+                        "type": "number",
+                        "minimum": 0.01562,
+                        "maximum": 64,
+                        "description": "exponent\nThe exponent\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.01562\n* Maximum allowed is 64.0"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "A gen style"
-        },
+                }
+            },
+            {"type": "string"}
+        ]},
         "oneof-enum-com-volmit-iris-engine-object-irisenginevaluetype": {"oneOf": [
             {
                 "const": "ENGINE_HEIGHT",

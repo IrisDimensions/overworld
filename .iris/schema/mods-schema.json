@@ -99,29 +99,26 @@
         }
     },
     "definitions": {
-        "obj-com-volmit-iris-engine-object-irismodobjectreplacer": {
-            "anyOf": [
-                {
-                    "description": "A biome replacer",
-                    "type": "object",
-                    "properties": {
-                        "find": {
-                            "type": "array",
-                            "minItems": 1,
-                            "items": {"$ref": "#/definitions/erzobjects"},
-                            "description": "find\nA list of objects to find\n   \nList<Object>\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list.\nMust be a valid Object (use ctrl+space for auto complete!)"
-                        },
-                        "replace": {
-                            "type": "string",
-                            "$ref": "#/definitions/erzbiomes",
-                            "description": "replace\nAn object to replace it with\n   \nIris Biome\n\n    \n* Default Value is \nMust be a valid biomes (use ctrl+space for auto complete!)"
-                        }
+        "obj-com-volmit-iris-engine-object-irismodobjectreplacer": {"anyOf": [
+            {
+                "description": "A biome replacer",
+                "type": "object",
+                "properties": {
+                    "find": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {"$ref": "#/definitions/erzobjects"},
+                        "description": "find\nA list of objects to find\n   \nList<Object>\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list.\nMust be a valid Object (use ctrl+space for auto complete!)"
+                    },
+                    "replace": {
+                        "type": "string",
+                        "$ref": "#/definitions/erzbiomes",
+                        "description": "replace\nAn object to replace it with\n   \nIris Biome\n\n    \n* Default Value is \nMust be a valid biomes (use ctrl+space for auto complete!)"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "A biome replacer"
-        },
+                }
+            },
+            {"type": "string"}
+        ]},
         "enum-block-type": {"enum": [
             "minecraft:air",
             "minecraft:stone",
@@ -1022,103 +1019,95 @@
             "minecraft:potted_azalea_bush",
             "minecraft:potted_flowering_azalea_bush"
         ]},
-        "obj-com-volmit-iris-engine-object-irismodregionreplacer": {
-            "anyOf": [
-                {
-                    "description": "A region replacer",
-                    "type": "object",
-                    "properties": {
-                        "find": {
-                            "type": "array",
-                            "minItems": 1,
-                            "items": {"$ref": "#/definitions/erzregions"},
-                            "description": "find\nA list of regions to find\n   \nList<Region>\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list.\nMust be a valid Region (use ctrl+space for auto complete!)"
-                        },
-                        "replace": {
-                            "type": "string",
-                            "$ref": "#/definitions/erzregions",
-                            "description": "replace\nA region to replace it with\n   \nIris Region\n\n    \n* Default Value is \nMust be a valid regions (use ctrl+space for auto complete!)"
-                        }
+        "obj-com-volmit-iris-engine-object-irismodregionreplacer": {"anyOf": [
+            {
+                "description": "A region replacer",
+                "type": "object",
+                "properties": {
+                    "find": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {"$ref": "#/definitions/erzregions"},
+                        "description": "find\nA list of regions to find\n   \nList<Region>\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list.\nMust be a valid Region (use ctrl+space for auto complete!)"
+                    },
+                    "replace": {
+                        "type": "string",
+                        "$ref": "#/definitions/erzregions",
+                        "description": "replace\nA region to replace it with\n   \nIris Region\n\n    \n* Default Value is \nMust be a valid regions (use ctrl+space for auto complete!)"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "A region replacer"
-        },
+                }
+            },
+            {"type": "string"}
+        ]},
         "enum-snippet-axis-rotation": {"enum": []},
-        "obj-com-volmit-iris-engine-object-irismaterialpalette": {
-            "anyOf": [
-                {
-                    "description": "A palette of materials",
-                    "type": "object",
-                    "properties": {
-                        "style": {
-                            "anyOf": [
-                                {
-                                    "!required": false,
-                                    "type": "object",
-                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
-                                    "description": "style\nThe style of noise\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                                },
-                                {
-                                    "type": "string",
-                                    "$ref": "#/definitions/enum-snippet-style"
-                                }
-                            ],
-                            "description": "style\nThe style of noise\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "zoom": {
-                            "type": "number",
-                            "minimum": 1.0E-4,
-                            "description": "zoom\nThe terrain zoom mostly for zooming in on a wispy palette\n   \nNumber\n\n    \n* Default Value is 5.0\n* Minimum allowed is 1.0E-4"
-                        },
-                        "palette": {
-                            "type": "array",
-                            "minItems": 1,
-                            "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisblockdata"},
-                            "description": "palette\nThe palette of blocks to be used in this layer\n   \nList of BlockDatas (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
-                        }
+        "obj-com-volmit-iris-engine-object-irismaterialpalette": {"anyOf": [
+            {
+                "description": "A palette of materials",
+                "type": "object",
+                "properties": {
+                    "style": {
+                        "anyOf": [
+                            {
+                                "!required": false,
+                                "type": "object",
+                                "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
+                                "description": "style\nThe style of noise\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            },
+                            {
+                                "type": "string",
+                                "$ref": "#/definitions/enum-snippet-style",
+                                "description": "style\nThe style of noise\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            }
+                        ],
+                        "description": "style\nThe style of noise\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "zoom": {
+                        "type": "number",
+                        "minimum": 1.0E-4,
+                        "description": "zoom\nThe terrain zoom mostly for zooming in on a wispy palette\n   \nNumber\n\n    \n* Default Value is 5.0\n* Minimum allowed is 1.0E-4"
+                    },
+                    "palette": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisblockdata"},
+                        "description": "palette\nThe palette of blocks to be used in this layer\n   \nList of BlockDatas (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "A palette of materials"
-        },
-        "obj-com-volmit-iris-engine-object-irisobjectscale": {
-            "anyOf": [
-                {
-                    "description": "Scale objects",
-                    "type": "object",
-                    "properties": {
-                        "variations": {
-                            "type": "integer",
-                            "minimum": 1,
-                            "maximum": 32,
-                            "description": "variations\nIris Objects are scaled and cached to speed up placements. Because of this extra memory is used, so we evenly distribute variations across the defined scale range, then pick one randomly. If the differences is small, use a lower number. For more possibilities on the scale spectrum, increase this at the cost of memory.\n   \nInteger\n\n    \n* Default Value is 7\n* Minimum allowed is 1\n* Maximum allowed is 32"
-                        },
-                        "minimumScale": {
-                            "type": "number",
-                            "minimum": 0.01,
-                            "maximum": 50,
-                            "description": "minimumScale\nThe minimum scale\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.01\n* Maximum allowed is 50.0"
-                        },
-                        "maximumScale": {
-                            "type": "number",
-                            "minimum": 0.01,
-                            "maximum": 50,
-                            "description": "maximumScale\nThe maximum height for placement (top of object)\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.01\n* Maximum allowed is 50.0"
-                        },
-                        "interpolation": {
-                            "type": "string",
-                            "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-irisobjectplacementscaleinterpolator",
-                            "description": "interpolation\nIf this object is scaled up beyond its origin size, specify a 3D interpolator\n   \nObjectPlacementScaleInterpolator\nUse 3D Interpolation on scaled objects if they are larger than the origin.\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid ObjectPlacementScaleInterpolator (use ctrl+space for auto complete!)"
-                        }
+                }
+            },
+            {"type": "string"}
+        ]},
+        "obj-com-volmit-iris-engine-object-irisobjectscale": {"anyOf": [
+            {
+                "description": "Scale objects",
+                "type": "object",
+                "properties": {
+                    "variations": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 32,
+                        "description": "variations\nIris Objects are scaled and cached to speed up placements. Because of this extra memory is used, so we evenly distribute variations across the defined scale range, then pick one randomly. If the differences is small, use a lower number. For more possibilities on the scale spectrum, increase this at the cost of memory.\n   \nInteger\n\n    \n* Default Value is 7\n* Minimum allowed is 1\n* Maximum allowed is 32"
+                    },
+                    "minimumScale": {
+                        "type": "number",
+                        "minimum": 0.01,
+                        "maximum": 50,
+                        "description": "minimumScale\nThe minimum scale\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.01\n* Maximum allowed is 50.0"
+                    },
+                    "maximumScale": {
+                        "type": "number",
+                        "minimum": 0.01,
+                        "maximum": 50,
+                        "description": "maximumScale\nThe maximum height for placement (top of object)\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.01\n* Maximum allowed is 50.0"
+                    },
+                    "interpolation": {
+                        "type": "string",
+                        "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-irisobjectplacementscaleinterpolator",
+                        "description": "interpolation\nIf this object is scaled up beyond its origin size, specify a 3D interpolator\n   \nObjectPlacementScaleInterpolator\nUse 3D Interpolation on scaled objects if they are larger than the origin.\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid ObjectPlacementScaleInterpolator (use ctrl+space for auto complete!)"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "Scale objects"
-        },
+                }
+            },
+            {"type": "string"}
+        ]},
         "erzspawners": {"enum": [
             "frozen/land-hostile",
             "tropical/land-hostile",
@@ -1159,49 +1148,47 @@
             "swamp",
             "mushroom"
         ]},
-        "obj-com-volmit-iris-engine-object-irisobjectreplace": {
-            "anyOf": [
-                {
-                    "description": "Find and replace object materials",
-                    "type": "object",
-                    "properties": {
-                        "find": {
-                            "type": "array",
-                            "minItems": 1,
-                            "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisblockdata"},
-                            "description": "find\nFind this block\n   \nList of BlockDatas (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
-                        },
-                        "replace": {
-                            "anyOf": [
-                                {
-                                    "!required": true,
-                                    "type": "object",
-                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irismaterialpalette",
-                                    "description": "replace\nReplace it with this block palette\n   \nMaterialPalette (Object)\nA palette of materials\n    \nYou can instead specify \"snippet/palette/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                                },
-                                {
-                                    "type": "string",
-                                    "$ref": "#/definitions/enum-snippet-palette"
-                                }
-                            ],
-                            "description": "replace\nReplace it with this block palette\n   \nMaterialPalette (Object)\nA palette of materials\n    \nYou can instead specify \"snippet/palette/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "exact": {
-                            "type": "boolean",
-                            "description": "exact\nExactly match the block data or not\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "chance": {
-                            "type": "number",
-                            "minimum": 0,
-                            "maximum": 1,
-                            "description": "chance\nModifies the chance the block is replaced\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.0\n* Maximum allowed is 1.0"
-                        }
+        "obj-com-volmit-iris-engine-object-irisobjectreplace": {"anyOf": [
+            {
+                "description": "Find and replace object materials",
+                "type": "object",
+                "properties": {
+                    "find": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisblockdata"},
+                        "description": "find\nFind this block\n   \nList of BlockDatas (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
+                    },
+                    "replace": {
+                        "anyOf": [
+                            {
+                                "!required": true,
+                                "type": "object",
+                                "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irismaterialpalette",
+                                "description": "replace\nReplace it with this block palette\n   \nMaterialPalette (Object)\nA palette of materials\n    \nYou can instead specify \"snippet/palette/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            },
+                            {
+                                "type": "string",
+                                "$ref": "#/definitions/enum-snippet-palette",
+                                "description": "replace\nReplace it with this block palette\n   \nMaterialPalette (Object)\nA palette of materials\n    \nYou can instead specify \"snippet/palette/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            }
+                        ],
+                        "description": "replace\nReplace it with this block palette\n   \nMaterialPalette (Object)\nA palette of materials\n    \nYou can instead specify \"snippet/palette/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "exact": {
+                        "type": "boolean",
+                        "description": "exact\nExactly match the block data or not\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "chance": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1,
+                        "description": "chance\nModifies the chance the block is replaced\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.0\n* Maximum allowed is 1.0"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "Find and replace object materials"
-        },
+                }
+            },
+            {"type": "string"}
+        ]},
         "erzobjects": {"enum": [
             "jigsaw/fossil/skull_3_coal",
             "structures/portal3",
@@ -3460,368 +3447,363 @@
             "temperate-clutter",
             "tropical-food"
         ]},
-        "obj-com-volmit-iris-engine-object-iristree": {
-            "anyOf": [
-                {
-                    "description": "Tree replace options for this object placer",
-                    "type": "object",
-                    "properties": {
-                        "treeTypes": {
-                            "type": "array",
-                            "minItems": 1,
-                            "items": {"$ref": "#/definitions/enum-org-bukkit-treetype"},
-                            "description": "treeTypes\nThe types of trees overwritten by this object\n   \nList of TreeTypes\n\n* At least one entry must be defined, or just remove this list.\nMust be a valid TreeType (use ctrl+space for auto complete!)"
-                        },
-                        "anyTree": {
-                            "type": "boolean",
-                            "description": "anyTree\nIf enabled, overrides any TreeType\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "sizes": {
-                            "type": "array",
-                            "minItems": 1,
-                            "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-iristreesize"},
-                            "description": "sizes\nThe size of the square of saplings this applies to (2 means a 2 * 2 sapling area)\n   \nList of TreeSizes (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
-                        },
-                        "anySize": {
-                            "type": "boolean",
-                            "description": "anySize\nIf enabled, overrides trees of any size\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        }
+        "obj-com-volmit-iris-engine-object-iristree": {"anyOf": [
+            {
+                "description": "Tree replace options for this object placer",
+                "type": "object",
+                "properties": {
+                    "treeTypes": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {"$ref": "#/definitions/enum-org-bukkit-treetype"},
+                        "description": "treeTypes\nThe types of trees overwritten by this object\n   \nList of TreeTypes\n\n* At least one entry must be defined, or just remove this list.\nMust be a valid TreeType (use ctrl+space for auto complete!)"
+                    },
+                    "anyTree": {
+                        "type": "boolean",
+                        "description": "anyTree\nIf enabled, overrides any TreeType\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "sizes": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-iristreesize"},
+                        "description": "sizes\nThe size of the square of saplings this applies to (2 means a 2 * 2 sapling area)\n   \nList of TreeSizes (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
+                    },
+                    "anySize": {
+                        "type": "boolean",
+                        "description": "anySize\nIf enabled, overrides trees of any size\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "Tree replace options for this object placer"
-        },
-        "obj-com-volmit-iris-engine-object-irismodobjectplacementbiomeinjector": {
-            "anyOf": [
-                {
-                    "description": "An object placement injector",
-                    "type": "object",
-                    "properties": {
-                        "biome": {
-                            "type": "string",
-                            "$ref": "#/definitions/erzbiomes",
-                            "description": "biome\nThe biome to find\n   \nIris Biome\n\n    \n* Default Value is \nMust be a valid biomes (use ctrl+space for auto complete!)"
-                        },
-                        "place": {
-                            "type": "array",
-                            "minItems": 1,
-                            "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisobjectplacement"},
-                            "description": "place\nA biome to inject into the region\n   \nList of ObjectPlacements (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
-                        }
+                }
+            },
+            {"type": "string"}
+        ]},
+        "obj-com-volmit-iris-engine-object-irismodobjectplacementbiomeinjector": {"anyOf": [
+            {
+                "description": "An object placement injector",
+                "type": "object",
+                "properties": {
+                    "biome": {
+                        "type": "string",
+                        "$ref": "#/definitions/erzbiomes",
+                        "description": "biome\nThe biome to find\n   \nIris Biome\n\n    \n* Default Value is \nMust be a valid biomes (use ctrl+space for auto complete!)"
+                    },
+                    "place": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisobjectplacement"},
+                        "description": "place\nA biome to inject into the region\n   \nList of ObjectPlacements (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "An object placement injector"
-        },
-        "obj-com-volmit-iris-engine-object-irisobjectplacement": {
-            "anyOf": [
-                {
-                    "description": "Represents an iris object placer. It places objects.",
-                    "type": "object",
-                    "properties": {
-                        "place": {
-                            "type": "array",
-                            "minItems": 1,
-                            "items": {"$ref": "#/definitions/erzobjects"},
-                            "description": "place\nList of objects to place\n   \nList<Object>\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list.\nMust be a valid Object (use ctrl+space for auto complete!)"
-                        },
-                        "rotation": {
-                            "anyOf": [
-                                {
-                                    "!required": false,
-                                    "type": "object",
-                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisobjectrotation",
-                                    "description": "rotation\nRotate this objects placement\n   \nObjectRotation (Object)\nConfigures rotation for iris\n    \nYou can instead specify \"snippet/object-rotator/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                                },
-                                {
-                                    "type": "string",
-                                    "$ref": "#/definitions/enum-snippet-object-rotator"
-                                }
-                            ],
-                            "description": "rotation\nRotate this objects placement\n   \nObjectRotation (Object)\nConfigures rotation for iris\n    \nYou can instead specify \"snippet/object-rotator/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "clamp": {
-                            "anyOf": [
-                                {
-                                    "!required": false,
-                                    "type": "object",
-                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisobjectlimit",
-                                    "description": "clamp\nLimit the max height or min height of placement.\n   \nObjectLimit (Object)\nTranslate objects\n    \nYou can instead specify \"snippet/object-limit/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                                },
-                                {
-                                    "type": "string",
-                                    "$ref": "#/definitions/enum-snippet-object-limit"
-                                }
-                            ],
-                            "description": "clamp\nLimit the max height or min height of placement.\n   \nObjectLimit (Object)\nTranslate objects\n    \nYou can instead specify \"snippet/object-limit/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "addFeatures": {
-                            "type": "array",
-                            "minItems": 1,
-                            "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisfeaturepotential"},
-                            "description": "addFeatures\nPlace additional noise features in the object's place location\n   \nList of FeaturePotentials (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
-                        },
-                        "snow": {
-                            "type": "number",
-                            "minimum": 0,
-                            "maximum": 1,
-                            "description": "snow\nThe maximum layer level of a snow filter overtop of this placement. Set to 0 to disable. Max of 1.\n   \nNumber\n\n    \n* Default Value is 0.0\n* Minimum allowed is 0.0\n* Maximum allowed is 1.0"
-                        },
-                        "chance": {
-                            "type": "number",
-                            "minimum": 0,
-                            "maximum": 1,
-                            "description": "chance\nThe chance for this to place in a chunk. If you need multiple per chunk, set this to 1 and use density.\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.0\n* Maximum allowed is 1.0"
-                        },
-                        "density": {
-                            "type": "integer",
-                            "minimum": 1,
-                            "description": "density\nIf the chance check passes, place this many in a single chunk\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1"
-                        },
-                        "overStilt": {
-                            "type": "integer",
-                            "minimum": 0,
-                            "maximum": 64,
-                            "description": "overStilt\nIf the place mode is set to stilt, you can over-stilt it even further into the ground. Especially useful when using fast stilt due to inaccuracies.\n   \nInteger\n\n    \n* Default Value is 0\n* Minimum allowed is 0\n* Maximum allowed is 64"
-                        },
-                        "boreExtendMaxY": {
-                            "type": "integer",
-                            "minimum": 0,
-                            "maximum": 64,
-                            "description": "boreExtendMaxY\nWhen bore is enabled, expand max-y of the cuboid it removes\n   \nInteger\n\n    \n* Default Value is 0\n* Minimum allowed is 0\n* Maximum allowed is 64"
-                        },
-                        "boreExtendMinY": {
-                            "type": "integer",
-                            "minimum": -1,
-                            "maximum": 64,
-                            "description": "boreExtendMinY\nWhen bore is enabled, lower min-y of the cuboid it removes\n   \nInteger\n\n    \n* Default Value is 0\n* Minimum allowed is -1\n* Maximum allowed is 64"
-                        },
-                        "vacuumInterpolationRadius": {
-                            "type": "integer",
-                            "minimum": 4,
-                            "maximum": 64,
-                            "description": "vacuumInterpolationRadius\nWhen vacuum is enabled, define the interpolation radius\n   \nInteger\n\n    \n* Default Value is 16\n* Minimum allowed is 4\n* Maximum allowed is 64"
-                        },
-                        "vacuumInterpolationMethod": {
-                            "type": "string",
-                            "minLength": 4,
-                            "maxLength": 64,
-                            "$ref": "#/definitions/oneof-enum-com-volmit-iris-util-interpolation-interpolationmethod",
-                            "description": "vacuumInterpolationMethod\nWhen vacuum is enabled, define the interpolation method\n   \nInterpolationMethod\nAn interpolation method (or function) is simply a method of smoothing a position based on surrounding points on a grid. Bicubic for example is smoother, but has 4 times the checks than Bilinear for example. Try using BILINEAR_STARCAST_9 for beautiful results.\n    \n* Default Value is a default object (create this object to see default properties)\n* Minimum Length allowed is 4\n* Maximum Length allowed is 64\nMust be a valid InterpolationMethod (use ctrl+space for auto complete!)"
-                        },
-                        "underwater": {
-                            "type": "boolean",
-                            "description": "underwater\nIf set to true, objects will place on the terrain height, ignoring the water surface.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "carvingSupport": {
-                            "type": "string",
-                            "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-carvingmode",
-                            "description": "carvingSupport\nIf set to true, objects will place in carvings (such as underground) or under an overhang.\n   \nCarvingMode\nDefines if an object is allowed to place in carvings, surfaces or both.\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid CarvingMode (use ctrl+space for auto complete!)"
-                        },
-                        "heightmap": {
-                            "anyOf": [
-                                {
-                                    "!required": false,
-                                    "type": "object",
-                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisnoisegenerator",
-                                    "description": "heightmap\nIf this is defined, this object wont place on the terrain heightmap, but instead on this virtual heightmap\n   \nNoiseGenerator (Object)\nA noise generator\n    \nYou can instead specify \"snippet/generator/some-name.json\" to use a snippet file instead of specifying it here."
-                                },
-                                {
-                                    "type": "string",
-                                    "$ref": "#/definitions/enum-snippet-generator"
-                                }
-                            ],
-                            "description": "heightmap\nIf this is defined, this object wont place on the terrain heightmap, but instead on this virtual heightmap\n   \nNoiseGenerator (Object)\nA noise generator\n    \nYou can instead specify \"snippet/generator/some-name.json\" to use a snippet file instead of specifying it here."
-                        },
-                        "smartBore": {
-                            "type": "boolean",
-                            "description": "smartBore\nIf set to true, Iris will try to fill the insides of 'rooms' and 'pockets' where air should fit based off of raytrace checks. This prevents a village house placing in an area where a tree already exists, and instead replaces the parts of the tree where the interior of the structure is. \n\nThis operation does not affect warmed-up generation speed however it does slow down loading objects.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "waterloggable": {
-                            "type": "boolean",
-                            "description": "waterloggable\nIf set to true, Blocks placed underwater that could be waterlogged are waterlogged.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "onwater": {
-                            "type": "boolean",
-                            "description": "onwater\nIf set to true, objects will place on the fluid height level Such as boats.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "meld": {
-                            "type": "boolean",
-                            "description": "meld\nIf set to true, this object will only place parts of itself where blocks already exist. Warning: Melding is very performance intensive!\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "bottom": {
-                            "type": "boolean",
-                            "description": "bottom\nIf set to true, this object will place from the ground up instead of height checks when not y locked to the surface. This is not compatable with X and Z axis rotations (it may look off)\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "bore": {
-                            "type": "boolean",
-                            "description": "bore\nIf set to true, air will be placed before the schematic places.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "warp": {
-                            "anyOf": [
-                                {
-                                    "!required": false,
-                                    "type": "object",
-                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
-                                    "description": "warp\nUse a generator to warp the field of coordinates. Using simplex for example would make a square placement warp like a flag\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                                },
-                                {
-                                    "type": "string",
-                                    "$ref": "#/definitions/enum-snippet-style"
-                                }
-                            ],
-                            "description": "warp\nUse a generator to warp the field of coordinates. Using simplex for example would make a square placement warp like a flag\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "translateCenter": {
-                            "type": "boolean",
-                            "description": "translateCenter\nIf the place mode is set to CENTER_HEIGHT_RIGID and you have an X/Z translation, Turning on translate center will also translate the center height check.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "mode": {
-                            "type": "string",
-                            "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-objectplacemode",
-                            "description": "mode\nThe placement mode\n   \nObjectPlaceMode\nObject Place modes are useful for positioning objects just right. The default value is CENTER_HEIGHT.\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid ObjectPlaceMode (use ctrl+space for auto complete!)"
-                        },
-                        "edit": {
-                            "type": "array",
-                            "minItems": 1,
-                            "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisobjectreplace"},
-                            "description": "edit\nFind and replace blocks\n   \nList of ObjectReplaces (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
-                        },
-                        "translate": {
-                            "anyOf": [
-                                {
-                                    "!required": false,
-                                    "type": "object",
-                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisobjecttranslate",
-                                    "description": "translate\nTranslate this object's placement\n   \nObjectTranslate (Object)\nTranslate objects\n    \nYou can instead specify \"snippet/object-translator/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                                },
-                                {
-                                    "type": "string",
-                                    "$ref": "#/definitions/enum-snippet-object-translator"
-                                }
-                            ],
-                            "description": "translate\nTranslate this object's placement\n   \nObjectTranslate (Object)\nTranslate objects\n    \nYou can instead specify \"snippet/object-translator/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "scale": {
-                            "anyOf": [
-                                {
-                                    "!required": false,
-                                    "type": "object",
-                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisobjectscale",
-                                    "description": "scale\nScale Objects\n   \nObjectScale (Object)\nScale objects\n    \nYou can instead specify \"snippet/object-scale/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                                },
-                                {
-                                    "type": "string",
-                                    "$ref": "#/definitions/enum-snippet-object-scale"
-                                }
-                            ],
-                            "description": "scale\nScale Objects\n   \nObjectScale (Object)\nScale objects\n    \nYou can instead specify \"snippet/object-scale/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "loot": {
-                            "type": "array",
-                            "minItems": 1,
-                            "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisobjectloot"},
-                            "description": "loot\nThe loot tables to apply to these objects\n   \nList of ObjectLoots (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
-                        },
-                        "trees": {
-                            "type": "array",
-                            "minItems": 1,
-                            "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-iristree"},
-                            "description": "trees\nThis object / these objects override the following trees when they grow...\n   \nList of Trees (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
-                        }
+                }
+            },
+            {"type": "string"}
+        ]},
+        "obj-com-volmit-iris-engine-object-irisobjectplacement": {"anyOf": [
+            {
+                "description": "Represents an iris object placer. It places objects.",
+                "type": "object",
+                "properties": {
+                    "place": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {"$ref": "#/definitions/erzobjects"},
+                        "description": "place\nList of objects to place\n   \nList<Object>\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list.\nMust be a valid Object (use ctrl+space for auto complete!)"
+                    },
+                    "rotation": {
+                        "anyOf": [
+                            {
+                                "!required": false,
+                                "type": "object",
+                                "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisobjectrotation",
+                                "description": "rotation\nRotate this objects placement\n   \nObjectRotation (Object)\nConfigures rotation for iris\n    \nYou can instead specify \"snippet/object-rotator/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            },
+                            {
+                                "type": "string",
+                                "$ref": "#/definitions/enum-snippet-object-rotator",
+                                "description": "rotation\nRotate this objects placement\n   \nObjectRotation (Object)\nConfigures rotation for iris\n    \nYou can instead specify \"snippet/object-rotator/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            }
+                        ],
+                        "description": "rotation\nRotate this objects placement\n   \nObjectRotation (Object)\nConfigures rotation for iris\n    \nYou can instead specify \"snippet/object-rotator/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "clamp": {
+                        "anyOf": [
+                            {
+                                "!required": false,
+                                "type": "object",
+                                "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisobjectlimit",
+                                "description": "clamp\nLimit the max height or min height of placement.\n   \nObjectLimit (Object)\nTranslate objects\n    \nYou can instead specify \"snippet/object-limit/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            },
+                            {
+                                "type": "string",
+                                "$ref": "#/definitions/enum-snippet-object-limit",
+                                "description": "clamp\nLimit the max height or min height of placement.\n   \nObjectLimit (Object)\nTranslate objects\n    \nYou can instead specify \"snippet/object-limit/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            }
+                        ],
+                        "description": "clamp\nLimit the max height or min height of placement.\n   \nObjectLimit (Object)\nTranslate objects\n    \nYou can instead specify \"snippet/object-limit/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "addFeatures": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisfeaturepotential"},
+                        "description": "addFeatures\nPlace additional noise features in the object's place location\n   \nList of FeaturePotentials (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
+                    },
+                    "snow": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1,
+                        "description": "snow\nThe maximum layer level of a snow filter overtop of this placement. Set to 0 to disable. Max of 1.\n   \nNumber\n\n    \n* Default Value is 0.0\n* Minimum allowed is 0.0\n* Maximum allowed is 1.0"
+                    },
+                    "chance": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1,
+                        "description": "chance\nThe chance for this to place in a chunk. If you need multiple per chunk, set this to 1 and use density.\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.0\n* Maximum allowed is 1.0"
+                    },
+                    "density": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "description": "density\nIf the chance check passes, place this many in a single chunk\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1"
+                    },
+                    "overStilt": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 64,
+                        "description": "overStilt\nIf the place mode is set to stilt, you can over-stilt it even further into the ground. Especially useful when using fast stilt due to inaccuracies.\n   \nInteger\n\n    \n* Default Value is 0\n* Minimum allowed is 0\n* Maximum allowed is 64"
+                    },
+                    "boreExtendMaxY": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 64,
+                        "description": "boreExtendMaxY\nWhen bore is enabled, expand max-y of the cuboid it removes\n   \nInteger\n\n    \n* Default Value is 0\n* Minimum allowed is 0\n* Maximum allowed is 64"
+                    },
+                    "boreExtendMinY": {
+                        "type": "integer",
+                        "minimum": -1,
+                        "maximum": 64,
+                        "description": "boreExtendMinY\nWhen bore is enabled, lower min-y of the cuboid it removes\n   \nInteger\n\n    \n* Default Value is 0\n* Minimum allowed is -1\n* Maximum allowed is 64"
+                    },
+                    "vacuumInterpolationRadius": {
+                        "type": "integer",
+                        "minimum": 4,
+                        "maximum": 64,
+                        "description": "vacuumInterpolationRadius\nWhen vacuum is enabled, define the interpolation radius\n   \nInteger\n\n    \n* Default Value is 16\n* Minimum allowed is 4\n* Maximum allowed is 64"
+                    },
+                    "vacuumInterpolationMethod": {
+                        "type": "string",
+                        "minLength": 4,
+                        "maxLength": 64,
+                        "$ref": "#/definitions/oneof-enum-com-volmit-iris-util-interpolation-interpolationmethod",
+                        "description": "vacuumInterpolationMethod\nWhen vacuum is enabled, define the interpolation method\n   \nInterpolationMethod\nAn interpolation method (or function) is simply a method of smoothing a position based on surrounding points on a grid. Bicubic for example is smoother, but has 4 times the checks than Bilinear for example. Try using BILINEAR_STARCAST_9 for beautiful results.\n    \n* Default Value is a default object (create this object to see default properties)\n* Minimum Length allowed is 4\n* Maximum Length allowed is 64\nMust be a valid InterpolationMethod (use ctrl+space for auto complete!)"
+                    },
+                    "underwater": {
+                        "type": "boolean",
+                        "description": "underwater\nIf set to true, objects will place on the terrain height, ignoring the water surface.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "carvingSupport": {
+                        "type": "string",
+                        "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-carvingmode",
+                        "description": "carvingSupport\nIf set to true, objects will place in carvings (such as underground) or under an overhang.\n   \nCarvingMode\nDefines if an object is allowed to place in carvings, surfaces or both.\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid CarvingMode (use ctrl+space for auto complete!)"
+                    },
+                    "heightmap": {
+                        "anyOf": [
+                            {
+                                "!required": false,
+                                "type": "object",
+                                "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisnoisegenerator",
+                                "description": "heightmap\nIf this is defined, this object wont place on the terrain heightmap, but instead on this virtual heightmap\n   \nNoiseGenerator (Object)\nA noise generator\n    \nYou can instead specify \"snippet/generator/some-name.json\" to use a snippet file instead of specifying it here."
+                            },
+                            {
+                                "type": "string",
+                                "$ref": "#/definitions/enum-snippet-generator",
+                                "description": "heightmap\nIf this is defined, this object wont place on the terrain heightmap, but instead on this virtual heightmap\n   \nNoiseGenerator (Object)\nA noise generator\n    \nYou can instead specify \"snippet/generator/some-name.json\" to use a snippet file instead of specifying it here."
+                            }
+                        ],
+                        "description": "heightmap\nIf this is defined, this object wont place on the terrain heightmap, but instead on this virtual heightmap\n   \nNoiseGenerator (Object)\nA noise generator\n    \nYou can instead specify \"snippet/generator/some-name.json\" to use a snippet file instead of specifying it here."
+                    },
+                    "smartBore": {
+                        "type": "boolean",
+                        "description": "smartBore\nIf set to true, Iris will try to fill the insides of 'rooms' and 'pockets' where air should fit based off of raytrace checks. This prevents a village house placing in an area where a tree already exists, and instead replaces the parts of the tree where the interior of the structure is. \n\nThis operation does not affect warmed-up generation speed however it does slow down loading objects.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "waterloggable": {
+                        "type": "boolean",
+                        "description": "waterloggable\nIf set to true, Blocks placed underwater that could be waterlogged are waterlogged.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "onwater": {
+                        "type": "boolean",
+                        "description": "onwater\nIf set to true, objects will place on the fluid height level Such as boats.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "meld": {
+                        "type": "boolean",
+                        "description": "meld\nIf set to true, this object will only place parts of itself where blocks already exist. Warning: Melding is very performance intensive!\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "bottom": {
+                        "type": "boolean",
+                        "description": "bottom\nIf set to true, this object will place from the ground up instead of height checks when not y locked to the surface. This is not compatable with X and Z axis rotations (it may look off)\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "bore": {
+                        "type": "boolean",
+                        "description": "bore\nIf set to true, air will be placed before the schematic places.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "warp": {
+                        "anyOf": [
+                            {
+                                "!required": false,
+                                "type": "object",
+                                "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
+                                "description": "warp\nUse a generator to warp the field of coordinates. Using simplex for example would make a square placement warp like a flag\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            },
+                            {
+                                "type": "string",
+                                "$ref": "#/definitions/enum-snippet-style",
+                                "description": "warp\nUse a generator to warp the field of coordinates. Using simplex for example would make a square placement warp like a flag\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            }
+                        ],
+                        "description": "warp\nUse a generator to warp the field of coordinates. Using simplex for example would make a square placement warp like a flag\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "translateCenter": {
+                        "type": "boolean",
+                        "description": "translateCenter\nIf the place mode is set to CENTER_HEIGHT_RIGID and you have an X/Z translation, Turning on translate center will also translate the center height check.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "mode": {
+                        "type": "string",
+                        "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-objectplacemode",
+                        "description": "mode\nThe placement mode\n   \nObjectPlaceMode\nObject Place modes are useful for positioning objects just right. The default value is CENTER_HEIGHT.\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid ObjectPlaceMode (use ctrl+space for auto complete!)"
+                    },
+                    "edit": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisobjectreplace"},
+                        "description": "edit\nFind and replace blocks\n   \nList of ObjectReplaces (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
+                    },
+                    "translate": {
+                        "anyOf": [
+                            {
+                                "!required": false,
+                                "type": "object",
+                                "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisobjecttranslate",
+                                "description": "translate\nTranslate this object's placement\n   \nObjectTranslate (Object)\nTranslate objects\n    \nYou can instead specify \"snippet/object-translator/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            },
+                            {
+                                "type": "string",
+                                "$ref": "#/definitions/enum-snippet-object-translator",
+                                "description": "translate\nTranslate this object's placement\n   \nObjectTranslate (Object)\nTranslate objects\n    \nYou can instead specify \"snippet/object-translator/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            }
+                        ],
+                        "description": "translate\nTranslate this object's placement\n   \nObjectTranslate (Object)\nTranslate objects\n    \nYou can instead specify \"snippet/object-translator/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "scale": {
+                        "anyOf": [
+                            {
+                                "!required": false,
+                                "type": "object",
+                                "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisobjectscale",
+                                "description": "scale\nScale Objects\n   \nObjectScale (Object)\nScale objects\n    \nYou can instead specify \"snippet/object-scale/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            },
+                            {
+                                "type": "string",
+                                "$ref": "#/definitions/enum-snippet-object-scale",
+                                "description": "scale\nScale Objects\n   \nObjectScale (Object)\nScale objects\n    \nYou can instead specify \"snippet/object-scale/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            }
+                        ],
+                        "description": "scale\nScale Objects\n   \nObjectScale (Object)\nScale objects\n    \nYou can instead specify \"snippet/object-scale/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "loot": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisobjectloot"},
+                        "description": "loot\nThe loot tables to apply to these objects\n   \nList of ObjectLoots (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
+                    },
+                    "trees": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-iristree"},
+                        "description": "trees\nThis object / these objects override the following trees when they grow...\n   \nList of Trees (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "Represents an iris object placer. It places objects."
-        },
-        "obj-com-volmit-iris-engine-object-irisfeature": {
-            "anyOf": [
-                {
-                    "description": "Represents an Iris zone",
-                    "type": "object",
-                    "properties": {
-                        "blockRadius": {
-                            "type": "number",
-                            "description": "blockRadius\nThe block radius of this zone\n   \nNumber\n\n    \n* Default Value is 32.0"
-                        },
-                        "objectChance": {
-                            "type": "number",
-                            "minimum": 0,
-                            "maximum": 1,
-                            "description": "objectChance\nThe chance an object that should be place actually will place. Set to below 1 to affect objects in this zone\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.0\n* Maximum allowed is 1.0"
-                        },
-                        "customBiome": {
-                            "type": "string",
-                            "$ref": "#/definitions/erzbiomes",
-                            "description": "customBiome\nApply a custom biome here\n   \nIris Biome\n\nMust be a valid biomes (use ctrl+space for auto complete!)"
-                        },
-                        "biomeStrengthThreshold": {
-                            "type": "number",
-                            "minimum": 0,
-                            "maximum": 1,
-                            "description": "biomeStrengthThreshold\nHow much strength before the biome is applied.\n   \nNumber\n\n    \n* Default Value is 0.75\n* Minimum allowed is 0.0\n* Maximum allowed is 1.0"
-                        },
-                        "interpolationRadius": {
-                            "type": "number",
-                            "description": "interpolationRadius\nThe interpolation radius of this zone\n   \nNumber\n\n    \n* Default Value is 7.0"
-                        },
-                        "strength": {
-                            "type": "number",
-                            "minimum": 0,
-                            "maximum": 1,
-                            "description": "strength\nThe strength of this effect\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.0\n* Maximum allowed is 1.0"
-                        },
-                        "interpolator": {
-                            "type": "string",
-                            "$ref": "#/definitions/oneof-enum-com-volmit-iris-util-interpolation-interpolationmethod",
-                            "description": "interpolator\nThe interpolator to use for smoothing the strength\n   \nInterpolationMethod\nAn interpolation method (or function) is simply a method of smoothing a position based on surrounding points on a grid. Bicubic for example is smoother, but has 4 times the checks than Bilinear for example. Try using BILINEAR_STARCAST_9 for beautiful results.\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid InterpolationMethod (use ctrl+space for auto complete!)"
-                        },
-                        "shiftHeight": {
-                            "type": "number",
-                            "description": "shiftHeight\nIf set, this will shift the terrain height in blocks (up or down)\n   \nNumber\n\n    \n* Default Value is 0.0"
-                        },
-                        "convergeToHeight": {
-                            "type": "number",
-                            "description": "convergeToHeight\nIf set, this will force the terrain closer to the specified height.\n   \nNumber\n\n    \n* Default Value is -1.0"
-                        },
-                        "multiplyHeight": {
-                            "type": "number",
-                            "description": "multiplyHeight\nMultiplies the input noise\n   \nNumber\n\n    \n* Default Value is 1.0"
-                        },
-                        "invertZone": {
-                            "type": "boolean",
-                            "description": "invertZone\nInvert the zone so that anything outside this zone is affected.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "fractureRadius": {
-                            "anyOf": [
-                                {
-                                    "!required": false,
-                                    "type": "object",
-                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
-                                    "description": "fractureRadius\nFracture the radius ring with additional noise\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
-                                },
-                                {
-                                    "type": "string",
-                                    "$ref": "#/definitions/enum-snippet-style"
-                                }
-                            ],
-                            "description": "fractureRadius\nFracture the radius ring with additional noise\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
-                        },
-                        "entitySpawners": {
-                            "type": "array",
-                            "minItems": 1,
-                            "items": {"$ref": "#/definitions/erzspawners"},
-                            "description": "entitySpawners\nWithin this noise feature, use the following spawners\n   \nList<Spawner>\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list.\nMust be a valid Spawner (use ctrl+space for auto complete!)"
-                        }
+                }
+            },
+            {"type": "string"}
+        ]},
+        "obj-com-volmit-iris-engine-object-irisfeature": {"anyOf": [
+            {
+                "description": "Represents an Iris zone",
+                "type": "object",
+                "properties": {
+                    "blockRadius": {
+                        "type": "number",
+                        "description": "blockRadius\nThe block radius of this zone\n   \nNumber\n\n    \n* Default Value is 32.0"
+                    },
+                    "objectChance": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1,
+                        "description": "objectChance\nThe chance an object that should be place actually will place. Set to below 1 to affect objects in this zone\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.0\n* Maximum allowed is 1.0"
+                    },
+                    "customBiome": {
+                        "type": "string",
+                        "$ref": "#/definitions/erzbiomes",
+                        "description": "customBiome\nApply a custom biome here\n   \nIris Biome\n\nMust be a valid biomes (use ctrl+space for auto complete!)"
+                    },
+                    "biomeStrengthThreshold": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1,
+                        "description": "biomeStrengthThreshold\nHow much strength before the biome is applied.\n   \nNumber\n\n    \n* Default Value is 0.75\n* Minimum allowed is 0.0\n* Maximum allowed is 1.0"
+                    },
+                    "interpolationRadius": {
+                        "type": "number",
+                        "description": "interpolationRadius\nThe interpolation radius of this zone\n   \nNumber\n\n    \n* Default Value is 7.0"
+                    },
+                    "strength": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1,
+                        "description": "strength\nThe strength of this effect\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.0\n* Maximum allowed is 1.0"
+                    },
+                    "interpolator": {
+                        "type": "string",
+                        "$ref": "#/definitions/oneof-enum-com-volmit-iris-util-interpolation-interpolationmethod",
+                        "description": "interpolator\nThe interpolator to use for smoothing the strength\n   \nInterpolationMethod\nAn interpolation method (or function) is simply a method of smoothing a position based on surrounding points on a grid. Bicubic for example is smoother, but has 4 times the checks than Bilinear for example. Try using BILINEAR_STARCAST_9 for beautiful results.\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid InterpolationMethod (use ctrl+space for auto complete!)"
+                    },
+                    "shiftHeight": {
+                        "type": "number",
+                        "description": "shiftHeight\nIf set, this will shift the terrain height in blocks (up or down)\n   \nNumber\n\n    \n* Default Value is 0.0"
+                    },
+                    "convergeToHeight": {
+                        "type": "number",
+                        "description": "convergeToHeight\nIf set, this will force the terrain closer to the specified height.\n   \nNumber\n\n    \n* Default Value is -1.0"
+                    },
+                    "multiplyHeight": {
+                        "type": "number",
+                        "description": "multiplyHeight\nMultiplies the input noise\n   \nNumber\n\n    \n* Default Value is 1.0"
+                    },
+                    "invertZone": {
+                        "type": "boolean",
+                        "description": "invertZone\nInvert the zone so that anything outside this zone is affected.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "fractureRadius": {
+                        "anyOf": [
+                            {
+                                "!required": false,
+                                "type": "object",
+                                "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
+                                "description": "fractureRadius\nFracture the radius ring with additional noise\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
+                            },
+                            {
+                                "type": "string",
+                                "$ref": "#/definitions/enum-snippet-style",
+                                "description": "fractureRadius\nFracture the radius ring with additional noise\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
+                            }
+                        ],
+                        "description": "fractureRadius\nFracture the radius ring with additional noise\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
+                    },
+                    "entitySpawners": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {"$ref": "#/definitions/erzspawners"},
+                        "description": "entitySpawners\nWithin this noise feature, use the following spawners\n   \nList<Spawner>\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list.\nMust be a valid Spawner (use ctrl+space for auto complete!)"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "Represents an Iris zone"
-        },
+                }
+            },
+            {"type": "string"}
+        ]},
         "enum-snippet-style": {"enum": []},
         "oneof-enum-com-volmit-iris-engine-object-objectplacemode": {"oneOf": [
             {
@@ -3861,174 +3843,163 @@
                 "description": "Applies multiple terrain features into the parallax layer before this object places to distort the height, essentially vacuuming the terrain's heightmap closer to the bottom of this object. Uses MAX_HEIGHT to place"
             }
         ]},
-        "obj-com-volmit-iris-engine-object-irisobjectlimit": {
-            "anyOf": [
-                {
-                    "description": "Translate objects",
-                    "type": "object",
-                    "properties": {
-                        "minimumHeight": {
-                            "type": "integer",
-                            "minimum": 0,
-                            "maximum": 255,
-                            "description": "minimumHeight\nThe minimum height for placement (bottom of object)\n   \nInteger\n\n    \n* Default Value is 0\n* Minimum allowed is 0\n* Maximum allowed is 255"
-                        },
-                        "maximumHeight": {
-                            "type": "integer",
-                            "minimum": 0,
-                            "maximum": 255,
-                            "description": "maximumHeight\nThe maximum height for placement (top of object)\n   \nInteger\n\n    \n* Default Value is 255\n* Minimum allowed is 0\n* Maximum allowed is 255"
-                        }
+        "obj-com-volmit-iris-engine-object-irisobjectlimit": {"anyOf": [
+            {
+                "description": "Translate objects",
+                "type": "object",
+                "properties": {
+                    "minimumHeight": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 255,
+                        "description": "minimumHeight\nThe minimum height for placement (bottom of object)\n   \nInteger\n\n    \n* Default Value is 0\n* Minimum allowed is 0\n* Maximum allowed is 255"
+                    },
+                    "maximumHeight": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 255,
+                        "description": "maximumHeight\nThe maximum height for placement (top of object)\n   \nInteger\n\n    \n* Default Value is 255\n* Minimum allowed is 0\n* Maximum allowed is 255"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "Translate objects"
-        },
+                }
+            },
+            {"type": "string"}
+        ]},
         "enum-snippet-object-scale": {"enum": []},
-        "obj-com-volmit-iris-engine-object-irismodobjectplacementregioninjector": {
-            "anyOf": [
-                {
-                    "description": "An object placement injector",
-                    "type": "object",
-                    "properties": {
-                        "biome": {
-                            "type": "string",
-                            "$ref": "#/definitions/erzregions",
-                            "description": "biome\nThe biome to find\n   \nIris Region\n\n    \n* Default Value is \nMust be a valid regions (use ctrl+space for auto complete!)"
-                        },
-                        "place": {
-                            "type": "array",
-                            "minItems": 1,
-                            "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisobjectplacement"},
-                            "description": "place\nA biome to inject into the region\n   \nList of ObjectPlacements (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
-                        }
+        "obj-com-volmit-iris-engine-object-irismodobjectplacementregioninjector": {"anyOf": [
+            {
+                "description": "An object placement injector",
+                "type": "object",
+                "properties": {
+                    "biome": {
+                        "type": "string",
+                        "$ref": "#/definitions/erzregions",
+                        "description": "biome\nThe biome to find\n   \nIris Region\n\n    \n* Default Value is \nMust be a valid regions (use ctrl+space for auto complete!)"
+                    },
+                    "place": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisobjectplacement"},
+                        "description": "place\nA biome to inject into the region\n   \nList of ObjectPlacements (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "An object placement injector"
-        },
-        "obj-com-volmit-iris-engine-object-irisnoisegenerator": {
-            "anyOf": [
-                {
-                    "description": "A noise generator",
-                    "type": "object",
-                    "properties": {
-                        "zoom": {
-                            "type": "number",
-                            "minimum": 1.0E-4,
-                            "description": "zoom\nThe coordinate input zoom\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 1.0E-4"
-                        },
-                        "negative": {
-                            "type": "boolean",
-                            "description": "negative\nReverse the output. So that noise = -noise + opacity\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "opacity": {
-                            "type": "number",
-                            "minimum": 0,
-                            "maximum": 1,
-                            "description": "opacity\nThe output multiplier\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.0\n* Maximum allowed is 1.0"
-                        },
-                        "offsetX": {
-                            "type": "number",
-                            "description": "offsetX\nCoordinate offset x\n   \nNumber\n\n    \n* Default Value is 0.0"
-                        },
-                        "offsetY": {
-                            "type": "number",
-                            "description": "offsetY\nHeight output offset y. Avoid using with terrain generation.\n   \nNumber\n\n    \n* Default Value is 0.0"
-                        },
-                        "offsetZ": {
-                            "type": "number",
-                            "description": "offsetZ\nCoordinate offset z\n   \nNumber\n\n    \n* Default Value is 0.0"
-                        },
-                        "seed": {
-                            "type": "integer",
-                            "description": "seed\nThe seed\n   \nInteger\n\n    \n* Default Value is 0"
-                        },
-                        "parametric": {
-                            "type": "boolean",
-                            "description": "parametric\nApply a parametric curve on the output\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "bezier": {
-                            "type": "boolean",
-                            "description": "bezier\nApply a bezier curve on the output\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "sinCentered": {
-                            "type": "boolean",
-                            "description": "sinCentered\nApply a sin-center curve on the output (0, and 1 = 0 and 0.5 = 1.0 using a sinoid shape.)\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "exponent": {
-                            "type": "number",
-                            "description": "exponent\nThe exponent noise^EXPONENT\n   \nNumber\n\n    \n* Default Value is 1.0"
-                        },
-                        "enabled": {
-                            "type": "boolean",
-                            "description": "enabled\nEnable / disable. Outputs offsetY if disabled\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "style": {
-                            "anyOf": [
-                                {
-                                    "!required": true,
-                                    "type": "object",
-                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
-                                    "description": "style\nThe Noise Style\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                                },
-                                {
-                                    "type": "string",
-                                    "$ref": "#/definitions/enum-snippet-style"
-                                }
-                            ],
-                            "description": "style\nThe Noise Style\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "octaves": {
-                            "type": "integer",
-                            "minimum": 1,
-                            "description": "octaves\nMultiple octaves for multple generators of changing zooms added together\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1"
-                        },
-                        "fracture": {
-                            "type": "array",
-                            "minItems": 1,
-                            "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisnoisegenerator"},
-                            "description": "fracture\nApply a child noise generator to fracture the input coordinates of this generator\n   \nList of NoiseGenerators (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
-                        }
+                }
+            },
+            {"type": "string"}
+        ]},
+        "obj-com-volmit-iris-engine-object-irisnoisegenerator": {"anyOf": [
+            {
+                "description": "A noise generator",
+                "type": "object",
+                "properties": {
+                    "zoom": {
+                        "type": "number",
+                        "minimum": 1.0E-4,
+                        "description": "zoom\nThe coordinate input zoom\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 1.0E-4"
+                    },
+                    "negative": {
+                        "type": "boolean",
+                        "description": "negative\nReverse the output. So that noise = -noise + opacity\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "opacity": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1,
+                        "description": "opacity\nThe output multiplier\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.0\n* Maximum allowed is 1.0"
+                    },
+                    "offsetX": {
+                        "type": "number",
+                        "description": "offsetX\nCoordinate offset x\n   \nNumber\n\n    \n* Default Value is 0.0"
+                    },
+                    "offsetY": {
+                        "type": "number",
+                        "description": "offsetY\nHeight output offset y. Avoid using with terrain generation.\n   \nNumber\n\n    \n* Default Value is 0.0"
+                    },
+                    "offsetZ": {
+                        "type": "number",
+                        "description": "offsetZ\nCoordinate offset z\n   \nNumber\n\n    \n* Default Value is 0.0"
+                    },
+                    "seed": {
+                        "type": "integer",
+                        "description": "seed\nThe seed\n   \nInteger\n\n    \n* Default Value is 0"
+                    },
+                    "parametric": {
+                        "type": "boolean",
+                        "description": "parametric\nApply a parametric curve on the output\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "bezier": {
+                        "type": "boolean",
+                        "description": "bezier\nApply a bezier curve on the output\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "sinCentered": {
+                        "type": "boolean",
+                        "description": "sinCentered\nApply a sin-center curve on the output (0, and 1 = 0 and 0.5 = 1.0 using a sinoid shape.)\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "exponent": {
+                        "type": "number",
+                        "description": "exponent\nThe exponent noise^EXPONENT\n   \nNumber\n\n    \n* Default Value is 1.0"
+                    },
+                    "enabled": {
+                        "type": "boolean",
+                        "description": "enabled\nEnable / disable. Outputs offsetY if disabled\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "style": {
+                        "anyOf": [
+                            {
+                                "!required": true,
+                                "type": "object",
+                                "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
+                                "description": "style\nThe Noise Style\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            },
+                            {
+                                "type": "string",
+                                "$ref": "#/definitions/enum-snippet-style",
+                                "description": "style\nThe Noise Style\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            }
+                        ],
+                        "description": "style\nThe Noise Style\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "octaves": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "description": "octaves\nMultiple octaves for multple generators of changing zooms added together\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1"
+                    },
+                    "fracture": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisnoisegenerator"},
+                        "description": "fracture\nApply a child noise generator to fracture the input coordinates of this generator\n   \nList of NoiseGenerators (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "A noise generator"
-        },
-        "obj-com-volmit-iris-engine-object-irisobjectloot": {
-            "anyOf": [
-                {
-                    "description": "Represents loot within this object or jigsaw piece",
-                    "type": "object",
-                    "properties": {
-                        "filter": {
-                            "type": "array",
-                            "minItems": 1,
-                            "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisblockdata"},
-                            "description": "filter\nThe list of blocks this loot table should apply to\n   \nList of BlockDatas (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
-                        },
-                        "exact": {
-                            "type": "boolean",
-                            "description": "exact\nExactly match the block data or not\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "name": {
-                            "type": "string",
-                            "$ref": "#/definitions/erzloot",
-                            "description": "name\nThe loot table name\n   \nIris Loot\n\nMust be a valid loot (use ctrl+space for auto complete!)"
-                        },
-                        "weight": {
-                            "type": "integer",
-                            "description": "weight\nThe weight of this loot table being chosen\n   \nInteger\n\n    \n* Default Value is 1"
-                        }
+                }
+            },
+            {"type": "string"}
+        ]},
+        "obj-com-volmit-iris-engine-object-irisobjectloot": {"anyOf": [
+            {
+                "description": "Represents loot within this object or jigsaw piece",
+                "type": "object",
+                "properties": {
+                    "filter": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisblockdata"},
+                        "description": "filter\nThe list of blocks this loot table should apply to\n   \nList of BlockDatas (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
+                    },
+                    "exact": {
+                        "type": "boolean",
+                        "description": "exact\nExactly match the block data or not\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "name": {
+                        "type": "string",
+                        "$ref": "#/definitions/erzloot",
+                        "description": "name\nThe loot table name\n   \nIris Loot\n\nMust be a valid loot (use ctrl+space for auto complete!)"
+                    },
+                    "weight": {
+                        "type": "integer",
+                        "description": "weight\nThe weight of this loot table being chosen\n   \nInteger\n\n    \n* Default Value is 1"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "Represents loot within this object or jigsaw piece"
-        },
+                }
+            },
+            {"type": "string"}
+        ]},
         "oneof-enum-com-volmit-iris-engine-object-noisestyle": {"oneOf": [
             {
                 "const": "STATIC",
@@ -4628,42 +4599,40 @@
                 }
             }
         },
-        "obj-com-volmit-iris-engine-object-irismodnoisestylereplacer": {
-            "anyOf": [
-                {
-                    "description": "A noise style replacer",
-                    "type": "object",
-                    "properties": {
-                        "find": {
-                            "type": "string",
-                            "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-noisestyle",
-                            "description": "find\nA noise style to find\n   \nNoiseStyle\nStyles of noise\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid NoiseStyle (use ctrl+space for auto complete!)"
-                        },
-                        "replaceTypeOnly": {
-                            "type": "boolean",
-                            "description": "replaceTypeOnly\nIf replaceTypeOnly is set to true, Iris will keep the existing generator style and only replace the type itself. Otherwise it will use the replace tag for every style using the find type.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "replace": {
-                            "anyOf": [
-                                {
-                                    "!required": true,
-                                    "type": "object",
-                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
-                                    "description": "replace\nA noise style to replace it with\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                                },
-                                {
-                                    "type": "string",
-                                    "$ref": "#/definitions/enum-snippet-style"
-                                }
-                            ],
-                            "description": "replace\nA noise style to replace it with\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                        }
+        "obj-com-volmit-iris-engine-object-irismodnoisestylereplacer": {"anyOf": [
+            {
+                "description": "A noise style replacer",
+                "type": "object",
+                "properties": {
+                    "find": {
+                        "type": "string",
+                        "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-noisestyle",
+                        "description": "find\nA noise style to find\n   \nNoiseStyle\nStyles of noise\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid NoiseStyle (use ctrl+space for auto complete!)"
+                    },
+                    "replaceTypeOnly": {
+                        "type": "boolean",
+                        "description": "replaceTypeOnly\nIf replaceTypeOnly is set to true, Iris will keep the existing generator style and only replace the type itself. Otherwise it will use the replace tag for every style using the find type.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "replace": {
+                        "anyOf": [
+                            {
+                                "!required": true,
+                                "type": "object",
+                                "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
+                                "description": "replace\nA noise style to replace it with\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            },
+                            {
+                                "type": "string",
+                                "$ref": "#/definitions/enum-snippet-style",
+                                "description": "replace\nA noise style to replace it with\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            }
+                        ],
+                        "description": "replace\nA noise style to replace it with\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "A noise style replacer"
-        },
+                }
+            },
+            {"type": "string"}
+        ]},
         "oneof-enum-com-volmit-iris-util-interpolation-interpolationmethod": {"oneOf": [
             {
                 "const": "NONE",
@@ -4789,42 +4758,39 @@
             }
         ]},
         "enum-snippet-generator": {"enum": []},
-        "obj-com-volmit-iris-engine-object-irisobjecttranslate": {
-            "anyOf": [
-                {
-                    "description": "Translate objects",
-                    "type": "object",
-                    "properties": {
-                        "x": {
-                            "type": "integer",
-                            "minimum": -128,
-                            "maximum": 128,
-                            "description": "x\nThe x shift in blocks\n   \nInteger\n\n    \n* Default Value is 0\n* Minimum allowed is -128\n* Maximum allowed is 128"
-                        },
-                        "y": {
-                            "type": "integer",
-                            "minimum": -256,
-                            "maximum": 256,
-                            "description": "y\nThe x shift in blocks\n   \nInteger\n\n    \n* Default Value is 0\n* Minimum allowed is -256\n* Maximum allowed is 256"
-                        },
-                        "yRandom": {
-                            "type": "integer",
-                            "minimum": -128,
-                            "maximum": 128,
-                            "description": "yRandom\nAdds an additional amount of height randomly (translateY + rand(0 - yRandom))\n   \nInteger\n\n    \n* Default Value is 0\n* Minimum allowed is -128\n* Maximum allowed is 128"
-                        },
-                        "z": {
-                            "type": "integer",
-                            "minimum": -128,
-                            "maximum": 128,
-                            "description": "z\nThe x shift in blocks\n   \nInteger\n\n    \n* Default Value is 0\n* Minimum allowed is -128\n* Maximum allowed is 128"
-                        }
+        "obj-com-volmit-iris-engine-object-irisobjecttranslate": {"anyOf": [
+            {
+                "description": "Translate objects",
+                "type": "object",
+                "properties": {
+                    "x": {
+                        "type": "integer",
+                        "minimum": -128,
+                        "maximum": 128,
+                        "description": "x\nThe x shift in blocks\n   \nInteger\n\n    \n* Default Value is 0\n* Minimum allowed is -128\n* Maximum allowed is 128"
+                    },
+                    "y": {
+                        "type": "integer",
+                        "minimum": -256,
+                        "maximum": 256,
+                        "description": "y\nThe x shift in blocks\n   \nInteger\n\n    \n* Default Value is 0\n* Minimum allowed is -256\n* Maximum allowed is 256"
+                    },
+                    "yRandom": {
+                        "type": "integer",
+                        "minimum": -128,
+                        "maximum": 128,
+                        "description": "yRandom\nAdds an additional amount of height randomly (translateY + rand(0 - yRandom))\n   \nInteger\n\n    \n* Default Value is 0\n* Minimum allowed is -128\n* Maximum allowed is 128"
+                    },
+                    "z": {
+                        "type": "integer",
+                        "minimum": -128,
+                        "maximum": 128,
+                        "description": "z\nThe x shift in blocks\n   \nInteger\n\n    \n* Default Value is 0\n* Minimum allowed is -128\n* Maximum allowed is 128"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "Translate objects"
-        },
+                }
+            },
+            {"type": "string"}
+        ]},
         "enum-org-bukkit-treetype": {"enum": [
             "TREE",
             "BIG_TREE",
@@ -4849,124 +4815,122 @@
         ]},
         "enum-snippet-object-limit": {"enum": []},
         "erzscripts": {"enum": []},
-        "obj-com-volmit-iris-engine-object-irisgeneratorstyle": {
-            "anyOf": [
-                {
-                    "description": "A gen style",
-                    "type": "object",
-                    "properties": {
-                        "style": {
-                            "type": "string",
-                            "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-noisestyle",
-                            "description": "style\nThe chance is 1 in CHANCE per interval\n   \nNoiseStyle\nStyles of noise\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid NoiseStyle (use ctrl+space for auto complete!)"
-                        },
-                        "zoom": {
-                            "type": "number",
-                            "minimum": 1.0E-5,
-                            "description": "zoom\nThe zoom of this style\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 1.0E-5"
-                        },
-                        "expression": {
-                            "type": "string",
-                            "$ref": "#/definitions/erzexpressions",
-                            "description": "expression\nInstead of using the style property, use a custom expression to represent this style.\n   \nIris Expression\n\nMust be a valid expressions (use ctrl+space for auto complete!)"
-                        },
-                        "multiplier": {
-                            "type": "number",
-                            "minimum": 1.0E-5,
-                            "description": "multiplier\nThe Output multiplier. Only used if parent is fracture.\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 1.0E-5"
-                        },
-                        "axialFracturing": {
-                            "type": "boolean",
-                            "description": "axialFracturing\nIf set to true, each dimension will be fractured with a different order of input coordinates. This is usually 2 or 3 times slower than normal.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "fracture": {
-                            "anyOf": [
-                                {
-                                    "!required": false,
-                                    "type": "object",
-                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
-                                    "description": "fracture\nApply a generator to the coordinate field fed into this parent generator. I.e. Distort your generator with another generator.\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
-                                },
-                                {
-                                    "type": "string",
-                                    "$ref": "#/definitions/enum-snippet-style"
-                                }
-                            ],
-                            "description": "fracture\nApply a generator to the coordinate field fed into this parent generator. I.e. Distort your generator with another generator.\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
-                        },
-                        "exponent": {
-                            "type": "number",
-                            "minimum": 0.01562,
-                            "maximum": 64,
-                            "description": "exponent\nThe exponent\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.01562\n* Maximum allowed is 64.0"
-                        }
+        "obj-com-volmit-iris-engine-object-irisgeneratorstyle": {"anyOf": [
+            {
+                "description": "A gen style",
+                "type": "object",
+                "properties": {
+                    "style": {
+                        "type": "string",
+                        "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-noisestyle",
+                        "description": "style\nThe chance is 1 in CHANCE per interval\n   \nNoiseStyle\nStyles of noise\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid NoiseStyle (use ctrl+space for auto complete!)"
+                    },
+                    "zoom": {
+                        "type": "number",
+                        "minimum": 1.0E-5,
+                        "description": "zoom\nThe zoom of this style\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 1.0E-5"
+                    },
+                    "expression": {
+                        "type": "string",
+                        "$ref": "#/definitions/erzexpressions",
+                        "description": "expression\nInstead of using the style property, use a custom expression to represent this style.\n   \nIris Expression\n\nMust be a valid expressions (use ctrl+space for auto complete!)"
+                    },
+                    "multiplier": {
+                        "type": "number",
+                        "minimum": 1.0E-5,
+                        "description": "multiplier\nThe Output multiplier. Only used if parent is fracture.\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 1.0E-5"
+                    },
+                    "axialFracturing": {
+                        "type": "boolean",
+                        "description": "axialFracturing\nIf set to true, each dimension will be fractured with a different order of input coordinates. This is usually 2 or 3 times slower than normal.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "fracture": {
+                        "anyOf": [
+                            {
+                                "!required": false,
+                                "type": "object",
+                                "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
+                                "description": "fracture\nApply a generator to the coordinate field fed into this parent generator. I.e. Distort your generator with another generator.\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
+                            },
+                            {
+                                "type": "string",
+                                "$ref": "#/definitions/enum-snippet-style",
+                                "description": "fracture\nApply a generator to the coordinate field fed into this parent generator. I.e. Distort your generator with another generator.\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
+                            }
+                        ],
+                        "description": "fracture\nApply a generator to the coordinate field fed into this parent generator. I.e. Distort your generator with another generator.\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
+                    },
+                    "exponent": {
+                        "type": "number",
+                        "minimum": 0.01562,
+                        "maximum": 64,
+                        "description": "exponent\nThe exponent\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.01562\n* Maximum allowed is 64.0"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "A gen style"
-        },
-        "obj-com-volmit-iris-engine-object-irisobjectrotation": {
-            "anyOf": [
-                {
-                    "description": "Configures rotation for iris",
-                    "type": "object",
-                    "properties": {
-                        "enabled": {
-                            "type": "boolean",
-                            "description": "enabled\nIf this rotator is enabled or not\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "xAxis": {
-                            "anyOf": [
-                                {
-                                    "!required": false,
-                                    "type": "object",
-                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisaxisrotationclamp",
-                                    "description": "xAxis\nThe x axis rotation\n   \nAxisRotationClamp (Object)\nRepresents a rotation axis with intervals and maxes. The x and z axis values are defaulted to disabled. The Y axis defaults to on, rotating by 90 degree increments.\n    \nYou can instead specify \"snippet/axis-rotation/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                                },
-                                {
-                                    "type": "string",
-                                    "$ref": "#/definitions/enum-snippet-axis-rotation"
-                                }
-                            ],
-                            "description": "xAxis\nThe x axis rotation\n   \nAxisRotationClamp (Object)\nRepresents a rotation axis with intervals and maxes. The x and z axis values are defaulted to disabled. The Y axis defaults to on, rotating by 90 degree increments.\n    \nYou can instead specify \"snippet/axis-rotation/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "yAxis": {
-                            "anyOf": [
-                                {
-                                    "!required": false,
-                                    "type": "object",
-                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisaxisrotationclamp",
-                                    "description": "yAxis\nThe y axis rotation\n   \nAxisRotationClamp (Object)\nRepresents a rotation axis with intervals and maxes. The x and z axis values are defaulted to disabled. The Y axis defaults to on, rotating by 90 degree increments.\n    \nYou can instead specify \"snippet/axis-rotation/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                                },
-                                {
-                                    "type": "string",
-                                    "$ref": "#/definitions/enum-snippet-axis-rotation"
-                                }
-                            ],
-                            "description": "yAxis\nThe y axis rotation\n   \nAxisRotationClamp (Object)\nRepresents a rotation axis with intervals and maxes. The x and z axis values are defaulted to disabled. The Y axis defaults to on, rotating by 90 degree increments.\n    \nYou can instead specify \"snippet/axis-rotation/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "zAxis": {
-                            "anyOf": [
-                                {
-                                    "!required": false,
-                                    "type": "object",
-                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisaxisrotationclamp",
-                                    "description": "zAxis\nThe z axis rotation\n   \nAxisRotationClamp (Object)\nRepresents a rotation axis with intervals and maxes. The x and z axis values are defaulted to disabled. The Y axis defaults to on, rotating by 90 degree increments.\n    \nYou can instead specify \"snippet/axis-rotation/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                                },
-                                {
-                                    "type": "string",
-                                    "$ref": "#/definitions/enum-snippet-axis-rotation"
-                                }
-                            ],
-                            "description": "zAxis\nThe z axis rotation\n   \nAxisRotationClamp (Object)\nRepresents a rotation axis with intervals and maxes. The x and z axis values are defaulted to disabled. The Y axis defaults to on, rotating by 90 degree increments.\n    \nYou can instead specify \"snippet/axis-rotation/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                        }
+                }
+            },
+            {"type": "string"}
+        ]},
+        "obj-com-volmit-iris-engine-object-irisobjectrotation": {"anyOf": [
+            {
+                "description": "Configures rotation for iris",
+                "type": "object",
+                "properties": {
+                    "enabled": {
+                        "type": "boolean",
+                        "description": "enabled\nIf this rotator is enabled or not\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "xAxis": {
+                        "anyOf": [
+                            {
+                                "!required": false,
+                                "type": "object",
+                                "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisaxisrotationclamp",
+                                "description": "xAxis\nThe x axis rotation\n   \nAxisRotationClamp (Object)\nRepresents a rotation axis with intervals and maxes. The x and z axis values are defaulted to disabled. The Y axis defaults to on, rotating by 90 degree increments.\n    \nYou can instead specify \"snippet/axis-rotation/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            },
+                            {
+                                "type": "string",
+                                "$ref": "#/definitions/enum-snippet-axis-rotation",
+                                "description": "xAxis\nThe x axis rotation\n   \nAxisRotationClamp (Object)\nRepresents a rotation axis with intervals and maxes. The x and z axis values are defaulted to disabled. The Y axis defaults to on, rotating by 90 degree increments.\n    \nYou can instead specify \"snippet/axis-rotation/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            }
+                        ],
+                        "description": "xAxis\nThe x axis rotation\n   \nAxisRotationClamp (Object)\nRepresents a rotation axis with intervals and maxes. The x and z axis values are defaulted to disabled. The Y axis defaults to on, rotating by 90 degree increments.\n    \nYou can instead specify \"snippet/axis-rotation/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "yAxis": {
+                        "anyOf": [
+                            {
+                                "!required": false,
+                                "type": "object",
+                                "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisaxisrotationclamp",
+                                "description": "yAxis\nThe y axis rotation\n   \nAxisRotationClamp (Object)\nRepresents a rotation axis with intervals and maxes. The x and z axis values are defaulted to disabled. The Y axis defaults to on, rotating by 90 degree increments.\n    \nYou can instead specify \"snippet/axis-rotation/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            },
+                            {
+                                "type": "string",
+                                "$ref": "#/definitions/enum-snippet-axis-rotation",
+                                "description": "yAxis\nThe y axis rotation\n   \nAxisRotationClamp (Object)\nRepresents a rotation axis with intervals and maxes. The x and z axis values are defaulted to disabled. The Y axis defaults to on, rotating by 90 degree increments.\n    \nYou can instead specify \"snippet/axis-rotation/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            }
+                        ],
+                        "description": "yAxis\nThe y axis rotation\n   \nAxisRotationClamp (Object)\nRepresents a rotation axis with intervals and maxes. The x and z axis values are defaulted to disabled. The Y axis defaults to on, rotating by 90 degree increments.\n    \nYou can instead specify \"snippet/axis-rotation/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "zAxis": {
+                        "anyOf": [
+                            {
+                                "!required": false,
+                                "type": "object",
+                                "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisaxisrotationclamp",
+                                "description": "zAxis\nThe z axis rotation\n   \nAxisRotationClamp (Object)\nRepresents a rotation axis with intervals and maxes. The x and z axis values are defaulted to disabled. The Y axis defaults to on, rotating by 90 degree increments.\n    \nYou can instead specify \"snippet/axis-rotation/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            },
+                            {
+                                "type": "string",
+                                "$ref": "#/definitions/enum-snippet-axis-rotation",
+                                "description": "zAxis\nThe z axis rotation\n   \nAxisRotationClamp (Object)\nRepresents a rotation axis with intervals and maxes. The x and z axis values are defaulted to disabled. The Y axis defaults to on, rotating by 90 degree increments.\n    \nYou can instead specify \"snippet/axis-rotation/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            }
+                        ],
+                        "description": "zAxis\nThe z axis rotation\n   \nAxisRotationClamp (Object)\nRepresents a rotation axis with intervals and maxes. The x and z axis values are defaulted to disabled. The Y axis defaults to on, rotating by 90 degree increments.\n    \nYou can instead specify \"snippet/axis-rotation/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "Configures rotation for iris"
-        },
+                }
+            },
+            {"type": "string"}
+        ]},
         "enum-snippet-object-translator": {"enum": []},
         "enum-snippet-feature": {"enum": []},
         "oneof-enum-com-volmit-iris-engine-object-irisobjectplacementscaleinterpolator": {"oneOf": [
@@ -5160,145 +5124,131 @@
             "frozen/mountain-middle",
             "tropical/sea/coral-ocean"
         ]},
-        "obj-com-volmit-iris-engine-object-irismodbiomeinjector": {
-            "anyOf": [
-                {
-                    "description": "A biome injector",
-                    "type": "object",
-                    "properties": {
-                        "region": {
-                            "type": "string",
-                            "$ref": "#/definitions/erzregions",
-                            "description": "region\nThe region to find\n   \nIris Region\n\n    \n* Default Value is \nMust be a valid regions (use ctrl+space for auto complete!)"
-                        },
-                        "inject": {
-                            "type": "array",
-                            "minItems": 1,
-                            "items": {"$ref": "#/definitions/erzbiomes"},
-                            "description": "inject\nA biome to inject into the region\n   \nList<Biome>\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list.\nMust be a valid Biome (use ctrl+space for auto complete!)"
-                        }
+        "obj-com-volmit-iris-engine-object-irismodbiomeinjector": {"anyOf": [
+            {
+                "description": "A biome injector",
+                "type": "object",
+                "properties": {
+                    "region": {
+                        "type": "string",
+                        "$ref": "#/definitions/erzregions",
+                        "description": "region\nThe region to find\n   \nIris Region\n\n    \n* Default Value is \nMust be a valid regions (use ctrl+space for auto complete!)"
+                    },
+                    "inject": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {"$ref": "#/definitions/erzbiomes"},
+                        "description": "inject\nA biome to inject into the region\n   \nList<Biome>\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list.\nMust be a valid Biome (use ctrl+space for auto complete!)"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "A biome injector"
-        },
+                }
+            },
+            {"type": "string"}
+        ]},
         "erzexpressions": {"enum": []},
         "enum-snippet-palette": {"enum": []},
-        "obj-com-volmit-iris-engine-object-irisfeaturepotential": {
-            "anyOf": [
-                {
-                    "description": "Represents a potential Iris zone",
-                    "type": "object",
-                    "properties": {
-                        "rarity": {
-                            "type": "integer",
-                            "minimum": 0,
-                            "description": "rarity\nThe rarity is 1 in X chance per chunk\n   \nInteger\n\n    \n* Default Value is 100\n* Minimum allowed is 0"
-                        },
-                        "zone": {
-                            "anyOf": [
-                                {
-                                    "!required": true,
-                                    "type": "object",
-                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisfeature",
-                                    "description": "zone\n\n   \nFeature (Object)\nRepresents an Iris zone\n    \nYou can instead specify \"snippet/feature/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                                },
-                                {
-                                    "type": "string",
-                                    "$ref": "#/definitions/enum-snippet-feature"
-                                }
-                            ],
-                            "description": "zone\n\n   \nFeature (Object)\nRepresents an Iris zone\n    \nYou can instead specify \"snippet/feature/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
-                        }
+        "obj-com-volmit-iris-engine-object-irisfeaturepotential": {"anyOf": [
+            {
+                "description": "Represents a potential Iris zone",
+                "type": "object",
+                "properties": {
+                    "rarity": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "description": "rarity\nThe rarity is 1 in X chance per chunk\n   \nInteger\n\n    \n* Default Value is 100\n* Minimum allowed is 0"
+                    },
+                    "zone": {
+                        "anyOf": [
+                            {
+                                "!required": true,
+                                "type": "object",
+                                "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisfeature",
+                                "description": "zone\n\n   \nFeature (Object)\nRepresents an Iris zone\n    \nYou can instead specify \"snippet/feature/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            },
+                            {
+                                "type": "string",
+                                "$ref": "#/definitions/enum-snippet-feature",
+                                "description": "zone\n\n   \nFeature (Object)\nRepresents an Iris zone\n    \nYou can instead specify \"snippet/feature/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                            }
+                        ],
+                        "description": "zone\n\n   \nFeature (Object)\nRepresents an Iris zone\n    \nYou can instead specify \"snippet/feature/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "Represents a potential Iris zone"
-        },
+                }
+            },
+            {"type": "string"}
+        ]},
         "obj-com-volmit-iris-util-collection-kmap": {
             "description": "",
             "type": "object",
             "properties": {}
         },
-        "obj-com-volmit-iris-engine-object-irismodbiomereplacer": {
-            "anyOf": [
-                {
-                    "description": "A biome replacer",
-                    "type": "object",
-                    "properties": {
-                        "find": {
-                            "type": "array",
-                            "minItems": 1,
-                            "items": {"$ref": "#/definitions/erzbiomes"},
-                            "description": "find\nA list of biomes to find\n   \nList<Biome>\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list.\nMust be a valid Biome (use ctrl+space for auto complete!)"
-                        },
-                        "replace": {
-                            "type": "string",
-                            "$ref": "#/definitions/erzbiomes",
-                            "description": "replace\nA biome to replace it with\n   \nIris Biome\n\n    \n* Default Value is \nMust be a valid biomes (use ctrl+space for auto complete!)"
-                        }
+        "obj-com-volmit-iris-engine-object-irismodbiomereplacer": {"anyOf": [
+            {
+                "description": "A biome replacer",
+                "type": "object",
+                "properties": {
+                    "find": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {"$ref": "#/definitions/erzbiomes"},
+                        "description": "find\nA list of biomes to find\n   \nList<Biome>\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list.\nMust be a valid Biome (use ctrl+space for auto complete!)"
+                    },
+                    "replace": {
+                        "type": "string",
+                        "$ref": "#/definitions/erzbiomes",
+                        "description": "replace\nA biome to replace it with\n   \nIris Biome\n\n    \n* Default Value is \nMust be a valid biomes (use ctrl+space for auto complete!)"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "A biome replacer"
-        },
+                }
+            },
+            {"type": "string"}
+        ]},
         "enum-snippet-object-rotator": {"enum": []},
-        "obj-com-volmit-iris-engine-object-irisaxisrotationclamp": {
-            "anyOf": [
-                {
-                    "description": "Represents a rotation axis with intervals and maxes. The x and z axis values are defaulted to disabled. The Y axis defaults to on, rotating by 90 degree increments.",
-                    "type": "object",
-                    "properties": {
-                        "enabled": {
-                            "type": "boolean",
-                            "description": "enabled\nShould this axis be rotated at all?\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
-                        },
-                        "min": {
-                            "type": "number",
-                            "minimum": -360,
-                            "maximum": 360,
-                            "description": "min\nThe minimum angle (from) or set this and max to zero for any angle degrees. Set both to the same non-zero value to force it to that angle only\n   \nNumber\n\n    \n* Default Value is 0.0\n* Minimum allowed is -360.0\n* Maximum allowed is 360.0"
-                        },
-                        "max": {
-                            "type": "number",
-                            "minimum": -360,
-                            "maximum": 360,
-                            "description": "max\nThe maximum angle (to) or set this and min to zero for any angle degrees. Set both to the same non-zero value to force it to that angle only\n   \nNumber\n\n    \n* Default Value is 0.0\n* Minimum allowed is -360.0\n* Maximum allowed is 360.0"
-                        },
-                        "interval": {
-                            "type": "number",
-                            "minimum": 0,
-                            "maximum": 360,
-                            "description": "interval\nIris spins the axis but not freely. For example an interval of 90 would mean 4 possible angles (right angles) degrees. \nSetting this to 0 means totally free rotation.\n\nNote that a lot of structures can have issues with non 90 degree intervals because the minecraft block resolution is so low.\n   \nNumber\n\n    \n* Default Value is 0.0\n* Minimum allowed is 0.0\n* Maximum allowed is 360.0"
-                        }
+        "obj-com-volmit-iris-engine-object-irisaxisrotationclamp": {"anyOf": [
+            {
+                "description": "Represents a rotation axis with intervals and maxes. The x and z axis values are defaulted to disabled. The Y axis defaults to on, rotating by 90 degree increments.",
+                "type": "object",
+                "properties": {
+                    "enabled": {
+                        "type": "boolean",
+                        "description": "enabled\nShould this axis be rotated at all?\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                    },
+                    "min": {
+                        "type": "number",
+                        "minimum": -360,
+                        "maximum": 360,
+                        "description": "min\nThe minimum angle (from) or set this and max to zero for any angle degrees. Set both to the same non-zero value to force it to that angle only\n   \nNumber\n\n    \n* Default Value is 0.0\n* Minimum allowed is -360.0\n* Maximum allowed is 360.0"
+                    },
+                    "max": {
+                        "type": "number",
+                        "minimum": -360,
+                        "maximum": 360,
+                        "description": "max\nThe maximum angle (to) or set this and min to zero for any angle degrees. Set both to the same non-zero value to force it to that angle only\n   \nNumber\n\n    \n* Default Value is 0.0\n* Minimum allowed is -360.0\n* Maximum allowed is 360.0"
+                    },
+                    "interval": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 360,
+                        "description": "interval\nIris spins the axis but not freely. For example an interval of 90 would mean 4 possible angles (right angles) degrees. \nSetting this to 0 means totally free rotation.\n\nNote that a lot of structures can have issues with non 90 degree intervals because the minecraft block resolution is so low.\n   \nNumber\n\n    \n* Default Value is 0.0\n* Minimum allowed is 0.0\n* Maximum allowed is 360.0"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "Represents a rotation axis with intervals and maxes. The x and z axis values are defaulted to disabled. The Y axis defaults to on, rotating by 90 degree increments."
-        },
-        "obj-com-volmit-iris-engine-object-iristreesize": {
-            "anyOf": [
-                {
-                    "description": "Sapling override object picking options",
-                    "type": "object",
-                    "properties": {
-                        "width": {
-                            "type": "integer",
-                            "description": "width\nThe width of the sapling area\n   \nInteger\n\n    \n* Default Value is 1"
-                        },
-                        "depth": {
-                            "type": "integer",
-                            "description": "depth\nThe depth of the sapling area\n   \nInteger\n\n    \n* Default Value is 1"
-                        }
+                }
+            },
+            {"type": "string"}
+        ]},
+        "obj-com-volmit-iris-engine-object-iristreesize": {"anyOf": [
+            {
+                "description": "Sapling override object picking options",
+                "type": "object",
+                "properties": {
+                    "width": {
+                        "type": "integer",
+                        "description": "width\nThe width of the sapling area\n   \nInteger\n\n    \n* Default Value is 1"
+                    },
+                    "depth": {
+                        "type": "integer",
+                        "description": "depth\nThe depth of the sapling area\n   \nInteger\n\n    \n* Default Value is 1"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "Sapling override object picking options"
-        }
+                }
+            },
+            {"type": "string"}
+        ]}
     }
 }

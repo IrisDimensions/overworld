@@ -43,7 +43,8 @@
                         },
                         {
                             "type": "string",
-                            "$ref": "#/definitions/enum-snippet-custom-biome-particle"
+                            "$ref": "#/definitions/enum-snippet-custom-biome-particle",
+                            "description": "ambientParticle\nDefine an ambient particle to be rendered clientside (no server cost!)\n   \nBiomeCustomParticle (Object)\nA custom biome ambient particle\n    \nYou can instead specify \"snippet/custom-biome-particle/some-name.json\" to use a snippet file instead of specifying it here."
                         }
                     ],
                     "description": "ambientParticle\nDefine an ambient particle to be rendered clientside (no server cost!)\n   \nBiomeCustomParticle (Object)\nA custom biome ambient particle\n    \nYou can instead specify \"snippet/custom-biome-particle/some-name.json\" to use a snippet file instead of specifying it here."
@@ -85,32 +86,28 @@
         },
         {"type": "string"}
     ],
-    "description": "A custom biome, generated through a datapack",
     "definitions": {
         "enum-snippet-custom-biome-particle": {"enum": []},
-        "obj-com-volmit-iris-engine-object-irisbiomecustomparticle": {
-            "anyOf": [
-                {
-                    "description": "A custom biome ambient particle",
-                    "type": "object",
-                    "properties": {
-                        "particle": {
-                            "type": "string",
-                            "$ref": "#/definitions/enum-org-bukkit-particle",
-                            "description": "particle\nThe biome's particle type\n   \nParticle\n\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid Particle (use ctrl+space for auto complete!)"
-                        },
-                        "rarity": {
-                            "type": "integer",
-                            "minimum": 1,
-                            "maximum": 10000,
-                            "description": "rarity\nThe rarity\n   \nInteger\n\n    \n* Default Value is 35\n* Minimum allowed is 1\n* Maximum allowed is 10000"
-                        }
+        "obj-com-volmit-iris-engine-object-irisbiomecustomparticle": {"anyOf": [
+            {
+                "description": "A custom biome ambient particle",
+                "type": "object",
+                "properties": {
+                    "particle": {
+                        "type": "string",
+                        "$ref": "#/definitions/enum-org-bukkit-particle",
+                        "description": "particle\nThe biome's particle type\n   \nParticle\n\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid Particle (use ctrl+space for auto complete!)"
+                    },
+                    "rarity": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 10000,
+                        "description": "rarity\nThe rarity\n   \nInteger\n\n    \n* Default Value is 35\n* Minimum allowed is 1\n* Maximum allowed is 10000"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "A custom biome ambient particle"
-        },
+                }
+            },
+            {"type": "string"}
+        ]},
         "oneof-enum-com-volmit-iris-engine-object-irisbiomecustompreciptype": {"oneOf": [
             {
                 "const": "none",
@@ -125,46 +122,43 @@
                 "description": "Snow downfall"
             }
         ]},
-        "obj-com-volmit-iris-engine-object-irisbiomecustomspawn": {
-            "anyOf": [
-                {
-                    "description": "A custom biome spawn",
-                    "type": "object",
-                    "properties": {
-                        "type": {
-                            "type": "string",
-                            "$ref": "#/definitions/enum-org-bukkit-entity-entitytype",
-                            "description": "type\nThe biome's particle type\n   \nEntityType\n\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid EntityType (use ctrl+space for auto complete!)"
-                        },
-                        "minCount": {
-                            "type": "integer",
-                            "minimum": 1,
-                            "maximum": 20,
-                            "description": "minCount\nThe min to spawn\n   \nInteger\n\n    \n* Default Value is 2\n* Minimum allowed is 1\n* Maximum allowed is 20"
-                        },
-                        "maxCount": {
-                            "type": "integer",
-                            "minimum": 1,
-                            "maximum": 20,
-                            "description": "maxCount\nThe max to spawn\n   \nInteger\n\n    \n* Default Value is 5\n* Minimum allowed is 1\n* Maximum allowed is 20"
-                        },
-                        "weight": {
-                            "type": "integer",
-                            "minimum": 1,
-                            "maximum": 1000,
-                            "description": "weight\nThe weight in this group. Higher weight, the more common this type is spawned\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1\n* Maximum allowed is 1000"
-                        },
-                        "group": {
-                            "type": "string",
-                            "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-irisbiomecustomspawntype",
-                            "description": "group\nThe rarity\n   \nBiomeCustomSpawnType\nThe mob spawn group\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid BiomeCustomSpawnType (use ctrl+space for auto complete!)"
-                        }
+        "obj-com-volmit-iris-engine-object-irisbiomecustomspawn": {"anyOf": [
+            {
+                "description": "A custom biome spawn",
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "$ref": "#/definitions/enum-org-bukkit-entity-entitytype",
+                        "description": "type\nThe biome's particle type\n   \nEntityType\n\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid EntityType (use ctrl+space for auto complete!)"
+                    },
+                    "minCount": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 20,
+                        "description": "minCount\nThe min to spawn\n   \nInteger\n\n    \n* Default Value is 2\n* Minimum allowed is 1\n* Maximum allowed is 20"
+                    },
+                    "maxCount": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 20,
+                        "description": "maxCount\nThe max to spawn\n   \nInteger\n\n    \n* Default Value is 5\n* Minimum allowed is 1\n* Maximum allowed is 20"
+                    },
+                    "weight": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 1000,
+                        "description": "weight\nThe weight in this group. Higher weight, the more common this type is spawned\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1\n* Maximum allowed is 1000"
+                    },
+                    "group": {
+                        "type": "string",
+                        "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-irisbiomecustomspawntype",
+                        "description": "group\nThe rarity\n   \nBiomeCustomSpawnType\nThe mob spawn group\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid BiomeCustomSpawnType (use ctrl+space for auto complete!)"
                     }
-                },
-                {"type": "string"}
-            ],
-            "description": "A custom biome spawn"
-        },
+                }
+            },
+            {"type": "string"}
+        ]},
         "enum-org-bukkit-particle": {"enum": [
             "EXPLOSION_NORMAL",
             "EXPLOSION_LARGE",
