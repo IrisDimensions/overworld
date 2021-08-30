@@ -1,32 +1,77 @@
 {
-    "name": "Rocky Cavern",
-    "wall": {
-        "palette": [
-            {
-                "block": "minecraft:stone"
-            }
-        ]
-    },
-    "layers": [
-        {
-            "maxHeight": 2,
-            "minHeight": 2,
-            "palette": [
-                {
-                    "block": "minecraft:stone"
-                }
-            ]
-        }
-    ],
-    "caveCeilingLayers": [
-        {
-            "maxHeight": 2,
-            "minHeight": 2,
-            "palette": [
-                {
-                    "block": "minecraft:stone"
-                }
-            ]
-        }
+  "name": "Rocky Cavern",
+  "wall": {
+    "style": { "style": "STATIC" },
+    "palette": [
+      {
+        "block": "minecraft:stone"
+      },
+      {
+        "block": "minecraft:stone"
+      }
     ]
+  },
+  "layers": [
+    {
+      "style": { "style": "STATIC" },
+      "maxHeight": 2,
+      "minHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:andesite"
+        }
+      ]
+    }
+  ],
+  "caveCeilingLayers": [
+    {
+      "style": { "style": "STATIC" },
+      "maxHeight": 2,
+      "minHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:andesite"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.03,
+      "scaleStack": true,
+      "stackMin": 10,
+      "stackMax": 90,
+      "absoluteMaxStack": 15,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:andesite"
+        }
+      ]
+    },
+    {
+      "partOf": "CEILING",
+      "chance": 0.03,
+      "absoluteMaxStack": 15,
+      "scaleStack": true,
+      "stackMin": 10,
+      "stackMax": 90,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:andesite"
+        }
+      ]
+    }
+  ]
 }
