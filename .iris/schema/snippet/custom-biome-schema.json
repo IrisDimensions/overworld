@@ -1,0 +1,482 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://volmit.com/iris-schema/irisbiomecustom.json",
+    "anyOf": [
+        {
+            "description": "A custom biome, generated through a datapack",
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "id\nThe resource key of this biome. Just a simple id such as 'plains' or something.\n   \nText\n\n    \n* Default Value is "
+                },
+                "temperature": {
+                    "type": "number",
+                    "minimum": -3,
+                    "maximum": 3,
+                    "description": "temperature\nThe biome's temperature\n   \nNumber\n\n    \n* Default Value is 0.8\n* Minimum allowed is -3.0\n* Maximum allowed is 3.0"
+                },
+                "humidity": {
+                    "type": "number",
+                    "minimum": -3,
+                    "maximum": 3,
+                    "description": "humidity\nThe biome's downfall amount (snow / rain), see preci\n   \nNumber\n\n    \n* Default Value is 0.4\n* Minimum allowed is -3.0\n* Maximum allowed is 3.0"
+                },
+                "spawns": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {"$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisbiomecustomspawn"},
+                    "description": "spawns\nThe biome's mob spawns\n   \nList of BiomeCustomSpawns (Objects)\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list."
+                },
+                "downfallType": {
+                    "type": "string",
+                    "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-irisbiomecustompreciptype",
+                    "description": "downfallType\nThe biome's downfall type\n   \nBiomeCustomPrecipType\nSnow, rain, or nothing\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid BiomeCustomPrecipType (use ctrl+space for auto complete!)"
+                },
+                "ambientParticle": {
+                    "anyOf": [
+                        {
+                            "!required": false,
+                            "type": "object",
+                            "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisbiomecustomparticle",
+                            "description": "ambientParticle\nDefine an ambient particle to be rendered clientside (no server cost!)\n   \nBiomeCustomParticle (Object)\nA custom biome ambient particle\n    \nYou can instead specify \"snippet/custom-biome-particle/some-name.json\" to use a snippet file instead of specifying it here."
+                        },
+                        {
+                            "type": "string",
+                            "$ref": "#/definitions/enum-snippet-custom-biome-particle"
+                        }
+                    ],
+                    "description": "ambientParticle\nDefine an ambient particle to be rendered clientside (no server cost!)\n   \nBiomeCustomParticle (Object)\nA custom biome ambient particle\n    \nYou can instead specify \"snippet/custom-biome-particle/some-name.json\" to use a snippet file instead of specifying it here."
+                },
+                "category": {
+                    "type": "string",
+                    "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-irisbiomecustomcategory",
+                    "description": "category\nThe biome's category type\n   \nBiomeCustomCategory\nThe custom biome category. Vanilla asks for this, basically what represents your biome closest?\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid BiomeCustomCategory (use ctrl+space for auto complete!)"
+                },
+                "spawnRarity": {
+                    "type": "integer",
+                    "description": "spawnRarity\nThe spawn rarity of any defined spawners\n   \nInteger\n\n    \n* Default Value is -1"
+                },
+                "skyColor": {
+                    "type": "string",
+                    "description": "skyColor\nThe color of the sky, top half of sky. (hex format)\n   \nText\n\n    \n* Default Value is #79a8e1"
+                },
+                "fogColor": {
+                    "type": "string",
+                    "description": "fogColor\nThe color of the fog, bottom half of sky. (hex format)\n   \nText\n\n    \n* Default Value is #c0d8e1"
+                },
+                "waterColor": {
+                    "type": "string",
+                    "description": "waterColor\nThe color of the water (hex format). Leave blank / don't define to not change\n   \nText\n\n    \n* Default Value is #3f76e4"
+                },
+                "waterFogColor": {
+                    "type": "string",
+                    "description": "waterFogColor\nThe color of water fog (hex format). Leave blank / don't define to not change\n   \nText\n\n    \n* Default Value is #050533"
+                },
+                "grassColor": {
+                    "type": "string",
+                    "description": "grassColor\nThe color of the grass (hex format). Leave blank / don't define to not change\n   \nText\n\n    \n* Default Value is "
+                },
+                "foliageColor": {
+                    "type": "string",
+                    "description": "foliageColor\nThe color of foliage (hex format). Leave blank / don't define to not change\n   \nText\n\n    \n* Default Value is "
+                }
+            }
+        },
+        {"type": "string"}
+    ],
+    "description": "A custom biome, generated through a datapack",
+    "definitions": {
+        "enum-snippet-custom-biome-particle": {"enum": []},
+        "obj-com-volmit-iris-engine-object-irisbiomecustomparticle": {
+            "anyOf": [
+                {
+                    "description": "A custom biome ambient particle",
+                    "type": "object",
+                    "properties": {
+                        "particle": {
+                            "type": "string",
+                            "$ref": "#/definitions/enum-org-bukkit-particle",
+                            "description": "particle\nThe biome's particle type\n   \nParticle\n\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid Particle (use ctrl+space for auto complete!)"
+                        },
+                        "rarity": {
+                            "type": "integer",
+                            "minimum": 1,
+                            "maximum": 10000,
+                            "description": "rarity\nThe rarity\n   \nInteger\n\n    \n* Default Value is 35\n* Minimum allowed is 1\n* Maximum allowed is 10000"
+                        }
+                    }
+                },
+                {"type": "string"}
+            ],
+            "description": "A custom biome ambient particle"
+        },
+        "oneof-enum-com-volmit-iris-engine-object-irisbiomecustompreciptype": {"oneOf": [
+            {
+                "const": "none",
+                "description": "No downfall"
+            },
+            {
+                "const": "rain",
+                "description": "Rain downfall"
+            },
+            {
+                "const": "snow",
+                "description": "Snow downfall"
+            }
+        ]},
+        "obj-com-volmit-iris-engine-object-irisbiomecustomspawn": {
+            "anyOf": [
+                {
+                    "description": "A custom biome spawn",
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "$ref": "#/definitions/enum-org-bukkit-entity-entitytype",
+                            "description": "type\nThe biome's particle type\n   \nEntityType\n\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid EntityType (use ctrl+space for auto complete!)"
+                        },
+                        "minCount": {
+                            "type": "integer",
+                            "minimum": 1,
+                            "maximum": 20,
+                            "description": "minCount\nThe min to spawn\n   \nInteger\n\n    \n* Default Value is 2\n* Minimum allowed is 1\n* Maximum allowed is 20"
+                        },
+                        "maxCount": {
+                            "type": "integer",
+                            "minimum": 1,
+                            "maximum": 20,
+                            "description": "maxCount\nThe max to spawn\n   \nInteger\n\n    \n* Default Value is 5\n* Minimum allowed is 1\n* Maximum allowed is 20"
+                        },
+                        "weight": {
+                            "type": "integer",
+                            "minimum": 1,
+                            "maximum": 1000,
+                            "description": "weight\nThe weight in this group. Higher weight, the more common this type is spawned\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1\n* Maximum allowed is 1000"
+                        },
+                        "group": {
+                            "type": "string",
+                            "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-irisbiomecustomspawntype",
+                            "description": "group\nThe rarity\n   \nBiomeCustomSpawnType\nThe mob spawn group\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid BiomeCustomSpawnType (use ctrl+space for auto complete!)"
+                        }
+                    }
+                },
+                {"type": "string"}
+            ],
+            "description": "A custom biome spawn"
+        },
+        "enum-org-bukkit-particle": {"enum": [
+            "EXPLOSION_NORMAL",
+            "EXPLOSION_LARGE",
+            "EXPLOSION_HUGE",
+            "FIREWORKS_SPARK",
+            "WATER_BUBBLE",
+            "WATER_SPLASH",
+            "WATER_WAKE",
+            "SUSPENDED",
+            "SUSPENDED_DEPTH",
+            "CRIT",
+            "CRIT_MAGIC",
+            "SMOKE_NORMAL",
+            "SMOKE_LARGE",
+            "SPELL",
+            "SPELL_INSTANT",
+            "SPELL_MOB",
+            "SPELL_MOB_AMBIENT",
+            "SPELL_WITCH",
+            "DRIP_WATER",
+            "DRIP_LAVA",
+            "VILLAGER_ANGRY",
+            "VILLAGER_HAPPY",
+            "TOWN_AURA",
+            "NOTE",
+            "PORTAL",
+            "ENCHANTMENT_TABLE",
+            "FLAME",
+            "LAVA",
+            "CLOUD",
+            "REDSTONE",
+            "SNOWBALL",
+            "SNOW_SHOVEL",
+            "SLIME",
+            "HEART",
+            "BARRIER",
+            "ITEM_CRACK",
+            "BLOCK_CRACK",
+            "BLOCK_DUST",
+            "WATER_DROP",
+            "MOB_APPEARANCE",
+            "DRAGON_BREATH",
+            "END_ROD",
+            "DAMAGE_INDICATOR",
+            "SWEEP_ATTACK",
+            "FALLING_DUST",
+            "TOTEM",
+            "SPIT",
+            "SQUID_INK",
+            "BUBBLE_POP",
+            "CURRENT_DOWN",
+            "BUBBLE_COLUMN_UP",
+            "NAUTILUS",
+            "DOLPHIN",
+            "SNEEZE",
+            "CAMPFIRE_COSY_SMOKE",
+            "CAMPFIRE_SIGNAL_SMOKE",
+            "COMPOSTER",
+            "FLASH",
+            "FALLING_LAVA",
+            "LANDING_LAVA",
+            "FALLING_WATER",
+            "DRIPPING_HONEY",
+            "FALLING_HONEY",
+            "LANDING_HONEY",
+            "FALLING_NECTAR",
+            "SOUL_FIRE_FLAME",
+            "ASH",
+            "CRIMSON_SPORE",
+            "WARPED_SPORE",
+            "SOUL",
+            "DRIPPING_OBSIDIAN_TEAR",
+            "FALLING_OBSIDIAN_TEAR",
+            "LANDING_OBSIDIAN_TEAR",
+            "REVERSE_PORTAL",
+            "WHITE_ASH",
+            "LIGHT",
+            "DUST_COLOR_TRANSITION",
+            "VIBRATION",
+            "FALLING_SPORE_BLOSSOM",
+            "SPORE_BLOSSOM_AIR",
+            "SMALL_FLAME",
+            "SNOWFLAKE",
+            "DRIPPING_DRIPSTONE_LAVA",
+            "FALLING_DRIPSTONE_LAVA",
+            "DRIPPING_DRIPSTONE_WATER",
+            "FALLING_DRIPSTONE_WATER",
+            "GLOW_SQUID_INK",
+            "GLOW",
+            "WAX_ON",
+            "WAX_OFF",
+            "ELECTRIC_SPARK",
+            "SCRAPE",
+            "LEGACY_BLOCK_CRACK",
+            "LEGACY_BLOCK_DUST",
+            "LEGACY_FALLING_DUST"
+        ]},
+        "oneof-enum-com-volmit-iris-engine-object-irisbiomecustomspawntype": {"oneOf": [
+            {
+                "const": "MONSTER",
+                "description": "Typical monsters that spawn at night, like zombies and skeletons"
+            },
+            {
+                "const": "CREATURE",
+                "description": "Typical creatures like sheep, pigs, cows"
+            },
+            {
+                "const": "AMBIENT",
+                "description": "Eg bats"
+            },
+            {
+                "const": "UNDERGROUND_WATER_CREATURE",
+                "description": "Odd spawn group but ok"
+            },
+            {
+                "const": "WATER_CREATURE",
+                "description": "Water mobs like squid, dolphins"
+            },
+            {
+                "const": "WATER_AMBIENT",
+                "description": "Fish"
+            },
+            {
+                "const": "MISC",
+                "description": "Unknown"
+            }
+        ]},
+        "oneof-enum-com-volmit-iris-engine-object-irisbiomecustomcategory": {"oneOf": [
+            {
+                "const": "beach",
+                "description": "No Description for beach"
+            },
+            {
+                "const": "desert",
+                "description": "No Description for desert"
+            },
+            {
+                "const": "extreme_hills",
+                "description": "No Description for extreme_hills"
+            },
+            {
+                "const": "forest",
+                "description": "No Description for forest"
+            },
+            {
+                "const": "icy",
+                "description": "No Description for icy"
+            },
+            {
+                "const": "jungle",
+                "description": "No Description for jungle"
+            },
+            {
+                "const": "mesa",
+                "description": "No Description for mesa"
+            },
+            {
+                "const": "mushroom",
+                "description": "No Description for mushroom"
+            },
+            {
+                "const": "nether",
+                "description": "No Description for nether"
+            },
+            {
+                "const": "none",
+                "description": "No Description for none"
+            },
+            {
+                "const": "ocean",
+                "description": "No Description for ocean"
+            },
+            {
+                "const": "plains",
+                "description": "No Description for plains"
+            },
+            {
+                "const": "river",
+                "description": "No Description for river"
+            },
+            {
+                "const": "savanna",
+                "description": "No Description for savanna"
+            },
+            {
+                "const": "swamp",
+                "description": "No Description for swamp"
+            },
+            {
+                "const": "taiga",
+                "description": "No Description for taiga"
+            },
+            {
+                "const": "the_end",
+                "description": "No Description for the_end"
+            }
+        ]},
+        "enum-org-bukkit-entity-entitytype": {"enum": [
+            "DROPPED_ITEM",
+            "EXPERIENCE_ORB",
+            "AREA_EFFECT_CLOUD",
+            "ELDER_GUARDIAN",
+            "WITHER_SKELETON",
+            "STRAY",
+            "EGG",
+            "LEASH_HITCH",
+            "PAINTING",
+            "ARROW",
+            "SNOWBALL",
+            "FIREBALL",
+            "SMALL_FIREBALL",
+            "ENDER_PEARL",
+            "ENDER_SIGNAL",
+            "SPLASH_POTION",
+            "THROWN_EXP_BOTTLE",
+            "ITEM_FRAME",
+            "WITHER_SKULL",
+            "PRIMED_TNT",
+            "FALLING_BLOCK",
+            "FIREWORK",
+            "HUSK",
+            "SPECTRAL_ARROW",
+            "SHULKER_BULLET",
+            "DRAGON_FIREBALL",
+            "ZOMBIE_VILLAGER",
+            "SKELETON_HORSE",
+            "ZOMBIE_HORSE",
+            "ARMOR_STAND",
+            "DONKEY",
+            "MULE",
+            "EVOKER_FANGS",
+            "EVOKER",
+            "VEX",
+            "VINDICATOR",
+            "ILLUSIONER",
+            "MINECART_COMMAND",
+            "BOAT",
+            "MINECART",
+            "MINECART_CHEST",
+            "MINECART_FURNACE",
+            "MINECART_TNT",
+            "MINECART_HOPPER",
+            "MINECART_MOB_SPAWNER",
+            "CREEPER",
+            "SKELETON",
+            "SPIDER",
+            "GIANT",
+            "ZOMBIE",
+            "SLIME",
+            "GHAST",
+            "ZOMBIFIED_PIGLIN",
+            "ENDERMAN",
+            "CAVE_SPIDER",
+            "SILVERFISH",
+            "BLAZE",
+            "MAGMA_CUBE",
+            "ENDER_DRAGON",
+            "WITHER",
+            "BAT",
+            "WITCH",
+            "ENDERMITE",
+            "GUARDIAN",
+            "SHULKER",
+            "PIG",
+            "SHEEP",
+            "COW",
+            "CHICKEN",
+            "SQUID",
+            "WOLF",
+            "MUSHROOM_COW",
+            "SNOWMAN",
+            "OCELOT",
+            "IRON_GOLEM",
+            "HORSE",
+            "RABBIT",
+            "POLAR_BEAR",
+            "LLAMA",
+            "LLAMA_SPIT",
+            "PARROT",
+            "VILLAGER",
+            "ENDER_CRYSTAL",
+            "TURTLE",
+            "PHANTOM",
+            "TRIDENT",
+            "COD",
+            "SALMON",
+            "PUFFERFISH",
+            "TROPICAL_FISH",
+            "DROWNED",
+            "DOLPHIN",
+            "CAT",
+            "PANDA",
+            "PILLAGER",
+            "RAVAGER",
+            "TRADER_LLAMA",
+            "WANDERING_TRADER",
+            "FOX",
+            "BEE",
+            "HOGLIN",
+            "PIGLIN",
+            "STRIDER",
+            "ZOGLIN",
+            "PIGLIN_BRUTE",
+            "AXOLOTL",
+            "GLOW_ITEM_FRAME",
+            "GLOW_SQUID",
+            "GOAT",
+            "MARKER",
+            "FISHING_HOOK",
+            "LIGHTNING",
+            "PLAYER",
+            "UNKNOWN"
+        ]}
+    }
+}

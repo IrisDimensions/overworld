@@ -1,0 +1,190 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://volmit.com/iris-schema/irisbiomecustomspawn.json",
+    "anyOf": [
+        {
+            "description": "A custom biome spawn",
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "$ref": "#/definitions/enum-org-bukkit-entity-entitytype",
+                    "description": "type\nThe biome's particle type\n   \nEntityType\n\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid EntityType (use ctrl+space for auto complete!)"
+                },
+                "minCount": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 20,
+                    "description": "minCount\nThe min to spawn\n   \nInteger\n\n    \n* Default Value is 2\n* Minimum allowed is 1\n* Maximum allowed is 20"
+                },
+                "maxCount": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 20,
+                    "description": "maxCount\nThe max to spawn\n   \nInteger\n\n    \n* Default Value is 5\n* Minimum allowed is 1\n* Maximum allowed is 20"
+                },
+                "weight": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 1000,
+                    "description": "weight\nThe weight in this group. Higher weight, the more common this type is spawned\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1\n* Maximum allowed is 1000"
+                },
+                "group": {
+                    "type": "string",
+                    "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-irisbiomecustomspawntype",
+                    "description": "group\nThe rarity\n   \nBiomeCustomSpawnType\nThe mob spawn group\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid BiomeCustomSpawnType (use ctrl+space for auto complete!)"
+                }
+            }
+        },
+        {"type": "string"}
+    ],
+    "description": "A custom biome spawn",
+    "definitions": {
+        "oneof-enum-com-volmit-iris-engine-object-irisbiomecustomspawntype": {"oneOf": [
+            {
+                "const": "MONSTER",
+                "description": "Typical monsters that spawn at night, like zombies and skeletons"
+            },
+            {
+                "const": "CREATURE",
+                "description": "Typical creatures like sheep, pigs, cows"
+            },
+            {
+                "const": "AMBIENT",
+                "description": "Eg bats"
+            },
+            {
+                "const": "UNDERGROUND_WATER_CREATURE",
+                "description": "Odd spawn group but ok"
+            },
+            {
+                "const": "WATER_CREATURE",
+                "description": "Water mobs like squid, dolphins"
+            },
+            {
+                "const": "WATER_AMBIENT",
+                "description": "Fish"
+            },
+            {
+                "const": "MISC",
+                "description": "Unknown"
+            }
+        ]},
+        "enum-org-bukkit-entity-entitytype": {"enum": [
+            "DROPPED_ITEM",
+            "EXPERIENCE_ORB",
+            "AREA_EFFECT_CLOUD",
+            "ELDER_GUARDIAN",
+            "WITHER_SKELETON",
+            "STRAY",
+            "EGG",
+            "LEASH_HITCH",
+            "PAINTING",
+            "ARROW",
+            "SNOWBALL",
+            "FIREBALL",
+            "SMALL_FIREBALL",
+            "ENDER_PEARL",
+            "ENDER_SIGNAL",
+            "SPLASH_POTION",
+            "THROWN_EXP_BOTTLE",
+            "ITEM_FRAME",
+            "WITHER_SKULL",
+            "PRIMED_TNT",
+            "FALLING_BLOCK",
+            "FIREWORK",
+            "HUSK",
+            "SPECTRAL_ARROW",
+            "SHULKER_BULLET",
+            "DRAGON_FIREBALL",
+            "ZOMBIE_VILLAGER",
+            "SKELETON_HORSE",
+            "ZOMBIE_HORSE",
+            "ARMOR_STAND",
+            "DONKEY",
+            "MULE",
+            "EVOKER_FANGS",
+            "EVOKER",
+            "VEX",
+            "VINDICATOR",
+            "ILLUSIONER",
+            "MINECART_COMMAND",
+            "BOAT",
+            "MINECART",
+            "MINECART_CHEST",
+            "MINECART_FURNACE",
+            "MINECART_TNT",
+            "MINECART_HOPPER",
+            "MINECART_MOB_SPAWNER",
+            "CREEPER",
+            "SKELETON",
+            "SPIDER",
+            "GIANT",
+            "ZOMBIE",
+            "SLIME",
+            "GHAST",
+            "ZOMBIFIED_PIGLIN",
+            "ENDERMAN",
+            "CAVE_SPIDER",
+            "SILVERFISH",
+            "BLAZE",
+            "MAGMA_CUBE",
+            "ENDER_DRAGON",
+            "WITHER",
+            "BAT",
+            "WITCH",
+            "ENDERMITE",
+            "GUARDIAN",
+            "SHULKER",
+            "PIG",
+            "SHEEP",
+            "COW",
+            "CHICKEN",
+            "SQUID",
+            "WOLF",
+            "MUSHROOM_COW",
+            "SNOWMAN",
+            "OCELOT",
+            "IRON_GOLEM",
+            "HORSE",
+            "RABBIT",
+            "POLAR_BEAR",
+            "LLAMA",
+            "LLAMA_SPIT",
+            "PARROT",
+            "VILLAGER",
+            "ENDER_CRYSTAL",
+            "TURTLE",
+            "PHANTOM",
+            "TRIDENT",
+            "COD",
+            "SALMON",
+            "PUFFERFISH",
+            "TROPICAL_FISH",
+            "DROWNED",
+            "DOLPHIN",
+            "CAT",
+            "PANDA",
+            "PILLAGER",
+            "RAVAGER",
+            "TRADER_LLAMA",
+            "WANDERING_TRADER",
+            "FOX",
+            "BEE",
+            "HOGLIN",
+            "PIGLIN",
+            "STRIDER",
+            "ZOGLIN",
+            "PIGLIN_BRUTE",
+            "AXOLOTL",
+            "GLOW_ITEM_FRAME",
+            "GLOW_SQUID",
+            "GOAT",
+            "MARKER",
+            "FISHING_HOOK",
+            "LIGHTNING",
+            "PLAYER",
+            "UNKNOWN"
+        ]}
+    }
+}

@@ -1,0 +1,785 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://volmit.com/iris-schema/irisworm.json",
+    "anyOf": [
+        {
+            "description": "Generate worms",
+            "type": "object",
+            "properties": {
+                "xStyle": {
+                    "anyOf": [
+                        {
+                            "!required": false,
+                            "type": "object",
+                            "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisshapedgeneratorstyle",
+                            "description": "xStyle\nThe style used to determine the curvature of this worm's x\n   \nShapedGeneratorStyle (Object)\nThis represents a generator with a min and max height\n    \nYou can instead specify \"snippet/shaped-style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                        },
+                        {
+                            "type": "string",
+                            "$ref": "#/definitions/enum-snippet-shaped-style"
+                        }
+                    ],
+                    "description": "xStyle\nThe style used to determine the curvature of this worm's x\n   \nShapedGeneratorStyle (Object)\nThis represents a generator with a min and max height\n    \nYou can instead specify \"snippet/shaped-style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                },
+                "yStyle": {
+                    "anyOf": [
+                        {
+                            "!required": false,
+                            "type": "object",
+                            "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisshapedgeneratorstyle",
+                            "description": "yStyle\nThe style used to determine the curvature of this worm's y\n   \nShapedGeneratorStyle (Object)\nThis represents a generator with a min and max height\n    \nYou can instead specify \"snippet/shaped-style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                        },
+                        {
+                            "type": "string",
+                            "$ref": "#/definitions/enum-snippet-shaped-style"
+                        }
+                    ],
+                    "description": "yStyle\nThe style used to determine the curvature of this worm's y\n   \nShapedGeneratorStyle (Object)\nThis represents a generator with a min and max height\n    \nYou can instead specify \"snippet/shaped-style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                },
+                "zStyle": {
+                    "anyOf": [
+                        {
+                            "!required": false,
+                            "type": "object",
+                            "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisshapedgeneratorstyle",
+                            "description": "zStyle\nThe style used to determine the curvature of this worm's z\n   \nShapedGeneratorStyle (Object)\nThis represents a generator with a min and max height\n    \nYou can instead specify \"snippet/shaped-style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                        },
+                        {
+                            "type": "string",
+                            "$ref": "#/definitions/enum-snippet-shaped-style"
+                        }
+                    ],
+                    "description": "zStyle\nThe style used to determine the curvature of this worm's z\n   \nShapedGeneratorStyle (Object)\nThis represents a generator with a min and max height\n    \nYou can instead specify \"snippet/shaped-style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                },
+                "maxDistance": {
+                    "type": "integer",
+                    "description": "maxDistance\nThe max block distance this worm can travel from its start. This can have performance implications at ranges over 1,000 blocks but it's not too serious, test.\n   \nInteger\n\n    \n* Default Value is 128"
+                },
+                "maxIterations": {
+                    "type": "integer",
+                    "description": "maxIterations\nThe iterations this worm can make\n   \nInteger\n\n    \n* Default Value is 512"
+                },
+                "allowLoops": {
+                    "type": "boolean",
+                    "description": "allowLoops\nBy default if a worm loops back into itself, it stops at that point and does not continue. This is an optimization, to prevent this turn this option on.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                },
+                "girth": {
+                    "anyOf": [
+                        {
+                            "!required": false,
+                            "type": "object",
+                            "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisstyledrange",
+                            "description": "girth\nThe thickness of the worms. Each individual worm has the same thickness while traveling however, each spawned worm will vary in thickness.\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                        },
+                        {
+                            "type": "string",
+                            "$ref": "#/definitions/enum-snippet-style-range"
+                        }
+                    ],
+                    "description": "girth\nThe thickness of the worms. Each individual worm has the same thickness while traveling however, each spawned worm will vary in thickness.\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                }
+            }
+        },
+        {"type": "string"}
+    ],
+    "description": "Generate worms",
+    "definitions": {
+        "oneof-enum-com-volmit-iris-engine-object-noisestyle": {"oneOf": [
+            {
+                "const": "STATIC",
+                "description": "White Noise is like static. Useful for block scattering but not terrain."
+            },
+            {
+                "const": "STATIC_BILINEAR",
+                "description": "White Noise is like static. Useful for block scattering but not terrain."
+            },
+            {
+                "const": "STATIC_BICUBIC",
+                "description": "White Noise is like static. Useful for block scattering but not terrain."
+            },
+            {
+                "const": "STATIC_HERMITE",
+                "description": "White Noise is like static. Useful for block scattering but not terrain."
+            },
+            {
+                "const": "IRIS",
+                "description": "Wispy Perlin-looking simplex noise. The 'iris' style noise."
+            },
+            {
+                "const": "CLOVER",
+                "description": "Clover Noise"
+            },
+            {
+                "const": "CLOVER_STARCAST_3",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_STARCAST_6",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_STARCAST_9",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_STARCAST_12",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_BILINEAR_STARCAST_3",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_BILINEAR_STARCAST_6",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_BILINEAR_STARCAST_9",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_BILINEAR_STARCAST_12",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_HERMITE_STARCAST_3",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_HERMITE_STARCAST_6",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_HERMITE_STARCAST_9",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_HERMITE_STARCAST_12",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_BILINEAR",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_BICUBIC",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_HERMITE",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "VASCULAR",
+                "description": "Vascular noise gets higher as the position nears a cell border."
+            },
+            {
+                "const": "FLAT",
+                "description": "It always returns 0.5"
+            },
+            {
+                "const": "CELLULAR",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_STARCAST_3",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_STARCAST_6",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_STARCAST_9",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_STARCAST_12",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_BILINEAR_STARCAST_3",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_BILINEAR_STARCAST_6",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_BILINEAR_STARCAST_9",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_BILINEAR_STARCAST_12",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_HERMITE_STARCAST_3",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_HERMITE_STARCAST_6",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_HERMITE_STARCAST_9",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_HERMITE_STARCAST_12",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_BILINEAR",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_BICUBIC",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_HERMITE",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "NOWHERE",
+                "description": "Classic German Engineering"
+            },
+            {
+                "const": "NOWHERE_CELLULAR",
+                "description": "Classic German Engineering"
+            },
+            {
+                "const": "NOWHERE_CLOVER",
+                "description": "Classic German Engineering"
+            },
+            {
+                "const": "NOWHERE_SIMPLEX",
+                "description": "Classic German Engineering"
+            },
+            {
+                "const": "NOWHERE_GLOB",
+                "description": "Classic German Engineering"
+            },
+            {
+                "const": "NOWHERE_VASCULAR",
+                "description": "Classic German Engineering"
+            },
+            {
+                "const": "NOWHERE_CUBIC",
+                "description": "Classic German Engineering"
+            },
+            {
+                "const": "NOWHERE_SUPERFRACTAL",
+                "description": "Classic German Engineering"
+            },
+            {
+                "const": "NOWHERE_FRACTAL",
+                "description": "Classic German Engineering"
+            },
+            {
+                "const": "IRIS_DOUBLE",
+                "description": "Wispy Perlin-looking simplex noise. The 'iris' style noise."
+            },
+            {
+                "const": "IRIS_THICK",
+                "description": "Wispy Perlin-looking simplex noise. The 'iris' style noise."
+            },
+            {
+                "const": "IRIS_HALF",
+                "description": "Wispy Perlin-looking simplex noise. The 'iris' style noise."
+            },
+            {
+                "const": "SIMPLEX",
+                "description": "Basic, Smooth & Fast Simplex noise."
+            },
+            {
+                "const": "FRACTAL_SMOKE",
+                "description": "Very Detailed smoke using simplex fractured with fractal billow simplex at high octaves."
+            },
+            {
+                "const": "VASCULAR_THIN",
+                "description": "Thinner Veins."
+            },
+            {
+                "const": "SIMPLEX_CELLS",
+                "description": "Cells of simplex noise"
+            },
+            {
+                "const": "SIMPLEX_VASCULAR",
+                "description": "Veins of simplex noise"
+            },
+            {
+                "const": "FRACTAL_WATER",
+                "description": "Very Detailed fluid using simplex fractured with fractal billow simplex at high octaves."
+            },
+            {
+                "const": "PERLIN",
+                "description": "Perlin. Like simplex but more natural"
+            },
+            {
+                "const": "PERLIN_IRIS",
+                "description": "Perlin. Like simplex but more natural"
+            },
+            {
+                "const": "PERLIN_IRIS_HALF",
+                "description": "Perlin. Like simplex but more natural"
+            },
+            {
+                "const": "PERLIN_IRIS_DOUBLE",
+                "description": "Perlin. Like simplex but more natural"
+            },
+            {
+                "const": "PERLIN_IRIS_THICK",
+                "description": "Perlin. Like simplex but more natural"
+            },
+            {
+                "const": "FRACTAL_BILLOW_PERLIN",
+                "description": "Billow Fractal Perlin Noise."
+            },
+            {
+                "const": "BIOCTAVE_FRACTAL_BILLOW_PERLIN",
+                "description": "Billow Fractal Perlin Noise. 2 Octaves"
+            },
+            {
+                "const": "FRACTAL_BILLOW_SIMPLEX",
+                "description": "Billow Fractal Simplex Noise. Single octave."
+            },
+            {
+                "const": "FRACTAL_FBM_SIMPLEX",
+                "description": "FBM Fractal Simplex Noise. Single octave."
+            },
+            {
+                "const": "FRACTAL_BILLOW_IRIS",
+                "description": "Billow Fractal Iris Noise. Single octave."
+            },
+            {
+                "const": "FRACTAL_FBM_IRIS",
+                "description": "FBM Fractal Iris Noise. Single octave."
+            },
+            {
+                "const": "FRACTAL_BILLOW_IRIS_HALF",
+                "description": "Billow Fractal Iris Noise. Single octave."
+            },
+            {
+                "const": "FRACTAL_FBM_IRIS_HALF",
+                "description": "FBM Fractal Iris Noise. Single octave."
+            },
+            {
+                "const": "FRACTAL_BILLOW_IRIS_THICK",
+                "description": "Billow Fractal Iris Noise. Single octave."
+            },
+            {
+                "const": "FRACTAL_FBM_IRIS_THICK",
+                "description": "FBM Fractal Iris Noise. Single octave."
+            },
+            {
+                "const": "FRACTAL_RM_SIMPLEX",
+                "description": "Rigid Multi Fractal Simplex Noise. Single octave."
+            },
+            {
+                "const": "BIOCTAVE_FRACTAL_BILLOW_SIMPLEX",
+                "description": "Billow Fractal Simplex Noise. 2 octaves."
+            },
+            {
+                "const": "BIOCTAVE_FRACTAL_FBM_SIMPLEX",
+                "description": "FBM Fractal Simplex Noise. 2 octaves."
+            },
+            {
+                "const": "BIOCTAVE_FRACTAL_RM_SIMPLEX",
+                "description": "Rigid Multi Fractal Simplex Noise. 2 octaves."
+            },
+            {
+                "const": "TRIOCTAVE_FRACTAL_RM_SIMPLEX",
+                "description": "Rigid Multi Fractal Simplex Noise. 3 octaves."
+            },
+            {
+                "const": "TRIOCTAVE_FRACTAL_BILLOW_SIMPLEX",
+                "description": "Billow Fractal Simplex Noise. 3 octaves."
+            },
+            {
+                "const": "TRIOCTAVE_FRACTAL_FBM_SIMPLEX",
+                "description": "FBM Fractal Simplex Noise. 3 octaves."
+            },
+            {
+                "const": "QUADOCTAVE_FRACTAL_RM_SIMPLEX",
+                "description": "Rigid Multi Fractal Simplex Noise. 4 octaves."
+            },
+            {
+                "const": "QUADOCTAVE_FRACTAL_BILLOW_SIMPLEX",
+                "description": "Billow Fractal Simplex Noise. 4 octaves."
+            },
+            {
+                "const": "QUADOCTAVE_FRACTAL_FBM_SIMPLEX",
+                "description": "FBM Fractal Simplex Noise. 4 octaves."
+            },
+            {
+                "const": "QUINTOCTAVE_FRACTAL_RM_SIMPLEX",
+                "description": "Rigid Multi Fractal Simplex Noise. 5 octaves."
+            },
+            {
+                "const": "QUINTOCTAVE_FRACTAL_BILLOW_SIMPLEX",
+                "description": "Billow Fractal Simplex Noise. 5 octaves."
+            },
+            {
+                "const": "QUINTOCTAVE_FRACTAL_FBM_SIMPLEX",
+                "description": "FBM Fractal Simplex Noise. 5 octaves."
+            },
+            {
+                "const": "SEXOCTAVE_FRACTAL_RM_SIMPLEX",
+                "description": "Rigid Multi Fractal Simplex Noise. 6 octaves."
+            },
+            {
+                "const": "SEXOCTAVE_FRACTAL_BILLOW_SIMPLEX",
+                "description": "Billow Fractal Simplex Noise. 6 octaves."
+            },
+            {
+                "const": "SEXOCTAVE_FRACTAL_FBM_SIMPLEX",
+                "description": "FBM Fractal Simplex Noise. 6 octaves."
+            },
+            {
+                "const": "SEPTOCTAVE_FRACTAL_RM_SIMPLEX",
+                "description": "Rigid Multi Fractal Simplex Noise. 7 octaves."
+            },
+            {
+                "const": "SEPTOCTAVE_FRACTAL_BILLOW_SIMPLEX",
+                "description": "Billow Fractal Simplex Noise. 7 octaves."
+            },
+            {
+                "const": "SEPTOCTAVE_FRACTAL_FBM_SIMPLEX",
+                "description": "FBM Fractal Simplex Noise. 7 octaves."
+            },
+            {
+                "const": "OCTOCTAVE_FRACTAL_RM_SIMPLEX",
+                "description": "Rigid Multi Fractal Simplex Noise. 8 octaves."
+            },
+            {
+                "const": "OCTOCTAVE_FRACTAL_BILLOW_SIMPLEX",
+                "description": "Billow Fractal Simplex Noise. 8 octaves."
+            },
+            {
+                "const": "OCTOCTAVE_FRACTAL_FBM_SIMPLEX",
+                "description": "FBM Fractal Simplex Noise. 8 octaves."
+            },
+            {
+                "const": "NONOCTAVE_FRACTAL_RM_SIMPLEX",
+                "description": "Rigid Multi Fractal Simplex Noise. 9 octaves."
+            },
+            {
+                "const": "NONOCTAVE_FRACTAL_BILLOW_SIMPLEX",
+                "description": "Billow Fractal Simplex Noise. 9 octaves."
+            },
+            {
+                "const": "NONOCTAVE_FRACTAL_FBM_SIMPLEX",
+                "description": "FBM Fractal Simplex Noise. 9 octaves."
+            },
+            {
+                "const": "VIGOCTAVE_FRACTAL_RM_SIMPLEX",
+                "description": "Rigid Multi Fractal Simplex Noise. 10 octaves."
+            },
+            {
+                "const": "VIGOCTAVE_FRACTAL_BILLOW_SIMPLEX",
+                "description": "Billow Fractal Simplex Noise. 10 octaves."
+            },
+            {
+                "const": "VIGOCTAVE_FRACTAL_FBM_SIMPLEX",
+                "description": "FBM Fractal Simplex Noise. 10 octaves."
+            },
+            {
+                "const": "BIOCTAVE_SIMPLEX",
+                "description": "Basic, Smooth & Fast Simplex noise. Uses 2 octaves"
+            },
+            {
+                "const": "TRIOCTAVE_SIMPLEX",
+                "description": "Basic, Smooth & Fast Simplex noise. Uses 3 octaves"
+            },
+            {
+                "const": "QUADOCTAVE_SIMPLEX",
+                "description": "Basic, Smooth & Fast Simplex noise. Uses 4 octaves"
+            },
+            {
+                "const": "QUINTOCTAVE_SIMPLEX",
+                "description": "Basic, Smooth & Fast Simplex noise. Uses 5 octaves"
+            },
+            {
+                "const": "SEXOCTAVE_SIMPLEX",
+                "description": "Basic, Smooth & Fast Simplex noise. Uses 6 octaves"
+            },
+            {
+                "const": "SEPTOCTAVE_SIMPLEX",
+                "description": "Basic, Smooth & Fast Simplex noise. Uses 7 octaves"
+            },
+            {
+                "const": "OCTOCTAVE_SIMPLEX",
+                "description": "Basic, Smooth & Fast Simplex noise. Uses 8 octaves"
+            },
+            {
+                "const": "NONOCTAVE_SIMPLEX",
+                "description": "Basic, Smooth & Fast Simplex noise. Uses 9 octaves"
+            },
+            {
+                "const": "VIGOCTAVE_SIMPLEX",
+                "description": "Basic, Smooth & Fast Simplex noise. Uses 10 octaves"
+            },
+            {
+                "const": "GLOB",
+                "description": "Glob noise is like cellular, but with globs..."
+            },
+            {
+                "const": "GLOB_IRIS",
+                "description": "Glob noise is like cellular, but with globs..."
+            },
+            {
+                "const": "GLOB_IRIS_HALF",
+                "description": "Glob noise is like cellular, but with globs..."
+            },
+            {
+                "const": "GLOB_IRIS_DOUBLE",
+                "description": "Glob noise is like cellular, but with globs..."
+            },
+            {
+                "const": "GLOB_IRIS_THICK",
+                "description": "Glob noise is like cellular, but with globs..."
+            },
+            {
+                "const": "CUBIC",
+                "description": "Cubic Noise"
+            },
+            {
+                "const": "FRACTAL_CUBIC",
+                "description": "Fractal Cubic Noise"
+            },
+            {
+                "const": "FRACTAL_CUBIC_IRIS",
+                "description": "Fractal Cubic Noise With Iris Swirls"
+            },
+            {
+                "const": "FRACTAL_CUBIC_IRIS_THICK",
+                "description": "Fractal Cubic Noise With Iris Swirls"
+            },
+            {
+                "const": "FRACTAL_CUBIC_IRIS_HALF",
+                "description": "Fractal Cubic Noise With Iris Swirls"
+            },
+            {
+                "const": "FRACTAL_CUBIC_IRIS_DOUBLE",
+                "description": "Fractal Cubic Noise With Iris Swirls"
+            },
+            {
+                "const": "BIOCTAVE_FRACTAL_CUBIC",
+                "description": "Fractal Cubic Noise, 2 Octaves"
+            },
+            {
+                "const": "TRIOCTAVE_FRACTAL_CUBIC",
+                "description": "Fractal Cubic Noise, 3 Octaves"
+            },
+            {
+                "const": "QUADOCTAVE_FRACTAL_CUBIC",
+                "description": "Fractal Cubic Noise, 4 Octaves"
+            },
+            {
+                "const": "CUBIC_IRIS",
+                "description": "Cubic Noise"
+            },
+            {
+                "const": "CUBIC_IRIS_HALF",
+                "description": "Cubic Noise"
+            },
+            {
+                "const": "CUBIC_IRIS_DOUBLE",
+                "description": "Cubic Noise"
+            },
+            {
+                "const": "CUBIC_IRIS_THICK",
+                "description": "Cubic Noise"
+            },
+            {
+                "const": "CELLULAR_IRIS",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders. Cells are distorted using Iris styled wispy noise."
+            },
+            {
+                "const": "CELLULAR_IRIS_THICK",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders. Cells are distorted using Iris styled wispy noise."
+            },
+            {
+                "const": "CELLULAR_IRIS_DOUBLE",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders. Cells are distorted using Iris styled wispy noise."
+            },
+            {
+                "const": "CELLULAR_IRIS_HALF",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders. Cells are distorted using Iris styled wispy noise."
+            },
+            {
+                "const": "CELLULAR_HEIGHT",
+                "description": "Inverse of vascular, height gets to 1.0 as it approaches the center of a cell"
+            },
+            {
+                "const": "CELLULAR_HEIGHT_IRIS",
+                "description": "Inverse of vascular, height gets to 1.0 as it approaches the center of a cell, using the iris style."
+            },
+            {
+                "const": "CELLULAR_HEIGHT_IRIS_DOUBLE",
+                "description": "Inverse of vascular, height gets to 1.0 as it approaches the center of a cell, using the iris style."
+            },
+            {
+                "const": "CELLULAR_HEIGHT_IRIS_THICK",
+                "description": "Inverse of vascular, height gets to 1.0 as it approaches the center of a cell, using the iris style."
+            },
+            {
+                "const": "CELLULAR_HEIGHT_IRIS_HALF",
+                "description": "Inverse of vascular, height gets to 1.0 as it approaches the center of a cell, using the iris style."
+            },
+            {
+                "const": "VASCULAR_IRIS",
+                "description": "Vascular noise gets higher as the position nears a cell border. Cells are distorted using Iris styled wispy noise."
+            },
+            {
+                "const": "VASCULAR_IRIS_DOUBLE",
+                "description": "Vascular noise gets higher as the position nears a cell border. Cells are distorted using Iris styled wispy noise."
+            },
+            {
+                "const": "VASCULAR_IRIS_THICK",
+                "description": "Vascular noise gets higher as the position nears a cell border. Cells are distorted using Iris styled wispy noise."
+            },
+            {
+                "const": "VASCULAR_IRIS_HALF",
+                "description": "Vascular noise gets higher as the position nears a cell border. Cells are distorted using Iris styled wispy noise."
+            }
+        ]},
+        "enum-snippet-shaped-style": {"enum": []},
+        "obj-com-volmit-iris-engine-object-irisshapedgeneratorstyle": {
+            "anyOf": [
+                {
+                    "description": "This represents a generator with a min and max height",
+                    "type": "object",
+                    "properties": {
+                        "generator": {
+                            "anyOf": [
+                                {
+                                    "!required": true,
+                                    "type": "object",
+                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
+                                    "description": "generator\nThe generator id\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                                },
+                                {
+                                    "type": "string",
+                                    "$ref": "#/definitions/enum-snippet-style"
+                                }
+                            ],
+                            "description": "generator\nThe generator id\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                        },
+                        "min": {
+                            "type": "integer",
+                            "minimum": -256,
+                            "maximum": 256,
+                            "description": "min\nThe min block value\n   \nInteger\n\n    \n* Default Value is 0\n* Minimum allowed is -256\n* Maximum allowed is 256"
+                        },
+                        "max": {
+                            "type": "integer",
+                            "minimum": -256,
+                            "maximum": 256,
+                            "description": "max\nThe max block value\n   \nInteger\n\n    \n* Default Value is 0\n* Minimum allowed is -256\n* Maximum allowed is 256"
+                        }
+                    }
+                },
+                {"type": "string"}
+            ],
+            "description": "This represents a generator with a min and max height"
+        },
+        "erzexpressions": {"enum": []},
+        "enum-snippet-style": {"enum": []},
+        "enum-snippet-style-range": {"enum": []},
+        "obj-com-volmit-iris-engine-object-irisgeneratorstyle": {
+            "anyOf": [
+                {
+                    "description": "A gen style",
+                    "type": "object",
+                    "properties": {
+                        "style": {
+                            "type": "string",
+                            "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-noisestyle",
+                            "description": "style\nThe chance is 1 in CHANCE per interval\n   \nNoiseStyle\nStyles of noise\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid NoiseStyle (use ctrl+space for auto complete!)"
+                        },
+                        "zoom": {
+                            "type": "number",
+                            "minimum": 1.0E-5,
+                            "description": "zoom\nThe zoom of this style\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 1.0E-5"
+                        },
+                        "expression": {
+                            "type": "string",
+                            "$ref": "#/definitions/erzexpressions",
+                            "description": "expression\nInstead of using the style property, use a custom expression to represent this style.\n   \nIris Expression\n\nMust be a valid expressions (use ctrl+space for auto complete!)"
+                        },
+                        "multiplier": {
+                            "type": "number",
+                            "minimum": 1.0E-5,
+                            "description": "multiplier\nThe Output multiplier. Only used if parent is fracture.\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 1.0E-5"
+                        },
+                        "axialFracturing": {
+                            "type": "boolean",
+                            "description": "axialFracturing\nIf set to true, each dimension will be fractured with a different order of input coordinates. This is usually 2 or 3 times slower than normal.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                        },
+                        "fracture": {
+                            "anyOf": [
+                                {
+                                    "!required": false,
+                                    "type": "object",
+                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
+                                    "description": "fracture\nApply a generator to the coordinate field fed into this parent generator. I.e. Distort your generator with another generator.\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
+                                },
+                                {
+                                    "type": "string",
+                                    "$ref": "#/definitions/enum-snippet-style"
+                                }
+                            ],
+                            "description": "fracture\nApply a generator to the coordinate field fed into this parent generator. I.e. Distort your generator with another generator.\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
+                        },
+                        "exponent": {
+                            "type": "number",
+                            "minimum": 0.01562,
+                            "maximum": 64,
+                            "description": "exponent\nThe exponent\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.01562\n* Maximum allowed is 64.0"
+                        }
+                    }
+                },
+                {"type": "string"}
+            ],
+            "description": "A gen style"
+        },
+        "obj-com-volmit-iris-engine-object-irisstyledrange": {
+            "anyOf": [
+                {
+                    "description": "Represents a range styled with a custom generator",
+                    "type": "object",
+                    "properties": {
+                        "min": {
+                            "type": "number",
+                            "description": "min\nThe minimum value\n   \nNumber\n\n    \n* Default Value is 16.0"
+                        },
+                        "max": {
+                            "type": "number",
+                            "description": "max\nThe maximum value\n   \nNumber\n\n    \n* Default Value is 32.0"
+                        },
+                        "style": {
+                            "anyOf": [
+                                {
+                                    "!required": false,
+                                    "type": "object",
+                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
+                                    "description": "style\nThe style to pick the range\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                                },
+                                {
+                                    "type": "string",
+                                    "$ref": "#/definitions/enum-snippet-style"
+                                }
+                            ],
+                            "description": "style\nThe style to pick the range\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                        }
+                    }
+                },
+                {"type": "string"}
+            ],
+            "description": "Represents a range styled with a custom generator"
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://volmit.com/iris-schema/irisslopeclip.json",
+    "anyOf": [
+        {
+            "description": "Translate objects",
+            "type": "object",
+            "properties": {
+                "minimumSlope": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 255,
+                    "description": "minimumSlope\nThe minimum slope for placement\n   \nNumber\n\n    \n* Default Value is 0.0\n* Minimum allowed is 0.0\n* Maximum allowed is 255.0"
+                },
+                "maximumSlope": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 255,
+                    "description": "maximumSlope\nThe maximum slope for placement\n   \nNumber\n\n    \n* Default Value is 10.0\n* Minimum allowed is 0.0\n* Maximum allowed is 255.0"
+                }
+            }
+        },
+        {"type": "string"}
+    ],
+    "description": "Translate objects",
+    "definitions": {}
+}

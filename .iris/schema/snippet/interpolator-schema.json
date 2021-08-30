@@ -1,0 +1,135 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://volmit.com/iris-schema/irisinterpolator.json",
+    "anyOf": [
+        {
+            "description": "Configures rotation for iris",
+            "type": "object",
+            "properties": {
+                "function": {
+                    "type": "string",
+                    "$ref": "#/definitions/oneof-enum-com-volmit-iris-util-interpolation-interpolationmethod",
+                    "description": "function\nThe interpolation method when two biomes use different heights but this same generator\n   \nInterpolationMethod\nAn interpolation method (or function) is simply a method of smoothing a position based on surrounding points on a grid. Bicubic for example is smoother, but has 4 times the checks than Bilinear for example. Try using BILINEAR_STARCAST_9 for beautiful results.\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid InterpolationMethod (use ctrl+space for auto complete!)"
+                },
+                "horizontalScale": {
+                    "type": "number",
+                    "minimum": 1,
+                    "maximum": 8192,
+                    "description": "horizontalScale\nThe range checked horizontally. Smaller ranges yeild more detail but are not as smooth.\n   \nNumber\n\n    \n* Default Value is 7.0\n* Minimum allowed is 1.0\n* Maximum allowed is 8192.0"
+                }
+            }
+        },
+        {"type": "string"}
+    ],
+    "description": "Configures rotation for iris",
+    "definitions": {"oneof-enum-com-volmit-iris-util-interpolation-interpolationmethod": {"oneOf": [
+        {
+            "const": "NONE",
+            "description": "No interpolation. Nearest Neighbor (bad for terrain, great for performance)."
+        },
+        {
+            "const": "BILINEAR",
+            "description": "Uses 4 nearby points in a square to calculate a 2d slope. Very fast but creates square artifacts. See: https://en.wikipedia.org/wiki/Bilinear_interpolation"
+        },
+        {
+            "const": "STARCAST_3",
+            "description": "Starcast is Iris's own creation. It uses raytrace checks to find a horizontal boundary nearby. 3 Checks in a circle. Typically starcast is used with another interpolation method. See BILINEAR_STARCAST_9 For example. Starcast is meant to 'break up' large, abrupt cliffs to make cheap interpolation smoother."
+        },
+        {
+            "const": "STARCAST_6",
+            "description": "Starcast is Iris's own creation. It uses raytrace checks to find a horizontal boundary nearby. 6 Checks in a circle. Typically starcast is used with another interpolation method. See BILINEAR_STARCAST_9 For example. Starcast is meant to 'break up' large, abrupt cliffs to make cheap interpolation smoother."
+        },
+        {
+            "const": "STARCAST_9",
+            "description": "Starcast is Iris's own creation. It uses raytrace checks to find a horizontal boundary nearby. 9 Checks in a circle. Typically starcast is used with another interpolation method. See BILINEAR_STARCAST_9 For example. Starcast is meant to 'break up' large, abrupt cliffs to make cheap interpolation smoother."
+        },
+        {
+            "const": "STARCAST_12",
+            "description": "Starcast is Iris's own creation. It uses raytrace checks to find a horizontal boundary nearby. 12 Checks in a circle. Typically starcast is used with another interpolation method. See BILINEAR_STARCAST_9 For example. Starcast is meant to 'break up' large, abrupt cliffs to make cheap interpolation smoother."
+        },
+        {
+            "const": "BILINEAR_STARCAST_3",
+            "description": "Uses starcast to break up the abrupt sharp cliffs, then smooths the rest out with bilinear."
+        },
+        {
+            "const": "BILINEAR_STARCAST_6",
+            "description": "Uses starcast to break up the abrupt sharp cliffs, then smooths the rest out with bilinear."
+        },
+        {
+            "const": "BILINEAR_STARCAST_9",
+            "description": "Uses starcast to break up the abrupt sharp cliffs, then smooths the rest out with bilinear."
+        },
+        {
+            "const": "BILINEAR_STARCAST_12",
+            "description": "Uses starcast to break up the abrupt sharp cliffs, then smooths the rest out with bilinear."
+        },
+        {
+            "const": "HERMITE_STARCAST_3",
+            "description": "Uses starcast to break up the abrupt sharp cliffs, then smooths the rest out with hermite."
+        },
+        {
+            "const": "HERMITE_STARCAST_6",
+            "description": "Uses starcast to break up the abrupt sharp cliffs, then smooths the rest out with hermite."
+        },
+        {
+            "const": "HERMITE_STARCAST_9",
+            "description": "Uses starcast to break up the abrupt sharp cliffs, then smooths the rest out with hermite."
+        },
+        {
+            "const": "HERMITE_STARCAST_12",
+            "description": "Uses starcast to break up the abrupt sharp cliffs, then smooths the rest out with hermite."
+        },
+        {
+            "const": "BILINEAR_BEZIER",
+            "description": "Uses bilinear but on a bezier curve. See: https://en.wikipedia.org/wiki/Bezier_curve"
+        },
+        {
+            "const": "BILINEAR_PARAMETRIC_2",
+            "description": "Uses Bilinear but with parametric curves alpha 2."
+        },
+        {
+            "const": "BILINEAR_PARAMETRIC_4",
+            "description": "Uses Bilinear but with parametric curves alpha 4."
+        },
+        {
+            "const": "BILINEAR_PARAMETRIC_1_5",
+            "description": "Uses Bilinear but with parametric curves alpha 1.5."
+        },
+        {
+            "const": "BICUBIC",
+            "description": "Bicubic noise creates 4, 4-point splines for a total of 16 checks. Bcubic can go higher than expected and lower than expected right before a large change in slope."
+        },
+        {
+            "const": "HERMITE",
+            "description": "Hermite is similar to bicubic, but faster and it can be tuned a little bit"
+        },
+        {
+            "const": "CATMULL_ROM_SPLINE",
+            "description": "Essentially bicubic with zero tension"
+        },
+        {
+            "const": "HERMITE_TENSE",
+            "description": "Essentially bicubic with max tension"
+        },
+        {
+            "const": "HERMITE_LOOSE",
+            "description": "Hermite is similar to bicubic, this variant reduces the dimple artifacts of bicubic"
+        },
+        {
+            "const": "HERMITE_LOOSE_HALF_POSITIVE_BIAS",
+            "description": "Hermite is similar to bicubic, this variant reduces the dimple artifacts of bicubic"
+        },
+        {
+            "const": "HERMITE_LOOSE_HALF_NEGATIVE_BIAS",
+            "description": "Hermite is similar to bicubic, this variant reduces the dimple artifacts of bicubic"
+        },
+        {
+            "const": "HERMITE_LOOSE_FULL_POSITIVE_BIAS",
+            "description": "Hermite is similar to bicubic, this variant reduces the dimple artifacts of bicubic"
+        },
+        {
+            "const": "HERMITE_LOOSE_FULL_NEGATIVE_BIAS",
+            "description": "Hermite is similar to bicubic, this variant reduces the dimple artifacts of bicubic"
+        }
+    ]}}
+}

@@ -1,0 +1,38 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://volmit.com/iris-schema/irispotioneffect.json",
+    "anyOf": [
+        {
+            "description": "An iris potion effect",
+            "type": "object",
+            "properties": {
+                "potionEffect": {
+                    "type": "string",
+                    "description": "potionEffect\nThe potion effect to apply in this area\n   \nText\n\n    \n* Default Value is "
+                },
+                "strength": {
+                    "type": "integer",
+                    "minimum": -1,
+                    "maximum": 1024,
+                    "description": "strength\nThe Potion Strength or -1 to disable\n   \nInteger\n\n    \n* Default Value is -1\n* Minimum allowed is -1\n* Maximum allowed is 1024"
+                },
+                "ticks": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "description": "ticks\nThe time the potion will last for\n   \nInteger\n\n    \n* Default Value is 200\n* Minimum allowed is 1"
+                },
+                "ambient": {
+                    "type": "boolean",
+                    "description": "ambient\nIs the effect ambient\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                },
+                "particles": {
+                    "type": "boolean",
+                    "description": "particles\nIs the effect showing particles\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                }
+            }
+        },
+        {"type": "string"}
+    ],
+    "description": "An iris potion effect",
+    "definitions": {}
+}

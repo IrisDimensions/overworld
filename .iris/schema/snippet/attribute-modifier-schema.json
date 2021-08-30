@@ -1,0 +1,65 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://volmit.com/iris-schema/irisattributemodifier.json",
+    "anyOf": [
+        {
+            "description": "Represents an attribute modifier for an item or an entity. This allows you to create modifications to basic game attributes such as MAX_HEALTH or ARMOR_VALUE.",
+            "type": "object",
+            "properties": {
+                "attribute": {
+                    "type": "string",
+                    "$ref": "#/definitions/enum-org-bukkit-attribute-attribute",
+                    "description": "attribute\nThe Attribute type. This type is pulled from the game attributes. Zombie & Horse attributes will not work on non-zombie/horse entities.\nUsing an attribute on an item will have affects when held, or worn. There is no way to specify further granularity as the game picks this depending on the item type.\n   \nAttribute\n\nMust be a valid Attribute (use ctrl+space for auto complete!)"
+                },
+                "name": {
+                    "type": "string",
+                    "minLength": 2,
+                    "description": "name\nThe Attribute Name is used internally only for the game. This value should be unique to all other attributes applied to this item/entity. It is not shown in game.\n   \nText\n\n    \n* Default Value is \n* Minimum Length allowed is 2"
+                },
+                "operation": {
+                    "type": "string",
+                    "$ref": "#/definitions/enum-org-bukkit-attribute-attributemodifier-operation",
+                    "description": "operation\nThe application operation (add number is default). Add Number adds to the default value. \nAdd scalar_1 will multiply by 1 for example if the health is 20 and you multiply_scalar_1 by 0.5, the health will result in 30, not 10. Use negative values to achieve that.\n   \nOperation\n\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid Operation (use ctrl+space for auto complete!)"
+                },
+                "minAmount": {
+                    "type": "number",
+                    "description": "minAmount\nMinimum amount for this modifier. Iris randomly chooses an amount, this is the minimum it can choose randomly for this attribute.\n   \nNumber\n\n    \n* Default Value is 1.0"
+                },
+                "maxAmount": {
+                    "type": "number",
+                    "description": "maxAmount\nMaximum amount for this modifier Iris randomly chooses an amount, this is the maximum it can choose randomly for this attribute.\n   \nNumber\n\n    \n* Default Value is 1.0"
+                },
+                "chance": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1,
+                    "description": "chance\nThe chance that this attribute is applied (0 to 1). If the chance is 0.5 (50%), then Iris will only apply this attribute 50% of the time.\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.0\n* Maximum allowed is 1.0"
+                }
+            }
+        },
+        {"type": "string"}
+    ],
+    "description": "Represents an attribute modifier for an item or an entity. This allows you to create modifications to basic game attributes such as MAX_HEALTH or ARMOR_VALUE.",
+    "definitions": {
+        "enum-org-bukkit-attribute-attribute": {"enum": [
+            "GENERIC_MAX_HEALTH",
+            "GENERIC_FOLLOW_RANGE",
+            "GENERIC_KNOCKBACK_RESISTANCE",
+            "GENERIC_MOVEMENT_SPEED",
+            "GENERIC_FLYING_SPEED",
+            "GENERIC_ATTACK_DAMAGE",
+            "GENERIC_ATTACK_KNOCKBACK",
+            "GENERIC_ATTACK_SPEED",
+            "GENERIC_ARMOR",
+            "GENERIC_ARMOR_TOUGHNESS",
+            "GENERIC_LUCK",
+            "HORSE_JUMP_STRENGTH",
+            "ZOMBIE_SPAWN_REINFORCEMENTS"
+        ]},
+        "enum-org-bukkit-attribute-attributemodifier-operation": {"enum": [
+            "ADD_NUMBER",
+            "ADD_SCALAR",
+            "MULTIPLY_SCALAR_1"
+        ]}
+    }
+}

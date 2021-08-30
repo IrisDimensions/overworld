@@ -1,0 +1,39 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://volmit.com/iris-schema/iriscolor.json",
+    "anyOf": [
+        {
+            "description": "Represents a color",
+            "type": "object",
+            "properties": {
+                "hex": {
+                    "type": "string",
+                    "minLength": 6,
+                    "maxLength": 7,
+                    "description": "hex\nPass in a 6 digit hexadecimal color to fill R G and B values. You can also include the # symbol, but it's not required.\n   \nText\n\n* Minimum Length allowed is 6\n* Maximum Length allowed is 7"
+                },
+                "red": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 255,
+                    "description": "red\nRepresents the red channel. Only define this if you are not defining the hex value.\n   \nInteger\n\n    \n* Default Value is 0\n* Minimum allowed is 0\n* Maximum allowed is 255"
+                },
+                "green": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 255,
+                    "description": "green\nRepresents the green channel. Only define this if you are not defining the hex value.\n   \nInteger\n\n    \n* Default Value is 0\n* Minimum allowed is 0\n* Maximum allowed is 255"
+                },
+                "blue": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 255,
+                    "description": "blue\nRepresents the blue channel. Only define this if you are not defining the hex value.\n   \nInteger\n\n    \n* Default Value is 0\n* Minimum allowed is 0\n* Maximum allowed is 255"
+                }
+            }
+        },
+        {"type": "string"}
+    ],
+    "description": "Represents a color",
+    "definitions": {}
+}

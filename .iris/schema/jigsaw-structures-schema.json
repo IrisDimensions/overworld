@@ -1,0 +1,2167 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://volmit.com/iris-schema/irisjigsawstructure.json",
+    "description": "Represents a jigsaw structure",
+    "type": "object",
+    "properties": {
+        "preprocessors": {
+            "type": "array",
+            "minItems": 1,
+            "items": {"$ref": "#/definitions/erzscripts"},
+            "description": "preprocessors\nPreprocess this object in-memory when it's loaded, run scripts using the variable 'Iris.getPreprocessorObject()' and modify properties about this object before it's used.\n   \nList<Script>\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list.\nMust be a valid Script (use ctrl+space for auto complete!)"
+        },
+        "pieces": {
+            "type": "array",
+            "minItems": 1,
+            "items": {"$ref": "#/definitions/erzjigsaw-pieces"},
+            "description": "pieces\nThe starting pieces. Randomly chooses a starting piece, then connects pieces using the pools define in the starting piece.\n   \nList<Jigsaw Piece>\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list.\nMust be a valid Jigsaw Piece (use ctrl+space for auto complete!)"
+        },
+        "maxDepth": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 32,
+            "description": "maxDepth\nThe maximum pieces that can step out from the center piece\n   \nInteger\n\n    \n* Default Value is 9\n* Minimum allowed is 1\n* Maximum allowed is 32"
+        },
+        "useMaxPieceSizeForParallaxRadius": {
+            "type": "boolean",
+            "description": "useMaxPieceSizeForParallaxRadius\nJigsaw grows the parallax layer which slows iris down a bit. Since there are so many pieces, Iris takes the avg piece size and calculates the parallax radius from that. Unless your structures are using only the biggest pieces, your structure should fit in the chosen size fine. If you are seeing cut-off parts of your structures or broken terrain, turn this option on. This option will pick the biggest piece dimensions and multiply it by your (maxDepth+1) * 2 as the size to grow the parallax layer by. But typically keep this off.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+        },
+        "feature": {
+            "anyOf": [
+                {
+                    "!required": false,
+                    "type": "object",
+                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisfeature",
+                    "description": "feature\nAdd a noise feature to this village\n   \nFeature (Object)\nRepresents an Iris zone\n    \nYou can instead specify \"snippet/feature/some-name.json\" to use a snippet file instead of specifying it here."
+                },
+                {
+                    "type": "string",
+                    "$ref": "#/definitions/enum-snippet-feature"
+                }
+            ],
+            "description": "feature\nAdd a noise feature to this village\n   \nFeature (Object)\nRepresents an Iris zone\n    \nYou can instead specify \"snippet/feature/some-name.json\" to use a snippet file instead of specifying it here."
+        },
+        "terminate": {
+            "type": "boolean",
+            "description": "terminate\nIf set to true, iris will look for any pieces with only one connector in valid pools for edge connectors and attach them to 'terminate' the paths/piece connectors. Essentially it caps off ends. For example in a village, Iris would add houses to the ends of roads where possible. For terminators to be selected, they can only have one connector or they wont be chosen.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+        },
+        "overrideYRange": {
+            "anyOf": [
+                {
+                    "!required": false,
+                    "type": "object",
+                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisstyledrange",
+                    "description": "overrideYRange\nOverride the y range instead of placing on the height map\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here."
+                },
+                {
+                    "type": "string",
+                    "$ref": "#/definitions/enum-snippet-style-range"
+                }
+            ],
+            "description": "overrideYRange\nOverride the y range instead of placing on the height map\n   \nStyledRange (Object)\nRepresents a range styled with a custom generator\n    \nYou can instead specify \"snippet/style-range/some-name.json\" to use a snippet file instead of specifying it here."
+        },
+        "lockY": {
+            "type": "integer",
+            "description": "lockY\nForce Y to a specific value\n   \nInteger\n\n    \n* Default Value is -1"
+        }
+    },
+    "definitions": {
+        "oneof-enum-com-volmit-iris-engine-object-noisestyle": {"oneOf": [
+            {
+                "const": "STATIC",
+                "description": "White Noise is like static. Useful for block scattering but not terrain."
+            },
+            {
+                "const": "STATIC_BILINEAR",
+                "description": "White Noise is like static. Useful for block scattering but not terrain."
+            },
+            {
+                "const": "STATIC_BICUBIC",
+                "description": "White Noise is like static. Useful for block scattering but not terrain."
+            },
+            {
+                "const": "STATIC_HERMITE",
+                "description": "White Noise is like static. Useful for block scattering but not terrain."
+            },
+            {
+                "const": "IRIS",
+                "description": "Wispy Perlin-looking simplex noise. The 'iris' style noise."
+            },
+            {
+                "const": "CLOVER",
+                "description": "Clover Noise"
+            },
+            {
+                "const": "CLOVER_STARCAST_3",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_STARCAST_6",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_STARCAST_9",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_STARCAST_12",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_BILINEAR_STARCAST_3",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_BILINEAR_STARCAST_6",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_BILINEAR_STARCAST_9",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_BILINEAR_STARCAST_12",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_HERMITE_STARCAST_3",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_HERMITE_STARCAST_6",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_HERMITE_STARCAST_9",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_HERMITE_STARCAST_12",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_BILINEAR",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_BICUBIC",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_HERMITE",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "VASCULAR",
+                "description": "Vascular noise gets higher as the position nears a cell border."
+            },
+            {
+                "const": "FLAT",
+                "description": "It always returns 0.5"
+            },
+            {
+                "const": "CELLULAR",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_STARCAST_3",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_STARCAST_6",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_STARCAST_9",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_STARCAST_12",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_BILINEAR_STARCAST_3",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_BILINEAR_STARCAST_6",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_BILINEAR_STARCAST_9",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_BILINEAR_STARCAST_12",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_HERMITE_STARCAST_3",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_HERMITE_STARCAST_6",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_HERMITE_STARCAST_9",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_HERMITE_STARCAST_12",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_BILINEAR",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_BICUBIC",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_HERMITE",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "NOWHERE",
+                "description": "Classic German Engineering"
+            },
+            {
+                "const": "NOWHERE_CELLULAR",
+                "description": "Classic German Engineering"
+            },
+            {
+                "const": "NOWHERE_CLOVER",
+                "description": "Classic German Engineering"
+            },
+            {
+                "const": "NOWHERE_SIMPLEX",
+                "description": "Classic German Engineering"
+            },
+            {
+                "const": "NOWHERE_GLOB",
+                "description": "Classic German Engineering"
+            },
+            {
+                "const": "NOWHERE_VASCULAR",
+                "description": "Classic German Engineering"
+            },
+            {
+                "const": "NOWHERE_CUBIC",
+                "description": "Classic German Engineering"
+            },
+            {
+                "const": "NOWHERE_SUPERFRACTAL",
+                "description": "Classic German Engineering"
+            },
+            {
+                "const": "NOWHERE_FRACTAL",
+                "description": "Classic German Engineering"
+            },
+            {
+                "const": "IRIS_DOUBLE",
+                "description": "Wispy Perlin-looking simplex noise. The 'iris' style noise."
+            },
+            {
+                "const": "IRIS_THICK",
+                "description": "Wispy Perlin-looking simplex noise. The 'iris' style noise."
+            },
+            {
+                "const": "IRIS_HALF",
+                "description": "Wispy Perlin-looking simplex noise. The 'iris' style noise."
+            },
+            {
+                "const": "SIMPLEX",
+                "description": "Basic, Smooth & Fast Simplex noise."
+            },
+            {
+                "const": "FRACTAL_SMOKE",
+                "description": "Very Detailed smoke using simplex fractured with fractal billow simplex at high octaves."
+            },
+            {
+                "const": "VASCULAR_THIN",
+                "description": "Thinner Veins."
+            },
+            {
+                "const": "SIMPLEX_CELLS",
+                "description": "Cells of simplex noise"
+            },
+            {
+                "const": "SIMPLEX_VASCULAR",
+                "description": "Veins of simplex noise"
+            },
+            {
+                "const": "FRACTAL_WATER",
+                "description": "Very Detailed fluid using simplex fractured with fractal billow simplex at high octaves."
+            },
+            {
+                "const": "PERLIN",
+                "description": "Perlin. Like simplex but more natural"
+            },
+            {
+                "const": "PERLIN_IRIS",
+                "description": "Perlin. Like simplex but more natural"
+            },
+            {
+                "const": "PERLIN_IRIS_HALF",
+                "description": "Perlin. Like simplex but more natural"
+            },
+            {
+                "const": "PERLIN_IRIS_DOUBLE",
+                "description": "Perlin. Like simplex but more natural"
+            },
+            {
+                "const": "PERLIN_IRIS_THICK",
+                "description": "Perlin. Like simplex but more natural"
+            },
+            {
+                "const": "FRACTAL_BILLOW_PERLIN",
+                "description": "Billow Fractal Perlin Noise."
+            },
+            {
+                "const": "BIOCTAVE_FRACTAL_BILLOW_PERLIN",
+                "description": "Billow Fractal Perlin Noise. 2 Octaves"
+            },
+            {
+                "const": "FRACTAL_BILLOW_SIMPLEX",
+                "description": "Billow Fractal Simplex Noise. Single octave."
+            },
+            {
+                "const": "FRACTAL_FBM_SIMPLEX",
+                "description": "FBM Fractal Simplex Noise. Single octave."
+            },
+            {
+                "const": "FRACTAL_BILLOW_IRIS",
+                "description": "Billow Fractal Iris Noise. Single octave."
+            },
+            {
+                "const": "FRACTAL_FBM_IRIS",
+                "description": "FBM Fractal Iris Noise. Single octave."
+            },
+            {
+                "const": "FRACTAL_BILLOW_IRIS_HALF",
+                "description": "Billow Fractal Iris Noise. Single octave."
+            },
+            {
+                "const": "FRACTAL_FBM_IRIS_HALF",
+                "description": "FBM Fractal Iris Noise. Single octave."
+            },
+            {
+                "const": "FRACTAL_BILLOW_IRIS_THICK",
+                "description": "Billow Fractal Iris Noise. Single octave."
+            },
+            {
+                "const": "FRACTAL_FBM_IRIS_THICK",
+                "description": "FBM Fractal Iris Noise. Single octave."
+            },
+            {
+                "const": "FRACTAL_RM_SIMPLEX",
+                "description": "Rigid Multi Fractal Simplex Noise. Single octave."
+            },
+            {
+                "const": "BIOCTAVE_FRACTAL_BILLOW_SIMPLEX",
+                "description": "Billow Fractal Simplex Noise. 2 octaves."
+            },
+            {
+                "const": "BIOCTAVE_FRACTAL_FBM_SIMPLEX",
+                "description": "FBM Fractal Simplex Noise. 2 octaves."
+            },
+            {
+                "const": "BIOCTAVE_FRACTAL_RM_SIMPLEX",
+                "description": "Rigid Multi Fractal Simplex Noise. 2 octaves."
+            },
+            {
+                "const": "TRIOCTAVE_FRACTAL_RM_SIMPLEX",
+                "description": "Rigid Multi Fractal Simplex Noise. 3 octaves."
+            },
+            {
+                "const": "TRIOCTAVE_FRACTAL_BILLOW_SIMPLEX",
+                "description": "Billow Fractal Simplex Noise. 3 octaves."
+            },
+            {
+                "const": "TRIOCTAVE_FRACTAL_FBM_SIMPLEX",
+                "description": "FBM Fractal Simplex Noise. 3 octaves."
+            },
+            {
+                "const": "QUADOCTAVE_FRACTAL_RM_SIMPLEX",
+                "description": "Rigid Multi Fractal Simplex Noise. 4 octaves."
+            },
+            {
+                "const": "QUADOCTAVE_FRACTAL_BILLOW_SIMPLEX",
+                "description": "Billow Fractal Simplex Noise. 4 octaves."
+            },
+            {
+                "const": "QUADOCTAVE_FRACTAL_FBM_SIMPLEX",
+                "description": "FBM Fractal Simplex Noise. 4 octaves."
+            },
+            {
+                "const": "QUINTOCTAVE_FRACTAL_RM_SIMPLEX",
+                "description": "Rigid Multi Fractal Simplex Noise. 5 octaves."
+            },
+            {
+                "const": "QUINTOCTAVE_FRACTAL_BILLOW_SIMPLEX",
+                "description": "Billow Fractal Simplex Noise. 5 octaves."
+            },
+            {
+                "const": "QUINTOCTAVE_FRACTAL_FBM_SIMPLEX",
+                "description": "FBM Fractal Simplex Noise. 5 octaves."
+            },
+            {
+                "const": "SEXOCTAVE_FRACTAL_RM_SIMPLEX",
+                "description": "Rigid Multi Fractal Simplex Noise. 6 octaves."
+            },
+            {
+                "const": "SEXOCTAVE_FRACTAL_BILLOW_SIMPLEX",
+                "description": "Billow Fractal Simplex Noise. 6 octaves."
+            },
+            {
+                "const": "SEXOCTAVE_FRACTAL_FBM_SIMPLEX",
+                "description": "FBM Fractal Simplex Noise. 6 octaves."
+            },
+            {
+                "const": "SEPTOCTAVE_FRACTAL_RM_SIMPLEX",
+                "description": "Rigid Multi Fractal Simplex Noise. 7 octaves."
+            },
+            {
+                "const": "SEPTOCTAVE_FRACTAL_BILLOW_SIMPLEX",
+                "description": "Billow Fractal Simplex Noise. 7 octaves."
+            },
+            {
+                "const": "SEPTOCTAVE_FRACTAL_FBM_SIMPLEX",
+                "description": "FBM Fractal Simplex Noise. 7 octaves."
+            },
+            {
+                "const": "OCTOCTAVE_FRACTAL_RM_SIMPLEX",
+                "description": "Rigid Multi Fractal Simplex Noise. 8 octaves."
+            },
+            {
+                "const": "OCTOCTAVE_FRACTAL_BILLOW_SIMPLEX",
+                "description": "Billow Fractal Simplex Noise. 8 octaves."
+            },
+            {
+                "const": "OCTOCTAVE_FRACTAL_FBM_SIMPLEX",
+                "description": "FBM Fractal Simplex Noise. 8 octaves."
+            },
+            {
+                "const": "NONOCTAVE_FRACTAL_RM_SIMPLEX",
+                "description": "Rigid Multi Fractal Simplex Noise. 9 octaves."
+            },
+            {
+                "const": "NONOCTAVE_FRACTAL_BILLOW_SIMPLEX",
+                "description": "Billow Fractal Simplex Noise. 9 octaves."
+            },
+            {
+                "const": "NONOCTAVE_FRACTAL_FBM_SIMPLEX",
+                "description": "FBM Fractal Simplex Noise. 9 octaves."
+            },
+            {
+                "const": "VIGOCTAVE_FRACTAL_RM_SIMPLEX",
+                "description": "Rigid Multi Fractal Simplex Noise. 10 octaves."
+            },
+            {
+                "const": "VIGOCTAVE_FRACTAL_BILLOW_SIMPLEX",
+                "description": "Billow Fractal Simplex Noise. 10 octaves."
+            },
+            {
+                "const": "VIGOCTAVE_FRACTAL_FBM_SIMPLEX",
+                "description": "FBM Fractal Simplex Noise. 10 octaves."
+            },
+            {
+                "const": "BIOCTAVE_SIMPLEX",
+                "description": "Basic, Smooth & Fast Simplex noise. Uses 2 octaves"
+            },
+            {
+                "const": "TRIOCTAVE_SIMPLEX",
+                "description": "Basic, Smooth & Fast Simplex noise. Uses 3 octaves"
+            },
+            {
+                "const": "QUADOCTAVE_SIMPLEX",
+                "description": "Basic, Smooth & Fast Simplex noise. Uses 4 octaves"
+            },
+            {
+                "const": "QUINTOCTAVE_SIMPLEX",
+                "description": "Basic, Smooth & Fast Simplex noise. Uses 5 octaves"
+            },
+            {
+                "const": "SEXOCTAVE_SIMPLEX",
+                "description": "Basic, Smooth & Fast Simplex noise. Uses 6 octaves"
+            },
+            {
+                "const": "SEPTOCTAVE_SIMPLEX",
+                "description": "Basic, Smooth & Fast Simplex noise. Uses 7 octaves"
+            },
+            {
+                "const": "OCTOCTAVE_SIMPLEX",
+                "description": "Basic, Smooth & Fast Simplex noise. Uses 8 octaves"
+            },
+            {
+                "const": "NONOCTAVE_SIMPLEX",
+                "description": "Basic, Smooth & Fast Simplex noise. Uses 9 octaves"
+            },
+            {
+                "const": "VIGOCTAVE_SIMPLEX",
+                "description": "Basic, Smooth & Fast Simplex noise. Uses 10 octaves"
+            },
+            {
+                "const": "GLOB",
+                "description": "Glob noise is like cellular, but with globs..."
+            },
+            {
+                "const": "GLOB_IRIS",
+                "description": "Glob noise is like cellular, but with globs..."
+            },
+            {
+                "const": "GLOB_IRIS_HALF",
+                "description": "Glob noise is like cellular, but with globs..."
+            },
+            {
+                "const": "GLOB_IRIS_DOUBLE",
+                "description": "Glob noise is like cellular, but with globs..."
+            },
+            {
+                "const": "GLOB_IRIS_THICK",
+                "description": "Glob noise is like cellular, but with globs..."
+            },
+            {
+                "const": "CUBIC",
+                "description": "Cubic Noise"
+            },
+            {
+                "const": "FRACTAL_CUBIC",
+                "description": "Fractal Cubic Noise"
+            },
+            {
+                "const": "FRACTAL_CUBIC_IRIS",
+                "description": "Fractal Cubic Noise With Iris Swirls"
+            },
+            {
+                "const": "FRACTAL_CUBIC_IRIS_THICK",
+                "description": "Fractal Cubic Noise With Iris Swirls"
+            },
+            {
+                "const": "FRACTAL_CUBIC_IRIS_HALF",
+                "description": "Fractal Cubic Noise With Iris Swirls"
+            },
+            {
+                "const": "FRACTAL_CUBIC_IRIS_DOUBLE",
+                "description": "Fractal Cubic Noise With Iris Swirls"
+            },
+            {
+                "const": "BIOCTAVE_FRACTAL_CUBIC",
+                "description": "Fractal Cubic Noise, 2 Octaves"
+            },
+            {
+                "const": "TRIOCTAVE_FRACTAL_CUBIC",
+                "description": "Fractal Cubic Noise, 3 Octaves"
+            },
+            {
+                "const": "QUADOCTAVE_FRACTAL_CUBIC",
+                "description": "Fractal Cubic Noise, 4 Octaves"
+            },
+            {
+                "const": "CUBIC_IRIS",
+                "description": "Cubic Noise"
+            },
+            {
+                "const": "CUBIC_IRIS_HALF",
+                "description": "Cubic Noise"
+            },
+            {
+                "const": "CUBIC_IRIS_DOUBLE",
+                "description": "Cubic Noise"
+            },
+            {
+                "const": "CUBIC_IRIS_THICK",
+                "description": "Cubic Noise"
+            },
+            {
+                "const": "CELLULAR_IRIS",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders. Cells are distorted using Iris styled wispy noise."
+            },
+            {
+                "const": "CELLULAR_IRIS_THICK",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders. Cells are distorted using Iris styled wispy noise."
+            },
+            {
+                "const": "CELLULAR_IRIS_DOUBLE",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders. Cells are distorted using Iris styled wispy noise."
+            },
+            {
+                "const": "CELLULAR_IRIS_HALF",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders. Cells are distorted using Iris styled wispy noise."
+            },
+            {
+                "const": "CELLULAR_HEIGHT",
+                "description": "Inverse of vascular, height gets to 1.0 as it approaches the center of a cell"
+            },
+            {
+                "const": "CELLULAR_HEIGHT_IRIS",
+                "description": "Inverse of vascular, height gets to 1.0 as it approaches the center of a cell, using the iris style."
+            },
+            {
+                "const": "CELLULAR_HEIGHT_IRIS_DOUBLE",
+                "description": "Inverse of vascular, height gets to 1.0 as it approaches the center of a cell, using the iris style."
+            },
+            {
+                "const": "CELLULAR_HEIGHT_IRIS_THICK",
+                "description": "Inverse of vascular, height gets to 1.0 as it approaches the center of a cell, using the iris style."
+            },
+            {
+                "const": "CELLULAR_HEIGHT_IRIS_HALF",
+                "description": "Inverse of vascular, height gets to 1.0 as it approaches the center of a cell, using the iris style."
+            },
+            {
+                "const": "VASCULAR_IRIS",
+                "description": "Vascular noise gets higher as the position nears a cell border. Cells are distorted using Iris styled wispy noise."
+            },
+            {
+                "const": "VASCULAR_IRIS_DOUBLE",
+                "description": "Vascular noise gets higher as the position nears a cell border. Cells are distorted using Iris styled wispy noise."
+            },
+            {
+                "const": "VASCULAR_IRIS_THICK",
+                "description": "Vascular noise gets higher as the position nears a cell border. Cells are distorted using Iris styled wispy noise."
+            },
+            {
+                "const": "VASCULAR_IRIS_HALF",
+                "description": "Vascular noise gets higher as the position nears a cell border. Cells are distorted using Iris styled wispy noise."
+            }
+        ]},
+        "oneof-enum-com-volmit-iris-util-interpolation-interpolationmethod": {"oneOf": [
+            {
+                "const": "NONE",
+                "description": "No interpolation. Nearest Neighbor (bad for terrain, great for performance)."
+            },
+            {
+                "const": "BILINEAR",
+                "description": "Uses 4 nearby points in a square to calculate a 2d slope. Very fast but creates square artifacts. See: https://en.wikipedia.org/wiki/Bilinear_interpolation"
+            },
+            {
+                "const": "STARCAST_3",
+                "description": "Starcast is Iris's own creation. It uses raytrace checks to find a horizontal boundary nearby. 3 Checks in a circle. Typically starcast is used with another interpolation method. See BILINEAR_STARCAST_9 For example. Starcast is meant to 'break up' large, abrupt cliffs to make cheap interpolation smoother."
+            },
+            {
+                "const": "STARCAST_6",
+                "description": "Starcast is Iris's own creation. It uses raytrace checks to find a horizontal boundary nearby. 6 Checks in a circle. Typically starcast is used with another interpolation method. See BILINEAR_STARCAST_9 For example. Starcast is meant to 'break up' large, abrupt cliffs to make cheap interpolation smoother."
+            },
+            {
+                "const": "STARCAST_9",
+                "description": "Starcast is Iris's own creation. It uses raytrace checks to find a horizontal boundary nearby. 9 Checks in a circle. Typically starcast is used with another interpolation method. See BILINEAR_STARCAST_9 For example. Starcast is meant to 'break up' large, abrupt cliffs to make cheap interpolation smoother."
+            },
+            {
+                "const": "STARCAST_12",
+                "description": "Starcast is Iris's own creation. It uses raytrace checks to find a horizontal boundary nearby. 12 Checks in a circle. Typically starcast is used with another interpolation method. See BILINEAR_STARCAST_9 For example. Starcast is meant to 'break up' large, abrupt cliffs to make cheap interpolation smoother."
+            },
+            {
+                "const": "BILINEAR_STARCAST_3",
+                "description": "Uses starcast to break up the abrupt sharp cliffs, then smooths the rest out with bilinear."
+            },
+            {
+                "const": "BILINEAR_STARCAST_6",
+                "description": "Uses starcast to break up the abrupt sharp cliffs, then smooths the rest out with bilinear."
+            },
+            {
+                "const": "BILINEAR_STARCAST_9",
+                "description": "Uses starcast to break up the abrupt sharp cliffs, then smooths the rest out with bilinear."
+            },
+            {
+                "const": "BILINEAR_STARCAST_12",
+                "description": "Uses starcast to break up the abrupt sharp cliffs, then smooths the rest out with bilinear."
+            },
+            {
+                "const": "HERMITE_STARCAST_3",
+                "description": "Uses starcast to break up the abrupt sharp cliffs, then smooths the rest out with hermite."
+            },
+            {
+                "const": "HERMITE_STARCAST_6",
+                "description": "Uses starcast to break up the abrupt sharp cliffs, then smooths the rest out with hermite."
+            },
+            {
+                "const": "HERMITE_STARCAST_9",
+                "description": "Uses starcast to break up the abrupt sharp cliffs, then smooths the rest out with hermite."
+            },
+            {
+                "const": "HERMITE_STARCAST_12",
+                "description": "Uses starcast to break up the abrupt sharp cliffs, then smooths the rest out with hermite."
+            },
+            {
+                "const": "BILINEAR_BEZIER",
+                "description": "Uses bilinear but on a bezier curve. See: https://en.wikipedia.org/wiki/Bezier_curve"
+            },
+            {
+                "const": "BILINEAR_PARAMETRIC_2",
+                "description": "Uses Bilinear but with parametric curves alpha 2."
+            },
+            {
+                "const": "BILINEAR_PARAMETRIC_4",
+                "description": "Uses Bilinear but with parametric curves alpha 4."
+            },
+            {
+                "const": "BILINEAR_PARAMETRIC_1_5",
+                "description": "Uses Bilinear but with parametric curves alpha 1.5."
+            },
+            {
+                "const": "BICUBIC",
+                "description": "Bicubic noise creates 4, 4-point splines for a total of 16 checks. Bcubic can go higher than expected and lower than expected right before a large change in slope."
+            },
+            {
+                "const": "HERMITE",
+                "description": "Hermite is similar to bicubic, but faster and it can be tuned a little bit"
+            },
+            {
+                "const": "CATMULL_ROM_SPLINE",
+                "description": "Essentially bicubic with zero tension"
+            },
+            {
+                "const": "HERMITE_TENSE",
+                "description": "Essentially bicubic with max tension"
+            },
+            {
+                "const": "HERMITE_LOOSE",
+                "description": "Hermite is similar to bicubic, this variant reduces the dimple artifacts of bicubic"
+            },
+            {
+                "const": "HERMITE_LOOSE_HALF_POSITIVE_BIAS",
+                "description": "Hermite is similar to bicubic, this variant reduces the dimple artifacts of bicubic"
+            },
+            {
+                "const": "HERMITE_LOOSE_HALF_NEGATIVE_BIAS",
+                "description": "Hermite is similar to bicubic, this variant reduces the dimple artifacts of bicubic"
+            },
+            {
+                "const": "HERMITE_LOOSE_FULL_POSITIVE_BIAS",
+                "description": "Hermite is similar to bicubic, this variant reduces the dimple artifacts of bicubic"
+            },
+            {
+                "const": "HERMITE_LOOSE_FULL_NEGATIVE_BIAS",
+                "description": "Hermite is similar to bicubic, this variant reduces the dimple artifacts of bicubic"
+            }
+        ]},
+        "erzspawners": {"enum": [
+            "frozen/land-hostile",
+            "tropical/land-hostile",
+            "tundra/land-cave",
+            "tropical/beach",
+            "pillager-respawn",
+            "tropical/land-hostile-day",
+            "pillager",
+            "temperate/land-cave",
+            "dank",
+            "tropical/land-cave",
+            "silverfish",
+            "swamp/land-hostile",
+            "swamp/land-passive",
+            "hot/land-cave",
+            "villager",
+            "tundra/land-passive",
+            "frozen/land-passive",
+            "swamp/land-cave",
+            "hives",
+            "mushroom/land-passive",
+            "frozen/land-cave",
+            "mushroom/land-hostile",
+            "hot/land-passive",
+            "mushroom/land-cave",
+            "temperate/land-passive",
+            "temperate/land-hostile",
+            "tundra/land-hostile",
+            "hot/land-hostile",
+            "tropical/land-passive"
+        ]},
+        "erzscripts": {"enum": []},
+        "obj-com-volmit-iris-engine-object-irisgeneratorstyle": {
+            "anyOf": [
+                {
+                    "description": "A gen style",
+                    "type": "object",
+                    "properties": {
+                        "style": {
+                            "type": "string",
+                            "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-noisestyle",
+                            "description": "style\nThe chance is 1 in CHANCE per interval\n   \nNoiseStyle\nStyles of noise\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid NoiseStyle (use ctrl+space for auto complete!)"
+                        },
+                        "zoom": {
+                            "type": "number",
+                            "minimum": 1.0E-5,
+                            "description": "zoom\nThe zoom of this style\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 1.0E-5"
+                        },
+                        "expression": {
+                            "type": "string",
+                            "$ref": "#/definitions/erzexpressions",
+                            "description": "expression\nInstead of using the style property, use a custom expression to represent this style.\n   \nIris Expression\n\nMust be a valid expressions (use ctrl+space for auto complete!)"
+                        },
+                        "multiplier": {
+                            "type": "number",
+                            "minimum": 1.0E-5,
+                            "description": "multiplier\nThe Output multiplier. Only used if parent is fracture.\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 1.0E-5"
+                        },
+                        "axialFracturing": {
+                            "type": "boolean",
+                            "description": "axialFracturing\nIf set to true, each dimension will be fractured with a different order of input coordinates. This is usually 2 or 3 times slower than normal.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                        },
+                        "fracture": {
+                            "anyOf": [
+                                {
+                                    "!required": false,
+                                    "type": "object",
+                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
+                                    "description": "fracture\nApply a generator to the coordinate field fed into this parent generator. I.e. Distort your generator with another generator.\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
+                                },
+                                {
+                                    "type": "string",
+                                    "$ref": "#/definitions/enum-snippet-style"
+                                }
+                            ],
+                            "description": "fracture\nApply a generator to the coordinate field fed into this parent generator. I.e. Distort your generator with another generator.\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
+                        },
+                        "exponent": {
+                            "type": "number",
+                            "minimum": 0.01562,
+                            "maximum": 64,
+                            "description": "exponent\nThe exponent\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.01562\n* Maximum allowed is 64.0"
+                        }
+                    }
+                },
+                {"type": "string"}
+            ],
+            "description": "A gen style"
+        },
+        "enum-snippet-feature": {"enum": []},
+        "erzbiomes": {"enum": [
+            "mountain/hills",
+            "swamp/sea/ocean",
+            "mushroom/forest",
+            "mountain/middle",
+            "ocean/shore/beach",
+            "tropical/beach",
+            "savanna/savanna",
+            "tropical/rainforest-island",
+            "mountain/shore/beach",
+            "mushroom/plains",
+            "temperate/highlands",
+            "mesa/plateau",
+            "tropical/highlands",
+            "tundra/forest",
+            "ocean/warm",
+            "swamp/denmyre",
+            "hot/shore/beach",
+            "temperate/longtree-forest",
+            "tropical/sea/river-steep",
+            "tropical/volcanoes-lava",
+            "mushroom/shore/beach",
+            "temperate/lush-plains-yellow",
+            "temperate/flower-forest",
+            "tundra/taiga",
+            "frozen/sea/ocean",
+            "temperate/osaka-red-forest",
+            "mesa/cliffs",
+            "tundra/autumn",
+            "mushroom/crimson-forest",
+            "util/ruined_portals",
+            "mesa/valleys",
+            "tropical/sea/ocean",
+            "hot/shore/beach-grass",
+            "mesa/green",
+            "mesa/shore/beach",
+            "mountain/sea/river-soft",
+            "tropical/sea/coral-ocean-cliffs",
+            "savanna/cliff",
+            "tundra/forest-cliffs",
+            "mountain/plains",
+            "temperate/sea/ocean-deep",
+            "temperate/lush-plains",
+            "temperate/shore/beach",
+            "frozen/vander",
+            "mountain/cliffs",
+            "frozen/spruce-plains",
+            "savanna/forest",
+            "tropical/rainforest",
+            "subterrestrial-palette/red-sandstone-cavern",
+            "hot/desert-dunes-red",
+            "tundra/magic-forest",
+            "subterrestrial-palette/sandstone-cavern",
+            "hot/sea/ocean-cliffs",
+            "tundra/mountains",
+            "tropical/mountain",
+            "tropical/mountain-plains",
+            "tropical/volcanoes",
+            "temperate/sea/ocean",
+            "tundra/bonsai-forest",
+            "temperate/shore/oak-beach",
+            "mesa/dark",
+            "tundra/shore/beach",
+            "hot/sea/ocean",
+            "mesa/blue",
+            "subterrestrial-palette/calcite-cavern",
+            "swamp/shore/beach",
+            "mesa/yellow",
+            "subterrestrial-palette/deepslate-cavern",
+            "tropical/beach-charred",
+            "tundra/shore/beach-stone",
+            "frozen/mountains",
+            "swamp/marsh-rotten",
+            "frozen/sea/river",
+            "savanna/shore/beach",
+            "hot/mountain-plains",
+            "tundra/mountains-cliffs",
+            "mountain/forest",
+            "tropical/mountain-extreme",
+            "subterrestrial-palette/rocky-cavern",
+            "temperate/stranged-plains",
+            "tundra/sea/river-rocky",
+            "mushroom/sea/ocean",
+            "tropical/plains",
+            "tropical/jungle-denmyre",
+            "frozen/sea/frozen-parent-river",
+            "subterrestrial-palette/drip-cavern-minimal",
+            "frozen/shore/beach",
+            "mushroom/sea/lake",
+            "tundra/sea/river",
+            "temperate/birch-denmyre",
+            "tropical/mountain-water",
+            "frozen/pine-hills",
+            "tropical/beach-bamboo",
+            "ocean/deep",
+            "frozen/plains",
+            "frozen/redwood-forest",
+            "subterrestrial-palette/amethyst-cavern",
+            "mesa/plateau-dirt-high",
+            "mesa/red",
+            "mountain/plain-hills",
+            "subterrestrial-palette/drip-cavern",
+            "swamp/marsh",
+            "temperate/island",
+            "tundra/redwood-cliffs",
+            "tropical/rainforest-wicked",
+            "temperate/lush-plains-red",
+            "temperate/oak-forest",
+            "temperate/birch-forest",
+            "tropical/volcanic-plains",
+            "tropical/plains-hills",
+            "hot/desert-dunes",
+            "subterrestrial-palette/volcanic-cavern",
+            "mountain/forest-hills",
+            "temperate/meadows",
+            "swamp/cambian-drift",
+            "tropical/rainforest-hills",
+            "tropical/rainforest-wicked-child",
+            "swamp/sea/lake",
+            "swamp/roofed-wayward",
+            "temperate/birch-thin",
+            "hot/mountain-middle",
+            "mountain/mountain",
+            "frozen/sea/frozen-river-ice",
+            "temperate/plateau",
+            "tropical/sea/river-soft",
+            "mesa/plateau-high",
+            "savanna/plateau",
+            "frozen/pines",
+            "temperate/combo-forest",
+            "frozen/mountain",
+            "temperate/sea/river",
+            "mountain/sea/river",
+            "hot/mountain",
+            "mesa/plateau-dirt",
+            "mushroom/forest-hills",
+            "hot/mountain-cliffs",
+            "temperate/osaka-violet-forest",
+            "hot/oasis",
+            "frozen/peak",
+            "tropical/island-beach",
+            "temperate/plains",
+            "mushroom/warped-forest",
+            "hot/sea/river",
+            "temperate/wilds",
+            "frozen/hills",
+            "swamp/willow-forest",
+            "frozen/pine-plains",
+            "tropical/wilds",
+            "tundra/ether",
+            "mesa/mesa",
+            "tropical/mountain-middle",
+            "tundra/sea/lake",
+            "frozen/mountain-cliffs",
+            "swamp/sea/ocean-tree",
+            "tundra/sequia-redwoods",
+            "mountain/main",
+            "ocean/ocean",
+            "savanna/acacia-denmyre",
+            "swamp/roofed-forest",
+            "tundra/spruce-denmyre",
+            "mesa/sea/river",
+            "tropical/submerged-volcanic",
+            "frozen/spruce-hills",
+            "temperate/oak-denmyre",
+            "tundra/redwood-forest",
+            "ocean/warm-bottom",
+            "tropical/bamboo-forest",
+            "frozen/mountain-middle",
+            "tropical/sea/coral-ocean"
+        ]},
+        "obj-com-volmit-iris-engine-object-irisfeature": {
+            "anyOf": [
+                {
+                    "description": "Represents an Iris zone",
+                    "type": "object",
+                    "properties": {
+                        "blockRadius": {
+                            "type": "number",
+                            "description": "blockRadius\nThe block radius of this zone\n   \nNumber\n\n    \n* Default Value is 32.0"
+                        },
+                        "objectChance": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1,
+                            "description": "objectChance\nThe chance an object that should be place actually will place. Set to below 1 to affect objects in this zone\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.0\n* Maximum allowed is 1.0"
+                        },
+                        "customBiome": {
+                            "type": "string",
+                            "$ref": "#/definitions/erzbiomes",
+                            "description": "customBiome\nApply a custom biome here\n   \nIris Biome\n\nMust be a valid biomes (use ctrl+space for auto complete!)"
+                        },
+                        "biomeStrengthThreshold": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1,
+                            "description": "biomeStrengthThreshold\nHow much strength before the biome is applied.\n   \nNumber\n\n    \n* Default Value is 0.75\n* Minimum allowed is 0.0\n* Maximum allowed is 1.0"
+                        },
+                        "interpolationRadius": {
+                            "type": "number",
+                            "description": "interpolationRadius\nThe interpolation radius of this zone\n   \nNumber\n\n    \n* Default Value is 7.0"
+                        },
+                        "strength": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1,
+                            "description": "strength\nThe strength of this effect\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.0\n* Maximum allowed is 1.0"
+                        },
+                        "interpolator": {
+                            "type": "string",
+                            "$ref": "#/definitions/oneof-enum-com-volmit-iris-util-interpolation-interpolationmethod",
+                            "description": "interpolator\nThe interpolator to use for smoothing the strength\n   \nInterpolationMethod\nAn interpolation method (or function) is simply a method of smoothing a position based on surrounding points on a grid. Bicubic for example is smoother, but has 4 times the checks than Bilinear for example. Try using BILINEAR_STARCAST_9 for beautiful results.\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid InterpolationMethod (use ctrl+space for auto complete!)"
+                        },
+                        "shiftHeight": {
+                            "type": "number",
+                            "description": "shiftHeight\nIf set, this will shift the terrain height in blocks (up or down)\n   \nNumber\n\n    \n* Default Value is 0.0"
+                        },
+                        "convergeToHeight": {
+                            "type": "number",
+                            "description": "convergeToHeight\nIf set, this will force the terrain closer to the specified height.\n   \nNumber\n\n    \n* Default Value is -1.0"
+                        },
+                        "multiplyHeight": {
+                            "type": "number",
+                            "description": "multiplyHeight\nMultiplies the input noise\n   \nNumber\n\n    \n* Default Value is 1.0"
+                        },
+                        "invertZone": {
+                            "type": "boolean",
+                            "description": "invertZone\nInvert the zone so that anything outside this zone is affected.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                        },
+                        "fractureRadius": {
+                            "anyOf": [
+                                {
+                                    "!required": false,
+                                    "type": "object",
+                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
+                                    "description": "fractureRadius\nFracture the radius ring with additional noise\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
+                                },
+                                {
+                                    "type": "string",
+                                    "$ref": "#/definitions/enum-snippet-style"
+                                }
+                            ],
+                            "description": "fractureRadius\nFracture the radius ring with additional noise\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
+                        },
+                        "entitySpawners": {
+                            "type": "array",
+                            "minItems": 1,
+                            "items": {"$ref": "#/definitions/erzspawners"},
+                            "description": "entitySpawners\nWithin this noise feature, use the following spawners\n   \nList<Spawner>\n\n    \n* Default Value is an empty list\n* At least one entry must be defined, or just remove this list.\nMust be a valid Spawner (use ctrl+space for auto complete!)"
+                        }
+                    }
+                },
+                {"type": "string"}
+            ],
+            "description": "Represents an Iris zone"
+        },
+        "erzexpressions": {"enum": []},
+        "enum-snippet-style": {"enum": []},
+        "enum-snippet-style-range": {"enum": []},
+        "erzjigsaw-pieces": {"enum": [
+            "bastion/units/rampart_plates/plate_0",
+            "village/common/animals/cat_black",
+            "stronghold/jail/1",
+            "murky_stronghold/fc-ns-1",
+            "stronghold/jail/3",
+            "stronghold/jail/2",
+            "murky_stronghold/fc-ns-4",
+            "stronghold/jail/5",
+            "stronghold/jail/4",
+            "murky_stronghold/fc-ns-2",
+            "stronghold/jail/7",
+            "village/taiga/houses/taiga_small_house_5",
+            "murky_stronghold/fc-ns-3",
+            "stronghold/jail/6",
+            "village/taiga/houses/taiga_small_house_4",
+            "stronghold/jail/9",
+            "village/taiga/houses/taiga_small_house_3",
+            "stronghold/jail/8",
+            "village/taiga/houses/taiga_small_house_2",
+            "village/taiga/houses/taiga_small_house_1",
+            "houses/paths/corner1",
+            "end_city/third_floor_1",
+            "end_city/third_floor_2",
+            "stronghold/rooms/oreroom",
+            "jungle_pyramid/jungle_pyramid",
+            "village/taiga/zombie/streets/turn_01",
+            "village/common/animals/cat_siamese",
+            "bastion/treasure/ramparts/top_wall",
+            "stronghold/ceiling/7x7/flat",
+            "igloo/middle",
+            "village/plains/villagers/unemployed",
+            "village/desert/streets/straight_02",
+            "village/desert/streets/straight_01",
+            "village/desert/streets/straight_03",
+            "bastion/treasure/walls/outer/tall_outer_wall",
+            "ruined_portal/portal_10",
+            "stronghold/rooms/library-large",
+            "fossil/spine_3_coal",
+            "bastion/hoglin_stable/stairs/stairs_3_4",
+            "bastion/hoglin_stable/stairs/stairs_3_3",
+            "bastion/hoglin_stable/stairs/stairs_3_2",
+            "bastion/hoglin_stable/stairs/stairs_3_1",
+            "bastion/hoglin_stable/stairs/stairs_3_0",
+            "village/taiga/zombie/houses/taiga_small_house_3",
+            "village/taiga/zombie/houses/taiga_small_house_4",
+            "stronghold/path/large-spiral-staircase",
+            "village/taiga/zombie/houses/taiga_small_house_5",
+            "stronghold/wall-fixture/5x3/shelf",
+            "village/taiga/houses/taiga_animal_pen_1",
+            "village/taiga/zombie/houses/taiga_small_house_1",
+            "village/taiga/zombie/houses/taiga_small_house_2",
+            "bastion/blocks/air",
+            "bastion/hoglin_stable/large_stables/inner_0",
+            "bastion/treasure/walls/mid/wall_2",
+            "stronghold/stairs/sml-vertical-naked",
+            "bastion/treasure/walls/mid/wall_1",
+            "bastion/treasure/walls/mid/wall_0",
+            "bastion/units/stages/stage_1_0",
+            "village/taiga/streets/turn_01",
+            "bastion/units/stages/stage_1_1",
+            "murky_stronghold/c-n-3",
+            "murky_stronghold/c-n-4",
+            "bastion/units/stages/stage_1_2",
+            "bastion/units/stages/stage_1_3",
+            "village/desert/zombie/terminators/terminator_02",
+            "murky_stronghold/c-n-1",
+            "village/plains/houses/plains_armorer_house_1",
+            "village/snowy/houses/snowy_medium_house_3",
+            "murky_stronghold/c-n-2",
+            "village/snowy/houses/snowy_medium_house_2",
+            "village/snowy/houses/snowy_medium_house_1",
+            "village/snowy/houses/snowy_shepherds_house_1",
+            "stronghold/rooms/alter1",
+            "underwater_ruin/mossy_8",
+            "desert_pyramid/bottom",
+            "underwater_ruin/mossy_7",
+            "murky_stronghold/f-ns-3",
+            "underwater_ruin/mossy_6",
+            "murky_stronghold/f-ns-4",
+            "underwater_ruin/mossy_5",
+            "underwater_ruin/mossy_4",
+            "underwater_ruin/mossy_3",
+            "underwater_ruin/mossy_2",
+            "underwater_ruin/mossy_1",
+            "village/desert/streets/turn_01",
+            "murky_stronghold/f-ns-1",
+            "murky_stronghold/f-ns-2",
+            "village/savanna/town_centers/savanna_meeting_point_2",
+            "village/savanna/town_centers/savanna_meeting_point_3",
+            "village/snowy/houses/snowy_fletcher_house_1",
+            "village/savanna/town_centers/savanna_meeting_point_4",
+            "bastion/mobs/hoglin",
+            "village/desert/zombie/streets/square_01",
+            "village/desert/zombie/streets/square_02",
+            "village/savanna/town_centers/savanna_meeting_point_1",
+            "stronghold/wall-fixture/blank",
+            "bastion/treasure/extensions/fire_room",
+            "bastion/hoglin_stable/posts/end_post",
+            "bastion/treasure/walls/top/main_entrance",
+            "stronghold/path/small-spiral-staircase",
+            "village/plains/houses/plains_stable_2",
+            "village/plains/houses/plains_stable_1",
+            "village/savanna/zombie/houses/savanna_large_farm_2",
+            "village/savanna/houses/savanna_weaponsmith_2",
+            "village/savanna/houses/savanna_weaponsmith_1",
+            "stronghold/floor/3x3/flat",
+            "bastion/hoglin_stable/stairs/stairs_1_4",
+            "stronghold/path/tiny-cross",
+            "bastion/hoglin_stable/stairs/stairs_1_3",
+            "bastion/hoglin_stable/stairs/stairs_1_2",
+            "bastion/hoglin_stable/stairs/stairs_1_1",
+            "bastion/hoglin_stable/stairs/stairs_1_0",
+            "stronghold/room/stairs-down",
+            "stronghold/rooms/maze3",
+            "stronghold/rooms/maze2",
+            "bastion/units/air_base",
+            "stronghold/rooms/maze1",
+            "village/taiga/zombie/houses/taiga_cartographer_house_1",
+            "bastion/units/stages/stage_3_0",
+            "murky_stronghold/c-sw-1",
+            "bastion/units/stages/stage_3_1",
+            "murky_stronghold/c-sw-2",
+            "bastion/units/stages/stage_3_2",
+            "murky_stronghold/c-sw-3",
+            "stronghold/wall-fixture/5x3/study",
+            "bastion/units/stages/stage_3_3",
+            "murky_stronghold/c-sw-4",
+            "nether_fossils/fossil_14",
+            "nether_fossils/fossil_13",
+            "nether_fossils/fossil_12",
+            "nether_fossils/fossil_11",
+            "village/snowy/houses/snowy_fisher_cottage",
+            "nether_fossils/fossil_10",
+            "end_city/bridge_end",
+            "village/taiga/zombie/houses/taiga_weaponsmith_2",
+            "underwater_ruin/big_cracked_1",
+            "underwater_ruin/big_cracked_2",
+            "underwater_ruin/big_cracked_3",
+            "bastion/units/center_pieces/center_0",
+            "bastion/units/center_pieces/center_2",
+            "bastion/units/center_pieces/center_1",
+            "underwater_ruin/big_cracked_8",
+            "bastion/bridge/starting_pieces/entrance",
+            "village/taiga/zombie/town_centers/taiga_meeting_point_2",
+            "village/taiga/zombie/town_centers/taiga_meeting_point_1",
+            "mansion/2x2/1/a2",
+            "village/plains/zombie/houses/plains_medium_house_2",
+            "village/savanna/houses/savanna_temple_1",
+            "mansion/2x2/1/a3",
+            "village/plains/zombie/houses/plains_medium_house_1",
+            "village/savanna/houses/savanna_temple_2",
+            "mansion/2x2/1/a1",
+            "mansion/2x2/1/a4",
+            "stronghold/path/corridor-cross",
+            "village/taiga/houses/taiga_fisher_cottage_1",
+            "bastion/treasure/entrances/entrance_0",
+            "end_city/bridge_gentle_stairs",
+            "stronghold/door/iron",
+            "stronghold/path/hazard-hall2",
+            "stronghold/path/hazard-hall1",
+            "village/taiga/houses/taiga_weaponsmith_2",
+            "village/taiga/houses/taiga_weaponsmith_1",
+            "village/savanna/zombie/streets/crossroad_04",
+            "village/taiga/houses/taiga_tannery_1",
+            "village/savanna/zombie/streets/crossroad_03",
+            "bastion/hoglin_stable/starting_pieces/stairs_0_mirrored",
+            "village/savanna/zombie/streets/crossroad_06",
+            "village/savanna/zombie/streets/crossroad_05",
+            "village/snowy/zombie/town_centers/snowy_meeting_point_2",
+            "pillager_outpost/overgrown/tent",
+            "village/savanna/zombie/streets/crossroad_07",
+            "village/snowy/zombie/town_centers/snowy_meeting_point_1",
+            "village/snowy/zombie/town_centers/snowy_meeting_point_3",
+            "village/taiga/streets/crossroad_02",
+            "village/taiga/streets/crossroad_03",
+            "village/taiga/streets/crossroad_04",
+            "village/taiga/streets/crossroad_05",
+            "stronghold/room/witch-room",
+            "stronghold/path/hazard-hall3",
+            "village/taiga/streets/crossroad_01",
+            "village/snowy/villagers/nitwit",
+            "village/desert/houses/desert_library_1",
+            "village/taiga/streets/crossroad_06",
+            "village/desert/houses/desert_large_farm_1",
+            "village/snowy/zombie/villagers/nitwit",
+            "village/desert/town_centers/desert_meeting_point_3",
+            "village/desert/town_centers/desert_meeting_point_2",
+            "village/desert/town_centers/desert_meeting_point_1",
+            "village/plains/houses/plains_meeting_point_5",
+            "village/plains/houses/plains_meeting_point_4",
+            "murky_stronghold/fc-x-3",
+            "underwater_ruin/warm_4",
+            "murky_stronghold/fc-x-4",
+            "underwater_ruin/warm_3",
+            "murky_stronghold/fc-x-5",
+            "underwater_ruin/warm_6",
+            "murky_stronghold/fc-x-6",
+            "underwater_ruin/warm_5",
+            "murky_stronghold/fc-x-7",
+            "underwater_ruin/warm_8",
+            "murky_stronghold/fc-x-8",
+            "underwater_ruin/warm_7",
+            "village/snowy/houses/snowy_temple_1",
+            "stronghold/rooms/boomtube-test",
+            "bastion/hoglin_stable/large_stables/inner_1",
+            "bastion/hoglin_stable/large_stables/inner_2",
+            "bastion/hoglin_stable/large_stables/inner_3",
+            "bastion/hoglin_stable/large_stables/inner_4",
+            "stronghold/stairs/casing-floor-solid",
+            "mansion/1x2/2/d5",
+            "end_city/base_floor",
+            "mansion/1x2/2/d3",
+            "mansion/1x2/2/d4",
+            "village/savanna/zombie/villagers/nitwit",
+            "village/taiga/zombie/villagers/unemployed",
+            "village/snowy/zombie/streets/crossroad_06",
+            "village/snowy/zombie/streets/crossroad_05",
+            "village/plains/houses/plains_cartographer_1",
+            "stronghold/wall-fixture/5x3x3/chains",
+            "village/desert/houses/desert_temple_1",
+            "village/desert/houses/desert_temple_2",
+            "murky_stronghold/fc-x-1",
+            "village/savanna/zombie/streets/crossroad_02",
+            "murky_stronghold/fc-x-2",
+            "village/desert/houses/desert_mason_1",
+            "village/snowy/zombie/streets/crossroad_04",
+            "village/snowy/zombie/streets/crossroad_03",
+            "village/snowy/zombie/streets/crossroad_02",
+            "bastion/hoglin_stable/starting_pieces/stairs_3_mirrored",
+            "village/snowy/zombie/streets/crossroad_01",
+            "mansion/1x2/2/d1",
+            "mansion/1x2/2/d2",
+            "bastion/treasure/walls/top/wall_0",
+            "bastion/treasure/walls/top/wall_1",
+            "bastion/mobs/melee_piglin_always",
+            "igloo/top1",
+            "igloo/top2",
+            "stronghold/portal/top",
+            "village/snowy/houses/snowy_masons_house_1",
+            "village/common/animals/cat_tabby",
+            "village/snowy/houses/snowy_masons_house_2",
+            "village/snowy/houses/snowy_small_house_8",
+            "village/snowy/houses/snowy_small_house_5",
+            "stronghold/rooms/chestroom2-trap",
+            "village/snowy/houses/snowy_small_house_4",
+            "village/snowy/houses/snowy_small_house_7",
+            "village/snowy/houses/snowy_small_house_6",
+            "village/snowy/houses/snowy_small_house_1",
+            "village/snowy/houses/snowy_tannery_1",
+            "village/snowy/houses/snowy_small_house_3",
+            "village/snowy/houses/snowy_small_house_2",
+            "bastion/treasure/walls/lava_wall",
+            "village/snowy/streets/turn_01",
+            "village/savanna/houses/savanna_fisher_cottage_1",
+            "stronghold/room/study",
+            "underwater_ruin/warm_2",
+            "underwater_ruin/warm_1",
+            "bastion/treasure/roofs/wall_roof",
+            "village/savanna/zombie/houses/savanna_small_house_6",
+            "village/savanna/zombie/houses/savanna_small_house_5",
+            "village/savanna/zombie/houses/savanna_small_house_4",
+            "village/savanna/zombie/houses/savanna_small_house_3",
+            "village/savanna/zombie/houses/savanna_small_house_8",
+            "village/savanna/zombie/houses/savanna_small_house_7",
+            "murky_stronghold/fc-nsw-2",
+            "village/savanna/zombie/houses/savanna_small_house_2",
+            "murky_stronghold/fc-nsw-1",
+            "village/savanna/zombie/houses/savanna_small_house_1",
+            "murky_stronghold/fc-nsw-4",
+            "village/plains/zombie/villagers/nitwit",
+            "murky_stronghold/fc-nsw-3",
+            "stronghold/door/wood2",
+            "stronghold/room/witch-room-end",
+            "bastion/treasure/connectors/center_to_wall_top",
+            "village/desert/houses/desert_medium_house_2",
+            "bastion/treasure/corners/edges/middle",
+            "village/desert/houses/desert_medium_house_1",
+            "stronghold/wall-fixture/5x3/lantern",
+            "pillager_outpost/base_plate",
+            "village/plains/houses/plains_animal_pen_2",
+            "village/plains/houses/plains_animal_pen_3",
+            "village/plains/houses/plains_animal_pen_1",
+            "village/taiga/villagers/baby",
+            "pillager_outpost/regular/feature_tent2",
+            "pillager_outpost/regular/feature_tent1",
+            "village/savanna/terminators/terminator_05",
+            "village/desert/zombie/streets/crossroad_02",
+            "village/desert/zombie/streets/crossroad_03",
+            "village/plains/zombie/houses/plains_animal_pen_3",
+            "village/desert/zombie/streets/crossroad_01",
+            "bastion/treasure/walls/outer/bottom_corner",
+            "village/plains/zombie/villagers/unemployed",
+            "stronghold/ceiling/5x5/bar-lamp",
+            "underwater_ruin/big_warm_6",
+            "underwater_ruin/big_warm_7",
+            "underwater_ruin/big_warm_4",
+            "underwater_ruin/big_warm_5",
+            "village/desert/houses/desert_weaponsmith_1",
+            "stronghold/stairs/med-vertical-naked",
+            "pillager_outpost/regular/feature_logs",
+            "village/snowy/streets/square_01",
+            "bastion/bridge/starting_pieces/entrance_face",
+            "stronghold/path/small-cross",
+            "village/snowy/houses/snowy_farm_1",
+            "village/snowy/houses/snowy_weapon_smith_1",
+            "village/snowy/houses/snowy_farm_2",
+            "village/savanna/zombie/villagers/unemployed",
+            "mansion/main/a1",
+            "bastion/hoglin_stable/small_stables/outer_3",
+            "bastion/hoglin_stable/small_stables/outer_2",
+            "bastion/hoglin_stable/small_stables/outer_1",
+            "bastion/hoglin_stable/small_stables/outer_0",
+            "village/savanna/houses/savanna_mason_1",
+            "village/savanna/streets/split_02",
+            "mansion/1x1/2/b5",
+            "mansion/1x1/2/b4",
+            "village/taiga/houses/taiga_armorer_2",
+            "mansion/1x1/2/b1",
+            "village/plains/houses/plains_big_house_1",
+            "mansion/1x1/2/b3",
+            "mansion/1x1/2/b2",
+            "end_city/second_floor_1",
+            "end_city/second_floor_2",
+            "stronghold/wall-fixture/5x3/chest",
+            "village/savanna/streets/split_01",
+            "bastion/treasure/extensions/large_bridge_0",
+            "bastion/treasure/extensions/large_bridge_1",
+            "bastion/treasure/extensions/large_bridge_2",
+            "village/savanna/houses/savanna_armorer_1",
+            "bastion/treasure/extensions/large_bridge_3",
+            "end_city/tower_top",
+            "underwater_ruin/big_brick_8",
+            "village/desert/zombie/streets/turn_01",
+            "bastion/treasure/corners/middle/corner_0",
+            "stronghold/wall-fixture/5x3/mixed1",
+            "bastion/treasure/corners/middle/corner_1",
+            "village/desert/villagers/nitwit",
+            "fossil/skull_4_coal",
+            "underwater_ruin/big_brick_1",
+            "underwater_ruin/big_brick_2",
+            "fossil/spine_2_coal",
+            "underwater_ruin/big_brick_3",
+            "village/plains/houses/plains_masons_house_1",
+            "village/taiga/houses/taiga_shepherds_house_1",
+            "village/taiga/streets/straight_01",
+            "ruined_portal/portal_9",
+            "ruined_portal/portal_8",
+            "village/taiga/streets/straight_05",
+            "village/taiga/streets/straight_04",
+            "village/taiga/streets/straight_03",
+            "village/taiga/streets/straight_02",
+            "ruined_portal/portal_3",
+            "ruined_portal/portal_2",
+            "ruined_portal/portal_1",
+            "village/taiga/streets/straight_06",
+            "ruined_portal/portal_7",
+            "ruined_portal/portal_6",
+            "ruined_portal/portal_5",
+            "ruined_portal/portal_4",
+            "village/desert/streets/square_02",
+            "village/desert/streets/square_01",
+            "end_city/tower_piece",
+            "end_city/fat_tower_top",
+            "pillager_outpost/watchtower",
+            "village/savanna/houses/savanna_cartographer_1",
+            "end_city/bridge_steep_stairs",
+            "fossil/skull_3_coal",
+            "bastion/treasure/big_air_full",
+            "ruined_portal/giant_portal_3",
+            "ruined_portal/giant_portal_2",
+            "ruined_portal/giant_portal_1",
+            "village/snowy/streets/corner_01",
+            "village/snowy/streets/corner_02",
+            "village/snowy/streets/corner_03",
+            "village/taiga/villagers/nitwit",
+            "stronghold/path/medium-cross",
+            "bastion/bridge/starting_pieces/entrance_base",
+            "houses/paths/hall1",
+            "village/plains/houses/plains_library_2",
+            "village/plains/houses/plains_library_1",
+            "bastion/treasure/bases/centers/center_1",
+            "bastion/treasure/bases/centers/center_2",
+            "bastion/treasure/bases/centers/center_0",
+            "stronghold/wall/1",
+            "stronghold/wall/3",
+            "village/savanna/houses/savanna_library_1",
+            "bastion/treasure/ramparts/lava_basin_side",
+            "stronghold/wall/2",
+            "stronghold/wall/4",
+            "village/plains/zombie/houses/plains_stable_1",
+            "village/plains/houses/plains_fletcher_house_1",
+            "bastion/hoglin_stable/walls/side_wall_1",
+            "bastion/hoglin_stable/walls/side_wall_0",
+            "pillager_outpost/overgrown/cage",
+            "village/snowy/town_centers/snowy_meeting_point_1",
+            "village/snowy/houses/snowy_armorer_house_1",
+            "stronghold/portal/main",
+            "village/snowy/houses/snowy_armorer_house_2",
+            "village/snowy/town_centers/snowy_meeting_point_3",
+            "village/snowy/town_centers/snowy_meeting_point_2",
+            "bastion/mobs/crossbow_piglin",
+            "village/desert/houses/desert_tannery_1",
+            "stronghold/path/medium-corridor2",
+            "village/desert/villagers/unemployed",
+            "stronghold/path/tee-cross2",
+            "stronghold/room/stairs-up-down",
+            "bastion/treasure/corners/edges/bottom",
+            "bastion/treasure/bases/centers/center_3",
+            "village/taiga/taiga_decoration_6",
+            "village/taiga/taiga_decoration_4",
+            "village/taiga/taiga_decoration_5",
+            "village/taiga/taiga_decoration_2",
+            "bastion/treasure/roofs/center_roof",
+            "village/taiga/taiga_decoration_3",
+            "village/taiga/taiga_decoration_1",
+            "bastion/treasure/extensions/empty",
+            "village/plains/villagers/nitwit",
+            "village/savanna/zombie/houses/savanna_animal_pen_3",
+            "houses/jap/j10",
+            "village/savanna/zombie/houses/savanna_animal_pen_2",
+            "village/common/animals/cat_persian",
+            "village/plains/terminators/terminator_02",
+            "village/plains/terminators/terminator_03",
+            "village/plains/terminators/terminator_04",
+            "stronghold/path/portal-hall",
+            "bastion/treasure/ramparts/mid_wall_side",
+            "village/plains/terminators/terminator_01",
+            "village/common/well_bottom",
+            "end_city/fat_tower_base",
+            "bastion/treasure/ramparts/lava_basin_main",
+            "mansion/path_2/path_1",
+            "mansion/path_2/path_2",
+            "village/desert/houses/desert_tool_smith_1",
+            "mansion/path/path_1",
+            "village/plains/zombie/streets/straight_06",
+            "mansion/path/path_2",
+            "village/plains/zombie/streets/straight_05",
+            "village/plains/zombie/streets/straight_04",
+            "village/plains/zombie/streets/straight_03",
+            "village/plains/zombie/streets/straight_02",
+            "village/plains/houses/plains_temple_3",
+            "village/plains/zombie/streets/straight_01",
+            "village/plains/houses/plains_temple_4",
+            "village/savanna/streets/crossroad_04",
+            "village/savanna/streets/crossroad_05",
+            "village/savanna/streets/crossroad_06",
+            "village/savanna/streets/crossroad_07",
+            "village/plains/houses/plains_large_farm_1",
+            "village/taiga/zombie/houses/taiga_fisher_cottage_1",
+            "village/savanna/streets/crossroad_02",
+            "village/savanna/streets/crossroad_03",
+            "village/taiga/houses/taiga_fletcher_house_1",
+            "end_city/tower_floor",
+            "village/plains/town_centers/plains_meeting_point_3",
+            "village/plains/town_centers/plains_meeting_point_2",
+            "village/plains/town_centers/plains_meeting_point_1",
+            "village/snowy/snowy_lamp_post_03",
+            "village/desert/villagers/baby",
+            "murky_stronghold/c-nsw-1",
+            "bastion/hoglin_stable/starting_pieces/stairs_2_mirrored",
+            "murky_stronghold/c-nsw-2",
+            "murky_stronghold/c-nsw-3",
+            "village/snowy/villagers/baby",
+            "murky_stronghold/c-nsw-4",
+            "village/desert/zombie/villagers/unemployed",
+            "bastion/hoglin_stable/large_stables/outer_0",
+            "bastion/hoglin_stable/large_stables/outer_1",
+            "bastion/hoglin_stable/walls/wall_base",
+            "bastion/hoglin_stable/large_stables/outer_2",
+            "bastion/hoglin_stable/large_stables/outer_3",
+            "cave",
+            "pillager_outpost/regular/feature_cage1",
+            "end_city/second_roof",
+            "pillager_outpost/regular/feature_cage2",
+            "stronghold/jail/11",
+            "stronghold/wall-fixture/5x3/anvil-furnace",
+            "village/savanna/zombie/terminators/terminator_05",
+            "stronghold/jail/12",
+            "bastion/hoglin_stable/large_stables/outer_4",
+            "murky_stronghold/f-nsw-3",
+            "mansion/2x2/2/s1",
+            "murky_stronghold/f-nsw-2",
+            "stronghold/rooms/chestroom1-trap",
+            "stronghold/rooms/chestroom1",
+            "murky_stronghold/f-nsw-1",
+            "stronghold/rooms/chestroom2",
+            "stronghold/jail/10",
+            "bastion/hoglin_stable/ramparts/ramparts_1",
+            "village/common/animals/horses_5",
+            "bastion/hoglin_stable/ramparts/ramparts_2",
+            "village/common/animals/horses_4",
+            "bastion/hoglin_stable/ramparts/ramparts_3",
+            "bastion/units/wall_units/edge_0_large",
+            "village/common/animals/horses_1",
+            "village/taiga/zombie/streets/corner_03",
+            "village/taiga/zombie/streets/corner_02",
+            "bastion/units/wall_units/unit_0",
+            "village/common/animals/horses_3",
+            "village/common/animals/horses_2",
+            "village/savanna/zombie/streets/turn_01",
+            "bastion/treasure/corners/top/corner_1",
+            "bastion/treasure/corners/top/corner_0",
+            "murky_stronghold/c-ns-4",
+            "murky_stronghold/c-ns-2",
+            "murky_stronghold/c-ns-3",
+            "village/taiga/zombie/streets/corner_01",
+            "murky_stronghold/c-ns-1",
+            "village/plains/zombie/houses/plains_meeting_point_4",
+            "village/plains/zombie/houses/plains_meeting_point_5",
+            "bastion/treasure/stairs/lower_stairs",
+            "village/taiga/houses/taiga_small_farm_1",
+            "end_city/tower_base",
+            "village/snowy/snowy_lamp_post_02",
+            "village/snowy/snowy_lamp_post_01",
+            "village/taiga/houses/taiga_tool_smith_1",
+            "village/taiga/houses/taiga_masons_house_1",
+            "bastion/treasure/ramparts/mid_wall_main",
+            "village/snowy/zombie/villagers/unemployed",
+            "mansion/1x2/1/b1",
+            "mansion/1x2/1/b3",
+            "mansion/1x2/1/b2",
+            "mansion/1x2/1/b5",
+            "mansion/1x2/1/b4",
+            "stronghold/wall-fixture/5x3/brew-set",
+            "bastion/hoglin_stable/stairs/stairs_2_4",
+            "bastion/hoglin_stable/stairs/stairs_2_3",
+            "stronghold/jail/blank",
+            "village/savanna/savanna_lamp_post_01",
+            "bastion/hoglin_stable/stairs/stairs_2_2",
+            "bastion/hoglin_stable/stairs/stairs_2_1",
+            "bastion/hoglin_stable/stairs/stairs_2_0",
+            "village/plains/zombie/town_centers/plains_fountain_01",
+            "bastion/hoglin_stable/starting_pieces/stairs_4_mirrored",
+            "mansion/1x2/1/c2",
+            "village/plains/houses/plains_butcher_shop_1",
+            "mansion/1x2/1/c1",
+            "mansion/1x2/1/c4",
+            "mansion/1x2/1/c3",
+            "village/plains/houses/plains_butcher_shop_2",
+            "village/plains/zombie/streets/turn_01",
+            "stronghold/door/iron2",
+            "stronghold/path/small-corridor",
+            "bastion/units/stages/stage_2_0",
+            "village/desert/houses/desert_armorer_1",
+            "bastion/hoglin_stable/air_base",
+            "murky_stronghold/f-x-3",
+            "murky_stronghold/f-x-2",
+            "murky_stronghold/f-x-5",
+            "murky_stronghold/f-x-4",
+            "bastion/units/stages/stage_2_1",
+            "murky_stronghold/f-x-1",
+            "village/common/animals/sheep_1",
+            "village/decays/grass_11x13",
+            "stronghold/path/medium-corridor",
+            "village/common/animals/sheep_2",
+            "murky_stronghold/fc-n-1",
+            "murky_stronghold/f-x-6",
+            "murky_stronghold/fc-n-2",
+            "murky_stronghold/fc-n-3",
+            "murky_stronghold/fc-n-4",
+            "village/savanna/houses/savanna_tool_smith_1",
+            "village/taiga/houses/taiga_butcher_shop_1",
+            "village/desert/houses/desert_butcher_shop_1",
+            "village/plains/houses/plains_tool_smith_1",
+            "village/common/animals/cat_red",
+            "village/snowy/zombie/streets/straight_08",
+            "village/desert/streets/crossroad_02",
+            "murky_stronghold/f-nsw-4",
+            "village/desert/streets/crossroad_01",
+            "village/taiga/villagers/unemployed",
+            "mansion/stairs/stairs_straight",
+            "village/desert/streets/crossroad_03",
+            "bastion/blocks/gold",
+            "mansion/stairs/stairs_right",
+            "bastion/units/pathways/pathway_wall_0",
+            "village/desert/zombie/houses/desert_medium_house_2",
+            "village/common/animals/pigs_1",
+            "village/desert/zombie/houses/desert_medium_house_1",
+            "village/snowy/zombie/streets/straight_02",
+            "village/snowy/zombie/streets/straight_01",
+            "village/snowy/zombie/streets/straight_06",
+            "village/snowy/zombie/streets/straight_04",
+            "village/snowy/zombie/streets/straight_03",
+            "end_city/bridge_piece",
+            "village/plains/villagers/baby",
+            "stronghold/wall-fixture/5x3x3/cobweb",
+            "village/desert/zombie/streets/straight_01",
+            "village/desert/zombie/streets/straight_02",
+            "village/plains/zombie/houses/plains_small_house_1",
+            "village/desert/zombie/streets/straight_03",
+            "village/plains/zombie/houses/plains_small_house_2",
+            "fossil/skull_2_coal",
+            "village/plains/zombie/houses/plains_small_house_3",
+            "village/desert/zombie/town_centers/desert_meeting_point_3",
+            "village/plains/zombie/houses/plains_small_house_4",
+            "village/desert/zombie/town_centers/desert_meeting_point_2",
+            "village/plains/zombie/houses/plains_small_house_5",
+            "village/common/animals/cows_1",
+            "village/desert/zombie/town_centers/desert_meeting_point_1",
+            "village/plains/zombie/houses/plains_small_house_6",
+            "village/plains/zombie/houses/plains_small_house_7",
+            "village/plains/zombie/houses/plains_small_house_8",
+            "village/savanna/houses/savanna_tannery_1",
+            "village/plains/streets/turn_01",
+            "village/savanna/zombie/streets/corner_01",
+            "village/savanna/zombie/streets/corner_03",
+            "village/desert/houses/desert_farm_2",
+            "village/desert/houses/desert_farm_1",
+            "bastion/units/walls/wall_base",
+            "stronghold/path/stair-split",
+            "bastion/treasure/walls/outer/outer_wall",
+            "stronghold/path/medium-wide-corridor1",
+            "village/snowy/zombie/streets/corner_02",
+            "bastion/units/fillers/stage_0",
+            "village/snowy/zombie/streets/corner_03",
+            "stronghold/stairs/med-vertical-complete1",
+            "stronghold/stairs/med-vertical-complete2",
+            "stronghold/floor/3x3/tnt",
+            "village/common/animals/cat_jellie",
+            "mansion/1x2/1/a2",
+            "mansion/1x2/1/a1",
+            "village/plains/houses/plains_shepherds_house_1",
+            "mansion/1x2/1/a4",
+            "village/savanna/houses/savanna_shepherd_1",
+            "mansion/1x2/1/a3",
+            "mansion/1x2/1/a6",
+            "mansion/1x2/1/a5",
+            "mansion/1x2/1/a8",
+            "mansion/1x2/1/a7",
+            "mansion/1x2/1/a9",
+            "village/taiga/houses/taiga_large_farm_1",
+            "village/snowy/zombie/streets/corner_01",
+            "village/taiga/houses/taiga_large_farm_2",
+            "village/plains/streets/straight_03",
+            "village/plains/streets/straight_04",
+            "village/plains/streets/straight_01",
+            "village/plains/streets/straight_02",
+            "village/plains/streets/straight_05",
+            "village/snowy/zombie/streets/turn_01",
+            "village/plains/streets/straight_06",
+            "village/snowy/houses/snowy_animal_pen_1",
+            "village/plains/zombie/houses/plains_butcher_shop_2",
+            "village/snowy/houses/snowy_animal_pen_2",
+            "village/savanna/streets/turn_01",
+            "mansion/1x1/1/a2",
+            "village/savanna/zombie/streets/straight_05",
+            "mansion/1x1/1/a3",
+            "village/plains/houses/plains_small_house_1",
+            "village/savanna/zombie/streets/straight_06",
+            "mansion/1x1/1/a4",
+            "village/plains/houses/plains_small_house_2",
+            "mansion/1x1/1/a5",
+            "village/plains/houses/plains_small_house_3",
+            "village/savanna/zombie/streets/straight_08",
+            "village/savanna/zombie/streets/straight_02",
+            "mansion/1x1/1/a1",
+            "village/savanna/zombie/streets/straight_04",
+            "stronghold/stairs/casing-tight",
+            "village/taiga/houses/taiga_library_1",
+            "village/plains/zombie/streets/crossroad_02",
+            "village/savanna/zombie/streets/straight_09",
+            "village/plains/zombie/streets/crossroad_03",
+            "village/taiga/zombie/houses/taiga_large_farm_2",
+            "village/snowy/houses/snowy_cartographer_house_1",
+            "village/plains/zombie/streets/crossroad_01",
+            "village/plains/zombie/streets/crossroad_06",
+            "stronghold/ceiling/5x5/wood-beams",
+            "stronghold/path/large-cross-stairs",
+            "village/plains/zombie/streets/crossroad_04",
+            "village/plains/zombie/streets/crossroad_05",
+            "stronghold/path/4way-spiral-staircase",
+            "nether_fossils/fossil_1",
+            "underwater_ruin/cracked_4",
+            "underwater_ruin/cracked_3",
+            "murky_stronghold/fc-sw-2",
+            "nether_fossils/fossil_3",
+            "underwater_ruin/cracked_2",
+            "murky_stronghold/fc-sw-1",
+            "nether_fossils/fossil_2",
+            "underwater_ruin/cracked_1",
+            "stronghold/wall-fixture/5x3/double-chest",
+            "murky_stronghold/fc-sw-4",
+            "underwater_ruin/cracked_8",
+            "murky_stronghold/fc-sw-3",
+            "underwater_ruin/cracked_7",
+            "village/taiga/taiga_lamp_post_1",
+            "underwater_ruin/cracked_6",
+            "underwater_ruin/cracked_5",
+            "village/plains/houses/plains_small_house_8",
+            "bastion/mobs/empty",
+            "murky_stronghold/void/1",
+            "pillager_outpost/watchtower_overgrown",
+            "village/plains/houses/plains_small_house_4",
+            "village/plains/houses/plains_small_house_5",
+            "village/plains/houses/plains_small_house_6",
+            "village/plains/town_centers/plains_fountain_01",
+            "village/plains/houses/plains_small_house_7",
+            "nether_fossils/fossil_9",
+            "village/savanna/zombie/town_centers/savanna_meeting_point_2",
+            "nether_fossils/fossil_8",
+            "village/savanna/zombie/town_centers/savanna_meeting_point_1",
+            "houses/paths/end1",
+            "village/savanna/zombie/town_centers/savanna_meeting_point_4",
+            "village/savanna/zombie/town_centers/savanna_meeting_point_3",
+            "nether_fossils/fossil_5",
+            "nether_fossils/fossil_4",
+            "nether_fossils/fossil_7",
+            "nether_fossils/fossil_6",
+            "stronghold/room/small-cell",
+            "bastion/hoglin_stable/small_stables/inner_0",
+            "bastion/hoglin_stable/small_stables/inner_3",
+            "bastion/hoglin_stable/small_stables/inner_2",
+            "bastion/hoglin_stable/small_stables/inner_1",
+            "village/desert/streets/corner_01",
+            "village/desert/streets/corner_02",
+            "village/common/animals/cat_calico",
+            "pillager_outpost/pillager",
+            "desert_pyramid/top",
+            "village/snowy/zombie/streets/square_01",
+            "underwater_ruin/big_mossy_8",
+            "village/savanna/streets/straight_02",
+            "stronghold/ceiling/5x5/lamp",
+            "underwater_ruin/big_mossy_1",
+            "bastion/treasure/walls/outer/top_corner",
+            "fossil/skull_1_coal",
+            "underwater_ruin/big_mossy_2",
+            "underwater_ruin/big_mossy_3",
+            "stronghold/path/stairs1",
+            "mansion/2x2/2/b5",
+            "mansion/2x2/2/b4",
+            "mansion/2x2/2/b3",
+            "mansion/2x2/2/b2",
+            "underwater_ruin/brick_6",
+            "underwater_ruin/brick_5",
+            "underwater_ruin/brick_8",
+            "village/desert/zombie/villagers/nitwit",
+            "bastion/treasure/connectors/center_to_wall_middle",
+            "underwater_ruin/brick_7",
+            "village/savanna/villagers/unemployed",
+            "bastion/treasure/roofs/corner_roof",
+            "bastion/bridge/connectors/back_bridge_bottom",
+            "underwater_ruin/brick_2",
+            "underwater_ruin/brick_1",
+            "pillager_outpost/overgrown/pumpkins1",
+            "underwater_ruin/brick_4",
+            "pillager_outpost/overgrown/pumpkins2",
+            "underwater_ruin/brick_3",
+            "mansion/2x2/2/b1",
+            "pillager_outpost/feature_plate",
+            "village/common/animals/cat_ragdoll",
+            "bastion/mobs/sword_piglin",
+            "stronghold/room/sleeping-quarters",
+            "village/common/animals/cat_british",
+            "village/savanna/villagers/nitwit",
+            "village/plains/zombie/houses/plains_big_house_1",
+            "bastion/treasure/walls/bottom/wall_3",
+            "village/taiga/zombie/houses/taiga_shepherds_house_1",
+            "bastion/treasure/walls/bottom/wall_2",
+            "bastion/treasure/walls/bottom/wall_1",
+            "bastion/treasure/walls/bottom/wall_0",
+            "village/savanna/zombie/streets/straight_10",
+            "village/savanna/streets/straight_11",
+            "village/savanna/zombie/streets/straight_11",
+            "houses/paths/cross",
+            "village/savanna/streets/straight_10",
+            "stronghold/stairs/casing-floor-hollow",
+            "end_city/ship",
+            "village/savanna/streets/straight_09",
+            "village/snowy/villagers/unemployed",
+            "village/savanna/streets/straight_08",
+            "village/savanna/streets/straight_06",
+            "bastion/units/walls/connected_wall",
+            "village/savanna/streets/straight_05",
+            "end_city/third_roof",
+            "village/savanna/streets/straight_04",
+            "mansion/1x1/1/as4",
+            "mansion/1x1/1/as3",
+            "mansion/1x1/1/as2",
+            "mansion/1x1/1/as1",
+            "bastion/bridge/ramparts/rampart_1",
+            "bastion/bridge/ramparts/rampart_0",
+            "village/desert/desert_lamp_1",
+            "village/savanna/houses/savanna_animal_pen_3",
+            "village/savanna/houses/savanna_animal_pen_2",
+            "village/savanna/houses/savanna_animal_pen_1",
+            "bastion/units/pathways/pathway_0",
+            "village/savanna/zombie/streets/split_02",
+            "bastion/treasure/extensions/house_0",
+            "village/savanna/zombie/streets/split_01",
+            "village/taiga/houses/taiga_temple_1",
+            "village/plains/zombie/houses/plains_shepherds_house_1",
+            "bastion/treasure/extensions/house_1",
+            "bastion/bridge/walls/wall_base_0",
+            "bastion/bridge/walls/wall_base_1",
+            "fossil/skull_4",
+            "fossil/skull_3",
+            "fossil/skull_2",
+            "fossil/skull_1",
+            "village/savanna/houses/savanna_butchers_shop_1",
+            "village/savanna/houses/savanna_butchers_shop_2",
+            "village/plains/houses/plains_weaponsmith_1",
+            "village/decays/grass_16x16",
+            "bastion/bridge/connectors/back_bridge_top",
+            "houses/jap/j4",
+            "houses/jap/j5",
+            "houses/jap/j6",
+            "houses/jap/j7",
+            "bastion/treasure/bases/lava_basin",
+            "houses/jap/j1",
+            "village/desert/terminators/terminator_02",
+            "houses/jap/j2",
+            "houses/jap/j3",
+            "mansion/1x2/2/s1",
+            "bastion/bridge/legs/leg_0",
+            "village/taiga/zombie/streets/crossroad_06",
+            "bastion/bridge/legs/leg_1",
+            "village/taiga/zombie/streets/crossroad_05",
+            "village/taiga/zombie/streets/crossroad_04",
+            "village/taiga/zombie/streets/crossroad_03",
+            "village/taiga/zombie/streets/crossroad_02",
+            "village/taiga/zombie/streets/crossroad_01",
+            "village/plains/houses/plains_medium_house_1",
+            "village/plains/houses/plains_medium_house_2",
+            "village/savanna/houses/savanna_small_farm",
+            "village/taiga/houses/taiga_cartographer_house_1",
+            "village/desert/houses/desert_fisher_1",
+            "fossil/spine_2",
+            "fossil/spine_1",
+            "village/snowy/zombie/houses/snowy_medium_house_3",
+            "village/snowy/zombie/houses/snowy_medium_house_2",
+            "village/snowy/zombie/houses/snowy_medium_house_1",
+            "fossil/spine_4",
+            "fossil/spine_3",
+            "bastion/treasure/connectors/center_to_wall_top_entrance",
+            "murky_stronghold/f-n-4",
+            "murky_stronghold/f-n-1",
+            "stronghold/wall-fixture/5x3/crafting-station",
+            "murky_stronghold/f-n-3",
+            "murky_stronghold/f-n-2",
+            "village/desert/zombie/streets/corner_01",
+            "village/desert/zombie/streets/corner_02",
+            "village/savanna/zombie/houses/savanna_medium_house_1",
+            "village/taiga/zombie/houses/taiga_temple_1",
+            "village/savanna/zombie/houses/savanna_medium_house_2",
+            "village/desert/terminators/terminator_01",
+            "village/snowy/zombie/houses/snowy_small_house_8",
+            "mushhut/hut/hut1",
+            "village/snowy/zombie/houses/snowy_small_house_7",
+            "village/plains/zombie/houses/plains_fletcher_house_1",
+            "mushhut/hut/hut6",
+            "village/snowy/zombie/houses/snowy_small_house_2",
+            "mushhut/hut/hut7",
+            "village/snowy/zombie/houses/snowy_small_house_1",
+            "village/plains/houses/plains_fisher_cottage_1",
+            "village/taiga/zombie/houses/taiga_library_1",
+            "mushhut/hut/hut2",
+            "village/snowy/zombie/houses/snowy_small_house_6",
+            "mushhut/hut/hut3",
+            "village/snowy/zombie/houses/snowy_small_house_5",
+            "mushhut/hut/hut4",
+            "village/snowy/zombie/houses/snowy_small_house_4",
+            "mushhut/hut/hut5",
+            "village/snowy/zombie/houses/snowy_small_house_3",
+            "village/savanna/houses/savanna_small_house_1",
+            "village/savanna/houses/savanna_large_farm_2",
+            "village/savanna/houses/savanna_large_farm_1",
+            "village/savanna/houses/savanna_small_house_3",
+            "village/savanna/houses/savanna_small_house_2",
+            "village/savanna/houses/savanna_small_house_5",
+            "village/savanna/houses/savanna_small_house_4",
+            "bastion/bridge/rampart_plates/plate_0",
+            "village/savanna/houses/savanna_small_house_7",
+            "village/savanna/houses/savanna_small_house_6",
+            "village/plains/streets/corner_01",
+            "village/savanna/houses/savanna_small_house_8",
+            "village/plains/streets/corner_03",
+            "mansion/roof/roof_1",
+            "village/plains/streets/corner_02",
+            "village/taiga/zombie/houses/taiga_medium_house_4",
+            "village/taiga/zombie/houses/taiga_medium_house_3",
+            "village/taiga/zombie/houses/taiga_medium_house_2",
+            "village/taiga/zombie/houses/taiga_medium_house_1",
+            "end_city/fat_tower_middle",
+            "bastion/treasure/extensions/roofed_bridge",
+            "village/savanna/houses/savanna_fletcher_house_1",
+            "stronghold/path/straight-staircase",
+            "village/plains/houses/plains_accessory_1",
+            "village/desert/houses/desert_shepherd_house_1",
+            "village/taiga/zombie/streets/straight_05",
+            "village/taiga/zombie/streets/straight_06",
+            "village/taiga/zombie/streets/straight_03",
+            "village/taiga/zombie/streets/straight_04",
+            "bastion/units/stages/rot/stage_1_0",
+            "village/taiga/zombie/streets/straight_01",
+            "village/taiga/zombie/streets/straight_02",
+            "bastion/hoglin_stable/starting_pieces/stairs_1_mirrored",
+            "bastion/bridge/bridge_pieces/bridge",
+            "fossil/spine_1_coal",
+            "mansion/1x2/2/se1",
+            "village/snowy/houses/snowy_library_1",
+            "bastion/hoglin_stable/posts/stair_post",
+            "bastion/treasure/walls/outer/medium_outer_wall",
+            "stronghold/room/stairs-up",
+            "bastion/hoglin_stable/starting_pieces/starting_stairs_1",
+            "bastion/hoglin_stable/starting_pieces/starting_stairs_0",
+            "bastion/hoglin_stable/starting_pieces/starting_stairs_4",
+            "bastion/hoglin_stable/starting_pieces/starting_stairs_3",
+            "bastion/hoglin_stable/starting_pieces/starting_stairs_2",
+            "village/common/animals/cat_white",
+            "village/taiga/town_centers/taiga_meeting_point_1",
+            "village/plains/houses/plains_small_farm_1",
+            "village/taiga/streets/corner_03",
+            "village/taiga/streets/corner_02",
+            "village/taiga/town_centers/taiga_meeting_point_2",
+            "village/taiga/streets/corner_01",
+            "bastion/treasure/corners/edges/top",
+            "igloo/bottom",
+            "village/plains/streets/crossroad_01",
+            "village/plains/streets/crossroad_02",
+            "bastion/units/ramparts/ramparts_1",
+            "village/plains/streets/crossroad_03",
+            "bastion/units/ramparts/ramparts_2",
+            "village/plains/streets/crossroad_04",
+            "stronghold/path/jail-room2",
+            "village/plains/streets/crossroad_05",
+            "bastion/units/ramparts/ramparts_0",
+            "stronghold/path/jail-room1",
+            "village/plains/streets/crossroad_06",
+            "village/snowy/streets/straight_02",
+            "village/snowy/streets/straight_03",
+            "village/savanna/villagers/baby",
+            "village/snowy/streets/straight_04",
+            "village/snowy/streets/straight_01",
+            "village/snowy/streets/crossroad_01",
+            "mushhut/paths/path3",
+            "village/snowy/streets/crossroad_05",
+            "village/snowy/streets/straight_06",
+            "mushhut/paths/path4",
+            "village/snowy/streets/crossroad_04",
+            "village/snowy/streets/crossroad_03",
+            "village/snowy/streets/straight_08",
+            "bastion/mobs/melee_piglin",
+            "village/snowy/streets/crossroad_02",
+            "mushhut/paths/path1",
+            "mushhut/paths/path2",
+            "village/snowy/houses/snowy_butchers_shop_2",
+            "village/snowy/houses/snowy_butchers_shop_1",
+            "bastion/treasure/extensions/small_bridge_2",
+            "bastion/treasure/extensions/small_bridge_3",
+            "stronghold/path/corner-cross",
+            "bastion/treasure/extensions/small_bridge_0",
+            "village/desert/zombie/houses/desert_small_house_1",
+            "bastion/treasure/extensions/small_bridge_1",
+            "village/desert/zombie/houses/desert_small_house_2",
+            "village/desert/zombie/houses/desert_small_house_3",
+            "stronghold/wall-fixture/5x3/chains",
+            "village/desert/zombie/houses/desert_small_house_4",
+            "village/desert/zombie/houses/desert_small_house_5",
+            "village/desert/zombie/houses/desert_small_house_6",
+            "stronghold/stairs/casing",
+            "stronghold/path/tee-cross",
+            "village/savanna/streets/corner_03",
+            "village/taiga/zombie/villagers/nitwit",
+            "village/savanna/streets/corner_01",
+            "bastion/units/edges/edge_0",
+            "bastion/hoglin_stable/rampart_plates/rampart_plate_1",
+            "bastion/treasure/corners/bottom/corner_1",
+            "bastion/treasure/corners/bottom/corner_0",
+            "village/desert/zombie/houses/desert_small_house_7",
+            "village/desert/zombie/houses/desert_small_house_8",
+            "village/taiga/houses/taiga_armorer_house_1",
+            "pirate_ship",
+            "bastion/hoglin_stable/connectors/end_post_connector",
+            "houses/paths/tjunct",
+            "end_city/base_roof",
+            "village/desert/houses/desert_small_house_3",
+            "village/desert/houses/desert_small_house_2",
+            "village/desert/houses/desert_small_house_1",
+            "village/desert/houses/desert_small_house_7",
+            "village/taiga/houses/taiga_medium_house_3",
+            "village/desert/houses/desert_small_house_6",
+            "village/taiga/houses/taiga_medium_house_2",
+            "village/desert/houses/desert_small_house_5",
+            "village/taiga/houses/taiga_medium_house_1",
+            "village/desert/houses/desert_small_house_4",
+            "stronghold/path/cap",
+            "village/desert/houses/desert_small_house_8",
+            "village/taiga/houses/taiga_medium_house_4",
+            "village/snowy/houses/snowy_tool_smith_1",
+            "village/desert/houses/desert_animal_pen_2",
+            "mansion/1x2/2/s2",
+            "village/desert/houses/desert_animal_pen_1",
+            "village/decays/grass_9x9",
+            "village/common/iron_golem",
+            "houses/jap/j8",
+            "houses/jap/j9",
+            "bastion/treasure/walls/entrance_wall",
+            "bastion/units/stages/stage_0_0",
+            "bastion/units/stages/stage_0_1",
+            "bastion/units/stages/stage_0_2",
+            "pillager_outpost/regular/feature_targets",
+            "bastion/units/stages/stage_0_3",
+            "village/desert/houses/desert_fletcher_house_1",
+            "village/plains/zombie/town_centers/plains_meeting_point_1",
+            "village/plains/zombie/town_centers/plains_meeting_point_2",
+            "village/plains/zombie/town_centers/plains_meeting_point_3",
+            "stronghold/path/large-corridor",
+            "village/desert/houses/desert_cartographer_house_1",
+            "murky_stronghold/c-x-3",
+            "murky_stronghold/c-x-4",
+            "bastion/treasure/ramparts/bottom_wall_0",
+            "murky_stronghold/c-x-1",
+            "murky_stronghold/c-x-2",
+            "village/snowy/streets/crossroad_06",
+            "village/plains/houses/plains_tannery_1",
+            "murky_stronghold/c-x-5",
+            "murky_stronghold/c-x-6",
+            "mansion/stairs/stairs_left",
+            "village/savanna/houses/savanna_medium_house_2",
+            "bastion/treasure/walls/outer/mid_corner",
+            "village/savanna/houses/savanna_medium_house_1",
+            "village/taiga/zombie/houses/taiga_tool_smith_1",
+            "pyramid-desert",
+            "stronghold/door/wood",
+            "stronghold/wall-fixture/5x3/brewing-shelf",
+            "fossil/spine_4_coal",
+            "stronghold/path/fancy-cross",
+            "stronghold/rooms/jail-complex",
+            "murky_stronghold/f-sw-4",
+            "murky_stronghold/f-sw-3",
+            "murky_stronghold/f-sw-2",
+            "murky_stronghold/f-sw-1",
+            "bastion/treasure/brains/center_brain",
+            "village/plains/zombie/streets/corner_02",
+            "village/plains/zombie/streets/corner_01",
+            "village/plains/plains_lamp_1",
+            "stronghold/rooms/library",
+            "village/plains/zombie/streets/corner_03",
+            "stronghold/ceiling/7x7/wood-beams"
+        ]},
+        "obj-com-volmit-iris-engine-object-irisstyledrange": {
+            "anyOf": [
+                {
+                    "description": "Represents a range styled with a custom generator",
+                    "type": "object",
+                    "properties": {
+                        "min": {
+                            "type": "number",
+                            "description": "min\nThe minimum value\n   \nNumber\n\n    \n* Default Value is 16.0"
+                        },
+                        "max": {
+                            "type": "number",
+                            "description": "max\nThe maximum value\n   \nNumber\n\n    \n* Default Value is 32.0"
+                        },
+                        "style": {
+                            "anyOf": [
+                                {
+                                    "!required": false,
+                                    "type": "object",
+                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
+                                    "description": "style\nThe style to pick the range\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                                },
+                                {
+                                    "type": "string",
+                                    "$ref": "#/definitions/enum-snippet-style"
+                                }
+                            ],
+                            "description": "style\nThe style to pick the range\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here.\n    \n* Default Value is a default object (create this object to see default properties)"
+                        }
+                    }
+                },
+                {"type": "string"}
+            ],
+            "description": "Represents a range styled with a custom generator"
+        }
+    }
+}

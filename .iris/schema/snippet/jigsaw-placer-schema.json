@@ -1,0 +1,40 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://volmit.com/iris-schema/irisjigsawplacement.json",
+    "anyOf": [
+        {
+            "description": "Represents a jigsaw placement",
+            "type": "object",
+            "properties": {
+                "structure": {
+                    "type": "string",
+                    "$ref": "#/definitions/erzjigsaw-structures",
+                    "description": "structure\nThe jigsaw structure to use\n   \nIris Jigsaw Structure\n\n    \n* Default Value is \nMust be a valid jigsaw-structures (use ctrl+space for auto complete!)"
+                },
+                "rarity": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "description": "rarity\nThe rarity for this jigsaw structure to place on a per chunk basis\n   \nInteger\n\n    \n* Default Value is 29\n* Minimum allowed is 1"
+                }
+            }
+        },
+        {"type": "string"}
+    ],
+    "description": "Represents a jigsaw placement",
+    "definitions": {"erzjigsaw-structures": {"enum": [
+        "mush-huts",
+        "village-hot",
+        "village-tundra",
+        "desert-pyramid",
+        "jungle-pyramid",
+        "village-snowy",
+        "pillager_outpost",
+        "village-jap",
+        "igloo",
+        "murky_stronghold",
+        "village-temperate",
+        "village-savanna",
+        "stronghold",
+        "mansion"
+    ]}}
+}

@@ -1,0 +1,83 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://volmit.com/iris-schema/irisentityspawn.json",
+    "anyOf": [
+        {
+            "description": "Represents an entity spawn during initial chunk generation",
+            "type": "object",
+            "properties": {
+                "entity": {
+                    "type": "string",
+                    "$ref": "#/definitions/erzentities",
+                    "description": "entity\nThe entity\n   \nIris Entity\n\n    \n* Default Value is \nMust be a valid entities (use ctrl+space for auto complete!)"
+                },
+                "energyMultiplier": {
+                    "type": "number",
+                    "description": "energyMultiplier\nThe energy multiplier when calculating spawn energy usage\n   \nNumber\n\n    \n* Default Value is 1.0"
+                },
+                "rarity": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "description": "rarity\nThe 1 in RARITY chance for this entity to spawn\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1"
+                },
+                "minSpawns": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "description": "minSpawns\nThe minumum of this entity to spawn\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1"
+                },
+                "maxSpawns": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "description": "maxSpawns\nThe max of this entity to spawn\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1"
+                }
+            }
+        },
+        {"type": "string"}
+    ],
+    "description": "Represents an entity spawn during initial chunk generation",
+    "definitions": {"erzentities": {"enum": [
+        "standard/passive/cow",
+        "standard/passive/wolf",
+        "standard/passive/dolphin",
+        "standard/passive/pig",
+        "standard/passive/turtle",
+        "standard/passive/wanderingtrader",
+        "standard/passive/fox",
+        "unique/fred",
+        "standard/hostile/spider",
+        "standard/passive/sheep",
+        "standard/hostile/creeper",
+        "unique/aeternum",
+        "standard/hostile/shroud",
+        "standard/passive/mule",
+        "unique/dan",
+        "standard/passive/goat",
+        "unique/mooshroom",
+        "standard/passive/parrot",
+        "standard/passive/bee",
+        "unique/pandaUwU",
+        "unique/glowsquid",
+        "unique/village_vex_test",
+        "standard/hostile/silverfish",
+        "unique/brian",
+        "standard/passive/panda",
+        "standard/hostile/zombie",
+        "standard/passive/chicken",
+        "unique/amenhotep",
+        "standard/hostile/slime",
+        "standard/passive/polar-bear",
+        "standard/passive/villager",
+        "standard/hostile/slimebab",
+        "standard/passive/rabbit",
+        "unique/phantomapi",
+        "standard/hostile/drowned",
+        "unique/golem",
+        "standard/passive/horse",
+        "standard/passive/llama",
+        "standard/hostile/pillager",
+        "standard/passive/donkey",
+        "standard/passive/ocelot",
+        "unique/iron_golem",
+        "standard/hostile/skeleton"
+    ]}}
+}

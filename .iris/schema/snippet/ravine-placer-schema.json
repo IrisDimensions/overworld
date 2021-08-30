@@ -1,0 +1,43 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://volmit.com/iris-schema/irisravineplacer.json",
+    "anyOf": [
+        {
+            "description": "Translate objects",
+            "type": "object",
+            "properties": {
+                "rarity": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "description": "rarity\nTypically a 1 in RARITY on a per chunk/fork basis\n   \nInteger\n\n    \n* Default Value is 15\n* Minimum allowed is 1"
+                },
+                "ravine": {
+                    "type": "string",
+                    "minLength": 1,
+                    "$ref": "#/definitions/erzravines",
+                    "description": "ravine\nThe ravine to place\n   \nIris Ravine\n\n* Minimum Length allowed is 1\nMust be a valid ravines (use ctrl+space for auto complete!)"
+                }
+            }
+        },
+        {"type": "string"}
+    ],
+    "description": "Translate objects",
+    "definitions": {"erzravines": {"enum": [
+        "sandstone/main",
+        "drip/main",
+        "red-sandstone/small",
+        "rocky/main",
+        "volcanic/small",
+        "red-sandstone/main",
+        "simple/main",
+        "deep/main",
+        "sandstone/small",
+        "amethyst/main",
+        "simple/small",
+        "volcanic/main",
+        "drip/small",
+        "calcite/small",
+        "calcite/main",
+        "rocky/small"
+    ]}}
+}

@@ -1,0 +1,730 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://volmit.com/iris-schema/irisexpressionload.json",
+    "anyOf": [
+        {
+            "description": "Represents a variable to use in your expression. Do not set the name to x, y, or z, also don't duplicate names.",
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "name\nThe variable to assign this value to. Do not set the name to x, y, or z\n   \nText\n\n    \n* Default Value is "
+                },
+                "staticValue": {
+                    "type": "number",
+                    "description": "staticValue\nIf the style value is not defined, this value will be used\n   \nNumber\n\n    \n* Default Value is -1.0"
+                },
+                "styleValue": {
+                    "anyOf": [
+                        {
+                            "!required": false,
+                            "type": "object",
+                            "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
+                            "description": "styleValue\nIf defined, this variable will use a generator style as it's value\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
+                        },
+                        {
+                            "type": "string",
+                            "$ref": "#/definitions/enum-snippet-style"
+                        }
+                    ],
+                    "description": "styleValue\nIf defined, this variable will use a generator style as it's value\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
+                },
+                "engineStreamValue": {
+                    "type": "string",
+                    "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-irisenginestreamtype",
+                    "description": "engineStreamValue\nIf defined, iris will use an internal stream from the engine as it's value\n   \nEngineStreamType\nRepresents a stream from the engine\nMust be a valid EngineStreamType (use ctrl+space for auto complete!)"
+                },
+                "engineValue": {
+                    "type": "string",
+                    "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-irisenginevaluetype",
+                    "description": "engineValue\nIf defined, iris will use an internal value from the engine as it's value\n   \nEngineValueType\nRepresents a value from the engine\nMust be a valid EngineValueType (use ctrl+space for auto complete!)"
+                }
+            }
+        },
+        {"type": "string"}
+    ],
+    "description": "Represents a variable to use in your expression. Do not set the name to x, y, or z, also don't duplicate names.",
+    "definitions": {
+        "oneof-enum-com-volmit-iris-engine-object-noisestyle": {"oneOf": [
+            {
+                "const": "STATIC",
+                "description": "White Noise is like static. Useful for block scattering but not terrain."
+            },
+            {
+                "const": "STATIC_BILINEAR",
+                "description": "White Noise is like static. Useful for block scattering but not terrain."
+            },
+            {
+                "const": "STATIC_BICUBIC",
+                "description": "White Noise is like static. Useful for block scattering but not terrain."
+            },
+            {
+                "const": "STATIC_HERMITE",
+                "description": "White Noise is like static. Useful for block scattering but not terrain."
+            },
+            {
+                "const": "IRIS",
+                "description": "Wispy Perlin-looking simplex noise. The 'iris' style noise."
+            },
+            {
+                "const": "CLOVER",
+                "description": "Clover Noise"
+            },
+            {
+                "const": "CLOVER_STARCAST_3",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_STARCAST_6",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_STARCAST_9",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_STARCAST_12",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_BILINEAR_STARCAST_3",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_BILINEAR_STARCAST_6",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_BILINEAR_STARCAST_9",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_BILINEAR_STARCAST_12",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_HERMITE_STARCAST_3",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_HERMITE_STARCAST_6",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_HERMITE_STARCAST_9",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_HERMITE_STARCAST_12",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_BILINEAR",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_BICUBIC",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CLOVER_HERMITE",
+                "description": "CLOVER noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "VASCULAR",
+                "description": "Vascular noise gets higher as the position nears a cell border."
+            },
+            {
+                "const": "FLAT",
+                "description": "It always returns 0.5"
+            },
+            {
+                "const": "CELLULAR",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_STARCAST_3",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_STARCAST_6",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_STARCAST_9",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_STARCAST_12",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_BILINEAR_STARCAST_3",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_BILINEAR_STARCAST_6",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_BILINEAR_STARCAST_9",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_BILINEAR_STARCAST_12",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_HERMITE_STARCAST_3",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_HERMITE_STARCAST_6",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_HERMITE_STARCAST_9",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_HERMITE_STARCAST_12",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_BILINEAR",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_BICUBIC",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "CELLULAR_HERMITE",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders."
+            },
+            {
+                "const": "NOWHERE",
+                "description": "Classic German Engineering"
+            },
+            {
+                "const": "NOWHERE_CELLULAR",
+                "description": "Classic German Engineering"
+            },
+            {
+                "const": "NOWHERE_CLOVER",
+                "description": "Classic German Engineering"
+            },
+            {
+                "const": "NOWHERE_SIMPLEX",
+                "description": "Classic German Engineering"
+            },
+            {
+                "const": "NOWHERE_GLOB",
+                "description": "Classic German Engineering"
+            },
+            {
+                "const": "NOWHERE_VASCULAR",
+                "description": "Classic German Engineering"
+            },
+            {
+                "const": "NOWHERE_CUBIC",
+                "description": "Classic German Engineering"
+            },
+            {
+                "const": "NOWHERE_SUPERFRACTAL",
+                "description": "Classic German Engineering"
+            },
+            {
+                "const": "NOWHERE_FRACTAL",
+                "description": "Classic German Engineering"
+            },
+            {
+                "const": "IRIS_DOUBLE",
+                "description": "Wispy Perlin-looking simplex noise. The 'iris' style noise."
+            },
+            {
+                "const": "IRIS_THICK",
+                "description": "Wispy Perlin-looking simplex noise. The 'iris' style noise."
+            },
+            {
+                "const": "IRIS_HALF",
+                "description": "Wispy Perlin-looking simplex noise. The 'iris' style noise."
+            },
+            {
+                "const": "SIMPLEX",
+                "description": "Basic, Smooth & Fast Simplex noise."
+            },
+            {
+                "const": "FRACTAL_SMOKE",
+                "description": "Very Detailed smoke using simplex fractured with fractal billow simplex at high octaves."
+            },
+            {
+                "const": "VASCULAR_THIN",
+                "description": "Thinner Veins."
+            },
+            {
+                "const": "SIMPLEX_CELLS",
+                "description": "Cells of simplex noise"
+            },
+            {
+                "const": "SIMPLEX_VASCULAR",
+                "description": "Veins of simplex noise"
+            },
+            {
+                "const": "FRACTAL_WATER",
+                "description": "Very Detailed fluid using simplex fractured with fractal billow simplex at high octaves."
+            },
+            {
+                "const": "PERLIN",
+                "description": "Perlin. Like simplex but more natural"
+            },
+            {
+                "const": "PERLIN_IRIS",
+                "description": "Perlin. Like simplex but more natural"
+            },
+            {
+                "const": "PERLIN_IRIS_HALF",
+                "description": "Perlin. Like simplex but more natural"
+            },
+            {
+                "const": "PERLIN_IRIS_DOUBLE",
+                "description": "Perlin. Like simplex but more natural"
+            },
+            {
+                "const": "PERLIN_IRIS_THICK",
+                "description": "Perlin. Like simplex but more natural"
+            },
+            {
+                "const": "FRACTAL_BILLOW_PERLIN",
+                "description": "Billow Fractal Perlin Noise."
+            },
+            {
+                "const": "BIOCTAVE_FRACTAL_BILLOW_PERLIN",
+                "description": "Billow Fractal Perlin Noise. 2 Octaves"
+            },
+            {
+                "const": "FRACTAL_BILLOW_SIMPLEX",
+                "description": "Billow Fractal Simplex Noise. Single octave."
+            },
+            {
+                "const": "FRACTAL_FBM_SIMPLEX",
+                "description": "FBM Fractal Simplex Noise. Single octave."
+            },
+            {
+                "const": "FRACTAL_BILLOW_IRIS",
+                "description": "Billow Fractal Iris Noise. Single octave."
+            },
+            {
+                "const": "FRACTAL_FBM_IRIS",
+                "description": "FBM Fractal Iris Noise. Single octave."
+            },
+            {
+                "const": "FRACTAL_BILLOW_IRIS_HALF",
+                "description": "Billow Fractal Iris Noise. Single octave."
+            },
+            {
+                "const": "FRACTAL_FBM_IRIS_HALF",
+                "description": "FBM Fractal Iris Noise. Single octave."
+            },
+            {
+                "const": "FRACTAL_BILLOW_IRIS_THICK",
+                "description": "Billow Fractal Iris Noise. Single octave."
+            },
+            {
+                "const": "FRACTAL_FBM_IRIS_THICK",
+                "description": "FBM Fractal Iris Noise. Single octave."
+            },
+            {
+                "const": "FRACTAL_RM_SIMPLEX",
+                "description": "Rigid Multi Fractal Simplex Noise. Single octave."
+            },
+            {
+                "const": "BIOCTAVE_FRACTAL_BILLOW_SIMPLEX",
+                "description": "Billow Fractal Simplex Noise. 2 octaves."
+            },
+            {
+                "const": "BIOCTAVE_FRACTAL_FBM_SIMPLEX",
+                "description": "FBM Fractal Simplex Noise. 2 octaves."
+            },
+            {
+                "const": "BIOCTAVE_FRACTAL_RM_SIMPLEX",
+                "description": "Rigid Multi Fractal Simplex Noise. 2 octaves."
+            },
+            {
+                "const": "TRIOCTAVE_FRACTAL_RM_SIMPLEX",
+                "description": "Rigid Multi Fractal Simplex Noise. 3 octaves."
+            },
+            {
+                "const": "TRIOCTAVE_FRACTAL_BILLOW_SIMPLEX",
+                "description": "Billow Fractal Simplex Noise. 3 octaves."
+            },
+            {
+                "const": "TRIOCTAVE_FRACTAL_FBM_SIMPLEX",
+                "description": "FBM Fractal Simplex Noise. 3 octaves."
+            },
+            {
+                "const": "QUADOCTAVE_FRACTAL_RM_SIMPLEX",
+                "description": "Rigid Multi Fractal Simplex Noise. 4 octaves."
+            },
+            {
+                "const": "QUADOCTAVE_FRACTAL_BILLOW_SIMPLEX",
+                "description": "Billow Fractal Simplex Noise. 4 octaves."
+            },
+            {
+                "const": "QUADOCTAVE_FRACTAL_FBM_SIMPLEX",
+                "description": "FBM Fractal Simplex Noise. 4 octaves."
+            },
+            {
+                "const": "QUINTOCTAVE_FRACTAL_RM_SIMPLEX",
+                "description": "Rigid Multi Fractal Simplex Noise. 5 octaves."
+            },
+            {
+                "const": "QUINTOCTAVE_FRACTAL_BILLOW_SIMPLEX",
+                "description": "Billow Fractal Simplex Noise. 5 octaves."
+            },
+            {
+                "const": "QUINTOCTAVE_FRACTAL_FBM_SIMPLEX",
+                "description": "FBM Fractal Simplex Noise. 5 octaves."
+            },
+            {
+                "const": "SEXOCTAVE_FRACTAL_RM_SIMPLEX",
+                "description": "Rigid Multi Fractal Simplex Noise. 6 octaves."
+            },
+            {
+                "const": "SEXOCTAVE_FRACTAL_BILLOW_SIMPLEX",
+                "description": "Billow Fractal Simplex Noise. 6 octaves."
+            },
+            {
+                "const": "SEXOCTAVE_FRACTAL_FBM_SIMPLEX",
+                "description": "FBM Fractal Simplex Noise. 6 octaves."
+            },
+            {
+                "const": "SEPTOCTAVE_FRACTAL_RM_SIMPLEX",
+                "description": "Rigid Multi Fractal Simplex Noise. 7 octaves."
+            },
+            {
+                "const": "SEPTOCTAVE_FRACTAL_BILLOW_SIMPLEX",
+                "description": "Billow Fractal Simplex Noise. 7 octaves."
+            },
+            {
+                "const": "SEPTOCTAVE_FRACTAL_FBM_SIMPLEX",
+                "description": "FBM Fractal Simplex Noise. 7 octaves."
+            },
+            {
+                "const": "OCTOCTAVE_FRACTAL_RM_SIMPLEX",
+                "description": "Rigid Multi Fractal Simplex Noise. 8 octaves."
+            },
+            {
+                "const": "OCTOCTAVE_FRACTAL_BILLOW_SIMPLEX",
+                "description": "Billow Fractal Simplex Noise. 8 octaves."
+            },
+            {
+                "const": "OCTOCTAVE_FRACTAL_FBM_SIMPLEX",
+                "description": "FBM Fractal Simplex Noise. 8 octaves."
+            },
+            {
+                "const": "NONOCTAVE_FRACTAL_RM_SIMPLEX",
+                "description": "Rigid Multi Fractal Simplex Noise. 9 octaves."
+            },
+            {
+                "const": "NONOCTAVE_FRACTAL_BILLOW_SIMPLEX",
+                "description": "Billow Fractal Simplex Noise. 9 octaves."
+            },
+            {
+                "const": "NONOCTAVE_FRACTAL_FBM_SIMPLEX",
+                "description": "FBM Fractal Simplex Noise. 9 octaves."
+            },
+            {
+                "const": "VIGOCTAVE_FRACTAL_RM_SIMPLEX",
+                "description": "Rigid Multi Fractal Simplex Noise. 10 octaves."
+            },
+            {
+                "const": "VIGOCTAVE_FRACTAL_BILLOW_SIMPLEX",
+                "description": "Billow Fractal Simplex Noise. 10 octaves."
+            },
+            {
+                "const": "VIGOCTAVE_FRACTAL_FBM_SIMPLEX",
+                "description": "FBM Fractal Simplex Noise. 10 octaves."
+            },
+            {
+                "const": "BIOCTAVE_SIMPLEX",
+                "description": "Basic, Smooth & Fast Simplex noise. Uses 2 octaves"
+            },
+            {
+                "const": "TRIOCTAVE_SIMPLEX",
+                "description": "Basic, Smooth & Fast Simplex noise. Uses 3 octaves"
+            },
+            {
+                "const": "QUADOCTAVE_SIMPLEX",
+                "description": "Basic, Smooth & Fast Simplex noise. Uses 4 octaves"
+            },
+            {
+                "const": "QUINTOCTAVE_SIMPLEX",
+                "description": "Basic, Smooth & Fast Simplex noise. Uses 5 octaves"
+            },
+            {
+                "const": "SEXOCTAVE_SIMPLEX",
+                "description": "Basic, Smooth & Fast Simplex noise. Uses 6 octaves"
+            },
+            {
+                "const": "SEPTOCTAVE_SIMPLEX",
+                "description": "Basic, Smooth & Fast Simplex noise. Uses 7 octaves"
+            },
+            {
+                "const": "OCTOCTAVE_SIMPLEX",
+                "description": "Basic, Smooth & Fast Simplex noise. Uses 8 octaves"
+            },
+            {
+                "const": "NONOCTAVE_SIMPLEX",
+                "description": "Basic, Smooth & Fast Simplex noise. Uses 9 octaves"
+            },
+            {
+                "const": "VIGOCTAVE_SIMPLEX",
+                "description": "Basic, Smooth & Fast Simplex noise. Uses 10 octaves"
+            },
+            {
+                "const": "GLOB",
+                "description": "Glob noise is like cellular, but with globs..."
+            },
+            {
+                "const": "GLOB_IRIS",
+                "description": "Glob noise is like cellular, but with globs..."
+            },
+            {
+                "const": "GLOB_IRIS_HALF",
+                "description": "Glob noise is like cellular, but with globs..."
+            },
+            {
+                "const": "GLOB_IRIS_DOUBLE",
+                "description": "Glob noise is like cellular, but with globs..."
+            },
+            {
+                "const": "GLOB_IRIS_THICK",
+                "description": "Glob noise is like cellular, but with globs..."
+            },
+            {
+                "const": "CUBIC",
+                "description": "Cubic Noise"
+            },
+            {
+                "const": "FRACTAL_CUBIC",
+                "description": "Fractal Cubic Noise"
+            },
+            {
+                "const": "FRACTAL_CUBIC_IRIS",
+                "description": "Fractal Cubic Noise With Iris Swirls"
+            },
+            {
+                "const": "FRACTAL_CUBIC_IRIS_THICK",
+                "description": "Fractal Cubic Noise With Iris Swirls"
+            },
+            {
+                "const": "FRACTAL_CUBIC_IRIS_HALF",
+                "description": "Fractal Cubic Noise With Iris Swirls"
+            },
+            {
+                "const": "FRACTAL_CUBIC_IRIS_DOUBLE",
+                "description": "Fractal Cubic Noise With Iris Swirls"
+            },
+            {
+                "const": "BIOCTAVE_FRACTAL_CUBIC",
+                "description": "Fractal Cubic Noise, 2 Octaves"
+            },
+            {
+                "const": "TRIOCTAVE_FRACTAL_CUBIC",
+                "description": "Fractal Cubic Noise, 3 Octaves"
+            },
+            {
+                "const": "QUADOCTAVE_FRACTAL_CUBIC",
+                "description": "Fractal Cubic Noise, 4 Octaves"
+            },
+            {
+                "const": "CUBIC_IRIS",
+                "description": "Cubic Noise"
+            },
+            {
+                "const": "CUBIC_IRIS_HALF",
+                "description": "Cubic Noise"
+            },
+            {
+                "const": "CUBIC_IRIS_DOUBLE",
+                "description": "Cubic Noise"
+            },
+            {
+                "const": "CUBIC_IRIS_THICK",
+                "description": "Cubic Noise"
+            },
+            {
+                "const": "CELLULAR_IRIS",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders. Cells are distorted using Iris styled wispy noise."
+            },
+            {
+                "const": "CELLULAR_IRIS_THICK",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders. Cells are distorted using Iris styled wispy noise."
+            },
+            {
+                "const": "CELLULAR_IRIS_DOUBLE",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders. Cells are distorted using Iris styled wispy noise."
+            },
+            {
+                "const": "CELLULAR_IRIS_HALF",
+                "description": "Cellular noise creates the same noise level for cells, changes noise level on cell borders. Cells are distorted using Iris styled wispy noise."
+            },
+            {
+                "const": "CELLULAR_HEIGHT",
+                "description": "Inverse of vascular, height gets to 1.0 as it approaches the center of a cell"
+            },
+            {
+                "const": "CELLULAR_HEIGHT_IRIS",
+                "description": "Inverse of vascular, height gets to 1.0 as it approaches the center of a cell, using the iris style."
+            },
+            {
+                "const": "CELLULAR_HEIGHT_IRIS_DOUBLE",
+                "description": "Inverse of vascular, height gets to 1.0 as it approaches the center of a cell, using the iris style."
+            },
+            {
+                "const": "CELLULAR_HEIGHT_IRIS_THICK",
+                "description": "Inverse of vascular, height gets to 1.0 as it approaches the center of a cell, using the iris style."
+            },
+            {
+                "const": "CELLULAR_HEIGHT_IRIS_HALF",
+                "description": "Inverse of vascular, height gets to 1.0 as it approaches the center of a cell, using the iris style."
+            },
+            {
+                "const": "VASCULAR_IRIS",
+                "description": "Vascular noise gets higher as the position nears a cell border. Cells are distorted using Iris styled wispy noise."
+            },
+            {
+                "const": "VASCULAR_IRIS_DOUBLE",
+                "description": "Vascular noise gets higher as the position nears a cell border. Cells are distorted using Iris styled wispy noise."
+            },
+            {
+                "const": "VASCULAR_IRIS_THICK",
+                "description": "Vascular noise gets higher as the position nears a cell border. Cells are distorted using Iris styled wispy noise."
+            },
+            {
+                "const": "VASCULAR_IRIS_HALF",
+                "description": "Vascular noise gets higher as the position nears a cell border. Cells are distorted using Iris styled wispy noise."
+            }
+        ]},
+        "erzexpressions": {"enum": []},
+        "enum-snippet-style": {"enum": []},
+        "oneof-enum-com-volmit-iris-engine-object-irisenginestreamtype": {"oneOf": [
+            {
+                "const": "SLOPE",
+                "description": "Represents the given slope at the x, z coordinates"
+            },
+            {
+                "const": "TRUE_HEIGHT",
+                "description": "Represents the real terrain height ignoring fluid, this includes carving, caves & noise features into this stream."
+            },
+            {
+                "const": "TRUE_HEIGHT_OR_FLUID",
+                "description": "Represents the real terrain height including fluid, this includes carving, caves & noise features into this stream."
+            },
+            {
+                "const": "HEIGHT",
+                "description": "Represents the base generator height at the given position. This includes only the biome generators / interpolation and noise features but does not include carving, caves."
+            },
+            {
+                "const": "HEIGHT_OR_FLUID",
+                "description": "Represents the base generator height at the given position. This includes only the biome generators / interpolation and noise features but does not include carving, caves. with Max(height, fluidHeight)."
+            },
+            {
+                "const": "OVERLAY_NOISE",
+                "description": "Represents the overlay noise generators summed (dimension setting)"
+            },
+            {
+                "const": "HEIGHT_NO_FEATURES",
+                "description": "Represents the overlay noise generators summed (dimension setting)"
+            },
+            {
+                "const": "OBJECT_CHANCE_CLIP",
+                "description": "Represents the object chance clip. If a noise feature alters the object chance in this area this number will drop below 1. (100%)"
+            },
+            {
+                "const": "REGION_STYLE",
+                "description": "Represents the noise style of regions"
+            },
+            {
+                "const": "REGION_IDENTITY",
+                "description": "Represents the identity of regions. Each region has a unique number (very large numbers)"
+            }
+        ]},
+        "obj-com-volmit-iris-engine-object-irisgeneratorstyle": {
+            "anyOf": [
+                {
+                    "description": "A gen style",
+                    "type": "object",
+                    "properties": {
+                        "style": {
+                            "type": "string",
+                            "$ref": "#/definitions/oneof-enum-com-volmit-iris-engine-object-noisestyle",
+                            "description": "style\nThe chance is 1 in CHANCE per interval\n   \nNoiseStyle\nStyles of noise\n    \n* Default Value is a default object (create this object to see default properties)\nMust be a valid NoiseStyle (use ctrl+space for auto complete!)"
+                        },
+                        "zoom": {
+                            "type": "number",
+                            "minimum": 1.0E-5,
+                            "description": "zoom\nThe zoom of this style\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 1.0E-5"
+                        },
+                        "expression": {
+                            "type": "string",
+                            "$ref": "#/definitions/erzexpressions",
+                            "description": "expression\nInstead of using the style property, use a custom expression to represent this style.\n   \nIris Expression\n\nMust be a valid expressions (use ctrl+space for auto complete!)"
+                        },
+                        "multiplier": {
+                            "type": "number",
+                            "minimum": 1.0E-5,
+                            "description": "multiplier\nThe Output multiplier. Only used if parent is fracture.\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 1.0E-5"
+                        },
+                        "axialFracturing": {
+                            "type": "boolean",
+                            "description": "axialFracturing\nIf set to true, each dimension will be fractured with a different order of input coordinates. This is usually 2 or 3 times slower than normal.\n   \nBoolean\n\n    \n* Default Value is a default object (create this object to see default properties)"
+                        },
+                        "fracture": {
+                            "anyOf": [
+                                {
+                                    "!required": false,
+                                    "type": "object",
+                                    "$ref": "#/definitions/obj-com-volmit-iris-engine-object-irisgeneratorstyle",
+                                    "description": "fracture\nApply a generator to the coordinate field fed into this parent generator. I.e. Distort your generator with another generator.\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
+                                },
+                                {
+                                    "type": "string",
+                                    "$ref": "#/definitions/enum-snippet-style"
+                                }
+                            ],
+                            "description": "fracture\nApply a generator to the coordinate field fed into this parent generator. I.e. Distort your generator with another generator.\n   \nGeneratorStyle (Object)\nA gen style\n    \nYou can instead specify \"snippet/style/some-name.json\" to use a snippet file instead of specifying it here."
+                        },
+                        "exponent": {
+                            "type": "number",
+                            "minimum": 0.01562,
+                            "maximum": 64,
+                            "description": "exponent\nThe exponent\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.01562\n* Maximum allowed is 64.0"
+                        }
+                    }
+                },
+                {"type": "string"}
+            ],
+            "description": "A gen style"
+        },
+        "oneof-enum-com-volmit-iris-engine-object-irisenginevaluetype": {"oneOf": [
+            {
+                "const": "ENGINE_HEIGHT",
+                "description": "Represents actual height of the engine"
+            },
+            {
+                "const": "ENGINE_MIN_HEIGHT",
+                "description": "Represents virtual bottom of the engine in the compound. If this engine is on top of another engine, it's min height would be at the maxHeight of the previous engine + 1"
+            },
+            {
+                "const": "ENGINE_MAX_HEIGHT",
+                "description": "Represents virtual top of the engine in the compound. If this engine is below another engine, it's max height would be at the minHeight of the next engine - 1"
+            },
+            {
+                "const": "FLUID_HEIGHT",
+                "description": "The fluid height defined in the dimension file"
+            }
+        ]}
+    }
+}

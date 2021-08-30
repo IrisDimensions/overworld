@@ -1,0 +1,35 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://volmit.com/iris-schema/irisenchantment.json",
+    "anyOf": [
+        {
+            "description": "Represents an enchantment & level",
+            "type": "object",
+            "properties": {
+                "enchantment": {
+                    "type": "string",
+                    "description": "enchantment\nThe enchantment\n   \nText\n\n    \n* Default Value is "
+                },
+                "minLevel": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "description": "minLevel\nMinimum amount of this loot\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1"
+                },
+                "maxLevel": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "description": "maxLevel\nMaximum amount of this loot\n   \nInteger\n\n    \n* Default Value is 1\n* Minimum allowed is 1"
+                },
+                "chance": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1,
+                    "description": "chance\nThe chance that this enchantment is applied (0 to 1)\n   \nNumber\n\n    \n* Default Value is 1.0\n* Minimum allowed is 0.0\n* Maximum allowed is 1.0"
+                }
+            }
+        },
+        {"type": "string"}
+    ],
+    "description": "Represents an enchantment & level",
+    "definitions": {}
+}
