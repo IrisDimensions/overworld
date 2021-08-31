@@ -1,66 +1,47 @@
 {
-  "name": "Red Sandstone Cavern",
-  "wall": {
-    "palette": [
-      {
-        "block": "minecraft:red_sand"
-      },
-      {
-        "block": "minecraft:red_sandstone"
-      }
+    "name": "Red Sandstone Cavern",
+    "wall": {"palette": [
+        {"block": "minecraft:red_sand"},
+        {"block": "minecraft:red_sandstone"}
+    ]},
+    "layers": [{
+        "maxHeight": 2,
+        "minHeight": 2,
+        "palette": [
+            {
+                "weight": 3,
+                "block": "minecraft:red_sand"
+            },
+            {
+                "block": "minecraft:smooth_red_sandstone",
+                "weight": 8
+            }
+        ]
+    }],
+    "caveCeilingLayers": [{
+        "maxHeight": 2,
+        "minHeight": 2,
+        "palette": [
+            {
+                "weight": 3,
+                "block": "minecraft:red_sand"
+            },
+            {
+                "block": "minecraft:smooth_red_sandstone",
+                "weight": 8
+            }
+        ]
+    }],
+    "decorators": [
+        {
+            "chance": 0.03,
+            "stackMin": 1,
+            "stackMax": 3,
+            "palette": [{"block": "minecraft:cactus"}]
+        },
+        {
+            "chance": 0.01,
+            "palette": [{"block": "minecraft:dead_bush"}]
+        }
     ]
-  },
-  "layers": [
-    {
-      "maxHeight": 2,
-      "minHeight": 2,
-      "palette": [
-        {
-          "weight": 3,
-          "block": "minecraft:red_sand"
-        },
-        {
-          "block": "minecraft:smooth_red_sandstone",
-          "weight": 8
-        }
-      ]
-    }
-  ],
-  "caveCeilingLayers": [
-    {
-      "maxHeight": 2,
-      "minHeight": 2,
-      "palette": [
-        {
-          "weight": 3,
-          "block": "minecraft:red_sand"
-        },
-        {
-          "block": "minecraft:smooth_red_sandstone",
-          "weight": 8
-        }
-      ]
-    }
-  ],
-  "decorators": [
-    {
-      "chance": 0.03,
-
-      "stackMin": 1,
-      "stackMax": 3,
-      "palette": [
-        {
-          "block": "minecraft:cactus"
-        }
-      ]
-    },
-    {
-      "chance": 0.01,
-      "palette": [
-        {
-          "block": "minecraft:dead_bush"
-        }
-      ]
-    }
-  ]
 }
