@@ -1,10 +1,8 @@
 {
-    "version": 2008,
-    "OVERWORLD-VERSION": 3.134,
+    "version": 2009,
     "name": "Overworld",
     "environment": "NORMAL",
     "fluidHeight": 63,
-    "CONTINENTS": "Continent settings containing placement of the continents.",
     "continentZoom": 1,
     "continentalStyle": {
         "style": "NOWHERE_CELLULAR",
@@ -12,7 +10,6 @@
     },
     "landChance": 0.69,
     "biomeZoom": 5,
-    "REGIONS": "Contains the list of regions and their placement style",
     "regionStyle": {
         "style": "NOWHERE_CELLULAR",
         "fracture": {
@@ -38,6 +35,26 @@
         "frozen",
         "tundra"
     ],
+    "carving": {"caves": [{
+        "breakSurface": true,
+        "cave": "deep/main",
+        "rarity": 28,
+        "caveStartHeight": {
+            "max": 35,
+            "min": 12,
+            "style": {"style": "STATIC"}
+        }
+    },
+    {
+        "breakSurface": true,
+        "cave": "lava/main",
+        "rarity": 100,
+        "caveStartHeight": {
+            "max": 50,
+            "min": 5,
+            "style": {"style": "STATIC"}
+        }
+    }]},
     "islandBiomeChanceStyle": {
         "style": "NOWHERE_CELLULAR",
         "axialFracturing": true,
@@ -53,15 +70,12 @@
             }
         }
     },
-    "TREE SETTINGS": "This is where you can change tree inheritance from saplings.",
     "treeSettings": {
         "enabled": true,
         "mode": "FIRST"
     },
-    "SEAS": "Sea settings (for the biomes that are oceans).",
     "seaZoom": 1.25,
     "seaBiomeStyle": {"style": "FRACTAL_FBM_IRIS"},
-    "LAND": "Land settings (for the biomes that are non-ocean).",
     "landZoom": 3.2,
     "landBiomeStyle": {
         "style": "NOWHERE_CELLULAR",
@@ -79,14 +93,12 @@
         }
     },
     "shoreBiomeStyle": {"style": "NOWHERE_CELLULAR"},
-    "LOOT": "Contains a list of loot tables that are attempted to be applied to all chests that spawn.",
     "lootTries": 32,
     "loot": {"tables": [
         "global-treasure",
         "global-tools",
         "global-clutter"
     ]},
-    "ORES": "All settings in regards to deposits. Contains the ores spawning in your world.",
     "deposits": [
         {
             "minHeight": 19,
@@ -141,7 +153,7 @@
         {
             "minHeight": 5,
             "maxPerChunk": 5,
-            "maxHeight": 13,
+            "maxHeight": 15,
             "minPerChunk": 5,
             "minSize": 8,
             "maxSize": 4,
@@ -181,8 +193,8 @@
             "varience": 7
         },
         {
-            "minHeight": 3,
-            "maxPerChunk": 2,
+            "minHeight": 1,
+            "maxPerChunk": 3,
             "maxHeight": 67,
             "minPerChunk": 1,
             "minSize": 3,
@@ -191,8 +203,8 @@
             "varience": 3
         },
         {
-            "minHeight": 3,
-            "maxPerChunk": 4,
+            "minHeight": 1,
+            "maxPerChunk": 6,
             "maxHeight": 29,
             "minPerChunk": 2,
             "minSize": 3,
@@ -202,7 +214,7 @@
         },
         {
             "minHeight": 1,
-            "maxPerChunk": 12,
+            "maxPerChunk": 14,
             "maxHeight": 120,
             "minPerChunk": 8,
             "minSize": 4,
@@ -212,7 +224,7 @@
         },
         {
             "minHeight": 1,
-            "maxPerChunk": 10,
+            "maxPerChunk": 13,
             "maxHeight": 64,
             "minPerChunk": 8,
             "minSize": 4,
@@ -222,7 +234,7 @@
         },
         {
             "minHeight": 1,
-            "maxPerChunk": 10,
+            "maxPerChunk": 13,
             "maxHeight": 175,
             "minPerChunk": 9,
             "minSize": 6,
@@ -231,108 +243,14 @@
             "varience": 9
         }
     ],
-    "CAVES": "All settings in regards to caves. Contains a toggle and the cave carve layers.",
-    "caves": true,
-    "caveLayers": [
-        {
-            "canBreakSurface": true,
-            "caveThickness": 0.48,
-            "caveZoom": 0.7,
-            "horizontalSlope": {
-                "min": -40,
-                "max": 60,
-                "generator": {
-                    "style": "SIMPLEX",
-                    "zoom": 2
-                }
-            },
-            "verticalSlope": {
-                "min": 10,
-                "max": 110,
-                "generator": {
-                    "style": "SIMPLEX",
-                    "zoom": 4
-                }
-            }
-        },
-        {
-            "canBreakSurface": false,
-            "caveThickness": 0.5,
-            "caveZoom": 0.7,
-            "horizontalSlope": {
-                "min": -40,
-                "max": 30,
-                "generator": {
-                    "style": "IRIS",
-                    "zoom": 2
-                }
-            },
-            "verticalSlope": {
-                "min": 60,
-                "max": 255,
-                "generator": {
-                    "style": "IRIS",
-                    "zoom": 4
-                }
-            }
-        },
-        {
-            "canBreakSurface": false,
-            "caveThickness": 0.1,
-            "caveZoom": 0.7,
-            "horizontalSlope": {
-                "min": -40,
-                "max": 50,
-                "generator": {
-                    "style": "PERLIN",
-                    "zoom": 2
-                }
-            },
-            "verticalSlope": {
-                "min": -40,
-                "max": 80,
-                "generator": {
-                    "style": "PERLIN",
-                    "zoom": 2
-                }
-            },
-            "fluid": {
-                "fluidHeight": 12,
-                "fluidType": {"block": "minecraft:lava"}
-            }
-        }
-    ],
     "caveBiomeStyle": {"style": "CELLULAR_IRIS_DOUBLE"},
-    "CAVERNS//CARVING": "Carving layers that cut off certain parts of the world",
-    "carving": true,
-    "carveLayers": [{
-        "style": {
-            "style": "PERLIN_IRIS_HALF",
-            "zoom": 0.2,
-            "fracture": {
-                "multiplier": 5,
-                "style": "PERLIN",
-                "zoom": 0.5
-            }
-        },
-        "fullPercent": 0.01,
-        "threshold": 0.68,
-        "minHeight": -50,
-        "maxHeight": 110
-    }],
-    "RAVINES": "Settings regarding ravines. Iris does not know when and where they spawn, so it may look weird (with cave fluids)",
-    "ravines": false,
-    "ravineRarity": 500,
-    "ravineRibRarity": 3,
-    "OTHER": "Other settings you probably should not touch.",
     "aggressiveBiomeReshuffle": true,
     "coordFractureDistance": 926,
     "coordFractureZoom": 0.15,
-    "dimensionAngleDeg": 69,
     "preventLeafDecay": true,
     "postProcessCaves": true,
     "postProcessing": true,
-    "placeObjects": true,
+    "useMantle": true,
     "terrainZoom": 1,
     "stronghold": "stronghold",
     "strongholdJumpDistance": 670,

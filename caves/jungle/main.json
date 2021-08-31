@@ -1,0 +1,74 @@
+{
+    "fill": {"block": "minecraft:cave_air"},
+    "verticalRange": {
+        "max": 130,
+        "min": 5
+    },
+    "customBiome": "subterrestrial-palette/jungle-cavern",
+    "fork": {
+        "ravines": [
+            {
+                "rarity": 100,
+                "ravine": "jungle/main"
+            },
+            {
+                "rarity": 400,
+                "ravine": "amethyst/main"
+            }
+        ],
+        "caves": [
+            {
+                "breakSurface": false,
+                "cave": "amethyst/small",
+                "rarity": 336
+            },
+            {
+                "breakSurface": true,
+                "cave": "jungle/small",
+                "rarity": 7
+            }
+        ],
+        "elipsoids": [{
+            "customBiome": "subterrestrial-palette/amethyst-cavern",
+            "fill": {"block": "minecraft:cave_air"},
+            "rarity": 90,
+            "baseWidth": {
+                "min": 5,
+                "max": 17,
+                "style": {"style": "STATIC"}
+            }
+        }]
+    },
+    "worm": {
+        "girth": {
+            "max": 5,
+            "min": 3,
+            "style": {"style": "SIMPLEX"}
+        },
+        "maxDistance": 100,
+        "yStyle": {
+            "min": -3,
+            "max": 1,
+            "generator": {
+                "zoom": 3,
+                "style": "STATIC"
+            }
+        },
+        "xStyle": {
+            "min": -9,
+            "max": 9,
+            "generator": {
+                "zoom": 0.6,
+                "style": "IRIS"
+            }
+        },
+        "zStyle": {
+            "min": -9,
+            "max": 9,
+            "generator": {
+                "zoom": 0.6,
+                "style": "NOWHERE"
+            }
+        }
+    }
+}

@@ -1,0 +1,102 @@
+{
+    "name": "Ice Cavern",
+    "wall": {"palette": [{"block": "minecraft:packed_ice"}]},
+    "layers": [
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "style": {"style": "STATIC"},
+            "zoom": 0.4,
+            "palette": [
+                {
+                    "weight": 5,
+                    "block": "minecraft:ice"
+                },
+                {
+                    "weight": 1,
+                    "block": "minecraft:packed_ice"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "style": {"style": "STATIC"},
+            "zoom": 0.4,
+            "palette": [
+                {
+                    "weight": 1,
+                    "block": "minecraft:blue_ice"
+                },
+                {
+                    "weight": 5,
+                    "block": "minecraft:ice"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "palette": [{
+                "weight": 5,
+                "block": "minecraft:blackstone"
+            }]
+        }
+    ],
+    "caveCeilingLayers": [
+        {
+            "maxHeight": 2,
+            "minHeight": 1,
+            "palette": [{"block": "minecraft:ice"}]
+        },
+        {
+            "maxHeight": 1,
+            "minHeight": 1,
+            "palette": [
+                {"block": "minecraft:blackstone"},
+                {"block": "minecraft:blue_ice"}
+            ]
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.001,
+            "palette": [{"block": "minecraft:cornflower"}]
+        },
+        {
+            "chance": 0.006,
+            "scaleStack": true,
+            "stackMin": 25,
+            "stackMax": 80,
+            "absoluteMaxStack": 6,
+            "palette": [
+                {
+                    "block": "minecraft:ice",
+                    "weight": 3
+                },
+                {
+                    "block": "minecraft:packed_ice",
+                    "weight": 1
+                }
+            ]
+        },
+        {
+            "partOf": "CEILING",
+            "chance": 0.001,
+            "absoluteMaxStack": 6,
+            "scaleStack": true,
+            "stackMin": 25,
+            "stackMax": 80,
+            "palette": [
+                {
+                    "block": "minecraft:ice",
+                    "weight": 3
+                },
+                {
+                    "block": "minecraft:packed_ice",
+                    "weight": 1
+                }
+            ]
+        }
+    ]
+}

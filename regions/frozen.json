@@ -12,12 +12,14 @@
         "frozen/spruce-plains"
     ],
     "shoreBiomes": ["frozen/shore/beach"],
-    "seaBiomes": ["frozen/sea/frozen-river-ice", "frozen/sea/ocean"],
-    "caveBiomes": [
-        "cave/ice-cavern",
-        "cave/cracked-cavern"
+    "seaBiomes": [
+        "frozen/sea/frozen-river-ice",
+        "frozen/sea/ocean"
     ],
-    "riverBiomes": ["frozen/sea/frozen-river-ice", "frozen/sea/ocean"],
+    "riverBiomes": [
+        "frozen/sea/frozen-river-ice",
+        "frozen/sea/ocean"
+    ],
     "jigsawStructures": [{
         "structure": "murky_stronghold",
         "rarity": 250
@@ -263,6 +265,22 @@
             "carvingSupport": "SURFACE_ONLY"
         }
     ],
+    "carving": {
+        "ravines": [{
+            "rarity": 150,
+            "ravine": "ice/main"
+        }],
+        "caves": [{
+            "breakSurface": true,
+            "cave": "ice/main",
+            "rarity": 25,
+            "caveStartHeight": {
+                "max": 120,
+                "min": 25,
+                "style": {"style": "VASCULAR"}
+            }
+        }]
+    },
     "shoreHeightZoom": 1.14,
     "riverThickness": 0.006,
     "rarity": 3
