@@ -1,0 +1,190 @@
+{
+    "name": "Tundra Magic Forest",
+    "derivative": "MOUNTAINS",
+    "color": "#164598",
+    "rarity": 7,
+    "vanillaDerivative": "TAIGA_MOUNTAINS",
+    "generators": [{
+        "generator": "smooth-dunes",
+        "max": 14,
+        "min": 8
+    }],
+    "customDerivitives": [{
+        "grassColor": "#4E83CF",
+        "foliageColor": "#2F99DC",
+        "id": "tunmagforest",
+        "waterColor": "#5C3BEF",
+        "waterFogColor": "#7A768F",
+        "category": "forest",
+        "fogColor": "#686090"
+    }],
+    "jigsawStructures": [
+        {
+            "rarity": 1700,
+            "structure": "pillager_outpost"
+        },
+        {
+            "rarity": 1000,
+            "structure": "village-tundra"
+        }
+    ],
+    "layers": [
+        {
+            "minHeight": 3,
+            "maxHeight": 5,
+            "slopeCondition": {"minimumSlope": 6.9},
+            "palette": [
+                {"block": "minecraft:stone"},
+                {"block": "minecraft:andesite"},
+                {"block": "minecraft:gravel"}
+            ]
+        },
+        {
+            "minHeight": 3,
+            "maxHeight": 5,
+            "slopeCondition": {"minimumSlope": 5.3},
+            "palette": [
+                {"block": "minecraft:dirt"},
+                {"block": "minecraft:coarse_dirt"},
+                {"block": "minecraft:gravel"}
+            ]
+        },
+        {"palette": [{"block": "minecraft:grass_block"}]},
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "minecraft:stone"},
+                {"block": "minecraft:andesite"},
+                {"block": "minecraft:stone"}
+            ]
+        }
+    ],
+    "objects": [
+        {
+            "place": [
+                "clutter/gravelsplotch1",
+                "clutter/gravelsplotch2",
+                "clutter/gravelsplotch3",
+                "clutter/gravelsplotch4"
+            ],
+            "chance": 0.35,
+            "mode": "PAINT"
+        },
+        {
+            "chance": 0.8,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "trees/mixed/dotree1",
+                "trees/mixed/dotree2",
+                "trees/mixed/dotree3",
+                "trees/mixed/dotree4",
+                "trees/mixed/dotree5",
+                "trees/mixed/dotree6",
+                "trees/mixed/dotree7",
+                "trees/mixed/dotree8",
+                "trees/mixed/dotree9",
+                "trees/mixed/dotree10"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -2,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.01,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/obelisk1",
+                "clutter/obelisk2",
+                "clutter/obelisk3",
+                "clutter/obelisk4",
+                "clutter/obelisk5",
+                "clutter/obelisk6",
+                "clutter/obelisk7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -4,
+                "z": 0
+            }
+        }
+    ],
+    "biomeZoom": 30,
+    "biomeStyle": {"style": "SIMPLEX"},
+    "decorators": [
+        {
+            "chance": 0.01,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.1,
+            "palette": [
+                {"block": "minecraft:white_tulip"},
+                {"block": "minecraft:blue_orchid"},
+                {"block": "minecraft:poppy"}
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.001,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "data": {"age": 0},
+                    "block": "minecraft:sweet_berry_bush"
+                },
+                {
+                    "data": {"age": 1},
+                    "block": "minecraft:sweet_berry_bush"
+                },
+                {
+                    "data": {"age": 2},
+                    "block": "minecraft:sweet_berry_bush"
+                },
+                {
+                    "data": {"age": 3},
+                    "block": "minecraft:sweet_berry_bush"
+                }
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
+            "chance": 0.2,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.3,
+            "palette": [{"block": "minecraft:grass"}],
+            "style": {"style": "STATIC"}
+        }
+    ],
+    "childShrinkFactor": 8,
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {"block": "minecraft:stone"},
+            {"block": "minecraft:andesite"},
+            {"block": "minecraft:stone"}
+        ]
+    },
+    "biomeScatter": [
+        "TAIGA_HILLS",
+        "MOUNTAINS"
+    ]
+}
