@@ -1,0 +1,154 @@
+{
+    "name": "Frosted Peaks",
+    "derivative": "TAIGA_MOUNTAINS",
+    "vanillaDerivative": "TAIGA_MOUNTAINS",
+    "customDerivitives": [{
+        "id": "frosted-peaks",
+        "grassColor": "#80ab69",
+        "category": "extreme_hills"
+    }],
+    "biomeZoom": 0.73,
+    "rarity": 5,
+    "generators": [{
+        "generator": "mountain",
+        "max": 200,
+        "min": 90
+    }],
+    "layers": [
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "slopeCondition": {
+                "minimumSlope": 0.1,
+                "maximumSlope": 1.65
+            },
+            "palette": [{"block": "minecraft:snow_block"}]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "style": {
+                "style": "FRACTAL_WATER",
+                "fracture": {
+                    "style": "STATIC",
+                    "multiplier": 15
+                }
+            },
+            "zoom": 0.4,
+            "slopeCondition": {
+                "minimumSlope": 3.95,
+                "maximumSlope": 6
+            },
+            "palette": [
+                {
+                    "block": "minecraft:diorite",
+                    "weight": 4
+                },
+                {
+                    "block": "minecraft:stone",
+                    "weight": 10
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "style": {"style": "STATIC"},
+            "slopeCondition": {"minimumSlope": 2.5},
+            "palette": [
+                {
+                    "block": "minecraft:smooth_basalt",
+                    "weight": 3
+                },
+                {
+                    "block": "minecraft:stone",
+                    "weight": 5
+                },
+                {
+                    "block": "minecraft:gray_concrete_powder",
+                    "weight": 3
+                },
+                {
+                    "block": "minecraft:gravel",
+                    "weight": 3
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {
+                    "block": "minecraft:stone",
+                    "weight": 2
+                },
+                {
+                    "block": "minecraft:andesite",
+                    "weight": 1
+                }
+            ]
+        }
+    ],
+    "slab": {
+        "style": {"style": "STATIC"},
+        "slopeCondition": {"minimumSlope": 2.3},
+        "palette": [
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "minecraft:stone_slab"
+            },
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "minecraft:cobblestone_slab"
+            },
+            {
+                "weight": 6,
+                "block": "minecraft:air"
+            }
+        ]
+    },
+    "carving": {"caves": [{
+        "breakSurface": true,
+        "cave": "rocky/tubes",
+        "rarity": 11,
+        "caveStartHeight": {
+            "max": 180,
+            "min": 80,
+            "style": {"style": "STATIC"}
+        }
+    }]},
+    "decorators": [
+        {
+            "chance": 0.01,
+            "palette": [{"block": "minecraft:tall_grass"}]
+        },
+        {
+            "chance": 0.5,
+            "palette": [{"block": "minecraft:grass"}]
+        },
+        {
+            "chance": 0.15,
+            "palette": [{"block": "minecraft:fern"}]
+        },
+        {
+            "chance": 0.15,
+            "palette": [{"block": "minecraft:fern"}]
+        }
+    ],
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {"block": "minecraft:stone"},
+            {"block": "minecraft:andesite"},
+            {"block": "minecraft:gravel"},
+            {"block": "minecraft:basalt"}
+        ]
+    }
+}

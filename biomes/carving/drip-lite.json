@@ -7,9 +7,19 @@
         "palette": [{"block": "minecraft:dripstone_block"}]
     }],
     "caveCeilingLayers": [{
+        "style": {"style": "IRIS"},
         "maxHeight": 2,
         "minHeight": 2,
-        "palette": [{"block": "minecraft:dripstone_block"}]
+        "palette": [
+            {
+                "block": "minecraft:dripstone_block",
+                "weight": 15
+            },
+            {
+                "block": "minecraft:shroomlight",
+                "weight": 1
+            }
+        ]
     }],
     "decorators": [
         {
@@ -25,7 +35,7 @@
         },
         {
             "partOf": "CEILING",
-            "chance": 0.08,
+            "chance": 0.03,
             "absoluteMaxStack": 4,
             "scaleStack": true,
             "stackMin": 5,

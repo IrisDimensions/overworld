@@ -31,7 +31,6 @@
             "innerConnector": false,
             "rotateConnector": false,
             "name": "minecraft:bottom",
-            "spawnEntity": "pig",
             "position": {
                 "x": -2,
                 "y": -3,
@@ -57,7 +56,6 @@
             "innerConnector": false,
             "rotateConnector": false,
             "name": "minecraft:bottom",
-            "spawnEntity": "pig",
             "position": {
                 "x": 0,
                 "y": -3,
@@ -83,7 +81,6 @@
             "innerConnector": false,
             "rotateConnector": false,
             "name": "minecraft:bottom",
-            "spawnEntity": "pig",
             "position": {
                 "x": 1,
                 "y": -3,
@@ -106,6 +103,15 @@
         }
     ],
     "placementOptions": {
+        "markers": [{
+            "emptyAbove": true,
+            "maximumMarkers": 1,
+            "mark": [
+                {"block": "minecraft:grass_block"},
+                {"block": "minecraft:oak_planks"}
+            ],
+            "marker": "villager"
+        }],
         "overStilt": 0,
         "chance": 1,
         "meld": false,
@@ -144,7 +150,7 @@
             "y": -1,
             "z": 0
         },
-        "mode": "VACUUM",
+        "mode": "STILT",
         "carvingSupport": "SURFACE_ONLY",
         "snow": 0,
         "underwater": false,

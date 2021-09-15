@@ -1,5 +1,5 @@
 {
-    "version": 2010,
+    "version": 2011,
     "name": "Overworld",
     "environment": "NORMAL",
     "fluidHeight": 63,
@@ -30,22 +30,33 @@
         "swamp",
         "hot",
         "temperate",
-        "tropical",
-        "temperate",
+        "tundra",
         "frozen",
-        "tundra"
+        "tropical",
+        "temperate"
     ],
-    "carving": {
-        "caves": [{
-        "breakSurface": true,
-        "cave": "deep/main",
-        "rarity": 28,
-        "caveStartHeight": {
-            "max": 35,
-            "min": 12,
-            "style": {"style": "STATIC"}
+    "carving": {"caves": [
+        {
+            "breakSurface": true,
+            "cave": "deep/main",
+            "rarity": 28,
+            "caveStartHeight": {
+                "max": 35,
+                "min": 12,
+                "style": {"style": "STATIC"}
+            }
+        },
+        {
+            "breakSurface": false,
+            "cave": "deep/elongated",
+            "rarity": 27,
+            "caveStartHeight": {
+                "max": 45,
+                "min": 3,
+                "style": {"style": "STATIC"}
+            }
         }
-    }]},
+    ]},
     "islandBiomeChanceStyle": {
         "style": "NOWHERE_CELLULAR",
         "axialFracturing": true,
@@ -239,6 +250,7 @@
     "coordFractureDistance": 926,
     "coordFractureZoom": 0.15,
     "preventLeafDecay": true,
+    "noiseModificationFromFeatures": false,
     "postProcessCaves": true,
     "postProcessing": true,
     "useMantle": true,

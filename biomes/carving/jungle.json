@@ -24,7 +24,7 @@
     }],
     "decorators": [
         {
-            "chance": 0.05,
+            "chance": 5.0E-4,
             "scaleStack": true,
             "stackMin": 1,
             "stackMax": 5,
@@ -33,7 +33,7 @@
             "palette": [{"block": "minecraft:big_dripleaf"}]
         },
         {
-            "chance": 0.05,
+            "chance": 0.001,
             "partOf": "CEILING",
             "scaleStack": true,
             "stackMin": 5,
@@ -43,15 +43,24 @@
             "palette": [{"block": "minecraft:cave_vines"}]
         },
         {
-            "chance": 0.8,
+            "chance": 0.4,
             "style": {"style": "STATIC"},
             "palette": [
-                {"block": "minecraft:jungle_sapling"},
-                {"block": "minecraft:tall_grass"},
-                {"block": "minecraft:fern"},
+                {
+                    "block": "minecraft:jungle_sapling",
+                    "weight": 10
+                },
+                {
+                    "block": "minecraft:tall_grass",
+                    "weight": 10
+                },
+                {
+                    "block": "minecraft:fern",
+                    "weight": 10
+                },
                 {
                     "block": "minecraft:grass",
-                    "weight": 10
+                    "weight": 100
                 },
                 {"block": "minecraft:azalea"},
                 {"block": "minecraft:flowering_azalea"},
