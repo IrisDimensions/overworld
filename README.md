@@ -25,9 +25,9 @@ Roadmap
 - [ ] Add biomes for 1.18 (Black/White Divinity, Underground Lava/water pools, Crimson/Corruption)
 - [X] Bigger caves overall for 1.18 advantages
 - [X] More carving
+- [X] Lava
 - [X] Entities...
-- [ ] more ideas soon...
-- [ ] 
+
 
 
 
