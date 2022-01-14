@@ -1,4 +1,4 @@
-# Overworld V2  (1.17+)
+# Overworld V2  (1.18+)
 The standard overworld for [Iris the Dimension Engine](https://www.spigotmc.org/resources/iris-world-gen-the-dimension-engine.84586/). New and Improved!
 
 
