@@ -1,4 +1,4 @@
-# Overworld V2  (1.17+)
+# Overworld V2  (1.18+)
 The standard overworld for [Iris the Dimension Engine](https://www.spigotmc.org/resources/iris-world-gen-the-dimension-engine.84586/). New and Improved!
 
 
@@ -18,17 +18,16 @@ If you want to contribute as well, feel free to make a fork and pull requests.
 Please contact us on Discord if you have some changes up for review!
 
 
-# Overworld V2  1.17+
+# Overworld V2  1.18+
 Roadmap
-- [ ] Fill regions with more content, swamp, cold, etc...
-- [ ] Pretty caves (with all the new blocks they added!)
-- [X] Fix straight lines...
-- [x] Ore implementation for copper 
-- [X] New implementation for andesite, gravel, granite, and deepslate for the infinite height in 1.17+ (need to objectify them)
-- [X] Fix implementation of objects in the REGIONS folder. They are not working: Clamp and Bottom are not working.
-- [X] Amythests
-- [X] Biomes that show off the new blocks
-- [X] Implement all the new blocks
-- [X] Fix Despawns and rework Spawns
+- [X] Implement 1.18 heights
+- [X] Make iris Less Flat (more like amplified a bit)
+- [ ] Add biomes for 1.18 (Black/White Divinity, Underground Lava/water pools, Crimson/Corruption)
+- [X] Bigger caves overall for 1.18 advantages
+- [X] More carving
+- [X] Lava
+- [X] Entities...
+
+
 
 
