@@ -1,5 +1,5 @@
 {
-  "version": 2022,
+  "version": 2023,
   "name": "Overworld",
   "environment": "NORMAL",
   "fluidHeight": 75,
@@ -9,7 +9,6 @@
     "zoom": 5
   },
   "landChance": 0.69,
-  "biomeZoom": 6.9,
   "regionStyle": {
     "style": "NOWHERE_CELLULAR",
     "fracture": {
@@ -42,9 +41,21 @@
         "cave": "deep/main",
         "rarity": 30,
         "caveStartHeight": {
-          "max": 80,
+          "max": 90,
           "min": 12,
           "style": { "style": "STATIC" }
+        }
+      },
+      {
+        "cave": "lush/main",
+        "rarity": 50,
+        "breakSurface": false,
+        "caveStartHeight": {
+          "max": 60,
+          "min": 7,
+          "style": {
+            "style": "STATIC"
+          }
         }
       },
       {
@@ -52,7 +63,7 @@
         "cave": "deep/elongated",
         "rarity": 27,
         "caveStartHeight": {
-          "max": 80,
+          "max": 90,
           "min": 12,
           "style": { "style": "STATIC" }
         }
@@ -196,7 +207,7 @@
     },
     {
       "minHeight": 1,
-      "maxPerChunk": 5,
+      "maxPerChunk": 7,
       "maxHeight": 67,
       "minPerChunk": 3,
       "minSize": 3,
@@ -216,7 +227,7 @@
     },
     {
       "minHeight": 1,
-      "maxPerChunk": 16,
+      "maxPerChunk": 18,
       "maxHeight": 120,
       "minPerChunk": 16,
       "minSize": 4,
@@ -226,7 +237,7 @@
     },
     {
       "minHeight": 1,
-      "maxPerChunk": 15,
+      "maxPerChunk": 18,
       "maxHeight": 64,
       "minPerChunk": 9,
       "minSize": 4,
@@ -236,7 +247,7 @@
     },
     {
       "minHeight": 1,
-      "maxPerChunk": 15,
+      "maxPerChunk": 18,
       "maxHeight": 175,
       "minPerChunk": 20,
       "minSize": 6,
