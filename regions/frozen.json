@@ -1,277 +1,297 @@
 {
-    "name": "Frozen",
-    "color": "#44C3D1",
-    "landBiomes": [
-        "frozen/plains",
-        "frozen/pines",
-        "frozen/plains",
-        "frozen/mountain",
-        "frozen/redwood-forest",
-        "frozen/hills",
-        "frozen/pine-plains",
-        "frozen/spruce-plains"
-    ],
-    "shoreBiomes": ["frozen/shore/beach"],
-    "seaBiomes": [
-        "frozen/sea/frozen-river-ice",
-        "frozen/sea/ocean"
-    ],
-    "riverBiomes": [
-        "frozen/sea/frozen-river-ice",
-        "frozen/sea/ocean"
-    ],
-    "jigsawStructures": [{
-        "structure": "murky_stronghold",
-        "rarity": 250
-    }],
-    "spotBiomes": [{
-        "biome": "frozen/vander",
-        "scale": 25,
-        "type": "LAND",
-        "shuffle": 328,
-        "rarity": 3
-    }],
-    "riverStyle": {
-        "style": "VASCULAR",
-        "zoom": 4.77,
-        "fracture": {
-            "multiplier": 240,
-            "style": "NOWHERE",
-            "zoom": 5
-        }
+  "name": "Frozen",
+  "color": "#44C3D1",
+  "landBiomes": [
+    "frozen/plains",
+    "frozen/pines",
+    "frozen/plains",
+    "frozen/mountain",
+    "frozen/redwood-forest",
+    "frozen/hills",
+    "frozen/pine-plains",
+    "frozen/spruce-plains"
+  ],
+  "shoreBiomes": ["frozen/shore/beach"],
+  "seaBiomes": ["frozen/sea/frozen-river-ice", "frozen/sea/ocean"],
+  "riverBiomes": ["frozen/sea/frozen-river-ice", "frozen/sea/ocean"],
+  "jigsawStructures": [
+    {
+      "structure": "murky_stronghold",
+      "rarity": 250
+    }
+  ],
+  "spotBiomes": [
+    {
+      "biome": "frozen/vander",
+      "scale": 25,
+      "type": "LAND",
+      "shuffle": 328,
+      "rarity": 3
+    }
+  ],
+  "riverStyle": {
+    "style": "VASCULAR",
+    "zoom": 4.77,
+    "fracture": {
+      "multiplier": 240,
+      "style": "NOWHERE",
+      "zoom": 5
+    }
+  },
+  "deposits": [
+    {
+      "minHeight": 8,
+      "maxPerChunk": 2,
+      "maxHeight": 20,
+      "minPerChunk": 1,
+      "minSize": 2,
+      "maxSize": 4,
+      "palette": [{ "block": "minecraft:diamond_ore" }],
+      "varience": 4
     },
-    "deposits": [
+    {
+      "minHeight": 1,
+      "maxPerChunk": 2,
+      "maxHeight": 64,
+      "minPerChunk": 1,
+      "minSize": 3,
+      "maxSize": 8,
+      "palette": [{ "block": "minecraft:copper_ore" }],
+      "varience": 8
+    }
+  ],
+  "biomeImplosionRatio": 0.25,
+  "riverRarity": 1,
+  "landBiomeZoom": 5,
+  "shoreHeightMin": 2.2,
+  "shoreHeightMax": 4.2,
+  "loot": {
+    "mode": "ADD",
+    "multiplier": 1,
+    "tables": [
+      "global-tools",
+      "frozen-clutter",
+      "frozen-food",
+      "snow-clutter",
+      "cold-treasure"
+    ]
+  },
+  "blockDrops": [
+    {
+      "blocks": [{ "block": "minecraft:stone" }],
+      "drops": [
         {
-            "minHeight": 8,
-            "maxPerChunk": 2,
-            "maxHeight": 20,
-            "minPerChunk": 1,
-            "minSize": 2,
-            "maxSize": 4,
-            "palette": [{"block": "minecraft:diamond_ore"}],
-            "varience": 4
-        },
-        {
-            "minHeight": 1,
-            "maxPerChunk": 2,
-            "maxHeight": 64,
-            "minPerChunk": 1,
-            "minSize": 3,
-            "maxSize": 8,
-            "palette": [{"block": "minecraft:copper_ore"}],
-            "varience": 8
+          "rarity": 1,
+          "maxAmount": 2,
+          "minAmount": 1,
+          "type": "spruce_sapling"
         }
-    ],
-    "biomeImplosionRatio": 0.25,
-    "riverRarity": 1,
-    "landBiomeZoom": 5,
-    "shoreHeightMin": 2.2,
-    "shoreHeightMax": 4.2,
-    "loot": {
-        "mode": "ADD",
-        "multiplier": 1,
-        "tables": [
-            "global-tools",
-            "frozen-clutter",
-            "frozen-food",
-            "snow-clutter",
-            "cold-treasure"
-        ]
-    },
-    "blockDrops": [{
-        "blocks": [{"block": "minecraft:stone"}],
-        "drops": [{
-            "rarity": 1,
-            "maxAmount": 2,
-            "minAmount": 1,
-            "type": "spruce_sapling"
-        }]
-    }],
-    "entitySpawners": [
-        "frozen/land-passive",
-        "frozen/land-hostile",
-        "frozen/land-cave"
-    ],
-    "objects": [
+      ]
+    }
+  ],
+  "entitySpawners": [
+    "frozen/land-passive",
+    "frozen/land-hostile",
+    "frozen/land-cave"
+  ],
+  "objects": [
+    {
+      "chance": 0,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "interval": 90,
+          "max": 360,
+          "min": 0
+        }
+      },
+      "trees": [
         {
-            "chance": 0,
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "interval": 90,
-                    "max": 360,
-                    "min": 0
-                }
-            },
-            "trees": [{
-                "sizes": [{
-                    "depth": 1,
-                    "width": 1
-                }],
-                "treeTypes": ["TREE"]
-            }],
-            "place": [
-                "trees/oak/truegeneric1",
-                "trees/oak/truegeneric2",
-                "trees/oak/truegeneric3",
-                "trees/oak/truegeneric4",
-                "trees/oak/truegeneric5"
-            ]
-        },
-        {
-            "chance": 0,
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "interval": 90,
-                    "max": 360,
-                    "min": 0
-                }
-            },
-            "trees": [{
-                "sizes": [{
-                    "depth": 1,
-                    "width": 1
-                }],
-                "treeTypes": ["REDWOOD"]
-            }],
-            "place": [
-                "trees/spruce/twirl1",
-                "trees/spruce/twirl2",
-                "trees/spruce/twirl3",
-                "trees/spruce/twirl4",
-                "trees/spruce/twirl5"
-            ]
-        },
-        {
-            "chance": 0,
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "interval": 90,
-                    "max": 360,
-                    "min": 0
-                }
-            },
-            "trees": [{
-                "sizes": [{
-                    "depth": 2,
-                    "width": 2
-                }],
-                "treeTypes": ["MEGA_REDWOOD"]
-            }],
-            "place": [
-                "trees/spruce/twirl6",
-                "trees/spruce/twirl7",
-                "trees/spruce/twirl8",
-                "trees/spruce/twirl9",
-                "trees/spruce/twirl10"
-            ]
-        },
-        {
-            "heightmap": {
-                "seed": 1337,
-                "style": {
-                    "style": "SIMPLEX",
-                    "multiplier": 10
-                },
-                "offsetY": 5
-            },
-            "chance": 0.05,
-            "bottom": true,
-            "density": 1,
-            "place": [
-                "structures/amethyst1",
-                "structures/amethyst2",
-                "structures/amethyst3",
-                "structures/amethyst4",
-                "structures/amethyst5",
-                "structures/amethyst6"
-            ],
-            "edit": [{
-                "find": [{"block": "minecraft:glass"}],
-                "replace": {"palette": [{"block": "minecraft:void_air"}]}
-            }],
-            "enabled": true,
-            "xAxis": {
-                "interval": 90,
-                "max": 360,
-                "min": 0
-            },
-            "yAxis": {
-                "interval": 90,
-                "max": 360,
-                "min": 0
-            },
-            "translate": {
-                "yRandom": 10,
-                "y": 2
+          "sizes": [
+            {
+              "depth": 1,
+              "width": 1
             }
+          ],
+          "treeTypes": ["TREE"]
+        }
+      ],
+      "place": [
+        "trees/oak/truegeneric1",
+        "trees/oak/truegeneric2",
+        "trees/oak/truegeneric3",
+        "trees/oak/truegeneric4",
+        "trees/oak/truegeneric5"
+      ]
+    },
+    {
+      "chance": 0,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "interval": 90,
+          "max": 360,
+          "min": 0
+        }
+      },
+      "trees": [
+        {
+          "sizes": [
+            {
+              "depth": 1,
+              "width": 1
+            }
+          ],
+          "treeTypes": ["REDWOOD"]
+        }
+      ],
+      "place": [
+        "trees/spruce/twirl1",
+        "trees/spruce/twirl2",
+        "trees/spruce/twirl3",
+        "trees/spruce/twirl4",
+        "trees/spruce/twirl5"
+      ]
+    },
+    {
+      "chance": 0,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "interval": 90,
+          "max": 360,
+          "min": 0
+        }
+      },
+      "trees": [
+        {
+          "sizes": [
+            {
+              "depth": 2,
+              "width": 2
+            }
+          ],
+          "treeTypes": ["MEGA_REDWOOD"]
+        }
+      ],
+      "place": [
+        "trees/spruce/twirl6",
+        "trees/spruce/twirl7",
+        "trees/spruce/twirl8",
+        "trees/spruce/twirl9",
+        "trees/spruce/twirl10"
+      ]
+    },
+    {
+      "heightmap": {
+        "seed": 1337,
+        "style": {
+          "style": "SIMPLEX",
+          "multiplier": 10
+        },
+        "offsetY": 5
+      },
+      "chance": 0.05,
+      "bottom": true,
+      "density": 1,
+      "place": [
+        "structures/amethyst1",
+        "structures/amethyst2",
+        "structures/amethyst3",
+        "structures/amethyst4",
+        "structures/amethyst5",
+        "structures/amethyst6"
+      ],
+      "edit": [
+        {
+          "find": [{ "block": "minecraft:glass" }],
+          "replace": { "palette": [{ "block": "minecraft:void_air" }] }
+        }
+      ],
+      "enabled": true,
+      "xAxis": {
+        "interval": 90,
+        "max": 360,
+        "min": 0
+      },
+      "yAxis": {
+        "interval": 90,
+        "max": 360,
+        "min": 0
+      },
+      "translate": {
+        "yRandom": 10,
+        "y": 2
+      }
+    },
+    {
+      "name": "standard-surface-portals",
+      "chance": 0.001,
+      "place": [
+        "structures/giantportal1",
+        "structures/giantportal2",
+        "structures/giantportal3",
+        "structures/portal1",
+        "structures/portal2",
+        "structures/portal3",
+        "structures/portal4",
+        "structures/portal5",
+        "structures/portal6",
+        "structures/portal7",
+        "structures/portal8",
+        "structures/portal9",
+        "structures/portal10"
+      ],
+      "edit": [
+        {
+          "find": [{ "block": "minecraft:gold_block" }],
+          "replace": { "palette": [{ "block": "minecraft:air" }] },
+          "chance": 0.1
         },
         {
-            "name": "standard-surface-portals",
-            "chance": 0.001,
-            "place": [
-                "structures/giantportal1",
-                "structures/giantportal2",
-                "structures/giantportal3",
-                "structures/portal1",
-                "structures/portal2",
-                "structures/portal3",
-                "structures/portal4",
-                "structures/portal5",
-                "structures/portal6",
-                "structures/portal7",
-                "structures/portal8",
-                "structures/portal9",
-                "structures/portal10"
-            ],
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:gold_block"}],
-                    "replace": {"palette": [{"block": "minecraft:air"}]},
-                    "chance": 0.1
-                },
-                {
-                    "find": [{"block": "minecraft:netherrack"}],
-                    "replace": {"palette": [{"block": "minecraft:magma_block"}]},
-                    "chance": 0.07
-                },
-                {
-                    "find": [{"block": "minecraft:obsidian"}],
-                    "replace": {"palette": [{"block": "minecraft:crying_obsidian"}]},
-                    "chance": 0.15
-                },
-                {
-                    "find": [{"block": "minecraft:lava"}],
-                    "replace": {"palette": [{"block": "minecraft:magma_block"}]},
-                    "chance": 0.2
-                }
-            ],
-            "mode": "FAST_MIN_HEIGHT",
-            "carvingSupport": "SURFACE_ONLY"
+          "find": [{ "block": "minecraft:netherrack" }],
+          "replace": { "palette": [{ "block": "minecraft:magma_block" }] },
+          "chance": 0.07
+        },
+        {
+          "find": [{ "block": "minecraft:obsidian" }],
+          "replace": { "palette": [{ "block": "minecraft:crying_obsidian" }] },
+          "chance": 0.15
+        },
+        {
+          "find": [{ "block": "minecraft:lava" }],
+          "replace": { "palette": [{ "block": "minecraft:magma_block" }] },
+          "chance": 0.2
         }
+      ],
+      "mode": "FAST_MIN_HEIGHT",
+      "carvingSupport": "SURFACE_ONLY"
+    }
+  ],
+  "carving": {
+    "ravines": [
+      {
+        "rarity": 150,
+        "ravine": "ice/main"
+      }
     ],
-    "carving": {
-        "ravines": [{
-            "rarity": 150,
-            "ravine": "ice/main"
-        }],
-        "caves": [{
-            "breakSurface": true,
-            "cave": "ice/main",
-            "rarity": 22,
-            "caveStartHeight": {
-                "max": 200,
-                "min": 15,
-                "style": {"style": "VASCULAR"}
-            }
-        }]
-    },
-    "shoreHeightZoom": 1.14,
-    "riverThickness": 0.006,
-    "rarity": 1
+    "caves": [
+      {
+        "breakSurface": true,
+        "cave": "ice/main",
+        "rarity": 22,
+        "caveStartHeight": {
+          "max": 200,
+          "min": 15,
+          "style": { "style": "VASCULAR" }
+        }
+      }
+    ]
+  },
+  "shoreHeightZoom": 1.14,
+  "riverThickness": 0.006,
+  "rarity": 1
 }

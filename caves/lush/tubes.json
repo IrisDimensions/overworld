@@ -1,71 +1,63 @@
 {
     "fill": {"block": "minecraft:cave_air"},
     "verticalRange": {
-        "max": 185,
-        "min": 7
+        "max": 60,
+        "min": 17
     },
-    "customBiome": "carving/deepravine",
+    "customBiome": "carving/lush",
     "fork": {
         "ravines": [{
             "breakSurface": false,
-            "rarity": 13,
+            "rarity": 110,
             "ravine": "deep/main"
         }],
         "caves": [
             {
                 "breakSurface": false,
-                "cave": "calcite/main",
-                "rarity": 25
-            },
-            {
-                "breakSurface": false,
                 "cave": "drip/main",
-                "rarity": 30
+                "rarity": 120
             },
             {
                 "breakSurface": false,
                 "cave": "amethyst/small",
-                "rarity": 35
+                "rarity": 125
             },
             {
                 "breakSurface": false,
                 "cave": "volcanic/small",
-                "rarity": 20
+                "rarity": 140
             }
         ]
     },
     "worm": {
         "girth": {
             "max": 7,
-            "min": 3,
-            "style": {
-                "style": "SIMPLEX",
-                "zoom": 0.5
-            }
+            "min": 2,
+            "style": {"style": "STATIC"}
         },
-        "maxDistance": 77,
+        "maxDistance": 122,
         "yStyle": {
-            "min": -2,
-            "max": 1,
+            "min": -3,
+            "max": 2,
             "generator": {
                 "zoom": 3,
                 "style": "PERLIN"
             }
         },
         "xStyle": {
-            "min": -9,
-            "max": 9,
+            "min": -12,
+            "max": 12,
             "generator": {
-                "zoom": 0.6,
-                "style": "IRIS"
+                "zoom": 2,
+                "style": "IRIS_DOUBLE"
             }
         },
         "zStyle": {
-            "min": -9,
-            "max": 9,
+            "min": -12,
+            "max": 12,
             "generator": {
-                "zoom": 0.6,
-                "style": "IRIS"
+                "zoom": 2,
+                "style": "IRIS_DOUBLE"
             }
         }
     }
