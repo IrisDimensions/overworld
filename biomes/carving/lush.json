@@ -1,96 +1,108 @@
 {
-  "name": "Lush Cavern",
-  "wall": {
-    "style": { "style": "IRIS" , "zoom": 0.5},
-    "palette": [
-      {
-        "block": "minecraft:deepslate"
-      },
-      { "block": "minecraft:mossy_cobblestone" },
-      { "block": "minecraft:moss_block" }
-    ]
-  },
-  "layers": [
-    {
-      "style": { "style": "IRIS" },
-      "maxHeight": 1,
-      "minHeight": 1,
-      "palette": [
-        { "block": "minecraft:moss_block", "weight": 2 },
-        { "block": "minecraft:clay" },
-        { "block": "minecraft:water" },
-        { "block": "minecraft:clay" },
-        { "block": "minecraft:deepslate" },
-        { "block": "minecraft:grass_block" }
-      ]
+    "name": "Lush Cavern",
+    "wall": {
+        "style": {
+            "style": "IRIS",
+            "zoom": 0.5
+        },
+        "palette": [
+            {"block": "minecraft:deepslate"},
+            {"block": "minecraft:mossy_cobblestone"},
+            {"block": "minecraft:moss_block"}
+        ]
     },
-      {
-      "style": { "style": "CELLULAR" },
-      "maxHeight": 2,
-      "minHeight": 1,
-      "palette": [
-        { "block": "minecraft:clay", "weight": 5},
-        { "block": "minecraft:deepslate" }
-      ]
-    }
-  ],
-  "caveCeilingLayers": [
-    {
-      "style": { "style": "IRIS" },
-      "maxHeight": 2,
-      "minHeight": 2,
-      "palette": [
-        { "block": "minecraft:moss_block", "weight": 2 },
+    "layers": [
         {
-          "block": "minecraft:deepslate"
+            "style": {"style": "IRIS"},
+            "maxHeight": 1,
+            "minHeight": 1,
+            "palette": [
+                {
+                    "block": "minecraft:moss_block",
+                    "weight": 2
+                },
+                {"block": "minecraft:clay"},
+                {"block": "minecraft:water"},
+                {"block": "minecraft:clay"},
+                {"block": "minecraft:deepslate"},
+                {"block": "minecraft:grass_block"}
+            ]
+        },
+        {
+            "style": {"style": "CELLULAR"},
+            "maxHeight": 2,
+            "minHeight": 1,
+            "palette": [
+                {
+                    "block": "minecraft:clay",
+                    "weight": 5
+                },
+                {"block": "minecraft:deepslate"}
+            ]
         }
-      ]
-    }
-  ],
-  "decorators": [
-    {
-      "chance": 0.01,
-      "absoluteMaxStack": 1,
-      "palette": [{ "block": "minecraft:big_dripleaf" }]
-    },
-    {
-      "chance": 0.03,
-      "style": {
-        "style": "STATIC"
-      },
-      "absoluteMaxStack": 1,
-
-      "palette": [
-        { "block": "minecraft:grass" },
-        { "block": "minecraft:azalea_leaves" },
-        { "block": "minecraft:azalea" },
-        { "block": "minecraft:flowering_azalea" },
-        { "block": "minecraft:flowering_azalea_leaves" }
-      ]
-    },
-    {
-      "partOf": "CEILING",
-      "chance": 0.05,
-      "absoluteMaxStack": 30,
-      "scaleStack": true,
-      "stackMin": 4,
-      "stackMax": 25,
-      "topPalette": [
-              {"block": "minecraft:cave_vines"},
-              {"block": "minecraft:spore_blossom"},
-              {"block": "minecraft:cave_vines","data": {"berries": "true"}}
+    ],
+    "caveCeilingLayers": [{
+        "style": {"style": "IRIS"},
+        "maxHeight": 2,
+        "minHeight": 2,
+        "palette": [
+            {
+                "block": "minecraft:moss_block",
+                "weight": 2
+            },
+            {"block": "minecraft:deepslate"}
+        ]
+    }],
+    "decorators": [
+        {
+            "chance": 0.01,
+            "absoluteMaxStack": 1,
+            "palette": [{"block": "minecraft:big_dripleaf"}]
+        },
+        {
+            "chance": 0.03,
+            "style": {"style": "STATIC"},
+            "absoluteMaxStack": 1,
+            "palette": [
+                {"block": "minecraft:grass"},
+                {"block": "minecraft:azalea_leaves"},
+                {"block": "minecraft:azalea"},
+                {"block": "minecraft:flowering_azalea"},
+                {"block": "minecraft:flowering_azalea_leaves"}
+            ]
+        },
+        {
+            "partOf": "CEILING",
+            "chance": 0.05,
+            "absoluteMaxStack": 30,
+            "scaleStack": true,
+            "stackMin": 4,
+            "stackMax": 25,
+            "topPalette": [
+                {"block": "minecraft:cave_vines"},
+                {"block": "minecraft:spore_blossom"},
+                {
+                    "block": "minecraft:cave_vines",
+                    "data": {"berries": "true"}
+                }
             ],
-      "palette": [
-        { "block": "minecraft:cave_vines_plant", "data": { "berries": false } },
-        { "block": "minecraft:cave_vines_plant", "data": { "berries": true } }
-      ]
-    },
-    {
-              "partOf": "CEILING",
-      "chance": 0.03,
-      "stackMin": 1,
-      "stackMax": 1,
-      "palette": [{ "block": "minecraft:glow_lichen" }]
-    }
-  ]
+            "palette": [
+                {
+                    "block": "minecraft:cave_vines_plant",
+                    "data": {"berries": false}
+                },
+                {
+                    "block": "minecraft:cave_vines_plant",
+                    "data": {"berries": true}
+                }
+            ]
+        },
+        {
+            "partOf": "CEILING",
+            "chance": 0.03,
+            "stackMin": 1,
+            "stackMax": 1,
+            "palette": [{"block": "minecraft:glow_lichen"}]
+        }
+    ]
 }
