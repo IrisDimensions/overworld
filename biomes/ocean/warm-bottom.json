@@ -64,6 +64,11 @@
             "partOf": "SEA_FLOOR"
         }
     ],
+    "loot": {
+        "mode": "ADD",
+        "multiplier": 1,
+        "tables": ["tropical-dungeon"]
+    },
     "objects": [
         {
             "place": [
@@ -209,6 +214,31 @@
             "onwater": true,
             "translate": {"y": -1},
             "waterloggable": true
-        }
+        },
+    {
+        "chance": 0.035,
+        "rotation": {
+            "yAxis": {
+                "min": 0,
+                "max": 0,
+                "interval": 90,
+                "enabled": true
+            },
+            "enabled": true
+        },
+        "underwater": true,
+        "place": [
+            "structures/oruins1",
+            "structures/oruins2",
+            "structures/oruins3"
+        ],
+        "mode": "PAINT",
+        "loot": [
+            {
+                "name": "tropical-dungeon"
+            }
+        ]
+
+    }
     ]
 }
