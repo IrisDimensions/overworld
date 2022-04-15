@@ -61,6 +61,11 @@
             "palette": [{"block": "minecraft:packed_ice"}]
         }
     ],
+    "loot": {
+        "mode": "ADD",
+        "multiplier": 1,
+        "tables": ["tropical-dungeon"]
+    },
     "objects": [
         {
             "chance": 0.003,
@@ -142,6 +147,31 @@
             "chance": 0.0325,
             "density": 1,
             "place": ["structures/snowulder"]
-        }
+        },
+    {
+        "chance": 0.035,
+        "rotation": {
+            "yAxis": {
+                "min": 0,
+                "max": 0,
+                "interval": 90,
+                "enabled": true
+            },
+            "enabled": true
+        },
+        "underwater": true,
+        "place": [
+            "structures/oruins1",
+            "structures/oruins2",
+            "structures/oruins3"
+        ],
+        "mode": "PAINT",
+        "loot": [
+            {
+                "name": "tropical-dungeon"
+            }
+        ]
+
+    }
     ]
 }

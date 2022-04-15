@@ -243,7 +243,38 @@
             "y": -2,
             "z": 0
         }
+    },
+    {
+        "chance": 0.035,
+        "rotation": {
+            "yAxis": {
+                "min": 0,
+                "max": 0,
+                "interval": 90,
+                "enabled": true
+            },
+            "enabled": true
+        },
+        "underwater": true,
+        "place": [
+            "structures/oruins1",
+            "structures/oruins2",
+            "structures/oruins3"
+        ],
+        "mode": "PAINT",
+        "loot": [
+            {
+                "name": "tropical-dungeon",
+                "weight": 1
+            }
+        ]
+
     }],
+    "loot": {
+        "mode": "ADD",
+        "multiplier": 1,
+        "tables": ["tropical-dungeon"]
+    },
     "wall": {
         "palette": [
             {"block": "minecraft:tube_coral_block"},
