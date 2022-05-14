@@ -1,14 +1,14 @@
 {
-    "name": "Swamp Roofed Wayward",
+    "name": "Swamp Roofed Forest",
     "derivative": "SWAMP",
     "rarity": 1,
-    "color": "#556810",
+    "color": "#708A10",
     "vanillaDerivative": "DARK_FOREST",
-    "children": ["swamp/sea/lake", "swamp/roofed-wayward-extended"],
+    "children": ["swamp/sea/lake"],
     "generators": [{
-        "min": 4,
-        "max": 11,
-        "generator": "plain"
+        "min": 45,
+        "max": 61,
+        "generator": "mountain"
     }],
     "layers": [
         {
@@ -21,7 +21,7 @@
                 },
                 {
                     "weight": 2,
-                    "block": "minecraft:coarse_dirt"
+                    "block": "minecraft:podzol"
                 }
             ]
         },
@@ -56,7 +56,7 @@
     ],
     "decorators": [
         {
-            "chance": 0.03,
+            "chance": 0.01,
             "variance": {"style": "STATIC"},
             "zoom": 0.3,
             "palette": [
@@ -76,6 +76,30 @@
             "style": {"style": "STATIC"}
         },
         {
+            "chance": 0.003,
+            "variance": {"style": "STATIC"},
+            "zoom": 1,
+            "palette": [
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "east"
+                    },
+                    "block": "minecraft:dark_oak_button"
+                },
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "south"
+                    },
+                    "block": "minecraft:dark_oak_button"
+                }
+            ],
+            "style": {"style": "STATIC"}
+        },
+        {
             "chance": 0.45,
             "variance": {"style": "STATIC"},
             "zoom": 0.3,
@@ -85,41 +109,7 @@
     ],
     "objects": [
         {
-            "chance": 0.5,
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:birch_leaves"}],
-                    "replace": {"palette": [{"block": "minecraft:dark_oak_leaves"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:dark_oak_fence"}],
-                    "replace": {"palette": [{"block": "minecraft:dark_oak_leaves"}]}
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "trees/oak/troofed1",
-                "trees/oak/troofed2",
-                "trees/oak/troofed3",
-                "trees/oak/troofed4",
-                "trees/oak/troofed5",
-                "trees/oak/troofed6",
-                "trees/oak/troofed7",
-                "trees/oak/troofed8",
-                "trees/oak/troofed9",
-                "trees/oak/troofed10"
-            ]
-        },
-        {
-            "chance": 0.5,
+            "chance": 0.1,
             "edit": [
                 {
                     "find": [{"block": "minecraft:spruce_leaves"}],
@@ -169,14 +159,14 @@
             "place": [
                 "trees/mushroom/browngeneric1",
                 "trees/mushroom/browngeneric2",
-                "trees/mushroom/mushclut3",
-                "trees/mushroom/mushclut4",
-                "trees/mushroom/mushclut5",
-                "trees/mushroom/mushclut6",
-                "trees/mushroom/mushclut7",
-                "trees/mushroom/mushclut8",
-                "trees/mushroom/mushclut9",
-                "trees/mushroom/mushclut10",
+                "trees/mushroom/redgeneric3",
+                "trees/mushroom/redgeneric4",
+                "trees/mushroom/redgeneric5",
+                "trees/mushroom/redgeneric6",
+                "trees/mushroom/redgeneric7",
+                "trees/mushroom/redgeneric8",
+                "trees/mushroom/redgeneric9",
+                "trees/mushroom/redgeneric10",
                 "trees/mushroom/redgeneric11"
             ]
         },
@@ -199,15 +189,49 @@
             "place": [
                 "trees/mushroom/browngeneric1",
                 "trees/mushroom/browngeneric2",
-                "trees/mushroom/mushclut3",
-                "trees/mushroom/mushclut4",
-                "trees/mushroom/mushclut5",
-                "trees/mushroom/mushclut6",
-                "trees/mushroom/mushclut7",
-                "trees/mushroom/mushclut8",
-                "trees/mushroom/mushclut9",
-                "trees/mushroom/mushclut10",
+                "trees/mushroom/redgeneric3",
+                "trees/mushroom/redgeneric4",
+                "trees/mushroom/redgeneric5",
+                "trees/mushroom/redgeneric6",
+                "trees/mushroom/redgeneric7",
+                "trees/mushroom/redgeneric8",
+                "trees/mushroom/redgeneric9",
+                "trees/mushroom/redgeneric10",
                 "trees/mushroom/redgeneric11"
+            ]
+        },
+        {
+            "chance": 0.7,
+            "edit": [
+                {
+                    "find": [{"block": "minecraft:birch_leaves"}],
+                    "replace": {"palette": [{"block": "minecraft:dark_oak_leaves"}]}
+                },
+                {
+                    "find": [{"block": "minecraft:dark_oak_fence"}],
+                    "replace": {"palette": [{"block": "minecraft:dark_oak_leaves"}]}
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "trees/oak/troofed1",
+                "trees/oak/troofed2",
+                "trees/oak/troofed3",
+                "trees/oak/troofed4",
+                "trees/oak/troofed5",
+                "trees/oak/troofed6",
+                "trees/oak/troofed7",
+                "trees/oak/troofed8",
+                "trees/oak/troofed9",
+                "trees/oak/troofed10"
             ]
         },
         {

@@ -1,33 +1,44 @@
 {
-    "name": "Swamp Roofed Wayward",
-    "derivative": "SWAMP",
+    "name": "Swamp Cambian Drift",
+    "derivative": "DARK_FOREST",
     "rarity": 1,
-    "color": "#556810",
+    "color": "#90B509",
     "vanillaDerivative": "DARK_FOREST",
-    "children": ["swamp/sea/lake", "swamp/roofed-wayward-extended"],
     "generators": [{
-        "min": 4,
-        "max": 11,
-        "generator": "plain"
+        "min": 55,
+        "max": 95,
+        "generator": "mountain"
+    }],
+    "customDerivitives": [{
+        "category": "forest",
+        "id": "swamp_cambian_drift",
+        "waterColor": "#684D1A",
+        "foliageColor": "2B4A00",
+        "grassColor": "#5C581A",
+        "spawnRarity": 20,
+        "spawns": [{"type": "SLIME"}]
     }],
     "layers": [
         {
+            "style": {"style": "IRIS"},
             "zoom": 0.5,
-            "style": {"style": "STATIC"},
             "palette": [
                 {
-                    "weight": 5,
+                    "weight": 3,
                     "block": "minecraft:grass_block"
                 },
+                {"block": "minecraft:podzol"},
+                {"block": "minecraft:coarse_dirt"},
                 {
-                    "weight": 2,
-                    "block": "minecraft:coarse_dirt"
+                    "weight": 4,
+                    "block": "minecraft:grass_block"
                 }
             ]
         },
+        {"palette": [{"block": "minecraft:dirt"}]},
         {
-            "minHeight": 2,
-            "maxHeight": 4,
+            "minHeight": 1,
+            "maxHeight": 3,
             "palette": [
                 {"block": "minecraft:dirt"},
                 {"block": "minecraft:coarse_dirt"}
@@ -42,16 +53,6 @@
                 {"block": "minecraft:andesite"},
                 {"block": "minecraft:stone"}
             ]
-        }
-    ],
-    "jigsawStructures": [
-        {
-            "rarity": 1700,
-            "structure": "pillager_outpost"
-        },
-        {
-            "rarity": 1000,
-            "structure": "village-tundra"
         }
     ],
     "decorators": [
@@ -85,10 +86,12 @@
     ],
     "objects": [
         {
-            "chance": 0.5,
+            "chance": 0.7,
+            "translate": {"y": -2},
+            "density": 2,
             "edit": [
                 {
-                    "find": [{"block": "minecraft:birch_leaves"}],
+                    "find": [{"block": "minecraft:oak_leaves"}],
                     "replace": {"palette": [{"block": "minecraft:dark_oak_leaves"}]}
                 },
                 {
@@ -106,52 +109,15 @@
                 "enabled": true
             },
             "place": [
-                "trees/oak/troofed1",
-                "trees/oak/troofed2",
-                "trees/oak/troofed3",
-                "trees/oak/troofed4",
-                "trees/oak/troofed5",
-                "trees/oak/troofed6",
-                "trees/oak/troofed7",
-                "trees/oak/troofed8",
-                "trees/oak/troofed9",
-                "trees/oak/troofed10"
-            ]
-        },
-        {
-            "chance": 0.5,
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:spruce_leaves"}],
-                    "replace": {"palette": [{"block": "minecraft:oak_leaves"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:birch_leaves"}],
-                    "replace": {"palette": [{"block": "minecraft:dark_oak_leaves"}]}
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "trees/oak/mroofed1",
-                "trees/oak/mroofed2",
-                "trees/oak/mroofed3",
-                "trees/oak/mroofed4",
-                "trees/oak/mroofed5",
-                "trees/oak/mroofed6",
-                "trees/oak/mroofed7",
-                "trees/oak/mroofed8",
-                "trees/oak/mroofed9",
-                "trees/oak/mroofed10",
-                "trees/oak/mroofed11",
-                "trees/oak/mroofed12"
+                "trees/darkoak/talldrift1",
+                "trees/darkoak/talldrift2",
+                "trees/darkoak/talldrift3",
+                "trees/darkoak/talldrift4",
+                "trees/darkoak/talldrift5",
+                "trees/darkoak/talldrift6",
+                "trees/darkoak/talldrift7",
+                "trees/darkoak/talldrift8",
+                "trees/darkoak/talldrift9"
             ]
         },
         {

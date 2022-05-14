@@ -1,14 +1,13 @@
 {
-    "name": "Swamp Roofed Wayward",
+    "name": "Swamp Willow Forest",
     "derivative": "SWAMP",
     "rarity": 1,
-    "color": "#556810",
+    "color": "#3E4B0E",
     "vanillaDerivative": "DARK_FOREST",
-    "children": ["swamp/sea/lake", "swamp/roofed-wayward-extended"],
     "generators": [{
-        "min": 4,
-        "max": 11,
-        "generator": "plain"
+        "min": 34,
+        "max": 51,
+        "generator": "mountain"
     }],
     "layers": [
         {
@@ -21,7 +20,7 @@
                 },
                 {
                     "weight": 2,
-                    "block": "minecraft:coarse_dirt"
+                    "block": "minecraft:podzol"
                 }
             ]
         },
@@ -54,25 +53,55 @@
             "structure": "village-tundra"
         }
     ],
+    "effects": [
+        {
+            "interval": 55656,
+            "sound": "AMBIENT_SOUL_SAND_VALLEY_MOOD",
+            "soundDistance": 3,
+            "volume": 6.2,
+            "minPitch": 1.6,
+            "maxPitch": 1.35,
+            "chance": 11
+        },
+        {
+            "interval": 56565,
+            "sound": "AMBIENT_SOUL_SAND_VALLEY_MOOD",
+            "soundDistance": 3,
+            "volume": 6.2,
+            "minPitch": 0.4,
+            "maxPitch": 0.2,
+            "chance": 5
+        },
+        {
+            "particleAltX": 0.0101,
+            "particleAltY": -0.033885,
+            "particleAltZ": 0.0101,
+            "chance": 1,
+            "particleEffect": "CAMPFIRE_SIGNAL_SMOKE",
+            "particleOffset": 12,
+            "interval": 640,
+            "particleCount": 0
+        }
+    ],
     "decorators": [
         {
-            "chance": 0.03,
+            "chance": 0.01,
             "variance": {"style": "STATIC"},
             "zoom": 0.3,
-            "palette": [
-                {"block": "minecraft:dead_bush"},
-                {"block": "minecraft:brown_mushroom"},
-                {"block": "minecraft:red_mushroom"},
-                {"block": "minecraft:brown_mushroom"},
-                {"block": "minecraft:red_mushroom"}
-            ],
+            "palette": [{"block": "minecraft:dead_bush"}],
             "style": {"style": "STATIC"}
         },
         {
             "chance": 2.0E-4,
             "variance": {"style": "STATIC"},
             "zoom": 0.3,
-            "palette": [{"block": "minecraft:crimson_fungus"}],
+            "palette": [
+                {"block": "minecraft:crimson_fungus"},
+                {"block": "minecraft:brown_mushroom"},
+                {"block": "minecraft:red_mushroom"},
+                {"block": "minecraft:brown_mushroom"},
+                {"block": "minecraft:red_mushroom"}
+            ],
             "style": {"style": "STATIC"}
         },
         {
@@ -85,15 +114,23 @@
     ],
     "objects": [
         {
-            "chance": 0.5,
+            "chance": 0.7,
             "edit": [
                 {
-                    "find": [{"block": "minecraft:birch_leaves"}],
-                    "replace": {"palette": [{"block": "minecraft:dark_oak_leaves"}]}
+                    "find": [{"block": "minecraft:oak_log"}],
+                    "replace": {"palette": [{"block": "minecraft:dark_oak_log"}]}
                 },
                 {
-                    "find": [{"block": "minecraft:dark_oak_fence"}],
-                    "replace": {"palette": [{"block": "minecraft:dark_oak_leaves"}]}
+                    "find": [{"block": "minecraft:oak_wood"}],
+                    "replace": {"palette": [{"block": "minecraft:dark_oak_wood"}]}
+                },
+                {
+                    "find": [{"block": "minecraft:oak_fence"}],
+                    "replace": {"palette": [{"block": "minecraft:dark_oak_fence"}]}
+                },
+                {
+                    "find": [{"block": "minecraft:dark_oak_planks"}],
+                    "replace": {"palette": [{"block": "minecraft:stripped_dark_oak_wood"}]}
                 }
             ],
             "rotation": {
@@ -106,28 +143,36 @@
                 "enabled": true
             },
             "place": [
-                "trees/oak/troofed1",
-                "trees/oak/troofed2",
-                "trees/oak/troofed3",
-                "trees/oak/troofed4",
-                "trees/oak/troofed5",
-                "trees/oak/troofed6",
-                "trees/oak/troofed7",
-                "trees/oak/troofed8",
-                "trees/oak/troofed9",
-                "trees/oak/troofed10"
+                "trees/darkoak/generic1",
+                "trees/darkoak/generic2",
+                "trees/darkoak/generic3",
+                "trees/darkoak/generic5",
+                "trees/darkoak/generic6",
+                "trees/darkoak/generic7",
+                "trees/darkoak/generic8",
+                "trees/darkoak/generic9",
+                "trees/darkoak/generic10",
+                "trees/darkoak/generic11"
             ]
         },
         {
-            "chance": 0.5,
+            "chance": 0.2,
             "edit": [
                 {
-                    "find": [{"block": "minecraft:spruce_leaves"}],
-                    "replace": {"palette": [{"block": "minecraft:oak_leaves"}]}
+                    "find": [{"block": "minecraft:oak_log"}],
+                    "replace": {"palette": [{"block": "minecraft:dark_oak_log"}]}
                 },
                 {
-                    "find": [{"block": "minecraft:birch_leaves"}],
-                    "replace": {"palette": [{"block": "minecraft:dark_oak_leaves"}]}
+                    "find": [{"block": "minecraft:oak_wood"}],
+                    "replace": {"palette": [{"block": "minecraft:dark_oak_wood"}]}
+                },
+                {
+                    "find": [{"block": "minecraft:oak_fence"}],
+                    "replace": {"palette": [{"block": "minecraft:dark_oak_fence"}]}
+                },
+                {
+                    "find": [{"block": "minecraft:dark_oak_planks"}],
+                    "replace": {"palette": [{"block": "minecraft:stripped_dark_oak_wood"}]}
                 }
             ],
             "rotation": {
@@ -140,75 +185,15 @@
                 "enabled": true
             },
             "place": [
-                "trees/oak/mroofed1",
-                "trees/oak/mroofed2",
-                "trees/oak/mroofed3",
-                "trees/oak/mroofed4",
-                "trees/oak/mroofed5",
-                "trees/oak/mroofed6",
-                "trees/oak/mroofed7",
-                "trees/oak/mroofed8",
-                "trees/oak/mroofed9",
-                "trees/oak/mroofed10",
-                "trees/oak/mroofed11",
-                "trees/oak/mroofed12"
-            ]
-        },
-        {
-            "chance": 0.02,
-            "density": 1,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "trees/mushroom/browngeneric1",
-                "trees/mushroom/browngeneric2",
-                "trees/mushroom/mushclut3",
-                "trees/mushroom/mushclut4",
-                "trees/mushroom/mushclut5",
-                "trees/mushroom/mushclut6",
-                "trees/mushroom/mushclut7",
-                "trees/mushroom/mushclut8",
-                "trees/mushroom/mushclut9",
-                "trees/mushroom/mushclut10",
-                "trees/mushroom/redgeneric11"
-            ]
-        },
-        {
-            "chance": 0.07,
-            "density": 1,
-            "edit": [{
-                "find": [{"block": "minecraft:red_mushroom_block"}],
-                "replace": {"palette": [{"block": "minecraft:brown_mushroom_block"}]}
-            }],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "trees/mushroom/browngeneric1",
-                "trees/mushroom/browngeneric2",
-                "trees/mushroom/mushclut3",
-                "trees/mushroom/mushclut4",
-                "trees/mushroom/mushclut5",
-                "trees/mushroom/mushclut6",
-                "trees/mushroom/mushclut7",
-                "trees/mushroom/mushclut8",
-                "trees/mushroom/mushclut9",
-                "trees/mushroom/mushclut10",
-                "trees/mushroom/redgeneric11"
-            ]
+                "trees/darkoak/willowgeneric1",
+                "trees/darkoak/willowgeneric2"
+            ],
+            "mode": "FAST_MIN_HEIGHT",
+            "translate": {
+                "x": 24,
+                "y": -3,
+                "z": 0
+            }
         },
         {
             "chance": 0.135,
@@ -238,7 +223,44 @@
             }
         },
         {
-            "chance": 0.1,
+            "chance": 0.17,
+            "edit": [
+                {
+                    "find": [{"block": "minecraft:oak_log"}],
+                    "replace": {"palette": [{"block": "minecraft:dark_oak_log"}]}
+                },
+                {
+                    "find": [{"block": "minecraft:oak_wood"}],
+                    "replace": {"palette": [{"block": "minecraft:dark_oak_wood"}]}
+                },
+                {
+                    "find": [{"block": "minecraft:oak_fence"}],
+                    "replace": {"palette": [{"block": "minecraft:dark_oak_fence"}]}
+                },
+                {
+                    "find": [{"block": "minecraft:dark_oak_planks"}],
+                    "replace": {"palette": [{"block": "minecraft:stripped_dark_oak_wood"}]}
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/oakclutt1",
+                "clutter/oakclutt2",
+                "clutter/oakclutt3",
+                "clutter/oakclutt4",
+                "clutter/oakclutt5"
+            ]
+        },
+        {
+            "chance": 0.08,
             "edit": [
                 {
                     "find": [{"block": "minecraft:oak_log"}],
@@ -277,49 +299,12 @@
             "mode": "FAST_MIN_HEIGHT"
         },
         {
-            "chance": 0.3,
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:oak_log"}],
-                    "replace": {"palette": [{"block": "minecraft:dark_oak_log"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:oak_wood"}],
-                    "replace": {"palette": [{"block": "minecraft:dark_oak_wood"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:oak_fence"}],
-                    "replace": {"palette": [{"block": "minecraft:dark_oak_fence"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:dark_oak_planks"}],
-                    "replace": {"palette": [{"block": "minecraft:stripped_dark_oak_wood"}]}
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "clutter/oakclutt1",
-                "clutter/oakclutt2",
-                "clutter/oakclutt3",
-                "clutter/oakclutt4",
-                "clutter/oakclutt5"
-            ]
-        },
-        {
-            "chance": 0.001,
+            "chance": 5.0E-5,
             "rotation": {"enabled": false},
             "place": ["clutter/genericgrave1"],
             "translate": {
                 "x": 0,
-                "y": -1,
+                "y": 1,
                 "z": 0
             }
         }
