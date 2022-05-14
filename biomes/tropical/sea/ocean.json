@@ -217,59 +217,58 @@
             "style": {"style": "STATIC"}
         }
     ],
-    "objects": [{
-        "chance": 0.01,
-        "rotation": {
-            "yAxis": {
-                "min": 0,
-                "max": 0,
-                "interval": 90,
+    "objects": [
+        {
+            "chance": 0.01,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
                 "enabled": true
             },
-            "enabled": true
+            "underwater": true,
+            "place": [
+                "structures/swreck1",
+                "structures/usdship1",
+                "structures/usdship2"
+            ],
+            "edit": [{
+                "find": [{"block": "minecraft:oak_stairs"}],
+                "replace": {"palette": [{"block": "minecraft:oak_planks"}]}
+            }],
+            "translate": {
+                "x": 0,
+                "y": -2,
+                "z": 0
+            }
         },
-        "underwater": true,
-        "place": [
-            "structures/swreck1",
-            "structures/usdship1",
-            "structures/usdship2"
-        ],
-        "edit": [{
-            "find": [{"block": "minecraft:oak_stairs"}],
-            "replace": {"palette": [{"block": "minecraft:oak_planks"}]}
-        }],
-        "translate": {
-            "x": 0,
-            "y": -2,
-            "z": 0
-        }
-    },
-    {
-        "chance": 0.035,
-        "rotation": {
-            "yAxis": {
-                "min": 0,
-                "max": 0,
-                "interval": 90,
+        {
+            "chance": 0.035,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
                 "enabled": true
             },
-            "enabled": true
-        },
-        "underwater": true,
-        "place": [
-            "structures/oruins1",
-            "structures/oruins2",
-            "structures/oruins3"
-        ],
-        "mode": "PAINT",
-        "loot": [
-            {
+            "underwater": true,
+            "place": [
+                "structures/oruins1",
+                "structures/oruins2",
+                "structures/oruins3"
+            ],
+            "mode": "PAINT",
+            "loot": [{
                 "name": "tropical-dungeon",
                 "weight": 1
-            }
-        ]
-
-    }],
+            }]
+        }
+    ],
     "loot": {
         "mode": "ADD",
         "multiplier": 1,
