@@ -1,42 +1,54 @@
 {
-    "name": "Tundra Taiga",
-    "derivative": "OLD_GROWTH_SPRUCE_TAIGA",
-    "rarity": 1,
-    "color": "#0DCADF",
-    "vanillaDerivative": "TAIGA",
-    "children": ["tundra/taiga-extended"],
-    "childShrinkFactor": 2.4,
-    "generators": [{
-        "max": 42,
-        "min": 34,
-        "generator": "plain"
-    }],
+    "name": "Tundra Forest Cliffs",
+    "derivative": "WINDSWEPT_HILLS",
+    "rarity": 3,
+    "color": "#6CBFC8",
+    "vanillaDerivative": "OLD_GROWTH_SPRUCE_TAIGA",
+    "generators": [
+{
+        "generator": "smooth-dunes",
+        "min": 97,
+        "max": 132
+    },{
+        "generator": "mountain",
+        "max": 14,
+        "min": 8
+    }
+    ],
     "customDerivitives": [{
         "category": "forest",
-        "id": "tundra_taiga",
-        "grassColor": "#7BA13C",
+        "id": "tundra_forest_cliffs",
+        "grassColor": "#56B16F",
         "waterColor": "#80B4C6",
         "waterFogColor": "#80B4C6",
         "fogColor": "#8091C6"
     }],
     "layers": [
         {
-            "style": {"style": "STATIC"},
-            "zoom": 0.92,
-            "palette": [{"block": "minecraft:grass_block"}]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 4,
+            "minHeight": 3,
+            "maxHeight": 5,
+            "slopeCondition": {"minimumSlope": 6.9},
             "palette": [
-                {"block": "minecraft:dirt"},
-                {"block": "minecraft:coarse_dirt"}
+                {"block": "minecraft:stone"},
+                {"block": "minecraft:andesite"},
+                {"block": "minecraft:gravel"}
             ]
         },
         {
+            "minHeight": 3,
+            "maxHeight": 5,
+            "slopeCondition": {"minimumSlope": 5.2},
+            "palette": [
+                {"block": "minecraft:dirt"},
+                {"block": "minecraft:coarse_dirt"},
+                {"block": "minecraft:gravel"}
+            ]
+        },
+        {"palette": [{"block": "minecraft:grass_block"}]},
+        {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "STATIC"},
+            "style": {"style": "IRIS"},
             "palette": [
                 {"block": "minecraft:stone"},
                 {"block": "minecraft:andesite"},
@@ -44,39 +56,32 @@
             ]
         }
     ],
-    "jigsawStructures": [
-        {
-            "rarity": 1700,
-            "structure": "pillager_outpost"
-        },
-        {
-            "rarity": 1000,
-            "structure": "village-tundra"
-        }
+    "biomeSkyScatter": [
+        "SNOWY_TAIGA",
+        "FROZEN_PEAKS"
     ],
     "decorators": [
+        {
+            "chance": 0.01,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.1,
+            "palette": [
+                {"block": "minecraft:white_tulip"},
+                {"block": "minecraft:blue_orchid"},
+                {"block": "minecraft:poppy"}
+            ],
+            "style": {"style": "STATIC"}
+        },
         {
             "chance": 0.003,
             "variance": {"style": "STATIC"},
             "zoom": 0.02,
             "palette": [
                 {"block": "minecraft:white_tulip"},
-                {"block": "minecraft:blue_orchid"}
+                {"block": "minecraft:cornflower"},
+                {"block": "minecraft:blue_orchid"},
+                {"block": "minecraft:lily_of_the_valley"}
             ],
-            "style": {"style": "STATIC"}
-        },
-        {
-            "chance": 0.023,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.3,
-            "palette": [{"block": "minecraft:grass"}],
-            "style": {"style": "STATIC"}
-        },
-        {
-            "chance": 0.001,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.3,
-            "palette": [{"block": "minecraft:poppy"}],
             "style": {"style": "STATIC"}
         },
         {
@@ -104,75 +109,26 @@
             "style": {"style": "STATIC"}
         },
         {
-            "chance": 0.001,
+            "chance": 0.2,
             "variance": {"style": "STATIC"},
-            "zoom": 0.02,
-            "palette": [
-                {"block": "minecraft:wither_rose"},
-                {"block": "minecraft:oxeye_daisy"},
-                {"block": "minecraft:pink_tulip"}
-            ],
-            "style": {"style": "FRACTAL_SMOKE"}
-        },
-        {
-            "chance": 0.05,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.2,
-            "palette": [
-                {"block": "minecraft:large_fern"},
-                {"block": "minecraft:tall_grass"}
-            ],
-            "style": {"style": "FRACTAL_SMOKE"}
-        },
-        {
-            "chance": 0.21,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.2,
-            "palette": [
-                {"block": "minecraft:grass"},
-                {"block": "minecraft:fern"}
-            ],
+            "zoom": 0.3,
+            "palette": [{"block": "minecraft:grass"}],
             "style": {"style": "STATIC"}
         }
     ],
     "objects": [
         {
-            "chance": 0.00256,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": ["clutter/grave1"]
-        },
-        {
-            "chance": 0.001,
-            "mode": "FAST_MIN_HEIGHT",
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": false
-                },
-                "enabled": true
-            },
             "place": [
-                "clutter/swordnp2",
-                "clutter/swordnp1"
+                "clutter/gravelsplotch1",
+                "clutter/gravelsplotch2",
+                "clutter/gravelsplotch3",
+                "clutter/gravelsplotch4"
             ],
-            "translate": {
-                "x": 0,
-                "y": -1,
-                "z": 0
-            }
+            "chance": 0.75,
+            "mode": "PAINT"
         },
         {
-            "chance": 0.2,
+            "chance": 0.8,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -183,13 +139,11 @@
                 "enabled": true
             },
             "place": [
-                "clutter/stoneclutt1",
-                "clutter/stoneclutt2",
-                "clutter/stoneclutt3",
-                "clutter/stoneclutt4",
-                "clutter/stoneclutt5",
-                "clutter/stoneclutt6",
-                "clutter/stoneclutt7"
+                "trees/spruce/levergreen1",
+                "trees/spruce/levergreen1",
+                "trees/spruce/mevergreen1",
+                "trees/spruce/mevergreen2",
+                "trees/spruce/mevergreen3"
             ],
             "translate": {
                 "x": 0,
@@ -198,11 +152,7 @@
             }
         },
         {
-            "chance": 0.25,
-            "edit": [{
-                "find": [{"block": "minecraft:oak_leaves"}],
-                "replace": {"palette": [{"block": "minecraft:birch_leaves"}]}
-            }],
+            "chance": 0.005,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -213,46 +163,55 @@
                 "enabled": true
             },
             "place": [
-                "trees/mixed/tredwoodsmol1",
-                "trees/mixed/tredwoodsmol1",
-                "trees/mixed/tredwoodsmol1",
-                "trees/mixed/tredwoodsmol2",
-                "trees/mixed/tredwoodsmol3"
+                "clutter/obelisk1",
+                "clutter/obelisk2",
+                "clutter/obelisk3",
+                "clutter/obelisk4",
+                "clutter/obelisk5",
+                "clutter/obelisk6",
+                "clutter/obelisk7"
+            ]
+        },
+        {
+            "chance": 0.035,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/boulder1",
+                "clutter/boulder2",
+                "clutter/boulder3",
+                "clutter/boulder4",
+                "clutter/boulder5",
+                "clutter/boulder6",
+                "clutter/boulder7",
+                "clutter/boulder8",
+                "clutter/boulder9",
+                "clutter/boulder10",
+                "clutter/boulder11",
+                "clutter/boulder12",
+                "clutter/boulder13",
+                "clutter/boulder14",
+                "clutter/boulder15"
             ],
             "translate": {
                 "x": 0,
-                "y": -4,
+                "y": -2,
                 "z": 0
             }
         },
         {
-            "chance": 0.05,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "trees/spruce/pine1",
-                "trees/spruce/pine2",
-                "trees/spruce/pine3",
-                "trees/spruce/pine4",
-                "trees/spruce/pine5",
-                "trees/spruce/pine6",
-                "trees/spruce/pine7",
-                "trees/spruce/pine8",
-                "trees/spruce/pine9",
-                "trees/spruce/pine10",
-                "trees/spruce/pine11",
-                "trees/spruce/pine12"
-            ]
-        },
-        {
-            "chance": 0.01,
+            "chance": 0.075,
+            "edit": [{
+                "find": [{"block": "minecraft:oak_wood"}],
+                "replace": {"palette": [{"block": "minecraft:spruce_wood"}]}
+            }],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -269,13 +228,24 @@
                 "clutter/stump4",
                 "clutter/stump5",
                 "clutter/stump6"
-            ],
-            "mode": "FAST_MIN_HEIGHT",
-            "translate": {
-                "x": 0,
-                "y": -1,
-                "z": 0
-            }
+            ]
+        },
+        {
+            "chance": 0.125,
+            "place": [
+                "trees/spruce/pine1",
+                "trees/spruce/pine2",
+                "trees/spruce/pine3",
+                "trees/spruce/pine4",
+                "trees/spruce/pine5",
+                "trees/spruce/pine6",
+                "trees/spruce/pine7",
+                "trees/spruce/pine8",
+                "trees/spruce/pine9",
+                "trees/spruce/pine10",
+                "trees/spruce/pine11",
+                "trees/spruce/pine12"
+            ]
         },
         {
             "chance": 0.008,
@@ -300,6 +270,8 @@
             "translate": {"y": 1}
         }
     ],
+    "biomeZoom": 30,
+    "biomeStyle": {"style": "SIMPLEX"},
     "wall": {
         "style": {"style": "STATIC"},
         "palette": [
@@ -307,5 +279,11 @@
             {"block": "minecraft:andesite"},
             {"block": "minecraft:stone"}
         ]
-    }
+    },
+    "biomeScatter": [
+        "PLAINS",
+        "OLD_GROWTH_PINE_TAIGA",
+        "WINDSWEPT_HILLS",
+        "SWAMP"
+    ]
 }

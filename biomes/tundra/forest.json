@@ -4,11 +4,12 @@
     "rarity": 1,
     "color": "#61B2BB",
     "vanillaDerivative": "OLD_GROWTH_SPRUCE_TAIGA",
-    "children": ["tundra/forest-cliffs"],
+    "children": ["tundra/forest-extended-cliffs"],
+    "childShrinkFactor": 2.4,
     "generators": [{
         "generator": "smooth-dunes",
-        "max": 14,
-        "min": 8
+        "min": 37,
+        "max": 56
     }],
     "customDerivitives": [{
         "category": "forest",
@@ -118,6 +119,7 @@
         },
         {
             "chance": 0.8,
+            "density": 2,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -149,7 +151,7 @@
             }
         },
         {
-            "chance": 0.005,
+            "chance": 0.01,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -170,7 +172,7 @@
             ]
         },
         {
-            "chance": 0.25,
+            "chance": 0.35,
             "place": [
                 "trees/spruce/pine1",
                 "trees/spruce/pine2",
@@ -211,7 +213,6 @@
     ],
     "biomeZoom": 30,
     "biomeStyle": {"style": "SIMPLEX"},
-    "childShrinkFactor": 8,
     "wall": {
         "style": {"style": "STATIC"},
         "palette": [

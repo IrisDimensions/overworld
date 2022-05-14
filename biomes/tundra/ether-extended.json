@@ -1,20 +1,22 @@
 {
-    "name": "Tundra Magic Forest",
+    "name": "Tundra Ether",
     "derivative": "WINDSWEPT_HILLS",
-    "color": "#49AEB9",
-    "rarity": 7,
+    "color": "#87DCE5",
+    "rarity": 13,
     "vanillaDerivative": "OLD_GROWTH_SPRUCE_TAIGA",
-    "children": ["tundra/magic-forest-extended"],
-    "childShrinkFactor": 2.4,
     "generators": [{
         "generator": "smooth-dunes",
-        "max": 34,
-        "min": 22
+        "max": 42,
+        "min": 34
+    },{
+        "generator": "mountain",
+        "max": 14,
+        "min": 8
     }],
     "customDerivitives": [{
-        "grassColor": "#4E83CF",
-        "foliageColor": "#2F99DC",
-        "id": "tunmagforest",
+        "grassColor": "#dcf5f1",
+        "foliageColor": "#e6dcf5",
+        "id": "tunether",
         "waterColor": "#5C3BEF",
         "waterFogColor": "#7A768F",
         "category": "forest",
@@ -73,6 +75,15 @@
             ],
             "chance": 0.35,
             "mode": "PAINT"
+        },
+        {
+            "place": [
+                "structures/woodhand1",
+                "structures/woodhand2",
+                "structures/woodhand3"
+            ],
+            "chance": 0.07,
+            "mode": "FAST_MIN_HEIGHT"
         },
         {
             "chance": 0.8,
@@ -176,6 +187,7 @@
             "style": {"style": "STATIC"}
         }
     ],
+    "childShrinkFactor": 8,
     "wall": {
         "style": {"style": "STATIC"},
         "palette": [
