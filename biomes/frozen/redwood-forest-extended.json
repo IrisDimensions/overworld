@@ -1,25 +1,34 @@
 {
-    "name": "Frozen Pines",
+    "name": "Frozen Redwood Forest",
     "derivative": "SNOWY_TAIGA",
-    "color": "#0D6389",
+    "color": "#0F5575",
     "rarity": 1,
     "vanillaDerivative": "SNOWY_TAIGA",
-    "children": ["frozen/pines-extended"],
+    "generators": [{
+        "min": 115,
+        "max": 223,
+        "generator": "highplains"
+    }],
+    "customDerivitives": [{
+        "category": "icy",
+        "id": "frozen_redwood_forest",
+        "waterColor": "#216FC4",
+        "fogColor": "#A6D1FF",
+        "downfallType": "snow",
+        "temperature": -3,
+        "waterFogColor": "#216FC4",
+        "foliageColor": "#B8D0E1",
+        "grassColor": "#D0E1FF"
+    }],
     "layers": [
         {
-            "minHeight": 0,
-            "maxHeight": 1,
+            "maxHeight": 3,
             "palette": [{"block": "minecraft:snow_block"}]
         },
         {
             "minHeight": 1,
             "maxHeight": 1,
             "palette": [{"block": "minecraft:grass_block"}]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "palette": [{"block": "minecraft:dirt"}]
         },
         {
             "minHeight": 2,
@@ -37,22 +46,6 @@
             ]
         }
     ],
-    "customDerivitives": [{
-        "category": "icy",
-        "id": "frozen_pines",
-        "waterColor": "#216FC4",
-        "downfallType": "snow",
-        "temperature": -3,
-        "fogColor": "#A6D1FF",
-        "waterFogColor": "#216FC4",
-        "foliageColor": "#B8D0E1",
-        "grassColor": "#D0E1FF"
-    }],
-    "generators": [{
-        "min": 16,
-        "max": 64,
-        "generator": "mountain"
-    }],
     "jigsawStructures": [
         {
             "rarity": 1700,
@@ -81,19 +74,6 @@
                 },
                 "enabled": true
             },
-            "edit": [{
-                "find": [{"block": "minecraft:spruce_leaves"}],
-                "replace": {
-                    "style": {
-                        "style": "PERLIN",
-                        "zoom": 0.2
-                    },
-                    "palette": [
-                        {"block": "minecraft:oak_leaves"},
-                        {"block": "minecraft:dark_oak_leaves"}
-                    ]
-                }
-            }],
             "place": [
                 "clutter/icecluster1",
                 "clutter/icecluster2",
@@ -119,21 +99,25 @@
             }
         },
         {
-            "chance": 0.8,
-            "snow": 1,
-            "edit": [{
-                "find": [{"block": "minecraft:spruce_leaves"}],
-                "replace": {
-                    "style": {
-                        "style": "PERLIN",
-                        "zoom": 0.2
-                    },
-                    "palette": [
-                        {"block": "minecraft:oak_leaves"},
-                        {"block": "minecraft:dark_oak_leaves"}
-                    ]
+            "chance": 0.4,
+            "density": 2,
+            "edit": [
+                {
+                    "find": [{"block": "minecraft:birch_leaves"}],
+                    "replace": {"palette": [{
+                        "block": "minecraft:oak_leaves",
+                        "data": {"persistent": true}
+                    }]}
+                },
+                {
+                    "find": [{"block": "minecraft:spruce_leaves"}],
+                    "replace": {"palette": [{
+                        "block": "minecraft:dark_oak_leaves",
+                        "data": {"persistent": true}
+                    }]}
                 }
-            }],
+            ],
+            "snow": 1,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -144,20 +128,25 @@
                 "enabled": true
             },
             "place": [
-                "trees/spruce/levergreen1",
-                "trees/spruce/levergreen1",
-                "trees/spruce/mevergreen1",
-                "trees/spruce/mevergreen2",
-                "trees/spruce/mevergreen3"
+                "trees/mixed/tredwood1",
+                "trees/mixed/tredwood2",
+                "trees/mixed/tredwood3",
+                "trees/mixed/tredwood4",
+                "trees/mixed/tredwood5",
+                "trees/mixed/tredwood6",
+                "trees/mixed/tredwood7",
+                "trees/mixed/tredwood8",
+                "trees/mixed/tredwood9",
+                "trees/mixed/tredwood10"
             ],
             "translate": {
                 "x": 0,
-                "y": -2,
+                "y": -10,
                 "z": 0
             }
         },
         {
-            "chance": 0.06,
+            "chance": 0.05,
             "density": 3,
             "snow": 0.35,
             "rotation": {
@@ -194,7 +183,6 @@
             {"block": "minecraft:air"}
         ]
     }],
-    "childShrinkFactor": 20,
     "wall": {
         "style": {"style": "STATIC"},
         "palette": [
