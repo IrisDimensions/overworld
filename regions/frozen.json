@@ -136,19 +136,15 @@
             "name": "standard-surface-portals",
             "chance": 0.001,
             "place": [
+                "structures/swordnp2",
+                "structures/swordnp1",
+                "structures/swordnpstr2",
+                "structures/swordnpstr1",
                 "structures/giantportal1",
                 "structures/giantportal2",
                 "structures/giantportal3",
-                "structures/portal1",
-                "structures/portal2",
-                "structures/portal3",
-                "structures/portal4",
-                "structures/portal5",
-                "structures/portal6",
-                "structures/portal7",
-                "structures/portal8",
-                "structures/portal9",
-                "structures/portal10"
+                "structures/megaportal1",
+                "structures/megaportal2"
             ],
             "edit": [
                 {
@@ -184,13 +180,23 @@
         "caves": [{
             "breakSurface": true,
             "cave": "ice/main",
-            "rarity": 22,
+            "rarity": 10,
             "caveStartHeight": {
-                "max": 200,
+                "max": 400,
                 "min": 15,
                 "style": {"style": "VASCULAR"}
             }
-        }]
+        },
+        {
+                "breakSurface": true,
+                "cave": "rocky/main",
+                "rarity": 50,
+                "caveStartHeight": {
+                    "max": 400,
+                "min": 15,
+                    "style": {"style": "STATIC"}
+                }
+            }]
     },
     "shoreHeightZoom": 1.14,
     "riverThickness": 0.006,
