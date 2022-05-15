@@ -1,0 +1,198 @@
+{
+    "name": "Swamp Forest",
+    "derivative": "SWAMP",
+    "vanillaDerivative": "SWAMP",
+    "rarity": 2,
+    "generators": [{
+        "generator": "plain",
+        "max": 4,
+        "min": 1
+    }],
+    "children": ["swamp/swamp-puddle"],
+    "childStyle": {
+        "style": "IRIS",
+        "exponent": 1.3
+    },
+    "childShrinkFactor": 8,
+    "customDerivitives": [{
+        "id": "k530forestswamp",
+        "foliageColor": "#4a532f",
+        "waterColor": "#49521d",
+        "waterFogColor": "#49521d",
+        "fogColor": "#325729",
+        "grassColor": "#4b5332",
+        "category": "forest"
+    }],
+    "decorators": [
+        {
+            "chance": 0.1,
+            "absoluteMaxStack": 2,
+            "heightVariance":{
+                "style": "SIMPLEX",
+                "zoom": 0.4
+            },
+            "style":{
+                "style": "IRIS",
+                "exponent": 1.4,
+                "zoom": 0.8
+            },
+            "palette": [{"block": "minecraft:dark_oak_leaves"}]
+        },
+        {
+            "chance": 0.25,
+            "palette": [{"block": "minecraft:grass"}]
+        },
+        {
+            "chance": 0.065,
+            "palette": [{"block": "minecraft:fern"}]
+        },
+        {
+            "chance": 0.005,
+            "palette": [{"block": "minecraft:blue_orchid"}]
+        },
+        {
+            "chance": 0.005,
+            "palette": [{"block": "minecraft:brown_mushroom"},{"block": "minecraft:red_mushroom"}]
+        },
+        {
+            "chance": 0.065,
+            "palette": [{"block": "minecraft:large_fern"}]
+        }
+    ],
+    "layers": [
+        {
+            "style": {
+                "style": "SIMPLEX",
+                "exponent": 0.75,
+                "fracture": {
+                    "style": "STATIC",
+                    "multiplier": 15
+                }
+            },
+            "zoom": 0.8,
+            "palette": [
+                {
+                    "block": "minecraft:grass_block",
+                    "weight": 8
+                },
+                {
+                    "block": "minecraft:brown_concrete_powder",
+                    "weight": 1
+                },
+                {
+                    "block": "minecraft:dirt",
+                    "weight": 1
+                },
+                {
+                    "block": "minecraft:coarse_dirt",
+                    "weight": 1
+                }
+            ]
+        },
+        {
+            "maxHeight": 3,
+            "minHeight": 3,
+            "palette": [
+                {
+                    "block": "minecraft:dirt",
+                    "weight": 7
+                },
+                {
+                    "block": "minecraft:coarse_dirt",
+                    "weight": 1
+                }
+            ]
+        },
+        {
+            "maxHeight": 3,
+            "minHeight": 3,
+            "palette": [
+                {
+                    "block": "minecraft:dirt",
+                    "weight": 7
+                },
+                {
+                    "block": "minecraft:coarse_dirt",
+                    "weight": 7
+                },
+                {
+                    "block": "minecraft:stone",
+                    "weight": 8
+                },
+                {
+                    "block": "minecraft:coal_ore",
+                    "weight": 1
+                }
+            ]
+        }
+    ],
+    "objects": [
+        {
+            "mode": "STILT",
+        "place": [
+            "trees/mixed/dotree1",
+            "trees/mixed/dotree2",
+            "trees/mixed/dotree3",
+            "trees/mixed/dotree4",
+            "trees/mixed/dotree5",
+            "trees/mixed/dotree6",
+            "trees/mixed/dotree7",
+            "trees/mixed/dotree8",
+            "trees/mixed/dotree9",
+            "trees/mixed/dotree10"
+        ],
+        "chance": 0.65,
+        "rotation": {
+            "enabled": true,
+            "yAxis": {
+                "enabled": true,
+                "interval": 90,
+                "min": -360,
+                "max": 360
+            }
+        },
+        "translate": {"y": -1}
+    },
+        {
+            "place": [
+                "trees/acacia/17",
+                "trees/acacia/18"
+            ],
+            "translate":{
+                "y": -4
+            },
+            "chance": 0.3,
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": -360,
+                    "max": 360
+                }
+            }
+        },
+        {
+            "mode": "PAINT",
+            "place": [
+                "clutter/stump1",
+                "clutter/stump2",
+                "clutter/stump3",
+                "clutter/stump4",
+                "clutter/stump5",
+                "clutter/stump6",
+                "clutter/stump7"
+            ],
+            "chance": 0.2,
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": -360,
+                    "max": 360
+                }
+            }
+        }
+    ]
+}
