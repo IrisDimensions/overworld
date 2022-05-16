@@ -76,8 +76,10 @@
             "mode": "STILT",
             "onwater": true,
             "chance": 1,
-            "density": 4,
-
+            "clamp": {
+                "minimumHeight": 100
+            },
+            "density": 5,
             "place": [
                 "trees/mangrove/mangrove1",
                 "trees/mangrove/mangrove2",
@@ -109,7 +111,7 @@
                     "max": 360
                 }
             },
-            "translate": {"y": -10},
+            "translate": {"y": -7},
             "edit": [{
                 "find": [{"block": "minecraft:oak_fence"}],
                 "replace": {"palette": [{"block": "minecraft:air"}]}
