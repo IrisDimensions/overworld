@@ -1,53 +1,13 @@
 {
     "name": "Temperate",
     "color": "#9BEE61",
-    "landBiomes": [
-        "temperate/plateau",
-        "temperate/stranged-plains",
-        "temperate/longtree-forest",
-        "temperate/osaka-violet-forest",
-        "temperate/combo-forest",
-        "temperate/plains",
-        "temperate/wilds",
-        "temperate/oak-forest",
-        "temperate/osaka-red-forest",
-        "temperate/birch-forest",
-        "temperate/reaching-forest",
-        "temperate/lush-plains"
+    "rarity": 1,
+    "jigsawStructures": [
+        {
+            "structure": "murky_stronghold",
+            "rarity": 250
+        }
     ],
-    "shoreBiomes": [
-        "temperate/shore/beach",
-        "temperate/shore/oak-beach"
-    ],
-    "seaBiomes": [
-        "temperate/sea/river",
-        "ocean/deep"
-    ],
-    "riverBiomes": ["temperate/sea/river"],
-    "jigsawStructures": [{
-        "structure": "murky_stronghold",
-        "rarity": 250
-    }],
-    "ENTITY_SPAWNS": "ALL ENTITY SPAWNS FOR THE REGION",
-    "entitySpawners": [
-        "temperate/land-passive",
-        "temperate/land-hostile",
-        "temperate/land-cave"
-    ],
-    "shoreBiomeZoom": 0.15,
-    "deposits": [{
-        "minHeight": 15,
-        "maxPerChunk": 26,
-        "maxHeight": 410,
-        "minPerChunk": 4,
-        "minSize": 3,
-        "maxSize": 8,
-        "palette": [
-            {"block": "minecraft:iron_ore"},
-            {"block": "minecraft:coal_ore"}
-        ],
-        "varience": 4
-    }],
     "objects": [
         {
             "heightmap": {
@@ -69,10 +29,22 @@
                 "structures/amethyst5",
                 "structures/amethyst6"
             ],
-            "edit": [{
-                "find": [{"block": "minecraft:glass"}],
-                "replace": {"palette": [{"block": "minecraft:void_air"}]}
-            }],
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:glass"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:void_air"
+                            }
+                        ]
+                    }
+                }
+            ],
             "enabled": true,
             "xAxis": {
                 "interval": 90,
@@ -105,28 +77,129 @@
             ],
             "edit": [
                 {
-                    "find": [{"block": "minecraft:gold_block"}],
-                    "replace": {"palette": [{"block": "minecraft:air"}]},
+                    "find": [
+                        {
+                            "block": "minecraft:gold_block"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:air"
+                            }
+                        ]
+                    },
                     "chance": 0.1
                 },
                 {
-                    "find": [{"block": "minecraft:netherrack"}],
-                    "replace": {"palette": [{"block": "minecraft:magma_block"}]},
+                    "find": [
+                        {
+                            "block": "minecraft:netherrack"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:magma_block"
+                            }
+                        ]
+                    },
                     "chance": 0.07
                 },
                 {
-                    "find": [{"block": "minecraft:obsidian"}],
-                    "replace": {"palette": [{"block": "minecraft:crying_obsidian"}]},
+                    "find": [
+                        {
+                            "block": "minecraft:obsidian"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:crying_obsidian"
+                            }
+                        ]
+                    },
                     "chance": 0.15
                 },
                 {
-                    "find": [{"block": "minecraft:lava"}],
-                    "replace": {"palette": [{"block": "minecraft:magma_block"}]},
+                    "find": [
+                        {
+                            "block": "minecraft:lava"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:magma_block"
+                            }
+                        ]
+                    },
                     "chance": 0.2
                 }
             ],
             "mode": "PAINT",
             "carvingSupport": "SURFACE_ONLY"
+        }
+    ],
+    "landBiomes": [
+        "temperate/plateau",
+        "temperate/stranged-plains",
+        "temperate/longtree-forest",
+        "temperate/osaka-violet-forest",
+        "temperate/combo-forest",
+        "temperate/plains",
+        "temperate/wilds",
+        "temperate/oak-forest",
+        "temperate/osaka-red-forest",
+        "temperate/birch-forest",
+        "temperate/reaching-forest",
+        "temperate/lush-plains"
+    ],
+    "loot": {
+        "mode": "ADD",
+        "multiplier": 1,
+        "tables": [
+            "global-tools",
+            "global-treasure",
+            "temperate-clutter",
+            "temperate-food"
+        ]
+    },
+    "shoreBiomes": [
+        "temperate/shore/beach",
+        "temperate/shore/oak-beach"
+    ],
+    "seaBiomes": [
+        "temperate/sea/river",
+        "ocean/deep"
+    ],
+    "riverBiomes": [
+        "temperate/sea/river"
+    ],
+    "ENTITY_SPAWNS": "ALL ENTITY SPAWNS FOR THE REGION",
+    "entitySpawners": [
+        "temperate/land-passive",
+        "temperate/land-hostile",
+        "temperate/land-cave"
+    ],
+    "shoreBiomeZoom": 0.15,
+    "deposits": [
+        {
+            "minHeight": 15,
+            "maxPerChunk": 26,
+            "maxHeight": 410,
+            "minPerChunk": 4,
+            "minSize": 3,
+            "maxSize": 8,
+            "palette": [
+                {
+                    "block": "minecraft:iron_ore"
+                },
+                {
+                    "block": "minecraft:coal_ore"
+                }
+            ],
+            "varience": 4
         }
     ],
     "carving": {
@@ -147,8 +220,10 @@
                 "rarity": 30,
                 "caveStartHeight": {
                     "max": 400,
-                "min": 15,
-                    "style": {"style": "STATIC"}
+                    "min": 15,
+                    "style": {
+                        "style": "STATIC"
+                    }
                 }
             },
             {
@@ -157,8 +232,10 @@
                 "rarity": 15,
                 "caveStartHeight": {
                     "max": 400,
-                "min": 15,
-                    "style": {"style": "STATIC"}
+                    "min": 15,
+                    "style": {
+                        "style": "STATIC"
+                    }
                 }
             }
         ]
@@ -172,17 +249,6 @@
     },
     "shoreHeightMin": 1,
     "shoreHeightMax": 5.2,
-    "loot": {
-        "mode": "ADD",
-        "multiplier": 1,
-        "tables": [
-            "global-tools",
-            "global-treasure",
-            "temperate-clutter",
-            "temperate-food"
-        ]
-    },
     "shoreHeightZoom": 1.14,
-    "riverThickness": 0.025,
-    "rarity": 1
+    "riverThickness": 0.025
 }

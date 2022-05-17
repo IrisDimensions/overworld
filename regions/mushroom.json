@@ -1,6 +1,67 @@
 {
     "name": "Mushroom",
     "color": "#F1C3EF",
+    "rarity": 20,
+    "jigsawStructures": [
+        {
+            "structure": "murky_stronghold",
+            "rarity": 250
+        }
+    ],
+    "objects": [
+        {
+            "heightmap": {
+                "seed": 1337,
+                "style": {
+                    "style": "SIMPLEX",
+                    "multiplier": 10
+                },
+                "offsetY": 5
+            },
+            "chance": 0.05,
+            "bottom": true,
+            "density": 1,
+            "place": [
+                "structures/amethyst1",
+                "structures/amethyst2",
+                "structures/amethyst3",
+                "structures/amethyst4",
+                "structures/amethyst5",
+                "structures/amethyst6"
+            ],
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:glass"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:void_air"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "enabled": true,
+            "xAxis": {
+                "interval": 90,
+                "max": 360,
+                "min": 0
+            },
+            "yAxis": {
+                "interval": 90,
+                "max": 360,
+                "min": 0
+            },
+            "translate": {
+                "yRandom": 10,
+                "y": 2
+            }
+        }
+    ],
     "landBiomes": [
         "mushroom/forest",
         "mushroom/crimson-forest",
@@ -8,30 +69,51 @@
         "mushroom/plains",
         "mushroom/warped-forest"
     ],
-    "shoreBiomes": ["mushroom/shore/beach"],
-    "jigsawStructures": [{
-        "structure": "murky_stronghold",
-        "rarity": 250
-    }],
-    "seaBiomes": ["mushroom/sea/ocean"],
-    "blockDrops": [{
-        "drops": [
-            {
-                "type": "red_mushroom",
-                "rarity": 8
-            },
-            {
-                "type": "brown_mushroom",
-                "rarity": 8
-            }
-        ],
-        "blocks": [
-            {"block": "minecraft:mycelium"},
-            {"block": "minecraft:mushroom_stem"},
-            {"block": "minecraft:red_mushroom_block"},
-            {"block": "minecraft:brown_mushroom_block"}
+    "loot": {
+        "mode": "ADD",
+        "multiplier": 1,
+        "tables": [
+            "global-clutter",
+            "global-tools",
+            "global-treasure",
+            "mushroom-clutter",
+            "mushroom-food"
         ]
-    }],
+    },
+    "shoreBiomes": [
+        "mushroom/shore/beach"
+    ],
+    "seaBiomes": [
+        "mushroom/sea/ocean"
+    ],
+    "blockDrops": [
+        {
+            "drops": [
+                {
+                    "type": "red_mushroom",
+                    "rarity": 8
+                },
+                {
+                    "type": "brown_mushroom",
+                    "rarity": 8
+                }
+            ],
+            "blocks": [
+                {
+                    "block": "minecraft:mycelium"
+                },
+                {
+                    "block": "minecraft:mushroom_stem"
+                },
+                {
+                    "block": "minecraft:red_mushroom_block"
+                },
+                {
+                    "block": "minecraft:brown_mushroom_block"
+                }
+            ]
+        }
+    ],
     "riverStyle": {
         "style": "VASCULAR",
         "zoom": 4.77,
@@ -41,53 +123,13 @@
             "zoom": 5
         }
     },
-    "objects": [{
-        "heightmap": {
-            "seed": 1337,
-            "style": {
-                "style": "SIMPLEX",
-                "multiplier": 10
-            },
-            "offsetY": 5
-        },
-        "chance": 0.05,
-        "bottom": true,
-        "density": 1,
-        "place": [
-            "structures/amethyst1",
-            "structures/amethyst2",
-            "structures/amethyst3",
-            "structures/amethyst4",
-            "structures/amethyst5",
-            "structures/amethyst6"
-        ],
-        "edit": [{
-            "find": [{"block": "minecraft:glass"}],
-            "replace": {"palette": [{"block": "minecraft:void_air"}]}
-        }],
-        "enabled": true,
-        "xAxis": {
-            "interval": 90,
-            "max": 360,
-            "min": 0
-        },
-        "yAxis": {
-            "interval": 90,
-            "max": 360,
-            "min": 0
-        },
-        "translate": {
-            "yRandom": 10,
-            "y": 2
-        }
-    }],
     "landBiomeZoom": 1.8,
     "effects": [
         {
-            "particleAltX": 1.0E-5,
+            "particleAltX": 1e-05,
             "particleAway": 1,
             "particleAltY": 0.01885,
-            "particleAltZ": 1.0E-5,
+            "particleAltZ": 1e-05,
             "chance": 3,
             "particleEffect": "CRIMSON_SPORE",
             "particleDistance": 5,
@@ -114,28 +156,19 @@
     "shoreHeightMax": 6.2,
     "carving": {
         "caves": [
-        {
+            {
                 "breakSurface": true,
                 "cave": "rocky/main",
                 "rarity": 50,
                 "caveStartHeight": {
                     "max": 400,
-                "min": 15,
-                    "style": {"style": "STATIC"}
+                    "min": 15,
+                    "style": {
+                        "style": "STATIC"
+                    }
                 }
-            }]
-    },
-    "loot": {
-        "mode": "ADD",
-        "multiplier": 1,
-        "tables": [
-            "global-clutter",
-            "global-tools",
-            "global-treasure",
-            "mushroom-clutter",
-            "mushroom-food"
+            }
         ]
     },
-    "shoreHeightZoom": 1.14,
-    "rarity": 20
+    "shoreHeightZoom": 1.14
 }

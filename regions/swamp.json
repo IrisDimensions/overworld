@@ -1,6 +1,67 @@
 {
     "name": "Swamp",
     "color": "#69943C",
+    "rarity": 2,
+    "jigsawStructures": [
+        {
+            "structure": "murky_stronghold",
+            "rarity": 250
+        }
+    ],
+    "objects": [
+        {
+            "heightmap": {
+                "seed": 1337,
+                "style": {
+                    "style": "SIMPLEX",
+                    "multiplier": 10
+                },
+                "offsetY": 5
+            },
+            "chance": 0.05,
+            "bottom": true,
+            "density": 1,
+            "place": [
+                "structures/amethyst1",
+                "structures/amethyst2",
+                "structures/amethyst3",
+                "structures/amethyst4",
+                "structures/amethyst5",
+                "structures/amethyst6"
+            ],
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:glass"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:void_air"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "enabled": true,
+            "xAxis": {
+                "interval": 90,
+                "max": 360,
+                "min": 0
+            },
+            "yAxis": {
+                "interval": 90,
+                "max": 360,
+                "min": 0
+            },
+            "translate": {
+                "yRandom": 10,
+                "y": 2
+            }
+        }
+    ],
     "landBiomes": [
         "swamp/roofed-forest",
         "swamp/willow-forest",
@@ -11,11 +72,20 @@
         "swamp/marsh",
         "swamp/handy-willow-forest"
     ],
-    "shoreBiomes": ["swamp/shore/beach"],
-    "jigsawStructures": [{
-        "structure": "murky_stronghold",
-        "rarity": 250
-    }],
+    "loot": {
+        "mode": "ADD",
+        "multiplier": 1,
+        "tables": [
+            "global-clutter",
+            "global-tools",
+            "global-treasure",
+            "swamp-clutter",
+            "swamp-food"
+        ]
+    },
+    "shoreBiomes": [
+        "swamp/shore/beach"
+    ],
     "seaBiomes": [
         "swamp/sea/ocean",
         "swamp/swamp-mangrove-lake",
@@ -43,7 +113,11 @@
             "minPerChunk": 1,
             "minSize": 3,
             "maxSize": 8,
-            "palette": [{"block": "minecraft:coal_ore"}],
+            "palette": [
+                {
+                    "block": "minecraft:coal_ore"
+                }
+            ],
             "varience": 4
         },
         {
@@ -53,86 +127,56 @@
             "minPerChunk": 4,
             "minSize": 3,
             "maxSize": 8,
-            "palette": [{"block": "minecraft:iron_ore"}],
+            "palette": [
+                {
+                    "block": "minecraft:iron_ore"
+                }
+            ],
             "varience": 4
         }
     ],
-    "objects": [{
-        "heightmap": {
-            "seed": 1337,
-            "style": {
-                "style": "SIMPLEX",
-                "multiplier": 10
-            },
-            "offsetY": 5
-        },
-        "chance": 0.05,
-        "bottom": true,
-        "density": 1,
-        "place": [
-            "structures/amethyst1",
-            "structures/amethyst2",
-            "structures/amethyst3",
-            "structures/amethyst4",
-            "structures/amethyst5",
-            "structures/amethyst6"
-        ],
-        "edit": [{
-            "find": [{"block": "minecraft:glass"}],
-            "replace": {"palette": [{"block": "minecraft:void_air"}]}
-        }],
-        "enabled": true,
-        "xAxis": {
-            "interval": 90,
-            "max": 360,
-            "min": 0
-        },
-        "yAxis": {
-            "interval": 90,
-            "max": 360,
-            "min": 0
-        },
-        "translate": {
-            "yRandom": 10,
-            "y": 2
-        }
-    }],
     "landBiomeZoom": 3,
     "shoreHeightMin": 1.2,
     "shoreHeightMax": 3,
-    "loot": {
-        "mode": "ADD",
-        "multiplier": 1,
-        "tables": [
-            "global-clutter",
-            "global-tools",
-            "global-treasure",
-            "swamp-clutter",
-            "swamp-food"
+    "carving": {
+        "caves": [
+            {
+                "breakSurface": true,
+                "cave": "swamp/main",
+                "rarity": 10,
+                "caveStartHeight": {
+                    "max": 400,
+                    "min": 15,
+                    "style": {
+                        "style": "STATIC"
+                    }
+                }
+            }
         ]
     },
-    "carving": {"caves": [{
-        "breakSurface": true,
-        "cave": "swamp/main",
-        "rarity": 10,
-        "caveStartHeight": {
-            "max": 400,
-                "min": 15,
-            "style": {"style": "STATIC"}
-        }
-    }]},
     "shoreHeightZoom": 3.14,
-    "blockDrops": [{
-        "drops": [{
-            "type": "slime_ball",
-            "rarity": 24
-        }],
-        "blocks": [
-            {"block": "minecraft:grass_block"},
-            {"block": "minecraft:dark_oak_leaves"},
-            {"block": "minecraft:grass"},
-            {"block": "minecraft:tall_grass"}
-        ]
-    }],
-    "rarity": 2
+    "blockDrops": [
+        {
+            "drops": [
+                {
+                    "type": "slime_ball",
+                    "rarity": 24
+                }
+            ],
+            "blocks": [
+                {
+                    "block": "minecraft:grass_block"
+                },
+                {
+                    "block": "minecraft:dark_oak_leaves"
+                },
+                {
+                    "block": "minecraft:grass"
+                },
+                {
+                    "block": "minecraft:tall_grass"
+                }
+            ]
+        }
+    ]
 }
