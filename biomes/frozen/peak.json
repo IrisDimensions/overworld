@@ -1,29 +1,56 @@
 {
     "name": "Frozen Peak",
-    "derivative": "SNOWY_TAIGA",
     "color": "#1177A3",
+    "derivative": "SNOWY_TAIGA",
     "vanillaDerivative": "SNOWY_TAIGA",
-    "customDerivitives": [{
-        "category": "icy",
-        "id": "frozen_peak",
-        "waterColor": "#216FC4",
-        "fogColor": "#A6D1FF",
-        "downfallType": "snow",
-        "temperature": -3,
-        "waterFogColor": "#216FC4",
-        "foliageColor": "#B8D0E1",
-        "grassColor": "#D0E1FF"
-    }],
+    "biomeScatter": [
+        "SNOWY_TAIGA",
+        "OLD_GROWTH_PINE_TAIGA",
+        "WINDSWEPT_HILLS",
+        "ICE_SPIKES"
+    ],
+    "customDerivitives": [
+        {
+            "category": "icy",
+            "id": "frozen_peak",
+            "waterColor": "#216FC4",
+            "fogColor": "#A6D1FF",
+            "downfallType": "snow",
+            "temperature": -3,
+            "waterFogColor": "#216FC4",
+            "foliageColor": "#B8D0E1",
+            "grassColor": "#D0E1FF"
+        }
+    ],
+    "generators": [
+        {
+            "min": 110,
+            "max": 280,
+            "generator": "mountain"
+        }
+    ],
+    "biomeZoom": 30,
+    "biomeStyle": {
+        "style": "SIMPLEX"
+    },
     "layers": [
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "palette": [{"block": "minecraft:ice"}]
+            "palette": [
+                {
+                    "block": "minecraft:ice"
+                }
+            ]
         },
         {
             "minHeight": 1,
             "maxHeight": 3,
-            "palette": [{"block": "minecraft:ice"}]
+            "palette": [
+                {
+                    "block": "minecraft:ice"
+                }
+            ]
         },
         {
             "minHeight": 2,
@@ -34,14 +61,24 @@
                     "block": "minecraft:packed_ice"
                 },
                 {
-                    "data": {"axis": "x"},
+                    "data": {
+                        "axis": "x"
+                    },
                     "block": "minecraft:basalt"
                 },
-                {"block": "minecraft:blackstone"},
-                {"block": "minecraft:packed_ice"},
-                {"block": "minecraft:cobblestone"},
                 {
-                    "data": {"axis": "x"},
+                    "block": "minecraft:blackstone"
+                },
+                {
+                    "block": "minecraft:packed_ice"
+                },
+                {
+                    "block": "minecraft:cobblestone"
+                },
+                {
+                    "data": {
+                        "axis": "x"
+                    },
                     "block": "minecraft:basalt"
                 },
                 {
@@ -49,17 +86,25 @@
                     "block": "minecraft:packed_ice"
                 },
                 {
-                    "data": {"axis": "x"},
+                    "data": {
+                        "axis": "x"
+                    },
                     "block": "minecraft:basalt"
                 },
                 {
                     "weight": 2,
                     "block": "minecraft:packed_ice"
                 },
-                {"block": "minecraft:obsidian"},
-                {"block": "minecraft:packed_ice"},
                 {
-                    "data": {"axis": "x"},
+                    "block": "minecraft:obsidian"
+                },
+                {
+                    "block": "minecraft:packed_ice"
+                },
+                {
+                    "data": {
+                        "axis": "x"
+                    },
                     "block": "minecraft:basalt"
                 },
                 {
@@ -67,7 +112,9 @@
                     "block": "minecraft:packed_ice"
                 },
                 {
-                    "data": {"axis": "y"},
+                    "data": {
+                        "axis": "y"
+                    },
                     "block": "minecraft:basalt"
                 },
                 {
@@ -75,7 +122,9 @@
                     "block": "minecraft:packed_ice"
                 },
                 {
-                    "data": {"axis": "z"},
+                    "data": {
+                        "axis": "z"
+                    },
                     "block": "minecraft:basalt"
                 }
             ]
@@ -83,33 +132,22 @@
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "palette": [
-                {"block": "minecraft:stone"},
-                {"block": "minecraft:andesite"},
-                {"block": "minecraft:stone"}
+                {
+                    "block": "minecraft:stone"
+                },
+                {
+                    "block": "minecraft:andesite"
+                },
+                {
+                    "block": "minecraft:stone"
+                }
             ]
         }
     ],
-    "generators": [{
-        "min": 110,
-        "max": 280,
-        "generator": "mountain"
-    }],
-    "decorators": [{
-        "chance": 1,
-        "variance": {
-            "style": "NOWHERE",
-            "zoom": 0.23
-        },
-        "palette": [
-            {
-                "data": {"layers": 1},
-                "block": "minecraft:snow"
-            },
-            {"block": "minecraft:air"}
-        ]
-    }],
     "objects": [
         {
             "chance": 0.003,
@@ -170,12 +208,24 @@
             ]
         }
     ],
-    "biomeZoom": 30,
-    "biomeStyle": {"style": "SIMPLEX"},
-    "biomeScatter": [
-        "SNOWY_TAIGA",
-        "OLD_GROWTH_PINE_TAIGA",
-        "WINDSWEPT_HILLS",
-        "ICE_SPIKES"
+    "decorators": [
+        {
+            "chance": 1,
+            "variance": {
+                "style": "NOWHERE",
+                "zoom": 0.23
+            },
+            "palette": [
+                {
+                    "data": {
+                        "layers": 1
+                    },
+                    "block": "minecraft:snow"
+                },
+                {
+                    "block": "minecraft:air"
+                }
+            ]
+        }
     ]
 }

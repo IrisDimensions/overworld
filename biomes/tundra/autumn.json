@@ -1,19 +1,9 @@
 {
     "name": "Tundra Autumn",
-    "derivative": "TAIGA",
-    "rarity": 1,
     "color": "#8EDEE7",
+    "rarity": 1,
+    "derivative": "TAIGA",
     "vanillaDerivative": "DARK_FOREST",
-    "childShrinkFactor": 2.4,
-    "children": [
-        "tundra/redwood-extended-cliffs",
-        "tundra/autumn-extended"
-    ],
-    "generators": [{
-        "min": 48,
-        "max": 86,
-        "generator": "smooth-dunes"
-    }],
     "customDerivitives": [
         {
             "id": "tundra_autumn_red",
@@ -52,20 +42,40 @@
             "fogColor": "#8091C6"
         }
     ],
+    "children": [
+        "tundra/redwood-extended-cliffs",
+        "tundra/autumn-extended"
+    ],
+    "generators": [
+        {
+            "min": 48,
+            "max": 86,
+            "generator": "smooth-dunes"
+        }
+    ],
     "biomeStyle": {
         "style": "STATIC",
         "zoom": 1
     },
-    "jigsawStructures": [
-        {
-            "rarity": 1700,
-            "structure": "pillager_outpost"
+    "wall": {
+        "style": {
+            "style": "FRACTAL_WATER"
         },
-        {
-            "rarity": 1000,
-            "structure": "village-tundra"
-        }
-    ],
+        "palette": [
+            {
+                "block": "minecraft:diorite"
+            },
+            {
+                "block": "minecraft:diorite"
+            },
+            {
+                "block": "minecraft:stone"
+            },
+            {
+                "block": "minecraft:stone"
+            }
+        ]
+    },
     "layers": [
         {
             "style": {
@@ -78,102 +88,59 @@
             },
             "zoom": 0.7,
             "palette": [
-                {"block": "minecraft:coarse_dirt"},
-                {"block": "minecraft:grass_block"},
-                {"block": "minecraft:podzol"},
-                {"block": "minecraft:podzol"},
-                {"block": "minecraft:grass_block"},
-                {"block": "minecraft:coarse_dirt"}
+                {
+                    "block": "minecraft:coarse_dirt"
+                },
+                {
+                    "block": "minecraft:grass_block"
+                },
+                {
+                    "block": "minecraft:podzol"
+                },
+                {
+                    "block": "minecraft:podzol"
+                },
+                {
+                    "block": "minecraft:grass_block"
+                },
+                {
+                    "block": "minecraft:coarse_dirt"
+                }
             ]
         },
         {
             "minHeight": 2,
             "maxHeight": 2,
-            "palette": [{"block": "minecraft:dirt"}]
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                }
+            ]
         },
         {
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "minHeight": 1,
             "maxHeight": 1,
             "palette": [
-                {"block": "minecraft:dirt"},
-                {"block": "minecraft:stone"}
+                {
+                    "block": "minecraft:dirt"
+                },
+                {
+                    "block": "minecraft:stone"
+                }
             ]
         }
     ],
-    "wall": {
-        "style": {"style": "FRACTAL_WATER"},
-        "palette": [
-            {"block": "minecraft:diorite"},
-            {"block": "minecraft:diorite"},
-            {"block": "minecraft:stone"},
-            {"block": "minecraft:stone"}
-        ]
-    },
-    "decorators": [
+    "jigsawStructures": [
         {
-            "chance": 0.003,
-            "variance": {"style": "STATIC"},
-            "zoom": 1,
-            "palette": [
-                {"block": "minecraft:white_tulip"},
-                {"block": "minecraft:cornflower"},
-                {"block": "minecraft:blue_orchid"},
-                {"block": "minecraft:lily_of_the_valley"}
-            ],
-            "style": {"style": "STATIC"}
+            "rarity": 1700,
+            "structure": "pillager_outpost"
         },
         {
-            "chance": 0.01,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.3,
-            "palette": [
-                {
-                    "data": {"age": 0},
-                    "block": "minecraft:sweet_berry_bush"
-                },
-                {
-                    "data": {"age": 1},
-                    "block": "minecraft:sweet_berry_bush"
-                },
-                {
-                    "data": {"age": 2},
-                    "block": "minecraft:sweet_berry_bush"
-                },
-                {
-                    "data": {"age": 3},
-                    "block": "minecraft:sweet_berry_bush"
-                }
-            ],
-            "style": {"style": "STATIC"}
-        },
-        {
-            "chance": 0.06,
-            "palette": [{"block": "minecraft:tall_grass"}]
-        },
-        {
-            "chance": 0.25,
-            "palette": [{"block": "minecraft:grass"}]
-        },
-        {
-            "chance": 0.06,
-            "palette": [{"block": "minecraft:fern"}]
-        },
-        {
-            "chance": 0.06,
-            "palette": [{"block": "minecraft:brown_mushroom"}]
-        },
-        {
-            "chance": 0.06,
-            "palette": [{"block": "minecraft:red_mushroom"}]
-        },
-        {
-            "chance": 0.1,
-            "palette": [{"block": "minecraft:large_fern"}]
-        },
-        {
-            "chance": 0.05,
-            "palette": [{"block": "minecraft:cobblestone_slab"}]
+            "rarity": 1000,
+            "structure": "village-tundra"
         }
     ],
     "objects": [
@@ -236,19 +203,35 @@
                 },
                 "enabled": true
             },
-            "edit": [{
-                "find": [
-                    {"block": "minecraft:birch_leaves"},
-                    {"block": "minecraft:spruce_leaves"}
-                ],
-                "exact": false,
-                "replace": {"palette": [
-                    {"block": "minecraft:jungle_leaves"},
-                    {"block": "minecraft:acacia_leaves"},
-                    {"block": "minecraft:oak_leaves"},
-                    {"block": "minecraft:dark_oak_leaves"}
-                ]}
-            }],
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:birch_leaves"
+                        },
+                        {
+                            "block": "minecraft:spruce_leaves"
+                        }
+                    ],
+                    "exact": false,
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:jungle_leaves"
+                            },
+                            {
+                                "block": "minecraft:acacia_leaves"
+                            },
+                            {
+                                "block": "minecraft:oak_leaves"
+                            },
+                            {
+                                "block": "minecraft:dark_oak_leaves"
+                            }
+                        ]
+                    }
+                }
+            ],
             "place": [
                 "trees/mixed/tredwood1",
                 "trees/mixed/tredwood2",
@@ -289,10 +272,22 @@
                 "yRandom": 1,
                 "z": 0
             },
-            "edit": [{
-                "find": [{"block": "minecraft:polished_diorite"}],
-                "replace": {"palette": [{"block": "minecraft:diorite"}]}
-            }]
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:polished_diorite"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:diorite"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         {
             "chance": 0.45,
@@ -305,19 +300,35 @@
                 },
                 "enabled": true
             },
-            "edit": [{
-                "find": [
-                    {"block": "minecraft:birch_leaves"},
-                    {"block": "minecraft:spruce_leaves"}
-                ],
-                "exact": false,
-                "replace": {"palette": [
-                    {"block": "minecraft:jungle_leaves"},
-                    {"block": "minecraft:acacia_leaves"},
-                    {"block": "minecraft:oak_leaves"},
-                    {"block": "minecraft:dark_oak_leaves"}
-                ]}
-            }],
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:birch_leaves"
+                        },
+                        {
+                            "block": "minecraft:spruce_leaves"
+                        }
+                    ],
+                    "exact": false,
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:jungle_leaves"
+                            },
+                            {
+                                "block": "minecraft:acacia_leaves"
+                            },
+                            {
+                                "block": "minecraft:oak_leaves"
+                            },
+                            {
+                                "block": "minecraft:dark_oak_leaves"
+                            }
+                        ]
+                    }
+                }
+            ],
             "place": [
                 "trees/mixed/tredwoodsmol1",
                 "trees/mixed/tredwoodsmol2",
@@ -345,19 +356,35 @@
                 },
                 "enabled": true
             },
-            "edit": [{
-                "find": [
-                    {"block": "minecraft:birch_leaves"},
-                    {"block": "minecraft:spruce_leaves"}
-                ],
-                "exact": false,
-                "replace": {"palette": [
-                    {"block": "minecraft:jungle_leaves"},
-                    {"block": "minecraft:acacia_leaves"},
-                    {"block": "minecraft:oak_leaves"},
-                    {"block": "minecraft:dark_oak_leaves"}
-                ]}
-            }],
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:birch_leaves"
+                        },
+                        {
+                            "block": "minecraft:spruce_leaves"
+                        }
+                    ],
+                    "exact": false,
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:jungle_leaves"
+                            },
+                            {
+                                "block": "minecraft:acacia_leaves"
+                            },
+                            {
+                                "block": "minecraft:oak_leaves"
+                            },
+                            {
+                                "block": "minecraft:dark_oak_leaves"
+                            }
+                        ]
+                    }
+                }
+            ],
             "place": [
                 "clutter/spruceclutt1",
                 "clutter/spruceclutt2",
@@ -382,19 +409,35 @@
                 },
                 "enabled": true
             },
-            "edit": [{
-                "find": [
-                    {"block": "minecraft:birch_leaves"},
-                    {"block": "minecraft:spruce_leaves"}
-                ],
-                "exact": false,
-                "replace": {"palette": [
-                    {"block": "minecraft:jungle_leaves"},
-                    {"block": "minecraft:acacia_leaves"},
-                    {"block": "minecraft:oak_leaves"},
-                    {"block": "minecraft:dark_oak_leaves"}
-                ]}
-            }],
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:birch_leaves"
+                        },
+                        {
+                            "block": "minecraft:spruce_leaves"
+                        }
+                    ],
+                    "exact": false,
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:jungle_leaves"
+                            },
+                            {
+                                "block": "minecraft:acacia_leaves"
+                            },
+                            {
+                                "block": "minecraft:oak_leaves"
+                            },
+                            {
+                                "block": "minecraft:dark_oak_leaves"
+                            }
+                        ]
+                    }
+                }
+            ],
             "place": [
                 "clutter/rshrub1",
                 "clutter/rshrub2"
@@ -422,19 +465,35 @@
                 "trees/mixed/tredwoodbee3",
                 "trees/mixed/tredwoodbee4"
             ],
-            "edit": [{
-                "find": [
-                    {"block": "minecraft:birch_leaves"},
-                    {"block": "minecraft:spruce_leaves"}
-                ],
-                "exact": false,
-                "replace": {"palette": [
-                    {"block": "minecraft:jungle_leaves"},
-                    {"block": "minecraft:acacia_leaves"},
-                    {"block": "minecraft:oak_leaves"},
-                    {"block": "minecraft:dark_oak_leaves"}
-                ]}
-            }],
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:birch_leaves"
+                        },
+                        {
+                            "block": "minecraft:spruce_leaves"
+                        }
+                    ],
+                    "exact": false,
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:jungle_leaves"
+                            },
+                            {
+                                "block": "minecraft:acacia_leaves"
+                            },
+                            {
+                                "block": "minecraft:oak_leaves"
+                            },
+                            {
+                                "block": "minecraft:dark_oak_leaves"
+                            }
+                        ]
+                    }
+                }
+            ],
             "translate": {
                 "x": 0,
                 "y": -8,
@@ -462,12 +521,32 @@
             ],
             "edit": [
                 {
-                    "find": [{"block": "minecraft:oak_log"}],
-                    "replace": {"palette": [{"block": "minecraft:spruce_log"}]}
+                    "find": [
+                        {
+                            "block": "minecraft:oak_log"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:spruce_log"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "find": [{"block": "minecraft:oak_wood"}],
-                    "replace": {"palette": [{"block": "minecraft:spruce_wood"}]}
+                    "find": [
+                        {
+                            "block": "minecraft:oak_wood"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:spruce_wood"
+                            }
+                        ]
+                    }
                 }
             ],
             "mode": "PAINT"
@@ -492,7 +571,128 @@
                     "interval": 90
                 }
             },
-            "translate": {"y": 1}
+            "translate": {
+                "y": 1
+            }
         }
-    ]
+    ],
+    "decorators": [
+        {
+            "chance": 0.003,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 1,
+            "palette": [
+                {
+                    "block": "minecraft:white_tulip"
+                },
+                {
+                    "block": "minecraft:cornflower"
+                },
+                {
+                    "block": "minecraft:blue_orchid"
+                },
+                {
+                    "block": "minecraft:lily_of_the_valley"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "chance": 0.01,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "data": {
+                        "age": 0
+                    },
+                    "block": "minecraft:sweet_berry_bush"
+                },
+                {
+                    "data": {
+                        "age": 1
+                    },
+                    "block": "minecraft:sweet_berry_bush"
+                },
+                {
+                    "data": {
+                        "age": 2
+                    },
+                    "block": "minecraft:sweet_berry_bush"
+                },
+                {
+                    "data": {
+                        "age": 3
+                    },
+                    "block": "minecraft:sweet_berry_bush"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "chance": 0.06,
+            "palette": [
+                {
+                    "block": "minecraft:tall_grass"
+                }
+            ]
+        },
+        {
+            "chance": 0.25,
+            "palette": [
+                {
+                    "block": "minecraft:grass"
+                }
+            ]
+        },
+        {
+            "chance": 0.06,
+            "palette": [
+                {
+                    "block": "minecraft:fern"
+                }
+            ]
+        },
+        {
+            "chance": 0.06,
+            "palette": [
+                {
+                    "block": "minecraft:brown_mushroom"
+                }
+            ]
+        },
+        {
+            "chance": 0.06,
+            "palette": [
+                {
+                    "block": "minecraft:red_mushroom"
+                }
+            ]
+        },
+        {
+            "chance": 0.1,
+            "palette": [
+                {
+                    "block": "minecraft:large_fern"
+                }
+            ]
+        },
+        {
+            "chance": 0.05,
+            "palette": [
+                {
+                    "block": "minecraft:cobblestone_slab"
+                }
+            ]
+        }
+    ],
+    "childShrinkFactor": 2.4
 }

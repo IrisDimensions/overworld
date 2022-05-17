@@ -1,38 +1,24 @@
 {
     "name": "Swamp Puddle",
+    "rarity": 2,
     "derivative": "SWAMP",
     "vanillaDerivative": "SWAMP",
-    "rarity": 2,
-    "generators": [{
-        "generator": "plain",
-        "max": -7,
-        "min": -6
-    }],
-    "customDerivitives": [{
-        "id": "k530puddle",
-        "foliageColor": "#4a532f",
-        "waterColor": "#49521d",
-        "waterFogColor": "#49521d",
-        "fogColor": "#325729",
-        "grassColor": "#4b5332",
-        "category": "forest"
-    }],
-    "decorators": [
+    "customDerivitives": [
         {
-            "chance": 0.25,
-            "palette": [{"block": "minecraft:grass"}]
-        },
+            "id": "k530puddle",
+            "foliageColor": "#4a532f",
+            "waterColor": "#49521d",
+            "waterFogColor": "#49521d",
+            "fogColor": "#325729",
+            "grassColor": "#4b5332",
+            "category": "forest"
+        }
+    ],
+    "generators": [
         {
-            "chance": 0.065,
-            "palette": [{"block": "minecraft:fern"}]
-        },
-        {
-            "chance": 0.005,
-            "palette": [{"block": "minecraft:blue_orchid"}]
-        },
-        {
-            "chance": 0.065,
-            "palette": [{"block": "minecraft:large_fern"}]
+            "generator": "plain",
+            "max": -7,
+            "min": -6
         }
     ],
     "layers": [
@@ -129,6 +115,40 @@
                     "max": 360
                 }
             }
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.25,
+            "palette": [
+                {
+                    "block": "minecraft:grass"
+                }
+            ]
+        },
+        {
+            "chance": 0.065,
+            "palette": [
+                {
+                    "block": "minecraft:fern"
+                }
+            ]
+        },
+        {
+            "chance": 0.005,
+            "palette": [
+                {
+                    "block": "minecraft:blue_orchid"
+                }
+            ]
+        },
+        {
+            "chance": 0.065,
+            "palette": [
+                {
+                    "block": "minecraft:large_fern"
+                }
+            ]
         }
     ]
 }

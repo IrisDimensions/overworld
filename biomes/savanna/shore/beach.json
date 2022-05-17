@@ -1,36 +1,82 @@
 {
     "name": "Savanna Beach",
-    "derivative": "SAVANNA",
-    "rarity": 1,
     "color": "#DF9F39",
+    "rarity": 1,
+    "derivative": "SAVANNA",
     "vanillaDerivative": "SAVANNA",
-    "generators": [{
-        "min": 0,
-        "max": 0,
-        "generator": "plain"
-    }],
+    "generators": [
+        {
+            "min": 0,
+            "max": 0,
+            "generator": "plain"
+        }
+    ],
+    "biomeZoom": 60,
+    "biomeStyle": {
+        "style": "SIMPLEX"
+    },
+    "wall": {
+        "style": {
+            "style": "STATIC"
+        },
+        "palette": [
+            {
+                "block": "minecraft:stone"
+            },
+            {
+                "block": "minecraft:andesite"
+            },
+            {
+                "block": "minecraft:stone"
+            }
+        ]
+    },
     "layers": [
         {
-            "style": {"style": "STATIC"},
-            "palette": [{"block": "minecraft:grass_block"}]
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "minecraft:grass_block"
+                }
+            ]
         },
-        {"palette": [{"block": "minecraft:dirt"}]},
+        {
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                }
+            ]
+        },
         {
             "minHeight": 1,
             "maxHeight": 3,
             "palette": [
-                {"block": "minecraft:dirt"},
-                {"block": "minecraft:coarse_dirt"}
+                {
+                    "block": "minecraft:dirt"
+                },
+                {
+                    "block": "minecraft:coarse_dirt"
+                }
             ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "palette": [
-                {"block": "minecraft:stone"},
-                {"block": "minecraft:andesite"},
-                {"block": "minecraft:stone"}
+                {
+                    "block": "minecraft:stone"
+                },
+                {
+                    "block": "minecraft:andesite"
+                },
+                {
+                    "block": "minecraft:stone"
+                }
             ]
         }
     ],
@@ -75,21 +121,21 @@
             ]
         }
     ],
-    "biomeZoom": 60,
-    "biomeStyle": {"style": "SIMPLEX"},
-    "decorators": [{
-        "chance": 0.35,
-        "variance": {"style": "STATIC"},
-        "zoom": 0.3,
-        "palette": [{"block": "minecraft:grass"}],
-        "style": {"style": "STATIC"}
-    }],
-    "wall": {
-        "style": {"style": "STATIC"},
-        "palette": [
-            {"block": "minecraft:stone"},
-            {"block": "minecraft:andesite"},
-            {"block": "minecraft:stone"}
-        ]
-    }
+    "decorators": [
+        {
+            "chance": 0.35,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "block": "minecraft:grass"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        }
+    ]
 }

@@ -1,63 +1,29 @@
 {
     "name": "Frozen Mountain Cliffs",
-    "derivative": "FROZEN_PEAKS",
-    "rarity": 3,
-    "vanillaDerivative": "FROZEN_PEAKS",
     "color": "#3090BB",
-    "children": ["frozen/mountain-cliffs-extended"],
-    "layers": [
+    "rarity": 3,
+    "derivative": "FROZEN_PEAKS",
+    "vanillaDerivative": "FROZEN_PEAKS",
+    "biomeScatter": [
+        "ICE_SPIKES",
+        "FROZEN_OCEAN",
+        "FROZEN_RIVER"
+    ],
+    "customDerivitives": [
         {
-            "minHeight": 0,
-            "maxHeight": 2,
-            "palette": [{"block": "minecraft:snow_block"}]
-        },
-        {
-            "minHeight": 0,
-            "maxHeight": 1,
-            "palette": [{"block": "minecraft:grass_block"}]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 5,
-            "palette": [{"block": "minecraft:packed_ice"}]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {"style": "STATIC"},
-            "palette": [
-                {"block": "minecraft:andesite"},
-                {
-                    "weight": 2,
-                    "block": "minecraft:stone"
-                }
-            ]
+            "category": "extreme_hills",
+            "id": "frozen_mountaincliff",
+            "downfallType": "snow",
+            "temperature": -3,
+            "waterColor": "#216FC4",
+            "fogColor": "#B8D0E1",
+            "waterFogColor": "#216FC4",
+            "foliageColor": "#B8D0E1",
+            "grassColor": "#D0E1FF"
         }
     ],
-    "customDerivitives": [{
-        "category": "extreme_hills",
-        "id": "frozen_mountaincliff",
-        "downfallType": "snow",
-        "temperature": -3,
-        "waterColor": "#216FC4",
-        "fogColor": "#B8D0E1",
-        "waterFogColor": "#216FC4",
-        "foliageColor": "#B8D0E1",
-        "grassColor": "#D0E1FF"
-    }],
-    "jigsawStructures": [
-        {
-            "rarity": 1700,
-            "structure": "igloo"
-        },
-        {
-            "rarity": 1700,
-            "structure": "pillager_outpost"
-        },
-        {
-            "rarity": 1500,
-            "structure": "village-snowy"
-        }
+    "children": [
+        "frozen/mountain-cliffs-extended"
     ],
     "generators": [
         {
@@ -71,10 +37,78 @@
             "generator": "mountain"
         }
     ],
-    "biomeScatter": [
-        "ICE_SPIKES",
-        "FROZEN_OCEAN",
-        "FROZEN_RIVER"
+    "biomeZoom": 30,
+    "biomeStyle": {
+        "style": "SIMPLEX"
+    },
+    "wall": {
+        "style": {
+            "style": "NOWHERE"
+        },
+        "palette": [
+            {
+                "block": "minecraft:packed_ice"
+            }
+        ]
+    },
+    "layers": [
+        {
+            "minHeight": 0,
+            "maxHeight": 2,
+            "palette": [
+                {
+                    "block": "minecraft:snow_block"
+                }
+            ]
+        },
+        {
+            "minHeight": 0,
+            "maxHeight": 1,
+            "palette": [
+                {
+                    "block": "minecraft:grass_block"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 5,
+            "palette": [
+                {
+                    "block": "minecraft:packed_ice"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "minecraft:andesite"
+                },
+                {
+                    "weight": 2,
+                    "block": "minecraft:stone"
+                }
+            ]
+        }
+    ],
+    "jigsawStructures": [
+        {
+            "rarity": 1700,
+            "structure": "igloo"
+        },
+        {
+            "rarity": 1700,
+            "structure": "pillager_outpost"
+        },
+        {
+            "rarity": 1500,
+            "structure": "village-snowy"
+        }
     ],
     "objects": [
         {
@@ -117,19 +151,29 @@
                 },
                 "enabled": true
             },
-            "edit": [{
-                "find": [{"block": "minecraft:spruce_leaves"}],
-                "replace": {
-                    "style": {
-                        "style": "PERLIN",
-                        "zoom": 0.2
-                    },
-                    "palette": [
-                        {"block": "minecraft:oak_leaves"},
-                        {"block": "minecraft:dark_oak_leaves"}
-                    ]
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:spruce_leaves"
+                        }
+                    ],
+                    "replace": {
+                        "style": {
+                            "style": "PERLIN",
+                            "zoom": 0.2
+                        },
+                        "palette": [
+                            {
+                                "block": "minecraft:oak_leaves"
+                            },
+                            {
+                                "block": "minecraft:dark_oak_leaves"
+                            }
+                        ]
+                    }
                 }
-            }],
+            ],
             "place": [
                 "trees/spruce/lfrostgeneric5",
                 "trees/spruce/lfrostgeneric6",
@@ -171,19 +215,29 @@
                 },
                 "enabled": true
             },
-            "edit": [{
-                "find": [{"block": "minecraft:spruce_leaves"}],
-                "replace": {
-                    "style": {
-                        "style": "PERLIN",
-                        "zoom": 0.2
-                    },
-                    "palette": [
-                        {"block": "minecraft:oak_leaves"},
-                        {"block": "minecraft:dark_oak_leaves"}
-                    ]
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:spruce_leaves"
+                        }
+                    ],
+                    "replace": {
+                        "style": {
+                            "style": "PERLIN",
+                            "zoom": 0.2
+                        },
+                        "palette": [
+                            {
+                                "block": "minecraft:oak_leaves"
+                            },
+                            {
+                                "block": "minecraft:dark_oak_leaves"
+                            }
+                        ]
+                    }
                 }
-            }],
+            ],
             "place": [
                 "trees/spruce/lfrostgeneric22",
                 "trees/spruce/lfrostgeneric23",
@@ -235,40 +289,48 @@
             ]
         }
     ],
-    "biomeZoom": 30,
-    "biomeStyle": {"style": "SIMPLEX"},
-    "decorators": [{
-        "chance": 1,
-        "variance": {
-            "style": "NOWHERE",
-            "zoom": 0.5
-        },
-        "palette": [
-            {
-                "data": {"layers": 1},
-                "block": "minecraft:snow"
+    "decorators": [
+        {
+            "chance": 1,
+            "variance": {
+                "style": "NOWHERE",
+                "zoom": 0.5
             },
-            {"block": "minecraft:air"},
-            {
-                "data": {"layers": 5},
-                "block": "minecraft:snow"
-            },
-            {
-                "data": {"layers": 6},
-                "block": "minecraft:snow"
-            },
-            {
-                "data": {"layers": 7},
-                "block": "minecraft:snow"
-            },
-            {
-                "data": {"layers": 8},
-                "block": "minecraft:snow"
-            }
-        ]
-    }],
-    "wall": {
-        "style": {"style": "NOWHERE"},
-        "palette": [{"block": "minecraft:packed_ice"}]
-    }
+            "palette": [
+                {
+                    "data": {
+                        "layers": 1
+                    },
+                    "block": "minecraft:snow"
+                },
+                {
+                    "block": "minecraft:air"
+                },
+                {
+                    "data": {
+                        "layers": 5
+                    },
+                    "block": "minecraft:snow"
+                },
+                {
+                    "data": {
+                        "layers": 6
+                    },
+                    "block": "minecraft:snow"
+                },
+                {
+                    "data": {
+                        "layers": 7
+                    },
+                    "block": "minecraft:snow"
+                },
+                {
+                    "data": {
+                        "layers": 8
+                    },
+                    "block": "minecraft:snow"
+                }
+            ]
+        }
+    ]
 }

@@ -1,9 +1,20 @@
 {
     "name": "Oak Forest",
-    "derivative": "FOREST",
     "color": "#56C326",
+    "rarity": 3,
+    "derivative": "FOREST",
     "vanillaDerivative": "FOREST",
-    "children": ["temperate/oak-forest-extended"],
+    "customDerivitives": [
+        {
+            "id": "oak_forest",
+            "foliageColor": "#64B233",
+            "grassColor": "#77A620",
+            "category": "forest"
+        }
+    ],
+    "children": [
+        "temperate/oak-forest-extended"
+    ],
     "generators": [
         {
             "generator": "smooth-dunes",
@@ -16,34 +27,39 @@
             "min": 0
         }
     ],
-    "customDerivitives": [{
-        "id": "oak_forest",
-        "foliageColor": "#64B233",
-        "grassColor": "#77A620",
-        "category": "forest"
-    }],
-    "rarity": 3,
-    "jigsawStructures": [
-        {
-            "rarity": 1700,
-            "structure": "pillager_outpost"
-        },
-        {
-            "rarity": 1500,
-            "structure": "village-temperate"
-        }
-    ],
+    "wall": {
+        "palette": [
+            {
+                "block": "minecraft:stone"
+            },
+            {
+                "block": "minecraft:andesite"
+            },
+            {
+                "block": "minecraft:cobblestone"
+            },
+            {
+                "block": "minecraft:mossy_cobblestone"
+            }
+        ]
+    },
     "layers": [
         {
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "zoom": 0.656,
             "palette": [
                 {
                     "weight": 19,
                     "block": "minecraft:grass_block"
                 },
-                {"block": "minecraft:coarse_dirt"},
-                {"block": "minecraft:gravel"},
+                {
+                    "block": "minecraft:coarse_dirt"
+                },
+                {
+                    "block": "minecraft:gravel"
+                },
                 {
                     "weight": 19,
                     "block": "minecraft:grass_block"
@@ -53,82 +69,36 @@
         {
             "minHeight": 2,
             "maxHeight": 2,
-            "palette": [{"block": "minecraft:dirt"}]
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                }
+            ]
         },
         {
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "minHeight": 1,
             "maxHeight": 1,
             "palette": [
-                {"block": "minecraft:dirt"},
-                {"block": "minecraft:stone"}
+                {
+                    "block": "minecraft:dirt"
+                },
+                {
+                    "block": "minecraft:stone"
+                }
             ]
         }
     ],
-    "wall": {"palette": [
-        {"block": "minecraft:stone"},
-        {"block": "minecraft:andesite"},
-        {"block": "minecraft:cobblestone"},
-        {"block": "minecraft:mossy_cobblestone"}
-    ]},
-    "decorators": [
+    "jigsawStructures": [
         {
-            "chance": 0.2,
-            "variance": {
-                "style": "CELLULAR",
-                "zoom": 0.3,
-                "fracture": {
-                    "style": "SIMPLEX",
-                    "zoom": 0.2,
-                    "multiplier": 10
-                }
-            },
-            "style": {
-                "style": "TRIOCTAVE_SIMPLEX",
-                "zoom": 0.35,
-                "fracture": {
-                    "style": "STATIC",
-                    "multiplier": 8
-                }
-            },
-            "palette": [
-                {"block": "minecraft:dandelion"},
-                {"block": "minecraft:poppy"},
-                {"block": "minecraft:blue_orchid"},
-                {"block": "minecraft:allium"},
-                {"block": "minecraft:azure_bluet"},
-                {"block": "minecraft:red_tulip"},
-                {"block": "minecraft:orange_tulip"},
-                {"block": "minecraft:white_tulip"},
-                {"block": "minecraft:pink_tulip"},
-                {"block": "minecraft:oxeye_daisy"},
-                {"block": "minecraft:cornflower"},
-                {"block": "minecraft:lily_of_the_valley"}
-            ]
+            "rarity": 1700,
+            "structure": "pillager_outpost"
         },
         {
-            "chance": 0.03,
-            "palette": [{"block": "minecraft:tall_grass"}]
-        },
-        {
-            "chance": 0.5,
-            "palette": [{"block": "minecraft:grass"}]
-        },
-        {
-            "chance": 0.06,
-            "palette": [{"block": "minecraft:fern"}]
-        },
-        {
-            "chance": 0.04,
-            "palette": [{"block": "minecraft:red_mushroom"}]
-        },
-        {
-            "chance": 0.1,
-            "palette": [{"block": "minecraft:large_fern"}]
-        },
-        {
-            "chance": 0.05,
-            "palette": [{"block": "minecraft:cobblestone_slab"}]
+            "rarity": 1500,
+            "structure": "village-temperate"
         }
     ],
     "objects": [
@@ -207,7 +177,9 @@
                 },
                 "enabled": true
             },
-            "place": ["trees/mixed/smoakog80"],
+            "place": [
+                "trees/mixed/smoakog80"
+            ],
             "translate": {
                 "x": 0,
                 "y": -5,
@@ -234,7 +206,117 @@
                     "interval": 90
                 }
             },
-            "translate": {"y": 1}
+            "translate": {
+                "y": 1
+            }
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.2,
+            "variance": {
+                "style": "CELLULAR",
+                "zoom": 0.3,
+                "fracture": {
+                    "style": "SIMPLEX",
+                    "zoom": 0.2,
+                    "multiplier": 10
+                }
+            },
+            "style": {
+                "style": "TRIOCTAVE_SIMPLEX",
+                "zoom": 0.35,
+                "fracture": {
+                    "style": "STATIC",
+                    "multiplier": 8
+                }
+            },
+            "palette": [
+                {
+                    "block": "minecraft:dandelion"
+                },
+                {
+                    "block": "minecraft:poppy"
+                },
+                {
+                    "block": "minecraft:blue_orchid"
+                },
+                {
+                    "block": "minecraft:allium"
+                },
+                {
+                    "block": "minecraft:azure_bluet"
+                },
+                {
+                    "block": "minecraft:red_tulip"
+                },
+                {
+                    "block": "minecraft:orange_tulip"
+                },
+                {
+                    "block": "minecraft:white_tulip"
+                },
+                {
+                    "block": "minecraft:pink_tulip"
+                },
+                {
+                    "block": "minecraft:oxeye_daisy"
+                },
+                {
+                    "block": "minecraft:cornflower"
+                },
+                {
+                    "block": "minecraft:lily_of_the_valley"
+                }
+            ]
+        },
+        {
+            "chance": 0.03,
+            "palette": [
+                {
+                    "block": "minecraft:tall_grass"
+                }
+            ]
+        },
+        {
+            "chance": 0.5,
+            "palette": [
+                {
+                    "block": "minecraft:grass"
+                }
+            ]
+        },
+        {
+            "chance": 0.06,
+            "palette": [
+                {
+                    "block": "minecraft:fern"
+                }
+            ]
+        },
+        {
+            "chance": 0.04,
+            "palette": [
+                {
+                    "block": "minecraft:red_mushroom"
+                }
+            ]
+        },
+        {
+            "chance": 0.1,
+            "palette": [
+                {
+                    "block": "minecraft:large_fern"
+                }
+            ]
+        },
+        {
+            "chance": 0.05,
+            "palette": [
+                {
+                    "block": "minecraft:cobblestone_slab"
+                }
+            ]
         }
     ]
 }

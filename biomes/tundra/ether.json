@@ -1,25 +1,117 @@
 {
     "name": "Tundra Ether",
-    "derivative": "WINDSWEPT_HILLS",
     "color": "#87DCE5",
     "rarity": 13,
+    "derivative": "WINDSWEPT_HILLS",
     "vanillaDerivative": "OLD_GROWTH_SPRUCE_TAIGA",
-    "children": ["tundra/taiga-extended"],
-    "childShrinkFactor": 2.4,
-    "generators": [{
-        "generator": "smooth-dunes",
-        "min": 52,
-        "max": 60
-    }],
-    "customDerivitives": [{
-        "grassColor": "#dcf5f1",
-        "foliageColor": "#e6dcf5",
-        "id": "tunether",
-        "waterColor": "#5C3BEF",
-        "waterFogColor": "#7A768F",
-        "category": "forest",
-        "fogColor": "#686090"
-    }],
+    "biomeScatter": [
+        "OLD_GROWTH_PINE_TAIGA",
+        "WINDSWEPT_HILLS"
+    ],
+    "customDerivitives": [
+        {
+            "grassColor": "#dcf5f1",
+            "foliageColor": "#e6dcf5",
+            "id": "tunether",
+            "waterColor": "#5C3BEF",
+            "waterFogColor": "#7A768F",
+            "category": "forest",
+            "fogColor": "#686090"
+        }
+    ],
+    "children": [
+        "tundra/taiga-extended"
+    ],
+    "generators": [
+        {
+            "generator": "smooth-dunes",
+            "min": 52,
+            "max": 60
+        }
+    ],
+    "biomeZoom": 30,
+    "biomeStyle": {
+        "style": "SIMPLEX"
+    },
+    "wall": {
+        "style": {
+            "style": "STATIC"
+        },
+        "palette": [
+            {
+                "block": "minecraft:stone"
+            },
+            {
+                "block": "minecraft:andesite"
+            },
+            {
+                "block": "minecraft:stone"
+            }
+        ]
+    },
+    "layers": [
+        {
+            "minHeight": 3,
+            "maxHeight": 5,
+            "slopeCondition": {
+                "minimumSlope": 6.9
+            },
+            "palette": [
+                {
+                    "block": "minecraft:stone"
+                },
+                {
+                    "block": "minecraft:andesite"
+                },
+                {
+                    "block": "minecraft:gravel"
+                }
+            ]
+        },
+        {
+            "minHeight": 3,
+            "maxHeight": 5,
+            "slopeCondition": {
+                "minimumSlope": 5.3
+            },
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                },
+                {
+                    "block": "minecraft:coarse_dirt"
+                },
+                {
+                    "block": "minecraft:gravel"
+                }
+            ]
+        },
+        {
+            "palette": [
+                {
+                    "block": "minecraft:grass_block"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "minecraft:stone"
+                },
+                {
+                    "block": "minecraft:andesite"
+                },
+                {
+                    "block": "minecraft:stone"
+                }
+            ]
+        }
+    ],
     "jigsawStructures": [
         {
             "rarity": 1700,
@@ -28,39 +120,6 @@
         {
             "rarity": 1000,
             "structure": "village-tundra"
-        }
-    ],
-    "layers": [
-        {
-            "minHeight": 3,
-            "maxHeight": 5,
-            "slopeCondition": {"minimumSlope": 6.9},
-            "palette": [
-                {"block": "minecraft:stone"},
-                {"block": "minecraft:andesite"},
-                {"block": "minecraft:gravel"}
-            ]
-        },
-        {
-            "minHeight": 3,
-            "maxHeight": 5,
-            "slopeCondition": {"minimumSlope": 5.3},
-            "palette": [
-                {"block": "minecraft:dirt"},
-                {"block": "minecraft:coarse_dirt"},
-                {"block": "minecraft:gravel"}
-            ]
-        },
-        {"palette": [{"block": "minecraft:grass_block"}]},
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {"style": "STATIC"},
-            "palette": [
-                {"block": "minecraft:stone"},
-                {"block": "minecraft:andesite"},
-                {"block": "minecraft:stone"}
-            ]
         }
     ],
     "objects": [
@@ -139,62 +198,79 @@
             }
         }
     ],
-    "biomeZoom": 30,
-    "biomeStyle": {"style": "SIMPLEX"},
     "decorators": [
         {
             "chance": 0.01,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 0.1,
             "palette": [
-                {"block": "minecraft:white_tulip"},
-                {"block": "minecraft:blue_orchid"},
-                {"block": "minecraft:poppy"}
+                {
+                    "block": "minecraft:white_tulip"
+                },
+                {
+                    "block": "minecraft:blue_orchid"
+                },
+                {
+                    "block": "minecraft:poppy"
+                }
             ],
-            "style": {"style": "STATIC"}
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
             "chance": 0.001,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 0.3,
             "palette": [
                 {
-                    "data": {"age": 0},
+                    "data": {
+                        "age": 0
+                    },
                     "block": "minecraft:sweet_berry_bush"
                 },
                 {
-                    "data": {"age": 1},
+                    "data": {
+                        "age": 1
+                    },
                     "block": "minecraft:sweet_berry_bush"
                 },
                 {
-                    "data": {"age": 2},
+                    "data": {
+                        "age": 2
+                    },
                     "block": "minecraft:sweet_berry_bush"
                 },
                 {
-                    "data": {"age": 3},
+                    "data": {
+                        "age": 3
+                    },
                     "block": "minecraft:sweet_berry_bush"
                 }
             ],
-            "style": {"style": "STATIC"}
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
             "chance": 0.2,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 0.3,
-            "palette": [{"block": "minecraft:grass"}],
-            "style": {"style": "STATIC"}
+            "palette": [
+                {
+                    "block": "minecraft:grass"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
         }
     ],
-    "wall": {
-        "style": {"style": "STATIC"},
-        "palette": [
-            {"block": "minecraft:stone"},
-            {"block": "minecraft:andesite"},
-            {"block": "minecraft:stone"}
-        ]
-    },
-    "biomeScatter": [
-        "OLD_GROWTH_PINE_TAIGA",
-        "WINDSWEPT_HILLS"
-    ]
+    "childShrinkFactor": 2.4
 }

@@ -3,12 +3,39 @@
     "color": "#829098",
     "derivative": "OLD_GROWTH_SPRUCE_TAIGA",
     "vanillaDerivative": "OLD_GROWTH_SPRUCE_TAIGA",
-    "children": ["mountain/cliffs"],
-    "generators": [{
-        "generator": "mountain",
-        "max": 223,
-        "min": 106
-    }],
+    "children": [
+        "mountain/cliffs"
+    ],
+    "generators": [
+        {
+            "generator": "mountain",
+            "max": 223,
+            "min": 106
+        }
+    ],
+    "biomeZoom": 0.4,
+    "biomeStyle": {
+        "style": "SIMPLEX"
+    },
+    "wall": {
+        "style": {
+            "style": "STATIC"
+        },
+        "palette": [
+            {
+                "block": "minecraft:stone"
+            },
+            {
+                "block": "minecraft:andesite"
+            },
+            {
+                "block": "minecraft:gravel"
+            },
+            {
+                "block": "minecraft:cyan_terracotta"
+            }
+        ]
+    },
     "layers": [
         {
             "minHeight": 1,
@@ -17,25 +44,43 @@
                 "minimumSlope": 0,
                 "maximumSlope": 2.6
             },
-            "palette": [{"block": "minecraft:grass_block"}]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 4,
-            "slopeCondition": {"minimumSlope": 3.95},
             "palette": [
-                {"block": "minecraft:gravel"},
-                {"block": "minecraft:cyan_terracotta"}
+                {
+                    "block": "minecraft:grass_block"
+                }
             ]
         },
         {
             "minHeight": 2,
             "maxHeight": 4,
-            "slopeCondition": {"minimumSlope": 3.95},
+            "slopeCondition": {
+                "minimumSlope": 3.95
+            },
             "palette": [
-                {"block": "minecraft:stone"},
-                {"block": "minecraft:stone"},
-                {"block": "minecraft:cobblestone"}
+                {
+                    "block": "minecraft:gravel"
+                },
+                {
+                    "block": "minecraft:cyan_terracotta"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "slopeCondition": {
+                "minimumSlope": 3.95
+            },
+            "palette": [
+                {
+                    "block": "minecraft:stone"
+                },
+                {
+                    "block": "minecraft:stone"
+                },
+                {
+                    "block": "minecraft:cobblestone"
+                }
             ]
         },
         {
@@ -45,7 +90,11 @@
                 "minimumSlope": 0,
                 "maximumSlope": 4
             },
-            "palette": [{"block": "minecraft:grass_block"}]
+            "palette": [
+                {
+                    "block": "minecraft:grass_block"
+                }
+            ]
         },
         {
             "minHeight": 3,
@@ -54,44 +103,13 @@
                 "minimumSlope": 0,
                 "maximumSlope": 3
             },
-            "palette": [{"block": "minecraft:dirt"}]
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                }
+            ]
         }
     ],
-    "childStyle": {
-        "style": "STATIC",
-        "exponent": 0.625,
-        "zoom": 1,
-        "fracture": {
-            "style": "SIMPLEX",
-            "multiplier": 4,
-            "zoom": 0.9
-        }
-    },
-    "biomeStyle": {"style": "SIMPLEX"},
-    "biomeZoom": 0.4,
-    "slab": {
-        "style": {"style": "STATIC"},
-        "palette": [
-            {
-                "data": {
-                    "waterlogged": false,
-                    "type": "bottom"
-                },
-                "block": "minecraft:stone_slab"
-            },
-            {
-                "data": {
-                    "waterlogged": false,
-                    "type": "bottom"
-                },
-                "block": "minecraft:cobblestone_slab"
-            },
-            {
-                "weight": 2,
-                "block": "minecraft:air"
-            }
-        ]
-    },
     "decorators": [
         {
             "chance": 0.2,
@@ -113,36 +131,94 @@
                 }
             },
             "palette": [
-                {"block": "minecraft:dandelion"},
-                {"block": "minecraft:poppy"},
-                {"block": "minecraft:blue_orchid"},
-                {"block": "minecraft:allium"},
-                {"block": "minecraft:azure_bluet"},
-                {"block": "minecraft:red_tulip"},
-                {"block": "minecraft:orange_tulip"},
-                {"block": "minecraft:white_tulip"},
-                {"block": "minecraft:pink_tulip"},
-                {"block": "minecraft:oxeye_daisy"},
-                {"block": "minecraft:cornflower"},
-                {"block": "minecraft:lily_of_the_valley"}
+                {
+                    "block": "minecraft:dandelion"
+                },
+                {
+                    "block": "minecraft:poppy"
+                },
+                {
+                    "block": "minecraft:blue_orchid"
+                },
+                {
+                    "block": "minecraft:allium"
+                },
+                {
+                    "block": "minecraft:azure_bluet"
+                },
+                {
+                    "block": "minecraft:red_tulip"
+                },
+                {
+                    "block": "minecraft:orange_tulip"
+                },
+                {
+                    "block": "minecraft:white_tulip"
+                },
+                {
+                    "block": "minecraft:pink_tulip"
+                },
+                {
+                    "block": "minecraft:oxeye_daisy"
+                },
+                {
+                    "block": "minecraft:cornflower"
+                },
+                {
+                    "block": "minecraft:lily_of_the_valley"
+                }
             ]
         },
         {
             "chance": 0.01,
-            "palette": [{"block": "minecraft:tall_grass"}]
+            "palette": [
+                {
+                    "block": "minecraft:tall_grass"
+                }
+            ]
         },
         {
             "chance": 0.5,
-            "palette": [{"block": "minecraft:grass"}]
+            "palette": [
+                {
+                    "block": "minecraft:grass"
+                }
+            ]
         }
     ],
-    "wall": {
-        "style": {"style": "STATIC"},
+    "childStyle": {
+        "style": "STATIC",
+        "exponent": 0.625,
+        "zoom": 1,
+        "fracture": {
+            "style": "SIMPLEX",
+            "multiplier": 4,
+            "zoom": 0.9
+        }
+    },
+    "slab": {
+        "style": {
+            "style": "STATIC"
+        },
         "palette": [
-            {"block": "minecraft:stone"},
-            {"block": "minecraft:andesite"},
-            {"block": "minecraft:gravel"},
-            {"block": "minecraft:cyan_terracotta"}
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "minecraft:stone_slab"
+            },
+            {
+                "data": {
+                    "waterlogged": false,
+                    "type": "bottom"
+                },
+                "block": "minecraft:cobblestone_slab"
+            },
+            {
+                "weight": 2,
+                "block": "minecraft:air"
+            }
         ]
     }
 }

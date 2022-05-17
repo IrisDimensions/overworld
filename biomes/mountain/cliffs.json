@@ -1,15 +1,38 @@
 {
     "name": "Mountain Cliffs",
-    "rarity": 3,
     "color": "#D4DEE3",
-    "vanillaDerivative": "OLD_GROWTH_SPRUCE_TAIGA",
+    "rarity": 3,
     "derivative": "OLD_GROWTH_SPRUCE_TAIGA",
-    "children": ["mountain/cliffs-extended"],
-    "generators": [{
-        "min": 26,
-        "max": 90,
-        "generator": "cracked-cliffs"
-    }],
+    "vanillaDerivative": "OLD_GROWTH_SPRUCE_TAIGA",
+    "children": [
+        "mountain/cliffs-extended"
+    ],
+    "generators": [
+        {
+            "min": 26,
+            "max": 90,
+            "generator": "cracked-cliffs"
+        }
+    ],
+    "wall": {
+        "style": {
+            "style": "STATIC"
+        },
+        "palette": [
+            {
+                "block": "minecraft:stone"
+            },
+            {
+                "block": "minecraft:andesite"
+            },
+            {
+                "block": "minecraft:gravel"
+            },
+            {
+                "block": "minecraft:cyan_terracotta"
+            }
+        ]
+    },
     "layers": [
         {
             "minHeight": 1,
@@ -18,35 +41,44 @@
                 "minimumSlope": 0,
                 "maximumSlope": 2.6
             },
-            "palette": [{"block": "minecraft:grass_block"}]
+            "palette": [
+                {
+                    "block": "minecraft:grass_block"
+                }
+            ]
         },
         {
             "minHeight": 1,
             "maxHeight": 2,
-            "slopeCondition": {"minimumSlope": 3.95},
+            "slopeCondition": {
+                "minimumSlope": 3.95
+            },
             "palette": [
-                {"block": "minecraft:gravel"},
-                {"block": "minecraft:cyan_terracotta"}
+                {
+                    "block": "minecraft:gravel"
+                },
+                {
+                    "block": "minecraft:cyan_terracotta"
+                }
             ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "palette": [
-                {"block": "minecraft:stone"},
-                {"block": "minecraft:andesite"},
-                {"block": "minecraft:stone"}
+                {
+                    "block": "minecraft:stone"
+                },
+                {
+                    "block": "minecraft:andesite"
+                },
+                {
+                    "block": "minecraft:stone"
+                }
             ]
         }
-    ],
-    "wall": {
-        "style": {"style": "STATIC"},
-        "palette": [
-            {"block": "minecraft:stone"},
-            {"block": "minecraft:andesite"},
-            {"block": "minecraft:gravel"},
-            {"block": "minecraft:cyan_terracotta"}
-        ]
-    }
+    ]
 }

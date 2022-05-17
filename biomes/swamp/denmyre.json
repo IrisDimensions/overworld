@@ -1,33 +1,75 @@
 {
     "name": "Swamp Denmyre",
+    "color": "#82A30B",
     "rarity": 1,
     "derivative": "SWAMP",
-    "color": "#82A30B",
     "vanillaDerivative": "DARK_FOREST",
-    "generators": [{
-        "min": 4,
-        "max": 7,
-        "generator": "plain"
-    }],
+    "generators": [
+        {
+            "min": 4,
+            "max": 7,
+            "generator": "plain"
+        }
+    ],
+    "wall": {
+        "style": {
+            "style": "STATIC"
+        },
+        "palette": [
+            {
+                "block": "minecraft:stone"
+            },
+            {
+                "block": "minecraft:andesite"
+            },
+            {
+                "block": "minecraft:stone"
+            }
+        ]
+    },
     "layers": [
         {
-            "style": {"style": "FLAT"},
-            "palette": [{"block": "minecraft:grass_block"}]
+            "style": {
+                "style": "FLAT"
+            },
+            "palette": [
+                {
+                    "block": "minecraft:grass_block"
+                }
+            ]
         },
-        {"palette": [{"block": "minecraft:dirt"}]},
+        {
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                }
+            ]
+        },
         {
             "minHeight": 1,
             "maxHeight": 3,
-            "palette": [{"block": "minecraft:coarse_dirt"}]
+            "palette": [
+                {
+                    "block": "minecraft:coarse_dirt"
+                }
+            ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "palette": [
-                {"block": "minecraft:stone"},
-                {"block": "minecraft:andesite"},
-                {"block": "minecraft:stone"}
+                {
+                    "block": "minecraft:stone"
+                },
+                {
+                    "block": "minecraft:andesite"
+                },
+                {
+                    "block": "minecraft:stone"
+                }
             ]
         }
     ],
@@ -39,56 +81,6 @@
         {
             "rarity": 1000,
             "structure": "village-tundra"
-        }
-    ],
-    "decorators": [
-        {
-            "chance": 0.01,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.01,
-            "palette": [
-                {"block": "minecraft:dead_bush"},
-                {"block": "minecraft:brown_mushroom"}
-            ],
-            "style": {"style": "STATIC"}
-        },
-        {
-            "chance": 0.4,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.3,
-            "palette": [{"block": "minecraft:grass"}],
-            "style": {"style": "STATIC"}
-        },
-        {
-            "chance": 0.003,
-            "variance": {"style": "STATIC"},
-            "zoom": 1,
-            "palette": [
-                {
-                    "data": {
-                        "face": "floor",
-                        "powered": false,
-                        "facing": "east"
-                    },
-                    "block": "minecraft:dark_oak_button"
-                },
-                {
-                    "data": {
-                        "face": "floor",
-                        "powered": false,
-                        "facing": "south"
-                    },
-                    "block": "minecraft:dark_oak_button"
-                }
-            ],
-            "style": {"style": "STATIC"}
-        },
-        {
-            "chance": 0.017,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.3,
-            "palette": [{"block": "minecraft:tall_grass"}],
-            "style": {"style": "STATIC"}
         }
     ],
     "objects": [
@@ -104,27 +96,69 @@
                 },
                 "enabled": true
             },
-            "place": ["clutter/bincluster1"]
+            "place": [
+                "clutter/bincluster1"
+            ]
         },
         {
             "chance": 0.7,
             "density": 2,
             "edit": [
                 {
-                    "find": [{"block": "minecraft:acacia_planks"}],
-                    "replace": {"palette": [{"block": "minecraft:stripped_dark_oak_wood"}]}
+                    "find": [
+                        {
+                            "block": "minecraft:acacia_planks"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:stripped_dark_oak_wood"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "find": [{"block": "minecraft:acacia_leaves"}],
-                    "replace": {"palette": [{"block": "minecraft:dark_oak_leaves"}]}
+                    "find": [
+                        {
+                            "block": "minecraft:acacia_leaves"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:dark_oak_leaves"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "find": [{"block": "minecraft:acacia_fence"}],
-                    "replace": {"palette": [{"block": "minecraft:dark_oak_fence"}]}
+                    "find": [
+                        {
+                            "block": "minecraft:acacia_fence"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:dark_oak_fence"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "find": [{"block": "minecraft:acacia_wood"}],
-                    "replace": {"palette": [{"block": "minecraft:dark_oak_wood"}]}
+                    "find": [
+                        {
+                            "block": "minecraft:acacia_wood"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:dark_oak_wood"
+                            }
+                        ]
+                    }
                 }
             ],
             "rotation": {
@@ -176,16 +210,46 @@
             "chance": 0.3,
             "edit": [
                 {
-                    "find": [{"block": "minecraft:spruce_leaves"}],
-                    "replace": {"palette": [{"block": "minecraft:dark_oak_leaves"}]}
+                    "find": [
+                        {
+                            "block": "minecraft:spruce_leaves"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:dark_oak_leaves"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "find": [{"block": "minecraft:birch_leaves"}],
-                    "replace": {"palette": [{"block": "minecraft:dark_oak_leaves"}]}
+                    "find": [
+                        {
+                            "block": "minecraft:birch_leaves"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:dark_oak_leaves"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "find": [{"block": "minecraft:dark_oak_fence"}],
-                    "replace": {"palette": [{"block": "minecraft:dark_oak_leaves"}]}
+                    "find": [
+                        {
+                            "block": "minecraft:dark_oak_fence"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:dark_oak_leaves"
+                            }
+                        ]
+                    }
                 }
             ],
             "density": 2,
@@ -217,12 +281,82 @@
             }
         }
     ],
-    "wall": {
-        "style": {"style": "STATIC"},
-        "palette": [
-            {"block": "minecraft:stone"},
-            {"block": "minecraft:andesite"},
-            {"block": "minecraft:stone"}
-        ]
-    }
+    "decorators": [
+        {
+            "chance": 0.01,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.01,
+            "palette": [
+                {
+                    "block": "minecraft:dead_bush"
+                },
+                {
+                    "block": "minecraft:brown_mushroom"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "chance": 0.4,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "block": "minecraft:grass"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "chance": 0.003,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 1,
+            "palette": [
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "east"
+                    },
+                    "block": "minecraft:dark_oak_button"
+                },
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "south"
+                    },
+                    "block": "minecraft:dark_oak_button"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "chance": 0.017,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "block": "minecraft:tall_grass"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        }
+    ]
 }

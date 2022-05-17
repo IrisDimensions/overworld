@@ -1,32 +1,41 @@
 {
     "name": "Tropical Ocean",
-    "derivative": "DEEP_OCEAN",
     "color": "#182960",
+    "derivative": "DEEP_OCEAN",
     "vanillaDerivative": "WARM_OCEAN",
     "children": [
         "tropical/sea/coral-ocean",
         "tropical/sea/coral-ocean-cliffs"
     ],
-    "generators": [{
-        "min": -78,
-        "max": -20,
-        "generator": "river"
-    }],
-    "carving": {
-        "ravines": [{
-            "rarity": 442,
-            "ravine": "volcanic/main"
-        }],
-        "caves": [{
-            "breakSurface": true,
-            "cave": "volcanic/main",
-            "rarity": 228,
-            "caveStartHeight": {
-                "max": 120,
-                "min": 69,
-                "style": {"style": "STATIC"}
+    "generators": [
+        {
+            "min": -78,
+            "max": -20,
+            "generator": "river"
+        }
+    ],
+    "wall": {
+        "palette": [
+            {
+                "block": "minecraft:tube_coral_block"
+            },
+            {
+                "block": "minecraft:brain_coral_block"
+            },
+            {
+                "block": "minecraft:fire_coral_block"
+            },
+            {
+                "block": "minecraft:horn_coral_block"
+            },
+            {
+                "block": "minecraft:bubble_coral_block"
             }
-        }]
+        ],
+        "style": {
+            "style": "NOWHERE"
+        },
+        "zoom": 0.2
     },
     "layers": [
         {
@@ -51,12 +60,24 @@
                     "weight": 2,
                     "block": "minecraft:sand"
                 },
-                {"block": "minecraft:dirt"},
-                {"block": "minecraft:gravel"},
-                {"block": "minecraft:clay"}
+                {
+                    "block": "minecraft:dirt"
+                },
+                {
+                    "block": "minecraft:gravel"
+                },
+                {
+                    "block": "minecraft:clay"
+                }
             ]
         },
-        {"palette": [{"block": "minecraft:dirt"}]},
+        {
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                }
+            ]
+        },
         {
             "minHeight": 1,
             "maxHeight": 3,
@@ -65,156 +86,10 @@
                     "weight": 2,
                     "block": "minecraft:dirt"
                 },
-                {"block": "minecraft:coarse_dirt"}
-            ]
-        }
-    ],
-    "effects": [{
-        "particleAltX": 0.3,
-        "particleAltY": 1.960885,
-        "particleAltZ": 0.3,
-        "particleDistanceWidth": 8,
-        "chance": 1,
-        "particleEffect": "BUBBLE_COLUMN_UP",
-        "particleDistance": 5,
-        "particleOffset": 2,
-        "interval": 350,
-        "particleCount": 0
-    }],
-    "childShrinkFactor": 3,
-    "decorators": [
-        {
-            "chance": 0.03,
-            "variance": {"style": "STATIC"},
-            "stackMax": 3,
-            "zoom": 1,
-            "palette": [
-                {"block": "minecraft:tube_coral_block"},
-                {"block": "minecraft:brain_coral_block"},
-                {"block": "minecraft:fire_coral_block"},
-                {"block": "minecraft:horn_coral_block"},
-                {"block": "minecraft:bubble_coral_block"}
-            ],
-            "style": {"style": "STATIC"},
-            "stackMin": 1
-        },
-        {
-            "chance": 6.0E-4,
-            "variance": {"style": "STATIC"},
-            "zoom": 1,
-            "palette": [
-                {"block": "minecraft:soul_sand"},
-                {"block": "minecraft:magma_block"}
-            ],
-            "style": {"style": "STATIC"}
-        },
-        {
-            "chance": 0.07,
-            "variance": {"style": "STATIC"},
-            "zoom": 5,
-            "palette": [{"block": "minecraft:seagrass"}],
-            "style": {"style": "STATIC"}
-        },
-        {
-            "chance": 0.025,
-            "verticalZoom": 88,
-            "variance": {"style": "STATIC"},
-            "stackMax": 24,
-            "zoom": 1,
-            "palette": [{"block": "minecraft:kelp_plant"}],
-            "style": {"style": "STATIC"},
-            "heightVariance": {"style": "STATIC"},
-            "stackMin": 1
-        },
-        {
-            "chance": 0.125,
-            "verticalZoom": 20,
-            "variance": {"style": "STATIC"},
-            "stackMax": 9,
-            "zoom": 1,
-            "palette": [{"block": "minecraft:kelp_plant"}],
-            "style": {"style": "STATIC"},
-            "heightVariance": {"style": "STATIC"},
-            "stackMin": 1
-        },
-        {
-            "chance": 0.1,
-            "variance": {"style": "STATIC"},
-            "zoom": 1,
-            "palette": [
-                {"block": "minecraft:tube_coral"},
-                {"block": "minecraft:tube_coral_fan"}
-            ],
-            "style": {"style": "STATIC"}
-        },
-        {
-            "chance": 0.1,
-            "variance": {"style": "STATIC"},
-            "zoom": 1,
-            "palette": [
-                {"block": "minecraft:brain_coral"},
-                {"block": "minecraft:brain_coral_fan"}
-            ],
-            "style": {"style": "STATIC"}
-        },
-        {
-            "chance": 0.1,
-            "variance": {"style": "STATIC"},
-            "zoom": 1,
-            "palette": [
-                {"block": "minecraft:bubble_coral"},
-                {"block": "minecraft:bubble_coral_fan"}
-            ],
-            "style": {"style": "STATIC"}
-        },
-        {
-            "chance": 0.1,
-            "variance": {"style": "STATIC"},
-            "zoom": 1,
-            "palette": [
-                {"block": "minecraft:fire_coral"},
-                {"block": "minecraft:fire_coral_fan"}
-            ],
-            "style": {"style": "STATIC"}
-        },
-        {
-            "chance": 0.1,
-            "variance": {"style": "STATIC"},
-            "zoom": 1,
-            "palette": [
-                {"block": "minecraft:horn_coral"},
-                {"block": "minecraft:horn_coral_fan"}
-            ],
-            "style": {"style": "STATIC"}
-        },
-        {
-            "chance": 0.0025,
-            "variance": {"style": "STATIC"},
-            "zoom": 1,
-            "palette": [
                 {
-                    "data": {
-                        "waterlogged": true,
-                        "pickles": 2
-                    },
-                    "block": "minecraft:sea_pickle"
-                },
-                {
-                    "data": {
-                        "waterlogged": true,
-                        "pickles": 3
-                    },
-                    "block": "minecraft:sea_pickle"
-                },
-                {
-                    "data": {
-                        "waterlogged": true,
-                        "pickles": 4
-                    },
-                    "block": "minecraft:sea_pickle"
+                    "block": "minecraft:coarse_dirt"
                 }
-            ],
-            "style": {"style": "STATIC"}
+            ]
         }
     ],
     "objects": [
@@ -235,10 +110,22 @@
                 "structures/usdship1",
                 "structures/usdship2"
             ],
-            "edit": [{
-                "find": [{"block": "minecraft:oak_stairs"}],
-                "replace": {"palette": [{"block": "minecraft:oak_planks"}]}
-            }],
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:oak_stairs"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:oak_planks"
+                            }
+                        ]
+                    }
+                }
+            ],
             "translate": {
                 "x": 0,
                 "y": -2,
@@ -263,30 +150,291 @@
                 "structures/oruins3"
             ],
             "mode": "PAINT",
-            "loot": [{
-                "name": "tropical-dungeon",
-                "weight": 1
-            }]
+            "loot": [
+                {
+                    "name": "tropical-dungeon",
+                    "weight": 1
+                }
+            ]
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.03,
+            "variance": {
+                "style": "STATIC"
+            },
+            "stackMax": 3,
+            "zoom": 1,
+            "palette": [
+                {
+                    "block": "minecraft:tube_coral_block"
+                },
+                {
+                    "block": "minecraft:brain_coral_block"
+                },
+                {
+                    "block": "minecraft:fire_coral_block"
+                },
+                {
+                    "block": "minecraft:horn_coral_block"
+                },
+                {
+                    "block": "minecraft:bubble_coral_block"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            },
+            "stackMin": 1
+        },
+        {
+            "chance": 0.0006,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 1,
+            "palette": [
+                {
+                    "block": "minecraft:soul_sand"
+                },
+                {
+                    "block": "minecraft:magma_block"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "chance": 0.07,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 5,
+            "palette": [
+                {
+                    "block": "minecraft:seagrass"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "chance": 0.025,
+            "verticalZoom": 88,
+            "variance": {
+                "style": "STATIC"
+            },
+            "stackMax": 24,
+            "zoom": 1,
+            "palette": [
+                {
+                    "block": "minecraft:kelp_plant"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            },
+            "heightVariance": {
+                "style": "STATIC"
+            },
+            "stackMin": 1
+        },
+        {
+            "chance": 0.125,
+            "verticalZoom": 20,
+            "variance": {
+                "style": "STATIC"
+            },
+            "stackMax": 9,
+            "zoom": 1,
+            "palette": [
+                {
+                    "block": "minecraft:kelp_plant"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            },
+            "heightVariance": {
+                "style": "STATIC"
+            },
+            "stackMin": 1
+        },
+        {
+            "chance": 0.1,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 1,
+            "palette": [
+                {
+                    "block": "minecraft:tube_coral"
+                },
+                {
+                    "block": "minecraft:tube_coral_fan"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "chance": 0.1,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 1,
+            "palette": [
+                {
+                    "block": "minecraft:brain_coral"
+                },
+                {
+                    "block": "minecraft:brain_coral_fan"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "chance": 0.1,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 1,
+            "palette": [
+                {
+                    "block": "minecraft:bubble_coral"
+                },
+                {
+                    "block": "minecraft:bubble_coral_fan"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "chance": 0.1,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 1,
+            "palette": [
+                {
+                    "block": "minecraft:fire_coral"
+                },
+                {
+                    "block": "minecraft:fire_coral_fan"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "chance": 0.1,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 1,
+            "palette": [
+                {
+                    "block": "minecraft:horn_coral"
+                },
+                {
+                    "block": "minecraft:horn_coral_fan"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "chance": 0.0025,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 1,
+            "palette": [
+                {
+                    "data": {
+                        "waterlogged": true,
+                        "pickles": 2
+                    },
+                    "block": "minecraft:sea_pickle"
+                },
+                {
+                    "data": {
+                        "waterlogged": true,
+                        "pickles": 3
+                    },
+                    "block": "minecraft:sea_pickle"
+                },
+                {
+                    "data": {
+                        "waterlogged": true,
+                        "pickles": 4
+                    },
+                    "block": "minecraft:sea_pickle"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
         }
     ],
     "loot": {
         "mode": "ADD",
         "multiplier": 1,
-        "tables": ["tropical-dungeon"]
+        "tables": [
+            "tropical-dungeon"
+        ]
     },
-    "wall": {
-        "palette": [
-            {"block": "minecraft:tube_coral_block"},
-            {"block": "minecraft:brain_coral_block"},
-            {"block": "minecraft:fire_coral_block"},
-            {"block": "minecraft:horn_coral_block"},
-            {"block": "minecraft:bubble_coral_block"}
+    "carving": {
+        "ravines": [
+            {
+                "rarity": 442,
+                "ravine": "volcanic/main"
+            }
         ],
-        "style": {"style": "NOWHERE"},
-        "zoom": 0.2
+        "caves": [
+            {
+                "breakSurface": true,
+                "cave": "volcanic/main",
+                "rarity": 228,
+                "caveStartHeight": {
+                    "max": 120,
+                    "min": 69,
+                    "style": {
+                        "style": "STATIC"
+                    }
+                }
+            }
+        ]
     },
+    "effects": [
+        {
+            "particleAltX": 0.3,
+            "particleAltY": 1.960885,
+            "particleAltZ": 0.3,
+            "particleDistanceWidth": 8,
+            "chance": 1,
+            "particleEffect": "BUBBLE_COLUMN_UP",
+            "particleDistance": 5,
+            "particleOffset": 2,
+            "interval": 350,
+            "particleCount": 0
+        }
+    ],
+    "childShrinkFactor": 3,
     "slab": {
-        "style": {"style": "STATIC"},
+        "style": {
+            "style": "STATIC"
+        },
         "palette": [
             {
                 "data": {

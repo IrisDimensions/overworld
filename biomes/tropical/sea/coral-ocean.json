@@ -1,20 +1,55 @@
 {
     "name": "Tropical Coral Ocean",
-    "derivative": "LUKEWARM_OCEAN",
     "color": "#213780",
+    "derivative": "LUKEWARM_OCEAN",
     "vanillaDerivative": "WARM_OCEAN",
-    "generators": [{
-        "min": -71,
-        "max": -37,
-        "generator": "plain"
-    }],
+    "generators": [
+        {
+            "min": -71,
+            "max": -37,
+            "generator": "plain"
+        }
+    ],
+    "wall": {
+        "palette": [
+            {
+                "block": "minecraft:tube_coral_block"
+            },
+            {
+                "block": "minecraft:brain_coral_block"
+            },
+            {
+                "block": "minecraft:fire_coral_block"
+            },
+            {
+                "block": "minecraft:horn_coral_block"
+            },
+            {
+                "block": "minecraft:bubble_coral_block"
+            }
+        ],
+        "style": {
+            "style": "NOWHERE"
+        },
+        "zoom": 0.1
+    },
     "layers": [
         {
             "minHeight": 2,
             "maxHeight": 6,
-            "palette": [{"block": "minecraft:sand"}]
+            "palette": [
+                {
+                    "block": "minecraft:sand"
+                }
+            ]
         },
-        {"palette": [{"block": "minecraft:dirt"}]},
+        {
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                }
+            ]
+        },
         {
             "minHeight": 1,
             "maxHeight": 3,
@@ -23,135 +58,1496 @@
                     "weight": 2,
                     "block": "minecraft:dirt"
                 },
-                {"block": "minecraft:coarse_dirt"}
+                {
+                    "block": "minecraft:coarse_dirt"
+                }
             ]
         }
     ],
-    "carving": {
-        "ravines": [{
-            "rarity": 442,
-            "ravine": "volcanic/main"
-        }],
-        "caves": [{
-            "breakSurface": true,
-            "cave": "volcanic/main",
-            "rarity": 228,
-            "caveStartHeight": {
-                "max": 120,
-                "min": 69,
-                "style": {"style": "STATIC"}
+    "objects": [
+        {
+            "chance": 0.0025,
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:stone"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:fire_coral_block"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:dirt"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:bubble_coral_block"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ],
+            "clamp": {
+                "minimumHeight": 0
             }
-        }]
-    },
-    "effects": [{
-        "particleAltX": 0.3,
-        "particleAltY": 1.960885,
-        "particleAltZ": 0.3,
-        "particleDistanceWidth": 8,
-        "chance": 1,
-        "particleEffect": "BUBBLE_COLUMN_UP",
-        "particleDistance": 5,
-        "particleOffset": 2,
-        "interval": 250,
-        "particleCount": 0
-    }],
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:stone"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:fire_coral_block"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:dirt"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:horn_coral_block"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:stone"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:fire_coral_block"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:dirt"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:tube_coral_block"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:stone"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:fire_coral_block"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:dirt"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:brain_coral_block"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:stone"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:fire_coral_block"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:dirt"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:fire_coral_block"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.005,
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:stone"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:bubble_coral_block"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:dirt"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:bubble_coral_block"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.0025,
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:stone"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:bubble_coral_block"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:dirt"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:horn_coral_block"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.0025,
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:stone"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:bubble_coral_block"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:dirt"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:tube_coral_block"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.0025,
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:stone"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:bubble_coral_block"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:dirt"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:brain_coral_block"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.0025,
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:stone"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:bubble_coral_block"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:dirt"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:bubble_coral_block"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.0025,
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:stone"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:horn_coral_block"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:dirt"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:bubble_coral_block"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:stone"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:horn_coral_block"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:dirt"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:horn_coral_block"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:stone"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:horn_coral_block"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:dirt"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:tube_coral_block"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:stone"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:horn_coral_block"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:dirt"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:brain_coral_block"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:stone"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:horn_coral_block"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:dirt"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:horn_coral_block"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:stone"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:tube_coral_block"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:dirt"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:bubble_coral_block"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:stone"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:tube_coral_block"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:dirt"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:horn_coral_block"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:stone"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:tube_coral_block"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:dirt"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:tube_coral_block"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:stone"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:tube_coral_block"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:dirt"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:brain_coral_block"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:stone"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:tube_coral_block"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:dirt"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:tube_coral_block"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:stone"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:brain_coral_block"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:dirt"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:bubble_coral_block"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:stone"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:brain_coral_block"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:dirt"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:horn_coral_block"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:stone"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:brain_coral_block"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:dirt"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:tube_coral_block"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:stone"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:brain_coral_block"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:dirt"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:brain_coral_block"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        },
+        {
+            "chance": 0.025,
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:stone"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:brain_coral_block"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:dirt"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:brain_coral_block"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ]
+        }
+    ],
     "decorators": [
         {
             "chance": 0.005,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "stackMax": 3,
             "zoom": 1,
             "palette": [
-                {"block": "minecraft:tube_coral_block"},
-                {"block": "minecraft:brain_coral_block"},
-                {"block": "minecraft:fire_coral_block"},
-                {"block": "minecraft:horn_coral_block"},
-                {"block": "minecraft:bubble_coral_block"}
+                {
+                    "block": "minecraft:tube_coral_block"
+                },
+                {
+                    "block": "minecraft:brain_coral_block"
+                },
+                {
+                    "block": "minecraft:fire_coral_block"
+                },
+                {
+                    "block": "minecraft:horn_coral_block"
+                },
+                {
+                    "block": "minecraft:bubble_coral_block"
+                }
             ],
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "stackMin": 1
         },
         {
-            "chance": 6.0E-4,
-            "variance": {"style": "STATIC"},
+            "chance": 0.0006,
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 1,
             "palette": [
-                {"block": "minecraft:soul_sand"},
-                {"block": "minecraft:magma_block"}
+                {
+                    "block": "minecraft:soul_sand"
+                },
+                {
+                    "block": "minecraft:magma_block"
+                }
             ],
-            "style": {"style": "STATIC"}
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
             "chance": 0.04,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 5,
-            "palette": [{"block": "minecraft:seagrass"}],
-            "style": {"style": "STATIC"}
+            "palette": [
+                {
+                    "block": "minecraft:seagrass"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
             "chance": 0.012,
             "verticalZoom": 88,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "stackMax": 21,
             "zoom": 1,
-            "palette": [{"block": "minecraft:kelp_plant"}],
-            "style": {"style": "STATIC"},
-            "heightVariance": {"style": "NOWHERE"},
+            "palette": [
+                {
+                    "block": "minecraft:kelp_plant"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            },
+            "heightVariance": {
+                "style": "NOWHERE"
+            },
             "stackMin": 2
         },
         {
             "chance": 0.05,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 1,
             "palette": [
-                {"block": "minecraft:tube_coral"},
-                {"block": "minecraft:tube_coral_fan"}
+                {
+                    "block": "minecraft:tube_coral"
+                },
+                {
+                    "block": "minecraft:tube_coral_fan"
+                }
             ],
-            "style": {"style": "STATIC"}
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
             "chance": 0.05,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 1,
             "palette": [
-                {"block": "minecraft:brain_coral"},
-                {"block": "minecraft:brain_coral_fan"}
+                {
+                    "block": "minecraft:brain_coral"
+                },
+                {
+                    "block": "minecraft:brain_coral_fan"
+                }
             ],
-            "style": {"style": "STATIC"}
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
             "chance": 0.05,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 1,
             "palette": [
-                {"block": "minecraft:bubble_coral"},
-                {"block": "minecraft:bubble_coral_fan"}
+                {
+                    "block": "minecraft:bubble_coral"
+                },
+                {
+                    "block": "minecraft:bubble_coral_fan"
+                }
             ],
-            "style": {"style": "STATIC"}
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
             "chance": 0.05,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 1,
             "palette": [
-                {"block": "minecraft:fire_coral"},
-                {"block": "minecraft:fire_coral_fan"}
+                {
+                    "block": "minecraft:fire_coral"
+                },
+                {
+                    "block": "minecraft:fire_coral_fan"
+                }
             ],
-            "style": {"style": "STATIC"}
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
             "chance": 0.05,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 1,
             "palette": [
-                {"block": "minecraft:horn_coral"},
-                {"block": "minecraft:horn_coral_fan"}
+                {
+                    "block": "minecraft:horn_coral"
+                },
+                {
+                    "block": "minecraft:horn_coral_fan"
+                }
             ],
-            "style": {"style": "STATIC"}
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
             "chance": 0.008,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 1,
             "palette": [
                 {
@@ -176,825 +1572,51 @@
                     "block": "minecraft:sea_pickle"
                 }
             ],
-            "style": {"style": "STATIC"}
+            "style": {
+                "style": "STATIC"
+            }
         }
     ],
-    "objects": [
-        {
-            "chance": 0.0025,
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:stone"}],
-                    "replace": {"palette": [{"block": "minecraft:fire_coral_block"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:dirt"}],
-                    "replace": {"palette": [{"block": "minecraft:bubble_coral_block"}]}
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "underwater": true,
-            "place": [
-                "clutter/stonedirtsetter1",
-                "clutter/stonedirtsetter2",
-                "clutter/stonedirtsetter3",
-                "clutter/stonedirtsetter4",
-                "clutter/stonedirtsetter5",
-                "clutter/stonedirtsetter6",
-                "clutter/stonedirtsetter7"
-            ],
-            "clamp": {"minimumHeight": 0}
-        },
-        {
-            "chance": 0.025,
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:stone"}],
-                    "replace": {"palette": [{"block": "minecraft:fire_coral_block"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:dirt"}],
-                    "replace": {"palette": [{"block": "minecraft:horn_coral_block"}]}
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "underwater": true,
-            "place": [
-                "clutter/stonedirtsetter1",
-                "clutter/stonedirtsetter2",
-                "clutter/stonedirtsetter3",
-                "clutter/stonedirtsetter4",
-                "clutter/stonedirtsetter5",
-                "clutter/stonedirtsetter6",
-                "clutter/stonedirtsetter7"
-            ]
-        },
-        {
-            "chance": 0.025,
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:stone"}],
-                    "replace": {"palette": [{"block": "minecraft:fire_coral_block"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:dirt"}],
-                    "replace": {"palette": [{"block": "minecraft:tube_coral_block"}]}
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "underwater": true,
-            "place": [
-                "clutter/stonedirtsetter1",
-                "clutter/stonedirtsetter2",
-                "clutter/stonedirtsetter3",
-                "clutter/stonedirtsetter4",
-                "clutter/stonedirtsetter5",
-                "clutter/stonedirtsetter6",
-                "clutter/stonedirtsetter7"
-            ]
-        },
-        {
-            "chance": 0.025,
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:stone"}],
-                    "replace": {"palette": [{"block": "minecraft:fire_coral_block"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:dirt"}],
-                    "replace": {"palette": [{"block": "minecraft:brain_coral_block"}]}
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "underwater": true,
-            "place": [
-                "clutter/stonedirtsetter1",
-                "clutter/stonedirtsetter2",
-                "clutter/stonedirtsetter3",
-                "clutter/stonedirtsetter4",
-                "clutter/stonedirtsetter5",
-                "clutter/stonedirtsetter6",
-                "clutter/stonedirtsetter7"
-            ]
-        },
-        {
-            "chance": 0.025,
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:stone"}],
-                    "replace": {"palette": [{"block": "minecraft:fire_coral_block"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:dirt"}],
-                    "replace": {"palette": [{"block": "minecraft:fire_coral_block"}]}
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "underwater": true,
-            "place": [
-                "clutter/stonedirtsetter1",
-                "clutter/stonedirtsetter2",
-                "clutter/stonedirtsetter3",
-                "clutter/stonedirtsetter4",
-                "clutter/stonedirtsetter5",
-                "clutter/stonedirtsetter6",
-                "clutter/stonedirtsetter7"
-            ]
-        },
-        {
-            "chance": 0.005,
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:stone"}],
-                    "replace": {"palette": [{"block": "minecraft:bubble_coral_block"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:dirt"}],
-                    "replace": {"palette": [{"block": "minecraft:bubble_coral_block"}]}
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "underwater": true,
-            "place": [
-                "clutter/stonedirtsetter1",
-                "clutter/stonedirtsetter2",
-                "clutter/stonedirtsetter3",
-                "clutter/stonedirtsetter4",
-                "clutter/stonedirtsetter5",
-                "clutter/stonedirtsetter6",
-                "clutter/stonedirtsetter7"
-            ]
-        },
-        {
-            "chance": 0.0025,
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:stone"}],
-                    "replace": {"palette": [{"block": "minecraft:bubble_coral_block"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:dirt"}],
-                    "replace": {"palette": [{"block": "minecraft:horn_coral_block"}]}
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "underwater": true,
-            "place": [
-                "clutter/stonedirtsetter1",
-                "clutter/stonedirtsetter2",
-                "clutter/stonedirtsetter3",
-                "clutter/stonedirtsetter4",
-                "clutter/stonedirtsetter5",
-                "clutter/stonedirtsetter6",
-                "clutter/stonedirtsetter7"
-            ]
-        },
-        {
-            "chance": 0.0025,
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:stone"}],
-                    "replace": {"palette": [{"block": "minecraft:bubble_coral_block"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:dirt"}],
-                    "replace": {"palette": [{"block": "minecraft:tube_coral_block"}]}
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "underwater": true,
-            "place": [
-                "clutter/stonedirtsetter1",
-                "clutter/stonedirtsetter2",
-                "clutter/stonedirtsetter3",
-                "clutter/stonedirtsetter4",
-                "clutter/stonedirtsetter5",
-                "clutter/stonedirtsetter6",
-                "clutter/stonedirtsetter7"
-            ]
-        },
-        {
-            "chance": 0.0025,
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:stone"}],
-                    "replace": {"palette": [{"block": "minecraft:bubble_coral_block"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:dirt"}],
-                    "replace": {"palette": [{"block": "minecraft:brain_coral_block"}]}
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "underwater": true,
-            "place": [
-                "clutter/stonedirtsetter1",
-                "clutter/stonedirtsetter2",
-                "clutter/stonedirtsetter3",
-                "clutter/stonedirtsetter4",
-                "clutter/stonedirtsetter5",
-                "clutter/stonedirtsetter6",
-                "clutter/stonedirtsetter7"
-            ]
-        },
-        {
-            "chance": 0.0025,
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:stone"}],
-                    "replace": {"palette": [{"block": "minecraft:bubble_coral_block"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:dirt"}],
-                    "replace": {"palette": [{"block": "minecraft:bubble_coral_block"}]}
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "underwater": true,
-            "place": [
-                "clutter/stonedirtsetter1",
-                "clutter/stonedirtsetter2",
-                "clutter/stonedirtsetter3",
-                "clutter/stonedirtsetter4",
-                "clutter/stonedirtsetter5",
-                "clutter/stonedirtsetter6",
-                "clutter/stonedirtsetter7"
-            ]
-        },
-        {
-            "chance": 0.0025,
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:stone"}],
-                    "replace": {"palette": [{"block": "minecraft:horn_coral_block"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:dirt"}],
-                    "replace": {"palette": [{"block": "minecraft:bubble_coral_block"}]}
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "underwater": true,
-            "place": [
-                "clutter/stonedirtsetter1",
-                "clutter/stonedirtsetter2",
-                "clutter/stonedirtsetter3",
-                "clutter/stonedirtsetter4",
-                "clutter/stonedirtsetter5",
-                "clutter/stonedirtsetter6",
-                "clutter/stonedirtsetter7"
-            ]
-        },
-        {
-            "chance": 0.025,
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:stone"}],
-                    "replace": {"palette": [{"block": "minecraft:horn_coral_block"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:dirt"}],
-                    "replace": {"palette": [{"block": "minecraft:horn_coral_block"}]}
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "underwater": true,
-            "place": [
-                "clutter/stonedirtsetter1",
-                "clutter/stonedirtsetter2",
-                "clutter/stonedirtsetter3",
-                "clutter/stonedirtsetter4",
-                "clutter/stonedirtsetter5",
-                "clutter/stonedirtsetter6",
-                "clutter/stonedirtsetter7"
-            ]
-        },
-        {
-            "chance": 0.025,
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:stone"}],
-                    "replace": {"palette": [{"block": "minecraft:horn_coral_block"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:dirt"}],
-                    "replace": {"palette": [{"block": "minecraft:tube_coral_block"}]}
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "underwater": true,
-            "place": [
-                "clutter/stonedirtsetter1",
-                "clutter/stonedirtsetter2",
-                "clutter/stonedirtsetter3",
-                "clutter/stonedirtsetter4",
-                "clutter/stonedirtsetter5",
-                "clutter/stonedirtsetter6",
-                "clutter/stonedirtsetter7"
-            ]
-        },
-        {
-            "chance": 0.025,
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:stone"}],
-                    "replace": {"palette": [{"block": "minecraft:horn_coral_block"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:dirt"}],
-                    "replace": {"palette": [{"block": "minecraft:brain_coral_block"}]}
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "underwater": true,
-            "place": [
-                "clutter/stonedirtsetter1",
-                "clutter/stonedirtsetter2",
-                "clutter/stonedirtsetter3",
-                "clutter/stonedirtsetter4",
-                "clutter/stonedirtsetter5",
-                "clutter/stonedirtsetter6",
-                "clutter/stonedirtsetter7"
-            ]
-        },
-        {
-            "chance": 0.025,
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:stone"}],
-                    "replace": {"palette": [{"block": "minecraft:horn_coral_block"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:dirt"}],
-                    "replace": {"palette": [{"block": "minecraft:horn_coral_block"}]}
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "underwater": true,
-            "place": [
-                "clutter/stonedirtsetter1",
-                "clutter/stonedirtsetter2",
-                "clutter/stonedirtsetter3",
-                "clutter/stonedirtsetter4",
-                "clutter/stonedirtsetter5",
-                "clutter/stonedirtsetter6",
-                "clutter/stonedirtsetter7"
-            ]
-        },
-        {
-            "chance": 0.025,
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:stone"}],
-                    "replace": {"palette": [{"block": "minecraft:tube_coral_block"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:dirt"}],
-                    "replace": {"palette": [{"block": "minecraft:bubble_coral_block"}]}
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "underwater": true,
-            "place": [
-                "clutter/stonedirtsetter1",
-                "clutter/stonedirtsetter2",
-                "clutter/stonedirtsetter3",
-                "clutter/stonedirtsetter4",
-                "clutter/stonedirtsetter5",
-                "clutter/stonedirtsetter6",
-                "clutter/stonedirtsetter7"
-            ]
-        },
-        {
-            "chance": 0.025,
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:stone"}],
-                    "replace": {"palette": [{"block": "minecraft:tube_coral_block"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:dirt"}],
-                    "replace": {"palette": [{"block": "minecraft:horn_coral_block"}]}
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "underwater": true,
-            "place": [
-                "clutter/stonedirtsetter1",
-                "clutter/stonedirtsetter2",
-                "clutter/stonedirtsetter3",
-                "clutter/stonedirtsetter4",
-                "clutter/stonedirtsetter5",
-                "clutter/stonedirtsetter6",
-                "clutter/stonedirtsetter7"
-            ]
-        },
-        {
-            "chance": 0.025,
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:stone"}],
-                    "replace": {"palette": [{"block": "minecraft:tube_coral_block"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:dirt"}],
-                    "replace": {"palette": [{"block": "minecraft:tube_coral_block"}]}
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "underwater": true,
-            "place": [
-                "clutter/stonedirtsetter1",
-                "clutter/stonedirtsetter2",
-                "clutter/stonedirtsetter3",
-                "clutter/stonedirtsetter4",
-                "clutter/stonedirtsetter5",
-                "clutter/stonedirtsetter6",
-                "clutter/stonedirtsetter7"
-            ]
-        },
-        {
-            "chance": 0.025,
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:stone"}],
-                    "replace": {"palette": [{"block": "minecraft:tube_coral_block"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:dirt"}],
-                    "replace": {"palette": [{"block": "minecraft:brain_coral_block"}]}
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "underwater": true,
-            "place": [
-                "clutter/stonedirtsetter1",
-                "clutter/stonedirtsetter2",
-                "clutter/stonedirtsetter3",
-                "clutter/stonedirtsetter4",
-                "clutter/stonedirtsetter5",
-                "clutter/stonedirtsetter6",
-                "clutter/stonedirtsetter7"
-            ]
-        },
-        {
-            "chance": 0.025,
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:stone"}],
-                    "replace": {"palette": [{"block": "minecraft:tube_coral_block"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:dirt"}],
-                    "replace": {"palette": [{"block": "minecraft:tube_coral_block"}]}
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "underwater": true,
-            "place": [
-                "clutter/stonedirtsetter1",
-                "clutter/stonedirtsetter2",
-                "clutter/stonedirtsetter3",
-                "clutter/stonedirtsetter4",
-                "clutter/stonedirtsetter5",
-                "clutter/stonedirtsetter6",
-                "clutter/stonedirtsetter7"
-            ]
-        },
-        {
-            "chance": 0.025,
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:stone"}],
-                    "replace": {"palette": [{"block": "minecraft:brain_coral_block"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:dirt"}],
-                    "replace": {"palette": [{"block": "minecraft:bubble_coral_block"}]}
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "underwater": true,
-            "place": [
-                "clutter/stonedirtsetter1",
-                "clutter/stonedirtsetter2",
-                "clutter/stonedirtsetter3",
-                "clutter/stonedirtsetter4",
-                "clutter/stonedirtsetter5",
-                "clutter/stonedirtsetter6",
-                "clutter/stonedirtsetter7"
-            ]
-        },
-        {
-            "chance": 0.025,
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:stone"}],
-                    "replace": {"palette": [{"block": "minecraft:brain_coral_block"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:dirt"}],
-                    "replace": {"palette": [{"block": "minecraft:horn_coral_block"}]}
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "underwater": true,
-            "place": [
-                "clutter/stonedirtsetter1",
-                "clutter/stonedirtsetter2",
-                "clutter/stonedirtsetter3",
-                "clutter/stonedirtsetter4",
-                "clutter/stonedirtsetter5",
-                "clutter/stonedirtsetter6",
-                "clutter/stonedirtsetter7"
-            ]
-        },
-        {
-            "chance": 0.025,
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:stone"}],
-                    "replace": {"palette": [{"block": "minecraft:brain_coral_block"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:dirt"}],
-                    "replace": {"palette": [{"block": "minecraft:tube_coral_block"}]}
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "underwater": true,
-            "place": [
-                "clutter/stonedirtsetter1",
-                "clutter/stonedirtsetter2",
-                "clutter/stonedirtsetter3",
-                "clutter/stonedirtsetter4",
-                "clutter/stonedirtsetter5",
-                "clutter/stonedirtsetter6",
-                "clutter/stonedirtsetter7"
-            ]
-        },
-        {
-            "chance": 0.025,
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:stone"}],
-                    "replace": {"palette": [{"block": "minecraft:brain_coral_block"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:dirt"}],
-                    "replace": {"palette": [{"block": "minecraft:brain_coral_block"}]}
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "underwater": true,
-            "place": [
-                "clutter/stonedirtsetter1",
-                "clutter/stonedirtsetter2",
-                "clutter/stonedirtsetter3",
-                "clutter/stonedirtsetter4",
-                "clutter/stonedirtsetter5",
-                "clutter/stonedirtsetter6",
-                "clutter/stonedirtsetter7"
-            ]
-        },
-        {
-            "chance": 0.025,
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:stone"}],
-                    "replace": {"palette": [{"block": "minecraft:brain_coral_block"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:dirt"}],
-                    "replace": {"palette": [{"block": "minecraft:brain_coral_block"}]}
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "underwater": true,
-            "place": [
-                "clutter/stonedirtsetter1",
-                "clutter/stonedirtsetter2",
-                "clutter/stonedirtsetter3",
-                "clutter/stonedirtsetter4",
-                "clutter/stonedirtsetter5",
-                "clutter/stonedirtsetter6",
-                "clutter/stonedirtsetter7"
-            ]
-        }
-    ],
-    "wall": {
-        "palette": [
-            {"block": "minecraft:tube_coral_block"},
-            {"block": "minecraft:brain_coral_block"},
-            {"block": "minecraft:fire_coral_block"},
-            {"block": "minecraft:horn_coral_block"},
-            {"block": "minecraft:bubble_coral_block"}
+    "carving": {
+        "ravines": [
+            {
+                "rarity": 442,
+                "ravine": "volcanic/main"
+            }
         ],
-        "style": {"style": "NOWHERE"},
-        "zoom": 0.1
+        "caves": [
+            {
+                "breakSurface": true,
+                "cave": "volcanic/main",
+                "rarity": 228,
+                "caveStartHeight": {
+                    "max": 120,
+                    "min": 69,
+                    "style": {
+                        "style": "STATIC"
+                    }
+                }
+            }
+        ]
     },
+    "effects": [
+        {
+            "particleAltX": 0.3,
+            "particleAltY": 1.960885,
+            "particleAltZ": 0.3,
+            "particleDistanceWidth": 8,
+            "chance": 1,
+            "particleEffect": "BUBBLE_COLUMN_UP",
+            "particleDistance": 5,
+            "particleOffset": 2,
+            "interval": 250,
+            "particleCount": 0
+        }
+    ],
     "slab": {
-        "style": {"style": "STATIC"},
+        "style": {
+            "style": "STATIC"
+        },
         "palette": [
             {
                 "data": {

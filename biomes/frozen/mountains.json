@@ -4,43 +4,92 @@
     "rarity": 1,
     "derivative": "FROZEN_PEAKS",
     "vanillaDerivative": "FROZEN_PEAKS",
+    "biomeScatter": [
+        "SNOWY_TAIGA",
+        "OLD_GROWTH_PINE_TAIGA",
+        "WINDSWEPT_HILLS",
+        "ICE_SPIKES"
+    ],
+    "customDerivitives": [
+        {
+            "category": "icy",
+            "id": "frozen_mountains",
+            "waterColor": "#216FC4",
+            "downfallType": "snow",
+            "temperature": -3,
+            "fogColor": "#A6D1FF",
+            "waterFogColor": "#216FC4",
+            "foliageColor": "#B8D0E1",
+            "grassColor": "#D0E1FF"
+        }
+    ],
     "children": [
         "frozen/peak",
         "frozen/vander"
     ],
-    "customDerivitives": [{
-        "category": "icy",
-        "id": "frozen_mountains",
-        "waterColor": "#216FC4",
-        "downfallType": "snow",
-        "temperature": -3,
-        "fogColor": "#A6D1FF",
-        "waterFogColor": "#216FC4",
-        "foliageColor": "#B8D0E1",
-        "grassColor": "#D0E1FF"
-    }],
+    "generators": [
+        {
+            "min": 10,
+            "max": 150,
+            "generator": "mountain"
+        }
+    ],
+    "biomeZoom": 30,
+    "biomeStyle": {
+        "style": "SIMPLEX"
+    },
+    "wall": {
+        "style": {
+            "style": "STATIC"
+        },
+        "palette": [
+            {
+                "block": "minecraft:andesite"
+            },
+            {
+                "weight": 2,
+                "block": "minecraft:stone"
+            }
+        ]
+    },
     "layers": [
         {
             "minHeight": 2,
             "maxHeight": 3,
-            "palette": [{"block": "minecraft:snow_block"}]
+            "palette": [
+                {
+                    "block": "minecraft:snow_block"
+                }
+            ]
         },
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "palette": [{"block": "minecraft:grass_block"}]
+            "palette": [
+                {
+                    "block": "minecraft:grass_block"
+                }
+            ]
         },
         {
             "minHeight": 2,
             "maxHeight": 4,
-            "palette": [{"block": "minecraft:packed_ice"}]
+            "palette": [
+                {
+                    "block": "minecraft:packed_ice"
+                }
+            ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "palette": [
-                {"block": "minecraft:andesite"},
+                {
+                    "block": "minecraft:andesite"
+                },
                 {
                     "weight": 2,
                     "block": "minecraft:stone"
@@ -62,11 +111,6 @@
             "structure": "village-snowy"
         }
     ],
-    "generators": [{
-        "min": 10,
-        "max": 150,
-        "generator": "mountain"
-    }],
     "objects": [
         {
             "chance": 0.003,
@@ -107,19 +151,29 @@
                 },
                 "enabled": true
             },
-            "edit": [{
-                "find": [{"block": "minecraft:spruce_leaves"}],
-                "replace": {
-                    "style": {
-                        "style": "PERLIN",
-                        "zoom": 0.2
-                    },
-                    "palette": [
-                        {"block": "minecraft:oak_leaves"},
-                        {"block": "minecraft:dark_oak_leaves"}
-                    ]
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:spruce_leaves"
+                        }
+                    ],
+                    "replace": {
+                        "style": {
+                            "style": "PERLIN",
+                            "zoom": 0.2
+                        },
+                        "palette": [
+                            {
+                                "block": "minecraft:oak_leaves"
+                            },
+                            {
+                                "block": "minecraft:dark_oak_leaves"
+                            }
+                        ]
+                    }
                 }
-            }],
+            ],
             "place": [
                 "trees/spruce/lfrostgeneric5",
                 "trees/spruce/lfrostgeneric6",
@@ -150,7 +204,9 @@
         {
             "chance": 0.0125,
             "density": 1,
-            "place": ["structures/snowulder"]
+            "place": [
+                "structures/snowulder"
+            ]
         },
         {
             "chance": 0.05,
@@ -191,37 +247,25 @@
             ]
         }
     ],
-    "biomeZoom": 30,
-    "biomeStyle": {"style": "SIMPLEX"},
-    "decorators": [{
-        "chance": 1,
-        "variance": {
-            "style": "NOWHERE",
-            "zoom": 0.23
-        },
-        "palette": [
-            {
-                "data": {"layers": 1},
-                "block": "minecraft:snow"
+    "decorators": [
+        {
+            "chance": 1,
+            "variance": {
+                "style": "NOWHERE",
+                "zoom": 0.23
             },
-            {"block": "minecraft:air"}
-        ]
-    }],
-    "childShrinkFactor": 25,
-    "wall": {
-        "style": {"style": "STATIC"},
-        "palette": [
-            {"block": "minecraft:andesite"},
-            {
-                "weight": 2,
-                "block": "minecraft:stone"
-            }
-        ]
-    },
-    "biomeScatter": [
-        "SNOWY_TAIGA",
-        "OLD_GROWTH_PINE_TAIGA",
-        "WINDSWEPT_HILLS",
-        "ICE_SPIKES"
-    ]
+            "palette": [
+                {
+                    "data": {
+                        "layers": 1
+                    },
+                    "block": "minecraft:snow"
+                },
+                {
+                    "block": "minecraft:air"
+                }
+            ]
+        }
+    ],
+    "childShrinkFactor": 25
 }

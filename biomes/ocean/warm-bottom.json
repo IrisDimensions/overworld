@@ -1,74 +1,26 @@
 {
     "name": "Ocean Warm Bottom",
-    "derivative": "WARM_OCEAN",
     "color": "#4639C0",
+    "derivative": "WARM_OCEAN",
     "vanillaDerivative": "WARM_OCEAN",
-    "generators": [{
-        "generator": "plain",
-        "max": -30,
-        "min": -50
-    }],
-    "layers": [{
-        "minHeight": 2,
-        "maxHeight": 10,
-        "palette": [{"block": "minecraft:sand"}]
-    }],
-    "decorators": [
+    "generators": [
         {
-            "chance": 0.05,
-            "style": {"style": "STATIC"},
-            "variance": {"style": "STATIC"},
-            "palette": [
-                {
-                    "block": "minecraft:sea_pickle",
-                    "data": {"pickles": 1}
-                },
-                {
-                    "weight": 2,
-                    "block": "minecraft:sea_pickle",
-                    "data": {"pickles": 2}
-                },
-                {
-                    "weight": 3,
-                    "block": "minecraft:sea_pickle",
-                    "data": {"pickles": 3}
-                },
-                {
-                    "weight": 4,
-                    "block": "minecraft:sea_pickle",
-                    "data": {"pickles": 4}
-                }
-            ]
-        },
-        {
-            "chance": 0.02,
-            "palette": [{"block": "minecraft:kelp_plant"}],
-            "stackMin": 2,
-            "stackMax": 6,
-            "partOf": "SEA_FLOOR"
-        },
-        {
-            "chance": 0.2,
-            "palette": [{"block": "minecraft:seagrass"}]
-        },
-        {
-            "chance": 0.2,
-            "palette": [{
-                "block": "minecraft:tall_seagrass",
-                "data": {"half": "lower"}
-            }],
-            "topPalette": [{
-                "block": "minecraft:tall_seagrass",
-                "data": {"half": "upper"}
-            }],
-            "partOf": "SEA_FLOOR"
+            "generator": "plain",
+            "max": -30,
+            "min": -50
         }
     ],
-    "loot": {
-        "mode": "ADD",
-        "multiplier": 1,
-        "tables": ["tropical-dungeon"]
-    },
+    "layers": [
+        {
+            "minHeight": 2,
+            "maxHeight": 10,
+            "palette": [
+                {
+                    "block": "minecraft:sand"
+                }
+            ]
+        }
+    ],
     "objects": [
         {
             "place": [
@@ -121,23 +73,41 @@
                     "min": -360
                 }
             },
-            "edit": [{
-                "find": [
-                    {"block": "minecraft:stone"},
-                    {"block": "minecraft:dirt"}
-                ],
-                "replace": {
-                    "palette": [
-                        {"block": "minecraft:brain_coral_block"},
-                        {"block": "minecraft:horn_coral_block"},
-                        {"block": "minecraft:tube_coral_block"},
-                        {"block": "minecraft:fire_coral_block"},
-                        {"block": "minecraft:bubble_coral_block"}
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:stone"
+                        },
+                        {
+                            "block": "minecraft:dirt"
+                        }
                     ],
-                    "style": {"style": "CELLULAR"},
-                    "zoom": 0.07
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:brain_coral_block"
+                            },
+                            {
+                                "block": "minecraft:horn_coral_block"
+                            },
+                            {
+                                "block": "minecraft:tube_coral_block"
+                            },
+                            {
+                                "block": "minecraft:fire_coral_block"
+                            },
+                            {
+                                "block": "minecraft:bubble_coral_block"
+                            }
+                        ],
+                        "style": {
+                            "style": "CELLULAR"
+                        },
+                        "zoom": 0.07
+                    }
                 }
-            }]
+            ]
         },
         {
             "place": [
@@ -154,17 +124,37 @@
             "edit": [
                 {
                     "find": [
-                        {"block": "minecraft:grass_block"},
-                        {"block": "minecraft:dirt"}
+                        {
+                            "block": "minecraft:grass_block"
+                        },
+                        {
+                            "block": "minecraft:dirt"
+                        }
                     ],
-                    "replace": {"palette": [{"block": "minecraft:clay"}]}
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:clay"
+                            }
+                        ]
+                    }
                 },
                 {
                     "find": [
-                        {"block": "minecraft:tall_grass"},
-                        {"block": "minecraft:grass"}
+                        {
+                            "block": "minecraft:tall_grass"
+                        },
+                        {
+                            "block": "minecraft:grass"
+                        }
                     ],
-                    "replace": {"palette": [{"block": "minecraft:seagrass"}]}
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:seagrass"
+                            }
+                        ]
+                    }
                 }
             ]
         },
@@ -185,16 +175,23 @@
                 "structures/kship2",
                 "structures/kship3",
                 "structures/kship4"
-
             ],
-            "markers": [{
-                "mark": [{"block": "minecraft:spruce_planks"}],
-                "maximumMarkers": 4,
-                "marker": "skelepirate"
-            }],
+            "markers": [
+                {
+                    "mark": [
+                        {
+                            "block": "minecraft:spruce_planks"
+                        }
+                    ],
+                    "maximumMarkers": 4,
+                    "marker": "skelepirate"
+                }
+            ],
             "chance": 0.005,
             "onwater": true,
-            "translate": {"y": -1},
+            "translate": {
+                "y": -1
+            },
             "waterloggable": true
         },
         {
@@ -215,7 +212,97 @@
                 "structures/oruins3"
             ],
             "mode": "PAINT",
-            "loot": [{"name": "tropical-dungeon"}]
+            "loot": [
+                {
+                    "name": "tropical-dungeon"
+                }
+            ]
         }
-    ]
+    ],
+    "decorators": [
+        {
+            "chance": 0.05,
+            "style": {
+                "style": "STATIC"
+            },
+            "variance": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "minecraft:sea_pickle",
+                    "data": {
+                        "pickles": 1
+                    }
+                },
+                {
+                    "weight": 2,
+                    "block": "minecraft:sea_pickle",
+                    "data": {
+                        "pickles": 2
+                    }
+                },
+                {
+                    "weight": 3,
+                    "block": "minecraft:sea_pickle",
+                    "data": {
+                        "pickles": 3
+                    }
+                },
+                {
+                    "weight": 4,
+                    "block": "minecraft:sea_pickle",
+                    "data": {
+                        "pickles": 4
+                    }
+                }
+            ]
+        },
+        {
+            "chance": 0.02,
+            "palette": [
+                {
+                    "block": "minecraft:kelp_plant"
+                }
+            ],
+            "stackMin": 2,
+            "stackMax": 6,
+            "partOf": "SEA_FLOOR"
+        },
+        {
+            "chance": 0.2,
+            "palette": [
+                {
+                    "block": "minecraft:seagrass"
+                }
+            ]
+        },
+        {
+            "chance": 0.2,
+            "palette": [
+                {
+                    "block": "minecraft:tall_seagrass",
+                    "data": {
+                        "half": "lower"
+                    }
+                }
+            ],
+            "topPalette": [
+                {
+                    "block": "minecraft:tall_seagrass",
+                    "data": {
+                        "half": "upper"
+                    }
+                }
+            ],
+            "partOf": "SEA_FLOOR"
+        }
+    ],
+    "loot": {
+        "mode": "ADD",
+        "multiplier": 1,
+        "tables": [
+            "tropical-dungeon"
+        ]
+    }
 }

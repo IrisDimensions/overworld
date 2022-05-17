@@ -1,52 +1,88 @@
 {
     "name": "Frozen Spruce Hills",
-    "derivative": "SNOWY_TAIGA",
     "color": "#0B5475",
     "rarity": 1,
+    "derivative": "SNOWY_TAIGA",
     "vanillaDerivative": "SNOWY_TAIGA",
-    "children": ["frozen/spruce-hills-extended"],
+    "customDerivitives": [
+        {
+            "id": "frozen_spruce_hills",
+            "waterColor": "#216FC4",
+            "fogColor": "#A6D1FF",
+            "downfallType": "snow",
+            "temperature": -3,
+            "waterFogColor": "#216FC4",
+            "foliageColor": "#B8D0E1",
+            "grassColor": "#D0E1FF"
+        }
+    ],
+    "children": [
+        "frozen/spruce-hills-extended"
+    ],
+    "generators": [
+        {
+            "generator": "smooth-dunes",
+            "max": 20,
+            "min": 6
+        }
+    ],
+    "wall": {
+        "palette": [
+            {
+                "block": "minecraft:stone"
+            },
+            {
+                "block": "minecraft:andesite"
+            }
+        ]
+    },
     "layers": [
         {
             "minHeight": 0,
             "maxHeight": 2,
-            "palette": [{"block": "minecraft:snow_block"}]
+            "palette": [
+                {
+                    "block": "minecraft:snow_block"
+                }
+            ]
         },
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "palette": [{"block": "minecraft:grass_block"}]
+            "palette": [
+                {
+                    "block": "minecraft:grass_block"
+                }
+            ]
         },
         {
             "minHeight": 6,
             "maxHeight": 28,
-            "palette": [{"block": "minecraft:dirt"}]
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                }
+            ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "palette": [
-                {"block": "minecraft:stone"},
-                {"block": "minecraft:andesite"},
-                {"block": "minecraft:stone"}
+                {
+                    "block": "minecraft:stone"
+                },
+                {
+                    "block": "minecraft:andesite"
+                },
+                {
+                    "block": "minecraft:stone"
+                }
             ]
         }
     ],
-    "customDerivitives": [{
-        "id": "frozen_spruce_hills",
-        "waterColor": "#216FC4",
-        "fogColor": "#A6D1FF",
-        "downfallType": "snow",
-        "temperature": -3,
-        "waterFogColor": "#216FC4",
-        "foliageColor": "#B8D0E1",
-        "grassColor": "#D0E1FF"
-    }],
-    "generators": [{
-        "generator": "smooth-dunes",
-        "max": 20,
-        "min": 6
-    }],
     "jigsawStructures": [
         {
             "rarity": 1700,
@@ -61,61 +97,75 @@
             "structure": "village-snowy"
         }
     ],
-    "decorators": [{
-        "chance": 1,
-        "variance": {
-            "style": "NOWHERE",
-            "zoom": 0.23
-        },
-        "palette": [
-            {
-                "data": {"layers": 1},
-                "block": "minecraft:snow"
-            },
-            {"block": "minecraft:air"}
-        ]
-    }],
-    "objects": [{
-        "chance": 0.8,
-        "density": 3,
-        "snow": 1,
-        "rotation": {
-            "yAxis": {
-                "min": 0,
-                "max": 0,
-                "interval": 90,
+    "objects": [
+        {
+            "chance": 0.8,
+            "density": 3,
+            "snow": 1,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
                 "enabled": true
             },
-            "enabled": true
-        },
-        "edit": [{
-            "find": [{"block": "minecraft:spruce_leaves"}],
-            "replace": {
-                "style": {
-                    "style": "PERLIN",
-                    "zoom": 0.2
-                },
-                "palette": [
-                    {"block": "minecraft:oak_leaves"},
-                    {"block": "minecraft:dark_oak_leaves"}
-                ]
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:spruce_leaves"
+                        }
+                    ],
+                    "replace": {
+                        "style": {
+                            "style": "PERLIN",
+                            "zoom": 0.2
+                        },
+                        "palette": [
+                            {
+                                "block": "minecraft:oak_leaves"
+                            },
+                            {
+                                "block": "minecraft:dark_oak_leaves"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "place": [
+                "trees/spruce/levergreen1",
+                "trees/spruce/levergreen1",
+                "trees/spruce/mevergreen1",
+                "trees/spruce/mevergreen2",
+                "trees/spruce/mevergreen3"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -2,
+                "z": 0
             }
-        }],
-        "place": [
-            "trees/spruce/levergreen1",
-            "trees/spruce/levergreen1",
-            "trees/spruce/mevergreen1",
-            "trees/spruce/mevergreen2",
-            "trees/spruce/mevergreen3"
-        ],
-        "translate": {
-            "x": 0,
-            "y": -2,
-            "z": 0
         }
-    }],
-    "wall": {"palette": [
-        {"block": "minecraft:stone"},
-        {"block": "minecraft:andesite"}
-    ]}
+    ],
+    "decorators": [
+        {
+            "chance": 1,
+            "variance": {
+                "style": "NOWHERE",
+                "zoom": 0.23
+            },
+            "palette": [
+                {
+                    "data": {
+                        "layers": 1
+                    },
+                    "block": "minecraft:snow"
+                },
+                {
+                    "block": "minecraft:air"
+                }
+            ]
+        }
+    ]
 }

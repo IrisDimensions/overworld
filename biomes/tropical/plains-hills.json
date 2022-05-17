@@ -1,36 +1,63 @@
 {
     "name": "Tropical Plains Hills",
-    "derivative": "JUNGLE",
-    "rarity": 1,
     "color": "#22AC77",
+    "rarity": 1,
+    "derivative": "JUNGLE",
     "vanillaDerivative": "JUNGLE",
-    "generators": [{
-        "generator": "smooth-dunes",
-        "max": 45,
-        "min": -10
-    }],
-    "customDerivitives": [{
-        "id": "tropical_plains_hills",
-        "foliageColor": "#40C42B",
-        "grassColor": "#41A726",
-        "category": "jungle",
-        "waterColor": "#3AB2A2",
-        "waterFogColor": "#3AB2A2"
-    }],
+    "customDerivitives": [
+        {
+            "id": "tropical_plains_hills",
+            "foliageColor": "#40C42B",
+            "grassColor": "#41A726",
+            "category": "jungle",
+            "waterColor": "#3AB2A2",
+            "waterFogColor": "#3AB2A2"
+        }
+    ],
+    "generators": [
+        {
+            "generator": "smooth-dunes",
+            "max": 45,
+            "min": -10
+        }
+    ],
+    "wall": {
+        "palette": [
+            {
+                "block": "minecraft:terracotta"
+            }
+        ]
+    },
     "layers": [
-        {"palette": [{"block": "minecraft:grass_block"}]},
+        {
+            "palette": [
+                {
+                    "block": "minecraft:grass_block"
+                }
+            ]
+        },
         {
             "minHeight": 2,
             "maxHeight": 2,
-            "palette": [{"block": "minecraft:dirt"}]
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                }
+            ]
         },
         {
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "minHeight": 1,
             "maxHeight": 1,
             "palette": [
-                {"block": "minecraft:dirt"},
-                {"block": "minecraft:stone"}
+                {
+                    "block": "minecraft:dirt"
+                },
+                {
+                    "block": "minecraft:stone"
+                }
             ]
         }
     ],
@@ -46,40 +73,6 @@
         {
             "rarity": 1200,
             "structure": "jungle-pyramid"
-        }
-    ],
-    "wall": {"palette": [{"block": "minecraft:terracotta"}]},
-    "decorators": [
-        {
-            "chance": 0.7,
-            "palette": [
-                {
-                    "weight": 2,
-                    "block": "minecraft:grass"
-                },
-                {
-                    "weight": 1,
-                    "block": "minecraft:tall_grass"
-                }
-            ]
-        },
-        {
-            "chance": 0.06,
-            "variance": {"style": "STATIC"},
-            "palette": [
-                {"block": "minecraft:dandelion"},
-                {"block": "minecraft:poppy"},
-                {"block": "minecraft:blue_orchid"},
-                {"block": "minecraft:allium"},
-                {"block": "minecraft:azure_bluet"},
-                {"block": "minecraft:red_tulip"},
-                {"block": "minecraft:orange_tulip"},
-                {"block": "minecraft:white_tulip"},
-                {"block": "minecraft:pink_tulip"},
-                {"block": "minecraft:oxeye_daisy"},
-                {"block": "minecraft:cornflower"},
-                {"block": "minecraft:lily_of_the_valley"}
-            ]
         }
     ],
     "objects": [
@@ -146,7 +139,9 @@
                     "max": 360
                 }
             },
-            "translate": {"y": -2}
+            "translate": {
+                "y": -2
+            }
         },
         {
             "chance": 0.008,
@@ -168,7 +163,68 @@
                     "interval": 90
                 }
             },
-            "translate": {"y": 1}
+            "translate": {
+                "y": 1
+            }
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.7,
+            "palette": [
+                {
+                    "weight": 2,
+                    "block": "minecraft:grass"
+                },
+                {
+                    "weight": 1,
+                    "block": "minecraft:tall_grass"
+                }
+            ]
+        },
+        {
+            "chance": 0.06,
+            "variance": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "minecraft:dandelion"
+                },
+                {
+                    "block": "minecraft:poppy"
+                },
+                {
+                    "block": "minecraft:blue_orchid"
+                },
+                {
+                    "block": "minecraft:allium"
+                },
+                {
+                    "block": "minecraft:azure_bluet"
+                },
+                {
+                    "block": "minecraft:red_tulip"
+                },
+                {
+                    "block": "minecraft:orange_tulip"
+                },
+                {
+                    "block": "minecraft:white_tulip"
+                },
+                {
+                    "block": "minecraft:pink_tulip"
+                },
+                {
+                    "block": "minecraft:oxeye_daisy"
+                },
+                {
+                    "block": "minecraft:cornflower"
+                },
+                {
+                    "block": "minecraft:lily_of_the_valley"
+                }
+            ]
         }
     ]
 }

@@ -1,40 +1,94 @@
 {
     "name": "Tropical Beach",
-    "derivative": "JUNGLE",
-    "rarity": 1,
     "color": "#57DFA9",
+    "rarity": 1,
+    "derivative": "JUNGLE",
     "vanillaDerivative": "JUNGLE",
-    "generators": [{
-        "min": -3,
-        "max": 3,
-        "generator": "plain"
-    }],
+    "generators": [
+        {
+            "min": -3,
+            "max": 3,
+            "generator": "plain"
+        }
+    ],
+    "wall": {
+        "palette": [
+            {
+                "block": "minecraft:smooth_sandstone"
+            }
+        ]
+    },
     "layers": [
         {
             "minHeight": 3,
             "maxHeight": 6,
-            "palette": [{"block": "minecraft:sand"}]
+            "palette": [
+                {
+                    "block": "minecraft:sand"
+                }
+            ]
         },
         {
             "minHeight": 1,
             "maxHeight": 3,
-            "palette": [{"block": "minecraft:dirt"}]
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                }
+            ]
         }
     ],
-    "effects": [{
-        "particleAltX": 0.301,
-        "particleAltY": -0.33885,
-        "particleAltZ": 0.301,
-        "chance": 1,
-        "particleEffect": "TOTEM",
-        "particleOffset": 12,
-        "interval": 550,
-        "particleCount": 0
-    }],
+    "objects": [
+        {
+            "chance": 1,
+            "mode": "STILT",
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:player_wall_head"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:air"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "trees/jungle/palm1",
+                "trees/jungle/palm2",
+                "trees/jungle/palm3",
+                "trees/jungle/palm12",
+                "trees/jungle/palm11",
+                "trees/jungle/palm10",
+                "trees/jungle/palm9"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        }
+    ],
     "decorators": [
         {
             "chance": 0.01,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 0.3,
             "palette": [
                 {
@@ -45,7 +99,9 @@
                     },
                     "block": "minecraft:jungle_button"
                 },
-                {"block": "minecraft:air"},
+                {
+                    "block": "minecraft:air"
+                },
                 {
                     "data": {
                         "face": "floor",
@@ -55,51 +111,43 @@
                     "block": "minecraft:jungle_button"
                 }
             ],
-            "style": {"style": "STATIC"}
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
             "partOf": "SHORE_LINE",
             "verticalZoom": 0.2,
             "chance": 0.21,
-            "variance": {"style": "SIMPLEX"},
+            "variance": {
+                "style": "SIMPLEX"
+            },
             "stackMax": 6,
             "zoom": 5,
-            "palette": [{"block": "minecraft:sugar_cane"}],
-            "style": {"style": "STATIC"},
-            "heightVariance": {"style": "NOWHERE"},
+            "palette": [
+                {
+                    "block": "minecraft:sugar_cane"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            },
+            "heightVariance": {
+                "style": "NOWHERE"
+            },
             "stackMin": 1
         }
     ],
-    "objects": [{
-        "chance": 1,
-        "mode": "STILT",
-        "edit": [{
-            "find": [{"block": "minecraft:player_wall_head"}],
-            "replace": {"palette": [{"block": "minecraft:air"}]}
-        }],
-        "rotation": {
-            "yAxis": {
-                "min": 0,
-                "max": 0,
-                "interval": 90,
-                "enabled": true
-            },
-            "enabled": true
-        },
-        "place": [
-            "trees/jungle/palm1",
-            "trees/jungle/palm2",
-            "trees/jungle/palm3",
-            "trees/jungle/palm12",
-            "trees/jungle/palm11",
-            "trees/jungle/palm10",
-            "trees/jungle/palm9"
-        ],
-        "translate": {
-            "x": 0,
-            "y": 0,
-            "z": 0
+    "effects": [
+        {
+            "particleAltX": 0.301,
+            "particleAltY": -0.33885,
+            "particleAltZ": 0.301,
+            "chance": 1,
+            "particleEffect": "TOTEM",
+            "particleOffset": 12,
+            "interval": 550,
+            "particleCount": 0
         }
-    }],
-    "wall": {"palette": [{"block": "minecraft:smooth_sandstone"}]}
+    ]
 }

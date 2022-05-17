@@ -1,26 +1,72 @@
 {
     "name": "Ocean Beach",
+    "color": "#39ABDF",
     "derivative": "PLAINS",
     "vanillaDerivative": "PLAINS",
-    "color": "#39ABDF",
-    "generators": [{
-        "generator": "ocean",
-        "max": -20,
-        "min": -30
-    }],
+    "generators": [
+        {
+            "generator": "ocean",
+            "max": -20,
+            "min": -30
+        }
+    ],
+    "biomeZoom": 60,
+    "biomeStyle": {
+        "style": "SIMPLEX"
+    },
+    "wall": {
+        "palette": [
+            {
+                "block": "minecraft:stone"
+            },
+            {
+                "block": "minecraft:andesite"
+            }
+        ]
+    },
     "layers": [
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "palette": [{"block": "minecraft:grass_block"}]
+            "palette": [
+                {
+                    "block": "minecraft:grass_block"
+                }
+            ]
         },
         {
             "minHeight": 1,
             "maxHeight": 3,
             "palette": [
-                {"block": "minecraft:dirt"},
-                {"block": "minecraft:coarse_dirt"}
+                {
+                    "block": "minecraft:dirt"
+                },
+                {
+                    "block": "minecraft:coarse_dirt"
+                }
             ]
+        }
+    ],
+    "objects": [
+        {
+            "place": [
+                "structures/landstone1",
+                "structures/landstone2",
+                "structures/landstone3",
+                "structures/landstone4",
+                "structures/landstone5"
+            ],
+            "chance": 0.02,
+            "mode": "PAINT",
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": -360,
+                    "max": 360
+                }
+            }
         }
     ],
     "decorators": [
@@ -44,18 +90,42 @@
                 }
             },
             "palette": [
-                {"block": "minecraft:dandelion"},
-                {"block": "minecraft:poppy"},
-                {"block": "minecraft:blue_orchid"},
-                {"block": "minecraft:allium"},
-                {"block": "minecraft:azure_bluet"},
-                {"block": "minecraft:red_tulip"},
-                {"block": "minecraft:orange_tulip"},
-                {"block": "minecraft:white_tulip"},
-                {"block": "minecraft:pink_tulip"},
-                {"block": "minecraft:oxeye_daisy"},
-                {"block": "minecraft:cornflower"},
-                {"block": "minecraft:lily_of_the_valley"}
+                {
+                    "block": "minecraft:dandelion"
+                },
+                {
+                    "block": "minecraft:poppy"
+                },
+                {
+                    "block": "minecraft:blue_orchid"
+                },
+                {
+                    "block": "minecraft:allium"
+                },
+                {
+                    "block": "minecraft:azure_bluet"
+                },
+                {
+                    "block": "minecraft:red_tulip"
+                },
+                {
+                    "block": "minecraft:orange_tulip"
+                },
+                {
+                    "block": "minecraft:white_tulip"
+                },
+                {
+                    "block": "minecraft:pink_tulip"
+                },
+                {
+                    "block": "minecraft:oxeye_daisy"
+                },
+                {
+                    "block": "minecraft:cornflower"
+                },
+                {
+                    "block": "minecraft:lily_of_the_valley"
+                }
             ]
         },
         {
@@ -63,46 +133,34 @@
             "chance": 0.09,
             "stackMin": 1,
             "stackMax": 4,
-            "palette": [{"block": "minecraft:sugar_cane"}],
+            "palette": [
+                {
+                    "block": "minecraft:sugar_cane"
+                }
+            ],
             "style": {
                 "style": "NOWHERE",
                 "zoom": 0.65
             },
-            "heightVariance": {"style": "STATIC"}
+            "heightVariance": {
+                "style": "STATIC"
+            }
         },
         {
             "chance": 0.01,
-            "palette": [{"block": "minecraft:tall_grass"}]
+            "palette": [
+                {
+                    "block": "minecraft:tall_grass"
+                }
+            ]
         },
         {
             "chance": 0.5,
-            "palette": [{"block": "minecraft:grass"}]
+            "palette": [
+                {
+                    "block": "minecraft:grass"
+                }
+            ]
         }
-    ],
-    "objects": [{
-        "place": [
-            "structures/landstone1",
-            "structures/landstone2",
-            "structures/landstone3",
-            "structures/landstone4",
-            "structures/landstone5"
-        ],
-        "chance": 0.02,
-        "mode": "PAINT",
-        "rotation": {
-            "enabled": true,
-            "yAxis": {
-                "enabled": true,
-                "interval": 90,
-                "min": -360,
-                "max": 360
-            }
-        }
-    }],
-    "biomeZoom": 60,
-    "biomeStyle": {"style": "SIMPLEX"},
-    "wall": {"palette": [
-        {"block": "minecraft:stone"},
-        {"block": "minecraft:andesite"}
-    ]}
+    ]
 }

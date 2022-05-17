@@ -1,36 +1,86 @@
 {
     "name": "Temperate Oak Beach",
-    "rarity": 1,
     "color": "#8D8F70",
+    "rarity": 1,
     "derivative": "DEEP_LUKEWARM_OCEAN",
     "vanillaDerivative": "FOREST",
-    "generators": [{
-        "min": 0,
-        "max": 0,
-        "generator": "plain"
-    }],
+    "biomeScatter": [
+        "FOREST",
+        "PLAINS"
+    ],
+    "generators": [
+        {
+            "min": 0,
+            "max": 0,
+            "generator": "plain"
+        }
+    ],
+    "biomeZoom": 60,
+    "biomeStyle": {
+        "style": "SIMPLEX"
+    },
+    "wall": {
+        "style": {
+            "style": "STATIC"
+        },
+        "palette": [
+            {
+                "block": "minecraft:stone"
+            },
+            {
+                "block": "minecraft:andesite"
+            },
+            {
+                "block": "minecraft:stone"
+            }
+        ]
+    },
     "layers": [
         {
-            "style": {"style": "STATIC"},
-            "palette": [{"block": "minecraft:sand"}]
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "minecraft:sand"
+                }
+            ]
         },
-        {"palette": [{"block": "minecraft:dirt"}]},
+        {
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                }
+            ]
+        },
         {
             "minHeight": 1,
             "maxHeight": 3,
             "palette": [
-                {"block": "minecraft:dirt"},
-                {"block": "minecraft:coarse_dirt"}
+                {
+                    "block": "minecraft:dirt"
+                },
+                {
+                    "block": "minecraft:coarse_dirt"
+                }
             ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "palette": [
-                {"block": "minecraft:stone"},
-                {"block": "minecraft:andesite"},
-                {"block": "minecraft:stone"}
+                {
+                    "block": "minecraft:stone"
+                },
+                {
+                    "block": "minecraft:andesite"
+                },
+                {
+                    "block": "minecraft:stone"
+                }
             ]
         }
     ],
@@ -85,36 +135,38 @@
             ]
         }
     ],
-    "biomeZoom": 60,
-    "biomeStyle": {"style": "SIMPLEX"},
     "decorators": [
         {
             "chance": 0.01,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "palette": [
-                {"block": "minecraft:white_tulip"},
-                {"block": "minecraft:allium"},
-                {"block": "minecraft:lily_of_the_valley"}
+                {
+                    "block": "minecraft:white_tulip"
+                },
+                {
+                    "block": "minecraft:allium"
+                },
+                {
+                    "block": "minecraft:lily_of_the_valley"
+                }
             ]
         },
         {
             "chance": 0.35,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 0.3,
-            "palette": [{"block": "minecraft:grass"}],
-            "style": {"style": "STATIC"}
+            "palette": [
+                {
+                    "block": "minecraft:grass"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
         }
-    ],
-    "wall": {
-        "style": {"style": "STATIC"},
-        "palette": [
-            {"block": "minecraft:stone"},
-            {"block": "minecraft:andesite"},
-            {"block": "minecraft:stone"}
-        ]
-    },
-    "biomeScatter": [
-        "FOREST",
-        "PLAINS"
     ]
 }

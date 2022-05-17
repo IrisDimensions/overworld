@@ -1,103 +1,146 @@
 {
     "name": "Swamp Cambian Drift",
-    "derivative": "DARK_FOREST",
-    "rarity": 1,
     "color": "#90B509",
+    "rarity": 1,
+    "derivative": "DARK_FOREST",
     "vanillaDerivative": "DARK_FOREST",
-    "children": ["swamp/cambian-drift-extended"],
-    "generators": [{
-        "min": -3,
-        "max": 15,
-        "generator": "mountain"
-    }],
-    "customDerivitives": [{
-        "category": "forest",
-        "id": "swamp_cambian_drift",
-        "waterColor": "#684D1A",
-        "foliageColor": "2B4A00",
-        "grassColor": "#5C581A",
-        "spawnRarity": 20,
-        "spawns": [{"type": "SLIME"}]
-    }],
+    "customDerivitives": [
+        {
+            "category": "forest",
+            "id": "swamp_cambian_drift",
+            "waterColor": "#684D1A",
+            "foliageColor": "2B4A00",
+            "grassColor": "#5C581A",
+            "spawnRarity": 20,
+            "spawns": [
+                {
+                    "type": "SLIME"
+                }
+            ]
+        }
+    ],
+    "children": [
+        "swamp/cambian-drift-extended"
+    ],
+    "generators": [
+        {
+            "min": -3,
+            "max": 15,
+            "generator": "mountain"
+        }
+    ],
+    "wall": {
+        "style": {
+            "style": "STATIC"
+        },
+        "palette": [
+            {
+                "block": "minecraft:stone"
+            },
+            {
+                "block": "minecraft:andesite"
+            },
+            {
+                "block": "minecraft:stone"
+            }
+        ]
+    },
     "layers": [
         {
-            "style": {"style": "NOWHERE"},
+            "style": {
+                "style": "NOWHERE"
+            },
             "zoom": 0.5,
             "palette": [
                 {
                     "weight": 3,
                     "block": "minecraft:grass_block"
                 },
-                {"block": "minecraft:podzol"},
-                {"block": "minecraft:coarse_dirt"},
+                {
+                    "block": "minecraft:podzol"
+                },
+                {
+                    "block": "minecraft:coarse_dirt"
+                },
                 {
                     "weight": 4,
                     "block": "minecraft:grass_block"
                 }
             ]
         },
-        {"palette": [{"block": "minecraft:dirt"}]},
+        {
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                }
+            ]
+        },
         {
             "minHeight": 1,
             "maxHeight": 3,
             "palette": [
-                {"block": "minecraft:dirt"},
-                {"block": "minecraft:coarse_dirt"}
+                {
+                    "block": "minecraft:dirt"
+                },
+                {
+                    "block": "minecraft:coarse_dirt"
+                }
             ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "palette": [
-                {"block": "minecraft:stone"},
-                {"block": "minecraft:andesite"},
-                {"block": "minecraft:stone"}
+                {
+                    "block": "minecraft:stone"
+                },
+                {
+                    "block": "minecraft:andesite"
+                },
+                {
+                    "block": "minecraft:stone"
+                }
             ]
-        }
-    ],
-    "decorators": [
-        {
-            "chance": 0.03,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.3,
-            "palette": [
-                {"block": "minecraft:dead_bush"},
-                {"block": "minecraft:brown_mushroom"},
-                {"block": "minecraft:red_mushroom"},
-                {"block": "minecraft:brown_mushroom"},
-                {"block": "minecraft:red_mushroom"}
-            ],
-            "style": {"style": "STATIC"}
-        },
-        {
-            "chance": 2.0E-4,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.3,
-            "palette": [{"block": "minecraft:crimson_fungus"}],
-            "style": {"style": "STATIC"}
-        },
-        {
-            "chance": 0.45,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.3,
-            "palette": [{"block": "minecraft:grass"}],
-            "style": {"style": "STATIC"}
         }
     ],
     "objects": [
         {
             "chance": 0.7,
-            "translate": {"y": -2},
+            "translate": {
+                "y": -2
+            },
             "density": 2,
             "edit": [
                 {
-                    "find": [{"block": "minecraft:oak_leaves"}],
-                    "replace": {"palette": [{"block": "minecraft:dark_oak_leaves"}]}
+                    "find": [
+                        {
+                            "block": "minecraft:oak_leaves"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:dark_oak_leaves"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "find": [{"block": "minecraft:dark_oak_fence"}],
-                    "replace": {"palette": [{"block": "minecraft:dark_oak_leaves"}]}
+                    "find": [
+                        {
+                            "block": "minecraft:dark_oak_fence"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:dark_oak_leaves"
+                            }
+                        ]
+                    }
                 }
             ],
             "rotation": {
@@ -150,10 +193,22 @@
         {
             "chance": 0.07,
             "density": 1,
-            "edit": [{
-                "find": [{"block": "minecraft:red_mushroom_block"}],
-                "replace": {"palette": [{"block": "minecraft:brown_mushroom_block"}]}
-            }],
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:red_mushroom_block"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:brown_mushroom_block"
+                            }
+                        ]
+                    }
+                }
+            ],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -208,20 +263,60 @@
             "chance": 0.1,
             "edit": [
                 {
-                    "find": [{"block": "minecraft:oak_log"}],
-                    "replace": {"palette": [{"block": "minecraft:dark_oak_log"}]}
+                    "find": [
+                        {
+                            "block": "minecraft:oak_log"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:dark_oak_log"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "find": [{"block": "minecraft:oak_wood"}],
-                    "replace": {"palette": [{"block": "minecraft:dark_oak_wood"}]}
+                    "find": [
+                        {
+                            "block": "minecraft:oak_wood"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:dark_oak_wood"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "find": [{"block": "minecraft:oak_fence"}],
-                    "replace": {"palette": [{"block": "minecraft:dark_oak_fence"}]}
+                    "find": [
+                        {
+                            "block": "minecraft:oak_fence"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:dark_oak_fence"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "find": [{"block": "minecraft:dark_oak_planks"}],
-                    "replace": {"palette": [{"block": "minecraft:stripped_dark_oak_wood"}]}
+                    "find": [
+                        {
+                            "block": "minecraft:dark_oak_planks"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:stripped_dark_oak_wood"
+                            }
+                        ]
+                    }
                 }
             ],
             "rotation": {
@@ -247,20 +342,60 @@
             "chance": 0.3,
             "edit": [
                 {
-                    "find": [{"block": "minecraft:oak_log"}],
-                    "replace": {"palette": [{"block": "minecraft:dark_oak_log"}]}
+                    "find": [
+                        {
+                            "block": "minecraft:oak_log"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:dark_oak_log"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "find": [{"block": "minecraft:oak_wood"}],
-                    "replace": {"palette": [{"block": "minecraft:dark_oak_wood"}]}
+                    "find": [
+                        {
+                            "block": "minecraft:oak_wood"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:dark_oak_wood"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "find": [{"block": "minecraft:oak_fence"}],
-                    "replace": {"palette": [{"block": "minecraft:dark_oak_fence"}]}
+                    "find": [
+                        {
+                            "block": "minecraft:oak_fence"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:dark_oak_fence"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "find": [{"block": "minecraft:dark_oak_planks"}],
-                    "replace": {"palette": [{"block": "minecraft:stripped_dark_oak_wood"}]}
+                    "find": [
+                        {
+                            "block": "minecraft:dark_oak_planks"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:stripped_dark_oak_wood"
+                            }
+                        ]
+                    }
                 }
             ],
             "rotation": {
@@ -282,8 +417,12 @@
         },
         {
             "chance": 0.001,
-            "rotation": {"enabled": false},
-            "place": ["clutter/genericgrave1"],
+            "rotation": {
+                "enabled": false
+            },
+            "place": [
+                "clutter/genericgrave1"
+            ],
             "translate": {
                 "x": 0,
                 "y": -1,
@@ -291,12 +430,63 @@
             }
         }
     ],
-    "wall": {
-        "style": {"style": "STATIC"},
-        "palette": [
-            {"block": "minecraft:stone"},
-            {"block": "minecraft:andesite"},
-            {"block": "minecraft:stone"}
-        ]
-    }
+    "decorators": [
+        {
+            "chance": 0.03,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "block": "minecraft:dead_bush"
+                },
+                {
+                    "block": "minecraft:brown_mushroom"
+                },
+                {
+                    "block": "minecraft:red_mushroom"
+                },
+                {
+                    "block": "minecraft:brown_mushroom"
+                },
+                {
+                    "block": "minecraft:red_mushroom"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "chance": 0.0002,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "block": "minecraft:crimson_fungus"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "chance": 0.45,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "block": "minecraft:grass"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        }
+    ]
 }

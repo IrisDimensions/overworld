@@ -1,18 +1,45 @@
 {
     "name": "Mushroom Lake",
+    "color": "#3171BF",
     "derivative": "MUSHROOM_FIELDS",
     "vanillaDerivative": "MUSHROOM_FIELDS",
-    "color": "#3171BF",
+    "generators": [
+        {
+            "min": -32,
+            "max": -10,
+            "generator": "mountain"
+        }
+    ],
+    "wall": {
+        "style": {
+            "style": "STATIC"
+        },
+        "palette": [
+            {
+                "block": "minecraft:stone"
+            },
+            {
+                "block": "minecraft:andesite"
+            },
+            {
+                "block": "minecraft:stone"
+            }
+        ]
+    },
     "layers": [
         {
             "zoom": 0.3,
-            "style": {"style": "NOWHERE"},
+            "style": {
+                "style": "NOWHERE"
+            },
             "palette": [
                 {
                     "weight": 7,
                     "block": "minecraft:mycelium"
                 },
-                {"block": "minecraft:gravel"},
+                {
+                    "block": "minecraft:gravel"
+                },
                 {
                     "weight": 9,
                     "block": "minecraft:mycelium"
@@ -23,60 +50,31 @@
             "minHeight": 2,
             "maxHeight": 4,
             "palette": [
-                {"block": "minecraft:dirt"},
-                {"block": "minecraft:coarse_dirt"}
+                {
+                    "block": "minecraft:dirt"
+                },
+                {
+                    "block": "minecraft:coarse_dirt"
+                }
             ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "STATIC"},
-            "palette": [
-                {"block": "minecraft:stone"},
-                {"block": "minecraft:andesite"},
-                {"block": "minecraft:stone"}
-            ]
-        }
-    ],
-    "generators": [{
-        "min": -32,
-        "max": -10,
-        "generator": "mountain"
-    }],
-    "decorators": [
-        {
-            "chance": 0.005,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.3,
+            "style": {
+                "style": "STATIC"
+            },
             "palette": [
                 {
-                    "data": {
-                        "face": "floor",
-                        "powered": false,
-                        "facing": "east"
-                    },
-                    "block": "minecraft:stone_button"
+                    "block": "minecraft:stone"
                 },
                 {
-                    "data": {
-                        "face": "floor",
-                        "powered": false,
-                        "facing": "south"
-                    },
-                    "block": "minecraft:stone_button"
+                    "block": "minecraft:andesite"
+                },
+                {
+                    "block": "minecraft:stone"
                 }
-            ],
-            "style": {"style": "STATIC"}
-        },
-        {
-            "chance": 0.007,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.3,
-            "palette": [
-                {"block": "minecraft:red_mushroom"},
-                {"block": "minecraft:brown_mushroom"}
-            ],
-            "style": {"style": "STATIC"}
+            ]
         }
     ],
     "objects": [
@@ -113,10 +111,22 @@
         {
             "chance": 0.08,
             "density": 2,
-            "edit": [{
-                "find": [{"block": "minecraft:red_mushroom_block"}],
-                "replace": {"palette": [{"block": "minecraft:brown_mushroom_block"}]}
-            }],
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:red_mushroom_block"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:brown_mushroom_block"
+                            }
+                        ]
+                    }
+                }
+            ],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -147,10 +157,22 @@
         {
             "chance": 0.025,
             "density": 1,
-            "edit": [{
-                "find": [{"block": "minecraft:red_mushroom_block"}],
-                "replace": {"palette": [{"block": "minecraft:brown_mushroom_block"}]}
-            }],
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:red_mushroom_block"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:brown_mushroom_block"
+                            }
+                        ]
+                    }
+                }
+            ],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -199,16 +221,58 @@
             }
         }
     ],
-    "wall": {
-        "style": {"style": "STATIC"},
-        "palette": [
-            {"block": "minecraft:stone"},
-            {"block": "minecraft:andesite"},
-            {"block": "minecraft:stone"}
-        ]
-    },
+    "decorators": [
+        {
+            "chance": 0.005,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "east"
+                    },
+                    "block": "minecraft:stone_button"
+                },
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "south"
+                    },
+                    "block": "minecraft:stone_button"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "chance": 0.007,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "block": "minecraft:red_mushroom"
+                },
+                {
+                    "block": "minecraft:brown_mushroom"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        }
+    ],
     "slab": {
-        "style": {"style": "STATIC"},
+        "style": {
+            "style": "STATIC"
+        },
         "palette": [
             {
                 "weight": 2,

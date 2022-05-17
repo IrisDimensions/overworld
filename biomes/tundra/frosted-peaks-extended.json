@@ -1,19 +1,42 @@
 {
     "name": "Frosted Peaks",
+    "rarity": 5,
     "derivative": "OLD_GROWTH_SPRUCE_TAIGA",
     "vanillaDerivative": "OLD_GROWTH_SPRUCE_TAIGA",
-    "customDerivitives": [{
-        "id": "frosted-peaks",
-        "grassColor": "#53AEB8",
-        "category": "extreme_hills"
-    }],
+    "customDerivitives": [
+        {
+            "id": "frosted-peaks",
+            "grassColor": "#53AEB8",
+            "category": "extreme_hills"
+        }
+    ],
+    "generators": [
+        {
+            "generator": "mountain",
+            "max": 240,
+            "min": 126
+        }
+    ],
     "biomeZoom": 0.73,
-    "rarity": 5,
-    "generators": [{
-        "generator": "mountain",
-        "max": 240,
-        "min": 126
-    }],
+    "wall": {
+        "style": {
+            "style": "STATIC"
+        },
+        "palette": [
+            {
+                "block": "minecraft:stone"
+            },
+            {
+                "block": "minecraft:andesite"
+            },
+            {
+                "block": "minecraft:gravel"
+            },
+            {
+                "block": "minecraft:basalt"
+            }
+        ]
+    },
     "layers": [
         {
             "minHeight": 1,
@@ -22,7 +45,11 @@
                 "minimumSlope": 0.1,
                 "maximumSlope": 1.65
             },
-            "palette": [{"block": "minecraft:snow_block"}]
+            "palette": [
+                {
+                    "block": "minecraft:snow_block"
+                }
+            ]
         },
         {
             "minHeight": 2,
@@ -53,8 +80,12 @@
         {
             "minHeight": 2,
             "maxHeight": 4,
-            "style": {"style": "STATIC"},
-            "slopeCondition": {"minimumSlope": 2.5},
+            "style": {
+                "style": "STATIC"
+            },
+            "slopeCondition": {
+                "minimumSlope": 2.5
+            },
             "palette": [
                 {
                     "block": "minecraft:smooth_basalt",
@@ -77,7 +108,9 @@
         {
             "minHeight": 2,
             "maxHeight": 18,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "palette": [
                 {
                     "block": "minecraft:stone",
@@ -90,9 +123,47 @@
             ]
         }
     ],
+    "decorators": [
+        {
+            "chance": 0.01,
+            "palette": [
+                {
+                    "block": "minecraft:tall_grass"
+                }
+            ]
+        },
+        {
+            "chance": 0.5,
+            "palette": [
+                {
+                    "block": "minecraft:grass"
+                }
+            ]
+        },
+        {
+            "chance": 0.15,
+            "palette": [
+                {
+                    "block": "minecraft:fern"
+                }
+            ]
+        },
+        {
+            "chance": 0.15,
+            "palette": [
+                {
+                    "block": "minecraft:fern"
+                }
+            ]
+        }
+    ],
     "slab": {
-        "style": {"style": "STATIC"},
-        "slopeCondition": {"minimumSlope": 2.3},
+        "style": {
+            "style": "STATIC"
+        },
+        "slopeCondition": {
+            "minimumSlope": 2.3
+        },
         "palette": [
             {
                 "data": {
@@ -114,41 +185,20 @@
             }
         ]
     },
-    "carving": {"caves": [{
-        "breakSurface": true,
-        "cave": "rocky/tubes",
-        "rarity": 11,
-        "caveStartHeight": {
-            "max": 180,
-            "min": 80,
-            "style": {"style": "STATIC"}
-        }
-    }]},
-    "decorators": [
-        {
-            "chance": 0.01,
-            "palette": [{"block": "minecraft:tall_grass"}]
-        },
-        {
-            "chance": 0.5,
-            "palette": [{"block": "minecraft:grass"}]
-        },
-        {
-            "chance": 0.15,
-            "palette": [{"block": "minecraft:fern"}]
-        },
-        {
-            "chance": 0.15,
-            "palette": [{"block": "minecraft:fern"}]
-        }
-    ],
-    "wall": {
-        "style": {"style": "STATIC"},
-        "palette": [
-            {"block": "minecraft:stone"},
-            {"block": "minecraft:andesite"},
-            {"block": "minecraft:gravel"},
-            {"block": "minecraft:basalt"}
+    "carving": {
+        "caves": [
+            {
+                "breakSurface": true,
+                "cave": "rocky/tubes",
+                "rarity": 11,
+                "caveStartHeight": {
+                    "max": 180,
+                    "min": 80,
+                    "style": {
+                        "style": "STATIC"
+                    }
+                }
+            }
         ]
     }
 }

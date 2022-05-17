@@ -1,38 +1,83 @@
 {
     "name": "Hot Beach",
-    "rarity": 1,
     "color": "#E6DD70",
+    "rarity": 1,
     "derivative": "WARM_OCEAN",
     "vanillaDerivative": "DESERT",
-    "customDerivitives": [{
-        "foliageColor": "#b8945a",
-        "category": "beach",
-        "downfallType": "none",
-        "humidity": 0,
-        "temperature": 0.95,
-        "id": "hot_beach"
-    }],
+    "customDerivitives": [
+        {
+            "foliageColor": "#b8945a",
+            "category": "beach",
+            "downfallType": "none",
+            "humidity": 0,
+            "temperature": 0.95,
+            "id": "hot_beach"
+        }
+    ],
+    "generators": [
+        {
+            "min": 0,
+            "max": 1,
+            "generator": "plain"
+        }
+    ],
+    "wall": {
+        "style": {
+            "style": "STATIC"
+        },
+        "palette": [
+            {
+                "block": "minecraft:smooth_sandstone"
+            },
+            {
+                "block": "minecraft:sand"
+            },
+            {
+                "block": "minecraft:smooth_sandstone"
+            }
+        ]
+    },
     "layers": [
         {
             "minHeight": 3,
             "maxHeight": 6,
-            "palette": [{"block": "minecraft:sand"}]
+            "palette": [
+                {
+                    "block": "minecraft:sand"
+                }
+            ]
         },
         {
             "minHeight": 1,
             "maxHeight": 3,
-            "palette": [{"block": "minecraft:dirt"}]
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                }
+            ]
         }
     ],
-    "generators": [{
-        "min": 0,
-        "max": 1,
-        "generator": "plain"
-    }],
+    "objects": [
+        {
+            "density": 3,
+            "mode": "STILT",
+            "chance": 1,
+            "place": [
+                "trees/jungle/palm1",
+                "trees/jungle/palm2",
+                "trees/jungle/palm3",
+                "trees/jungle/palm4",
+                "trees/jungle/palm6",
+                "trees/jungle/palm7"
+            ]
+        }
+    ],
     "decorators": [
         {
             "chance": 0.01,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 0.3,
             "palette": [
                 {
@@ -64,7 +109,9 @@
                     },
                     "block": "minecraft:turtle_egg"
                 },
-                {"block": "minecraft:air"},
+                {
+                    "block": "minecraft:air"
+                },
                 {
                     "data": {
                         "face": "floor",
@@ -74,40 +121,27 @@
                     "block": "minecraft:jungle_button"
                 }
             ],
-            "style": {"style": "STATIC"}
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
             "partOf": "SHORE_LINE",
             "chance": 0.09,
             "stackMin": 1,
             "stackMax": 4,
-            "palette": [{"block": "minecraft:sugar_cane"}],
+            "palette": [
+                {
+                    "block": "minecraft:sugar_cane"
+                }
+            ],
             "style": {
                 "style": "NOWHERE",
                 "zoom": 0.65
             },
-            "heightVariance": {"style": "STATIC"}
+            "heightVariance": {
+                "style": "STATIC"
+            }
         }
-    ],
-    "wall": {
-        "style": {"style": "STATIC"},
-        "palette": [
-            {"block": "minecraft:smooth_sandstone"},
-            {"block": "minecraft:sand"},
-            {"block": "minecraft:smooth_sandstone"}
-        ]
-    },
-    "objects": [{
-        "density": 3,
-        "mode": "STILT",
-        "chance": 1,
-        "place": [
-            "trees/jungle/palm1",
-            "trees/jungle/palm2",
-            "trees/jungle/palm3",
-            "trees/jungle/palm4",
-            "trees/jungle/palm6",
-            "trees/jungle/palm7"
-        ]
-    }]
+    ]
 }

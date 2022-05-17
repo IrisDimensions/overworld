@@ -1,96 +1,94 @@
 {
     "name": "Tropical Rainforest Wicked",
-    "derivative": "JUNGLE",
-    "rarity": 1,
     "color": "#0BB675",
+    "rarity": 1,
+    "derivative": "JUNGLE",
     "vanillaDerivative": "SPARSE_JUNGLE",
+    "customDerivitives": [
+        {
+            "id": "tropical_rainforest_wicked",
+            "foliageColor": "#478F04",
+            "grassColor": "#197300",
+            "category": "jungle",
+            "waterColor": "#3AB2A2",
+            "waterFogColor": "#3AB2A2"
+        }
+    ],
     "children": [
         "tropical/rainforest-hills",
         "tropical/jungle-denmyre",
         "tropical/rainforest-wicked-child"
     ],
-    "customDerivitives": [{
-        "id": "tropical_rainforest_wicked",
-        "foliageColor": "#478F04",
-        "grassColor": "#197300",
-        "category": "jungle",
-        "waterColor": "#3AB2A2",
-        "waterFogColor": "#3AB2A2"
-    }],
-    "generators": [{
-        "min": 30,
-        "max": 90,
-        "generator": "mountain"
-    }],
+    "generators": [
+        {
+            "min": 30,
+            "max": 90,
+            "generator": "mountain"
+        }
+    ],
+    "wall": {
+        "style": {
+            "style": "NOWHERE"
+        },
+        "zoom": 0.1,
+        "palette": [
+            {
+                "block": "minecraft:stripped_jungle_wood"
+            },
+            {
+                "block": "minecraft:jungle_leaves"
+            },
+            {
+                "block": "minecraft:stripped_jungle_wood"
+            },
+            {
+                "block": "minecraft:jungle_leaves"
+            },
+            {
+                "block": "minecraft:stripped_jungle_wood"
+            },
+            {
+                "block": "minecraft:jungle_leaves"
+            },
+            {
+                "block": "minecraft:stripped_jungle_wood"
+            }
+        ]
+    },
     "layers": [
-        {"palette": [{"block": "minecraft:grass_block"}]},
+        {
+            "palette": [
+                {
+                    "block": "minecraft:grass_block"
+                }
+            ]
+        },
         {
             "minHeight": 2,
             "maxHeight": 4,
-            "palette": [{"block": "minecraft:dirt"}]
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                }
+            ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "STATIC"},
-            "palette": [
-                {"block": "minecraft:stone"},
-                {"block": "minecraft:andesite"},
-                {"block": "minecraft:stone"}
-            ]
-        }
-    ],
-    "effects": [{
-        "particleAltX": 0.301,
-        "particleAltY": -0.33885,
-        "particleAltZ": 0.301,
-        "chance": 1,
-        "particleEffect": "TOTEM",
-        "particleOffset": 12,
-        "interval": 550,
-        "particleCount": 0
-    }],
-    "decorators": [
-        {
-            "chance": 0.45,
-            "variance": {"style": "NOWHERE"},
-            "zoom": 0.1,
-            "palette": [
-                {"block": "minecraft:jungle_leaves"},
-                {"block": "minecraft:tall_grass"},
-                {"block": "minecraft:grass"},
-                {"block": "minecraft:jungle_leaves"},
-                {"block": "minecraft:grass"},
-                {"block": "minecraft:jungle_leaves"}
-            ],
             "style": {
-                "style": "FRACTAL_BILLOW_IRIS",
-                "fracture": {"style": "STATIC"}
-            }
-        },
-        {
-            "chance": 0.1,
-            "verticalZoom": 88,
-            "variance": {"style": "NOWHERE"},
-            "zoom": 10,
-            "palette": [{
-                "weight": 3,
-                "block": "minecraft:jungle_wood"
-            }],
-            "style": {"style": "STATIC"},
-            "heightVariance": {"style": "NOWHERE"}
-        },
-        {
-            "chance": 0.5,
-            "verticalZoom": 88,
-            "variance": {"style": "STATIC"},
-            "zoom": 10,
+                "style": "STATIC"
+            },
             "palette": [
-                {"block": "minecraft:grass"},
-                {"block": "minecraft:tall_grass"}
-            ],
-            "style": {"style": "STATIC"},
-            "heightVariance": {"style": "STATIC"}
+                {
+                    "block": "minecraft:stone"
+                },
+                {
+                    "block": "minecraft:andesite"
+                },
+                {
+                    "block": "minecraft:stone"
+                }
+            ]
         }
     ],
     "objects": [
@@ -106,7 +104,9 @@
                 },
                 "enabled": true
             },
-            "place": ["clutter/bincluster1"]
+            "place": [
+                "clutter/bincluster1"
+            ]
         },
         {
             "chance": 0.00375,
@@ -119,7 +119,9 @@
                 },
                 "enabled": true
             },
-            "place": ["clutter/camp1"]
+            "place": [
+                "clutter/camp1"
+            ]
         },
         {
             "chance": 0.4,
@@ -247,20 +249,98 @@
                     "interval": 90
                 }
             },
-            "translate": {"y": 1}
+            "translate": {
+                "y": 1
+            }
         }
     ],
-    "wall": {
-        "style": {"style": "NOWHERE"},
-        "zoom": 0.1,
-        "palette": [
-            {"block": "minecraft:stripped_jungle_wood"},
-            {"block": "minecraft:jungle_leaves"},
-            {"block": "minecraft:stripped_jungle_wood"},
-            {"block": "minecraft:jungle_leaves"},
-            {"block": "minecraft:stripped_jungle_wood"},
-            {"block": "minecraft:jungle_leaves"},
-            {"block": "minecraft:stripped_jungle_wood"}
-        ]
-    }
+    "decorators": [
+        {
+            "chance": 0.45,
+            "variance": {
+                "style": "NOWHERE"
+            },
+            "zoom": 0.1,
+            "palette": [
+                {
+                    "block": "minecraft:jungle_leaves"
+                },
+                {
+                    "block": "minecraft:tall_grass"
+                },
+                {
+                    "block": "minecraft:grass"
+                },
+                {
+                    "block": "minecraft:jungle_leaves"
+                },
+                {
+                    "block": "minecraft:grass"
+                },
+                {
+                    "block": "minecraft:jungle_leaves"
+                }
+            ],
+            "style": {
+                "style": "FRACTAL_BILLOW_IRIS",
+                "fracture": {
+                    "style": "STATIC"
+                }
+            }
+        },
+        {
+            "chance": 0.1,
+            "verticalZoom": 88,
+            "variance": {
+                "style": "NOWHERE"
+            },
+            "zoom": 10,
+            "palette": [
+                {
+                    "weight": 3,
+                    "block": "minecraft:jungle_wood"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            },
+            "heightVariance": {
+                "style": "NOWHERE"
+            }
+        },
+        {
+            "chance": 0.5,
+            "verticalZoom": 88,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 10,
+            "palette": [
+                {
+                    "block": "minecraft:grass"
+                },
+                {
+                    "block": "minecraft:tall_grass"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            },
+            "heightVariance": {
+                "style": "STATIC"
+            }
+        }
+    ],
+    "effects": [
+        {
+            "particleAltX": 0.301,
+            "particleAltY": -0.33885,
+            "particleAltZ": 0.301,
+            "chance": 1,
+            "particleEffect": "TOTEM",
+            "particleOffset": 12,
+            "interval": 550,
+            "particleCount": 0
+        }
+    ]
 }

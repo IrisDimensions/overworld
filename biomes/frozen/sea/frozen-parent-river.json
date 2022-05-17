@@ -1,95 +1,137 @@
 {
-    "vanillaDerivative": "RIVER",
+    "name": "Frozen River",
     "rarity": 1,
-    "customDerivitives": [{
-        "id": "frozen_river_parent",
-        "grassColor": "#9CE0FF",
-        "downfallType": "snow",
-        "category": "icy"
-    }],
-    "decorators": [
+    "derivative": "FROZEN_RIVER",
+    "vanillaDerivative": "RIVER",
+    "customDerivitives": [
         {
-            "chance": 0.05,
-            "variance": {"style": "STATIC"},
-            "zoom": 5,
-            "palette": [{"block": "minecraft:seagrass"}],
-            "style": {"style": "STATIC"}
-        },
-        {
-            "chance": 0.01,
-            "verticalZoom": 88,
-            "variance": {"style": "STATIC"},
-            "stackMax": 6,
-            "zoom": 1,
-            "palette": [{"block": "minecraft:kelp_plant"}],
-            "style": {"style": "STATIC"},
-            "heightVariance": {"style": "NOWHERE"},
-            "stackMin": 2
+            "id": "frozen_river_parent",
+            "grassColor": "#9CE0FF",
+            "downfallType": "snow",
+            "category": "icy"
         }
     ],
-    "name": "Frozen River",
+    "generators": [
+        {
+            "min": -32,
+            "max": -10,
+            "generator": "mountain"
+        }
+    ],
     "layers": [
-        {"palette": [
-            {"block": "minecraft:dirt"},
-            {"block": "minecraft:gravel"},
-            {"block": "minecraft:stone"}
-        ]},
+        {
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                },
+                {
+                    "block": "minecraft:gravel"
+                },
+                {
+                    "block": "minecraft:stone"
+                }
+            ]
+        },
         {
             "minHeight": 2,
             "maxHeight": 3,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "palette": [
                 {
                     "weight": 5,
                     "block": "minecraft:sand"
                 },
-                {"block": "minecraft:clay"},
-                {"block": "minecraft:gravel"},
-                {"block": "minecraft:dirt"}
+                {
+                    "block": "minecraft:clay"
+                },
+                {
+                    "block": "minecraft:gravel"
+                },
+                {
+                    "block": "minecraft:dirt"
+                }
             ]
         }
     ],
-    "generators": [{
-        "min": -32,
-        "max": -10,
-        "generator": "mountain"
-    }],
+    "objects": [
+        {
+            "chance": 0.6,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "zAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "onwater": true,
+            "place": [
+                "clutter/icespec1",
+                "clutter/icespec2",
+                "clutter/icespec3",
+                "clutter/icespec4",
+                "clutter/icespec5"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "yRandom": -1,
+                "z": 0
+            }
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.05,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 5,
+            "palette": [
+                {
+                    "block": "minecraft:seagrass"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "chance": 0.01,
+            "verticalZoom": 88,
+            "variance": {
+                "style": "STATIC"
+            },
+            "stackMax": 6,
+            "zoom": 1,
+            "palette": [
+                {
+                    "block": "minecraft:kelp_plant"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            },
+            "heightVariance": {
+                "style": "NOWHERE"
+            },
+            "stackMin": 2
+        }
+    ],
     "loot": {
         "mode": "ADD",
         "multiplier": 1,
-        "tables": ["tropical-dungeon"]
-    },
-    "objects": [{
-        "chance": 0.6,
-        "rotation": {
-            "yAxis": {
-                "min": 0,
-                "max": 0,
-                "interval": 90,
-                "enabled": true
-            },
-            "zAxis": {
-                "min": 0,
-                "max": 0,
-                "interval": 90,
-                "enabled": true
-            },
-            "enabled": true
-        },
-        "onwater": true,
-        "place": [
-            "clutter/icespec1",
-            "clutter/icespec2",
-            "clutter/icespec3",
-            "clutter/icespec4",
-            "clutter/icespec5"
-        ],
-        "translate": {
-            "x": 0,
-            "y": 0,
-            "yRandom": -1,
-            "z": 0
-        }
-    }],
-    "derivative": "FROZEN_RIVER"
+        "tables": [
+            "tropical-dungeon"
+        ]
+    }
 }

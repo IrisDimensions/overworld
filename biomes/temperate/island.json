@@ -1,64 +1,95 @@
 {
     "name": "Temperate Island",
-    "derivative": "PLAINS",
-    "rarity": 3,
     "color": "#7ADB51",
+    "rarity": 3,
+    "derivative": "PLAINS",
     "vanillaDerivative": "PLAINS",
-    "children": ["temperate/wilds"],
-    "generators": [{
-        "min": 28,
-        "max": 42,
-        "generator": "plain"
-    }],
-    "customDerivitives": [{
-        "id": "island",
-        "foliageColor": "#69DF51",
-        "waterColor": "#48BFBC",
-        "grassColor": "#BEDF51",
-        "category": "forest"
-    }],
+    "biomeScatter": [
+        "FOREST",
+        "PLAINS"
+    ],
+    "customDerivitives": [
+        {
+            "id": "island",
+            "foliageColor": "#69DF51",
+            "waterColor": "#48BFBC",
+            "grassColor": "#BEDF51",
+            "category": "forest"
+        }
+    ],
+    "children": [
+        "temperate/wilds"
+    ],
+    "generators": [
+        {
+            "min": 28,
+            "max": 42,
+            "generator": "plain"
+        }
+    ],
+    "biomeStyle": {
+        "style": "SIMPLEX"
+    },
+    "wall": {
+        "style": {
+            "style": "STATIC"
+        },
+        "palette": [
+            {
+                "block": "minecraft:stone"
+            },
+            {
+                "block": "minecraft:andesite"
+            },
+            {
+                "block": "minecraft:stone"
+            }
+        ]
+    },
     "layers": [
-        {"palette": [{"block": "minecraft:grass_block"}]},
-        {"palette": [{"block": "minecraft:dirt"}]},
+        {
+            "palette": [
+                {
+                    "block": "minecraft:grass_block"
+                }
+            ]
+        },
+        {
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                }
+            ]
+        },
         {
             "minHeight": 1,
             "maxHeight": 3,
             "palette": [
-                {"block": "minecraft:dirt"},
-                {"block": "minecraft:coarse_dirt"}
+                {
+                    "block": "minecraft:dirt"
+                },
+                {
+                    "block": "minecraft:coarse_dirt"
+                }
             ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "STATIC"},
-            "palette": [
-                {"block": "minecraft:stone"},
-                {"block": "minecraft:andesite"},
-                {"block": "minecraft:stone"}
-            ]
-        }
-    ],
-    "decorators": [
-        {
-            "chance": 0.19,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.3,
-            "palette": [{"block": "minecraft:grass"}],
-            "style": {"style": "STATIC"}
-        },
-        {
-            "chance": 0.02,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.3,
-            "palette": [{
-                "data": {"age": 7},
-                "block": "minecraft:wheat"
-            }],
             "style": {
-                "style": "NOWHERE",
-                "zoom": 0.28
-            }
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "minecraft:stone"
+                },
+                {
+                    "block": "minecraft:andesite"
+                },
+                {
+                    "block": "minecraft:stone"
+                }
+            ]
         }
     ],
     "objects": [
@@ -115,17 +146,40 @@
             ]
         }
     ],
-    "biomeStyle": {"style": "SIMPLEX"},
-    "wall": {
-        "style": {"style": "STATIC"},
-        "palette": [
-            {"block": "minecraft:stone"},
-            {"block": "minecraft:andesite"},
-            {"block": "minecraft:stone"}
-        ]
-    },
-    "biomeScatter": [
-        "FOREST",
-        "PLAINS"
+    "decorators": [
+        {
+            "chance": 0.19,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "block": "minecraft:grass"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "chance": 0.02,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "data": {
+                        "age": 7
+                    },
+                    "block": "minecraft:wheat"
+                }
+            ],
+            "style": {
+                "style": "NOWHERE",
+                "zoom": 0.28
+            }
+        }
     ]
 }

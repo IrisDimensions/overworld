@@ -1,38 +1,62 @@
 {
     "name": "Temperate River",
+    "color": "#3152BF",
     "derivative": "RIVER",
     "vanillaDerivative": "RIVER",
-    "color": "#3152BF",
-    "generators": [{
-        "min": -32,
-        "max": -10,
-        "generator": "mountain"
-    }],
+    "generators": [
+        {
+            "min": -32,
+            "max": -10,
+            "generator": "mountain"
+        }
+    ],
     "layers": [
         {
             "minHeight": 2,
             "maxHeight": 3,
-            "style": {"style": "CELLULAR_IRIS_DOUBLE"},
+            "style": {
+                "style": "CELLULAR_IRIS_DOUBLE"
+            },
             "zoom": 0.525,
             "palette": [
-                {"block": "minecraft:sand"},
-                {"block": "minecraft:clay"},
-                {"block": "minecraft:gravel"},
-                {"block": "minecraft:sand"},
+                {
+                    "block": "minecraft:sand"
+                },
+                {
+                    "block": "minecraft:clay"
+                },
+                {
+                    "block": "minecraft:gravel"
+                },
+                {
+                    "block": "minecraft:sand"
+                },
                 {
                     "weight": 2,
                     "block": "minecraft:gravel"
                 },
-                {"block": "minecraft:sand"},
-                {"block": "minecraft:dirt"},
-                {"block": "minecraft:dirt"},
+                {
+                    "block": "minecraft:sand"
+                },
+                {
+                    "block": "minecraft:dirt"
+                },
+                {
+                    "block": "minecraft:dirt"
+                },
                 {
                     "weight": 2,
                     "block": "minecraft:sand"
                 }
             ]
         },
-        {"palette": [{"block": "minecraft:dirt"}]},
+        {
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                }
+            ]
+        },
         {
             "minHeight": 1,
             "maxHeight": 3,
@@ -41,81 +65,117 @@
                     "weight": 2,
                     "block": "minecraft:dirt"
                 },
-                {"block": "minecraft:coarse_dirt"}
+                {
+                    "block": "minecraft:coarse_dirt"
+                }
             ]
+        }
+    ],
+    "objects": [
+        {
+            "chance": 0.001,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/obelisk1",
+                "clutter/obelisk2",
+                "clutter/obelisk3",
+                "clutter/obelisk4",
+                "clutter/obelisk5",
+                "clutter/obelisk6",
+                "clutter/obelisk7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
         }
     ],
     "decorators": [
         {
-            "chance": 6.0E-4,
-            "variance": {"style": "STATIC"},
+            "chance": 0.0006,
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 1,
             "palette": [
-                {"block": "minecraft:soul_sand"},
-                {"block": "minecraft:magma_block"}
+                {
+                    "block": "minecraft:soul_sand"
+                },
+                {
+                    "block": "minecraft:magma_block"
+                }
             ],
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "partOf": "SEA_FLOOR"
         },
         {
             "chance": 0.07,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 5,
-            "palette": [{"block": "minecraft:seagrass"}],
-            "style": {"style": "STATIC"},
+            "palette": [
+                {
+                    "block": "minecraft:seagrass"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            },
             "partOf": "SEA_FLOOR"
         },
         {
             "chance": 0.013,
             "verticalZoom": 88,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "stackMax": 6,
             "zoom": 1,
-            "palette": [{"block": "minecraft:kelp_plant"}],
-            "style": {"style": "STATIC"},
-            "heightVariance": {"style": "NOWHERE"},
+            "palette": [
+                {
+                    "block": "minecraft:kelp_plant"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            },
+            "heightVariance": {
+                "style": "NOWHERE"
+            },
             "stackMin": 2,
             "partOf": "SEA_FLOOR"
         },
         {
             "chance": 0.001,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 1,
-            "palette": [{
-                "data": {
-                    "waterlogged": true,
-                    "pickles": 1
-                },
-                "block": "minecraft:sea_pickle"
-            }],
-            "style": {"style": "STATIC"},
+            "palette": [
+                {
+                    "data": {
+                        "waterlogged": true,
+                        "pickles": 1
+                    },
+                    "block": "minecraft:sea_pickle"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            },
             "partOf": "SEA_FLOOR"
         }
-    ],
-    "objects": [{
-        "chance": 0.001,
-        "rotation": {
-            "yAxis": {
-                "min": 0,
-                "max": 0,
-                "interval": 90,
-                "enabled": true
-            },
-            "enabled": true
-        },
-        "place": [
-            "clutter/obelisk1",
-            "clutter/obelisk2",
-            "clutter/obelisk3",
-            "clutter/obelisk4",
-            "clutter/obelisk5",
-            "clutter/obelisk6",
-            "clutter/obelisk7"
-        ],
-        "translate": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-        }
-    }]
+    ]
 }

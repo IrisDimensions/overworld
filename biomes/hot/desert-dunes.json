@@ -1,14 +1,16 @@
 {
     "name": "Hot Desert Dunes",
-    "derivative": "DESERT",
-    "rarity": 1,
     "color": "#B9B03D",
+    "rarity": 1,
+    "derivative": "DESERT",
     "vanillaDerivative": "DESERT",
-    "generators": [{
-        "generator": "smooth-dunes",
-        "max": 41,
-        "min": 28
-    }],
+    "generators": [
+        {
+            "generator": "smooth-dunes",
+            "max": 41,
+            "min": 28
+        }
+    ],
     "layers": [
         {
             "minHeight": 3,
@@ -17,16 +19,22 @@
                 "minimumSlope": 4.5,
                 "maximumSlope": 20
             },
-            "palette": [{"block": "minecraft:terracotta"}]
+            "palette": [
+                {
+                    "block": "minecraft:terracotta"
+                }
+            ]
         },
         {
             "minHeight": 5,
             "maxHeight": 5,
             "zoom": 0.7,
-            "palette": [{
-                "weight": 1,
-                "block": "minecraft:sand"
-            }]
+            "palette": [
+                {
+                    "weight": 1,
+                    "block": "minecraft:sand"
+                }
+            ]
         }
     ],
     "jigsawStructures": [
@@ -55,7 +63,10 @@
         },
         {
             "mode": "PAINT",
-            "place": ["structures/ruins-desert-1", "structures/ruins-desert-2"],
+            "place": [
+                "structures/ruins-desert-1",
+                "structures/ruins-desert-2"
+            ],
             "chance": 0.005,
             "rotation": {
                 "enabled": true,
@@ -117,16 +128,30 @@
         {
             "verticalZoom": 5,
             "chance": 0.004,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "stackMax": 5,
-            "style": {"style": "STATIC"},
-            "palette": [{"block": "minecraft:cactus"}],
-            "heightVariance": {"style": "NOWHERE"},
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "minecraft:cactus"
+                }
+            ],
+            "heightVariance": {
+                "style": "NOWHERE"
+            },
             "stackMin": 1
         },
         {
             "chance": 0.005,
-            "palette": [{"block": "minecraft:dead_bush"}]
+            "palette": [
+                {
+                    "block": "minecraft:dead_bush"
+                }
+            ]
         }
     ]
 }

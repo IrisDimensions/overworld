@@ -1,72 +1,107 @@
 {
     "name": "Mesa Plateau Dirt",
-    "rarity": 1,
     "color": "#BD5122",
+    "rarity": 1,
     "derivative": "BADLANDS",
     "vanillaDerivative": "BADLANDS",
-    "biomeScatter": ["BADLANDS"],
-    "generators": [{
-        "min": 73,
-        "max": 98,
-        "generator": "cracked-cliffs"
-    }],
+    "biomeScatter": [
+        "BADLANDS"
+    ],
+    "generators": [
+        {
+            "min": 73,
+            "max": 98,
+            "generator": "cracked-cliffs"
+        }
+    ],
+    "biomeStyle": {
+        "style": "SIMPLEX"
+    },
     "layers": [
         {
             "minHeight": 5,
             "maxHeight": 5,
-            "style": {"style": "CELLULAR"},
+            "style": {
+                "style": "CELLULAR"
+            },
             "zoom": 0.7,
             "palette": [
-                {"block": "minecraft:grass_block"},
-                {"block": "minecraft:coarse_dirt"},
-                {"block": "minecraft:dirt"},
-                {"block": "minecraft:grass_block"}
+                {
+                    "block": "minecraft:grass_block"
+                },
+                {
+                    "block": "minecraft:coarse_dirt"
+                },
+                {
+                    "block": "minecraft:dirt"
+                },
+                {
+                    "block": "minecraft:grass_block"
+                }
             ]
         },
         {
             "minHeight": 3,
             "maxHeight": 8,
-            "palette": [{"block": "minecraft:terracotta"}]
+            "palette": [
+                {
+                    "block": "minecraft:terracotta"
+                }
+            ]
         },
         {
             "minHeight": 2,
             "maxHeight": 8,
-            "palette": [{"block": "minecraft:orange_terracotta"}]
+            "palette": [
+                {
+                    "block": "minecraft:orange_terracotta"
+                }
+            ]
         },
         {
             "minHeight": 1,
             "maxHeight": 8,
-            "palette": [{"block": "minecraft:white_terracotta"}]
+            "palette": [
+                {
+                    "block": "minecraft:white_terracotta"
+                }
+            ]
         },
         {
             "minHeight": 4,
             "maxHeight": 8,
-            "palette": [{"block": "minecraft:terracotta"}]
+            "palette": [
+                {
+                    "block": "minecraft:terracotta"
+                }
+            ]
         },
         {
             "minHeight": 3,
             "maxHeight": 8,
-            "palette": [{"block": "minecraft:yellow_terracotta"}]
+            "palette": [
+                {
+                    "block": "minecraft:yellow_terracotta"
+                }
+            ]
         },
         {
             "minHeight": 3,
             "maxHeight": 8,
-            "palette": [{"block": "minecraft:brown_terracotta"}]
+            "palette": [
+                {
+                    "block": "minecraft:brown_terracotta"
+                }
+            ]
         }
     ],
-    "decorators": [{
-        "chance": 0.05,
-        "palette": [{"block": "minecraft:tall_grass"}]
-    }],
-    "lockLayers": true,
-    "biomeStyle": {"style": "SIMPLEX"},
     "objects": [
         {
             "place": [
                 "structures/tower",
                 "structures/tower-twin"
             ],
-            "chance": 5.0E-4,
+            "chance": 0.0005,
             "density": 2,
             "mode": "FAST_STILT",
             "rotation": {
@@ -86,13 +121,36 @@
                 "trees/acacia/vexed3"
             ],
             "chance": 0.2,
-            "edit": [{
-                "find": [{"block": "minecraft:acacia_planks"}],
-                "replace": {"palette": [{
-                    "block": "minecraft:acacia_wood",
-                    "data": {"axis": "y"}
-                }]}
-            }]
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:acacia_planks"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:acacia_wood",
+                                "data": {
+                                    "axis": "y"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    ],
+    "decorators": [
+        {
+            "chance": 0.05,
+            "palette": [
+                {
+                    "block": "minecraft:tall_grass"
+                }
+            ]
+        }
+    ],
+    "lockLayers": true
 }

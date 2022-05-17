@@ -1,44 +1,64 @@
 {
     "name": "Hot Oasis",
-    "derivative": "DESERT",
-    "rarity": 1,
     "color": "#B99620",
+    "rarity": 1,
+    "derivative": "DESERT",
     "vanillaDerivative": "DESERT",
-    "generators": [{
-        "generator": "plain",
-        "max": 7,
-        "min": -2
-    }],
-    "layers": [{
-        "minHeight": 5,
-        "maxHeight": 5,
-        "style": {"style": "FRACTAL_WATER"},
-        "zoom": 0.7,
-        "palette": [
-            {
-                "weight": 1,
-                "block": "minecraft:grass_block"
+    "generators": [
+        {
+            "generator": "plain",
+            "max": 7,
+            "min": -2
+        }
+    ],
+    "layers": [
+        {
+            "minHeight": 5,
+            "maxHeight": 5,
+            "style": {
+                "style": "FRACTAL_WATER"
             },
-            {
-                "weight": 1,
-                "block": "minecraft:moss_block"
-            }
-        ]
-    }],
+            "zoom": 0.7,
+            "palette": [
+                {
+                    "weight": 1,
+                    "block": "minecraft:grass_block"
+                },
+                {
+                    "weight": 1,
+                    "block": "minecraft:moss_block"
+                }
+            ]
+        }
+    ],
     "decorators": [
         {
             "verticalZoom": 5,
             "chance": 0.005,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "stackMax": 5,
-            "style": {"style": "STATIC"},
-            "palette": [{"block": "minecraft:cactus"}],
-            "heightVariance": {"style": "NOWHERE"},
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "minecraft:cactus"
+                }
+            ],
+            "heightVariance": {
+                "style": "NOWHERE"
+            },
             "stackMin": 1
         },
         {
             "chance": 0.005,
-            "palette": [{"block": "minecraft:dead_bush"}]
+            "palette": [
+                {
+                    "block": "minecraft:dead_bush"
+                }
+            ]
         }
     ]
 }

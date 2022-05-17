@@ -1,51 +1,77 @@
 {
     "name": "Tropical Mountain Water",
-    "derivative": "JUNGLE",
     "color": "#2FAB7B",
+    "derivative": "JUNGLE",
     "vanillaDerivative": "JUNGLE",
-    "generators": [{
-        "generator": "mountain",
-        "max": 5,
-        "min": 2
-    }],
-    "customDerivitives": [{
-        "category": "forest",
-        "id": "tropical_mountain_water",
-        "waterColor": "#3AB2A2",
-        "waterFogColor": "#3AB2A2"
-    }],
+    "customDerivitives": [
+        {
+            "category": "forest",
+            "id": "tropical_mountain_water",
+            "waterColor": "#3AB2A2",
+            "waterFogColor": "#3AB2A2"
+        }
+    ],
+    "generators": [
+        {
+            "generator": "mountain",
+            "max": 5,
+            "min": 2
+        }
+    ],
+    "wall": {
+        "palette": [
+            {
+                "block": "minecraft:water",
+                "data": {
+                    "level": 1
+                }
+            }
+        ]
+    },
     "layers": [
         {
             "minHeight": 0,
             "maxHeight": 2,
-            "palette": [{"block": "minecraft:cave_air"}]
+            "palette": [
+                {
+                    "block": "minecraft:cave_air"
+                }
+            ]
         },
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "palette": [{
-                "block": "minecraft:water",
-                "data": {"level": 1}
-            }]
+            "palette": [
+                {
+                    "block": "minecraft:water",
+                    "data": {
+                        "level": 1
+                    }
+                }
+            ]
         },
         {
             "minHeight": 1,
             "maxHeight": 4,
-            "palette": [{
-                "block": "minecraft:water",
-                "data": {"level": 0}
-            }]
+            "palette": [
+                {
+                    "block": "minecraft:water",
+                    "data": {
+                        "level": 0
+                    }
+                }
+            ]
         },
         {
             "minHeight": 2,
             "maxHeight": 4,
-            "palette": [{"block": "minecraft:gravel"}]
+            "palette": [
+                {
+                    "block": "minecraft:gravel"
+                }
+            ]
         }
     ],
-    "wall": {"palette": [{
-        "block": "minecraft:water",
-        "data": {"level": 1}
-    }]},
     "decorators": [
         {
             "chance": 0.2,
@@ -67,27 +93,59 @@
                 }
             },
             "palette": [
-                {"block": "minecraft:dandelion"},
-                {"block": "minecraft:poppy"},
-                {"block": "minecraft:blue_orchid"},
-                {"block": "minecraft:allium"},
-                {"block": "minecraft:azure_bluet"},
-                {"block": "minecraft:red_tulip"},
-                {"block": "minecraft:orange_tulip"},
-                {"block": "minecraft:white_tulip"},
-                {"block": "minecraft:pink_tulip"},
-                {"block": "minecraft:oxeye_daisy"},
-                {"block": "minecraft:cornflower"},
-                {"block": "minecraft:lily_of_the_valley"}
+                {
+                    "block": "minecraft:dandelion"
+                },
+                {
+                    "block": "minecraft:poppy"
+                },
+                {
+                    "block": "minecraft:blue_orchid"
+                },
+                {
+                    "block": "minecraft:allium"
+                },
+                {
+                    "block": "minecraft:azure_bluet"
+                },
+                {
+                    "block": "minecraft:red_tulip"
+                },
+                {
+                    "block": "minecraft:orange_tulip"
+                },
+                {
+                    "block": "minecraft:white_tulip"
+                },
+                {
+                    "block": "minecraft:pink_tulip"
+                },
+                {
+                    "block": "minecraft:oxeye_daisy"
+                },
+                {
+                    "block": "minecraft:cornflower"
+                },
+                {
+                    "block": "minecraft:lily_of_the_valley"
+                }
             ]
         },
         {
             "chance": 0.01,
-            "palette": [{"block": "minecraft:tall_grass"}]
+            "palette": [
+                {
+                    "block": "minecraft:tall_grass"
+                }
+            ]
         },
         {
             "chance": 0.5,
-            "palette": [{"block": "minecraft:grass"}]
+            "palette": [
+                {
+                    "block": "minecraft:grass"
+                }
+            ]
         }
     ]
 }

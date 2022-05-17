@@ -1,88 +1,81 @@
 {
     "name": "Crimson Mushroom Swamp",
-    "derivative": "CRIMSON_FOREST",
-    "rarity": 2,
     "color": "#FFC0FE",
+    "rarity": 2,
+    "derivative": "CRIMSON_FOREST",
     "vanillaDerivative": "MUSHROOM_FIELDS",
-    "children": ["mushroom/crimson-forest-extended"],
-    "childShrinkFactor": 2.4,
+    "customDerivitives": [
+        {
+            "category": "mushroom",
+            "id": "mushroom_crimson_forest",
+            "waterColor": "#C41A1A",
+            "foliageColor": "#AB3030",
+            "waterFogColor": "#C41A1A",
+            "grassColor": "#C41A1A",
+            "fogColor": "#C41A1A"
+        }
+    ],
+    "children": [
+        "mushroom/crimson-forest-extended"
+    ],
+    "generators": [
+        {
+            "min": 4,
+            "max": 25,
+            "generator": "plain-cliffs"
+        }
+    ],
+    "wall": {
+        "style": {
+            "style": "STATIC"
+        },
+        "palette": [
+            {
+                "block": "minecraft:crimson_hyphae"
+            }
+        ]
+    },
     "layers": [
         {
             "zoom": 0.5,
-            "style": {"style": "NOWHERE"},
-            "palette": [{"block": "minecraft:crimson_nylium"}]
+            "style": {
+                "style": "NOWHERE"
+            },
+            "palette": [
+                {
+                    "block": "minecraft:crimson_nylium"
+                }
+            ]
         },
         {
             "minHeight": 8,
             "maxHeight": 9,
             "palette": [
-                {"block": "minecraft:dirt"},
-                {"block": "minecraft:coarse_dirt"}
+                {
+                    "block": "minecraft:dirt"
+                },
+                {
+                    "block": "minecraft:coarse_dirt"
+                }
             ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "STATIC"},
-            "palette": [
-                {"block": "minecraft:stone"},
-                {"block": "minecraft:andesite"},
-                {"block": "minecraft:stone"}
-            ]
-        }
-    ],
-    "customDerivitives": [{
-        "category": "mushroom",
-        "id": "mushroom_crimson_forest",
-        "waterColor": "#C41A1A",
-        "foliageColor": "#AB3030",
-        "waterFogColor": "#C41A1A",
-        "grassColor": "#C41A1A",
-        "fogColor": "#C41A1A"
-    }],
-    "generators": [{
-        "min": 4,
-        "max": 25,
-        "generator": "plain-cliffs"
-    }],
-    "decorators": [
-        {
-            "chance": 0.009,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.3,
+            "style": {
+                "style": "STATIC"
+            },
             "palette": [
                 {
-                    "data": {
-                        "face": "floor",
-                        "powered": false,
-                        "facing": "east"
-                    },
-                    "block": "minecraft:polished_blackstone_button"
+                    "block": "minecraft:stone"
                 },
                 {
-                    "data": {
-                        "face": "floor",
-                        "powered": false,
-                        "facing": "south"
-                    },
-                    "block": "minecraft:crimson_button"
+                    "block": "minecraft:andesite"
+                },
+                {
+                    "block": "minecraft:stone"
                 }
-            ],
-            "style": {"style": "STATIC"}
-        },
-        {
-            "chance": 0.05,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.3,
-            "palette": [{"block": "minecraft:crimson_fungus"}],
-            "style": {"style": "STATIC"}
-        },
-        {
-            "chance": 0.11,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.3,
-            "palette": [{"block": "minecraft:crimson_roots"}],
-            "style": {"style": "STATIC"}
+            ]
         }
     ],
     "objects": [
@@ -91,12 +84,32 @@
             "density": 2,
             "edit": [
                 {
-                    "find": [{"block": "minecraft:brown_mushroom_block"}],
-                    "replace": {"palette": [{"block": "minecraft:crimson_hyphae"}]}
+                    "find": [
+                        {
+                            "block": "minecraft:brown_mushroom_block"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:crimson_hyphae"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "find": [{"block": "minecraft:red_mushroom_block"}],
-                    "replace": {"palette": [{"block": "minecraft:nether_wart_block"}]}
+                    "find": [
+                        {
+                            "block": "minecraft:red_mushroom_block"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:nether_wart_block"
+                            }
+                        ]
+                    }
                 }
             ],
             "rotation": {
@@ -132,12 +145,32 @@
             "density": 2,
             "edit": [
                 {
-                    "find": [{"block": "minecraft:red_mushroom_block"}],
-                    "replace": {"palette": [{"block": "minecraft:crimson_hyphae"}]}
+                    "find": [
+                        {
+                            "block": "minecraft:red_mushroom_block"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:crimson_hyphae"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "find": [{"block": "minecraft:brown_mushroom_block"}],
-                    "replace": {"palette": [{"block": "minecraft:nether_wart_block"}]}
+                    "find": [
+                        {
+                            "block": "minecraft:brown_mushroom_block"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:nether_wart_block"
+                            }
+                        ]
+                    }
                 }
             ],
             "rotation": {
@@ -172,12 +205,32 @@
             "density": 2,
             "edit": [
                 {
-                    "find": [{"block": "minecraft:brown_mushroom_block"}],
-                    "replace": {"palette": [{"block": "minecraft:crimson_hyphae"}]}
+                    "find": [
+                        {
+                            "block": "minecraft:brown_mushroom_block"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:crimson_hyphae"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "find": [{"block": "minecraft:red_mushroom_block"}],
-                    "replace": {"palette": [{"block": "minecraft:nether_wart_block"}]}
+                    "find": [
+                        {
+                            "block": "minecraft:red_mushroom_block"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:nether_wart_block"
+                            }
+                        ]
+                    }
                 }
             ],
             "rotation": {
@@ -214,12 +267,32 @@
             "density": 2,
             "edit": [
                 {
-                    "find": [{"block": "minecraft:red_mushroom_block"}],
-                    "replace": {"palette": [{"block": "minecraft:crimson_hyphae"}]}
+                    "find": [
+                        {
+                            "block": "minecraft:red_mushroom_block"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:crimson_hyphae"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "find": [{"block": "minecraft:brown_mushroom_block"}],
-                    "replace": {"palette": [{"block": "minecraft:nether_wart_block"}]}
+                    "find": [
+                        {
+                            "block": "minecraft:brown_mushroom_block"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:nether_wart_block"
+                            }
+                        ]
+                    }
                 }
             ],
             "rotation": {
@@ -256,12 +329,32 @@
             "density": 1,
             "edit": [
                 {
-                    "find": [{"block": "minecraft:red_mushroom_block"}],
-                    "replace": {"palette": [{"block": "minecraft:crimson_hyphae"}]}
+                    "find": [
+                        {
+                            "block": "minecraft:red_mushroom_block"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:crimson_hyphae"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "find": [{"block": "minecraft:brown_mushroom_block"}],
-                    "replace": {"palette": [{"block": "minecraft:nether_wart_block"}]}
+                    "find": [
+                        {
+                            "block": "minecraft:brown_mushroom_block"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:nether_wart_block"
+                            }
+                        ]
+                    }
                 }
             ],
             "rotation": {
@@ -291,12 +384,32 @@
             "density": 1,
             "edit": [
                 {
-                    "find": [{"block": "minecraft:brown_mushroom_block"}],
-                    "replace": {"palette": [{"block": "minecraft:crimson_hyphae"}]}
+                    "find": [
+                        {
+                            "block": "minecraft:brown_mushroom_block"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:crimson_hyphae"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "find": [{"block": "minecraft:red_mushroom_block"}],
-                    "replace": {"palette": [{"block": "minecraft:nether_wart_block"}]}
+                    "find": [
+                        {
+                            "block": "minecraft:red_mushroom_block"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:nether_wart_block"
+                            }
+                        ]
+                    }
                 }
             ],
             "rotation": {
@@ -322,12 +435,71 @@
             }
         }
     ],
-    "wall": {
-        "style": {"style": "STATIC"},
-        "palette": [{"block": "minecraft:crimson_hyphae"}]
-    },
+    "decorators": [
+        {
+            "chance": 0.009,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "east"
+                    },
+                    "block": "minecraft:polished_blackstone_button"
+                },
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "south"
+                    },
+                    "block": "minecraft:crimson_button"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "chance": 0.05,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "block": "minecraft:crimson_fungus"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "chance": 0.11,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "block": "minecraft:crimson_roots"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        }
+    ],
+    "childShrinkFactor": 2.4,
     "slab": {
-        "style": {"style": "STATIC"},
+        "style": {
+            "style": "STATIC"
+        },
         "palette": [
             {
                 "weight": 4,

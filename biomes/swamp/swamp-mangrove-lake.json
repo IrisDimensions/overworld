@@ -1,22 +1,26 @@
 {
     "name": "Swamp Mangrove Forest",
+    "rarity": 2,
     "derivative": "SWAMP",
     "vanillaDerivative": "SWAMP",
-    "rarity": 2,
-    "generators": [{
-        "generator": "mountain",
-        "max": -1,
-        "min": -3
-    }],
-    "customDerivitives": [{
-        "id": "k530mangroveswamp",
-        "foliageColor": "#4a532f",
-        "waterColor": "#49521d",
-        "waterFogColor": "#49521d",
-        "fogColor": "#325729",
-        "grassColor": "#4b5332",
-        "category": "forest"
-    }],
+    "customDerivitives": [
+        {
+            "id": "k530mangroveswamp",
+            "foliageColor": "#4a532f",
+            "waterColor": "#49521d",
+            "waterFogColor": "#49521d",
+            "fogColor": "#325729",
+            "grassColor": "#4b5332",
+            "category": "forest"
+        }
+    ],
+    "generators": [
+        {
+            "generator": "mountain",
+            "max": -1,
+            "min": -3
+        }
+    ],
     "layers": [
         {
             "minHeight": 2,
@@ -30,8 +34,12 @@
             },
             "zoom": 0.8,
             "palette": [
-                {"block": "minecraft:dirt"},
-                {"block": "minecraft:coarse_dirt"}
+                {
+                    "block": "minecraft:dirt"
+                },
+                {
+                    "block": "minecraft:coarse_dirt"
+                }
             ]
         },
         {
@@ -111,11 +119,25 @@
                     "max": 360
                 }
             },
-            "translate": {"y": -7},
-            "edit": [{
-                "find": [{"block": "minecraft:oak_fence"}],
-                "replace": {"palette": [{"block": "minecraft:air"}]}
-            }]
+            "translate": {
+                "y": -7
+            },
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:oak_fence"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:air"
+                            }
+                        ]
+                    }
+                }
+            ]
         }
     ]
 }

@@ -1,23 +1,29 @@
 {
     "name": "Tropical Volcanic Plains",
-    "derivative": "THE_VOID",
-    "rarity": 1,
     "color": "#AE1313",
+    "rarity": 1,
+    "derivative": "THE_VOID",
     "vanillaDerivative": "THE_VOID",
-    "children": ["tropical/volcanoes"],
-    "generators": [{
-        "min": 120,
-        "max": 190,
-        "generator": "mountain"
-    }],
-    "customDerivitives": [{
-        "category": "jungle",
-        "id": "tropical_volcanic_plains",
-        "grassColor": "#9BC20D",
-        "foliageColor": "#9CD320",
-        "fogColor": "#DD793C",
-        "downfallType": "none"
-    }],
+    "customDerivitives": [
+        {
+            "category": "jungle",
+            "id": "tropical_volcanic_plains",
+            "grassColor": "#9BC20D",
+            "foliageColor": "#9CD320",
+            "fogColor": "#DD793C",
+            "downfallType": "none"
+        }
+    ],
+    "children": [
+        "tropical/volcanoes"
+    ],
+    "generators": [
+        {
+            "min": 120,
+            "max": 190,
+            "generator": "mountain"
+        }
+    ],
     "layers": [
         {
             "style": {
@@ -44,7 +50,9 @@
                     "weight": 1,
                     "block": "minecraft:magma_block"
                 },
-                {"block": "minecraft:tuff"}
+                {
+                    "block": "minecraft:tuff"
+                }
             ]
         },
         {
@@ -53,22 +61,73 @@
             "palette": [
                 {
                     "block": "minecraft:basalt",
-                    "data": {"axis": "x"}
+                    "data": {
+                        "axis": "x"
+                    }
                 },
                 {
                     "block": "minecraft:basalt",
-                    "data": {"axis": "y"}
+                    "data": {
+                        "axis": "y"
+                    }
                 },
                 {
                     "block": "minecraft:basalt",
-                    "data": {"axis": "z"}
+                    "data": {
+                        "axis": "z"
+                    }
                 }
             ]
         },
         {
             "minHeight": 3,
             "maxHeight": 10,
-            "palette": [{"block": "minecraft:blackstone"}]
+            "palette": [
+                {
+                    "block": "minecraft:blackstone"
+                }
+            ]
+        }
+    ],
+    "objects": [
+        {
+            "place": [
+                "structures/landspike1",
+                "structures/landspike2",
+                "structures/landspike3"
+            ],
+            "chance": 1,
+            "density": 2,
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": -360,
+                    "max": 360
+                }
+            },
+            "translate": {
+                "y": -20,
+                "yRandom": 20
+            },
+            "mode": "PAINT",
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:stone"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:basalt"
+                            }
+                        ]
+                    }
+                }
+            ]
         }
     ],
     "childStyle": {
@@ -76,42 +135,17 @@
         "zoom": 1.3,
         "exponent": 1.9
     },
-    "effects": [{
-        "particleAltX": 0.001,
-        "particleAltY": 0.13885,
-        "particleAltZ": 0.001,
-        "chance": 1,
-        "particleEffect": "CAMPFIRE_SIGNAL_SMOKE",
-        "particleOffset": 0,
-        "interval": 200,
-        "particleCount": 0
-    }],
-    "childShrinkFactor": 1,
-    "objects": [{
-        "place": [
-            "structures/landspike1",
-            "structures/landspike2",
-            "structures/landspike3"
-        ],
-        "chance": 1,
-        "density": 2,
-        "rotation": {
-            "enabled": true,
-            "yAxis": {
-                "enabled": true,
-                "interval": 90,
-                "min": -360,
-                "max": 360
-            }
-        },
-        "translate": {
-            "y": -20,
-            "yRandom": 20
-        },
-        "mode": "PAINT",
-        "edit": [{
-            "find": [{"block": "minecraft:stone"}],
-            "replace": {"palette": [{"block": "minecraft:basalt"}]}
-        }]
-    }]
+    "effects": [
+        {
+            "particleAltX": 0.001,
+            "particleAltY": 0.13885,
+            "particleAltZ": 0.001,
+            "chance": 1,
+            "particleEffect": "CAMPFIRE_SIGNAL_SMOKE",
+            "particleOffset": 0,
+            "interval": 200,
+            "particleCount": 0
+        }
+    ],
+    "childShrinkFactor": 1
 }

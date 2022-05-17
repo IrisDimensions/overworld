@@ -1,31 +1,76 @@
 {
     "name": "Tundra River Rocky",
-    "derivative": "LUKEWARM_OCEAN",
     "color": "#4939DF",
+    "derivative": "LUKEWARM_OCEAN",
     "vanillaDerivative": "LUKEWARM_OCEAN",
-    "generators": [{
-        "min": -41,
-        "max": -7,
-        "generator": "plain"
-    }],
+    "generators": [
+        {
+            "min": -41,
+            "max": -7,
+            "generator": "plain"
+        }
+    ],
+    "wall": {
+        "style": {
+            "style": "NOWHERE"
+        },
+        "palette": [
+            {
+                "block": "minecraft:clay"
+            },
+            {
+                "block": "minecraft:cobblestone"
+            },
+            {
+                "block": "minecraft:stone"
+            },
+            {
+                "block": "minecraft:andesite"
+            }
+        ]
+    },
     "layers": [
         {
             "minHeight": 2,
             "maxHeight": 3,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "zoom": 0.825,
             "palette": [
-                {"block": "minecraft:stone"},
-                {"block": "minecraft:clay"},
-                {"block": "minecraft:cobblestone"},
-                {"block": "minecraft:gravel"},
-                {"block": "minecraft:cobblestone"},
-                {"block": "minecraft:dirt"},
-                {"block": "minecraft:cobblestone"},
-                {"block": "minecraft:andesite"}
+                {
+                    "block": "minecraft:stone"
+                },
+                {
+                    "block": "minecraft:clay"
+                },
+                {
+                    "block": "minecraft:cobblestone"
+                },
+                {
+                    "block": "minecraft:gravel"
+                },
+                {
+                    "block": "minecraft:cobblestone"
+                },
+                {
+                    "block": "minecraft:dirt"
+                },
+                {
+                    "block": "minecraft:cobblestone"
+                },
+                {
+                    "block": "minecraft:andesite"
+                }
             ]
         },
-        {"palette": [{"block": "minecraft:dirt"}]},
+        {
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                }
+            ]
+        },
         {
             "minHeight": 1,
             "maxHeight": 3,
@@ -34,63 +79,36 @@
                     "weight": 2,
                     "block": "minecraft:dirt"
                 },
-                {"block": "minecraft:coarse_dirt"}
+                {
+                    "block": "minecraft:coarse_dirt"
+                }
             ]
-        }
-    ],
-    "decorators": [
-        {
-            "chance": 6.0E-4,
-            "variance": {"style": "STATIC"},
-            "zoom": 1,
-            "palette": [
-                {"block": "minecraft:soul_sand"},
-                {"block": "minecraft:magma_block"}
-            ],
-            "style": {"style": "STATIC"}
-        },
-        {
-            "chance": 0.07,
-            "variance": {"style": "STATIC"},
-            "zoom": 5,
-            "palette": [{"block": "minecraft:seagrass"}],
-            "style": {"style": "STATIC"}
-        },
-        {
-            "chance": 0.055,
-            "verticalZoom": 20,
-            "variance": {"style": "STATIC"},
-            "stackMax": 9,
-            "zoom": 1,
-            "palette": [{"block": "minecraft:kelp_plant"}],
-            "style": {"style": "STATIC"},
-            "heightVariance": {"style": "STATIC"},
-            "stackMin": 1
-        },
-        {
-            "chance": 0.001,
-            "variance": {"style": "STATIC"},
-            "zoom": 1,
-            "palette": [{
-                "data": {
-                    "waterlogged": true,
-                    "pickles": 1
-                },
-                "block": "minecraft:sea_pickle"
-            }],
-            "style": {"style": "STATIC"}
         }
     ],
     "objects": [
         {
             "chance": 0.67,
-            "edit": [{
-                "replace": {"palette": [{"block": "minecraft:cave_air"}]},
-                "find": [{"block": "minecraft:water"}]
-            }],
+            "edit": [
+                {
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:cave_air"
+                            }
+                        ]
+                    },
+                    "find": [
+                        {
+                            "block": "minecraft:water"
+                        }
+                    ]
+                }
+            ],
             "mode": "PAINT",
             "underwater": true,
-            "place": ["clutter/cobblespike"]
+            "place": [
+                "clutter/cobblespike"
+            ]
         },
         {
             "chance": 0.01,
@@ -109,10 +127,22 @@
                 "structures/usdship1",
                 "structures/usdship2"
             ],
-            "edit": [{
-                "find": [{"block": "minecraft:oak_stairs"}],
-                "replace": {"palette": [{"block": "minecraft:oak_planks"}]}
-            }],
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:oak_stairs"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:oak_planks"
+                            }
+                        ]
+                    }
+                }
+            ],
             "translate": {
                 "x": 0,
                 "y": -4,
@@ -145,17 +175,85 @@
             }
         }
     ],
-    "wall": {
-        "style": {"style": "NOWHERE"},
-        "palette": [
-            {"block": "minecraft:clay"},
-            {"block": "minecraft:cobblestone"},
-            {"block": "minecraft:stone"},
-            {"block": "minecraft:andesite"}
-        ]
-    },
+    "decorators": [
+        {
+            "chance": 0.0006,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 1,
+            "palette": [
+                {
+                    "block": "minecraft:soul_sand"
+                },
+                {
+                    "block": "minecraft:magma_block"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "chance": 0.07,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 5,
+            "palette": [
+                {
+                    "block": "minecraft:seagrass"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "chance": 0.055,
+            "verticalZoom": 20,
+            "variance": {
+                "style": "STATIC"
+            },
+            "stackMax": 9,
+            "zoom": 1,
+            "palette": [
+                {
+                    "block": "minecraft:kelp_plant"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            },
+            "heightVariance": {
+                "style": "STATIC"
+            },
+            "stackMin": 1
+        },
+        {
+            "chance": 0.001,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 1,
+            "palette": [
+                {
+                    "data": {
+                        "waterlogged": true,
+                        "pickles": 1
+                    },
+                    "block": "minecraft:sea_pickle"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        }
+    ],
     "slab": {
-        "style": {"style": "STATIC"},
+        "style": {
+            "style": "STATIC"
+        },
         "palette": [
             {
                 "data": {
@@ -164,7 +262,9 @@
                 },
                 "block": "minecraft:cobblestone_slab"
             },
-            {"block": "minecraft:air"}
+            {
+                "block": "minecraft:air"
+            }
         ]
     }
 }

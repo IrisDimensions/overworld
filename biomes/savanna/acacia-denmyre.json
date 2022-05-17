@@ -1,41 +1,85 @@
 {
     "name": "Savanna Acacia Denmyre",
-    "derivative": "DESERT",
-    "rarity": 1,
     "color": "#DC913D",
+    "rarity": 1,
+    "derivative": "DESERT",
     "vanillaDerivative": "SAVANNA",
-    "customDerivitives": [{
-        "category": "savanna",
-        "id": "savanna_acacia_denmyre",
-        "grassColor": "#DFD545",
-        "foliageColor": "#D6A513",
-        "waterColor": "#33CB99",
-        "downfallType": "none"
-    }],
-    "generators": [{
-        "min": 4,
-        "max": 7,
-        "generator": "plain"
-    }],
+    "customDerivitives": [
+        {
+            "category": "savanna",
+            "id": "savanna_acacia_denmyre",
+            "grassColor": "#DFD545",
+            "foliageColor": "#D6A513",
+            "waterColor": "#33CB99",
+            "downfallType": "none"
+        }
+    ],
+    "generators": [
+        {
+            "min": 4,
+            "max": 7,
+            "generator": "plain"
+        }
+    ],
+    "wall": {
+        "style": {
+            "style": "STATIC"
+        },
+        "palette": [
+            {
+                "block": "minecraft:stone"
+            },
+            {
+                "block": "minecraft:andesite"
+            },
+            {
+                "block": "minecraft:stone"
+            }
+        ]
+    },
     "layers": [
         {
-            "style": {"style": "FLAT"},
-            "palette": [{"block": "minecraft:grass_block"}]
+            "style": {
+                "style": "FLAT"
+            },
+            "palette": [
+                {
+                    "block": "minecraft:grass_block"
+                }
+            ]
         },
-        {"palette": [{"block": "minecraft:dirt"}]},
+        {
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                }
+            ]
+        },
         {
             "minHeight": 1,
             "maxHeight": 3,
-            "palette": [{"block": "minecraft:coarse_dirt"}]
+            "palette": [
+                {
+                    "block": "minecraft:coarse_dirt"
+                }
+            ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "palette": [
-                {"block": "minecraft:stone"},
-                {"block": "minecraft:andesite"},
-                {"block": "minecraft:stone"}
+                {
+                    "block": "minecraft:stone"
+                },
+                {
+                    "block": "minecraft:andesite"
+                },
+                {
+                    "block": "minecraft:stone"
+                }
             ]
         }
     ],
@@ -49,38 +93,107 @@
             "rarity": 1500
         }
     ],
+    "objects": [
+        {
+            "chance": 0.5,
+            "density": 2,
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:acacia_planks"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:stripped_acacia_wood"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "trees/acacia/denmyre1",
+                "trees/acacia/denmyre2",
+                "trees/acacia/denmyre3",
+                "trees/acacia/denmyre4",
+                "trees/acacia/denmyre5",
+                "trees/acacia/denmyre6",
+                "trees/acacia/denmyre7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            }
+        }
+    ],
     "decorators": [
         {
             "chance": 0.1,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 0.01,
             "palette": [
                 {
                     "weight": 4,
                     "block": "minecraft:dead_bush"
                 },
-                {"block": "minecraft:brown_mushroom"}
+                {
+                    "block": "minecraft:brown_mushroom"
+                }
             ],
-            "style": {"style": "STATIC"}
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
             "chance": 0.001,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "stackMax": 2,
-            "style": {"style": "STATIC"},
-            "palette": [{"block": "minecraft:cactus"}],
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "minecraft:cactus"
+                }
+            ],
             "stackMin": 1
         },
         {
             "chance": 0.4,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 0.3,
-            "palette": [{"block": "minecraft:grass"}],
-            "style": {"style": "STATIC"}
+            "palette": [
+                {
+                    "block": "minecraft:grass"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
             "chance": 0.03,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 0.3,
             "palette": [
                 {
@@ -100,53 +213,24 @@
                     "block": "minecraft:stone_button"
                 }
             ],
-            "style": {"style": "STATIC"}
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
             "chance": 0.017,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.3,
-            "palette": [{"block": "minecraft:tall_grass"}],
-            "style": {"style": "STATIC"}
-        }
-    ],
-    "objects": [{
-        "chance": 0.5,
-        "density": 2,
-        "edit": [{
-            "find": [{"block": "minecraft:acacia_planks"}],
-            "replace": {"palette": [{"block": "minecraft:stripped_acacia_wood"}]}
-        }],
-        "rotation": {
-            "yAxis": {
-                "min": 0,
-                "max": 0,
-                "interval": 90,
-                "enabled": true
+            "variance": {
+                "style": "STATIC"
             },
-            "enabled": true
-        },
-        "place": [
-            "trees/acacia/denmyre1",
-            "trees/acacia/denmyre2",
-            "trees/acacia/denmyre3",
-            "trees/acacia/denmyre4",
-            "trees/acacia/denmyre5",
-            "trees/acacia/denmyre6",
-            "trees/acacia/denmyre7"
-        ],
-        "translate": {
-            "x": 0,
-            "y": -1,
-            "z": 0
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "block": "minecraft:tall_grass"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
         }
-    }],
-    "wall": {
-        "style": {"style": "STATIC"},
-        "palette": [
-            {"block": "minecraft:stone"},
-            {"block": "minecraft:andesite"},
-            {"block": "minecraft:stone"}
-        ]
-    }
+    ]
 }

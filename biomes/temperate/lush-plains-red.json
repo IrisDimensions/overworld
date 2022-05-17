@@ -1,14 +1,74 @@
 {
     "name": "Lush Plains Red",
-    "derivative": "FLOWER_FOREST",
-    "vanillaDerivative": "FLOWER_FOREST",
     "color": "#6DCF43",
     "rarity": 3,
-    "generators": [{
-        "min": 4,
-        "max": 7,
-        "generator": "plain"
-    }],
+    "derivative": "FLOWER_FOREST",
+    "vanillaDerivative": "FLOWER_FOREST",
+    "generators": [
+        {
+            "min": 4,
+            "max": 7,
+            "generator": "plain"
+        }
+    ],
+    "biomeStyle": {
+        "style": "SIMPLEX"
+    },
+    "wall": {
+        "palette": [
+            {
+                "block": "minecraft:stone"
+            },
+            {
+                "block": "minecraft:andesite"
+            }
+        ]
+    },
+    "layers": [
+        {
+            "palette": [
+                {
+                    "block": "minecraft:grass_block"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 2,
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                },
+                {
+                    "block": "minecraft:coarse_dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                },
+                {
+                    "block": "minecraft:stone"
+                }
+            ]
+        }
+    ],
     "jigsawStructures": [
         {
             "rarity": 1700,
@@ -17,71 +77,6 @@
         {
             "rarity": 1500,
             "structure": "village-temperate"
-        }
-    ],
-    "layers": [
-        {"palette": [{"block": "minecraft:grass_block"}]},
-        {
-            "minHeight": 2,
-            "maxHeight": 2,
-            "palette": [{"block": "minecraft:dirt"}]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                {"block": "minecraft:dirt"},
-                {"block": "minecraft:coarse_dirt"}
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {"style": "STATIC"},
-            "palette": [
-                {"block": "minecraft:dirt"},
-                {"block": "minecraft:stone"}
-            ]
-        }
-    ],
-    "decorators": [
-        {
-            "chance": 0.04,
-            "style": {"style": "STATIC"},
-            "palette": [
-                {
-                    "block": "minecraft:rose_bush",
-                    "weight": 6
-                },
-                {
-                    "block": "minecraft:poppy",
-                    "weight": 8
-                }
-            ]
-        },
-        {
-            "chance": 0.01,
-            "palette": [{"block": "minecraft:tall_grass"}]
-        },
-        {
-            "chance": 0.5,
-            "palette": [
-                {
-                    "block": "minecraft:grass",
-                    "weight": 15
-                },
-                {
-                    "block": "minecraft:fern",
-                    "weight": 1
-                }
-            ]
-        },
-        {
-            "chance": 0.07,
-            "palette": [{
-                "block": "minecraft:oak_leaves",
-                "data": {"persistent": true}
-            }]
         }
     ],
     "objects": [
@@ -143,7 +138,7 @@
             ]
         },
         {
-            "chance": 1.0E-4,
+            "chance": 0.0001,
             "mode": "PAINT",
             "rotation": {
                 "yAxis": {
@@ -154,7 +149,9 @@
                 },
                 "enabled": true
             },
-            "place": ["structures/ruin1"]
+            "place": [
+                "structures/ruin1"
+            ]
         },
         {
             "chance": 0.004,
@@ -214,12 +211,59 @@
                     "interval": 90
                 }
             },
-            "translate": {"y": 1}
+            "translate": {
+                "y": 1
+            }
         }
     ],
-    "biomeStyle": {"style": "SIMPLEX"},
-    "wall": {"palette": [
-        {"block": "minecraft:stone"},
-        {"block": "minecraft:andesite"}
-    ]}
+    "decorators": [
+        {
+            "chance": 0.04,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "minecraft:rose_bush",
+                    "weight": 6
+                },
+                {
+                    "block": "minecraft:poppy",
+                    "weight": 8
+                }
+            ]
+        },
+        {
+            "chance": 0.01,
+            "palette": [
+                {
+                    "block": "minecraft:tall_grass"
+                }
+            ]
+        },
+        {
+            "chance": 0.5,
+            "palette": [
+                {
+                    "block": "minecraft:grass",
+                    "weight": 15
+                },
+                {
+                    "block": "minecraft:fern",
+                    "weight": 1
+                }
+            ]
+        },
+        {
+            "chance": 0.07,
+            "palette": [
+                {
+                    "block": "minecraft:oak_leaves",
+                    "data": {
+                        "persistent": true
+                    }
+                }
+            ]
+        }
+    ]
 }

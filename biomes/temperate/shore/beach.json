@@ -1,24 +1,57 @@
 {
     "name": "Temperate Beach",
-    "derivative": "BEACH",
-    "rarity": 1,
     "color": "#EDFF00",
+    "rarity": 1,
+    "derivative": "BEACH",
     "vanillaDerivative": "BEACH",
-    "generators": [{
-        "min": -5,
-        "max": 1,
-        "generator": "plain"
-    }],
+    "generators": [
+        {
+            "min": -5,
+            "max": 1,
+            "generator": "plain"
+        }
+    ],
     "layers": [
         {
             "minHeight": 3,
             "maxHeight": 6,
-            "palette": [{"block": "minecraft:sand"}]
+            "palette": [
+                {
+                    "block": "minecraft:sand"
+                }
+            ]
         },
         {
             "minHeight": 1,
             "maxHeight": 3,
-            "palette": [{"block": "minecraft:sandstone"}]
+            "palette": [
+                {
+                    "block": "minecraft:sandstone"
+                }
+            ]
+        }
+    ],
+    "objects": [
+        {
+            "mode": "PAINT",
+            "chance": 0.0025,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/bincluster1"
+            ],
+            "translate": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
         }
     ],
     "decorators": [
@@ -45,7 +78,9 @@
         },
         {
             "chance": 0.003,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 0.3,
             "palette": [
                 {
@@ -56,7 +91,9 @@
                     },
                     "block": "minecraft:stone_button"
                 },
-                {"block": "minecraft:air"},
+                {
+                    "block": "minecraft:air"
+                },
                 {
                     "data": {
                         "face": "floor",
@@ -66,42 +103,33 @@
                     "block": "minecraft:stone_button"
                 }
             ],
-            "style": {"style": "STATIC"}
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
             "partOf": "SHORE_LINE",
             "chance": 0.09,
             "stackMin": 1,
             "stackMax": 4,
-            "palette": [{"block": "minecraft:sugar_cane"}],
+            "palette": [
+                {
+                    "block": "minecraft:sugar_cane"
+                }
+            ],
             "style": {
                 "style": "NOWHERE",
                 "zoom": 0.65
             },
-            "heightVariance": {"style": "STATIC"}
+            "heightVariance": {
+                "style": "STATIC"
+            }
         }
     ],
-    "objects": [{
-        "mode": "PAINT",
-        "chance": 0.0025,
-        "rotation": {
-            "yAxis": {
-                "min": 0,
-                "max": 0,
-                "interval": 90,
-                "enabled": true
-            },
-            "enabled": true
-        },
-        "place": ["clutter/bincluster1"],
-        "translate": {
-            "x": 0,
-            "y": 0,
-            "z": 0
-        }
-    }],
     "slab": {
-        "style": {"style": "STATIC"},
+        "style": {
+            "style": "STATIC"
+        },
         "palette": [
             {
                 "data": {
