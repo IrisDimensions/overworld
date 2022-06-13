@@ -22,7 +22,6 @@ Please contact us on Discord if you have some changes up for review!
 Roadmap
 - [X] Implement 1.18 heights
 - [X] Make iris Less Flat (more like amplified a bit)
-- [ ] Add biomes for 1.18 (Black/White Divinity, Underground Lava/water pools, Crimson/Corruption)
 - [X] Bigger caves overall for 1.18 advantages
 - [X] More carving
 - [X] Lava
