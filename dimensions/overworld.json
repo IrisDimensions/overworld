@@ -1,17 +1,17 @@
 {
-    "version": 2077,
+    "version": 2085,
     "name": "Overworld",
     "environment": "NORMAL",
-    "fluidHeight": 100,
+    "fluidHeight": 160,
     "continentZoom": 1,
     "continentalStyle": {
         "style": "NOWHERE_CELLULAR",
         "zoom": 5
     },
-    "logicalHeight": 448,
+    "logicalHeight": 512,
     "dimensionHeight": {
-        "max": 448,
-        "min": -64
+        "max": 512,
+        "min": 0
     },
     "landChance": 0.69,
     "regionStyle": {
@@ -29,14 +29,16 @@
         }
     },
     "regionZoom": 6.15,
+    "aggressiveBiomeReshuffle": true,
     "regions": [
+        "terralost",
+        "frozen",
+        "hot",
         "mushroom",
         "swamp",
-        "frozen",
-        "tundra",
         "temperate",
         "tropical",
-        "hot"
+        "tundra"
     ],
     "carving": {"caves": [
         {
@@ -70,25 +72,6 @@
             }
         }
     ]},
-    "islandBiomeChanceStyle": {
-        "style": "NOWHERE_CELLULAR",
-        "axialFracturing": true,
-        "fracture": {
-            "multiplier": 55,
-            "axialFracturing": true,
-            "style": "NOWHERE",
-            "zoom": 0.15,
-            "fracture": {
-                "axialFracturing": true,
-                "style": "STATIC",
-                "multiplier": 4
-            }
-        }
-    },
-    "treeSettings": {
-        "enabled": true,
-        "mode": "FIRST"
-    },
     "seaBiomeStyle": {"style": "SIMPLEX"},
     "landBiomeStyle": {
         "style": "NOWHERE_CELLULAR",
@@ -106,7 +89,6 @@
         }
     },
     "shoreBiomeStyle": {"style": "NOWHERE_CELLULAR"},
-    "lootTries": 32,
     "loot": {"tables": [
         "global-treasure",
         "global-tools",
@@ -259,10 +241,7 @@
     "caveBiomeStyle": {"style": "SIMPLEX"},
     "coordFractureZoom": 0.15,
     "preventLeafDecay": true,
-    "noiseModificationFromFeatures": false,
-    "postProcessCaves": true,
     "useMantle": true,
-    "terrainZoom": 1,
     "stronghold": "stronghold",
     "strongholdJumpDistance": 670,
     "maxStrongholds": 27,

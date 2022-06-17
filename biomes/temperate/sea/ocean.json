@@ -3,53 +3,31 @@
     "color": "#395FDF",
     "derivative": "LUKEWARM_OCEAN",
     "vanillaDerivative": "OCEAN",
-    "generators": [
-        {
-            "min": -32,
-            "max": -10,
-            "generator": "mountain"
-        }
-    ],
+    "generators": [{
+        "min": -32,
+        "max": -10,
+        "generator": "mountain"
+    }],
     "layers": [
         {
             "minHeight": 2,
             "maxHeight": 3,
-            "style": {
-                "style": "FRACTAL_FBM_IRIS"
-            },
+            "style": {"style": "FRACTAL_FBM_IRIS"},
             "zoom": 0.825,
             "palette": [
-                {
-                    "block": "minecraft:sand"
-                },
-                {
-                    "block": "minecraft:clay"
-                },
-                {
-                    "block": "minecraft:sand"
-                },
-                {
-                    "block": "minecraft:gravel"
-                },
-                {
-                    "block": "minecraft:sand"
-                },
-                {
-                    "block": "minecraft:dirt"
-                },
+                {"block": "minecraft:sand"},
+                {"block": "minecraft:clay"},
+                {"block": "minecraft:sand"},
+                {"block": "minecraft:gravel"},
+                {"block": "minecraft:sand"},
+                {"block": "minecraft:dirt"},
                 {
                     "weight": 2,
                     "block": "minecraft:sand"
                 }
             ]
         },
-        {
-            "palette": [
-                {
-                    "block": "minecraft:dirt"
-                }
-            ]
-        },
+        {"palette": [{"block": "minecraft:dirt"}]},
         {
             "minHeight": 1,
             "maxHeight": 3,
@@ -58,9 +36,7 @@
                     "weight": 2,
                     "block": "minecraft:dirt"
                 },
-                {
-                    "block": "minecraft:coarse_dirt"
-                }
+                {"block": "minecraft:coarse_dirt"}
             ]
         }
     ],
@@ -83,22 +59,10 @@
                 "structures/usdship1",
                 "structures/usdship2"
             ],
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "minecraft:oak_stairs"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "minecraft:oak_planks"
-                            }
-                        ]
-                    }
-                }
-            ],
+            "edit": [{
+                "find": [{"block": "minecraft:oak_stairs"}],
+                "replace": {"palette": [{"block": "minecraft:oak_planks"}]}
+            }],
             "translate": {
                 "x": 0,
                 "y": -4,
@@ -169,96 +133,58 @@
                 "structures/oruins3"
             ],
             "mode": "PAINT",
-            "loot": [
-                {
-                    "name": "tropical-dungeon"
-                }
-            ]
+            "loot": [{"name": "tropical-dungeon"}]
         }
     ],
     "decorators": [
         {
-            "chance": 0.0006,
-            "variance": {
-                "style": "STATIC"
-            },
+            "chance": 6.0E-4,
+            "variance": {"style": "STATIC"},
             "zoom": 1,
             "palette": [
-                {
-                    "block": "minecraft:soul_sand"
-                },
-                {
-                    "block": "minecraft:magma_block"
-                }
+                {"block": "minecraft:soul_sand"},
+                {"block": "minecraft:magma_block"}
             ],
-            "style": {
-                "style": "STATIC"
-            },
+            "style": {"style": "STATIC"},
             "partOf": "SEA_FLOOR"
         },
         {
             "chance": 0.07,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 5,
-            "palette": [
-                {
-                    "block": "minecraft:seagrass"
-                }
-            ],
-            "style": {
-                "style": "STATIC"
-            },
+            "palette": [{"block": "minecraft:seagrass"}],
+            "style": {"style": "STATIC"},
             "partOf": "SEA_FLOOR"
         },
         {
             "chance": 0.013,
             "verticalZoom": 88,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "stackMax": 6,
             "zoom": 1,
-            "palette": [
-                {
-                    "block": "minecraft:kelp_plant"
-                }
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "heightVariance": {
-                "style": "NOWHERE"
-            },
+            "palette": [{"block": "minecraft:kelp_plant"}],
+            "style": {"style": "STATIC"},
+            "heightVariance": {"style": "NOWHERE"},
             "stackMin": 2,
             "partOf": "SEA_FLOOR"
         },
         {
             "chance": 0.001,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 1,
-            "palette": [
-                {
-                    "data": {
-                        "waterlogged": true,
-                        "pickles": 1
-                    },
-                    "block": "minecraft:sea_pickle"
-                }
-            ],
-            "style": {
-                "style": "STATIC"
-            },
+            "palette": [{
+                "data": {
+                    "waterlogged": true,
+                    "pickles": 1
+                },
+                "block": "minecraft:sea_pickle"
+            }],
+            "style": {"style": "STATIC"},
             "partOf": "SEA_FLOOR"
         }
     ],
     "slab": {
-        "style": {
-            "style": "STATIC"
-        },
+        "style": {"style": "STATIC"},
         "palette": [
             {
                 "data": {

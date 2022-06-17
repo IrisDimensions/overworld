@@ -3,13 +3,11 @@
     "color": "#3983DF",
     "derivative": "RIVER",
     "vanillaDerivative": "RIVER",
-    "generators": [
-        {
-            "min": -32,
-            "max": -10,
-            "generator": "mountain"
-        }
-    ],
+    "generators": [{
+        "min": -32,
+        "max": -10,
+        "generator": "mountain"
+    }],
     "layers": [
         {
             "minHeight": 2,
@@ -37,80 +35,54 @@
                 }
             ]
         },
-        {
-            "palette": [
-                {
-                    "block": "minecraft:cobblestone"
-                },
-                {
-                    "block": "minecraft:stone"
-                }
-            ]
-        }
+        {"palette": [
+            {"block": "minecraft:cobblestone"},
+            {"block": "minecraft:stone"}
+        ]}
     ],
-    "objects": [
-        {
-            "chance": 0.001,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
+    "objects": [{
+        "chance": 0.001,
+        "rotation": {
+            "yAxis": {
+                "min": 0,
+                "max": 0,
+                "interval": 90,
                 "enabled": true
             },
-            "place": [
-                "clutter/obelisk1",
-                "clutter/obelisk2",
-                "clutter/obelisk3",
-                "clutter/obelisk4",
-                "clutter/obelisk5",
-                "clutter/obelisk6",
-                "clutter/obelisk7"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
+            "enabled": true
+        },
+        "place": [
+            "clutter/obelisk1",
+            "clutter/obelisk2",
+            "clutter/obelisk3",
+            "clutter/obelisk4",
+            "clutter/obelisk5",
+            "clutter/obelisk6",
+            "clutter/obelisk7"
+        ],
+        "translate": {
+            "x": 0,
+            "y": 0,
+            "z": 0
         }
-    ],
+    }],
     "decorators": [
         {
             "chance": 0.07,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 5,
-            "palette": [
-                {
-                    "block": "minecraft:seagrass"
-                }
-            ],
-            "style": {
-                "style": "STATIC"
-            }
+            "palette": [{"block": "minecraft:seagrass"}],
+            "style": {"style": "STATIC"}
         },
         {
             "chance": 0.013,
             "verticalZoom": 88,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "stackMax": 6,
             "zoom": 1,
-            "palette": [
-                {
-                    "block": "minecraft:kelp_plant"
-                }
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "heightVariance": {
-                "style": "NOWHERE"
-            },
+            "palette": [{"block": "minecraft:kelp_plant"}],
+            "style": {"style": "STATIC"},
+            "heightVariance": {"style": "NOWHERE"},
             "stackMin": 2
         }
     ]

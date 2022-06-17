@@ -4,92 +4,60 @@
     "rarity": 1,
     "derivative": "JUNGLE",
     "vanillaDerivative": "BEACH",
-    "generators": [
-        {
-            "min": 3,
-            "max": 7,
-            "generator": "plain"
-        }
-    ],
-    "wall": {
-        "palette": [
-            {
-                "block": "minecraft:smooth_sandstone"
-            }
-        ]
-    },
+    "generators": [{
+        "min": 3,
+        "max": 7,
+        "generator": "plain"
+    }],
+    "wall": {"palette": [{"block": "minecraft:smooth_sandstone"}]},
     "layers": [
         {
             "minHeight": 3,
             "maxHeight": 6,
-            "palette": [
-                {
-                    "block": "minecraft:sand"
-                }
-            ]
+            "palette": [{"block": "minecraft:sand"}]
         },
         {
             "minHeight": 1,
             "maxHeight": 3,
-            "palette": [
-                {
-                    "block": "minecraft:dirt"
-                }
-            ]
+            "palette": [{"block": "minecraft:dirt"}]
         }
     ],
-    "objects": [
-        {
-            "chance": 1,
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "minecraft:player_wall_head"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "minecraft:air"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
+    "objects": [{
+        "chance": 1,
+        "edit": [{
+            "find": [{"block": "minecraft:player_wall_head"}],
+            "replace": {"palette": [{"block": "minecraft:air"}]}
+        }],
+        "rotation": {
+            "yAxis": {
+                "min": 0,
+                "max": 0,
+                "interval": 90,
                 "enabled": true
             },
-            "mode": "STILT",
-            "place": [
-                "trees/jungle/palm1",
-                "trees/jungle/palm2",
-                "trees/jungle/palm3",
-                "trees/jungle/palm4",
-                "trees/jungle/palm5",
-                "trees/jungle/palm6",
-                "trees/jungle/palm7",
-                "trees/jungle/palm8"
-            ],
-            "translate": {
-                "x": 0,
-                "y": -1,
-                "z": 0
-            }
+            "enabled": true
+        },
+        "mode": "STILT",
+        "place": [
+            "trees/jungle/palm1",
+            "trees/jungle/palm2",
+            "trees/jungle/palm3",
+            "trees/jungle/palm4",
+            "trees/jungle/palm5",
+            "trees/jungle/palm6",
+            "trees/jungle/palm7",
+            "trees/jungle/palm8"
+        ],
+        "translate": {
+            "x": 0,
+            "y": -1,
+            "z": 0
         }
-    ],
+    }],
     "decorators": [
         {
             "chance": 0.01,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 0.3,
             "palette": [
                 {
@@ -109,49 +77,33 @@
                     "block": "minecraft:jungle_button"
                 }
             ],
-            "style": {
-                "style": "STATIC"
-            }
+            "style": {"style": "STATIC"}
         },
         {
             "partOf": "SHORE_LINE",
             "verticalZoom": 0.2,
             "chance": 0.09,
-            "variance": {
-                "style": "SIMPLEX"
-            },
+            "variance": {"style": "SIMPLEX"},
             "stackMax": 5,
             "zoom": 5,
-            "palette": [
-                {
-                    "block": "minecraft:sugar_cane"
-                }
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "heightVariance": {
-                "style": "STATIC"
-            },
+            "palette": [{"block": "minecraft:sugar_cane"}],
+            "style": {"style": "STATIC"},
+            "heightVariance": {"style": "STATIC"},
             "stackMin": 1
         }
     ],
-    "effects": [
-        {
-            "particleAltX": 0.301,
-            "particleAltY": -0.33885,
-            "particleAltZ": 0.301,
-            "chance": 1,
-            "particleEffect": "TOTEM",
-            "particleOffset": 12,
-            "interval": 550,
-            "particleCount": 0
-        }
-    ],
+    "effects": [{
+        "particleAltX": 0.301,
+        "particleAltY": -0.33885,
+        "particleAltZ": 0.301,
+        "chance": 1,
+        "particleEffect": "TOTEM",
+        "particleOffset": 12,
+        "interval": 550,
+        "particleCount": 0
+    }],
     "slab": {
-        "style": {
-            "style": "STATIC"
-        },
+        "style": {"style": "STATIC"},
         "palette": [
             {
                 "data": {

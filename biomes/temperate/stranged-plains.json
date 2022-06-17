@@ -4,74 +4,44 @@
     "rarity": 5,
     "derivative": "PLAINS",
     "vanillaDerivative": "PLAINS",
-    "customDerivitives": [
-        {
-            "id": "estrangedplains",
-            "category": "plains",
-            "humidity": 0.45,
-            "temperature": 0.875,
-            "grassColor": "#b9bf4e"
-        }
-    ],
-    "generators": [
-        {
-            "min": 4,
-            "max": 10,
-            "generator": "plain"
-        }
-    ],
-    "wall": {
-        "palette": [
-            {
-                "block": "minecraft:stone"
-            },
-            {
-                "block": "minecraft:andesite"
-            }
-        ]
-    },
+    "customDerivitives": [{
+        "id": "estrangedplains",
+        "category": "plains",
+        "humidity": 0.45,
+        "temperature": 0.875,
+        "grassColor": "#b9bf4e"
+    }],
+    "generators": [{
+        "min": 4,
+        "max": 10,
+        "generator": "plain"
+    }],
+    "wall": {"palette": [
+        {"block": "minecraft:stone"},
+        {"block": "minecraft:andesite"}
+    ]},
     "layers": [
-        {
-            "palette": [
-                {
-                    "block": "minecraft:grass_block"
-                }
-            ]
-        },
+        {"palette": [{"block": "minecraft:grass_block"}]},
         {
             "minHeight": 2,
             "maxHeight": 2,
-            "palette": [
-                {
-                    "block": "minecraft:dirt"
-                }
-            ]
+            "palette": [{"block": "minecraft:dirt"}]
         },
         {
             "minHeight": 1,
             "maxHeight": 3,
             "palette": [
-                {
-                    "block": "minecraft:dirt"
-                },
-                {
-                    "block": "minecraft:coarse_dirt"
-                }
+                {"block": "minecraft:dirt"},
+                {"block": "minecraft:coarse_dirt"}
             ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
+            "style": {"style": "STATIC"},
             "palette": [
-                {
-                    "block": "minecraft:dirt"
-                },
-                {
-                    "block": "minecraft:stone"
-                }
+                {"block": "minecraft:dirt"},
+                {"block": "minecraft:stone"}
             ]
         }
     ],
@@ -127,7 +97,7 @@
             ]
         },
         {
-            "chance": 2e-07,
+            "chance": 2.0E-7,
             "mode": "PAINT",
             "rotation": {
                 "yAxis": {
@@ -200,9 +170,7 @@
             },
             "palette": [
                 {
-                    "data": {
-                        "age": 7
-                    },
+                    "data": {"age": 7},
                     "block": "minecraft:wheat",
                     "weight": 45
                 },

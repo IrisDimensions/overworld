@@ -9,47 +9,37 @@
         "OLD_GROWTH_PINE_TAIGA",
         "WINDSWEPT_HILLS"
     ],
-    "customDerivitives": [
-        {
-            "category": "extreme_hills",
-            "id": "frozen_mountain",
-            "waterColor": "#216FC4",
-            "downfallType": "snow",
-            "temperature": -3,
-            "fogColor": "#A6D1FF",
-            "waterFogColor": "#216FC4",
-            "foliageColor": "#B8D0E1",
-            "grassColor": "#D0E1FF"
-        }
-    ],
+    "customDerivitives": [{
+        "category": "extreme_hills",
+        "id": "frozen_mountain",
+        "waterColor": "#216FC4",
+        "downfallType": "snow",
+        "temperature": -3,
+        "fogColor": "#A6D1FF",
+        "waterFogColor": "#216FC4",
+        "foliageColor": "#B8D0E1",
+        "grassColor": "#D0E1FF"
+    }],
     "children": [
         "frozen/mountain-extended",
         "frozen/peak",
         "frozen/mountain-cliffs"
     ],
-    "generators": [
-        {
-            "min": 70,
-            "max": 140,
-            "generator": "plain"
-        }
-    ],
+    "generators": [{
+        "min": 70,
+        "max": 140,
+        "generator": "plain"
+    }],
     "biomeZoom": 30,
     "biomeStyle": {
         "style": "NOWHERE",
         "zoom": 0.7,
         "exponent": 4
     },
-    "wall": {
-        "palette": [
-            {
-                "block": "minecraft:stone"
-            },
-            {
-                "block": "minecraft:andesite"
-            }
-        ]
-    },
+    "wall": {"palette": [
+        {"block": "minecraft:stone"},
+        {"block": "minecraft:andesite"}
+    ]},
     "layers": [
         {
             "minHeight": 1,
@@ -58,67 +48,39 @@
                 "minimumSlope": 0,
                 "maximumSlope": 3.295
             },
-            "palette": [
-                {
-                    "block": "minecraft:snow_block"
-                }
-            ]
+            "palette": [{"block": "minecraft:snow_block"}]
         },
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "palette": [
-                {
-                    "block": "minecraft:grass_block"
-                }
-            ]
+            "palette": [{"block": "minecraft:grass_block"}]
         },
         {
             "minHeight": 2,
             "maxHeight": 4,
-            "slopeCondition": {
-                "minimumSlope": 3.95
-            },
+            "slopeCondition": {"minimumSlope": 3.95},
             "palette": [
-                {
-                    "block": "minecraft:gravel"
-                },
-                {
-                    "block": "minecraft:cyan_terracotta"
-                }
+                {"block": "minecraft:gravel"},
+                {"block": "minecraft:cyan_terracotta"}
             ]
         },
         {
             "minHeight": 2,
             "maxHeight": 3,
             "palette": [
-                {
-                    "block": "minecraft:stone"
-                },
-                {
-                    "block": "minecraft:andesite"
-                },
-                {
-                    "block": "minecraft:gravel"
-                }
+                {"block": "minecraft:stone"},
+                {"block": "minecraft:andesite"},
+                {"block": "minecraft:gravel"}
             ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
+            "style": {"style": "STATIC"},
             "palette": [
-                {
-                    "block": "minecraft:stone"
-                },
-                {
-                    "block": "minecraft:andesite"
-                },
-                {
-                    "block": "minecraft:stone"
-                }
+                {"block": "minecraft:stone"},
+                {"block": "minecraft:andesite"},
+                {"block": "minecraft:stone"}
             ]
         }
     ],
@@ -136,24 +98,18 @@
             "structure": "village-snowy"
         }
     ],
-    "decorators": [
-        {
-            "chance": 1,
-            "variance": {
-                "style": "NOWHERE",
-                "zoom": 0.23
+    "decorators": [{
+        "chance": 1,
+        "variance": {
+            "style": "NOWHERE",
+            "zoom": 0.23
+        },
+        "palette": [
+            {
+                "data": {"layers": 1},
+                "block": "minecraft:snow"
             },
-            "palette": [
-                {
-                    "data": {
-                        "layers": 1
-                    },
-                    "block": "minecraft:snow"
-                },
-                {
-                    "block": "minecraft:air"
-                }
-            ]
-        }
-    ]
+            {"block": "minecraft:air"}
+        ]
+    }]
 }

@@ -1,58 +1,28 @@
 {
     "name": "Calcite Cavern",
-    "wall": {
+    "wall": {"palette": [{"block": "minecraft:tuff"}]},
+    "layers": [{
+        "maxHeight": 1,
+        "minHeight": 1,
         "palette": [
-            {
-                "block": "minecraft:tuff"
-            }
+            {"block": "minecraft:calcite"},
+            {"block": "minecraft:diorite"}
         ]
-    },
-    "layers": [
-        {
-            "maxHeight": 1,
-            "minHeight": 1,
-            "palette": [
-                {
-                    "block": "minecraft:calcite"
-                },
-                {
-                    "block": "minecraft:diorite"
-                }
-            ]
-        }
-    ],
-    "decorators": [
-        {
-            "chance": 0.001,
-            "style": {
-                "style": "STATIC"
-            },
-            "topPalette": [
-                {
-                    "block": "minecraft:andesite"
-                }
-            ],
-            "stackMax": 5,
-            "stackMin": 1,
-            "palette": [
-                {
-                    "block": "minecraft:calcite"
-                }
-            ]
-        }
-    ],
-    "caveCeilingLayers": [
-        {
-            "maxHeight": 1,
-            "minHeight": 1,
-            "palette": [
-                {
-                    "block": "minecraft:calcite"
-                },
-                {
-                    "block": "minecraft:diorite"
-                }
-            ]
-        }
-    ]
+    }],
+    "decorators": [{
+        "chance": 0.001,
+        "style": {"style": "STATIC"},
+        "topPalette": [{"block": "minecraft:andesite"}],
+        "stackMax": 5,
+        "stackMin": 1,
+        "palette": [{"block": "minecraft:calcite"}]
+    }],
+    "caveCeilingLayers": [{
+        "maxHeight": 1,
+        "minHeight": 1,
+        "palette": [
+            {"block": "minecraft:calcite"},
+            {"block": "minecraft:diorite"}
+        ]
+    }]
 }

@@ -1,47 +1,35 @@
 {
     "name": "Deepened Ravine",
     "wall": {
-        "style": {
-            "style": "NOWHERE"
-        },
+        "style": {"style": "NOWHERE"},
+        "palette": [
+            {
+                "block": "minecraft:stone",
+                "weight": 3
+            },
+            {"block": "minecraft:stone"}
+        ]
+    },
+    "layers": [{
+        "style": {"style": "STATIC"},
+        "maxHeight": 2,
+        "minHeight": 2,
         "palette": [
             {
                 "block": "minecraft:stone",
                 "weight": 3
             },
             {
-                "block": "minecraft:stone"
+                "block": "minecraft:andesite",
+                "weight": 3
             }
         ]
-    },
-    "layers": [
-        {
-            "style": {
-                "style": "STATIC"
-            },
-            "maxHeight": 2,
-            "minHeight": 2,
-            "palette": [
-                {
-                    "block": "minecraft:stone",
-                    "weight": 3
-                },
-                {
-                    "block": "minecraft:andesite",
-                    "weight": 3
-                }
-            ]
-        }
-    ],
+    }],
     "decorators": [
         {
             "partOf": "CEILING",
             "chance": 0.03,
-            "palette": [
-                {
-                    "block": "minecraft:hanging_roots"
-                }
-            ]
+            "palette": [{"block": "minecraft:hanging_roots"}]
         },
         {
             "partOf": "CEILING",
@@ -50,35 +38,25 @@
             "stackMin": 20,
             "stackMax": 70,
             "absoluteMaxStack": 10,
-            "heightVariance": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "minecraft:stone"
-                }
-            ]
+            "heightVariance": {"style": "STATIC"},
+            "palette": [{"block": "minecraft:stone"}]
         }
     ],
-    "caveCeilingLayers": [
-        {
-            "maxHeight": 1,
-            "minHeight": 1,
-            "style": {
-                "style": "STATIC"
+    "caveCeilingLayers": [{
+        "maxHeight": 1,
+        "minHeight": 1,
+        "style": {"style": "STATIC"},
+        "palette": [
+            {
+                "block": "minecraft:shroomlight",
+                "weight": 1
             },
-            "palette": [
-                {
-                    "block": "minecraft:shroomlight",
-                    "weight": 1
-                },
-                {
-                    "block": "minecraft:stone",
-                    "weight": 20
-                }
-            ]
-        }
-    ],
+            {
+                "block": "minecraft:stone",
+                "weight": 20
+            }
+        ]
+    }],
     "childStyle": {
         "style": "STATIC",
         "zoom": 2

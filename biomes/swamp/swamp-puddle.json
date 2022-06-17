@@ -3,24 +3,20 @@
     "rarity": 2,
     "derivative": "SWAMP",
     "vanillaDerivative": "SWAMP",
-    "customDerivitives": [
-        {
-            "id": "k530puddle",
-            "foliageColor": "#4a532f",
-            "waterColor": "#49521d",
-            "waterFogColor": "#49521d",
-            "fogColor": "#325729",
-            "grassColor": "#4b5332",
-            "category": "forest"
-        }
-    ],
-    "generators": [
-        {
-            "generator": "plain",
-            "max": -7,
-            "min": -6
-        }
-    ],
+    "customDerivitives": [{
+        "id": "k530puddle",
+        "foliageColor": "#4a532f",
+        "waterColor": "#49521d",
+        "waterFogColor": "#49521d",
+        "fogColor": "#325729",
+        "grassColor": "#4b5332",
+        "category": "forest"
+    }],
+    "generators": [{
+        "generator": "plain",
+        "max": -7,
+        "min": -6
+    }],
     "layers": [
         {
             "style": {
@@ -88,67 +84,49 @@
             ]
         }
     ],
-    "objects": [
-        {
-            "mode": "PAINT",
-            "place": [
-                "trees/willow/t1",
-                "trees/willow/t2",
-                "trees/willow/t3",
-                "trees/willow/t4",
-                "trees/willow/t5",
-                "trees/willow/t6",
-                "trees/willow/t7",
-                "trees/willow/t8",
-                "trees/mangrove/t1",
-                "trees/mangrove/t2",
-                "trees/mangrove/t3",
-                "trees/mangrove/t4"
-            ],
-            "chance": 0.5,
-            "rotation": {
+    "objects": [{
+        "mode": "PAINT",
+        "place": [
+            "trees/willow/t1",
+            "trees/willow/t2",
+            "trees/willow/t3",
+            "trees/willow/t4",
+            "trees/willow/t5",
+            "trees/willow/t6",
+            "trees/willow/t7",
+            "trees/willow/t8",
+            "trees/mangrove/t1",
+            "trees/mangrove/t2",
+            "trees/mangrove/t3",
+            "trees/mangrove/t4"
+        ],
+        "chance": 0.5,
+        "rotation": {
+            "enabled": true,
+            "yAxis": {
                 "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "interval": 90,
-                    "min": -360,
-                    "max": 360
-                }
+                "interval": 90,
+                "min": -360,
+                "max": 360
             }
         }
-    ],
+    }],
     "decorators": [
         {
             "chance": 0.25,
-            "palette": [
-                {
-                    "block": "minecraft:grass"
-                }
-            ]
+            "palette": [{"block": "minecraft:grass"}]
         },
         {
             "chance": 0.065,
-            "palette": [
-                {
-                    "block": "minecraft:fern"
-                }
-            ]
+            "palette": [{"block": "minecraft:fern"}]
         },
         {
             "chance": 0.005,
-            "palette": [
-                {
-                    "block": "minecraft:blue_orchid"
-                }
-            ]
+            "palette": [{"block": "minecraft:blue_orchid"}]
         },
         {
             "chance": 0.065,
-            "palette": [
-                {
-                    "block": "minecraft:large_fern"
-                }
-            ]
+            "palette": [{"block": "minecraft:large_fern"}]
         }
     ]
 }

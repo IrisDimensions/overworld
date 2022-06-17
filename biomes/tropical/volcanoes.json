@@ -4,35 +4,25 @@
     "rarity": 1,
     "derivative": "THE_VOID",
     "vanillaDerivative": "THE_VOID",
-    "customDerivitives": [
-        {
-            "category": "jungle",
-            "id": "tropical_volcano",
-            "grassColor": "#BDBF0B",
-            "foliageColor": "#BDBF0B",
-            "fogColor": "#DD793C",
-            "downfallType": "none"
-        }
-    ],
-    "children": [
-        "tropical/volcanoes-lava"
-    ],
-    "generators": [
-        {
-            "generator": "mountain",
-            "max": 180,
-            "min": 30
-        }
-    ],
+    "customDerivitives": [{
+        "category": "jungle",
+        "id": "tropical_volcano",
+        "grassColor": "#BDBF0B",
+        "foliageColor": "#BDBF0B",
+        "fogColor": "#DD793C",
+        "downfallType": "none"
+    }],
+    "children": ["tropical/volcanoes-lava"],
+    "generators": [{
+        "generator": "mountain",
+        "max": 180,
+        "min": 30
+    }],
     "layers": [
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "palette": [
-                {
-                    "block": "minecraft:basalt"
-                }
-            ]
+            "palette": [{"block": "minecraft:basalt"}]
         },
         {
             "minHeight": 2,
@@ -40,55 +30,39 @@
             "palette": [
                 {
                     "block": "minecraft:basalt",
-                    "data": {
-                        "axis": "x"
-                    }
+                    "data": {"axis": "x"}
                 },
                 {
                     "block": "minecraft:basalt",
-                    "data": {
-                        "axis": "y"
-                    }
+                    "data": {"axis": "y"}
                 },
                 {
                     "block": "minecraft:basalt",
-                    "data": {
-                        "axis": "z"
-                    }
+                    "data": {"axis": "z"}
                 }
             ]
         },
         {
             "minHeight": 3,
             "maxHeight": 10,
-            "palette": [
-                {
-                    "block": "minecraft:blackstone"
-                }
-            ]
+            "palette": [{"block": "minecraft:blackstone"}]
         },
         {
             "minHeight": 1,
             "maxHeight": 2,
-            "palette": [
-                {
-                    "block": "minecraft:tuff"
-                }
-            ]
+            "palette": [{"block": "minecraft:tuff"}]
         }
     ],
-    "effects": [
-        {
-            "particleAltX": 0.001,
-            "particleAltY": 0.13885,
-            "particleAltZ": 0.001,
-            "chance": 1,
-            "particleEffect": "CAMPFIRE_SIGNAL_SMOKE",
-            "particleOffset": 0,
-            "interval": 300,
-            "particleCount": 0
-        }
-    ],
+    "effects": [{
+        "particleAltX": 0.001,
+        "particleAltY": 0.13885,
+        "particleAltZ": 0.001,
+        "chance": 1,
+        "particleEffect": "CAMPFIRE_SIGNAL_SMOKE",
+        "particleOffset": 0,
+        "interval": 300,
+        "particleCount": 0
+    }],
     "childStyle": {
         "style": "GLOB",
         "zoom": 0.2,

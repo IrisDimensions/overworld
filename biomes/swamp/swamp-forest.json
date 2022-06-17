@@ -3,27 +3,21 @@
     "rarity": 2,
     "derivative": "SWAMP",
     "vanillaDerivative": "SWAMP",
-    "customDerivitives": [
-        {
-            "id": "k530forestswamp",
-            "foliageColor": "#4a532f",
-            "waterColor": "#49521d",
-            "waterFogColor": "#49521d",
-            "fogColor": "#325729",
-            "grassColor": "#4b5332",
-            "category": "forest"
-        }
-    ],
-    "children": [
-        "swamp/swamp-puddle"
-    ],
-    "generators": [
-        {
-            "generator": "plain",
-            "max": 4,
-            "min": 1
-        }
-    ],
+    "customDerivitives": [{
+        "id": "k530forestswamp",
+        "foliageColor": "#4a532f",
+        "waterColor": "#49521d",
+        "waterFogColor": "#49521d",
+        "fogColor": "#325729",
+        "grassColor": "#4b5332",
+        "category": "forest"
+    }],
+    "children": ["swamp/swamp-puddle"],
+    "generators": [{
+        "generator": "plain",
+        "max": 4,
+        "min": 1
+    }],
     "layers": [
         {
             "style": {
@@ -115,18 +109,14 @@
                     "max": 360
                 }
             },
-            "translate": {
-                "y": -5
-            }
+            "translate": {"y": -5}
         },
         {
             "place": [
                 "trees/acacia/17",
                 "trees/acacia/18"
             ],
-            "translate": {
-                "y": -4
-            },
+            "translate": {"y": -4},
             "chance": 0.3,
             "rotation": {
                 "enabled": true,
@@ -174,54 +164,30 @@
                 "exponent": 1.4,
                 "zoom": 0.8
             },
-            "palette": [
-                {
-                    "block": "minecraft:dark_oak_leaves"
-                }
-            ]
+            "palette": [{"block": "minecraft:dark_oak_leaves"}]
         },
         {
             "chance": 0.25,
-            "palette": [
-                {
-                    "block": "minecraft:grass"
-                }
-            ]
+            "palette": [{"block": "minecraft:grass"}]
         },
         {
             "chance": 0.065,
-            "palette": [
-                {
-                    "block": "minecraft:fern"
-                }
-            ]
+            "palette": [{"block": "minecraft:fern"}]
+        },
+        {
+            "chance": 0.005,
+            "palette": [{"block": "minecraft:blue_orchid"}]
         },
         {
             "chance": 0.005,
             "palette": [
-                {
-                    "block": "minecraft:blue_orchid"
-                }
-            ]
-        },
-        {
-            "chance": 0.005,
-            "palette": [
-                {
-                    "block": "minecraft:brown_mushroom"
-                },
-                {
-                    "block": "minecraft:red_mushroom"
-                }
+                {"block": "minecraft:brown_mushroom"},
+                {"block": "minecraft:red_mushroom"}
             ]
         },
         {
             "chance": 0.065,
-            "palette": [
-                {
-                    "block": "minecraft:large_fern"
-                }
-            ]
+            "palette": [{"block": "minecraft:large_fern"}]
         }
     ],
     "childStyle": {

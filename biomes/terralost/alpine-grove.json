@@ -1,0 +1,132 @@
+{
+    "name": "Alpine Grove",
+    "color": "#0C5E49",
+    "rarity": 1,
+    "derivative": "FROZEN_PEAKS",
+    "vanillaDerivative": "OLD_GROWTH_SPRUCE_TAIGA",
+    "biomeScatter": [
+        "OLD_GROWTH_PINE_TAIGA",
+        "WINDSWEPT_HILLS"
+    ],
+    "customDerivitives": [
+        {
+            "category": "forest",
+            "temperature": -0.2,
+            "humidity": 0.8,
+            "downfallType": "snow",
+            "id": "terralost_alpine_grove1",
+            "skyColor": "#A5B0BD",
+            "waterColor": "#3938C9",
+            "waterFogColor": "#50533",
+            "fogColor": "#D7D8E1"
+        },
+        {
+            "category": "forest",
+            "temperature": -0.2,
+            "humidity": 0.8,
+            "downfallType": "snow",
+            "id": "terralost_alpine_grove2",
+            "skyColor": "#A5B0BD",
+            "waterColor": "#3938C9",
+            "waterFogColor": "#50533",
+            "foliageColor": "#ffffff",
+            "fogColor": "#D7D8E1"
+        }
+    ],
+    "generators": [{
+        "generator": "plain",
+        "min": 42,
+        "max": 51
+    }],
+    "layers": [
+        {
+            "minHeight": 3,
+            "maxHeight": 5,
+            "palette": [
+                {
+                    "block": "minecraft:powder_snow",
+                    "weight": 2
+                },
+                {"block": "minecraft:snow_block"}
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 2,
+            "palette": [{"block": "minecraft:snow_block"}]
+        },
+        {"palette": [{"block": "minecraft:packed_ice"}]}
+    ],
+    "objects": [
+        {
+            "mode": "MIN_HEIGHT",
+            "place": [
+                "trees/mixed/pollup1",
+                "trees/mixed/pollup2",
+                "trees/mixed/pollup3",
+                "trees/mixed/pollup4",
+                "trees/mixed/pollup5",
+                "trees/mixed/pollup6",
+                "trees/mixed/pollup7",
+                "trees/mixed/pollup8",
+                "trees/mixed/pollup9",
+                "trees/mixed/pollup10",
+                "trees/mixed/pollup11",
+                "trees/mixed/pollup12",
+                "trees/mixed/pollup13"
+            ],
+            "chance": 0.6,
+            "density": 2,
+            "snow": 0.3,
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 45,
+                    "min": 0,
+                    "max": 360
+                }
+            }
+        },
+        {
+            "chance": 0.3,
+            "density": 3,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 360,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/shrub1",
+                "clutter/shrub2",
+                "clutter/shrub3",
+                "clutter/shrub4",
+                "clutter/shrub5",
+                "clutter/shrub6",
+                "clutter/shrub7",
+                "clutter/shrub8",
+                "clutter/shrub9",
+                "clutter/shrub10"
+            ],
+            "edit": [
+                {
+                    "find": [
+                        {"block": "minecraft:birch_leaves"},
+                        {"block": "minecraft:oak_leaves"}
+                    ],
+                    "replace": {"palette": [{"block": "minecraft:spruce_leaves"}]}
+                },
+                {
+                    "find": [{"block": "minecraft:spruce_fence"}],
+                    "replace": {"palette": [{"block": "minecraft:spruce_wood"}]}
+                }
+            ],
+            "snow": 0.3,
+            "mode": "CENTER_HEIGHT"
+        }
+    ]
+}

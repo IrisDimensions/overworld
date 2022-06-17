@@ -10,16 +10,14 @@
         "WINDSWEPT_HILLS",
         "SWAMP"
     ],
-    "customDerivitives": [
-        {
-            "category": "forest",
-            "id": "tundra_forest_cliffs",
-            "grassColor": "#56B16F",
-            "waterColor": "#80B4C6",
-            "waterFogColor": "#80B4C6",
-            "fogColor": "#8091C6"
-        }
-    ],
+    "customDerivitives": [{
+        "category": "forest",
+        "id": "tundra_forest_cliffs",
+        "grassColor": "#56B16F",
+        "waterColor": "#80B4C6",
+        "waterFogColor": "#80B4C6",
+        "fogColor": "#8091C6"
+    }],
     "generators": [
         {
             "generator": "smooth-dunes",
@@ -33,85 +31,45 @@
         }
     ],
     "biomeZoom": 30,
-    "biomeStyle": {
-        "style": "SIMPLEX"
-    },
+    "biomeStyle": {"style": "SIMPLEX"},
     "wall": {
-        "style": {
-            "style": "STATIC"
-        },
+        "style": {"style": "STATIC"},
         "palette": [
-            {
-                "block": "minecraft:stone"
-            },
-            {
-                "block": "minecraft:andesite"
-            },
-            {
-                "block": "minecraft:stone"
-            }
+            {"block": "minecraft:stone"},
+            {"block": "minecraft:andesite"},
+            {"block": "minecraft:stone"}
         ]
     },
     "layers": [
         {
             "minHeight": 3,
             "maxHeight": 5,
-            "slopeCondition": {
-                "minimumSlope": 6.9
-            },
+            "slopeCondition": {"minimumSlope": 6.9},
             "palette": [
-                {
-                    "block": "minecraft:stone"
-                },
-                {
-                    "block": "minecraft:andesite"
-                },
-                {
-                    "block": "minecraft:gravel"
-                }
+                {"block": "minecraft:stone"},
+                {"block": "minecraft:andesite"},
+                {"block": "minecraft:gravel"}
             ]
         },
         {
             "minHeight": 3,
             "maxHeight": 5,
-            "slopeCondition": {
-                "minimumSlope": 5.2
-            },
+            "slopeCondition": {"minimumSlope": 5.2},
             "palette": [
-                {
-                    "block": "minecraft:dirt"
-                },
-                {
-                    "block": "minecraft:coarse_dirt"
-                },
-                {
-                    "block": "minecraft:gravel"
-                }
+                {"block": "minecraft:dirt"},
+                {"block": "minecraft:coarse_dirt"},
+                {"block": "minecraft:gravel"}
             ]
         },
-        {
-            "palette": [
-                {
-                    "block": "minecraft:grass_block"
-                }
-            ]
-        },
+        {"palette": [{"block": "minecraft:grass_block"}]},
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {
-                "style": "NOWHERE"
-            },
+            "style": {"style": "NOWHERE"},
             "palette": [
-                {
-                    "block": "minecraft:stone"
-                },
-                {
-                    "block": "minecraft:andesite"
-                },
-                {
-                    "block": "minecraft:stone"
-                }
+                {"block": "minecraft:stone"},
+                {"block": "minecraft:andesite"},
+                {"block": "minecraft:stone"}
             ]
         }
     ],
@@ -207,22 +165,10 @@
         },
         {
             "chance": 0.075,
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "minecraft:oak_wood"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "minecraft:spruce_wood"
-                            }
-                        ]
-                    }
-                }
-            ],
+            "edit": [{
+                "find": [{"block": "minecraft:oak_wood"}],
+                "replace": {"palette": [{"block": "minecraft:spruce_wood"}]}
+            }],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -278,107 +224,63 @@
                     "interval": 90
                 }
             },
-            "translate": {
-                "y": 1
-            }
+            "translate": {"y": 1}
         }
     ],
     "decorators": [
         {
             "chance": 0.01,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 0.1,
             "palette": [
-                {
-                    "block": "minecraft:white_tulip"
-                },
-                {
-                    "block": "minecraft:blue_orchid"
-                },
-                {
-                    "block": "minecraft:poppy"
-                }
+                {"block": "minecraft:white_tulip"},
+                {"block": "minecraft:blue_orchid"},
+                {"block": "minecraft:poppy"}
             ],
-            "style": {
-                "style": "STATIC"
-            }
+            "style": {"style": "STATIC"}
         },
         {
             "chance": 0.003,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 0.02,
             "palette": [
-                {
-                    "block": "minecraft:white_tulip"
-                },
-                {
-                    "block": "minecraft:cornflower"
-                },
-                {
-                    "block": "minecraft:blue_orchid"
-                },
-                {
-                    "block": "minecraft:lily_of_the_valley"
-                }
+                {"block": "minecraft:white_tulip"},
+                {"block": "minecraft:cornflower"},
+                {"block": "minecraft:blue_orchid"},
+                {"block": "minecraft:lily_of_the_valley"}
             ],
-            "style": {
-                "style": "STATIC"
-            }
+            "style": {"style": "STATIC"}
         },
         {
             "chance": 0.001,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 0.3,
             "palette": [
                 {
-                    "data": {
-                        "age": 0
-                    },
+                    "data": {"age": 0},
                     "block": "minecraft:sweet_berry_bush"
                 },
                 {
-                    "data": {
-                        "age": 1
-                    },
+                    "data": {"age": 1},
                     "block": "minecraft:sweet_berry_bush"
                 },
                 {
-                    "data": {
-                        "age": 2
-                    },
+                    "data": {"age": 2},
                     "block": "minecraft:sweet_berry_bush"
                 },
                 {
-                    "data": {
-                        "age": 3
-                    },
+                    "data": {"age": 3},
                     "block": "minecraft:sweet_berry_bush"
                 }
             ],
-            "style": {
-                "style": "STATIC"
-            }
+            "style": {"style": "STATIC"}
         },
         {
             "chance": 0.2,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 0.3,
-            "palette": [
-                {
-                    "block": "minecraft:grass"
-                }
-            ],
-            "style": {
-                "style": "STATIC"
-            }
+            "palette": [{"block": "minecraft:grass"}],
+            "style": {"style": "STATIC"}
         }
     ],
     "biomeSkyScatter": [
