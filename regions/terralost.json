@@ -1,0 +1,47 @@
+{
+    "name": "Terralost",
+    "color": "#446600",
+    "rarity": 2,
+    "landBiomes": [
+        "terralost/amethyst-rainforest",
+        "terralost/amethyst-rainforest",
+        "terralost/alpine-grove",
+        "terralost/alpine-highlands"
+    ],
+    "loot": {
+        "mode": "ADD",
+        "multiplier": 1,
+        "tables": [
+            "global-clutter",
+            "global-tools"
+        ]
+    },
+    "landBiomeZoom": 3,
+    "shoreBiomes": ["tundra/shore/beach"],
+    "seaBiomes": ["mountain/sea/river"],
+    "entitySpawners": [
+        "tundra/land-passive",
+        "tundra/land-hostile",
+        "tundra/land-cave"
+    ],
+    "shoreHeightMin": 2.2,
+    "shoreHeightMax": 5.2,
+    "carving": {
+        "ravines": [{
+            "rarity": 25,
+            "ravine": "calcite/main"
+        }],
+        "caves": [{
+            "breakSurface": true,
+            "cave": "rocky/main",
+            "rarity": 50,
+            "caveStartHeight": {
+                "max": 400,
+                "min": 15,
+                "style": {"style": "STATIC"}
+            }
+        }]
+    },
+    "shoreHeightZoom": 1.14,
+    "riverThickness": 0.025
+}

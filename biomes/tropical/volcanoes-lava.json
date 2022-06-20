@@ -4,81 +4,57 @@
     "rarity": 1,
     "derivative": "THE_VOID",
     "vanillaDerivative": "THE_VOID",
-    "customDerivitives": [
+    "customDerivitives": [{
+        "category": "jungle",
+        "id": "tropical_volcanic_lava",
+        "grassColor": "#BDBF0B",
+        "foliageColor": "#BDBF0B",
+        "fogColor": "#DD793C",
+        "downfallType": "none"
+    }],
+    "generators": [{
+        "generator": "mountain",
+        "max": 180,
+        "min": 3
+    }],
+    "wall": {"palette": [
         {
-            "category": "jungle",
-            "id": "tropical_volcanic_lava",
-            "grassColor": "#BDBF0B",
-            "foliageColor": "#BDBF0B",
-            "fogColor": "#DD793C",
-            "downfallType": "none"
-        }
-    ],
-    "generators": [
-        {
-            "generator": "mountain",
-            "max": 180,
-            "min": 3
-        }
-    ],
-    "wall": {
-        "palette": [
-            {
-                "block": "minecraft:lava",
-                "data": {
-                    "level": 1
-                }
-            },
-            {
-                "block": "minecraft:tuff"
-            }
-        ]
-    },
+            "block": "minecraft:lava",
+            "data": {"level": 1}
+        },
+        {"block": "minecraft:tuff"}
+    ]},
     "layers": [
         {
             "minHeight": 2,
             "maxHeight": 3,
-            "palette": [
-                {
-                    "block": "minecraft:cave_air"
-                }
-            ]
+            "palette": [{"block": "minecraft:cave_air"}]
         },
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "palette": [
-                {
-                    "block": "minecraft:lava",
-                    "data": {
-                        "level": 1
-                    }
-                }
-            ]
+            "palette": [{
+                "block": "minecraft:lava",
+                "data": {"level": 1}
+            }]
         },
         {
             "minHeight": 1,
             "maxHeight": 3,
-            "palette": [
-                {
-                    "block": "minecraft:lava",
-                    "data": {
-                        "level": 0
-                    }
-                }
-            ]
+            "palette": [{
+                "block": "minecraft:lava",
+                "data": {"level": 0}
+            }]
         }
     ],
-    "effects": [
-        {
-            "particleAltX": 0.001,
-            "particleAltY": 0.13885,
-            "particleAltZ": 0.001,
-            "chance": 1,
-            "particleEffect": "CAMPFIRE_SIGNAL_SMOKE",
-            "particleOffset": 0,
-            "interval": 200,
-            "particleCount": 0
-        }
-    ]
+    "effects": [{
+        "particleAltX": 0.001,
+        "particleAltY": 0.13885,
+        "particleAltZ": 0.001,
+        "chance": 1,
+        "particleEffect": "CAMPFIRE_SIGNAL_SMOKE",
+        "particleOffset": 0,
+        "interval": 200,
+        "particleCount": 0
+    }]
 }

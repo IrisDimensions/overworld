@@ -8,43 +8,29 @@
         "PLAINS",
         "FOREST"
     ],
-    "customDerivitives": [
-        {
-            "category": "icy",
-            "id": "frozen_mountain_middle",
-            "waterColor": "#216FC4",
-            "fogColor": "#A6D1FF",
-            "downfallType": "snow",
-            "temperature": -3,
-            "waterFogColor": "#216FC4",
-            "foliageColor": "#B8D0E1",
-            "grassColor": "#D0E1FF"
-        }
-    ],
-    "generators": [
-        {
-            "generator": "mountain",
-            "max": 280,
-            "min": 70
-        }
-    ],
+    "customDerivitives": [{
+        "category": "icy",
+        "id": "frozen_mountain_middle",
+        "waterColor": "#216FC4",
+        "fogColor": "#A6D1FF",
+        "downfallType": "snow",
+        "temperature": -3,
+        "waterFogColor": "#216FC4",
+        "foliageColor": "#B8D0E1",
+        "grassColor": "#D0E1FF"
+    }],
+    "generators": [{
+        "generator": "mountain",
+        "max": 280,
+        "min": 70
+    }],
     "biomeZoom": 0.4,
-    "biomeStyle": {
-        "style": "SIMPLEX"
-    },
-    "wall": {
-        "palette": [
-            {
-                "block": "minecraft:ice"
-            },
-            {
-                "block": "minecraft:ice"
-            },
-            {
-                "block": "minecraft:cave_air"
-            }
-        ]
-    },
+    "biomeStyle": {"style": "SIMPLEX"},
+    "wall": {"palette": [
+        {"block": "minecraft:ice"},
+        {"block": "minecraft:ice"},
+        {"block": "minecraft:cave_air"}
+    ]},
     "layers": [
         {
             "minHeight": 1,
@@ -53,43 +39,25 @@
                 "minimumSlope": 0,
                 "maximumSlope": 3.295
             },
+            "palette": [{"block": "minecraft:snow_block"}]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "slopeCondition": {"minimumSlope": 3.95},
             "palette": [
-                {
-                    "block": "minecraft:snow_block"
-                }
+                {"block": "minecraft:gravel"},
+                {"block": "minecraft:cyan_terracotta"}
             ]
         },
         {
             "minHeight": 2,
             "maxHeight": 4,
-            "slopeCondition": {
-                "minimumSlope": 3.95
-            },
+            "slopeCondition": {"minimumSlope": 3.95},
             "palette": [
-                {
-                    "block": "minecraft:gravel"
-                },
-                {
-                    "block": "minecraft:cyan_terracotta"
-                }
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 4,
-            "slopeCondition": {
-                "minimumSlope": 3.95
-            },
-            "palette": [
-                {
-                    "block": "minecraft:stone"
-                },
-                {
-                    "block": "minecraft:stone"
-                },
-                {
-                    "block": "minecraft:cobblestone"
-                }
+                {"block": "minecraft:stone"},
+                {"block": "minecraft:stone"},
+                {"block": "minecraft:cobblestone"}
             ]
         },
         {
@@ -99,11 +67,7 @@
                 "minimumSlope": 0,
                 "maximumSlope": 4
             },
-            "palette": [
-                {
-                    "block": "minecraft:snow_block"
-                }
-            ]
+            "palette": [{"block": "minecraft:snow_block"}]
         },
         {
             "minHeight": 3,
@@ -112,33 +76,23 @@
                 "minimumSlope": 0,
                 "maximumSlope": 3
             },
-            "palette": [
-                {
-                    "block": "minecraft:dirt"
-                }
-            ]
+            "palette": [{"block": "minecraft:dirt"}]
         }
     ],
-    "decorators": [
-        {
-            "chance": 1,
-            "variance": {
-                "style": "NOWHERE",
-                "zoom": 0.23
+    "decorators": [{
+        "chance": 1,
+        "variance": {
+            "style": "NOWHERE",
+            "zoom": 0.23
+        },
+        "palette": [
+            {
+                "data": {"layers": 1},
+                "block": "minecraft:snow"
             },
-            "palette": [
-                {
-                    "data": {
-                        "layers": 1
-                    },
-                    "block": "minecraft:snow"
-                },
-                {
-                    "block": "minecraft:air"
-                }
-            ]
-        }
-    ],
+            {"block": "minecraft:air"}
+        ]
+    }],
     "childStyle": {
         "style": "STATIC",
         "exponent": 0.625,

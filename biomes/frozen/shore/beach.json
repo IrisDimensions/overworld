@@ -4,52 +4,36 @@
     "rarity": 1,
     "derivative": "SNOWY_TAIGA",
     "vanillaDerivative": "SNOWY_BEACH",
-    "customDerivitives": [
-        {
-            "id": "frozen_beach",
-            "waterColor": "#216FC4",
-            "fogColor": "#A6D1FF",
-            "downfallType": "snow",
-            "temperature": -3,
-            "waterFogColor": "#216FC4",
-            "foliageColor": "#B8D0E1",
-            "grassColor": "#D0E1FF"
-        }
-    ],
-    "generators": [
-        {
-            "min": -5,
-            "max": 1,
-            "generator": "plain"
-        }
-    ],
+    "customDerivitives": [{
+        "id": "frozen_beach",
+        "waterColor": "#216FC4",
+        "fogColor": "#A6D1FF",
+        "downfallType": "snow",
+        "temperature": -3,
+        "waterFogColor": "#216FC4",
+        "foliageColor": "#B8D0E1",
+        "grassColor": "#D0E1FF"
+    }],
+    "generators": [{
+        "min": -5,
+        "max": 1,
+        "generator": "plain"
+    }],
     "layers": [
         {
             "minHeight": 0,
             "maxHeight": 1,
-            "palette": [
-                {
-                    "block": "minecraft:snow_block"
-                }
-            ]
+            "palette": [{"block": "minecraft:snow_block"}]
         },
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "palette": [
-                {
-                    "block": "minecraft:grass_block"
-                }
-            ]
+            "palette": [{"block": "minecraft:grass_block"}]
         },
         {
             "minHeight": 2,
             "maxHeight": 4,
-            "palette": [
-                {
-                    "block": "minecraft:dirt"
-                }
-            ]
+            "palette": [{"block": "minecraft:dirt"}]
         }
     ],
     "objects": [
@@ -155,56 +139,34 @@
         {
             "chance": 0.0125,
             "density": 1,
-            "place": [
-                "structures/snowulder"
-            ]
+            "place": ["structures/snowulder"]
         }
     ],
-    "decorators": [
-        {
-            "chance": 1,
-            "variance": {
-                "style": "NOWHERE",
-                "zoom": 0.5
-            },
-            "palette": [
-                {
-                    "data": {
-                        "layers": 1
-                    },
-                    "block": "minecraft:snow"
-                },
-                {
-                    "block": "minecraft:air"
-                }
-            ]
-        }
-    ],
-    "seaLayers": [
-        {
-            "minHeight": 1,
-            "maxHeight": 7,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "minecraft:packed_ice"
-                }
-            ]
-        }
-    ],
-    "slab": {
-        "style": {
-            "style": "STATIC"
+    "decorators": [{
+        "chance": 1,
+        "variance": {
+            "style": "NOWHERE",
+            "zoom": 0.5
         },
         "palette": [
             {
-                "data": {
-                    "layers": 5
-                },
+                "data": {"layers": 1},
                 "block": "minecraft:snow"
-            }
+            },
+            {"block": "minecraft:air"}
         ]
+    }],
+    "seaLayers": [{
+        "minHeight": 1,
+        "maxHeight": 7,
+        "style": {"style": "STATIC"},
+        "palette": [{"block": "minecraft:packed_ice"}]
+    }],
+    "slab": {
+        "style": {"style": "STATIC"},
+        "palette": [{
+            "data": {"layers": 5},
+            "block": "minecraft:snow"
+        }]
     }
 }

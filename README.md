@@ -1,4 +1,4 @@
-# Overworld V2  (1.18+)
+# Overworld V2.5  (1.13+)
 The standard overworld for [Iris the Dimension Engine](https://www.spigotmc.org/resources/iris-world-gen-the-dimension-engine.84586/). New and Improved!
 
 
@@ -18,15 +18,97 @@ If you want to contribute as well, feel free to make a fork and pull requests.
 Please contact us on Discord if you have some changes up for review!
 
 
-# Overworld V2  1.18+
+# Overworld V2  1.19+
 Roadmap
-- [X] Implement 1.18 heights
-- [X] Make iris Less Flat (more like amplified a bit)
-- [X] Bigger caves overall for 1.18 advantages
-- [X] More carving
-- [X] Lava
-- [X] Entities...
+- [ ] More carving
+- [ ] Entities, Loot, Performance improvements
 
+# IMPLEMENTABLE BIOMES: 
+(These biomes are from a predefined set of biomes from Terralith and ill be giving my own artistic spin on the biomes as well as enhancing them)
+## Meaning: [ ] - not done : [-] Working on : [X] DONE (for the most part) : [0] Won't Do yet or at all
+- [0] Alpha islands
+- [0] Alpha islands (winter)
+- [-] Alpine grove 
+- [X] Alpine highlands https://i.imgur.com/MC114Zr.jpeg 
+- [ ] Amethyst canyon
+- [ ] Amethyst rainforest
+- [ ] Ancient sands
+- [ ] Arid highlands
+- [ ] Ashen savanna
+- [ ] Basalt cliffs
+- [ ] Birch Taiga
+- [ ] Blooming plateau
+- [ ] Blooming valley
+- [ ] Brushland
+- [ ] Bryce canyon
+- [ ] Caldera
+- [ ] Cloud Forest
+- [ ] Cold shrubland
+- [ ] Desert canyon
+- [ ] Desert oasis
+- [ ] Desert spires
+- [ ] Emerald peaks
+- [ ] Forested highlands
+- [ ] Fractured savanna
+- [ ] Frozen cliffs
+- [ ] Glacial chasm
+- [ ] Granite cliffs
+- [ ] Gravel beach
+- [ ] Gravel desert
+- [ ] Haze mountain
+- [ ] Highland
+- [ ] Hot shrubland
+- [ ] Ice marsh
+- [ ] Jungle mountains
+- [ ] Lavender forest
+- [ ] Lavender valley
+- [ ] Lush desert
+- [ ] Lush valley
+- [ ] Mirage isles
+- [ ] Moonlight grove
+- [ ] Moonlight valley
+- [ ] Orchid swamp
+- [ ] Painted Mountains
+- [ ] Red oasis
+- [ ] Rocky jungle
+- [ ] Rocky mountains
+- [ ] Rocky shrubland
+- [ ] Sakura grove
+- [ ] Sakura valley
+- [ ] Sandstone valley
+- [ ] Savanna badlands
+- [ ] Savanna slopes
+- [ ] Scarlet mountains
+- [ ] Shield clearing
+- [ ] Shield
+- [ ] Shrubland
+- [ ] Siberian grove
+- [ ] Siberian Taiga
+- [ ] Skylands
+- [ ] Skylands (autumn)
+- [ ] Skylands (spring)
+- [ ] Skylands (summer)
+- [ ] Skylands (winter)
+- [ ] Snowy badlands
+- [ ] Snowy maple forest
+- [ ] Snowy shield
+- [ ] Steppe
+- [ ] Stony spires
+- [ ] Temperate highlands
+- [ ] Tropical Jungle
+- [ ] Valley clearing
+- [ ] Volcanic crater
+- [ ] Volcanic peaks
+- [ ] Warm river
+- [ ] Warped mesa
+- [ ] White cliffs
+- [ ] White mesa
+- [ ] Windswept spires
+- [ ] Wintry forest
+- [ ] Wintry lowlands
+- [ ] Yellowstone
+- [ ] Yosemite cliffs
+- [ ] Yosemite lowlands
 
 
 

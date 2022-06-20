@@ -3,24 +3,20 @@
     "rarity": 2,
     "derivative": "SWAMP",
     "vanillaDerivative": "SWAMP",
-    "customDerivitives": [
-        {
-            "id": "k530mangroveswamp",
-            "foliageColor": "#4a532f",
-            "waterColor": "#49521d",
-            "waterFogColor": "#49521d",
-            "fogColor": "#325729",
-            "grassColor": "#4b5332",
-            "category": "forest"
-        }
-    ],
-    "generators": [
-        {
-            "generator": "mountain",
-            "max": -1,
-            "min": -3
-        }
-    ],
+    "customDerivitives": [{
+        "id": "k530mangroveswamp",
+        "foliageColor": "#4a532f",
+        "waterColor": "#49521d",
+        "waterFogColor": "#49521d",
+        "fogColor": "#325729",
+        "grassColor": "#4b5332",
+        "category": "forest"
+    }],
+    "generators": [{
+        "generator": "mountain",
+        "max": -1,
+        "min": -3
+    }],
     "layers": [
         {
             "minHeight": 2,
@@ -34,12 +30,8 @@
             },
             "zoom": 0.8,
             "palette": [
-                {
-                    "block": "minecraft:dirt"
-                },
-                {
-                    "block": "minecraft:coarse_dirt"
-                }
+                {"block": "minecraft:dirt"},
+                {"block": "minecraft:coarse_dirt"}
             ]
         },
         {
@@ -79,65 +71,47 @@
             ]
         }
     ],
-    "objects": [
-        {
-            "mode": "STILT",
-            "onwater": true,
-            "chance": 1,
-            "clamp": {
-                "maximumHeight": 225
-            },
-            "density": 5,
-            "place": [
-                "trees/mangrove/mangrove1",
-                "trees/mangrove/mangrove2",
-                "trees/mangrove/mangrove3",
-                "trees/mangrove/mangrove4",
-                "trees/mangrove/mangrove5",
-                "trees/mangrove/mangrove6",
-                "trees/mangrove/mangrove7",
-                "trees/mangrove/mangrove8",
-                "trees/mangrove/mangrove9",
-                "trees/mangrove/mangrove10",
-                "trees/mangrove/mangrove11",
-                "trees/mangrove/mangrove12",
-                "trees/mangrove/mangrove13",
-                "trees/mangrove/mangrove14",
-                "trees/mangrove/mangrove15",
-                "trees/mangrove/mangrove16",
-                "trees/mangrove/mangrove17",
-                "trees/mangrove/mangrove18",
-                "trees/mangrove/mangrove19",
-                "trees/mangrove/mangrove20"
-            ],
-            "rotation": {
+    "objects": [{
+        "mode": "STILT",
+        "onwater": true,
+        "chance": 1,
+        "clamp": {"maximumHeight": 225},
+        "density": 5,
+        "place": [
+            "trees/mangrove/mangrove1",
+            "trees/mangrove/mangrove2",
+            "trees/mangrove/mangrove3",
+            "trees/mangrove/mangrove4",
+            "trees/mangrove/mangrove5",
+            "trees/mangrove/mangrove6",
+            "trees/mangrove/mangrove7",
+            "trees/mangrove/mangrove8",
+            "trees/mangrove/mangrove9",
+            "trees/mangrove/mangrove10",
+            "trees/mangrove/mangrove11",
+            "trees/mangrove/mangrove12",
+            "trees/mangrove/mangrove13",
+            "trees/mangrove/mangrove14",
+            "trees/mangrove/mangrove15",
+            "trees/mangrove/mangrove16",
+            "trees/mangrove/mangrove17",
+            "trees/mangrove/mangrove18",
+            "trees/mangrove/mangrove19",
+            "trees/mangrove/mangrove20"
+        ],
+        "rotation": {
+            "enabled": true,
+            "yAxis": {
                 "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "interval": 90,
-                    "min": -360,
-                    "max": 360
-                }
-            },
-            "translate": {
-                "y": -8
-            },
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "minecraft:oak_fence"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "minecraft:air"
-                            }
-                        ]
-                    }
-                }
-            ]
-        }
-    ]
+                "interval": 90,
+                "min": -360,
+                "max": 360
+            }
+        },
+        "translate": {"y": -8},
+        "edit": [{
+            "find": [{"block": "minecraft:oak_fence"}],
+            "replace": {"palette": [{"block": "minecraft:air"}]}
+        }]
+    }]
 }

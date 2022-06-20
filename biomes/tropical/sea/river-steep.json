@@ -3,13 +3,11 @@
     "color": "#5341FF",
     "derivative": "WARM_OCEAN",
     "vanillaDerivative": "WARM_OCEAN",
-    "generators": [
-        {
-            "min": -32,
-            "max": -10,
-            "generator": "mountain"
-        }
-    ],
+    "generators": [{
+        "min": -32,
+        "max": -10,
+        "generator": "mountain"
+    }],
     "layers": [
         {
             "minHeight": 2,
@@ -18,29 +16,15 @@
                 "minimumSlope": 0,
                 "maximumSlope": 3
             },
-            "style": {
-                "style": "FRACTAL_FBM_IRIS"
-            },
+            "style": {"style": "FRACTAL_FBM_IRIS"},
             "zoom": 0.6,
             "palette": [
-                {
-                    "block": "minecraft:sand"
-                },
-                {
-                    "block": "minecraft:clay"
-                },
-                {
-                    "block": "minecraft:sand"
-                },
-                {
-                    "block": "minecraft:gravel"
-                },
-                {
-                    "block": "minecraft:sand"
-                },
-                {
-                    "block": "minecraft:dirt"
-                },
+                {"block": "minecraft:sand"},
+                {"block": "minecraft:clay"},
+                {"block": "minecraft:sand"},
+                {"block": "minecraft:gravel"},
+                {"block": "minecraft:sand"},
+                {"block": "minecraft:dirt"},
                 {
                     "weight": 2,
                     "block": "minecraft:sand"
@@ -50,11 +34,7 @@
         {
             "minHeight": 2,
             "maxHeight": 2,
-            "palette": [
-                {
-                    "block": "minecraft:gravel"
-                }
-            ]
+            "palette": [{"block": "minecraft:gravel"}]
         }
     ],
     "objects": [
@@ -73,72 +53,44 @@
             "edit": [
                 {
                     "find": [
-                        {
-                            "block": "minecraft:grass_block"
-                        },
-                        {
-                            "block": "minecraft:dirt"
-                        }
+                        {"block": "minecraft:grass_block"},
+                        {"block": "minecraft:dirt"}
                     ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "minecraft:clay"
-                            }
-                        ]
-                    }
+                    "replace": {"palette": [{"block": "minecraft:clay"}]}
                 },
                 {
                     "find": [
-                        {
-                            "block": "minecraft:tall_grass"
-                        },
-                        {
-                            "block": "minecraft:grass"
-                        }
+                        {"block": "minecraft:tall_grass"},
+                        {"block": "minecraft:grass"}
                     ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "minecraft:seagrass"
-                            }
-                        ]
-                    }
+                    "replace": {"palette": [{"block": "minecraft:seagrass"}]}
                 }
             ]
         },
         {
-            "place": [
-                "clutter/ellipsoid1"
-            ],
+            "place": ["clutter/ellipsoid1"],
             "chance": 0.5,
             "underwater": true,
             "mode": "CENTER_HEIGHT",
-            "edit": [
-                {
-                    "find": [
+            "edit": [{
+                "find": [{"block": "minecraft:clay"}],
+                "replace": {
+                    "style": {
+                        "style": "GLOB",
+                        "zoom": 0.02
+                    },
+                    "palette": [
                         {
+                            "weight": 2,
                             "block": "minecraft:clay"
-                        }
-                    ],
-                    "replace": {
-                        "style": {
-                            "style": "GLOB",
-                            "zoom": 0.02
                         },
-                        "palette": [
-                            {
-                                "weight": 2,
-                                "block": "minecraft:clay"
-                            },
-                            {
-                                "weight": 1,
-                                "block": "minecraft:cave_air"
-                            }
-                        ]
-                    }
+                        {
+                            "weight": 1,
+                            "block": "minecraft:cave_air"
+                        }
+                    ]
                 }
-            ]
+            }]
         },
         {
             "place": [
@@ -158,84 +110,54 @@
                 "structures/kship3",
                 "structures/kship4"
             ],
-            "markers": [
-                {
-                    "mark": [
-                        {
-                            "block": "minecraft:spruce_planks"
-                        }
-                    ],
-                    "maximumMarkers": 4,
-                    "marker": "skelepirate"
-                }
-            ],
+            "markers": [{
+                "mark": [{"block": "minecraft:spruce_planks"}],
+                "maximumMarkers": 4,
+                "marker": "skelepirate"
+            }],
             "chance": 0.005,
             "onwater": true,
-            "translate": {
-                "y": -1
-            },
+            "translate": {"y": -1},
             "waterloggable": true
         }
     ],
     "decorators": [
         {
             "chance": 0.1,
-            "palette": [
-                {
-                    "block": "minecraft:kelp_plant"
-                }
-            ],
+            "palette": [{"block": "minecraft:kelp_plant"}],
             "stackMin": 4,
             "stackMax": 10
         },
         {
             "chance": 0.05,
-            "palette": [
-                {
-                    "block": "minecraft:seagrass"
-                }
-            ]
+            "palette": [{"block": "minecraft:seagrass"}]
         },
         {
             "chance": 0.05,
-            "palette": [
-                {
-                    "block": "minecraft:tall_seagrass",
-                    "data": {
-                        "half": "lower"
-                    }
-                }
-            ],
-            "topPalette": [
-                {
-                    "block": "minecraft:tall_seagrass",
-                    "data": {
-                        "half": "upper"
-                    }
-                }
-            ]
+            "palette": [{
+                "block": "minecraft:tall_seagrass",
+                "data": {"half": "lower"}
+            }],
+            "topPalette": [{
+                "block": "minecraft:tall_seagrass",
+                "data": {"half": "upper"}
+            }]
         }
     ],
     "carving": {
-        "ravines": [
-            {
-                "rarity": 442,
-                "ravine": "volcanic/main"
+        "ravines": [{
+            "rarity": 442,
+            "ravine": "volcanic/main"
+        }],
+        "caves": [{
+            "breakSurface": true,
+            "cave": "volcanic/main",
+            "rarity": 228,
+            "caveStartHeight": {
+                "max": 120,
+                "min": 69,
+                "style": {"style": "STATIC"}
             }
-        ],
-        "caves": [
-            {
-                "breakSurface": true,
-                "cave": "volcanic/main",
-                "rarity": 228,
-                "caveStartHeight": {
-                    "max": 120,
-                    "min": 69,
-                    "style": {
-                        "style": "STATIC"
-                    }
-                }
-            }
-        ]
+        }]
     }
 }

@@ -4,40 +4,28 @@
     "rarity": 1,
     "derivative": "SWAMP",
     "vanillaDerivative": "BEACH",
-    "generators": [
-        {
-            "min": -5,
-            "max": 1,
-            "generator": "plain"
-        }
-    ],
+    "generators": [{
+        "min": -5,
+        "max": 1,
+        "generator": "plain"
+    }],
     "layers": [
         {
             "minHeight": 3,
             "maxHeight": 6,
-            "style": {
-                "style": "NOWHERE"
-            },
+            "style": {"style": "NOWHERE"},
             "zoom": 0.2,
             "palette": [
-                {
-                    "block": "minecraft:dirt"
-                },
-                {
-                    "block": "minecraft:coarse_dirt"
-                },
-                {
-                    "block": "minecraft:rooted_dirt"
-                }
+                {"block": "minecraft:dirt"},
+                {"block": "minecraft:coarse_dirt"},
+                {"block": "minecraft:rooted_dirt"}
             ]
         },
         {
             "minHeight": 1,
             "maxHeight": 3,
             "palette": [
-                {
-                    "block": "minecraft:dirt"
-                },
+                {"block": "minecraft:dirt"},
                 {
                     "weight": 2,
                     "block": "minecraft:coarse_dirt"
@@ -45,77 +33,43 @@
             ]
         }
     ],
-    "objects": [
-        {
-            "place": [
-                "trees/jungle/lgeneric1",
-                "trees/jungle/lgeneric2",
-                "trees/jungle/lgeneric3",
-                "trees/jungle/lgeneric4",
-                "trees/jungle/lgeneric5",
-                "trees/jungle/lgeneric7",
-                "trees/jungle/lgeneric8",
-                "trees/jungle/lgeneric9"
-            ],
-            "chance": 1,
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "minecraft:jungle_leaves"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "minecraft:oak_leaves"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "find": [
-                        {
-                            "block": "minecraft:jungle_wood"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "minecraft:dark_oak_wood"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "find": [
-                        {
-                            "block": "minecraft:jungle_log"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "minecraft:dark_oak_wood"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "interval": 90,
-                    "min": -360,
-                    "max": 360
-                }
+    "objects": [{
+        "place": [
+            "trees/jungle/lgeneric1",
+            "trees/jungle/lgeneric2",
+            "trees/jungle/lgeneric3",
+            "trees/jungle/lgeneric4",
+            "trees/jungle/lgeneric5",
+            "trees/jungle/lgeneric7",
+            "trees/jungle/lgeneric8",
+            "trees/jungle/lgeneric9"
+        ],
+        "chance": 1,
+        "edit": [
+            {
+                "find": [{"block": "minecraft:jungle_leaves"}],
+                "replace": {"palette": [{"block": "minecraft:oak_leaves"}]}
             },
-            "translate": {
-                "y": -3
+            {
+                "find": [{"block": "minecraft:jungle_wood"}],
+                "replace": {"palette": [{"block": "minecraft:dark_oak_wood"}]}
+            },
+            {
+                "find": [{"block": "minecraft:jungle_log"}],
+                "replace": {"palette": [{"block": "minecraft:dark_oak_wood"}]}
             }
-        }
-    ],
+        ],
+        "rotation": {
+            "enabled": true,
+            "yAxis": {
+                "enabled": true,
+                "interval": 90,
+                "min": -360,
+                "max": 360
+            }
+        },
+        "translate": {"y": -3}
+    }],
     "decorators": [
         {
             "data": {
@@ -140,9 +94,7 @@
         },
         {
             "chance": 0.01,
-            "variance": {
-                "style": "STATIC"
-            },
+            "variance": {"style": "STATIC"},
             "zoom": 0.3,
             "palette": [
                 {
@@ -153,30 +105,18 @@
                     },
                     "block": "minecraft:dark_oak_button"
                 },
-                {
-                    "block": "minecraft:air"
-                }
+                {"block": "minecraft:air"}
             ],
-            "style": {
-                "style": "STATIC"
-            }
+            "style": {"style": "STATIC"}
         },
         {
             "partOf": "SHORE_LINE",
             "chance": 0.29,
             "stackMin": 1,
             "stackMax": 4,
-            "palette": [
-                {
-                    "block": "minecraft:sugar_cane"
-                }
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "heightVariance": {
-                "style": "STATIC"
-            }
+            "palette": [{"block": "minecraft:sugar_cane"}],
+            "style": {"style": "STATIC"},
+            "heightVariance": {"style": "STATIC"}
         }
     ]
 }

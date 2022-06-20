@@ -9,129 +9,79 @@
         "ERODED_BADLANDS",
         "ERODED_BADLANDS"
     ],
-    "children": [
-        "mesa/plateau-dirt-high"
-    ],
-    "generators": [
-        {
-            "min": 70,
-            "max": 110,
-            "generator": "cracked-cliffs"
-        }
-    ],
-    "biomeStyle": {
-        "style": "SIMPLEX"
-    },
+    "children": ["mesa/plateau-dirt-high"],
+    "generators": [{
+        "min": 70,
+        "max": 110,
+        "generator": "cracked-cliffs"
+    }],
+    "biomeStyle": {"style": "SIMPLEX"},
     "layers": [
         {
             "minHeight": 5,
             "maxHeight": 5,
-            "style": {
-                "style": "NOWHERE"
-            },
+            "style": {"style": "NOWHERE"},
             "zoom": 0.4,
             "palette": [
-                {
-                    "block": "minecraft:red_terracotta"
-                },
-                {
-                    "block": "minecraft:terracotta"
-                },
-                {
-                    "block": "minecraft:terracotta"
-                },
-                {
-                    "block": "minecraft:terracotta"
-                },
-                {
-                    "block": "minecraft:terracotta"
-                }
+                {"block": "minecraft:red_terracotta"},
+                {"block": "minecraft:terracotta"},
+                {"block": "minecraft:terracotta"},
+                {"block": "minecraft:terracotta"},
+                {"block": "minecraft:terracotta"}
             ]
         },
         {
             "minHeight": 3,
             "maxHeight": 8,
-            "palette": [
-                {
-                    "block": "minecraft:terracotta"
-                }
-            ]
+            "palette": [{"block": "minecraft:terracotta"}]
         },
         {
             "minHeight": 2,
             "maxHeight": 8,
-            "palette": [
-                {
-                    "block": "minecraft:orange_terracotta"
-                }
-            ]
+            "palette": [{"block": "minecraft:orange_terracotta"}]
         },
         {
             "minHeight": 1,
             "maxHeight": 8,
-            "palette": [
-                {
-                    "block": "minecraft:white_terracotta"
-                }
-            ]
+            "palette": [{"block": "minecraft:white_terracotta"}]
         },
         {
             "minHeight": 4,
             "maxHeight": 8,
-            "palette": [
-                {
-                    "block": "minecraft:terracotta"
-                }
-            ]
+            "palette": [{"block": "minecraft:terracotta"}]
         },
         {
             "minHeight": 3,
             "maxHeight": 8,
-            "palette": [
-                {
-                    "block": "minecraft:yellow_terracotta"
-                }
-            ]
+            "palette": [{"block": "minecraft:yellow_terracotta"}]
         },
         {
             "minHeight": 3,
             "maxHeight": 8,
-            "palette": [
-                {
-                    "block": "minecraft:brown_terracotta"
-                }
-            ]
+            "palette": [{"block": "minecraft:brown_terracotta"}]
         }
     ],
-    "objects": [
-        {
-            "place": [
-                "structures/tower",
-                "structures/tower-twin"
-            ],
-            "chance": 0.0005,
-            "density": 2,
-            "mode": "FAST_STILT",
-            "rotation": {
+    "objects": [{
+        "place": [
+            "structures/tower",
+            "structures/tower-twin"
+        ],
+        "chance": 5.0E-4,
+        "density": 2,
+        "mode": "FAST_STILT",
+        "rotation": {
+            "enabled": true,
+            "yAxis": {
                 "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "interval": 90,
-                    "min": -360,
-                    "max": 360
-                }
+                "interval": 90,
+                "min": -360,
+                "max": 360
             }
         }
-    ],
-    "decorators": [
-        {
-            "chance": 0.05,
-            "palette": [
-                {
-                    "block": "minecraft:tall_grass"
-                }
-            ]
-        }
-    ],
+    }],
+    "decorators": [{
+        "chance": 0.05,
+        "palette": [{"block": "minecraft:tall_grass"}]
+    }],
     "lockLayers": true
 }

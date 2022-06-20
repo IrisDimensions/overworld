@@ -2,12 +2,23 @@
     "name": "Tropical",
     "color": "#54EA2C",
     "rarity": 2,
-    "jigsawStructures": [
-        {
-            "structure": "murky_stronghold",
-            "rarity": 250
-        }
+    "landBiomes": [
+        "tropical/rainforest",
+        "tropical/rainforest-hills",
+        "tropical/plains",
+        "tropical/bamboo-forest",
+        "tropical/rainforest-wicked",
+        "tropical/volcanic-plains",
+        "tropical/mountain",
+        "tropical/mountain-extreme",
+        "tropical/mountain-plains",
+        "tropical/wilds",
+        "tropical/plains-hills"
     ],
+    "jigsawStructures": [{
+        "structure": "murky_stronghold",
+        "rarity": 250
+    }],
     "objects": [
         {
             "heightmap": {
@@ -29,22 +40,10 @@
                 "structures/amethyst5",
                 "structures/amethyst6"
             ],
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "minecraft:glass"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "minecraft:void_air"
-                            }
-                        ]
-                    }
-                }
-            ],
+            "edit": [{
+                "find": [{"block": "minecraft:glass"}],
+                "replace": {"palette": [{"block": "minecraft:void_air"}]}
+            }],
             "enabled": true,
             "xAxis": {
                 "interval": 90,
@@ -77,82 +76,29 @@
             ],
             "edit": [
                 {
-                    "find": [
-                        {
-                            "block": "minecraft:gold_block"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "minecraft:air"
-                            }
-                        ]
-                    },
+                    "find": [{"block": "minecraft:gold_block"}],
+                    "replace": {"palette": [{"block": "minecraft:air"}]},
                     "chance": 0.1
                 },
                 {
-                    "find": [
-                        {
-                            "block": "minecraft:netherrack"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "minecraft:magma_block"
-                            }
-                        ]
-                    },
+                    "find": [{"block": "minecraft:netherrack"}],
+                    "replace": {"palette": [{"block": "minecraft:magma_block"}]},
                     "chance": 0.07
                 },
                 {
-                    "find": [
-                        {
-                            "block": "minecraft:obsidian"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "minecraft:crying_obsidian"
-                            }
-                        ]
-                    },
+                    "find": [{"block": "minecraft:obsidian"}],
+                    "replace": {"palette": [{"block": "minecraft:crying_obsidian"}]},
                     "chance": 0.15
                 },
                 {
-                    "find": [
-                        {
-                            "block": "minecraft:lava"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "minecraft:magma_block"
-                            }
-                        ]
-                    },
+                    "find": [{"block": "minecraft:lava"}],
+                    "replace": {"palette": [{"block": "minecraft:magma_block"}]},
                     "chance": 0.2
                 }
             ],
             "mode": "PAINT",
             "carvingSupport": "SURFACE_ONLY"
         }
-    ],
-    "landBiomes": [
-        "tropical/rainforest",
-        "tropical/rainforest-hills",
-        "tropical/plains",
-        "tropical/bamboo-forest",
-        "tropical/rainforest-wicked",
-        "tropical/volcanic-plains",
-        "tropical/mountain",
-        "tropical/mountain-extreme",
-        "tropical/mountain-plains",
-        "tropical/wilds",
-        "tropical/plains-hills"
     ],
     "loot": {
         "mode": "ADD",
@@ -176,12 +122,10 @@
         "tropical/sea/river-soft"
     ],
     "carving": {
-        "ravines": [
-            {
-                "rarity": 170,
-                "ravine": "jungle/main"
-            }
-        ],
+        "ravines": [{
+            "rarity": 170,
+            "ravine": "jungle/main"
+        }],
         "caves": [
             {
                 "breakSurface": true,
@@ -190,9 +134,7 @@
                 "caveStartHeight": {
                     "max": 400,
                     "min": 15,
-                    "style": {
-                        "style": "STATIC"
-                    }
+                    "style": {"style": "STATIC"}
                 }
             },
             {
@@ -202,9 +144,7 @@
                 "caveStartHeight": {
                     "max": 400,
                     "min": 15,
-                    "style": {
-                        "style": "STATIC"
-                    }
+                    "style": {"style": "STATIC"}
                 }
             },
             {
@@ -214,9 +154,7 @@
                 "caveStartHeight": {
                     "max": 400,
                     "min": 15,
-                    "style": {
-                        "style": "STATIC"
-                    }
+                    "style": {"style": "STATIC"}
                 }
             },
             {
@@ -226,41 +164,24 @@
                 "caveStartHeight": {
                     "max": 400,
                     "min": 15,
-                    "style": {
-                        "style": "STATIC"
-                    }
+                    "style": {"style": "STATIC"}
                 }
             }
         ]
     },
-    "riverStyle": {
-        "style": "VASCULAR",
-        "zoom": 4.77,
-        "fracture": {
-            "multiplier": 240,
-            "style": "NOWHERE",
-            "zoom": 5
-        }
-    },
-    "deposits": [
-        {
-            "minHeight": 10,
-            "maxPerChunk": 9,
-            "maxHeight": 92,
-            "minPerChunk": 2,
-            "minSize": 3,
-            "maxSize": 8,
-            "palette": [
-                {
-                    "block": "minecraft:lapis_ore"
-                },
-                {
-                    "block": "minecraft:redstone_ore"
-                }
-            ],
-            "varience": 8
-        }
-    ],
+    "deposits": [{
+        "minHeight": 10,
+        "maxPerChunk": 9,
+        "maxHeight": 92,
+        "minPerChunk": 2,
+        "minSize": 3,
+        "maxSize": 8,
+        "palette": [
+            {"block": "minecraft:lapis_ore"},
+            {"block": "minecraft:redstone_ore"}
+        ],
+        "varience": 8
+    }],
     "entitySpawners": [
         "tropical/land-passive",
         "tropical/land-hostile",

@@ -4,80 +4,50 @@
     "rarity": 1,
     "derivative": "SNOWY_TAIGA",
     "vanillaDerivative": "SNOWY_TAIGA",
-    "customDerivitives": [
-        {
-            "category": "icy",
-            "id": "frozen_pine_hills",
-            "downfallType": "snow",
-            "temperature": -3,
-            "waterColor": "#216FC4",
-            "fogColor": "#A6D1FF",
-            "waterFogColor": "#216FC4",
-            "foliageColor": "#B8D0E1",
-            "grassColor": "#D0E1FF"
-        }
-    ],
-    "generators": [
-        {
-            "generator": "mountain",
-            "max": 40,
-            "min": 11
-        }
-    ],
-    "wall": {
-        "palette": [
-            {
-                "block": "minecraft:stone"
-            },
-            {
-                "block": "minecraft:andesite"
-            }
-        ]
-    },
+    "customDerivitives": [{
+        "category": "icy",
+        "id": "frozen_pine_hills",
+        "downfallType": "snow",
+        "temperature": -3,
+        "waterColor": "#216FC4",
+        "fogColor": "#A6D1FF",
+        "waterFogColor": "#216FC4",
+        "foliageColor": "#B8D0E1",
+        "grassColor": "#D0E1FF"
+    }],
+    "generators": [{
+        "generator": "mountain",
+        "max": 40,
+        "min": 11
+    }],
+    "wall": {"palette": [
+        {"block": "minecraft:stone"},
+        {"block": "minecraft:andesite"}
+    ]},
     "layers": [
         {
             "minHeight": 0,
             "maxHeight": 1,
-            "palette": [
-                {
-                    "block": "minecraft:snow_block"
-                }
-            ]
+            "palette": [{"block": "minecraft:snow_block"}]
         },
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "palette": [
-                {
-                    "block": "minecraft:grass_block"
-                }
-            ]
+            "palette": [{"block": "minecraft:grass_block"}]
         },
         {
             "minHeight": 6,
             "maxHeight": 28,
-            "palette": [
-                {
-                    "block": "minecraft:dirt"
-                }
-            ]
+            "palette": [{"block": "minecraft:dirt"}]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
+            "style": {"style": "STATIC"},
             "palette": [
-                {
-                    "block": "minecraft:stone"
-                },
-                {
-                    "block": "minecraft:andesite"
-                },
-                {
-                    "block": "minecraft:stone"
-                }
+                {"block": "minecraft:stone"},
+                {"block": "minecraft:andesite"},
+                {"block": "minecraft:stone"}
             ]
         }
     ],
@@ -95,95 +65,69 @@
             "structure": "village-snowy"
         }
     ],
-    "objects": [
-        {
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "minecraft:dark_oak_fence"
-                        },
-                        {
-                            "block": "minecraft:dark_oak_fence_gate"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "minecraft:spruce_wood"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "find": [
-                        {
-                            "block": "minecraft:spruce_leaves"
-                        }
-                    ],
-                    "replace": {
-                        "style": {
-                            "style": "PERLIN",
-                            "zoom": 0.2
-                        },
-                        "palette": [
-                            {
-                                "block": "minecraft:oak_leaves"
-                            },
-                            {
-                                "block": "minecraft:dark_oak_leaves"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "place": [
-                "trees/spruce/pine1",
-                "trees/spruce/pine2",
-                "trees/spruce/pine3",
-                "trees/spruce/pine4",
-                "trees/spruce/pine5",
-                "trees/spruce/pine6",
-                "trees/spruce/pine7",
-                "trees/spruce/pine8",
-                "trees/spruce/pine9"
-            ],
-            "chance": 0.9,
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "interval": 90,
-                    "min": -360,
-                    "max": 360
-                }
+    "objects": [{
+        "edit": [
+            {
+                "find": [
+                    {"block": "minecraft:dark_oak_fence"},
+                    {"block": "minecraft:dark_oak_fence_gate"}
+                ],
+                "replace": {"palette": [{"block": "minecraft:spruce_wood"}]}
             },
-            "warp": {
-                "style": "IRIS_DOUBLE",
-                "exponent": 1.2,
-                "zoom": 0.4
-            },
-            "snow": 0.1
-        }
-    ],
-    "decorators": [
-        {
-            "chance": 1,
-            "variance": {
-                "style": "NOWHERE",
-                "zoom": 0.23
-            },
-            "palette": [
-                {
-                    "data": {
-                        "layers": 1
+            {
+                "find": [{"block": "minecraft:spruce_leaves"}],
+                "replace": {
+                    "style": {
+                        "style": "PERLIN",
+                        "zoom": 0.2
                     },
-                    "block": "minecraft:snow"
-                },
-                {
-                    "block": "minecraft:air"
+                    "palette": [
+                        {"block": "minecraft:oak_leaves"},
+                        {"block": "minecraft:dark_oak_leaves"}
+                    ]
                 }
-            ]
-        }
-    ]
+            }
+        ],
+        "place": [
+            "trees/spruce/pine1",
+            "trees/spruce/pine2",
+            "trees/spruce/pine3",
+            "trees/spruce/pine4",
+            "trees/spruce/pine5",
+            "trees/spruce/pine6",
+            "trees/spruce/pine7",
+            "trees/spruce/pine8",
+            "trees/spruce/pine9"
+        ],
+        "chance": 0.9,
+        "rotation": {
+            "enabled": true,
+            "yAxis": {
+                "enabled": true,
+                "interval": 90,
+                "min": -360,
+                "max": 360
+            }
+        },
+        "warp": {
+            "style": "IRIS_DOUBLE",
+            "exponent": 1.2,
+            "zoom": 0.4
+        },
+        "snow": 0.1
+    }],
+    "decorators": [{
+        "chance": 1,
+        "variance": {
+            "style": "NOWHERE",
+            "zoom": 0.23
+        },
+        "palette": [
+            {
+                "data": {"layers": 1},
+                "block": "minecraft:snow"
+            },
+            {"block": "minecraft:air"}
+        ]
+    }]
 }
