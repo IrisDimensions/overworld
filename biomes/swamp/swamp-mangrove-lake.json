@@ -77,6 +77,10 @@
         "chance": 1,
         "clamp": {"maximumHeight": 225},
         "density": 5,
+        "stiltOverride":{
+            "style":{"style": "NOWHERE"},
+            "palette": [{"block": "minecraft:mangrove_roots", "weight": 3},{"block": "minecraft:water"}]
+        },
         "place": [
             "trees/mangrove/mangrove1",
             "trees/mangrove/mangrove2",
@@ -99,6 +103,7 @@
             "trees/mangrove/mangrove19",
             "trees/mangrove/mangrove20"
         ],
+
         "rotation": {
             "enabled": true,
             "yAxis": {
@@ -108,10 +113,18 @@
                 "max": 360
             }
         },
-        "translate": {"y": -8},
+        "translate": {"y": -8, "yRandom": -3},
         "edit": [{
             "find": [{"block": "minecraft:oak_fence"}],
             "replace": {"palette": [{"block": "minecraft:air"}]}
+        },
+        {
+            "find": [{"block": "minecraft:acacia_wood"}],
+            "replace":{"palette": [{"block": "minecraft:mangrove_wood"}]}
+        },
+        {
+            "find": [{"block": "minecraft:jungle_leaves"}],
+            "replace":{"palette": [{"block": "minecraft:mangrove_leaves"}]}
         }]
     }]
 }
