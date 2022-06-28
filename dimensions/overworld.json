@@ -1,31 +1,57 @@
 {
-    "version": 2086,
-    "name": "Overworld",
-    "environment": "NORMAL",
-    "fluidHeight": 160,
-    "continentZoom": 1,
-    "continentalStyle": {
-        "style": "NOWHERE_CELLULAR",
-        "zoom": 5
+  "version": 2086,
+  "name": "Overworld",
+  "environment": "NORMAL",
+  "fluidHeight": 160,
+  "continentZoom": 1,
+  "continentalStyle": {
+    "style": "NOWHERE_CELLULAR",
+    "fracture": {
+      "style": "SIMPLEX",
+      "axialFracturing": true
     },
-    "logicalHeight": 448,
-    "dimensionHeight": {
-        "max": 448,
-        "min": -64
-    },
-    "landChance": 0.69,
-    "regionStyle": {
-        "style": "NOWHERE_CELLULAR",
-        "fracture": {
-            "multiplier": 55,
-            "axialFracturing": true,
-            "style": "NOWHERE",
-            "zoom": 0.15,
-            "fracture": {
-                "axialFracturing": true,
-                "style": "STATIC",
-                "multiplier": 4
-            }
+    "axialFracturing": true,
+    "zoom": 5
+  },
+  "logicalHeight": 448,
+  "dimensionHeight": {
+    "max": 448,
+    "min": -64
+  },
+  "landChance": 0.69,
+  "regionStyle": {
+    "style": "NOWHERE_CELLULAR",
+    "fracture": {
+      "multiplier": 55,
+      "style": "NOWHERE",
+      "zoom": 0.15,
+      "fracture": {
+        "style": "STATIC",
+        "multiplier": 4
+      }
+    }
+  },
+  "regionZoom": 6.15,
+  "aggressiveBiomeReshuffle": true,
+  "regions": [
+    "frozen",
+    "hot",
+    "mushroom",
+    "swamp",
+    "temperate",
+    "tropical",
+    "tundra"
+  ],
+  "carving": {
+    "caves": [
+      {
+        "breakSurface": true,
+        "cave": "deep/main",
+        "rarity": 30,
+        "caveStartHeight": {
+          "max": 90,
+          "min": 12,
+          "style": { "style": "STATIC" }
         }
       },
       {
