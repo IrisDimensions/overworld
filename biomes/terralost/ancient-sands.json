@@ -1,0 +1,168 @@
+{
+  "name": "Ancient Sands",
+  "color": "#DBD155",
+  "rarity": 1,
+  "derivative": "DESERT",
+  "vanillaDerivative": "DESERT",
+  "generators": [
+    {
+      "generator": "smooth-dunes",
+      "max": 35,
+      "min": 30
+    },
+    {
+        "generator": "mountain",
+        "max": 20,
+        "min": 0
+    },
+    {
+        "generator": "rare-hills",
+        "max": 20,
+        "min": 0
+    }
+  ],
+  "customDerivitives": [
+    {
+      "category": "desert",
+      "id": "terralost_ancientsands",
+      "temperature": 2,
+      "humidity": 0,
+      "downfallType": "none",
+      "skyColor": "#857769",
+      "fogColor": "#BB9B9D",
+      "waterColor": "#77E0F7",
+      "waterFogColor": "#50533"
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 3,
+      "maxHeight": 10,
+      "style": { "style": "FRACTAL_SMOKE", "zoom": 0.05 },
+      "palette": [
+        { "block": "minecraft:orange_terracotta" },
+        { "block": "minecraft:red_sand" },
+        { "block": "minecraft:sandstone" },
+        { "block": "minecraft:sand" }
+      ]
+    },
+    {
+      "minHeight": 5,
+      "maxHeight": 5,
+      "zoom": 0.7,
+      "palette": [
+        {
+          "block": "minecraft:red_sand"
+        }
+      ]
+    },
+    {
+      "minHeight": 3,
+      "maxHeight": 10,
+      "slopeCondition": {
+        "minimumSlope": 4.5,
+        "maximumSlope": 20
+      },
+      "palette": [{ "block": "minecraft:sandstone" }]
+    },
+    {
+      "minHeight": 5,
+      "maxHeight": 5,
+      "zoom": 0.7,
+      "palette": [
+        {
+          "weight": 1,
+          "block": "minecraft:sand"
+        }
+      ]
+    }
+  ],
+  "jigsawStructures": [
+    {
+      "rarity": 1700,
+      "structure": "pillager_outpost"
+    },
+    {
+      "rarity": 1500,
+      "structure": "village-hot"
+    },
+    {
+      "rarity": 1900,
+      "structure": "desert-pyramid"
+    }
+  ],
+  "objects": [
+    {
+      "chance": 0.0018,
+      "mode": "MIN_HEIGHT",
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 0,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "jigsaw/pyramid/rpyramid-extreme",
+        "jigsaw/pyramid/rpyramid",
+        "jigsaw/pyramid/pyramidred45"
+      ],
+      "translate": {
+        "x": 0,
+        "y": -3,
+        "z": 0
+      }
+    },
+    {
+      "mode": "MIN_HEIGHT",
+      "place": ["structures/ruins-desert-1", "structures/ruins-desert-2"],
+      "chance": 0.005,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "interval": 90,
+          "min": -360,
+          "max": 360
+        }
+      }
+    },
+    {
+      "chance": 0.0014,
+      "mode": "MIN_HEIGHT",
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 0,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": ["clutter/rsphinx1", "clutter/rbrksphinx1"],
+      "translate": {
+        "x": 0,
+        "y": -2,
+        "z": 0
+      }
+    }
+  ],
+  "decorators": [
+    {
+      "verticalZoom": 5,
+      "chance": 0.004,
+      "variance": { "style": "STATIC" },
+      "stackMax": 5,
+      "style": { "style": "STATIC" },
+      "palette": [{ "block": "minecraft:cactus" }],
+      "heightVariance": { "style": "STATIC" },
+      "stackMin": 1
+    },
+    {
+      "chance": 0.005,
+      "palette": [{ "block": "minecraft:dead_bush" }]
+    }
+  ]
+}
