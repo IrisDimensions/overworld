@@ -1,8 +1,22 @@
 {
     "name": "Mushroom",
-    "color": "#F1C3EF",
+    "derivative": "MUSHROOM_FIELDS",
+    "vanillaDerivative": "MUSHROOM_FIELDS",
     "rarity": 20,
-    "landBiomes": [
+    "generators": [{
+        "generator": "flat",
+        "max": 0,
+        "min": 0
+    }],
+    "layers": [
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "palette": [{"block": "minecraft:purple_glazed_terracotta"}]
+        }
+    ],
+    "childShrinkFactor": 1,
+    "children": [
         "mushroom/forest",
         "mushroom/crimson-forest",
         "mushroom/forest-extended",
@@ -64,8 +78,6 @@
             "mushroom-food"
         ]
     },
-    "shoreBiomes": ["mushroom/shore/beach"],
-    "seaBiomes": ["mushroom/sea/ocean"],
     "blockDrops": [{
         "drops": [
             {
@@ -113,8 +125,6 @@
         "mushroom/land-hostile",
         "mushroom/land-cave"
     ],
-    "shoreHeightMin": 3.2,
-    "shoreHeightMax": 6.2,
     "carving": {"caves": [{
         "breakSurface": true,
         "cave": "rocky/main",
@@ -124,6 +134,5 @@
             "min": 15,
             "style": {"style": "STATIC"}
         }
-    }]},
-    "shoreHeightZoom": 1.14
+    }]}
 }

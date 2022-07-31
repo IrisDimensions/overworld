@@ -1,8 +1,22 @@
 {
     "name": "Hot",
-    "color": "#D1CD44",
+    "derivative": "DESERT",
+    "vanillaDerivative": "DESERT",
     "rarity": 1,
-    "landBiomes": [
+    "generators": [{
+        "generator": "flat",
+        "max": 0,
+        "min": 0
+    }],
+    "layers": [
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "palette": [{"block": "minecraft:yellow_glazed_terracotta"}]
+        }
+    ],
+    "childShrinkFactor": 1,
+    "children": [
         "hot/desert-dunes",
         "hot/desert-dunes-red",
         "savanna/forest",
@@ -120,8 +134,6 @@
             "cactus-clutter"
         ]
     },
-    "shoreBiomes": ["hot/shore/beach"],
-    "seaBiomes": ["hot/sea/ocean"],
     "entitySpawners": [
         "hot/land-passive",
         "hot/land-hostile",
@@ -149,7 +161,6 @@
             "varience": 5
         }
     ],
-    "landBiomeZoom": 7,
     "effects": [
         {
             "potionTicksMin": 87,
@@ -237,8 +248,5 @@
                 }
             }
         ]
-    },
-    "shoreHeightMin": 3.2,
-    "shoreHeightMax": 6.2,
-    "shoreHeightZoom": 1.14
+    }
 }

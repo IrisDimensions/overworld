@@ -1,8 +1,22 @@
 {
     "name": "Swamp",
-    "color": "#69943C",
+    "derivative": "SWAMP",
+    "vanillaDerivative": "SWAMP",
     "rarity": 2,
-    "landBiomes": [
+    "generators": [{
+        "generator": "flat",
+        "max": 0,
+        "min": 0
+    }],
+    "layers": [
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "palette": [{"block": "minecraft:brown_glazed_terracotta"}]
+        }
+    ],
+    "childShrinkFactor": 1,
+    "children": [
         "swamp/roofed-forest",
         "swamp/willow-forest",
         "swamp/sea/lake",
@@ -67,12 +81,6 @@
             "swamp-food"
         ]
     },
-    "shoreBiomes": ["swamp/shore/beach"],
-    "seaBiomes": [
-        "swamp/sea/ocean",
-        "swamp/swamp-mangrove-lake",
-        "swamp/sea/ocean-tree"
-    ],
     "entitySpawners": [
         "swamp/land-passive",
         "swamp/land-hostile",
@@ -100,9 +108,6 @@
             "varience": 4
         }
     ],
-    "landBiomeZoom": 3,
-    "shoreHeightMin": 1.2,
-    "shoreHeightMax": 3,
     "carving": {"caves": [{
         "breakSurface": true,
         "cave": "swamp/main",
@@ -113,7 +118,6 @@
             "style": {"style": "STATIC"}
         }
     }]},
-    "shoreHeightZoom": 3.14,
     "blockDrops": [{
         "drops": [{
             "type": "slime_ball",

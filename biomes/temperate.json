@@ -1,8 +1,22 @@
 {
     "name": "Temperate",
-    "color": "#9BEE61",
+    "derivative": "FOREST",
+    "vanillaDerivative": "FOREST",
     "rarity": 1,
-    "landBiomes": [
+    "generators": [{
+        "generator": "flat",
+        "max": 0,
+        "min": 0
+    }],
+    "layers": [
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "palette": [{"block": "minecraft:orange_glazed_terracotta"}]
+        }
+    ],
+    "childShrinkFactor": 1,
+    "children": [
         "temperate/plateau",
         "temperate/stranged-plains",
         "temperate/longtree-forest",
@@ -111,22 +125,11 @@
             "temperate-food"
         ]
     },
-    "shoreBiomes": [
-        "temperate/shore/beach",
-        "temperate/shore/oak-beach"
-    ],
-    "seaBiomes": [
-        "temperate/sea/river",
-        "ocean/deep"
-    ],
-    "riverBiomes": ["temperate/sea/river"],
-    "ENTITY_SPAWNS": "ALL ENTITY SPAWNS FOR THE REGION",
     "entitySpawners": [
         "temperate/land-passive",
         "temperate/land-hostile",
         "temperate/land-cave"
     ],
-    "shoreBiomeZoom": 0.15,
     "deposits": [{
         "minHeight": 15,
         "maxPerChunk": 26,
@@ -173,11 +176,5 @@
                 }
             }
         ]
-    },
-    "riverRarity": 1,
-    "landBiomeZoom": 5.5,
-    "shoreHeightMin": 1,
-    "shoreHeightMax": 5.2,
-    "shoreHeightZoom": 1.14,
-    "riverThickness": 0.025
+    }
 }
