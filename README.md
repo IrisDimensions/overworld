@@ -23,7 +23,7 @@ Roadmap
 - [ ] More carving
 - [ ] Entities, Loot, Performance improvements
 
-# IMPLEMENTABLE BIOMES: 
+# EXTRA BIOMES: 
 (These biomes are from a predefined set of biomes from Terralith and ill be giving my own artistic spin on the biomes as well as enhancing them)
 ## Meaning: [ ] - not done : [-] Working on : [X] DONE (for the most part) : [0] Won't Do yet or at all
 - [0] Alpha islands
