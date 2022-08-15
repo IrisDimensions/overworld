@@ -12,10 +12,20 @@
         "frozen/pine-plains",
         "frozen/spruce-plains"
     ],
-    "jigsawStructures": [{
-        "structure": "murky_stronghold",
-        "rarity": 250
-    }],
+    "jigsawStructures": [
+        {
+            "structure": "dungeon-skeleton",
+            "rarity": 250
+        },
+        {
+            "structure": "dungeon-spider",
+            "rarity": 250
+        },
+        {
+            "structure": "dungeon-zombie",
+            "rarity": 250
+        }
+    ],
     "objects": [
         {
             "heightmap": {
@@ -59,7 +69,7 @@
         },
         {
             "name": "standard-surface-portals",
-            "chance": 0.001,
+            "chance": 1.0E-4,
             "place": [
                 "structures/swordnp2",
                 "structures/swordnp1",
@@ -71,6 +81,7 @@
                 "structures/megaportal1",
                 "structures/megaportal2"
             ],
+            "loot": ["structures/ruined-portal"],
             "edit": [
                 {
                     "find": [{"block": "minecraft:gold_block"}],
@@ -101,10 +112,10 @@
         "mode": "ADD",
         "tables": [
             "global-tools",
-            "frozen-clutter",
-            "frozen-food",
-            "snow-clutter",
-            "cold-treasure"
+            "frozen/clutter",
+            "frozen/food",
+            "snow/clutter",
+            "cold/treasure"
         ]
     },
     "shoreBiomes": ["frozen/shore/beach"],
@@ -148,9 +159,10 @@
         }]
     }],
     "entitySpawners": [
-        "frozen/land-passive",
-        "frozen/land-hostile",
-        "frozen/land-cave"
+        "frozen/passive",
+        "frozen/hostile",
+        "frozen/cave",
+        "frozen/water"
     ],
     "carving": {
         "ravines": [{

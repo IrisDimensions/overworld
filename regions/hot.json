@@ -18,10 +18,6 @@
         "mesa/mesa",
         "mesa/cliffs"
     ],
-    "jigsawStructures": [{
-        "structure": "murky_stronghold",
-        "rarity": 250
-    }],
     "objects": [
         {
             "heightmap": {
@@ -83,6 +79,7 @@
                 "structures/portal9",
                 "structures/portal10"
             ],
+            "loot": ["structures/ruined-portal"],
             "edit": [
                 {
                     "find": [{"block": "minecraft:gold_block"}],
@@ -115,17 +112,18 @@
         "tables": [
             "global-tools",
             "global-treasure",
-            "hot-food",
-            "hot-treasure",
-            "cactus-clutter"
+            "hot/food",
+            "hot/treasure",
+            "cactus/clutter"
         ]
     },
     "shoreBiomes": ["hot/shore/beach"],
     "seaBiomes": ["hot/sea/ocean"],
     "entitySpawners": [
-        "hot/land-passive",
-        "hot/land-hostile",
-        "hot/land-cave"
+        "hot/passive",
+        "hot/hostile",
+        "hot/cave",
+        "hot/water"
     ],
     "deposits": [
         {
