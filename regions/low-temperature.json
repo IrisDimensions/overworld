@@ -1,7 +1,7 @@
 {
-    "name": "Frozen",
-    "color": "#44C3D1",
-    "rarity": 1,
+    "name": "High Temperature",
+    "color": "#FFFF00",
+    "rarity": 3,
     "landBiomes": [
         "frozen/plains",
         "frozen/pines",
@@ -10,21 +10,25 @@
         "frozen/redwood-forest",
         "frozen/hills",
         "frozen/pine-plains",
-        "frozen/spruce-plains"
-    ],
-    "jigsawStructures": [
-        {
-            "structure": "dungeon-skeleton",
-            "rarity": 250
-        },
-        {
-            "structure": "dungeon-spider",
-            "rarity": 250
-        },
-        {
-            "structure": "dungeon-zombie",
-            "rarity": 250
-        }
+        "frozen/spruce-plains",
+        "tundra/taiga",
+        "tundra/redwood-forest",
+        "tundra/sequia-redwoods",
+        "tundra/magic-forest",
+        "tundra/autumn",
+        "tundra/forest",
+        "tundra/spruce-denmyre",
+        "tundra/mountains",
+        "tundra/mountains",
+        "tundra/mountains-extended-cliffs",
+        "mountain/hills",
+        "mountain/forest-extended",
+        "tundra/frosted-peaks",
+        "mountain/forest",
+        "mountain/plains",
+        "mountain/cliffs",
+        "mountain/mountain",
+        "tundra/ether"
     ],
     "objects": [
         {
@@ -107,10 +111,21 @@
             "carvingSupport": "SURFACE_ONLY"
         }
     ],
-    "shoreBiomes": ["frozen/shore/beach"],
+    "shoreBiomes": [
+        "frozen/shore/beach",
+        "tundra/shore/beach",
+        "tundra/shore/beach-stone"
+        ],
     "seaBiomes": [
         "frozen/sea/frozen-river-ice",
-        "frozen/sea/ocean"
+        "frozen/sea/ocean",
+        "mountain/sea/river"
+    ],
+    "riverBiomes": [
+        "tundra/sea/river",
+        "tundra/sea/river-rocky",
+        "mountain/sea/river",
+        "mountain/sea/river-soft"
     ],
     "deposits": [
         {
@@ -142,7 +157,11 @@
         "frozen/passive",
         "frozen/hostile",
         "frozen/cave",
-        "frozen/water"
+        "frozen/water",
+        "tundra/passive",
+        "tundra/hostile",
+        "tundra/cave",
+        "tundra/water"
     ],
     "carving": {
         "ravines": [{
@@ -176,6 +195,6 @@
     "riverThickness": 0.006,
     "loot": {
         "mode": "REPLACE",
-        "tables": ["frozen/clutter", "frozen/food", "snow/clutter"]
+        "tables": ["frozen/clutter", "frozen/food", "snow/clutter","cold/food","cold/treasure","snow/clutter"]
     }
 }
