@@ -1,0 +1,136 @@
+{
+    "name": "Tundra",
+    "color": "#9CB0B9",
+    "rarity": 2,
+    "landBiomes": [
+        "tundra/taiga",
+        "tundra/redwood-forest",
+        "tundra/sequia-redwoods",
+        "tundra/magic-forest",
+        "tundra/autumn",
+        "tundra/forest",
+        "tundra/spruce-denmyre",
+        "tundra/mountains",
+        "tundra/mountains",
+        "tundra/mountains-extended-cliffs",
+        "mountain/hills",
+        "mountain/forest-extended",
+        "tundra/frosted-peaks",
+        "mountain/forest",
+        "mountain/plains",
+        "mountain/cliffs",
+        "mountain/mountain",
+        "tundra/ether"
+    ],
+    "objects": [{
+        "heightmap": {
+            "seed": 1337,
+            "style": {
+                "style": "SIMPLEX",
+                "multiplier": 10
+            },
+            "offsetY": 5
+        },
+        "chance": 0.05,
+        "bottom": true,
+        "density": 1,
+        "place": [
+            "structures/amethyst1",
+            "structures/amethyst2",
+            "structures/amethyst3",
+            "structures/amethyst4",
+            "structures/amethyst5",
+            "structures/amethyst6"
+        ],
+        "edit": [{
+            "find": [{"block": "minecraft:glass"}],
+            "replace": {"palette": [{"block": "minecraft:void_air"}]}
+        }],
+        "enabled": true,
+        "xAxis": {
+            "interval": 90,
+            "max": 360,
+            "min": 0
+        },
+        "yAxis": {
+            "interval": 90,
+            "max": 360,
+            "min": 0
+        },
+        "translate": {
+            "yRandom": 10,
+            "y": 2
+        }
+    }],
+    "shoreBiomes": [
+        "tundra/shore/beach",
+        "tundra/shore/beach-stone"
+    ],
+    "seaBiomes": ["mountain/sea/river"],
+    "entitySpawners": [
+        "tundra/passive",
+        "tundra/hostile",
+        "tundra/cave",
+        "tundra/water"
+    ],
+    "riverBiomes": [
+        "tundra/sea/river",
+        "tundra/sea/river-rocky",
+        "mountain/sea/river",
+        "mountain/sea/river-soft"
+    ],
+    "deposits": [{
+        "minHeight": 20,
+        "maxPerChunk": 8,
+        "maxHeight": 102,
+        "minPerChunk": 2,
+        "minSize": 3,
+        "maxSize": 8,
+        "palette": [{"block": "minecraft:emerald_ore"}],
+        "varience": 8
+    }],
+    "riverRarity": 1,
+    "landBiomeZoom": 4.5,
+    "shoreHeightMin": 2.2,
+    "shoreHeightMax": 5.2,
+    "carving": {
+        "ravines": [
+            {
+                "rarity": 400,
+                "ravine": "calcite/main"
+            },
+            {
+                "rarity": 250,
+                "ravine": "rocky/main"
+            }
+        ],
+        "caves": [
+            {
+                "breakSurface": true,
+                "cave": "calcite/main",
+                "rarity": 20,
+                "caveStartHeight": {
+                    "max": 400,
+                    "min": 15,
+                    "style": {"style": "STATIC"}
+                }
+            },
+            {
+                "breakSurface": true,
+                "cave": "rocky/main",
+                "rarity": 10,
+                "caveStartHeight": {
+                    "max": 400,
+                    "min": 15,
+                    "style": {"style": "STATIC"}
+                }
+            }
+        ]
+    },
+    "shoreHeightZoom": 1.14,
+    "riverThickness": 0.025,
+    "loot": {
+        "mode": "REPLACE",
+        "tables": ["cold/food","cold/treasure","snow/clutter"]
+    }
+}
