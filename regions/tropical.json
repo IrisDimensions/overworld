@@ -15,10 +15,6 @@
         "tropical/mountain-plains",
         "tropical/plains-hills"
     ],
-    "jigsawStructures": [{
-        "structure": "murky_stronghold",
-        "rarity": 250
-    }],
     "objects": [
         {
             "heightmap": {
@@ -100,17 +96,6 @@
             "carvingSupport": "SURFACE_ONLY"
         }
     ],
-    "loot": {
-        "mode": "ADD",
-        "multiplier": 1,
-        "tables": [
-            "global-clutter",
-            "global-tools",
-            "tropical-treasure",
-            "tropical-food",
-            "forest-food"
-        ]
-    },
     "shoreBiomes": [
         "tropical/island-beach",
         "tropical/beach",
@@ -183,14 +168,18 @@
         "varience": 8
     }],
     "entitySpawners": [
-        "tropical/land-passive",
-        "tropical/land-hostile",
-        "tropical/land-hostile-day",
-        "tropical/land-cave",
+        "tropical/passive",
+        "tropical/hostile",
+        "tropical/water",
+        "tropical/cave",
         "tropical/beach"
     ],
     "landBiomeZoom": 5.5,
     "shoreHeightMin": 3.2,
     "shoreHeightMax": 9.2,
-    "shoreHeightZoom": 2.14
+    "shoreHeightZoom": 2.14,
+    "loot": {
+        "mode": "REPLACE",
+        "tables": ["tropical/treasure","tropical/food","tropical/dungeon"]
+    }
 }

@@ -12,10 +12,20 @@
         "frozen/pine-plains",
         "frozen/spruce-plains"
     ],
-    "jigsawStructures": [{
-        "structure": "murky_stronghold",
-        "rarity": 250
-    }],
+    "jigsawStructures": [
+        {
+            "structure": "dungeon-skeleton",
+            "rarity": 250
+        },
+        {
+            "structure": "dungeon-spider",
+            "rarity": 250
+        },
+        {
+            "structure": "dungeon-zombie",
+            "rarity": 250
+        }
+    ],
     "objects": [
         {
             "heightmap": {
@@ -59,7 +69,7 @@
         },
         {
             "name": "standard-surface-portals",
-            "chance": 0.001,
+            "chance": 1.0E-4,
             "place": [
                 "structures/swordnp2",
                 "structures/swordnp1",
@@ -97,16 +107,6 @@
             "carvingSupport": "SURFACE_ONLY"
         }
     ],
-    "loot": {
-        "mode": "ADD",
-        "tables": [
-            "global-tools",
-            "frozen-clutter",
-            "frozen-food",
-            "snow-clutter",
-            "cold-treasure"
-        ]
-    },
     "shoreBiomes": ["frozen/shore/beach"],
     "seaBiomes": [
         "frozen/sea/frozen-river-ice",
@@ -138,19 +138,11 @@
     "landBiomeZoom": 5,
     "shoreHeightMin": 2.2,
     "shoreHeightMax": 4.2,
-    "blockDrops": [{
-        "blocks": [{"block": "minecraft:stone"}],
-        "drops": [{
-            "rarity": 1,
-            "maxAmount": 2,
-            "minAmount": 1,
-            "type": "spruce_sapling"
-        }]
-    }],
     "entitySpawners": [
-        "frozen/land-passive",
-        "frozen/land-hostile",
-        "frozen/land-cave"
+        "frozen/passive",
+        "frozen/hostile",
+        "frozen/cave",
+        "frozen/water"
     ],
     "carving": {
         "ravines": [{
@@ -181,5 +173,9 @@
         ]
     },
     "shoreHeightZoom": 1.14,
-    "riverThickness": 0.006
+    "riverThickness": 0.006,
+    "loot": {
+        "mode": "REPLACE",
+        "tables": ["frozen/clutter", "frozen/food", "snow/clutter"]
+    }
 }

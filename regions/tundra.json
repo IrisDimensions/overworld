@@ -22,10 +22,6 @@
         "mountain/mountain",
         "tundra/ether"
     ],
-    "jigsawStructures": [{
-        "structure": "murky_stronghold",
-        "rarity": 250
-    }],
     "objects": [{
         "heightmap": {
             "seed": 1337,
@@ -66,25 +62,16 @@
             "y": 2
         }
     }],
-    "loot": {
-        "mode": "ADD",
-        "multiplier": 1,
-        "tables": [
-            "global-clutter",
-            "global-tools",
-            "cold-treasure",
-            "cold-food"
-        ]
-    },
     "shoreBiomes": [
         "tundra/shore/beach",
         "tundra/shore/beach-stone"
     ],
     "seaBiomes": ["mountain/sea/river"],
     "entitySpawners": [
-        "tundra/land-passive",
-        "tundra/land-hostile",
-        "tundra/land-cave"
+        "tundra/passive",
+        "tundra/hostile",
+        "tundra/cave",
+        "tundra/water"
     ],
     "riverBiomes": [
         "tundra/sea/river",
@@ -141,5 +128,9 @@
         ]
     },
     "shoreHeightZoom": 1.14,
-    "riverThickness": 0.025
+    "riverThickness": 0.025,
+    "loot": {
+        "mode": "REPLACE",
+        "tables": ["cold/food","cold/treasure","snow/clutter"]
+    }
 }

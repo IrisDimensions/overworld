@@ -12,10 +12,6 @@
         "swamp/marsh",
         "swamp/handy-willow-forest"
     ],
-    "jigsawStructures": [{
-        "structure": "murky_stronghold",
-        "rarity": 250
-    }],
     "objects": [{
         "heightmap": {
             "seed": 1337,
@@ -56,17 +52,6 @@
             "y": 2
         }
     }],
-    "loot": {
-        "mode": "ADD",
-        "multiplier": 1,
-        "tables": [
-            "global-clutter",
-            "global-tools",
-            "global-treasure",
-            "swamp-clutter",
-            "swamp-food"
-        ]
-    },
     "shoreBiomes": ["swamp/shore/beach"],
     "seaBiomes": [
         "swamp/sea/ocean",
@@ -74,9 +59,10 @@
         "swamp/sea/ocean-tree"
     ],
     "entitySpawners": [
-        "swamp/land-passive",
-        "swamp/land-hostile",
-        "swamp/land-cave"
+        "swamp/passive",
+        "swamp/hostile",
+        "swamp/cave",
+        "swamp/water"
     ],
     "deposits": [
         {
@@ -125,5 +111,9 @@
             {"block": "minecraft:grass"},
             {"block": "minecraft:tall_grass"}
         ]
-    }]
+    }],
+    "loot": {
+        "mode": "REPLACE",
+        "tables": ["swamp/clutter", "swamp/food"]
+    }
 }

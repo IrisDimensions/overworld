@@ -1,0 +1,139 @@
+{
+    "object": "jigsaw/village/misc/cross",
+    "connectors": [
+        {
+            "name": "",
+            "targetName": "*",
+            "rotateConnector": false,
+            "innerConnector": true,
+            "pools": ["village/japanese/paths-all"],
+            "keepEntity": false,
+            "entityCount": 1,
+            "position": {
+                "x": -3,
+                "y": -1,
+                "z": 0
+            },
+            "direction": "WEST_NEGATIVE_X"
+        },
+        {
+            "name": "",
+            "targetName": "*",
+            "rotateConnector": false,
+            "innerConnector": false,
+            "pools": ["village/japanese/paths-all"],
+            "keepEntity": false,
+            "entityCount": 1,
+            "position": {
+                "x": 0,
+                "y": -1,
+                "z": -3
+            },
+            "direction": "NORTH_NEGATIVE_Z"
+        },
+        {
+            "name": "",
+            "targetName": "*",
+            "rotateConnector": false,
+            "innerConnector": false,
+            "pools": ["village/japanese/paths-all"],
+            "keepEntity": false,
+            "entityCount": 1,
+            "position": {
+                "x": 3,
+                "y": -1,
+                "z": 0
+            },
+            "direction": "EAST_POSITIVE_X"
+        },
+        {
+            "name": "",
+            "targetName": "*",
+            "rotateConnector": false,
+            "innerConnector": true,
+            "pools": [
+                "village/japanese/paths-all",
+                "village/japanese/houses"
+            ],
+            "keepEntity": false,
+            "entityCount": 1,
+            "position": {
+                "x": 0,
+                "y": -1,
+                "z": 3
+            },
+            "direction": "SOUTH_POSITIVE_Z"
+        }
+    ],
+    "placementOptions": {
+        "rotation": {
+            "enabled": true,
+            "xAxis": {
+                "enabled": false,
+                "min": 0,
+                "max": 0,
+                "interval": 0
+            },
+            "yAxis": {
+                "enabled": true,
+                "min": 0,
+                "max": 0,
+                "interval": 90
+            },
+            "zAxis": {
+                "enabled": false,
+                "min": 0,
+                "max": 0,
+                "interval": 0
+            }
+        },
+        "clamp": {
+            "minimumHeight": 0,
+            "maximumHeight": 255
+        },
+        "snow": 0,
+        "chance": 1,
+        "density": 1,
+        "overStilt": 0,
+        "boreExtendMaxY": 0,
+        "boreExtendMinY": 0,
+        "underwater": false,
+        "carvingSupport": "SURFACE_ONLY",
+        "smartBore": false,
+        "waterloggable": false,
+        "onwater": false,
+        "meld": false,
+        "bottom": false,
+        "bore": false,
+        "warp": {
+            "style": "FLAT",
+            "zoom": 1,
+            "multiplier": 1,
+            "maxFractureAccuracy": false,
+            "exponent": 1
+        },
+        "translateCenter": false,
+        "mode": "PAINT",
+        "edit": [{
+            "chance": 0.8,
+            "find": [
+                {"block": "minecraft:flowering_azalea_leaves"},
+                {"block": "minecraft:grass_block"},
+                {"block": "minecraft:azalea_leaves"}
+            ],
+            "replace": {"palette": [{"block": "minecraft:cave_air"}]}
+        }],
+        "translate": {
+            "x": 0,
+            "y": 0,
+            "yRandom": 0,
+            "z": 0
+        },
+        "scale": {
+            "variations": 7,
+            "minimumScale": 1,
+            "maximumScale": 1,
+            "interpolation": "NONE"
+        }
+    }
+}
