@@ -1,13 +1,13 @@
 {
+    "object": "jigsaw/pillager-outpost/watchtower_overgrown",
     "connectors": [
         {
+            "name": "",
             "targetName": "*",
             "innerConnector": false,
-            "entityCount": 1,
-            "spawnEntity:": "",
-            "rotateConnector": false,
-            "name": "",
             "pools": ["pillager-outpost/features-overgrown"],
+            "keepEntity": false,
+            "entityCount": 1,
             "position": {
                 "x": -3,
                 "y": -10,
@@ -16,12 +16,12 @@
             "direction": "NORTH_NEGATIVE_Z"
         },
         {
+            "name": "",
             "targetName": "*",
             "innerConnector": true,
+            "pools": ["pillager-outpost/features-overgrown"],
+            "keepEntity": false,
             "entityCount": 1,
-            "spawnEntity:": "",
-            "rotateConnector": false,
-            "name": "",
             "position": {
                 "x": 3,
                 "y": -10,
@@ -30,13 +30,12 @@
             "direction": "NORTH_NEGATIVE_Z"
         },
         {
+            "name": "",
             "targetName": "*",
             "innerConnector": false,
-            "entityCount": 1,
-            "spawnEntity:": "",
-            "rotateConnector": false,
-            "name": "",
             "pools": ["pillager-outpost/features-overgrown"],
+            "keepEntity": false,
+            "entityCount": 1,
             "position": {
                 "x": 7,
                 "y": -10,
@@ -45,13 +44,12 @@
             "direction": "EAST_POSITIVE_X"
         },
         {
+            "name": "",
             "targetName": "*",
             "innerConnector": false,
-            "entityCount": 1,
-            "spawnEntity:": "",
-            "rotateConnector": false,
-            "name": "",
             "pools": ["pillager-outpost/features-overgrown"],
+            "keepEntity": false,
+            "entityCount": 1,
             "position": {
                 "x": 7,
                 "y": -10,
@@ -60,43 +58,12 @@
             "direction": "EAST_POSITIVE_X"
         },
         {
+            "name": "",
             "targetName": "*",
             "innerConnector": false,
-            "entityCount": 1,
-            "spawnEntity:": "",
-            "rotateConnector": false,
-            "name": "",
             "pools": ["pillager-outpost/features-overgrown"],
-            "position": {
-                "x": 3,
-                "y": -10,
-                "z": 7
-            },
-            "direction": "SOUTH_POSITIVE_Z"
-        },
-        {
-            "targetName": "*",
-            "innerConnector": false,
+            "keepEntity": false,
             "entityCount": 1,
-            "spawnEntity:": "",
-            "rotateConnector": false,
-            "name": "",
-            "pools": ["pillager-outpost/features-overgrown"],
-            "position": {
-                "x": -3,
-                "y": -10,
-                "z": 7
-            },
-            "direction": "SOUTH_POSITIVE_Z"
-        },
-        {
-            "targetName": "*",
-            "innerConnector": false,
-            "entityCount": 1,
-            "spawnEntity:": "",
-            "rotateConnector": false,
-            "name": "",
-            "pools": ["pillager-outpost/features-overgrown"],
             "position": {
                 "x": -7,
                 "y": -10,
@@ -105,13 +72,12 @@
             "direction": "WEST_NEGATIVE_X"
         },
         {
+            "name": "",
             "targetName": "*",
             "innerConnector": false,
-            "entityCount": 1,
-            "spawnEntity:": "",
-            "rotateConnector": false,
-            "name": "",
             "pools": ["pillager-outpost/features-overgrown"],
+            "keepEntity": false,
+            "entityCount": 1,
             "position": {
                 "x": -7,
                 "y": -10,
@@ -119,141 +85,5 @@
             },
             "direction": "WEST_NEGATIVE_X"
         }
-    ],
-    "placementOptions": {
-        "loot": ["structures/pillager-outpost"],
-        "markers": [{
-            "emptyAbove": true,
-            "maximumMarkers": 3,
-            "mark": [{"block": "minecraft:birch_planks"}],
-            "marker": "pillager"
-        }],
-        "overStilt": 0,
-        "chance": 1,
-        "meld": false,
-        "density": 1,
-        "boreExtendMinY": 0,
-        "edit": [
-            {
-                "find": [{"block": "minecraft:oak_planks"}],
-                "replace": {"palette": [
-                    {
-                        "block": "minecraft:birch_planks",
-                        "weight": 5
-                    },
-                    {
-                        "block": "minecraft:void_air",
-                        "weight": 2
-                    }
-                ]},
-                "chance": 1
-            },
-            {
-                "find": [{"block": "minecraft:oak_slab"}],
-                "replace": {"palette": [
-                    {
-                        "block": "minecraft:birch_slab",
-                        "weight": 5
-                    },
-                    {
-                        "block": "minecraft:void_air",
-                        "weight": 2
-                    }
-                ]},
-                "chance": 1
-            },
-            {
-                "find": [{"block": "minecraft:spruce_planks"}],
-                "replace": {"palette": [
-                    {
-                        "block": "minecraft:dark_oak_planks",
-                        "weight": 5
-                    },
-                    {
-                        "block": "minecraft:void_air",
-                        "weight": 2
-                    }
-                ]},
-                "chance": 1
-            },
-            {
-                "find": [{"block": "minecraft:spruce_slab"}],
-                "replace": {"palette": [
-                    {
-                        "block": "minecraft:dark_oak_slab",
-                        "weight": 5
-                    },
-                    {
-                        "block": "minecraft:void_air",
-                        "weight": 2
-                    }
-                ]},
-                "chance": 1
-            },
-            {
-                "find": [{"block": "minecraft:cobblestone"}],
-                "replace": {"palette": [
-                    {
-                        "block": "minecraft:cobblestone",
-                        "weight": 5
-                    },
-                    {
-                        "block": "minecraft:mossy_cobblestone",
-                        "weight": 2
-                    }
-                ]},
-                "chance": 1
-            }
-        ],
-        "bottom": false,
-        "translateCenter": false,
-        "rotation": {
-            "yAxis": {
-                "min": 0,
-                "max": 0,
-                "interval": 90,
-                "enabled": true
-            },
-            "xAxis": {
-                "min": 0,
-                "max": 0,
-                "interval": 0,
-                "enabled": false
-            },
-            "zAxis": {
-                "min": 0,
-                "max": 0,
-                "interval": 0,
-                "enabled": false
-            },
-            "enabled": true
-        },
-        "boreExtendMaxY": 0,
-        "smartBore": false,
-        "waterloggable": false,
-        "bore": false,
-        "translate": {
-            "yRandom": 0,
-            "x": 0,
-            "y": -1,
-            "z": 0
-        },
-        "mode": "FAST_MIN_HEIGHT",
-        "carvingSupport": "SURFACE_ONLY",
-        "snow": 0,
-        "underwater": false,
-        "onwater": false,
-        "clamp": {
-            "minimumHeight": 0,
-            "maximumHeight": 255
-        },
-        "warp": {
-            "multiplier": 1,
-            "style": "FLAT",
-            "zoom": 1,
-            "maxFractureAccuracy": false,
-            "exponent": 1
-        }
-    },
-    "object": "jigsaw/pillager-outpost/watchtower_overgrown"
+    ]
 }

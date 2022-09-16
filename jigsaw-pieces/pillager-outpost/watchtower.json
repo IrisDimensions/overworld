@@ -19,7 +19,7 @@
             "name": "",
             "targetName": "*",
             "innerConnector": false,
-            "pools": [],
+            "pools": ["pillager-outpost/features"],
             "keepEntity": false,
             "entityCount": 1,
             "position": {
@@ -65,34 +65,6 @@
             "keepEntity": false,
             "entityCount": 1,
             "position": {
-                "x": 3,
-                "y": -9,
-                "z": 7
-            },
-            "direction": "SOUTH_POSITIVE_Z"
-        },
-        {
-            "name": "",
-            "targetName": "*",
-            "innerConnector": false,
-            "pools": ["pillager-outpost/features"],
-            "keepEntity": false,
-            "entityCount": 1,
-            "position": {
-                "x": -3,
-                "y": -9,
-                "z": 7
-            },
-            "direction": "SOUTH_POSITIVE_Z"
-        },
-        {
-            "name": "",
-            "targetName": "*",
-            "innerConnector": false,
-            "pools": ["pillager-outpost/features"],
-            "keepEntity": false,
-            "entityCount": 1,
-            "position": {
                 "x": -7,
                 "y": -9,
                 "z": 3
@@ -113,5 +85,13 @@
             },
             "direction": "WEST_NEGATIVE_X"
         }
-    ]
+    ],
+    "placementOptions": {
+        "markers": [{
+            "emptyAbove": true,
+            "maximumMarkers": 4,
+            "mark": [{"block": "minecraft:birch_planks"}],
+            "marker": "pillager"
+        }]
+    }
 }
