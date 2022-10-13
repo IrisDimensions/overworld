@@ -16,10 +16,6 @@
         "temperate/reaching-forest",
         "temperate/lush-plains"
     ],
-    "jigsawStructures": [{
-        "structure": "murky_stronghold",
-        "rarity": 250
-    }],
     "objects": [
         {
             "heightmap": {
@@ -63,7 +59,7 @@
         },
         {
             "name": "standard-surface-portals",
-            "chance": 0.001,
+            "chance": 0.00001,
             "place": [
                 "structures/swordnp2",
                 "structures/swordnp1",
@@ -101,16 +97,6 @@
             "carvingSupport": "SURFACE_ONLY"
         }
     ],
-    "loot": {
-        "mode": "ADD",
-        "multiplier": 1,
-        "tables": [
-            "global-tools",
-            "global-treasure",
-            "temperate-clutter",
-            "temperate-food"
-        ]
-    },
     "shoreBiomes": [
         "temperate/shore/beach",
         "temperate/shore/oak-beach"
@@ -122,9 +108,10 @@
     "riverBiomes": ["temperate/sea/river"],
     "ENTITY_SPAWNS": "ALL ENTITY SPAWNS FOR THE REGION",
     "entitySpawners": [
-        "temperate/land-passive",
-        "temperate/land-hostile",
-        "temperate/land-cave"
+        "temperate/passive",
+        "temperate/hostile",
+        "temperate/cave",
+        "temperate/water"
     ],
     "shoreBiomeZoom": 0.15,
     "deposits": [{
@@ -179,5 +166,9 @@
     "shoreHeightMin": 1,
     "shoreHeightMax": 5.2,
     "shoreHeightZoom": 1.14,
-    "riverThickness": 0.025
+    "riverThickness": 0.025,
+    "loot": {
+        "mode": "REPLACE",
+        "tables": ["temperate/clutter", "temperate/food"]
+    }
 }

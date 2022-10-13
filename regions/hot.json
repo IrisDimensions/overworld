@@ -18,10 +18,6 @@
         "mesa/mesa",
         "mesa/cliffs"
     ],
-    "jigsawStructures": [{
-        "structure": "murky_stronghold",
-        "rarity": 250
-    }],
     "objects": [
         {
             "heightmap": {
@@ -65,7 +61,7 @@
         },
         {
             "name": "standard-surface-portals",
-            "chance": 0.001,
+            "chance": 0.00001,
             "place": [
                 "structures/swordnp2",
                 "structures/swordnp1",
@@ -109,23 +105,13 @@
             "carvingSupport": "SURFACE_ONLY"
         }
     ],
-    "loot": {
-        "mode": "ADD",
-        "multiplier": 1,
-        "tables": [
-            "global-tools",
-            "global-treasure",
-            "hot-food",
-            "hot-treasure",
-            "cactus-clutter"
-        ]
-    },
     "shoreBiomes": ["hot/shore/beach"],
     "seaBiomes": ["hot/sea/ocean"],
     "entitySpawners": [
-        "hot/land-passive",
-        "hot/land-hostile",
-        "hot/land-cave"
+        "hot/passive",
+        "hot/hostile",
+        "hot/cave",
+        "hot/water"
     ],
     "deposits": [
         {
@@ -240,5 +226,9 @@
     },
     "shoreHeightMin": 3.2,
     "shoreHeightMax": 6.2,
-    "shoreHeightZoom": 1.14
+    "shoreHeightZoom": 1.14,
+    "loot": {
+        "mode": "REPLACE",
+        "tables": ["hot/food", "hot/treasure"]
+    }
 }

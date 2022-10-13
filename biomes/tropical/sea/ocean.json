@@ -93,7 +93,7 @@
             }
         },
         {
-            "chance": 0.035,
+            "chance": 0.0035,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -110,10 +110,8 @@
                 "structures/oruins3"
             ],
             "mode": "PAINT",
-            "loot": [{
-                "name": "tropical-dungeon",
-                "weight": 1
-            }]
+            "loot": [{"name": "structures/ocean-ruins"}],
+            "overrideGlobalLoot": true
         }
     ],
     "decorators": [
@@ -251,11 +249,6 @@
             "style": {"style": "STATIC"}
         }
     ],
-    "loot": {
-        "mode": "ADD",
-        "multiplier": 1,
-        "tables": ["tropical-dungeon"]
-    },
     "carving": {
         "ravines": [{
             "rarity": 442,

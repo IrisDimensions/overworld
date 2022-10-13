@@ -1,0 +1,144 @@
+{
+    "name": "Ocean Clutter",
+    "rarity": 1,
+    "maxPicked": 2,
+    "minPicked": 1,
+    "loot": [
+        {
+            "type": "wet_sponge",
+            "maxAmount": 5,
+            "slotTypes": "STORAGE"
+        },
+        {
+            "type": "sponge",
+            "maxAmount": 2,
+            "slotTypes": "STORAGE"
+        },
+        {
+            "type": "kelp",
+            "maxAmount": 27,
+            "slotTypes": "STORAGE"
+        },
+        {
+            "type": "fishing_rod",
+            "maxAmount": 1,
+            "enchantments": [{
+                "enchantment": "unbreaking",
+                "maxLevel": 2
+            }],
+            "slotTypes": "STORAGE"
+        },
+        {
+            "type": "pufferfish",
+            "maxAmount": 2,
+            "slotTypes": "STORAGE"
+        },
+        {
+            "type": "turtle_helmet",
+            "maxAmount": 1,
+            "enchantments": [
+                {
+                    "enchantment": "respiration",
+                    "maxLevel": 2
+                },
+                {
+                    "enchantment": "unbreaking",
+                    "maxLevel": 5,
+                    "minLevel": 3
+                },
+                {
+                    "enchantment": "protection",
+                    "maxLevel": 3
+                }
+            ],
+            "attributes": [
+                {
+                    "attribute": "GENERIC_MOVEMENT_SPEED",
+                    "operation": "MULTIPLY_SCALAR_1",
+                    "maxAmount": -0.15,
+                    "minAmount": -0.25,
+                    "name": "SLOW"
+                },
+                {
+                    "attribute": "GENERIC_KNOCKBACK_RESISTANCE",
+                    "maxAmount": 3.25,
+                    "minAmount": 0.85,
+                    "name": "THICC",
+                    "operation": "MULTIPLY_SCALAR_1"
+                },
+                {
+                    "attribute": "GENERIC_MAX_HEALTH",
+                    "operation": "ADD_NUMBER",
+                    "maxAmount": 7,
+                    "name": "HP",
+                    "minAmount": 3
+                },
+                {
+                    "attribute": "GENERIC_ARMOR",
+                    "name": "AMR",
+                    "maxAmount": 7,
+                    "minAmount": 5,
+                    "operation": "ADD_NUMBER"
+                }
+            ],
+            "displayName": "5head",
+            "minDurability": 0.9,
+            "lore": [
+                "Take this helmet with increased health, ",
+                "armor & knockback resistance at the cost",
+                "of reduced movement speed.",
+                "It's also full of air."
+            ],
+            "itemFlags": [
+                "HIDE_PLACED_ON",
+                "HIDE_DESTROYS",
+                "HIDE_ENCHANTS",
+                "HIDE_POTION_EFFECTS",
+                "HIDE_ATTRIBUTES"
+            ],
+            "maxDurability": 0.95,
+            "slotTypes": "STORAGE"
+        },
+        {
+            "type": "trident",
+            "maxAmount": 1,
+            "rarity": 5,
+            "enchantments": [
+                {
+                    "enchantment": "channeling",
+                    "chance": 0.75
+                },
+                {"enchantment": "loyalty"},
+                {
+                    "enchantment": "unbreaking",
+                    "maxLevel": 3,
+                    "minLevel": 1
+                }
+            ],
+            "displayName": "Poseidon's Wrath",
+            "lore": [
+                "A Trident with increased damage that",
+                "always finds it's way back. It's also",
+                "great for digging blocks underwater."
+            ],
+            "itemFlags": [
+                "HIDE_PLACED_ON",
+                "HIDE_UNBREAKABLE",
+                "HIDE_DESTROYS",
+                "HIDE_ENCHANTS",
+                "HIDE_POTION_EFFECTS",
+                "HIDE_ATTRIBUTES"
+            ],
+            "attributes": [{
+                "attribute": "GENERIC_ATTACK_DAMAGE",
+                "operation": "ADD_NUMBER",
+                "maxAmount": 5,
+                "minAmount": 3,
+                "name": "AT1"
+            }],
+            "minDurability": 0.9,
+            "maxDurability": 0.95,
+            "slotTypes": "STORAGE"
+        }
+    ]
+}
