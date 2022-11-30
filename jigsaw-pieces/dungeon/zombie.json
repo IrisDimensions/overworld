@@ -1,11 +1,42 @@
 {
     "object": "jigsaw/dungeon/zombie",
     "placementOptions": {
-        "loot": ["structures/dungeon"],
-        "edit": [{
-            "find": [{"block": "minecraft:glass"}],
-            "replace": {"palette": [{"block": "minecraft:air"}]}
-        }],
+        "loot": [
+            "structures/dungeon"
+        ],
+        "edit": [
+            {
+                "find": [
+                    {
+                        "block": "minecraft:glass"
+                    }
+                ],
+                "replace": {
+                    "palette": [
+                        {
+                            "block": "minecraft:air"
+                        }
+                    ]
+                }
+            },
+            {
+                "find": [
+                    {
+                        "block": "minecraft:spawner"
+                    }
+                ],
+                "replace": {
+                    "palette": [
+                        {
+                            "block": "minecraft:spawner",
+                            "data": {
+                                "entitySpawn": "minecraft:zombie"
+                            }
+                        }
+                    ]
+                }
+            }
+        ],
         "bore": true
     }
 }
