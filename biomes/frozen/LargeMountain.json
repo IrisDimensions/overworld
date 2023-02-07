@@ -1,0 +1,59 @@
+{
+    "name": "Large Mountain",
+    "derivative": "FROZEN_PEAKS",
+    "vanillaDerivative": "FROZEN_PEAKS",
+    "color": "#FFCC03",
+    "childShrinkFactor": 1.2,
+    "childStyle":{
+        "style": "CELLULAR",
+        "zoom": 1
+    },
+
+    "rarity": 1,
+    "wall":{
+        "palette": [{
+            "block": "minecraft:stone"
+    },
+    {
+        "block": "minecraft:andesite"
+
+    }]},
+
+      "layers": [
+     {
+
+        "palette": [
+
+            {"block": "minecraft:snow_block", "weight": 1}
+
+            ],
+            "slopeCondition":{"maximumSlope": 6.5},
+            "maxHeight": 3,
+            "minHeight": 2,
+
+            "zoom": 1
+            },
+           {
+
+        "palette": [
+
+            {"block": "minecraft:stone", "weight": 1}
+
+            ],
+            "maxHeight": 3,
+            "minHeight": 2,
+              "style":{
+            "style": "IRIS_DOUBLE",
+            "zoom": 0.15,
+            "exponent": 1
+
+                },
+            "zoom": 1
+            }
+        ],
+    "generators": [{
+        "generator": "ExtreemLands",
+        "min": 80,
+        "max": 200
+    }]
+}
