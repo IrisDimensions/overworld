@@ -4,18 +4,32 @@
     "rarity": 1,
     "derivative": "OLD_GROWTH_SPRUCE_TAIGA",
     "vanillaDerivative": "OLD_GROWTH_SPRUCE_TAIGA",
-    "children": ["mountain/plain-extended"],
-    "generators": [{
-        "generator": "mountain",
-        "max": 53,
-        "min": 45
-    }],
-    "wall": {"palette": [
-        {"block": "minecraft:stone"},
-        {"block": "minecraft:andesite"},
-        {"block": "minecraft:gravel"},
-        {"block": "minecraft:cyan_terracotta"}
-    ]},
+    "children": [
+        "mountain/plain-extended"
+    ],
+    "generators": [
+        {
+            "generator": "mountain",
+            "max": 53,
+            "min": 45
+        }
+    ],
+    "wall": {
+        "palette": [
+            {
+                "block": "minecraft:stone"
+            },
+            {
+                "block": "minecraft:andesite"
+            },
+            {
+                "block": "minecraft:gravel"
+            },
+            {
+                "block": "minecraft:cyan_terracotta"
+            }
+        ]
+    },
     "layers": [
         {
             "minHeight": 1,
@@ -24,25 +38,43 @@
                 "minimumSlope": 0,
                 "maximumSlope": 3.3
             },
-            "palette": [{"block": "minecraft:grass_block"}]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 4,
-            "slopeCondition": {"minimumSlope": 4},
             "palette": [
-                {"block": "minecraft:gravel"},
-                {"block": "minecraft:cyan_terracotta"}
+                {
+                    "block": "minecraft:grass_block"
+                }
             ]
         },
         {
             "minHeight": 2,
             "maxHeight": 4,
-            "slopeCondition": {"minimumSlope": 4},
+            "slopeCondition": {
+                "minimumSlope": 4
+            },
             "palette": [
-                {"block": "minecraft:stone"},
-                {"block": "minecraft:stone"},
-                {"block": "minecraft:cobblestone"}
+                {
+                    "block": "minecraft:gravel"
+                },
+                {
+                    "block": "minecraft:cyan_terracotta"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "slopeCondition": {
+                "minimumSlope": 4
+            },
+            "palette": [
+                {
+                    "block": "minecraft:stone"
+                },
+                {
+                    "block": "minecraft:stone"
+                },
+                {
+                    "block": "minecraft:cobblestone"
+                }
             ]
         },
         {
@@ -52,7 +84,11 @@
                 "minimumSlope": 0,
                 "maximumSlope": 4
             },
-            "palette": [{"block": "minecraft:grass_block"}]
+            "palette": [
+                {
+                    "block": "minecraft:grass_block"
+                }
+            ]
         },
         {
             "minHeight": 3,
@@ -61,10 +97,13 @@
                 "minimumSlope": 0,
                 "maximumSlope": 3
             },
-            "palette": [{"block": "minecraft:dirt"}]
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                }
+            ]
         }
     ],
-
     "objects": [
         {
             "mode": "PAINT",
@@ -84,7 +123,6 @@
                 "clutter/sbush3"
             ]
         },
-
         {
             "mode": "PAINT",
             "chance": 0.1,
@@ -92,6 +130,22 @@
                 "clutter/sbush1",
                 "clutter/sbush2",
                 "clutter/sbush3"
+            ]
+        },
+        {
+            "chance": 0.0001,
+            "mode": "PAINT",
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "structures/ruin1"
             ]
         },
         {
@@ -141,27 +195,59 @@
                 }
             },
             "palette": [
-                {"block": "minecraft:dandelion"},
-                {"block": "minecraft:poppy"},
-                {"block": "minecraft:blue_orchid"},
-                {"block": "minecraft:allium"},
-                {"block": "minecraft:azure_bluet"},
-                {"block": "minecraft:red_tulip"},
-                {"block": "minecraft:orange_tulip"},
-                {"block": "minecraft:white_tulip"},
-                {"block": "minecraft:pink_tulip"},
-                {"block": "minecraft:oxeye_daisy"},
-                {"block": "minecraft:cornflower"},
-                {"block": "minecraft:lily_of_the_valley"}
+                {
+                    "block": "minecraft:dandelion"
+                },
+                {
+                    "block": "minecraft:poppy"
+                },
+                {
+                    "block": "minecraft:blue_orchid"
+                },
+                {
+                    "block": "minecraft:allium"
+                },
+                {
+                    "block": "minecraft:azure_bluet"
+                },
+                {
+                    "block": "minecraft:red_tulip"
+                },
+                {
+                    "block": "minecraft:orange_tulip"
+                },
+                {
+                    "block": "minecraft:white_tulip"
+                },
+                {
+                    "block": "minecraft:pink_tulip"
+                },
+                {
+                    "block": "minecraft:oxeye_daisy"
+                },
+                {
+                    "block": "minecraft:cornflower"
+                },
+                {
+                    "block": "minecraft:lily_of_the_valley"
+                }
             ]
         },
         {
             "chance": 0.01,
-            "palette": [{"block": "minecraft:tall_grass"}]
+            "palette": [
+                {
+                    "block": "minecraft:tall_grass"
+                }
+            ]
         },
         {
             "chance": 0.5,
-            "palette": [{"block": "minecraft:grass"}]
+            "palette": [
+                {
+                    "block": "minecraft:grass"
+                }
+            ]
         },
         {
             "variance": {
@@ -182,10 +268,14 @@
                 }
             },
             "chance": 0.2,
-            "palette": [{
-                "block": "minecraft:wheat",
-                "data": {"age": 7}
-            }]
+            "palette": [
+                {
+                    "block": "minecraft:wheat",
+                    "data": {
+                        "age": 7
+                    }
+                }
+            ]
         }
     ],
     "childStyle": {
