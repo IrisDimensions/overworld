@@ -1,0 +1,140 @@
+{
+    "name": "Fancy Plains",
+    "blockDrops": [{"blocks": [{"block": "minecraft:grass_block"}], "drops": [{"type": "bamboo", "minAmount": 1, "maxAmount": 1}], "replaceVanillaDrops": true}],
+    "customDerivitives": [{
+        "temperature": 0.8,
+        "downfallType": "rain"
+
+        }],
+    "derivative": "PLAINS",
+    "vanillaDerivative": "PLAINS",
+    "layers": [{
+        "palette": [{"block": "minecraft:grass_block"}],
+        "maxHeight": 1,
+        "slopeCondition": {"maximumSlope": 4}
+    }],
+    "wall": {"palette": [
+        {"block": "minecraft:andesite"},
+        {"block": "minecraft:stone"},
+        {"block": "minecraft:cobblestone"}
+    ]},
+    "objects": [{
+        "place": [
+            "trees/oak/oakFancy1",
+            "trees/oak/oakFancy2NS",
+            "trees/oak/oakFancy3",
+            "trees/oak/oakFancy4",
+            "trees/oak/oakFancy5",
+            "trees/oak/oakFancy6",
+            "trees/oak/oakFancy7",
+            "trees/oak/oakFancy7",
+            "trees/oak/oakFancy8",
+            "trees/oak/oakFancy9",
+            "trees/oak/oakFancy10",
+            "trees/oak/antioch5",
+            "trees/oak/antioch3",
+            "trees/oak/antioch4"
+
+
+
+            ],
+        "carvingSupport": "SURFACE_ONLY",
+        "chance": 1,
+        "mode": "CENTER_STILT",
+        "stiltSettings":{"yMax": 4, "yRand": 1},
+
+        "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+        }
+    }
+
+
+    ],
+    "decorators": [
+        {
+            "chance": 0.2,
+            "variance": {
+                "style": "CELLULAR",
+                "zoom": 0.25,
+                "fracture": {
+                    "style": "SIMPLEX",
+                    "zoom": 0.2,
+                    "multiplier": 10
+                }
+            },
+            "style": {
+                "style": "SIMPLEX",
+                "zoom": 0.2,
+                "fracture": {
+                    "style": "STATIC",
+                    "multiplier": 8
+                }
+            },
+            "palette": [
+                {"block": "minecraft:dandelion"},
+                {"block": "minecraft:poppy"},
+                {"block": "minecraft:blue_orchid"},
+                {"block": "minecraft:allium"},
+                {"block": "minecraft:azure_bluet"},
+                {"block": "minecraft:red_tulip"},
+                {"block": "minecraft:orange_tulip"},
+                {"block": "minecraft:white_tulip"},
+                {"block": "minecraft:pink_tulip"},
+                {"block": "minecraft:oxeye_daisy"},
+                {"block": "minecraft:cornflower"},
+                {"block": "minecraft:lily_of_the_valley"}
+            ]
+        },
+        {
+            "chance": 0.22,
+            "palette": [{"block": "minecraft:tall_grass"}]
+        },
+        {
+            "chance": 0.2,
+            "palette": [{"block": "minecraft:grass"}]
+        },
+        {
+            "chance": 0.2,
+            "palette": [{"block": "minecraft:fern"}]
+        },
+        {
+            "chance": 0.06,
+            "palette": [{"block": "minecraft:azalea"}]
+        },
+        {
+            "chance": 0.3,
+            "style":{"style": "NOWHERE", "zoom": 0.282},
+            "palette": [{"block": "minecraft:moss_carpet"}]
+        },
+        {
+            "stackMin": 1,
+            "stackMax": 7,
+            "chance": 0.025,
+
+
+            "variance": {"style": "STATIC"},
+            "palette": [
+                {
+                    "data": {
+                        "stage": 0,
+                        "age": 0,
+                        "leaves": "none"
+                    },
+                    "block": "minecraft:big_dripleaf_stem"
+                }
+            ],
+            "style": {"style": "STATIC"}
+        }
+    ],
+    "generators": [{
+        "generator": "mountain",
+        "max": 10,
+        "min": -15
+    }]
+}

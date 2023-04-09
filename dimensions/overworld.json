@@ -13,9 +13,9 @@
         "axialFracturing": true,
         "zoom": 6
     },
-    "logicalHeight": 448,
+    "logicalHeight": 512,
     "dimensionHeight": {
-        "max": 448,
+        "max": 512,
         "min": -64
     },
     "logicalHeightEnd": 448,
@@ -41,7 +41,7 @@
             }
         }
     },
-    "regionZoom": 9.15,
+    "regionZoom": 18.15,
     "regions": [
         "frozen",
         "hot",
@@ -51,49 +51,49 @@
         "swamp",
         "tundra"
     ],
-    "carving": {
-        "caves": [
-            {
-                "breakSurface": true,
-                "cave": "deep/main",
-                "rarity": 30,
-                "caveStartHeight": {
-                    "max": 90,
-                    "min": 12,
-                    "style": {
-                        "style": "STATIC"
-                    }
-                }
-            },
-            {
-                "cave": "lush/main",
-                "rarity": 50,
-                "breakSurface": false,
-                "caveStartHeight": {
-                    "max": 60,
-                    "min": 7,
-                    "style": {
-                        "style": "STATIC"
-                    }
-                }
-            },
-            {
-                "breakSurface": false,
-                "cave": "deep/elongated",
-                "rarity": 27,
-                "caveStartHeight": {
-                    "max": 90,
-                    "min": 12,
-                    "style": {
-                        "style": "STATIC"
-                    }
-                }
+    "carving": {"caves": [
+        {
+            "breakSurface": true,
+            "cave": "deep/main",
+            "rarity": 30,
+            "caveStartHeight": {
+                "max": 90,
+                "min": 12,
+                "style": {"style": "STATIC"}
             }
-        ]
-    },
-    "seaBiomeStyle": {
-        "style": "SIMPLEX"
-    },
+        },
+        {
+            "cave": "lush/main",
+            "rarity": 50,
+            "breakSurface": false,
+            "caveStartHeight": {
+                "max": 60,
+                "min": 7,
+                "style": {"style": "STATIC"}
+            }
+        },
+        {
+            "breakSurface": false,
+            "cave": "deep/elongated",
+            "rarity": 27,
+            "caveStartHeight": {
+                "max": 90,
+                "min": 12,
+                "style": {"style": "STATIC"}
+            }
+        },
+        {
+            "breakSurface": false,
+            "cave": "Deepdark/Big_DeepdarkCave",
+            "rarity": 187,
+            "caveStartHeight": {
+                "max": 60,
+                "min": 12,
+                "style": {"style": "STATIC"}
+            }
+        }
+    ]},
+    "seaBiomeStyle": {"style": "SIMPLEX"},
     "landBiomeStyle": {
         "style": "NOWHERE_CELLULAR",
         "axialFracturing": true,
@@ -326,18 +326,42 @@
             "minPerChunk": 1,
             "minSize": 3,
             "maxSize": 6,
-            "palette": [
-                {
-                    "block": "minecraft:emerald_ore"
-                }
-            ],
+            "palette": [{"block": "minecraft:emerald_ore"}],
             "varience": 5
         }
     ],
-    "caveBiomeStyle": {
-        "style": "SIMPLEX"
-    },
+    "caveBiomeStyle": {"style": "SIMPLEX"},
     "coordFractureZoom": 0.15,
+    "layers": [
+        {
+            "minHeight": 0,
+            "maxHeight": 2,
+            "palette": [{"block": "minecraft:snow_block"}],
+            "slopeCondition": {"maximumSlope": 3}
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "palette": [{"block": "minecraft:grass_block"}],
+            "slopeCondition": {"maximumSlope": 3}
+        },
+        {
+            "minHeight": 7,
+            "maxHeight": 18,
+            "palette": [{"block": "minecraft:dirt"}],
+            "slopeCondition": {"maximumSlope": 3}
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "minecraft:stone"},
+                {"block": "minecraft:andesite"},
+                {"block": "minecraft:stone"}
+            ]
+        }
+    ],
     "preventLeafDecay": true,
     "useMantle": true,
     "stronghold": "stronghold",

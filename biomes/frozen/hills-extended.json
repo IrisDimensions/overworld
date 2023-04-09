@@ -28,17 +28,21 @@
         {
             "minHeight": 0,
             "maxHeight": 2,
-            "palette": [{"block": "minecraft:snow_block"}]
+            "palette": [{"block": "minecraft:snow_block"}],
+            "slopeCondition":{"maximumSlope": 3.5}
+
         },
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "palette": [{"block": "minecraft:grass_block"}]
+            "palette": [{"block": "minecraft:grass_block"}],
+            "slopeCondition":{"maximumSlope": 3.5}
         },
         {
             "minHeight": 7,
             "maxHeight": 18,
-            "palette": [{"block": "minecraft:dirt"}]
+            "palette": [{"block": "minecraft:dirt"}],
+            "slopeCondition":{"maximumSlope": 3.5}
         },
         {
             "minHeight": 6,
@@ -51,60 +55,50 @@
             ]
         }
     ],
-    "jigsawStructures": [
-        {
-            "rarity": 1700,
-            "structure": "igloo"
-        },
-        {
-            "rarity": 1700,
-            "structure": "pillager-outpost"
-        },
-        {
-            "rarity": 1500,
-            "structure": "village-snowy"
-        }
-    ],
+
     "objects": [
-        {
-            "chance": 0.1,
-            "density": 3,
-            "snow": 0.35,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
+       {
+        "edit": [{
+            "find": [{"block": "minecraft:spruce_leaves"}],
+            "replace": {
+                "style": {
+                    "style": "PERLIN",
+                    "zoom": 0.2
                 },
-                "enabled": true
-            },
-            "edit": [{
-                "find": [{"block": "minecraft:spruce_leaves"}],
-                "replace": {
-                    "style": {
-                        "style": "PERLIN",
-                        "zoom": 0.2
-                    },
-                    "palette": [
-                        {"block": "minecraft:oak_leaves"},
-                        {"block": "minecraft:dark_oak_leaves"}
-                    ]
-                }
-            }],
-            "place": [
-                "trees/spruce/twirl1",
-                "trees/spruce/twirl2",
-                "trees/spruce/twirl3",
-                "trees/spruce/twirl4",
-                "trees/spruce/twirl5",
-                "trees/spruce/twirl6",
-                "trees/spruce/twirl7",
-                "trees/spruce/twirl8",
-                "trees/spruce/twirl9",
-                "trees/spruce/twirl10"
-            ]
+                "palette": [
+                    {"block": "minecraft:oak_leaves"},
+                    {"block": "minecraft:dark_oak_leaves"}
+                ]
+            }
+        }],
+        "place": [
+            "trees/spruce/pine1",
+            "trees/spruce/pine2",
+            "trees/spruce/pine3",
+            "trees/spruce/pine4",
+            "trees/spruce/pine5",
+            "trees/spruce/pine6",
+            "trees/spruce/pine7",
+            "trees/spruce/pine8",
+            "trees/spruce/pine9"
+        ],
+        "chance": 0.12,
+        "rotation": {
+            "enabled": true,
+            "yAxis": {
+                "enabled": true,
+                "interval": 90,
+                "min": -360,
+                "max": 360
+            }
         },
+        "warp": {
+            "style": "IRIS_DOUBLE",
+            "exponent": 1.2,
+            "zoom": 0.4
+        },
+        "snow": 0.1
+    },
         {
             "chance": 0.005,
             "mode": "PAINT",

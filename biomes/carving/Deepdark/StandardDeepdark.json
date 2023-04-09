@@ -1,0 +1,42 @@
+{
+    "name": "DeepDark Tunnels",
+    "vanillaDerivative": "DEEP_DARK",
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {
+                "block": "minecraft:deepslate",
+                "weight": 3
+            }
+        ]
+    },
+    "caveCeilingLayers": [
+        {
+            "palette": [{
+                "block": "minecraft:deepslate"
+            }]
+        }
+    ],
+    "layers": [{
+        "style": {"style": "STATIC"},
+        "maxHeight": 2,
+        "minHeight": 2,
+        "palette": [
+            {
+                "block": "minecraft:sculk",
+                "weight": 3
+            }
+        ]
+    }],
+
+    "decorators": [
+        {
+            "chance": 0.05,
+            "palette": [
+                {"block": "minecraft:sculk_sensor", "weight": 180},
+                {"block": "minecraft:sculk_catalyst", "weight": 2},
+                {"block": "minecraft:sculk_shrieker", "weight": 1}
+            ]
+        }
+    ]
+}

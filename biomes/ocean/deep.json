@@ -3,6 +3,7 @@
     "color": "#5C4DEA",
     "derivative": "DEEP_OCEAN",
     "vanillaDerivative": "DEEP_OCEAN",
+
     "generators": [{
         "generator": "smooth-dunes",
         "max": -40,
@@ -41,7 +42,7 @@
         {
             "underwater": true,
             "waterloggable": true,
-            "chance": 0.008,
+            "chance": 0.00003,
             "mode": "PAINT",
             "rotation": {
                 "enabled": true,
@@ -143,7 +144,103 @@
             "mode": "PAINT",
             "loot": [{"name": "structures/ocean-ruins"}],
             "overrideGlobalLoot": true
-        }
+        },
+        {
+        "loot": ["structures/ocean-ruins"],
+        "overStilt": 0,
+        "chance": 0.0007,
+        "meld": false,
+        "density": 1,
+        "bottom": false,
+        "translateCenter": false,
+        "rotation": {
+            "yAxis": {
+                "min": 0,
+                "max": 0,
+                "interval": 90,
+                "enabled": true
+            },
+            "xAxis": {
+                "min": 0,
+                "max": 0,
+                "interval": 0,
+                "enabled": false
+            },
+            "zAxis": {
+                "min": 0,
+                "max": 0,
+                "interval": 0,
+                "enabled": false
+            },
+            "enabled": true
+        },
+        "boreExtendMinY": 0,
+        "smartBore": false,
+        "waterloggable": true,
+        "bore": false,
+        "translate": {
+            "yRandom": 0,
+            "x": 0,
+            "y": -1,
+            "z": 0
+        },
+        "mode": "STILT",
+        "snow": 0,
+        "underwater": true,
+        "boreExtendMaxY": 0,
+        "onwater": false,
+
+        "warp": {
+            "multiplier": 1,
+            "style": "FLAT",
+            "zoom": 1,
+            "maxFractureAccuracy": false,
+            "exponent": 1
+        },
+        "place": ["jigsaw/ocean-monument/ocean_monument"],
+
+        "markers": [
+            {
+                "marker": "guardian",
+                "exact": false,
+                "maximumMarkers": 4,
+                "mark": [
+                    {
+                        "block": "minecraft:dark_prismarine_slab"
+
+                    }
+
+                ]
+
+            },
+             {
+                "marker": "guardian",
+                "exact": false,
+                "maximumMarkers": 9,
+                "mark": [
+                    {
+                        "block": "minecraft:prismarine"
+
+                    }
+
+                ]
+
+            },
+            {
+                "marker": "elderguardian",
+                "exact": false,
+                "maximumMarkers": 3,
+                "mark": [
+                    {
+                        "block": "minecraft:sea_pickle"
+
+                    }
+
+                ]
+
+            }
+        ]
+    }
     ],
     "decorators": [
         {

@@ -3,19 +3,51 @@
     "color": "#9BEE61",
     "rarity": 1,
     "landBiomes": [
-        "temperate/plateau",
-        "temperate/stranged-plains",
-        "temperate/longtree-forest",
-        "temperate/osaka-violet-forest",
-        "temperate/combo-forest",
         "temperate/plains",
-        "temperate/wilds",
-        "temperate/oak-forest",
-        "temperate/osaka-red-forest",
-        "temperate/birch-forest",
+        "temperate/combo-forest",
         "temperate/reaching-forest",
-        "temperate/lush-plains"
+        "temperate/wilds",
+        "temperate/stranged-plains",
+        "temperate/lush-plains",
+        "mountain/plains",
+        "temperate/birch-thin",
+        "temperate/birch-forest",
+        "temperate/longtree-forest",
+        "temperate/oak-forest",
+        "temperate/osaka-violet-forest",
+        "temperate/osaka-red-forest",
+        "mountain/Cute_Cliffs",
+        "mountain/Cute_Cliffs",
+        "temperate/tinyplains",
+        "temperate/tinyplains",
+        "temperate/roughplains",
+        "temperate/calmplains",
+        "temperate/fancyplains",
+        "temperate/shattered-plains",
+        "temperate/tinybirch",
+        "temperate/sakura-forest"
+
     ],
+    "caveBiomes": [
+        "carving/CaveBiomes/Rocky"
+    ],
+    "jigsawStructures": [{
+        "structure": "ruined-portal",
+        "rarity": 1200
+    },
+    {
+        "structure": "dungeon-skeleton",
+        "rarity": 800
+        },
+        {
+        "structure": "dungeon-spider",
+        "rarity": 800
+        },
+        {
+        "structure": "dungeon-zombie",
+        "rarity": 800
+        }],
+
     "objects": [
         {
             "heightmap": {
@@ -56,56 +88,16 @@
                 "yRandom": 10,
                 "y": 2
             }
-        },
-        {
-            "name": "standard-surface-portals",
-            "chance": 0.00001,
-            "place": [
-                "structures/swordnp2",
-                "structures/swordnp1",
-                "structures/swordnpstr2",
-                "structures/swordnpstr1",
-                "structures/giantportal1",
-                "structures/giantportal2",
-                "structures/giantportal3",
-                "structures/megaportal1",
-                "structures/megaportal2"
-            ],
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:gold_block"}],
-                    "replace": {"palette": [{"block": "minecraft:air"}]},
-                    "chance": 0.1
-                },
-                {
-                    "find": [{"block": "minecraft:netherrack"}],
-                    "replace": {"palette": [{"block": "minecraft:magma_block"}]},
-                    "chance": 0.07
-                },
-                {
-                    "find": [{"block": "minecraft:obsidian"}],
-                    "replace": {"palette": [{"block": "minecraft:crying_obsidian"}]},
-                    "chance": 0.15
-                },
-                {
-                    "find": [{"block": "minecraft:lava"}],
-                    "replace": {"palette": [{"block": "minecraft:magma_block"}]},
-                    "chance": 0.2
-                }
-            ],
-            "mode": "PAINT",
-            "carvingSupport": "SURFACE_ONLY"
         }
     ],
     "shoreBiomes": [
         "temperate/shore/beach",
         "temperate/shore/oak-beach"
     ],
+    "seaBiomeZoom": 3,
     "seaBiomes": [
-        "temperate/sea/river",
         "ocean/deep"
     ],
-    "riverBiomes": ["temperate/sea/river"],
     "ENTITY_SPAWNS": "ALL ENTITY SPAWNS FOR THE REGION",
     "entitySpawners": [
         "temperate/passive",
@@ -162,7 +154,7 @@
         ]
     },
     "riverRarity": 1,
-    "landBiomeZoom": 5.5,
+    "landBiomeZoom": 3.5,
     "shoreHeightMin": 1,
     "shoreHeightMax": 5.2,
     "shoreHeightZoom": 1.14,

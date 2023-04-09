@@ -6,9 +6,20 @@
     "vanillaDerivative": "DESERT",
     "generators": [{
         "generator": "smooth-dunes",
-        "max": 41,
+        "max": 51,
         "min": 28
     }],
+    "jigsawStructures": [
+        {
+            "structure": "village-desert",
+            "rarity": 1200
+        },
+        {
+            "structure": "pyramid-desert",
+            "rarity": 1500
+
+        }
+    ],
     "layers": [
         {
             "minHeight": 3,
@@ -29,20 +40,6 @@
             }]
         }
     ],
-    "jigsawStructures": [
-        {
-            "rarity": 1700,
-            "structure": "pillager-outpost"
-        },
-        {
-            "rarity": 1500,
-            "structure": "village-desert"
-        },
-        {
-            "rarity": 1900,
-            "structure": "pyramid-desert"
-        }
-    ],
     "objects": [
         {
             "chance": 0.001,
@@ -52,68 +49,6 @@
                 "clutter/desertpost2",
                 "clutter/desertpost3"
             ]
-        },
-        {
-            "mode": "MIN_HEIGHT",
-            "place": [
-                "structures/ruins-desert-1",
-                "structures/ruins-desert-2"
-            ],
-            "chance": 0.005,
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "interval": 90,
-                    "min": -360,
-                    "max": 360
-                }
-            }
-        },
-        {
-            "chance": 0.0018,
-            "mode": "MIN_HEIGHT",
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "clutter/sphinx1",
-                "clutter/brksphinx1"
-            ],
-            "translate": {
-                "x": 0,
-                "y": -2,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.0014,
-            "mode": "MIN_HEIGHT",
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "jigsaw/pyramid/pyramid-extreme",
-                "jigsaw/pyramid/pyramid_1",
-                "jigsaw/pyramid/pyramid_2"
-            ],
-            "translate": {
-                "x": 0,
-                "y": -3,
-                "z": 0
-            }
         }
     ],
     "decorators": [

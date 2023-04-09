@@ -1,0 +1,305 @@
+{
+    "name": "Shattered Plains",
+    "color": "#42A616",
+    "rarity": 2,
+    "derivative": "PLAINS",
+    "vanillaDerivative": "PLAINS",
+    "generators": [{
+        "min": -4,
+        "max": 5,
+        "generator": "mountain"
+    }],
+    "jigsawStructures": [
+        {
+            "structure": "pillager-outpost",
+            "rarity": 800
+        },
+        {
+            "structure": "village-plains",
+            "rarity": 1200
+        }
+    ],
+    "biomeStyle": {"style": "SIMPLEX"},
+    "wall": {"palette": [
+        {"block": "minecraft:stone"},
+        {"block": "minecraft:andesite"}
+    ]},
+    "layers": [
+        {"palette": [{"block": "minecraft:grass_block"}]},
+        {
+            "minHeight": 2,
+            "maxHeight": 2,
+            "palette": [{"block": "minecraft:dirt"}]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {"block": "minecraft:dirt"},
+                {"block": "minecraft:coarse_dirt"}
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "minecraft:dirt"},
+                {"block": "minecraft:stone"}
+            ]
+        }
+    ],
+
+    "objects": [
+        {
+            "mode": "PAINT",
+            "chance": 0.00975,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/camp1",
+                "clutter/camp3",
+                "clutter/camp4",
+                "clutter/camp5"
+            ]
+        },
+        {
+            "mode": "PAINT",
+            "chance": 0.00675,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 360,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": ["clutter/camp2"]
+        },
+        {
+            "chance": 0.002,
+            "edit": [{
+                "find": [{"block": "minecraft:glass"}],
+                "replace": {"palette": [{"block": "minecraft:void_air"}]}
+            }],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 360,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": ["structures/cave2"],
+            "translate": {
+                "x": 0,
+                "y": -57,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.01,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 360,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "trees/oak/hoakgeneric3",
+                "trees/oak/hoakgeneric4",
+                "trees/oak/hoakgeneric5",
+                "trees/oak/hoakgeneric6",
+                "trees/oak/hoakgeneric7",
+                "trees/oak/hoakgeneric8",
+                "trees/oak/hoakgeneric9",
+                "trees/oak/hoakgeneric1",
+                "trees/oak/shoakgeneric3",
+                "trees/oak/shoakgeneric4",
+                "trees/oak/shoakgeneric5",
+                "trees/oak/shoakgeneric6",
+                "trees/oak/shoakgeneric7",
+                "trees/oak/shoakgeneric8",
+                "trees/oak/shoakgeneric9",
+                "trees/oak/shoakgeneric1",
+                "trees/oak/shoakgeneric2"
+            ]
+        },
+        {
+            "chance": 0.005,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 360,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/obelisk1",
+                "clutter/obelisk2",
+                "clutter/obelisk3",
+                "clutter/obelisk4",
+                "clutter/obelisk5",
+                "clutter/obelisk6",
+                "clutter/obelisk7"
+            ]
+        },
+        {
+            "mode": "PAINT",
+            "chance": 0.002,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 360,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/genericpeak1",
+                "clutter/genericpeak2",
+                "clutter/genericpeak3",
+                "clutter/genericpeak5",
+                "clutter/genericpeak6"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -4,
+                "z": 0
+            }
+        },
+        {
+            "place": [
+                "trees/oak/generic1",
+                "trees/oak/generic2",
+                "trees/oak/generic3",
+                "trees/oak/generic4",
+                "trees/oak/generic5",
+                "trees/oak/generic6"
+            ],
+            "chance": 0.07,
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": 0,
+                    "max": 360
+                }
+            }
+        },
+        {
+            "place": [
+                "structures/landstone1",
+                "structures/landstone2",
+                "structures/landstone3",
+                "structures/landstone4",
+                "structures/landstone5"
+            ],
+            "chance": 0.02,
+            "mode": "PAINT",
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": 0,
+                    "max": 360
+                }
+            }
+        },
+        {
+            "place": [
+                "clutter/statue-villager-plains",
+                "clutter/pumpkins1",
+                "clutter/pumpkins2",
+                "clutter/pumpkins3",
+                "clutter/pumpkins4",
+                "clutter/pumpkins5",
+                "clutter/pumpkins6"
+            ],
+            "chance": 0.008,
+            "mode": "PAINT",
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": 0,
+                    "max": 360
+                }
+            },
+            "translate": {"y": 1}
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.004,
+            "variance": {
+                "style": "TRIOCTAVE_SIMPLEX",
+                "zoom": 6,
+                "fracture": {
+                    "style": "STATIC",
+                    "zoom": 0.2,
+                    "multiplier": 10
+                }
+            },
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "minecraft:dandelion"},
+                {"block": "minecraft:poppy"},
+                {"block": "minecraft:blue_orchid"},
+                {"block": "minecraft:allium"},
+                {"block": "minecraft:azure_bluet"},
+                {"block": "minecraft:red_tulip"},
+                {"block": "minecraft:orange_tulip"},
+                {"block": "minecraft:white_tulip"},
+                {"block": "minecraft:pink_tulip"},
+                {"block": "minecraft:oxeye_daisy"},
+                {"block": "minecraft:cornflower"},
+                {"block": "minecraft:lily_of_the_valley"}
+            ]
+        },
+        {
+            "chance": 0.01,
+            "palette": [{"block": "minecraft:tall_grass"}]
+        },
+        {
+            "chance": 0.5,
+            "palette": [{"block": "minecraft:grass"}]
+        }
+    ],
+    "features": [{
+        "rarity": 252,
+        "zone": {
+            "convergeToHeight": 64,
+            "interpolationRadius": 3,
+            "interpolator": "BILINEAR_STARCAST_6",
+            "blockRadius": 14,
+            "objectChance": 1,
+            "strength": 1,
+            "biomeStrengthThreshold": 0.18,
+            "customBiome": "temperate/flower-forest",
+            "fractureRadius": {
+                "style": "NOWHERE",
+                "zoom": 0.12,
+                "multiplier": 52
+            }
+        }
+    }]
+}

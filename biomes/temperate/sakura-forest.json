@@ -1,0 +1,329 @@
+{
+    "name": "Sakura Forest",
+    "color": "#47B019",
+    "rarity": 4,
+    "derivative": "FLOWER_FOREST",
+    "vanillaDerivative": "FOREST",
+    "biomeScatter": ["BIRCH_FOREST"],
+    "customDerivitives": [
+        {
+
+            "category": "plains",
+            "downfallType": "rain",
+            "foliageColor": "#562135",
+            "humidity": 0.4,
+            "id": "sakura_forest_pink1"
+
+
+        },
+        {
+
+            "category": "plains",
+            "downfallType": "rain",
+            "foliageColor": "#c3829e",
+            "humidity": 0.4,
+            "id": "sakura_forest_pink2"
+
+        },
+        {
+
+            "category": "plains",
+            "downfallType": "rain",
+            "foliageColor": "#e9b1cd",
+            "humidity": 0.4,
+            "id": "sakura_forest_pink3"
+
+        },
+        {
+
+            "category": "plains",
+            "downfallType": "rain",
+            "foliageColor": "#ffe7de",
+            "humidity": 0.4,
+            "id": "sakura_forest_pink4"
+
+        },
+        {
+
+            "category": "plains",
+            "downfallType": "rain",
+            "foliageColor": "#fcd1d7",
+            "humidity": 0.4,
+            "id": "sakura_forest_pink5"
+
+        }
+    ],
+
+    "generators": [{
+        "min": 4,
+        "max": 7,
+        "generator": "plain"
+    }],
+    "biomeZoom": 60,
+    "biomeStyle": {"style": "SIMPLEX"},
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {"block": "minecraft:stone"},
+            {"block": "minecraft:andesite"},
+            {"block": "minecraft:stone"}
+        ]
+    },
+    "layers": [
+        {
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "minecraft:grass_block"}]
+        },
+        {"palette": [{"block": "minecraft:dirt"}]},
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {"block": "minecraft:dirt"},
+                {"block": "minecraft:coarse_dirt"}
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "minecraft:stone"},
+                {"block": "minecraft:andesite"},
+                {"block": "minecraft:stone"}
+            ]
+        }
+    ],
+    "objects": [
+        {
+            "chance": 0.2,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "edit": [
+                {
+                    "find": [{"block": "minecraft:oak_wood"}],
+                    "replace": {"palette": [{"block": "minecraft:stripped_birch_log"}]}
+                },
+                {
+                    "chance": 0.05,
+                    "find": [
+                        {"block": "minecraft:oak_leaves"},
+                        {"block": "minecraft:birch_leaves"}
+                    ],
+                    "replace": {
+                        "style": {"style": "STATIC"},
+                        "palette": [{"block": "minecraft:jungle_leaves"}]
+                    }
+                }
+            ],
+            "place": [
+                "trees/oak/hoakgeneric3",
+                "trees/oak/hoakgeneric4",
+                "trees/oak/hoakgeneric5",
+                "trees/oak/hoakgeneric6",
+                "trees/oak/hoakgeneric7",
+                "trees/oak/hoakgeneric8",
+                "trees/oak/hoakgeneric9",
+                "trees/oak/hoakgeneric1",
+                "trees/oak/shoakgeneric3",
+                "trees/oak/shoakgeneric4",
+                "trees/oak/shoakgeneric5",
+                "trees/oak/shoakgeneric6",
+                "trees/oak/shoakgeneric7",
+                "trees/oak/shoakgeneric8",
+                "trees/oak/shoakgeneric9",
+                "trees/oak/shoakgeneric1",
+                "trees/oak/shoakgeneric2"
+            ]
+        },
+        {
+            "mode": "MIN_HEIGHT",
+            "chance": 0.008,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/camp1",
+                "clutter/camp4",
+                "clutter/camp5",
+                "clutter/camp3"
+            ]
+        },
+        {
+            "chance": 0.2,
+            "mode": "MIN_HEIGHT",
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 360,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "edit": [{
+                "chance": 0.05,
+                "find": [
+                    {"block": "minecraft:oak_leaves"},
+                    {"block": "minecraft:birch_leaves"}
+                ],
+                "replace": {
+                    "style": {"style": "STATIC"},
+                    "palette": [{"block": "minecraft:jungle_leaves"}]
+                }
+            }],
+            "place": [
+                "trees/sakura/genericsak1",
+                "trees/sakura/genericsak2",
+                "trees/sakura/genericsak3",
+                "trees/sakura/genericsak4",
+                "trees/sakura/genericsak5"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.003,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/obelisk1",
+                "clutter/obelisk2",
+                "clutter/obelisk3",
+                "clutter/obelisk4",
+                "clutter/obelisk5",
+                "clutter/obelisk6",
+                "clutter/obelisk7"
+            ]
+        },
+        {
+            "chance": 0.001,
+            "mode": "PAINT",
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/literalgarbage1",
+                "clutter/literalgarbage2",
+                "clutter/literalgarbage3",
+                "clutter/literalgarbage4"
+            ]
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.6,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.2,
+            "palette": [
+                {
+                    "weight": 1,
+                    "block": "minecraft:grass"
+                },
+                {"block": "minecraft:grass"},
+                {"block": "minecraft:grass"},
+                {
+                    "chance": 7,
+                    "block": "minecraft:grass"
+                }
+            ]
+        },
+         {
+            "chance": 0.05,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.2,
+            "palette": [{
+            "block": "minecraft:stone_button",
+             "data": {
+                        "face": "floor",
+                        "facing": "east"
+                    }}]
+        },
+         {
+            "chance": 0.05,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.2,
+            "palette": [{
+            "block": "minecraft:stone_button",
+             "data": {
+                        "face": "floor",
+                        "facing": "north"
+                    }}]
+        },
+         {
+            "chance": 0.05,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.2,
+            "palette": [{
+            "block": "minecraft:stone_button",
+             "data": {
+                        "face": "floor",
+                        "facing": "west"
+                    }}]
+        },
+         {
+            "chance": 0.05,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.2,
+            "palette": [{
+            "block": "minecraft:stone_button",
+             "data": {
+                        "face": "floor",
+                        "facing": "south"
+                    }}]
+        },
+        {
+            "chance": 0.03,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.2,
+            "palette": [{"block": "minecraft:oak_leaves"}]
+        },
+        {
+            "chance": 0.02,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.2,
+            "palette": [{"block": "minecraft:tall_grass"}]
+        },
+        {
+            "chance": 0.06,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.2,
+            "palette": [{"block": "minecraft:allium"}]
+        },
+        {
+            "chance": 0.03,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.2,
+            "palette": [{"block": "minecraft:cobblestone_slab"}]
+        }
+    ]
+}

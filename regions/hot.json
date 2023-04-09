@@ -1,23 +1,46 @@
 {
     "name": "Hot",
     "color": "#D1CD44",
-    "rarity": 1,
+    "rarity": 4,
+    "seaBiomeZoom": 1.5,
     "landBiomes": [
         "hot/desert-dunes",
+        "hot/small-valley",
         "hot/desert-dunes-red",
-        "savanna/forest",
         "savanna/savanna",
         "mesa/dark",
-        "savanna/forest",
         "savanna/plateau",
+        "savanna/forest",
         "savanna/acacia-denmyre",
         "mesa/plateau",
         "mesa/valleys",
         "mesa/plateau-high",
         "mesa/valleys",
-        "mesa/mesa",
-        "mesa/cliffs"
+        "mesa/mesa"
     ],
+    "caveBiomes": [
+        "carving/CaveBiomes/Rocky"
+    ],
+    "jigsawStructures": [
+        {
+        "structure": "ruined-portal",
+        "rarity": 1200
+        },
+        {
+        "structure": "dungeon-skeleton",
+        "rarity": 800
+        },
+        {
+        "structure": "dungeon-spider",
+        "rarity": 800
+        },
+        {
+        "structure": "dungeon-zombie",
+        "rarity": 800
+        }
+
+    ],
+
     "objects": [
         {
             "heightmap": {
@@ -58,51 +81,6 @@
                 "yRandom": 10,
                 "y": 2
             }
-        },
-        {
-            "name": "standard-surface-portals",
-            "chance": 0.00001,
-            "place": [
-                "structures/swordnp2",
-                "structures/swordnp1",
-                "structures/giantportal1",
-                "structures/giantportal2",
-                "structures/giantportal3",
-                "structures/portal1",
-                "structures/portal2",
-                "structures/portal3",
-                "structures/portal4",
-                "structures/portal5",
-                "structures/portal6",
-                "structures/portal7",
-                "structures/portal8",
-                "structures/portal9",
-                "structures/portal10"
-            ],
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:gold_block"}],
-                    "replace": {"palette": [{"block": "minecraft:air"}]},
-                    "chance": 0.1
-                },
-                {
-                    "find": [{"block": "minecraft:netherrack"}],
-                    "replace": {"palette": [{"block": "minecraft:magma_block"}]},
-                    "chance": 0.07
-                },
-                {
-                    "find": [{"block": "minecraft:obsidian"}],
-                    "replace": {"palette": [{"block": "minecraft:crying_obsidian"}]},
-                    "chance": 0.15
-                },
-                {
-                    "find": [{"block": "minecraft:lava"}],
-                    "replace": {"palette": [{"block": "minecraft:magma_block"}]},
-                    "chance": 0.2
-                }
-            ],
-            "mode": "PAINT",
-            "carvingSupport": "SURFACE_ONLY"
         }
     ],
     "shoreBiomes": ["hot/shore/beach"],
@@ -156,6 +134,7 @@
             "particleCount": 0
         }
     ],
+
     "carving": {
         "ravines": [
             {

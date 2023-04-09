@@ -21,7 +21,7 @@
     ],
     "generators": [{
         "generator": "plain",
-        "max": 46,
+        "max": 36,
         "min": 28
     }],
     "wall": {"palette": [
@@ -32,17 +32,21 @@
         {
             "minHeight": 0,
             "maxHeight": 2,
-            "palette": [{"block": "minecraft:snow_block"}]
+            "palette": [{"block": "minecraft:snow_block"}],
+            "slopeCondition":{"maximumSlope": 3.5}
+
         },
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "palette": [{"block": "minecraft:grass_block"}]
+            "palette": [{"block": "minecraft:grass_block"}],
+            "slopeCondition":{"maximumSlope": 3.5}
         },
         {
             "minHeight": 7,
             "maxHeight": 18,
-            "palette": [{"block": "minecraft:dirt"}]
+            "palette": [{"block": "minecraft:dirt"}],
+            "slopeCondition":{"maximumSlope": 3.5}
         },
         {
             "minHeight": 6,
@@ -55,60 +59,60 @@
             ]
         }
     ],
-    "jigsawStructures": [
-        {
-            "rarity": 1700,
-            "structure": "igloo"
-        },
-        {
-            "rarity": 1700,
-            "structure": "pillager-outpost"
-        },
-        {
-            "rarity": 1500,
-            "structure": "village-snowy"
-        }
-    ],
+
     "objects": [
         {
-            "chance": 0.1,
-            "density": 3,
-            "snow": 0.35,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
+        "edit": [{
+            "find": [{"block": "minecraft:spruce_leaves"}],
+            "replace": {
+                "style": {
+                    "style": "PERLIN",
+                    "zoom": 0.2
                 },
-                "enabled": true
-            },
-            "edit": [{
-                "find": [{"block": "minecraft:spruce_leaves"}],
-                "replace": {
-                    "style": {
-                        "style": "PERLIN",
-                        "zoom": 0.2
-                    },
-                    "palette": [
-                        {"block": "minecraft:oak_leaves"},
-                        {"block": "minecraft:dark_oak_leaves"}
-                    ]
-                }
-            }],
-            "place": [
-                "trees/spruce/twirl1",
-                "trees/spruce/twirl2",
-                "trees/spruce/twirl3",
-                "trees/spruce/twirl4",
-                "trees/spruce/twirl5",
-                "trees/spruce/twirl6",
-                "trees/spruce/twirl7",
-                "trees/spruce/twirl8",
-                "trees/spruce/twirl9",
-                "trees/spruce/twirl10"
-            ]
+                "palette": [
+                    {"block": "minecraft:oak_leaves"},
+                    {"block": "minecraft:dark_oak_leaves"}
+                ]
+            }
+        }],
+        "place": [
+            "trees/spruce/lfrostgeneric1",
+            "trees/spruce/lfrostgeneric2",
+            "trees/spruce/lfrostgeneric3",
+            "trees/spruce/lfrostgeneric4",
+            "trees/spruce/lfrostgeneric5",
+            "trees/spruce/lfrostgeneric6",
+            "trees/spruce/lfrostgeneric7",
+            "trees/spruce/lfrostgeneric8",
+            "trees/spruce/lfrostgeneric9",
+            "trees/spruce/lfrostgeneric10",
+            "trees/spruce/lfrostgeneric11",
+            "trees/spruce/lfrostgeneric12",
+            "trees/spruce/lfrostgeneric13",
+            "trees/spruce/lfrostgeneric14",
+            "trees/spruce/lfrostgeneric15",
+            "trees/spruce/lfrostgeneric16",
+            "trees/spruce/lfrostgeneric17",
+            "trees/spruce/lfrostgeneric18",
+            "trees/spruce/lfrostgeneric19",
+            "trees/spruce/lfrostgeneric20"
+        ],
+        "chance": 0.62,
+        "rotation": {
+            "enabled": true,
+            "yAxis": {
+                "enabled": true,
+                "interval": 90,
+                "min": -360,
+                "max": 360
+            }
         },
+        "warp": {
+            "style": "IRIS_DOUBLE",
+            "exponent": 1.2,
+            "zoom": 0.4
+        }
+    },
         {
             "chance": 0.005,
             "mode": "PAINT",
