@@ -11,7 +11,9 @@ Contributors & creators:
 - [Espen](https://github.com/espen96) (Cave, Ore, and Other improvements)
 - [K530](https://github.com/K530-hub) (Biome reworks, and mountain generation)
 - [RaydenKonig](https://github.com/RaydenKonig) (Innovative ideas and configurations)
-- [Strangeone101](https://github.com/StrangeOne101) (Major Overhaul to the Overworld and Significant Maintainer for Community packs and content)
+- [Repixelated](https://github.com/RePixelated) (Major Overhaul to the Overworld and Significant Maintainer for Community packs and content)
+- [Strangeone101](https://github.com/StrangeOne101) (Significant im[rovements to engine and Generator functions)
+
 
 Great thanks to these people for contributing to the pack.
 If you want to contribute as well, feel free to make a fork and pull requests.
