@@ -9,8 +9,14 @@
     "continentalStyle": {
         "style": "NOWHERE_CELLULAR",
         "fracture": {
-            "style": "SIMPLEX",
-            "axialFracturing": true
+            "style": "FRACTAL_SMOKE",
+            "axialFracturing": true,
+            "multiplier": 1,
+            "fracture": {
+                "style": "STATIC",
+                "multiplier": 1,
+                "axialFracturing": true
+            }
         },
         "axialFracturing": true,
         "zoom": 6
@@ -33,13 +39,16 @@
     "landChance": 0.69,
     "regionStyle": {
         "style": "NOWHERE_CELLULAR",
+        "axialFracturing": true,
         "fracture": {
-            "multiplier": 55,
-            "style": "NOWHERE",
+            "axialFracturing": true,
+            "multiplier": 9,
+            "style": "FRACTAL_SMOKE",
             "zoom": 0.15,
             "fracture": {
                 "style": "STATIC",
-                "multiplier": 4
+                "multiplier": 1,
+                "axialFracturing": true
             }
         }
     },
@@ -54,49 +63,61 @@
         "swamp",
         "tundra"
     ],
-    "carving": {"caves": [
-        {
-            "breakSurface": true,
-            "cave": "deep/main",
-            "rarity": 30,
-            "caveStartHeight": {
-                "max": 90,
-                "min": 12,
-                "style": {"style": "STATIC"}
+    "carving": {
+        "caves": [
+            {
+                "breakSurface": true,
+                "cave": "deep/main",
+                "rarity": 30,
+                "caveStartHeight": {
+                    "max": 90,
+                    "min": 12,
+                    "style": {
+                        "style": "STATIC"
+                    }
+                }
+            },
+            {
+                "cave": "lush/main",
+                "rarity": 50,
+                "breakSurface": false,
+                "caveStartHeight": {
+                    "max": 60,
+                    "min": 7,
+                    "style": {
+                        "style": "STATIC"
+                    }
+                }
+            },
+            {
+                "breakSurface": false,
+                "cave": "deep/elongated",
+                "rarity": 27,
+                "caveStartHeight": {
+                    "max": 90,
+                    "min": 12,
+                    "style": {
+                        "style": "STATIC"
+                    }
+                }
+            },
+            {
+                "breakSurface": false,
+                "cave": "deepdark/big-deepdarkcave",
+                "rarity": 187,
+                "caveStartHeight": {
+                    "max": 60,
+                    "min": 12,
+                    "style": {
+                        "style": "STATIC"
+                    }
+                }
             }
-        },
-        {
-            "cave": "lush/main",
-            "rarity": 50,
-            "breakSurface": false,
-            "caveStartHeight": {
-                "max": 60,
-                "min": 7,
-                "style": {"style": "STATIC"}
-            }
-        },
-        {
-            "breakSurface": false,
-            "cave": "deep/elongated",
-            "rarity": 27,
-            "caveStartHeight": {
-                "max": 90,
-                "min": 12,
-                "style": {"style": "STATIC"}
-            }
-        },
-        {
-            "breakSurface": false,
-            "cave": "deepdark/big-deepdarkcave",
-            "rarity": 187,
-            "caveStartHeight": {
-                "max": 60,
-                "min": 12,
-                "style": {"style": "STATIC"}
-            }
-        }
-    ]},
-    "seaBiomeStyle": {"style": "SIMPLEX"},
+        ]
+    },
+    "seaBiomeStyle": {
+        "style": "SIMPLEX"
+    },
     "landBiomeStyle": {
         "style": "NOWHERE_CELLULAR",
         "axialFracturing": true,
@@ -329,39 +350,71 @@
             "minPerChunk": 1,
             "minSize": 3,
             "maxSize": 6,
-            "palette": [{"block": "minecraft:emerald_ore"}],
+            "palette": [
+                {
+                    "block": "minecraft:emerald_ore"
+                }
+            ],
             "varience": 5
         }
     ],
-    "caveBiomeStyle": {"style": "SIMPLEX"},
+    "caveBiomeStyle": {
+        "style": "SIMPLEX"
+    },
     "coordFractureZoom": 0.15,
     "layers": [
         {
             "minHeight": 0,
             "maxHeight": 2,
-            "palette": [{"block": "minecraft:snow_block"}],
-            "slopeCondition": {"maximumSlope": 3}
+            "palette": [
+                {
+                    "block": "minecraft:snow_block"
+                }
+            ],
+            "slopeCondition": {
+                "maximumSlope": 3
+            }
         },
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "palette": [{"block": "minecraft:grass_block"}],
-            "slopeCondition": {"maximumSlope": 3}
+            "palette": [
+                {
+                    "block": "minecraft:grass_block"
+                }
+            ],
+            "slopeCondition": {
+                "maximumSlope": 3
+            }
         },
         {
             "minHeight": 7,
             "maxHeight": 18,
-            "palette": [{"block": "minecraft:dirt"}],
-            "slopeCondition": {"maximumSlope": 3}
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                }
+            ],
+            "slopeCondition": {
+                "maximumSlope": 3
+            }
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "palette": [
-                {"block": "minecraft:stone"},
-                {"block": "minecraft:andesite"},
-                {"block": "minecraft:stone"}
+                {
+                    "block": "minecraft:stone"
+                },
+                {
+                    "block": "minecraft:andesite"
+                },
+                {
+                    "block": "minecraft:stone"
+                }
             ]
         }
     ],
