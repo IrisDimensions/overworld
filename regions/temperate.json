@@ -7,6 +7,7 @@
         "temperate/combo-forest",
         "temperate/reaching-forest",
         "temperate/wilds",
+        "temperate/cherry-blossom-forest",
         "temperate/stranged-plains",
         "temperate/lush-plains",
         "mountain/plains",
@@ -14,40 +15,42 @@
         "temperate/birch-forest",
         "temperate/longtree-forest",
         "temperate/oak-forest",
+        "temperate/cherry-blossom-forest",
         "temperate/osaka-violet-forest",
         "temperate/osaka-red-forest",
         "mountain/Cute_Cliffs",
         "mountain/Cute_Cliffs",
         "temperate/tinyplains",
         "temperate/tinyplains",
+        "temperate/cherry-blossom-forest",
         "temperate/roughplains",
         "temperate/calmplains",
         "temperate/fancyplains",
         "temperate/shattered-plains",
         "temperate/tinybirch",
         "temperate/sakura-forest"
-
     ],
     "caveBiomes": [
         "carving/rocky-cavebiome"
     ],
-    "jigsawStructures": [{
-        "structure": "ruined-portal",
-        "rarity": 1200
-    },
-    {
-        "structure": "dungeon-skeleton",
-        "rarity": 800
+    "jigsawStructures": [
+        {
+            "structure": "ruined-portal",
+            "rarity": 1200
         },
         {
-        "structure": "dungeon-spider",
-        "rarity": 800
+            "structure": "dungeon-skeleton",
+            "rarity": 800
         },
         {
-        "structure": "dungeon-zombie",
-        "rarity": 800
-        }],
-
+            "structure": "dungeon-spider",
+            "rarity": 800
+        },
+        {
+            "structure": "dungeon-zombie",
+            "rarity": 800
+        }
+    ],
     "objects": [
         {
             "heightmap": {
@@ -69,10 +72,22 @@
                 "structures/amethyst5",
                 "structures/amethyst6"
             ],
-            "edit": [{
-                "find": [{"block": "minecraft:glass"}],
-                "replace": {"palette": [{"block": "minecraft:void_air"}]}
-            }],
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:glass"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:void_air"
+                            }
+                        ]
+                    }
+                }
+            ],
             "enabled": true,
             "xAxis": {
                 "interval": 90,
@@ -106,19 +121,25 @@
         "temperate/water"
     ],
     "shoreBiomeZoom": 0.15,
-    "deposits": [{
-        "minHeight": 15,
-        "maxPerChunk": 26,
-        "maxHeight": 410,
-        "minPerChunk": 4,
-        "minSize": 3,
-        "maxSize": 8,
-        "palette": [
-            {"block": "minecraft:iron_ore"},
-            {"block": "minecraft:coal_ore"}
-        ],
-        "varience": 4
-    }],
+    "deposits": [
+        {
+            "minHeight": 15,
+            "maxPerChunk": 26,
+            "maxHeight": 410,
+            "minPerChunk": 4,
+            "minSize": 3,
+            "maxSize": 8,
+            "palette": [
+                {
+                    "block": "minecraft:iron_ore"
+                },
+                {
+                    "block": "minecraft:coal_ore"
+                }
+            ],
+            "varience": 4
+        }
+    ],
     "carving": {
         "ravines": [
             {
@@ -138,7 +159,9 @@
                 "caveStartHeight": {
                     "max": 400,
                     "min": 15,
-                    "style": {"style": "STATIC"}
+                    "style": {
+                        "style": "STATIC"
+                    }
                 }
             },
             {
@@ -148,7 +171,9 @@
                 "caveStartHeight": {
                     "max": 400,
                     "min": 15,
-                    "style": {"style": "STATIC"}
+                    "style": {
+                        "style": "STATIC"
+                    }
                 }
             }
         ]
@@ -161,6 +186,9 @@
     "riverThickness": 0.025,
     "loot": {
         "mode": "REPLACE",
-        "tables": ["temperate/clutter", "temperate/food"]
+        "tables": [
+            "temperate/clutter",
+            "temperate/food"
+        ]
     }
 }
