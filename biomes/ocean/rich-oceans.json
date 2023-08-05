@@ -1,0 +1,445 @@
+{
+    "name": "Rich oceans",
+    "color": "#5C4DEA",
+    "derivative": "DEEP_OCEAN",
+    "vanillaDerivative": "DEEP_OCEAN",
+
+    "generators": [{
+        "generator": "smooth-dunes",
+        "max": -40,
+        "min": -60
+    }],
+    "layers": [
+        {
+            "minHeight": 2,
+            "maxHeight": 2,
+            "slopeCondition": {
+                "minimumSlope": 0,
+                "maximumSlope": 3
+            },
+            "style": {"style": "NOWHERE"},
+            "zoom": 0.6,
+            "palette": [
+                {"block": "minecraft:sand"},
+                {"block": "minecraft:clay"},
+                {"block": "minecraft:sand"},
+                {"block": "minecraft:gravel"},
+                {"block": "minecraft:sand"},
+                {"block": "minecraft:dirt"},
+                {
+                    "weight": 2,
+                    "block": "minecraft:sand"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 10,
+            "palette": [{"block": "minecraft:gravel"}]
+        }
+    ],
+    "objects": [
+         {
+            "underwater": true,
+            "waterloggable": true,
+            "chance": 0.35,
+            "density": 2,
+
+            "mode": "PAINT",
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": 0,
+                    "max": 360
+                }
+            },
+            "edit": [
+                {
+                    "find": [{
+                        "block": "minecraft:iron_ore"
+                    }],
+                    "chance": 1,
+                    "replace":{
+                        "palette": [{"block": "minecraft:iron_ore"}]
+                    }
+
+
+                }
+            ],
+            "place": [
+                "clutter/ore-scluster1",
+                "clutter/ore-scluster2",
+                "clutter/ore-scluster3",
+                "clutter/ore-scluster4",
+                "clutter/ore-scluster5",
+                "clutter/ore-scluster6",
+                "clutter/ore-mcluster1",
+                "clutter/ore-mcluster2"
+            ]
+        },
+          {
+            "underwater": true,
+            "waterloggable": true,
+            "chance": 0.25,
+            "mode": "PAINT",
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": 0,
+                    "max": 360
+                }
+            },
+            "edit": [
+                {
+                    "find": [{
+                        "block": "minecraft:iron_ore"
+                    }],
+                    "chance": 0.7,
+                    "replace":{
+                        "palette": [{"block": "minecraft:gold_ore"}]
+                    }
+
+
+                }
+            ],
+            "place": [
+                "clutter/ore-scluster1",
+                "clutter/ore-scluster2",
+                "clutter/ore-scluster3",
+                "clutter/ore-scluster4",
+                "clutter/ore-scluster5",
+                "clutter/ore-scluster6",
+                "clutter/ore-mcluster1",
+                "clutter/ore-mcluster2"
+            ]
+        },
+                  {
+            "underwater": true,
+            "waterloggable": true,
+            "chance": 0.15,
+            "mode": "PAINT",
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": 0,
+                    "max": 360
+                }
+            },
+            "edit": [
+                {
+                    "find": [{
+                        "block": "minecraft:iron_ore"
+                    }],
+                    "chance": 0.7,
+                    "replace":{
+                        "palette": [{"block": "minecraft:lapis_ore"}]
+                    }
+
+
+                }
+            ],
+            "place": [
+                "clutter/ore-scluster1",
+                "clutter/ore-scluster2",
+                "clutter/ore-scluster3",
+                "clutter/ore-scluster4",
+                "clutter/ore-scluster5",
+                "clutter/ore-scluster6",
+                "clutter/ore-mcluster1",
+                "clutter/ore-mcluster2"
+            ]
+        },
+                  {
+            "underwater": true,
+            "waterloggable": true,
+            "chance": 0.15,
+            "mode": "PAINT",
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": 0,
+                    "max": 360
+                }
+            },
+            "edit": [
+                {
+                    "find": [{
+                        "block": "minecraft:iron_ore"
+                    }],
+                    "chance": 0.7,
+                    "replace":{
+                        "palette": [{"block": "minecraft:coal_ore"}]
+                    }
+
+
+                }
+            ],
+            "place": [
+                "clutter/ore-scluster1",
+                "clutter/ore-scluster2",
+                "clutter/ore-scluster3",
+                "clutter/ore-scluster4",
+                "clutter/ore-scluster5",
+                "clutter/ore-scluster6",
+                "clutter/ore-mcluster1",
+                "clutter/ore-mcluster2"
+            ]
+        },
+                  {
+            "underwater": true,
+            "waterloggable": true,
+            "chance": 0.05,
+            "mode": "PAINT",
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": 0,
+                    "max": 360
+                }
+            },
+            "edit": [
+                {
+                    "find": [{
+                        "block": "minecraft:iron_ore"
+                    }],
+                    "chance": 0.7,
+                    "replace":{
+                        "palette": [{"block": "minecraft:diamond_ore"}]
+                    }
+
+
+                }
+            ],
+            "place": [
+                "clutter/ore-scluster1",
+                "clutter/ore-scluster2",
+                "clutter/ore-scluster3",
+                "clutter/ore-scluster4",
+                "clutter/ore-scluster5",
+                "clutter/ore-scluster6"
+            ]
+        },
+        {
+            "underwater": true,
+            "waterloggable": true,
+            "chance": 0.00003,
+            "mode": "PAINT",
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": 0,
+                    "max": 360
+                }
+            },
+            "place": [
+                "structures/gall1",
+                "structures/gall2",
+                "structures/gall3"
+            ]
+        },
+        {
+            "place": [
+                "structures/shipgenericw",
+                "structures/shipgenericc",
+                "structures/shipgenericr",
+                "structures/shipgenericu",
+                "structures/shipgenericc",
+                "structures/BShip1",
+                "structures/BShip2",
+                "structures/BShip3",
+                "structures/BShip4",
+                "structures/BShip5",
+                "structures/BShip6",
+                "structures/kship1",
+                "structures/kship2",
+                "structures/kship3",
+                "structures/kship4"
+            ],
+            "chance": 0.001,
+            "markers": [{
+                "mark": [{"block": "minecraft:spruce_planks"}],
+                "maximumMarkers": 4,
+                "marker": "skelepirate"
+            }],
+            "onwater": true,
+            "translate": {"y": -1},
+            "waterloggable": true
+        },
+        {
+            "underwater": true,
+            "waterloggable": true,
+            "chance": 0.01,
+            "mode": "PAINT",
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": -360,
+                    "max": 360
+                }
+            },
+            "place": [
+                "structures/shipwithmast",
+                "structures/shipwithmastdegraded",
+                "structures/shiprightsideupfull",
+                "structures/shiprightsideupfulldegraded",
+                "structures/shiprightsideupfronthalf",
+                "structures/shiprightsideupfronthalfdegraded",
+                "structures/shiprightsideupbackhalf",
+                "structures/shiprightsideupbackhalfdegraded",
+                "structures/shipsidewaysfull",
+                "structures/shipsidewaysfulldegraded",
+                "structures/shipsidewaysfronthalf",
+                "structures/shipsidewaysfronthalfdegraded",
+                "structures/shipsidewaysbackhalf",
+                "structures/shipsidewaysbackhalfdegraded",
+                "structures/shipupsidedownfull",
+                "structures/shipupsidedownfulldegraded",
+                "structures/shipupsidedownfronthalf",
+                "structures/shipupsidedownfronthalfdegraded",
+                "structures/shipupsidedownbackhalf",
+                "structures/shipupsidedownbackhalfdegraded"
+            ]
+        },
+        {
+            "chance": 0.0035,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "underwater": true,
+            "place": [
+                "structures/oruins1",
+                "structures/oruins2",
+                "structures/oruins3"
+            ],
+            "mode": "PAINT",
+            "loot": [{"name": "structures/ocean-ruins"}],
+            "overrideGlobalLoot": true
+        },
+        {
+            "loot": ["structures/ocean-ruins"],
+            "overStilt": 0,
+            "chance": 0.0007,
+            "meld": false,
+            "density": 1,
+            "bottom": false,
+            "translateCenter": false,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "xAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 0,
+                    "enabled": false
+                },
+                "zAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 0,
+                    "enabled": false
+                },
+                "enabled": true
+            },
+            "boreExtendMinY": 0,
+            "smartBore": false,
+            "waterloggable": true,
+            "bore": false,
+            "translate": {
+                "yRandom": 0,
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "mode": "STILT",
+            "snow": 0,
+            "underwater": true,
+            "boreExtendMaxY": 0,
+            "onwater": false,
+            "warp": {
+                "multiplier": 1,
+                "style": "FLAT",
+                "zoom": 1,
+                "maxFractureAccuracy": false,
+                "exponent": 1
+            },
+            "place": ["jigsaw/ocean-monument/ocean_monument"],
+            "markers": [
+                {
+                    "marker": "guardian",
+                    "exact": false,
+                    "maximumMarkers": 4,
+                    "mark": [
+                        {
+                            "block": "minecraft:dark_prismarine_slab"
+                        }
+                    ]
+                },
+                {
+                    "marker": "guardian",
+                    "exact": false,
+                    "maximumMarkers": 9,
+                    "mark": [
+                        {
+                            "block": "minecraft:prismarine"
+
+                        }
+
+                    ]
+
+                },
+                {
+                    "marker": "elderguardian",
+                    "exact": false,
+                    "maximumMarkers": 3,
+                    "mark": [
+                        {
+                            "block": "minecraft:sea_pickle"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.2,
+            "palette": [{"block": "minecraft:seagrass"}]
+        },
+        {
+            "chance": 0.2,
+            "palette": [{
+                "block": "minecraft:tall_seagrass",
+                "data": {"half": "lower"}
+            }],
+            "topPalette": [{
+                "block": "minecraft:tall_seagrass",
+                "data": {"half": "upper"}
+            }],
+            "partOf": "SEA_FLOOR"
+        }
+    ]
+}

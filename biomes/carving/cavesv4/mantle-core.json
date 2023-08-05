@@ -1,0 +1,58 @@
+{
+    "name": "Mantle Core",
+    "wall": {
+        "palette": [
+            {"block": "minecraft:deepslate", "weight": 5},
+            {"block": "minecraft:obsidian", "weight": 1}
+            ],
+            "style":{
+                "style": "IRIS",
+                "zoom": 1
+            }
+
+            },
+    "layers": [{
+        "maxHeight": 1,
+        "minHeight": 1,
+        "palette": [
+            {"block": "minecraft:netherrack", "weight": 5},
+            {"block": "minecraft:crimson_nylium", "weight": 1}
+        ]
+    }],
+    "decorators": [
+         {
+        "chance": 0.025,
+        "style": {"style": "STATIC"},
+
+        "palette": [{"block": "minecraft:fire"}]
+    },
+     {
+            "chance": 0.075,
+            "scaleStack": true,
+            "stackMin": 30,
+            "stackMax": 70,
+            "absoluteMaxStack": 9,
+            "partOf": "CEILING",
+            "topPalette": [{"block": "minecraft:weeping_vines"}],
+            "palette": [{"block": "minecraft:weeping_vines_plant"}]
+    },
+         {
+            "chance": 0.005,
+            "scaleStack": true,
+            "stackMin": 30,
+            "stackMax": 60,
+            "absoluteMaxStack": 5,
+            "palette": [
+                {"block": "minecraft:bone_block"}
+            ]
+        }],
+
+    "caveCeilingLayers": [
+    {
+        "maxHeight": 1,
+        "minHeight": 1,
+        "palette": [
+            {"block": "minecraft:netherrack"}
+        ]
+    }]
+}
