@@ -1,0 +1,238 @@
+{
+    "name": "Oak Forest",
+    "color": "#56C326",
+    "rarity": 3,
+    "derivative": "FOREST",
+    "vanillaDerivative": "FOREST",
+    "customDerivitives": [{
+        "id": "oak_forest",
+        "foliageColor": "#64B233",
+        "grassColor": "#77A620",
+        "category": "forest"
+    }],
+    "carving":{
+        "caves": [
+            {
+                "cave": "swamp/main",
+                "rarity": 80,
+                "breakSurface": true,
+                "caveStartHeight":{
+                    "max": 175,
+                    "min": 70
+
+                    }
+            }
+        ]
+    },
+    "generators": [{
+        "min": 4,
+        "max": 10,
+        "generator": "plain"
+    }],
+
+    "wall": {"palette": [
+        {"block": "minecraft:stone"},
+        {"block": "minecraft:andesite"},
+        {"block": "minecraft:cobblestone"},
+        {"block": "minecraft:mossy_cobblestone"}
+    ]},
+    "layers": [
+        {
+            "style": {"style": "STATIC"},
+            "zoom": 0.656,
+            "palette": [
+                {
+                    "weight": 19,
+                    "block": "minecraft:grass_block"
+                },
+                {"block": "minecraft:coarse_dirt"},
+                {"block": "minecraft:gravel"},
+                {
+                    "weight": 19,
+                    "block": "minecraft:grass_block"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 2,
+            "palette": [{"block": "minecraft:dirt"}]
+        },
+        {
+            "style": {"style": "STATIC"},
+            "minHeight": 1,
+            "maxHeight": 1,
+            "palette": [
+                {"block": "minecraft:dirt"},
+                {"block": "minecraft:stone"}
+            ]
+        }
+    ],
+
+    "objects": [
+        {
+            "place": [
+                "trees/oak/hoakgeneric1",
+                "trees/oak/hoakgeneric2",
+                "trees/oak/hoakgeneric3",
+                "trees/oak/hoakgeneric4",
+                "trees/oak/hoakgeneric5",
+                "trees/oak/shoakgeneric1",
+                "trees/oak/shoakgeneric2",
+                "trees/oak/shoakgeneric3",
+                "trees/oak/shoakgeneric4",
+                "trees/oak/shoakgeneric4",
+                "trees/oak/generic1",
+                "trees/oak/generic2",
+                "trees/oak/generic3",
+                "trees/oak/generic4",
+                "trees/oak/generic5",
+                "trees/oak/generic6",
+                "clutter/sbush1",
+                "clutter/sbush2",
+                "clutter/sbush3"
+            ],
+            "chance": 0.9,
+            "density": 2,
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": 0,
+                    "max": 360
+                }
+            },
+            "translate": {
+                "x": 0,
+                "y": -3,
+                "z": 0
+            }
+        },
+        {
+            "place": [
+                "clutter/boulder1",
+                "clutter/boulder2",
+                "clutter/boulder3",
+                "clutter/boulder4",
+                "clutter/boulder5",
+                "clutter/boulder6",
+                "clutter/boulder7",
+                "clutter/boulder8",
+                "clutter/boulder9",
+                "clutter/boulder10"
+            ],
+            "chance": 0.01,
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": 0,
+                    "max": 360
+                }
+            }
+        },
+        {
+            "chance": 0.001,
+            "mode": "PAINT",
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": ["trees/mixed/smoakog80"],
+            "translate": {
+                "x": 0,
+                "y": -5,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.008,
+            "mode": "PAINT",
+            "place": [
+                "clutter/pumpkins1",
+                "clutter/pumpkins2",
+                "clutter/pumpkins3",
+                "clutter/pumpkins4",
+                "clutter/pumpkins5",
+                "clutter/pumpkins6"
+            ],
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "max": 360,
+                    "min": 0,
+                    "interval": 90
+                }
+            },
+            "translate": {"y": 1}
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.2,
+            "variance": {
+                "style": "CELLULAR",
+                "zoom": 0.3,
+                "fracture": {
+                    "style": "SIMPLEX",
+                    "zoom": 0.2,
+                    "multiplier": 10
+                }
+            },
+            "style": {
+                "style": "TRIOCTAVE_SIMPLEX",
+                "zoom": 0.35,
+                "fracture": {
+                    "style": "STATIC",
+                    "multiplier": 8
+                }
+            },
+            "palette": [
+                {"block": "minecraft:dandelion"},
+                {"block": "minecraft:poppy"},
+                {"block": "minecraft:blue_orchid"},
+                {"block": "minecraft:allium"},
+                {"block": "minecraft:azure_bluet"},
+                {"block": "minecraft:red_tulip"},
+                {"block": "minecraft:orange_tulip"},
+                {"block": "minecraft:white_tulip"},
+                {"block": "minecraft:pink_tulip"},
+                {"block": "minecraft:oxeye_daisy"},
+                {"block": "minecraft:cornflower"},
+                {"block": "minecraft:lily_of_the_valley"}
+            ]
+        },
+        {
+            "chance": 0.03,
+            "palette": [{"block": "minecraft:tall_grass"}]
+        },
+        {
+            "chance": 0.5,
+            "palette": [{"block": "minecraft:grass"}]
+        },
+        {
+            "chance": 0.06,
+            "palette": [{"block": "minecraft:fern"}]
+        },
+        {
+            "chance": 0.04,
+            "palette": [{"block": "minecraft:red_mushroom"}]
+        },
+        {
+            "chance": 0.1,
+            "palette": [{"block": "minecraft:large_fern"}]
+        },
+        {
+            "chance": 0.05,
+            "palette": [{"block": "minecraft:cobblestone_slab"}]
+        }
+    ]
+}
