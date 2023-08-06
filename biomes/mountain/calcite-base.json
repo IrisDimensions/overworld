@@ -1,0 +1,72 @@
+{
+    "name": "Calcite Peaks",
+    "color": "#6E7D85",
+    "rarity": 1,
+    "derivative": "WINDSWEPT_HILLS",
+    "vanillaDerivative": "WINDSWEPT_HILLS",
+    "generators": [
+        {
+        "min": 143,
+        "max": 345,
+        "generator": "mountain"
+        }
+
+     ],
+     "carving": {"caves": [
+        {
+            "breakSurface": true,
+            "cave": "calcite/main",
+            "rarity": 90,
+            "caveStartHeight": {
+                "max": 200,
+                "min": 85,
+                "style": {"style": "STATIC"}
+            }},
+             {
+            "breakSurface": true,
+            "cave": "cavesv4/crystalized/main",
+            "rarity": 90,
+            "caveStartHeight": {
+                "max": 200,
+                "min": 85,
+                "style": {"style": "STATIC"}
+            }},
+             {
+            "breakSurface": true,
+            "cave": "cavesv4/spider-infestation/main",
+            "rarity": 90,
+            "caveStartHeight": {
+                "max": 200,
+                "min": 85,
+                "style": {"style": "STATIC"}
+            }}
+
+     ]},
+
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {"block": "minecraft:stone"}
+        ]
+    },
+    "layers": [
+         {
+            "minHeight": 2,
+            "maxHeight": 2,
+            "slopeCondition": {
+                "minimumSlope": 0,
+                "maximumSlope": 3.6
+            },
+            "palette": [{"block": "minecraft:grass_block"}]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 2,
+            "slopeCondition": {
+                "minimumSlope": 3.6,
+                "maximumSlope": 13.6
+            },
+            "palette": [{"block": "minecraft:calcite"}]
+        }
+    ]
+}
