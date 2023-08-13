@@ -1,0 +1,112 @@
+{
+    "name": "Tall Woods",
+    "derivative": "DEEP_DARK",
+    "vanillaDerivative": "DEEP_DARK",
+    "customDerivitives": [
+        {
+            "category": "plains",
+            "id": "tallwoods",
+            "ambientParticle":{
+                "particle": "ASH",
+                "rarity": 3
+            },
+            "skyColor": "#111111",
+            "fogColor": "#111111",
+            "waterColor": "#660000",
+            "waterFogColor": "#660000",
+            "downfallType": "rain",
+            "grassColor": "#222222",
+            "foliageColor": "#444444"
+        }
+    ],
+    "rarity": 1,
+     "layers": [
+        {
+            "palette": [
+                {
+                    "block": "minecraft:grass_block"
+                }
+            ]
+        },
+         {
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                }
+            ],
+            "maxHeight": 3,
+            "minHeight": 2
+        }
+    ],
+    "decorators": [
+        {
+            "palette": [
+                {"block": "minecraft:grass", "weight": 2},
+                {"block": "minecraft:tall_grass", "weight": 1}
+
+                ],
+                "style":{
+                    "style": "STATIC",
+                    "zoom": 1
+                    },
+
+            "chance": 0.2
+        }
+    ],
+    "objects": [
+        {
+            "place": [
+                "trees/mixed/tredwood1",
+                "trees/mixed/tredwood2",
+                "trees/mixed/tredwood3",
+                "trees/mixed/tredwood4",
+                "trees/mixed/tredwood5",
+                "trees/mixed/tredwood6",
+                "trees/mixed/tredwood7",
+                "trees/mixed/tredwood8",
+                "trees/mixed/tredwood9",
+                "trees/mixed/tredwood10"
+            ],
+            "edit": [
+                {
+                    "chance": 1,
+                    "find": [
+                        {
+                            "block": "minecraft:spruce_leaves"
+                        },
+                        {
+                            "block": "minecraft:birch_leaves"
+                        }
+                    ],
+                    "replace":{
+                        "palette": [{"block": "minecraft:oak_leaves"}]
+                    }
+                }
+            ],
+            "mode": "MIN_HEIGHT",
+            "chance": 0.5,
+            "translate":{
+                "y": -4
+            },
+            "carvingSupport": "SURFACE_ONLY",
+            "rotation":{
+                "zAxis":
+                {
+                    "max": 360,
+                    "min": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+
+            }
+        }
+    ],
+    "generators": [
+        {
+            "generator": "highplains",
+            "min": 20,
+            "max": 35
+        }
+    ]
+}
