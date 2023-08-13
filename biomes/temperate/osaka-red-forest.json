@@ -75,23 +75,7 @@
                 },
                 "enabled": true
             },
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:oak_wood"}],
-                    "replace": {"palette": [{"block": "minecraft:spruce_wood"}]}
-                },
-                {
-                    "chance": 0.05,
-                    "find": [
-                        {"block": "minecraft:oak_leaves"},
-                        {"block": "minecraft:birch_leaves"}
-                    ],
-                    "replace": {
-                        "style": {"style": "STATIC"},
-                        "palette": [{"block": "minecraft:jungle_leaves"}]
-                    }
-                }
-            ],
+
             "place": [
                 "trees/oak/hoakgeneric3",
                 "trees/oak/hoakgeneric4",
@@ -132,9 +116,8 @@
             ]
         },
         {
-            "chance": 0.8,
-            "mode": "PAINT",
-            "density": 1,
+            "chance": 0.35,
+            "mode": "CENTER_HEIGHT",
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -144,23 +127,6 @@
                 },
                 "enabled": true
             },
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:stripped_birch_wood"}],
-                    "replace": {"palette": [{"block": "minecraft:spruce_wood"}]}
-                },
-                {
-                    "chance": 0.05,
-                    "find": [
-                        {"block": "minecraft:oak_leaves"},
-                        {"block": "minecraft:birch_leaves"}
-                    ],
-                    "replace": {
-                        "style": {"style": "STATIC"},
-                        "palette": [{"block": "minecraft:jungle_leaves"}]
-                    }
-                }
-            ],
             "place": [
                 "trees/sakura/genericsak1",
                 "trees/sakura/genericsak2",
@@ -176,6 +142,10 @@
         },
         {
             "chance": 0.003,
+            "mode": "MIN_HEIGHT",
+            "translate":{
+                "y": -1
+            },
             "rotation": {
                 "yAxis": {
                     "min": 0,
