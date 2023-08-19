@@ -1,0 +1,115 @@
+{
+    "name": "Cursed Beach",
+    "derivative": "DEEP_DARK",
+    "vanillaDerivative": "DEEP_DARK",
+    "entitySpawners": [
+        "corrupted/cursed-forest"
+    ],
+    "jigsawStructures": [
+        {
+            "structure": "woodland-mansion",
+            "rarity": 2400
+        }
+    ],
+    "customDerivitives": [
+        {
+            "category": "plains",
+            "id": "cursedforest",
+            "ambientParticle":{
+                "particle": "ASH",
+                "rarity": 3
+            },
+            "skyColor": "#111111",
+            "fogColor": "#111111",
+            "waterColor": "#660000",
+            "waterFogColor": "#660000",
+            "downfallType": "rain",
+            "grassColor": "#222222",
+            "foliageColor": "#444444"
+        }
+    ],
+
+    "generators": [{
+        "generator": "mountain",
+        "max": 37,
+        "min": 20
+    }],
+
+    "layers": [
+    {
+        "palette": [{"block": "minecraft:cobblestone"}],
+        "maxHeight": 1,
+        "slopeCondition": {"maximumSlope": 4}
+    },
+    {
+        "palette": [{"block": "minecraft:deepslate"}],
+        "maxHeight": 12
+    }],
+
+    "wall": {"palette": [
+        {"block": "minecraft:deepslate"}
+    ]},
+
+    "objects": [{
+        "place": [
+            "trees/darkoak/medgeneric1",
+            "trees/darkoak/medgeneric2",
+            "trees/darkoak/medgeneric3",
+            "trees/darkoak/medgeneric4",
+            "trees/darkoak/medgeneric5",
+            "trees/darkoak/medgeneric6",
+            "trees/darkoak/medgeneric7",
+            "trees/darkoak/medgeneric8",
+            "trees/darkoak/medgeneric9"
+
+
+
+            ],
+            "edit": [
+                {
+                    "chance": 1,
+                    "find": [{
+                        "block": "minecraft:birch_leaves"
+                    }],
+                    "replace":{
+                        "palette": [{"block": "minecraft:oak_leaves"}]
+                    }
+                }
+            ],
+
+        "carvingSupport": "SURFACE_ONLY",
+        "chance": 0.25,
+        "mode": "MIN_HEIGHT",
+        "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+        }
+
+    }
+
+
+    ],
+    "decorators": [
+        {
+            "chance": 0.01,
+            "palette": [{"block": "minecraft:tall_grass"}]
+        },
+        {
+            "chance": 0.5,
+            "palette": [{"block": "minecraft:grass"}]
+        },
+        {
+            "chance": 0.025,
+            "palette": [{"block": "minecraft:cobweb"}]
+        },
+         {
+            "chance": 0.015,
+            "palette": [{"block": "minecraft:wither_rose"}]
+        }
+    ]
+ }

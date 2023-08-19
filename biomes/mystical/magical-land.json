@@ -1,5 +1,5 @@
 {
-    "name": "Magical Forest",
+    "name": "Magical Land",
     "entitySpawners": [
         "magical/magical-forest"
     ],
@@ -47,10 +47,16 @@
             "particleDistance": 64
         }
     ],
-    "generators": [{
-        "min": 4,
-        "max": 10,
+    "generators": [
+         {
+        "min": 3,
+        "max": 7,
         "generator": "plain"
+    },
+    {
+        "min": -7,
+        "max": 2,
+        "generator": "prototype/scattered"
     }],
     "wall": {"palette": [
         {"block": "minecraft:stone"},
@@ -58,11 +64,6 @@
     ]},
     "layers": [
         {"palette": [{"block": "minecraft:grass_block"}]},
-        {
-            "minHeight": 2,
-            "maxHeight": 2,
-            "palette": [{"block": "minecraft:dirt"}]
-        },
         {
             "minHeight": 1,
             "maxHeight": 3,
@@ -81,7 +82,7 @@
             ]
         }
     ],
-    "objects": [
+     "objects": [
         {
             "mode": "PAINT",
             "chance": 0.00975,
@@ -229,6 +230,7 @@
             }
         }
     ],
+
     "decorators": [
          {
             "chance": 0.015,

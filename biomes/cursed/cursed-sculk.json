@@ -1,0 +1,163 @@
+{
+    "name": "Cursed Sculk",
+    "derivative": "DEEP_DARK",
+    "vanillaDerivative": "DEEP_DARK",
+    "jigsawStructures": [
+        {
+            "structure": "ancient-city",
+            "rarity": 2400
+        }
+    ],
+    "entitySpawners": [
+        "corrupted/cursed-forest"
+    ],
+     "effects": [
+        {
+            "sound": "MUSIC_NETHER_BASALT_DELTAS",
+            "soundDistance": 12,
+            "volume": 3.6,
+            "chance": 1,
+            "interval": 240000
+
+        },
+         {
+            "particleAltX": 0.0101,
+            "particleAltY": -0.033885,
+            "particleAltZ": 0.0101,
+            "chance": 1,
+            "particleDistance": 26,
+            "particleEffect": "SQUID_INK",
+            "particleOffset": 12,
+            "interval": 64000,
+            "particleCount": 0
+        }
+    ],
+     "loot":{
+        "tables": ["structures/ancient-city"],
+        "mode": "REPLACE",
+        "multiplier": 1
+    },
+
+     "carving": {
+        "caves": [
+            {
+                "breakSurface": true,
+                "cave": "cavesv4/spider-infestation/main",
+                "rarity": 305,
+                "caveStartHeight": {
+                    "max": 600,
+                    "min": 176,
+                    "style": {
+                        "style": "STATIC"
+                    }
+                }
+            },
+            {
+                "breakSurface": true,
+                "cave": "rocky/main",
+                "rarity": 495,
+                "caveStartHeight": {
+                    "max": 600,
+                    "min": 256,
+                    "style": {
+                        "style": "STATIC"
+                    }
+                }
+            }
+        ]
+    },
+
+
+    "customDerivitives": [
+        {
+            "category": "none",
+            "id": "cursedsculk",
+            "skyColor": "#111111",
+            "fogColor": "#111111",
+            "waterColor": "#152238",
+            "waterFogColor": "#152238",
+            "downfallType": "none",
+            "grassColor": "#348C31",
+            "foliageColor": "#348C31"
+        }
+    ],
+
+    "generators": [{
+        "generator": "mountain",
+        "max": 37,
+        "min": 20
+    }],
+
+    "layers": [
+    {
+        "palette": [{"block": "minecraft:sculk"}],
+        "maxHeight": 1,
+        "slopeCondition": {"maximumSlope": 4}
+    },
+    {
+        "palette": [{"block": "minecraft:deepslate"}],
+        "maxHeight": 12
+    }],
+    "wall": {"palette": [
+        {"block": "minecraft:deepslate"}
+    ]},
+
+       "objects": [{
+        "place": [
+            "trees/oak/dead1",
+            "trees/oak/dead2",
+            "trees/oak/dead3",
+            "trees/oak/dead4",
+            "trees/oak/dead6"
+
+
+            ],
+            "edit": [
+                {
+                    "find": [{
+                        "block": "minecraft:oak_wood"
+                    }],
+                    "chance": 1,
+                    "replace":{
+                        "palette": [{"block": "minecraft:sculk"}]
+                    }
+                },
+                  {
+                    "find": [{
+                        "block": "minecraft:spruce_fence"
+                    }],
+                    "chance": 1,
+                    "replace":{
+                        "palette": [{"block": "minecraft:void_air"}]
+                    }
+                }
+            ],
+        "carvingSupport": "SURFACE_ONLY",
+        "chance": 0.8,
+        "mode": "MIN_HEIGHT",
+        "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+        }
+
+    }],
+    "decorators": [
+        {
+            "chance": 0.025,
+            "palette": [{"block": "minecraft:sculk_sensor"}]
+        },
+        {
+            "chance": 0.015,
+            "palette": [{"block": "minecraft:sculk_catalyst"}]
+        },
+        {
+            "chance": 0.0025,
+            "palette": [{"block": "minecraft:sculk_shrieker", "data": {"can_summon": "true"}}]
+        }
+    ]
+ }
