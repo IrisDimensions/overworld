@@ -1,31 +1,13 @@
 {
-    "name": "Cursed Ocean",
-    "color": "#5C4DEA",
-    "derivative": "DEEP_OCEAN",
-    "vanillaDerivative": "DEEP_OCEAN",
-   "customDerivitives": [
-        {
-            "category": "plains",
-            "id": "cursedforest",
-            "ambientParticle":{
-                "particle": "ASH",
-                "rarity": 3
-            },
-            "skyColor": "#111111",
-            "fogColor": "#111111",
-            "waterColor": "#660000",
-            "downfallType": "rain",
-            "grassColor": "#222222",
-            "foliageColor": "#444444"
-        }
-    ],
-
+    "name": "Ocean",
+    "color": "#5244D5",
+    "derivative": "OCEAN",
+    "vanillaDerivative": "OCEAN",
     "generators": [{
-        "generator": "smooth-dunes",
-        "max": -40,
-        "min": -80
+        "generator": "mountain",
+        "max": -35,
+        "min": -60
     }],
-
     "layers": [
         {
             "minHeight": 2,
@@ -34,7 +16,7 @@
                 "minimumSlope": 0,
                 "maximumSlope": 3
             },
-            "style": {"style": "NOWHERE"},
+            "style": {"style": "FRACTAL_FBM_IRIS"},
             "zoom": 0.6,
             "palette": [
                 {"block": "minecraft:sand"},
@@ -57,87 +39,85 @@
     ],
     "objects": [
         {
-            "underwater": true,
-            "waterloggable": true,
-            "chance": 0.00003,
+            "place": [
+                "structures/landstone1",
+                "structures/landstone2",
+                "structures/landstone3",
+                "structures/landstone4",
+                "structures/landstone5"
+            ],
+            "chance": 1,
             "mode": "PAINT",
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "interval": 90,
-                    "min": 0,
-                    "max": 360
-                }
-            },
-            "place": [
-                "structures/gall1",
-                "structures/gall2",
-                "structures/gall3"
-            ]
-        },
-        {
             "underwater": true,
             "waterloggable": true,
-            "chance": 0.01,
-            "mode": "MIN_HEIGHT",
             "rotation": {
                 "enabled": true,
                 "yAxis": {
                     "enabled": true,
                     "interval": 90,
-                    "min": -360,
-                    "max": 360
+                    "max": 360,
+                    "min": 0
                 }
             },
-            "place": [
-                "structures/shipwithmast",
-                "structures/shipwithmastdegraded",
-                "structures/shiprightsideupfull",
-                "structures/shiprightsideupfulldegraded",
-                "structures/shiprightsideupfronthalf",
-                "structures/shiprightsideupfronthalfdegraded",
-                "structures/shiprightsideupbackhalf",
-                "structures/shiprightsideupbackhalfdegraded",
-                "structures/shipsidewaysfull",
-                "structures/shipsidewaysfulldegraded",
-                "structures/shipsidewaysfronthalf",
-                "structures/shipsidewaysfronthalfdegraded",
-                "structures/shipsidewaysbackhalf",
-                "structures/shipsidewaysbackhalfdegraded",
-                "structures/shipupsidedownfull",
-                "structures/shipupsidedownfulldegraded",
-                "structures/shipupsidedownfronthalf",
-                "structures/shipupsidedownfronthalfdegraded",
-                "structures/shipupsidedownbackhalf",
-                "structures/shipupsidedownbackhalfdegraded"
+            "edit": [
+                {
+                    "find": [
+                        {"block": "minecraft:grass_block"},
+                        {"block": "minecraft:dirt"}
+                    ],
+                    "replace": {"palette": [{"block": "minecraft:clay"}]}
+                },
+                {
+                    "find": [
+                        {"block": "minecraft:tall_grass"},
+                        {"block": "minecraft:grass"}
+                    ],
+                    "replace": {"palette": [{"block": "minecraft:water"}]}
+                }
             ]
         },
         {
-            "chance": 0.0035,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
+            "place": [
+                "structures/shipwithmastdegraded",
+                "structures/shipwithmast",
+                "structures/shipupsidedownfulldegraded",
+                "structures/shipupsidedownfull",
+                "structures/shipupsidedownfronthalfdegraded",
+                "structures/shipupsidedownfronthalf",
+                "structures/shipupsidedownbackhalfdegraded",
+                "structures/shipupsidedownbackhalf",
+                "structures/shipsidewaysfulldegraded",
+                "structures/shipsidewaysfull",
+                "structures/shipsidewaysfronthalfdegraded",
+                "structures/shipsidewaysfronthalf",
+                "structures/shipsidewaysbackhalfdegraded",
+                "structures/shipsidewaysbackhalf",
+                "structures/shiprightsideupfulldegraded",
+                "structures/shiprightsideupfull",
+                "structures/shiprightsideupfronthalfdegraded",
+                "structures/shiprightsideupfronthalf",
+                "structures/shiprightsideupbackhalfdegraded",
+                "structures/shiprightsideupbackhalf"
+            ],
+            "chance": 0.0008,
             "underwater": true,
+            "waterloggable": true
+        },
+        {
             "place": [
                 "structures/oruins1",
                 "structures/oruins2",
                 "structures/oruins3"
             ],
+            "chance": 0.008,
             "mode": "PAINT",
-            "loot": [{"name": "structures/ocean-ruins"}],
-            "overrideGlobalLoot": true
+            "underwater": true,
+            "waterloggable": true
         },
-        {
+               {
         "loot": ["structures/ocean-ruins"],
         "overStilt": 0,
-        "chance": 0.000035,
+        "chance": 0.0002,
         "meld": false,
         "density": 1,
         "bottom": false,
@@ -145,7 +125,7 @@
         "rotation": {
             "yAxis": {
                 "min": 0,
-                "max": 0,
+                "max": 270,
                 "interval": 90,
                 "enabled": true
             },
@@ -233,27 +213,29 @@
     ],
     "decorators": [
         {
-            "chance": 0.09,
+            "chance": 0.02,
             "palette": [{"block": "minecraft:kelp_plant"}],
             "stackMin": 2,
-            "stackMax": 12,
-            "partOf": "SEA_FLOOR"
+            "stackMax": 6
         },
         {
-            "chance": 0.2,
+            "chance": 0.05,
             "palette": [{"block": "minecraft:seagrass"}]
-        },
-        {
-            "chance": 0.2,
-            "palette": [{
-                "block": "minecraft:tall_seagrass",
-                "data": {"half": "lower"}
-            }],
-            "topPalette": [{
-                "block": "minecraft:tall_seagrass",
-                "data": {"half": "upper"}
-            }],
-            "partOf": "SEA_FLOOR"
         }
-    ]
+    ],
+    "childStyle": {
+        "style": "SIMPLEX",
+        "zoom": 2,
+        "fracture": {
+            "style": "SIMPLEX",
+            "zoom": 0.8,
+            "multiplier": 50,
+            "fracture": {
+                "style": "CELLULAR",
+                "zoom": 0.3,
+                "multiplier": 25
+            }
+        }
+    },
+    "childShrinkFactor": 1
 }

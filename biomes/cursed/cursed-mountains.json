@@ -1,0 +1,82 @@
+{
+    "name": "Cursed Mountains",
+    "derivative": "DEEP_DARK",
+    "vanillaDerivative": "DEEP_DARK",
+    "color": "#010203",
+    "entitySpawners": [
+        "corrupted/cursed-forest"
+    ],
+    "children": [
+        "cursed/cursed-forest"
+        ],
+    "childShrinkFactor": 1,
+    "childStyle":{
+       "style": "CELLULAR",
+       "zoom": 2.5
+    },
+
+
+    "jigsawStructures": [
+        {
+            "structure": "woodland-mansion",
+            "rarity": 2400
+        }
+    ],
+    "customDerivitives": [
+        {
+            "category": "plains",
+            "id": "cursedforest",
+            "ambientParticle":{
+                "particle": "ASH",
+                "rarity": 3
+            },
+            "skyColor": "#111111",
+            "fogColor": "#111111",
+            "waterColor": "#660000",
+            "waterFogColor": "#660000",
+            "downfallType": "rain",
+            "grassColor": "#222222",
+            "foliageColor": "#444444"
+        }
+    ],
+
+     "effects": [
+        {
+            "sound": "MUSIC_NETHER_SOUL_SAND_VALLEY",
+            "soundDistance": 12,
+            "volume": 3.6,
+            "chance": 1,
+            "interval": 140000
+
+        },
+         {
+            "sound": "ENTITY_GHAST_SCREAM",
+            "soundDistance": 12,
+            "volume": 6.6,
+            "chance": 1,
+            "interval": 140000
+
+        }
+    ],
+
+    "generators": [{
+        "generator": "mountain",
+        "max": 340,
+        "min": 139
+    }],
+
+    "layers": [
+    {
+        "palette": [{"block": "minecraft:tuff"}],
+        "slopeCondition":{"maximumSlope": 4},
+        "maxHeight": 1
+
+    },
+     {
+        "palette": [{"block": "minecraft:deepslate"}],
+        "maxHeight": 1
+    }],
+    "wall": {"palette": [
+        {"block": "minecraft:deepslate"}
+    ]}
+ }

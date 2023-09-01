@@ -1,0 +1,39 @@
+{
+    "name": "Cursed Walls",
+    "derivative": "PLAINS",
+    "vanillaDerivative": "PLAINS",
+    "color": "#404040",
+    "generators": [{
+        "generator": "mountain",
+        "max": 34,
+        "min": 13
+    }],
+     "children": [
+        "developer-biomes/cursed-t1"
+        ],
+    "childShrinkFactor": 2,
+    "childStyle":{
+        "imageMap":{
+            "channel": "BRIGHTNESS",
+            "centered": true,
+            "coordinateScale": 1,
+            "image": "wallsv2",
+            "interpolationMethod": "BILINEAR_STARCAST_12",
+            "tiled": true
+        },
+        "zoom": 1
+    },
+    "layers": [
+    {
+        "palette": [{"block": "minecraft:deepslate"}],
+        "maxHeight": 1,
+        "slopeCondition": {"maximumSlope": 4}
+    },
+    {
+        "palette": [{"block": "minecraft:deepslate"}],
+        "maxHeight": 12
+    }],
+    "wall": {"palette": [
+        {"block": "minecraft:deepslate"}
+    ]}
+ }

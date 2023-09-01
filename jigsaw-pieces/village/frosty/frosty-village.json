@@ -1,9 +1,9 @@
 {
-    "object": "jigsaw/woodland-mansion/woodland-mansion",
+    "object": "structures/frosty-village",
     "placementOptions":{
+        "bore": true,
         "boreExtendMaxY": 64,
         "carvingSupport": "SURFACE_ONLY",
-        "smartBore": true,
         "rotation": {
             "enabled": true,
             "xAxis": {
@@ -25,17 +25,16 @@
                 "interval": 0
             }
         },
-        "mode": "MIN_HEIGHT",
-        "edit": [{
-            "find": [{"block": "minecraft:glass"}],
-            "replace":{
-                "palette": [{"block": "minecraft:void_air"}]
-            }
-        }],
+        "mode": "CENTER_HEIGHT",
         "markers": [{
-            "maximumMarkers": 8,
-            "mark": [{"block": "minecraft:birch_planks"}],
-            "marker": "woodland_mansion"
+            "maximumMarkers": 4,
+            "mark": [{"block": "minecraft:spruce_planks"}],
+            "marker": "villager"
+        },
+        {
+            "maximumMarkers": 3,
+            "mark": [{"block": "minecraft:spruce_pressure_plate"}],
+            "marker": "animals"
         }]
 
     }

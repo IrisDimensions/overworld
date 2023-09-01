@@ -1,20 +1,8 @@
 {
-    "name": "Magical Land",
+    "name": "Mystical Shattered",
     "entitySpawners": [
-        "magical/magical-forest"
+        "mystical/magical-forest"
     ],
-    "carving":{
-        "caves": [
-            {
-                "cave": "cavesv4/glacial/main",
-                "rarity": 80,
-                "caveStartHeight":{
-                    "max": 400,
-                    "min": 30
-                }
-            }
-        ]
-    },
 
     "color": "#3cdfff",
     "rarity": 5,
@@ -47,23 +35,32 @@
             "particleDistance": 64
         }
     ],
+
     "generators": [
          {
-        "min": 3,
-        "max": 7,
-        "generator": "plain"
+        "min": 5,
+        "max": 15,
+        "generator": "mountain"
     },
-    {
-        "min": -7,
-        "max": 2,
+     {
+        "min": 4,
+        "max": 200,
         "generator": "prototype/scattered"
-    }],
+    }
+
+    ],
+
     "wall": {"palette": [
         {"block": "minecraft:stone"},
         {"block": "minecraft:andesite"}
     ]},
     "layers": [
         {"palette": [{"block": "minecraft:grass_block"}]},
+        {
+            "minHeight": 2,
+            "maxHeight": 2,
+            "palette": [{"block": "minecraft:dirt"}]
+        },
         {
             "minHeight": 1,
             "maxHeight": 3,
@@ -82,7 +79,62 @@
             ]
         }
     ],
-     "objects": [
+    "objects": [
+            {
+            "mode": "CENTER_HEIGHT",
+            "chance": 0.35,
+            "clamp":{
+                "minimumHeight": 210
+            },
+            "slopeCondition":{
+                "maximumSlope": 10
+            },
+            "density": 1,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 270,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "edit": [
+                {
+                    "find": [{"block": "minecraft:birch_leaves"}],
+                    "chance": 1,
+                    "replace":{
+                        "palette": [{
+                            "block": "minecraft:oak_leaves", "weight": 3
+                        }
+                        ]
+
+                    }
+                },
+                {
+                    "find": [{"block": "minecraft:ice"}],
+                    "chance": 1,
+                    "replace":{
+                        "palette": [{
+                            "block": "minecraft:purple_stained_glass"
+                        }]
+
+                    }
+                }
+
+            ],
+            "place": [
+                "trees/jungle/bmbogeneric1",
+                "trees/jungle/bmbogeneric2",
+                "trees/jungle/bmbogeneric3",
+                "trees/jungle/bmbogeneric4",
+                "trees/jungle/bmbogeneric5",
+                "trees/jungle/bmbogeneric6",
+                "trees/jungle/bmbogeneric7",
+                "trees/jungle/bmbogeneric8",
+                "trees/jungle/bmbogeneric9"
+            ]
+        },
         {
             "mode": "PAINT",
             "chance": 0.00975,
@@ -183,7 +235,7 @@
         },
           {
             "mode": "MIN_HEIGHT",
-            "chance": 0.015,
+            "chance": 0.035,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -205,32 +257,8 @@
                 "clutter/boulder9",
                 "clutter/boulder10"
             ]
-        },
-        {
-            "chance": 0.35,
-           "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": false
-                },
-                "enabled": true
-            },
-            "place": [
-                "trees/sakura/genericsak1",
-                "trees/sakura/genericsak2",
-                "trees/sakura/genericsak3",
-                "trees/sakura/genericsak4",
-                "trees/sakura/genericsak5"
-            ],
-            "translate":{
-                "y": -3
-
-            }
         }
     ],
-
     "decorators": [
          {
             "chance": 0.015,

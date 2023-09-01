@@ -1,12 +1,12 @@
 {
     "name": "Magical Forest",
     "entitySpawners": [
-        "magical/magical-forest"
+        "mystical/magical-forest"
     ],
     "carving":{
         "caves": [
             {
-                "cave": "cavesv4/glacial/main",
+                "cave": "cavesv4/crystalized/tubes",
                 "rarity": 80,
                 "caveStartHeight":{
                     "max": 400,
@@ -47,11 +47,20 @@
             "particleDistance": 64
         }
     ],
-    "generators": [{
-        "min": 4,
-        "max": 10,
+    "generators": [
+          {
+        "min": -8,
+        "max": 2,
+        "generator": "prototype/rivers"
+    },
+
+        {
+        "min": 3,
+        "max": 8,
         "generator": "plain"
-    }],
+    }
+
+    ],
     "wall": {"palette": [
         {"block": "minecraft:stone"},
         {"block": "minecraft:andesite"}
@@ -82,25 +91,6 @@
         }
     ],
     "objects": [
-        {
-            "mode": "PAINT",
-            "chance": 0.00975,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "clutter/camp1",
-                "clutter/camp3",
-                "clutter/camp4",
-                "clutter/camp5"
-            ]
-        },
           {
             "mode": "MIN_HEIGHT",
             "chance": 0.015,
@@ -182,7 +172,7 @@
         },
           {
             "mode": "MIN_HEIGHT",
-            "chance": 0.015,
+            "chance": 0.025,
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -212,7 +202,7 @@
                     "min": 0,
                     "max": 270,
                     "interval": 90,
-                    "enabled": false
+                    "enabled": true
                 },
                 "enabled": true
             },
@@ -227,6 +217,31 @@
                 "y": -3
 
             }
+        },
+                {
+          "chance": 0.253,
+            "density": 1,
+           "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 270,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "translate":{
+                "y": 1
+            },
+            "place": [
+                "trees/oak/arid1",
+                "trees/oak/arid2",
+                "trees/oak/arid3",
+                "trees/oak/arid4",
+                "trees/oak/arid5",
+                "trees/oak/arid6",
+                "trees/oak/arid7"
+            ]
         }
     ],
     "decorators": [

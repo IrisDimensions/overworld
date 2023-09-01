@@ -1,0 +1,150 @@
+{
+    "name": "Large Mountain",
+    "color": "#3B98C2",
+    "rarity": 1,
+    "derivative": "SNOWY_TAIGA",
+    "vanillaDerivative": "SNOWY_TAIGA",
+    "customDerivitives": [{
+        "category": "icy",
+        "id": "frozen_hills",
+        "waterColor": "#216FC4",
+        "downfallType": "snow",
+        "temperature": -3,
+        "fogColor": "#A6D1FF",
+        "waterFogColor": "#216FC4",
+        "foliageColor": "#B8D0E1",
+        "grassColor": "#D0E1FF"
+    }],
+    "generators": [{
+        "generator": "mountain",
+        "max": 103,
+        "min": 60
+    }],
+    "children": ["frozen/mountains/large-mountain-top"],
+    "childShrinkFactor": 2,
+    "childStyle":{
+        "style": "CELLULAR_BICUBIC",
+        "zoom": 0.5
+    },
+
+    "wall": {"palette": [
+        {"block": "minecraft:stone"},
+        {"block": "minecraft:andesite"}
+    ]},
+    "layers": [
+        {
+            "minHeight": 0,
+            "maxHeight": 2,
+            "palette": [{"block": "minecraft:snow_block"}],
+            "slopeCondition":{"maximumSlope": 3.5}
+
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "palette": [{"block": "minecraft:grass_block"}],
+            "slopeCondition":{"maximumSlope": 3.5}
+        },
+        {
+            "minHeight": 7,
+            "maxHeight": 18,
+            "palette": [{"block": "minecraft:dirt"}],
+            "slopeCondition":{"maximumSlope": 3.5}
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "minecraft:stone"},
+                {"block": "minecraft:andesite"},
+                {"block": "minecraft:stone"}
+            ]
+        }
+    ],
+
+    "objects": [
+       {
+        "edit": [{
+            "find": [{"block": "minecraft:spruce_leaves"}],
+            "replace": {
+                "style": {
+                    "style": "PERLIN",
+                    "zoom": 0.2
+                },
+                "palette": [
+                    {"block": "minecraft:oak_leaves"},
+                    {"block": "minecraft:dark_oak_leaves"}
+                ]
+            }
+        }],
+        "place": [
+            "trees/spruce/pine1",
+            "trees/spruce/pine2",
+            "trees/spruce/pine3",
+            "trees/spruce/pine4",
+            "trees/spruce/pine5",
+            "trees/spruce/pine6",
+            "trees/spruce/pine7",
+            "trees/spruce/pine8",
+            "trees/spruce/pine9"
+        ],
+        "chance": 0.12,
+        "rotation": {
+            "enabled": true,
+            "yAxis": {
+                "enabled": true,
+                "interval": 90,
+                "min": 0,
+                "max": 270
+            }
+        },
+        "warp": {
+            "style": "IRIS_DOUBLE",
+            "exponent": 1.2,
+            "zoom": 0.4
+        },
+        "snow": 0.1
+    },
+        {
+            "chance": 0.005,
+            "mode": "PAINT",
+            "edit": [{
+                "find": [{"block": "minecraft:vine"}],
+                "replace": {"palette": [{"block": "minecraft:air"}]}
+            }],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 270,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/obelisk1",
+                "clutter/obelisk2",
+                "clutter/obelisk3",
+                "clutter/obelisk4",
+                "clutter/obelisk5",
+                "clutter/obelisk6",
+                "clutter/obelisk7"
+            ]
+        }
+    ],
+    "decorators": [{
+        "chance": 1,
+        "variance": {
+            "style": "NOWHERE",
+            "zoom": 0.23
+        },
+        "palette": [
+            {
+                "data": {"layers": 1},
+                "block": "minecraft:snow"
+            },
+            {"block": "minecraft:air"}
+        ]
+    }]
+}
