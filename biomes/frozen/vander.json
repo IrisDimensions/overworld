@@ -10,6 +10,19 @@
         "WINDSWEPT_HILLS",
         "ICE_SPIKES"
     ],
+    "effects": [
+        {
+            "particleAltX": 0.1,
+            "particleAltY": 0.1,
+            "particleAltZ": 0.1,
+            "particleEffect": "END_ROD",
+
+
+            "chance": 1,
+            "interval": 1500
+
+        }
+    ],
     "customDerivitives": [{
         "category": "icy",
         "id": "frozen_vander",
@@ -23,10 +36,9 @@
     }],
     "generators": [{
         "min": 15,
-        "max": 64,
+        "max": 34,
         "generator": "mountain"
     }],
-    "biomeZoom": 50,
     "biomeStyle": {"style": "SIMPLEX"},
     "wall": {
         "style": {"style": "STATIC"},
@@ -125,7 +137,7 @@
         },
         {
             "chance": 0.45,
-            "density": 2,
+            "density": 1,
             "edit": [
                 {
                     "find": [{"block": "minecraft:spruce_planks"}],

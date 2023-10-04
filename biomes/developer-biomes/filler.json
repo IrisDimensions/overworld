@@ -1,0 +1,40 @@
+{
+    "name": "Filler",
+    "derivative": "PLAINS",
+    "vanillaDerivative": "PLAINS",
+    "color": "#404040",
+    "children": ["developer-biomes/pre-release/mountianv2"],
+    "childShrinkFactor": 1,
+    "childStyle":{
+        "style": "NOWHERE_CELLULAR",
+        "axialFracturing": true,
+        "fracture": {
+            "multiplier": 55,
+            "axialFracturing": true,
+            "style": "NOWHERE",
+            "zoom": 0.15,
+            "fracture": {
+                "axialFracturing": true,
+                "style": "STATIC",
+                "multiplier": 4
+            }
+        },
+        "zoom": 2
+
+    },
+    "generators": [{
+        "generator": "plain",
+        "max": 10,
+        "min": 5
+    }],
+
+    "layers": [
+    {
+        "palette": [{"block": "minecraft:snow_block"}],
+        "maxHeight": 1,
+        "slopeCondition": {"maximumSlope": 4}
+    }],
+    "wall": {"palette": [
+        {"block": "minecraft:stone"}
+    ]}
+ }

@@ -1,0 +1,87 @@
+{
+    "name": "Mystical",
+    "color": "#44C3D1",
+    "rarity": 128,
+    "landBiomes": [
+        "mystical/magical-forest",
+        "mystical/mystical-shattered"
+    ],
+
+    "objects": [
+        {
+            "heightmap": {
+                "seed": 1337,
+                "style": {
+                    "style": "SIMPLEX",
+                    "multiplier": 10
+                },
+                "offsetY": 5
+            },
+            "chance": 0.05,
+            "bottom": true,
+            "density": 1,
+            "place": [
+                "structures/amethyst1",
+                "structures/amethyst2",
+                "structures/amethyst3",
+                "structures/amethyst4",
+                "structures/amethyst5",
+                "structures/amethyst6"
+            ],
+            "edit": [{
+                "find": [{"block": "minecraft:glass"}],
+                "replace": {"palette": [{"block": "minecraft:void_air"}]}
+            }],
+            "enabled": true,
+            "xAxis": {
+                "interval": 90,
+                "max": 360,
+                "min": 0
+            },
+            "yAxis": {
+                "interval": 90,
+                "max": 270,
+                "min": 0
+            },
+            "translate": {
+                "yRandom": 10,
+                "y": 2
+            }
+        }
+    ],
+    "shoreBiomes": ["mystical/beach/magical-beach"],
+    "seaBiomeZoom": 1,
+    "seaBiomes": [
+        "mystical/oceans/ocean"
+    ],
+    "deposits": [
+        {
+            "minHeight": 8,
+            "maxPerChunk": 5,
+            "maxHeight": 45,
+            "minPerChunk": 1,
+            "minSize": 2,
+            "maxSize": 4,
+            "palette": [{"block": "minecraft:diamond_ore"}],
+            "varience": 4
+        },
+        {
+            "minHeight": 1,
+            "maxPerChunk": 5,
+            "maxHeight": 84,
+            "minPerChunk": 1,
+            "minSize": 3,
+            "maxSize": 8,
+            "palette": [{"block": "minecraft:copper_ore"}],
+            "varience": 8
+        }
+    ],
+    "landBiomeZoom": 5,
+    "shoreHeightMin": 0.2,
+    "shoreHeightMax": 1,
+    "shoreHeightZoom": 1.14,
+    "loot": {
+        "mode": "REPLACE",
+        "tables": ["frozen/clutter", "frozen/food", "snow/clutter"]
+    }
+}

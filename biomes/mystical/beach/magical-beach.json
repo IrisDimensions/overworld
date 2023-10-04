@@ -1,0 +1,152 @@
+{
+    "name": "Magical Beach",
+    "entitySpawners": [
+        "mystical/magical-forest"
+    ],
+
+    "color": "#3cdfff",
+    "rarity": 5,
+    "derivative": "PLAINS",
+    "vanillaDerivative": "PLAINS",
+    "customDerivitives": [
+        {
+            "category": "plains",
+            "downfallType": "none",
+            "id": "magicalforest",
+            "grassColor": "#3cdfff",
+            "foliageColor": "#8acbde",
+            "skyColor": "#b5cae9",
+            "waterColor": "#663271",
+            "waterFogColor": "#663271"
+
+
+        }
+    ],
+     "effects": [
+        {
+            "particleAltX": 0.001,
+            "particleAltY": 6.00885,
+            "particleAltZ": 0.001,
+            "chance": 1,
+            "particleEffect": "GLOW",
+            "particleOffset": 0,
+            "interval": 60,
+            "particleCount": 3,
+            "particleDistance": 64
+        }
+    ],
+    "generators": [
+         {
+        "min": 3,
+        "max": 7,
+        "generator": "plain"
+    },
+    {
+        "min": -7,
+        "max": 2,
+        "generator": "prototype/scattered"
+    }],
+    "wall": {"palette": [
+        {"block": "minecraft:stone"},
+        {"block": "minecraft:andesite"}
+    ]},
+    "layers": [
+        {"palette": [{"block": "minecraft:sand"}]},
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {"block": "minecraft:dirt"},
+                {"block": "minecraft:coarse_dirt"}
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "minecraft:dirt"},
+                {"block": "minecraft:stone"}
+            ]
+        }
+    ],
+     "objects": [
+
+          {
+            "mode": "MIN_HEIGHT",
+            "chance": 0.5,
+            "density": 1,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 270,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "edit": [
+                {
+                    "find": [{"block": "minecraft:birch_leaves"}],
+                    "chance": 1,
+                    "replace":{
+                        "palette": [{
+                            "block": "minecraft:oak_leaves", "weight": 3
+                        }
+                        ]
+
+                    }
+                },
+                {
+                    "find": [{"block": "minecraft:ice"}],
+                    "chance": 1,
+                    "replace":{
+                        "palette": [{
+                            "block": "minecraft:purple_stained_glass"
+                        }]
+
+                    }
+                }
+
+            ],
+            "place": [
+                "trees/jungle/bmbogeneric1",
+                "trees/jungle/bmbogeneric2",
+                "trees/jungle/bmbogeneric3",
+                "trees/jungle/bmbogeneric4",
+                "trees/jungle/bmbogeneric5",
+                "trees/jungle/bmbogeneric6",
+                "trees/jungle/bmbogeneric7",
+                "trees/jungle/bmbogeneric8",
+                "trees/jungle/bmbogeneric9"
+            ]
+        }
+    ],
+
+    "decorators": [
+
+        {
+            "chance": 0.4,
+            "style": {
+                "style": "STATIC",
+                "zoom": 0.4
+            },
+            "palette": [
+                {
+                    "block": "minecraft:grass",
+                    "weight": 4
+                },
+                {
+                    "block": "minecraft:tall_grass",
+                    "weight": 1
+                }
+            ],
+            "forcePlace": false
+        }
+    ],
+    "childStyle": {
+        "style": "NOWHERE",
+        "zoom": 0.5,
+        "exponent": 2
+    }
+}

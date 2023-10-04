@@ -1,0 +1,326 @@
+{
+    "name": "Mystical Shattered",
+    "entitySpawners": [
+        "mystical/magical-forest"
+    ],
+
+    "color": "#3cdfff",
+    "rarity": 5,
+    "derivative": "PLAINS",
+    "vanillaDerivative": "PLAINS",
+    "customDerivitives": [
+        {
+            "category": "plains",
+            "downfallType": "none",
+            "id": "magicalforest",
+            "grassColor": "#3cdfff",
+            "foliageColor": "#8acbde",
+            "skyColor": "#b5cae9",
+            "waterColor": "#663271",
+            "waterFogColor": "#663271"
+
+
+        }
+    ],
+     "effects": [
+        {
+            "particleAltX": 0.001,
+            "particleAltY": 6.00885,
+            "particleAltZ": 0.001,
+            "chance": 1,
+            "particleEffect": "GLOW",
+            "particleOffset": 0,
+            "interval": 60,
+            "particleCount": 3,
+            "particleDistance": 64
+        }
+    ],
+
+    "generators": [
+         {
+        "min": 5,
+        "max": 15,
+        "generator": "mountain"
+    },
+     {
+        "min": 4,
+        "max": 200,
+        "generator": "prototype/scattered"
+    }
+
+    ],
+
+    "wall": {"palette": [
+        {"block": "minecraft:stone"},
+        {"block": "minecraft:andesite"}
+    ]},
+    "layers": [
+        {"palette": [{"block": "minecraft:grass_block"}]},
+        {
+            "minHeight": 2,
+            "maxHeight": 2,
+            "palette": [{"block": "minecraft:dirt"}]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {"block": "minecraft:dirt"},
+                {"block": "minecraft:coarse_dirt"}
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "minecraft:dirt"},
+                {"block": "minecraft:stone"}
+            ]
+        }
+    ],
+    "objects": [
+            {
+            "mode": "CENTER_HEIGHT",
+            "chance": 0.35,
+            "clamp":{
+                "minimumHeight": 210
+            },
+            "slopeCondition":{
+                "maximumSlope": 10
+            },
+            "density": 1,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 270,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "edit": [
+                {
+                    "find": [{"block": "minecraft:birch_leaves"}],
+                    "chance": 1,
+                    "replace":{
+                        "palette": [{
+                            "block": "minecraft:oak_leaves", "weight": 3
+                        }
+                        ]
+
+                    }
+                },
+                {
+                    "find": [{"block": "minecraft:ice"}],
+                    "chance": 1,
+                    "replace":{
+                        "palette": [{
+                            "block": "minecraft:purple_stained_glass"
+                        }]
+
+                    }
+                }
+
+            ],
+            "place": [
+                "trees/jungle/bmbogeneric1",
+                "trees/jungle/bmbogeneric2",
+                "trees/jungle/bmbogeneric3",
+                "trees/jungle/bmbogeneric4",
+                "trees/jungle/bmbogeneric5",
+                "trees/jungle/bmbogeneric6",
+                "trees/jungle/bmbogeneric7",
+                "trees/jungle/bmbogeneric8",
+                "trees/jungle/bmbogeneric9"
+            ]
+        },
+        {
+            "mode": "PAINT",
+            "chance": 0.00975,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 270,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/camp1",
+                "clutter/camp3",
+                "clutter/camp4",
+                "clutter/camp5"
+            ]
+        },
+          {
+            "mode": "MIN_HEIGHT",
+            "chance": 0.015,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 270,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "edit": [
+                {
+                    "find": [{"block": "minecraft:packed_ice"}],
+                    "chance": 1,
+                    "replace":{
+                        "palette": [{
+                            "block": "minecraft:amethyst_block", "weight": 3
+                        },
+                        {
+                            "block": "minecraft:budding_amethyst", "weight": 1
+                        }
+                        ]
+
+                    }
+                },
+                {
+                    "find": [{"block": "minecraft:ice"}],
+                    "chance": 1,
+                    "replace":{
+                        "palette": [{
+                            "block": "minecraft:purple_stained_glass"
+                        }]
+
+                    }
+                }
+
+            ],
+            "translate":{
+                "y": -10
+            },
+            "place": [
+                "clutter/icecluster1",
+                "clutter/icecluster2",
+                "clutter/icecluster3",
+                "clutter/icecluster4",
+                "clutter/icecluster5",
+                "clutter/icecluster6",
+                "clutter/icecluster7",
+                "clutter/icecluster8",
+                "clutter/icecluster9",
+                "clutter/icecluster10",
+                "clutter/icecluster11"
+            ]
+        },
+          {
+            "mode": "CENTER_HEIGHT",
+            "chance": 0.1,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 270,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/amethyst-cluster1",
+                "clutter/amethyst-cluster2",
+                "clutter/amethyst-cluster3",
+                "clutter/amethyst-cluster4",
+                "clutter/amethyst-cluster5"
+            ],
+            "translate":{
+                "y": 1
+            }
+        },
+          {
+            "mode": "MIN_HEIGHT",
+            "chance": 0.035,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 270,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/boulder1",
+                "clutter/boulder2",
+                "clutter/boulder3",
+                "clutter/boulder4",
+                "clutter/boulder5",
+                "clutter/boulder6",
+                "clutter/boulder7",
+                "clutter/boulder8",
+                "clutter/boulder9",
+                "clutter/boulder10"
+            ]
+        }
+    ],
+    "decorators": [
+         {
+            "chance": 0.015,
+            "style": {
+                "style": "STATIC",
+                "zoom": 0.4
+            },
+            "palette": [
+                {
+                    "block": "minecraft:oak_leaves"
+                }
+            ],
+            "forcePlace": false
+        },
+        {
+            "chance": 0.4,
+            "style": {
+                "style": "STATIC",
+                "zoom": 0.4
+            },
+            "palette": [
+                {
+                    "block": "minecraft:grass",
+                    "weight": 4
+                },
+                {
+                    "block": "minecraft:tall_grass",
+                    "weight": 1
+                }
+            ],
+            "forcePlace": false
+        },
+         {
+            "chance": 0.025,
+            "style": {
+                "style": "STATIC",
+                "zoom": 0.4
+            },
+            "palette": [
+                {
+                    "block": "minecraft:large_amethyst_bud",
+                    "weight": 3
+                },
+                {
+                    "block": "minecraft:medium_amethyst_bud",
+                    "weight": 2
+                },
+                 {
+                    "block": "minecraft:small_amethyst_bud",
+                    "weight": 3
+                },
+                 {
+                    "block": "minecraft:amethyst_cluster",
+                    "weight": 2
+                }
+            ],
+            "forcePlace": false
+        }
+    ],
+    "childStyle": {
+        "style": "NOWHERE",
+        "zoom": 0.5,
+        "exponent": 2
+    }
+}

@@ -4,30 +4,60 @@
     "rarity": 1,
     "derivative": "SNOWY_TAIGA",
     "vanillaDerivative": "SNOWY_TAIGA",
-    "biomeScatter": [
-        "SNOWY_TAIGA",
-        "OLD_GROWTH_PINE_TAIGA",
-        "WINDSWEPT_HILLS",
-        "ICE_SPIKES"
+    "customDerivitives": [
+        {
+            "category": "taiga",
+            "downfallType": "snow",
+            "foliageColor": "#194569",
+            "id": "winter_mountain_forest1",
+            "temperature": -3,
+            "fogColor": "#A6D1FF",
+            "waterFogColor": "#216FC4",
+            "grassColor": "#D0E1FF"
+
+        },
+         {
+            "category": "taiga",
+            "downfallType": "snow",
+            "foliageColor": "#5F84A2",
+            "id": "winter_mountain_forest2",
+            "temperature": -3,
+            "fogColor": "#A6D1FF",
+            "waterFogColor": "#216FC4",
+            "grassColor": "#D0E1FF"
+
+        },
+         {
+            "category": "taiga",
+            "downfallType": "snow",
+            "foliageColor": "#91AEC4",
+            "id": "winter_mountain_forest3",
+            "temperature": -3,
+            "fogColor": "#A6D1FF",
+            "waterFogColor": "#216FC4",
+            "grassColor": "#D0E1FF"
+
+        }],
+     "jigsawStructures": [
+        {
+            "structure": "village-snowy",
+            "rarity": 1200
+        },
+         {
+            "structure": "pillager-outpost",
+            "rarity": 1500
+        },
+        {
+            "structure": "igloo",
+            "rarity": 800
+        }
+
     ],
 
 
-
-    "customDerivitives": [{
-        "category": "icy",
-        "id": "frozen_pines",
-        "waterColor": "#216FC4",
-        "downfallType": "snow",
-        "temperature": -3,
-        "fogColor": "#A6D1FF",
-        "waterFogColor": "#216FC4",
-        "foliageColor": "#B8D0E1",
-        "grassColor": "#D0E1FF"
-    }],
-    "children": ["frozen/pines-extended"],
     "generators": [{
-        "min": 16,
-        "max": 64,
+        "min": 10,
+        "max": 25,
         "generator": "mountain"
     }],
     "biomeZoom": 30,
@@ -125,7 +155,8 @@
             }
         },
         {
-            "chance": 0.8,
+            "chance": 0.5,
+            "density": 1,
             "snow": 1,
             "edit": [{
                 "find": [{"block": "minecraft:spruce_leaves"}],
