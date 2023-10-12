@@ -1,14 +1,15 @@
 {
-    "name": "Cursed Beach",
+    "name": "Cursed tall forest",
     "derivative": "DEEP_DARK",
     "vanillaDerivative": "DEEP_DARK",
+    "color": "#404040",
     "entitySpawners": [
         "corrupted/cursed-forest"
     ],
     "jigsawStructures": [
         {
             "structure": "woodland-mansion",
-            "rarity": 2400
+            "rarity": 1200
         }
     ],
     "customDerivitives": [
@@ -29,6 +30,25 @@
         }
     ],
 
+     "effects": [
+        {
+            "sound": "MUSIC_NETHER_SOUL_SAND_VALLEY",
+            "soundDistance": 12,
+            "volume": 3.6,
+            "chance": 1,
+            "interval": 140000
+
+        },
+         {
+            "sound": "ENTITY_GHAST_SCREAM",
+            "soundDistance": 12,
+            "volume": 6.6,
+            "chance": 1,
+            "interval": 140000
+
+        }
+    ],
+
     "generators": [{
         "generator": "mountain",
         "max": 37,
@@ -37,7 +57,7 @@
 
     "layers": [
     {
-        "palette": [{"block": "minecraft:cobblestone"}],
+        "palette": [{"block": "minecraft:grass_block"}],
         "maxHeight": 1,
         "slopeCondition": {"maximumSlope": 4}
     },
@@ -45,45 +65,53 @@
         "palette": [{"block": "minecraft:deepslate"}],
         "maxHeight": 12
     }],
-
     "wall": {"palette": [
         {"block": "minecraft:deepslate"}
     ]},
 
     "objects": [{
         "place": [
-            "trees/mixed/dotree1",
-            "trees/mixed/dotree2",
-            "trees/mixed/dotree3",
-            "trees/mixed/dotree4",
-            "trees/mixed/dotree5",
-            "trees/mixed/dotree6",
-            "trees/mixed/dotree7",
-            "trees/mixed/dotree8",
-            "trees/mixed/dotree9",
-            "trees/mixed/dotree10"
-
-            ],
-            "edit": [
-                {
-                    "chance": 1,
-                    "find": [{
-                        "block": "minecraft:birch_leaves"
-                    }],
-                    "replace":{
-                        "palette": [{"block": "minecraft:oak_leaves"}]
-                    }
-                }
+            "trees/mixed/AmyLarge1",
+            "trees/mixed/AmyLarge2",
+            "trees/mixed/AmyLarge3",
+            "trees/mixed/AmyLarge4",
+            "trees/mixed/AmyLarge5",
+            "trees/mixed/AmyLarge6",
+            "trees/mixed/AmyLarge7",
+            "trees/mixed/AmyLarge8"
             ],
 
         "carvingSupport": "SURFACE_ONLY",
-        "chance": 0.85,
         "density": 1,
-        "mode": "MIN_HEIGHT",
+        "chance": 0.25,
+        "mode": "FAST_STILT",
         "rotation": {
                 "yAxis": {
                     "min": 0,
-                    "max": 0,
+                    "max": 270,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+        }
+
+    },
+    {
+        "place": [
+            "clutter/arbusto1",
+            "clutter/arbusto2",
+            "clutter/arbusto3",
+            "clutter/arbusto4",
+            "clutter/arbusto5"
+            ],
+
+        "carvingSupport": "SURFACE_ONLY",
+        "chance": 0.15,
+        "mode": "FAST_STILT",
+        "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 270,
                     "interval": 90,
                     "enabled": true
                 },
