@@ -1,0 +1,142 @@
+{
+    "name": "Forests",
+    "color": "#9BEE61",
+    "rarity": 1,
+    "landBiomes": [
+        "tundra/forest",
+        "tundra/autumn",
+        "mountain/plains",
+        "temperate/reaching-forest-violet",
+        "temperate/flower-forest",
+        "temperate/birch-tall",
+        "temperate/osaka-red-forest",
+        "mountain/mountain",
+        "temperate/combo-forest",
+        "tundra/redwood-forest"
+
+    ],
+    "caveBiomes": [
+        "carving/rocky-cavebiome"
+    ],
+    "jigsawStructures": [
+        {
+            "structure": "ruined-portal",
+            "rarity": 1200
+        },
+        {
+            "structure": "dungeon-skeleton",
+            "rarity": 800
+        },
+        {
+            "structure": "dungeon-spider",
+            "rarity": 800
+        },
+        {
+            "structure": "dungeon-zombie",
+            "rarity": 800
+        }
+    ],
+    "objects": [
+        {
+            "heightmap": {
+                "seed": 1337,
+                "style": {
+                    "style": "SIMPLEX",
+                    "multiplier": 10
+                },
+                "offsetY": 5
+            },
+            "chance": 0.05,
+            "bottom": true,
+            "density": 1,
+            "place": [
+                "structures/amethyst1",
+                "structures/amethyst2",
+                "structures/amethyst3",
+                "structures/amethyst4",
+                "structures/amethyst5",
+                "structures/amethyst6"
+            ],
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:glass"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:void_air"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "enabled": true,
+            "xAxis": {
+                "interval": 90,
+                "max": 360,
+                "min": 0
+            },
+            "yAxis": {
+                "interval": 90,
+                "max": 270,
+                "min": 0
+            },
+            "translate": {
+                "yRandom": 10,
+                "y": 2
+            }
+        }
+    ],
+    "shoreBiomes": [
+        "temperate/shore/beach",
+        "temperate/shore/oak-beach"
+    ],
+    "seaBiomeZoom": 6,
+    "seaBiomes": [
+        "ocean/deep",
+        "ocean/dark-depth-ocean",
+        "ocean/rich-oceans"
+    ],
+    "entitySpawners": [
+        "temperate/passive",
+        "temperate/hostile",
+        "temperate/cave",
+        "temperate/water"
+    ],
+    "shoreBiomeZoom": 0.15,
+    "deposits": [
+        {
+            "minHeight": 15,
+            "maxPerChunk": 26,
+            "maxHeight": 410,
+            "minPerChunk": 4,
+            "minSize": 3,
+            "maxSize": 8,
+            "palette": [
+                {
+                    "block": "minecraft:iron_ore"
+                },
+                {
+                    "block": "minecraft:coal_ore"
+                }
+            ],
+            "varience": 4
+        }
+    ],
+    "riverRarity": 1,
+    "landBiomeZoom": 3.5,
+    "shoreHeightMin": 1,
+    "shoreHeightMax": 5.2,
+    "shoreHeightZoom": 1.14,
+    "riverThickness": 0.025,
+    "loot": {
+        "mode": "REPLACE",
+        "tables": [
+            "temperate/clutter",
+            "temperate/food"
+        ]
+    }
+}

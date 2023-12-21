@@ -1,0 +1,282 @@
+{
+    "name": "Dark forest",
+    "color": "#47B019",
+    "rarity": 12,
+    "derivative": "FOREST",
+    "vanillaDerivative": "FOREST",
+    "biomeScatter": ["FOREST"],
+    "customDerivitives": [
+        {
+            "id": "darkforest_light",
+            "skyColor": "#000a00",
+            "fogColor": "#000a00",
+            "foliageColor": "#011601",
+            "waterColor": "#A5FFED",
+            "grassColor": "#041c05",
+            "category": "forest"
+        },
+        {
+            "id": "darkforest_dark",
+            "skyColor": "#000a00",
+            "fogColor": "#041c05",
+            "foliageColor": "#011601",
+            "waterColor": "#A5FFED",
+            "grassColor": "#041c05",
+            "category": "forest"
+        }
+    ],
+    "entitySpawners": [
+        "special/darkforest"
+    ],
+    "effects": [
+        {
+            "chance": 1,
+            "interval": 1,
+            "particleEffect": "TOWN_AURA",
+            "particleAltY": 7,
+            "particleAltX": 1,
+            "particleCount": 10
+        }
+
+    ],
+
+     "jigsawStructures": [
+        {
+            "structure": "pillager-outpost",
+            "rarity": 800
+        },
+        {
+            "structure": "village-plains",
+            "rarity": 1200
+        }
+    ],
+    "generators": [{
+        "min": 4,
+        "max": 7,
+        "generator": "plain"
+    }],
+    "biomeZoom": 60,
+    "biomeStyle": {"style": "SIMPLEX"},
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {"block": "minecraft:stone"},
+            {"block": "minecraft:andesite"},
+            {"block": "minecraft:stone"}
+        ]
+    },
+    "layers": [
+        {
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "minecraft:grass_block"}]
+        },
+        {"palette": [{"block": "minecraft:dirt"}]},
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {"block": "minecraft:dirt"},
+                {"block": "minecraft:coarse_dirt"}
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "minecraft:stone"},
+                {"block": "minecraft:andesite"},
+                {"block": "minecraft:stone"}
+            ]
+        }
+    ],
+    "objects": [
+        {
+            "mode": "MIN_HEIGHT",
+            "chance": 0.008,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 270,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/camp1",
+                "clutter/camp4",
+                "clutter/camp5",
+                "clutter/camp3"
+            ]
+        },
+        {
+            "chance": 1,
+            "density": 1,
+            "mode": "CENTER_HEIGHT",
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 270,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "edit": [{
+                "chance": 0.05,
+                "find": [
+                    {"block": "minecraft:oak_leaves"},
+                    {"block": "minecraft:birch_leaves"}
+                ],
+                "replace": {
+                    "style": {"style": "STATIC"},
+                    "palette": [{"block": "minecraft:jungle_leaves"}]
+                }
+            },
+            {
+                "chance": 1,
+                "find": [
+                    {"block": "minecraft:stripped_birch_wood"}
+                    ],
+                "replace": {
+                    "style": {"style": "STATIC"},
+                    "palette": [{"block": "minecraft:dark_oak_wood"}]
+                }
+            }],
+            "place": [
+                "trees/sakura/genericsak1",
+                "trees/sakura/genericsak2",
+                "trees/sakura/genericsak3",
+                "trees/sakura/genericsak4",
+                "trees/sakura/genericsak5"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            }
+        },
+        {
+            "chance": 0.003,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 270,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/obelisk1",
+                "clutter/obelisk2",
+                "clutter/obelisk3",
+                "clutter/obelisk4",
+                "clutter/obelisk5",
+                "clutter/obelisk6",
+                "clutter/obelisk7"
+            ]
+        },
+        {
+            "chance": 0.001,
+            "mode": "PAINT",
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 270,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/literalgarbage1",
+                "clutter/literalgarbage2",
+                "clutter/literalgarbage3",
+                "clutter/literalgarbage4"
+            ]
+        },
+        {
+            "chance": 0.008,
+            "mode": "PAINT",
+            "place": [
+                "clutter/pumpkins1",
+                "clutter/pumpkins2",
+                "clutter/pumpkins3",
+                "clutter/pumpkins4",
+                "clutter/pumpkins5",
+                "clutter/pumpkins6"
+            ],
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "max": 360,
+                    "min": 0,
+                    "interval": 90
+                }
+            },
+            "translate": {"y": 1}
+        }
+    ],
+    "decorators": [
+           {
+            "chance": 0.0001,
+            "variance": {"style": "VASCULAR"},
+            "style":{
+                "style": "VASCULAR",
+                "zoom": 1
+            },
+            "topThreshold": 1,
+            "topPalette": [{
+                "block": "minecraft:soul_lantern"
+            }],
+            "stackMax": 2,
+            "stackMin": 2,
+            "zoom": 0.1,
+
+            "palette": [
+                {
+                    "chance": 7,
+                    "block": "minecraft:cobblestone_wall"
+                }
+            ]
+        },
+        {
+            "chance": 0.6,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.2,
+            "palette": [
+                {
+                    "weight": 1,
+                    "block": "minecraft:grass"
+                },
+                {"block": "minecraft:grass"},
+                {"block": "minecraft:grass"},
+                {
+                    "chance": 7,
+                    "block": "minecraft:grass"
+                }
+            ]
+        },
+        {
+            "chance": 0.03,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.2,
+            "palette": [{"block": "minecraft:oak_leaves"}]
+        },
+        {
+            "chance": 0.2,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.2,
+            "palette": [{"block": "minecraft:tall_grass"}]
+        },
+        {
+            "chance": 0.03,
+            "variance": {"style": "STATIC"},
+            "zoom": 0.2,
+            "palette": [{"block": "minecraft:cobblestone_slab"}]
+        }
+    ]
+}

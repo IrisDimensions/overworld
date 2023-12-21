@@ -1,0 +1,178 @@
+{
+    "name": "Mountain Plains Hills",
+    "color": "#616E75",
+    "rarity": 1,
+    "derivative": "PLAINS",
+    "vanillaDerivative": "PLAINS",
+    "generators": [
+        {
+            "generator": "smooth-dunes",
+            "max": 70,
+            "min": 50
+        },
+        {
+            "generator": "mountain",
+            "max": 5,
+            "min": 1
+        }
+    ],
+    "wall": {"palette": [
+        {"block": "minecraft:stone"},
+        {"block": "minecraft:andesite"}
+    ]},
+    "layers": [
+        {"palette": [{"block": "minecraft:grass_block"}]},
+        {
+            "minHeight": 2,
+            "maxHeight": 2,
+            "palette": [{"block": "minecraft:dirt"}]
+        },
+        {
+            "style": {"style": "STATIC"},
+            "minHeight": 1,
+            "maxHeight": 1,
+            "palette": [
+                {"block": "minecraft:dirt"},
+                {"block": "minecraft:stone"}
+            ]
+        }
+    ],
+
+    "objects": [
+        {
+            "place": [
+                "trees/oak/truegeneric1",
+                "trees/oak/truegeneric3",
+                "trees/oak/truegeneric3",
+                "trees/oak/truegeneric4",
+                "trees/oak/truegeneric5"
+            ],
+            "chance": 0.07,
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": -360,
+                    "max": 360
+                }
+            }
+        },
+          {
+            "place": [
+                "trees/oak/lponderosa1",
+                "trees/oak/lponderosa2",
+                "trees/oak/lponderosa3",
+                "trees/oak/lponderosa4",
+                "trees/oak/lponderosa5",
+                "trees/oak/lponderosa6",
+                "trees/oak/lponderosa7",
+                "trees/oak/lponderosa8",
+                "trees/oak/lponderosa9",
+                "trees/oak/lponderosa10",
+                "trees/oak/lponderosa11",
+                "trees/oak/lponderosa13",
+                "trees/oak/lponderosa14",
+                "trees/oak/lponderosa15"
+            ],
+            "mode": "CENTER_HEIGHT",
+            "chance": 0.28,
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": -360,
+                    "max": 360
+                }
+            }
+        },
+                  {
+            "place": [
+                "clutter/arbusto1",
+                "clutter/arbusto2",
+                "clutter/arbusto3",
+                "clutter/arbusto4",
+                "clutter/arbusto5"
+            ],
+            "chance": 0.17,
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": -360,
+                    "max": 360
+                }
+            }
+        },
+        {
+            "place": [
+                "structures/landstone1",
+                "structures/landstone2",
+                "structures/landstone3",
+                "structures/landstone4",
+                "structures/landstone5"
+            ],
+            "chance": 0.04,
+            "mode": "PAINT",
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": -360,
+                    "max": 360
+                }
+            }
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.2,
+            "variance": {
+                "style": "CELLULAR",
+                "zoom": 0.3,
+                "fracture": {
+                    "style": "SIMPLEX",
+                    "zoom": 0.2,
+                    "multiplier": 10
+                }
+            },
+            "style": {
+                "style": "TRIOCTAVE_SIMPLEX",
+                "zoom": 0.3,
+                "fracture": {
+                    "style": "STATIC",
+                    "multiplier": 8
+                }
+            },
+            "palette": [
+                {"block": "minecraft:dandelion"},
+                {"block": "minecraft:poppy"},
+                {"block": "minecraft:blue_orchid"},
+                {"block": "minecraft:allium"},
+                {"block": "minecraft:azure_bluet"},
+                {"block": "minecraft:red_tulip"},
+                {"block": "minecraft:orange_tulip"},
+                {"block": "minecraft:white_tulip"},
+                {"block": "minecraft:pink_tulip"},
+                {"block": "minecraft:oxeye_daisy"},
+                {"block": "minecraft:cornflower"},
+                {"block": "minecraft:lily_of_the_valley"}
+            ]
+        },
+        {
+            "chance": 0.01,
+            "palette": [{"block": "minecraft:tall_grass"}]
+        },
+               {
+            "chance": 0.025,
+            "palette": [{"block": "minecraft:oak_leaves"}]
+        },
+        {
+            "chance": 0.5,
+            "palette": [{"block": "minecraft:grass"}]
+        }
+    ]
+}
