@@ -7,6 +7,42 @@
         "mode": "PAINT",
         "carvingSupport": "SURFACE_ONLY",
         "onwater": false,
+        "edit": [
+            {
+                "find": [{"block": "minecraft:suspicious_gravel"}],
+                "replace": {
+                    "palette": [
+                        {
+                            "weight": 90,
+                            "block": "minecraft:suspicious_gravel",
+                            "tileData": {"LootTable": "minecraft:archaeology/trail_ruins_common"}
+                        },
+                        {
+                            "weight": 10,
+                            "block": "minecraft:suspicious_gravel",
+                            "tileData": {"LootTable": "minecraft:archaeology/trail_ruins_rare"}
+                        }
+                    ]
+                }
+            },
+            {
+                "find": [{"block": "minecraft:suspicious_sand"}],
+                "replace": {
+                    "palette": [
+                        {
+                            "weight": 90,
+                            "block": "minecraft:suspicious_sand",
+                            "tileData": {"LootTable": "minecraft:archaeology/trail_ruins_common"}
+                        },
+                        {
+                            "weight": 10,
+                            "block": "minecraft:suspicious_sand",
+                            "tileData": {"LootTable": "minecraft:archaeology/trail_ruins_rare"}
+                        }
+                    ]
+                }
+            }
+        ],
         "rotation":{
             "yAxis":{
                 "max": 270,
