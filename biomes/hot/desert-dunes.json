@@ -132,18 +132,30 @@
     ],
     "decorators": [
         {
-            "verticalZoom": 5,
-            "chance": 0.004,
+            "chance": 0.0005,
             "variance": {"style": "STATIC"},
             "stackMax": 5,
             "style": {"style": "STATIC"},
             "palette": [{"block": "minecraft:cactus"}],
-            "heightVariance": {"style": "NOWHERE"},
+            "stackMin": 1
+        },
+         {
+            "chance": 0.0005,
+            "variance": {"style": "STATIC"},
+            "stackMax": 5,
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "minecraft:cactus"}],
+             "topPalette": [
+                {
+                    "block": "minecraft:cactus_flower"
+                }
+            ],
             "stackMin": 1
         },
         {
             "chance": 0.005,
             "palette": [{"block": "minecraft:dead_bush"}]
-        }
+        },
+        "snippet/decorator/dry_grass"
     ]
 }
