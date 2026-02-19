@@ -2,8 +2,8 @@
     "name": "Ancient Sands",
     "color": "#DBD155",
     "rarity": 1,
-    "derivative": "DESERT",
-    "vanillaDerivative": "DESERT",
+    "derivative": "minecraft:desert",
+    "vanillaDerivative": "minecraft:desert",
     "generators": [
         {
             "generator": "smooth-dunes",
@@ -21,17 +21,19 @@
             "min": 0
         }
     ],
-    "customDerivitives": [{
-        "category": "desert",
-        "id": "terralost_ancientsands",
-        "temperature": 2,
-        "humidity": 0,
-        "downfallType": "none",
-        "skyColor": "#857769",
-        "fogColor": "#BB9B9D",
-        "waterColor": "#77E0F7",
-        "waterFogColor": "#50533"
-    }],
+    "customDerivitives": [
+        {
+            "category": "desert",
+            "id": "terralost_ancientsands",
+            "temperature": 2,
+            "humidity": 0,
+            "downfallType": "none",
+            "skyColor": "#857769",
+            "fogColor": "#BB9B9D",
+            "waterColor": "#77E0F7",
+            "waterFogColor": "#50533"
+        }
+    ],
     "layers": [
         {
             "minHeight": 3,
@@ -41,17 +43,29 @@
                 "zoom": 0.05
             },
             "palette": [
-                {"block": "minecraft:orange_terracotta"},
-                {"block": "minecraft:red_sand"},
-                {"block": "minecraft:sandstone"},
-                {"block": "minecraft:sand"}
+                {
+                    "block": "minecraft:orange_terracotta"
+                },
+                {
+                    "block": "minecraft:red_sand"
+                },
+                {
+                    "block": "minecraft:sandstone"
+                },
+                {
+                    "block": "minecraft:sand"
+                }
             ]
         },
         {
             "minHeight": 5,
             "maxHeight": 5,
             "zoom": 0.7,
-            "palette": [{"block": "minecraft:red_sand"}]
+            "palette": [
+                {
+                    "block": "minecraft:red_sand"
+                }
+            ]
         },
         {
             "minHeight": 3,
@@ -60,30 +74,22 @@
                 "minimumSlope": 4.5,
                 "maximumSlope": 20
             },
-            "palette": [{"block": "minecraft:sandstone"}]
+            "palette": [
+                {
+                    "block": "minecraft:sandstone"
+                }
+            ]
         },
         {
             "minHeight": 5,
             "maxHeight": 5,
             "zoom": 0.7,
-            "palette": [{
-                "weight": 1,
-                "block": "minecraft:sand"
-            }]
-        }
-    ],
-    "jigsawStructures": [
-        {
-            "rarity": 1700,
-            "structure": "pillager-outpost"
-        },
-        {
-            "rarity": 1500,
-            "structure": "village-desert"
-        },
-        {
-            "rarity": 1900,
-            "structure": "pyramid-desert"
+            "palette": [
+                {
+                    "weight": 1,
+                    "block": "minecraft:sand"
+                }
+            ]
         }
     ],
     "objects": [
@@ -99,15 +105,14 @@
                 },
                 "enabled": true
             },
-                        "edit": [
+            "edit": [
                 {
                     "find": [
                         {
                             "block": "minecraft:glass"
                         }
                     ],
-                    "replace":
-                    {
+                    "replace": {
                         "palette": [
                             {
                                 "block": "minecraft:air"
@@ -116,10 +121,7 @@
                     }
                 }
             ],
-            "place": [
-                "jigsaw/pyramid/pyramid-red-extreme",
-                "jigsaw/pyramid/pyramid-red"
-            ],
+            "place": [],
             "translate": {
                 "x": 0,
                 "y": -10,
@@ -128,10 +130,7 @@
         },
         {
             "mode": "MIN_HEIGHT",
-            "place": [
-                "structures/ruins-desert-1",
-                "structures/ruins-desert-2"
-            ],
+            "place": [],
             "chance": 0.005,
             "rotation": {
                 "enabled": true,
@@ -169,31 +168,55 @@
     "decorators": [
         {
             "chance": 0.002,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "stackMax": 5,
-            "style": {"style": "STATIC"},
-            "palette": [{"block": "minecraft:cactus"}],
-            "heightVariance": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "minecraft:cactus"
+                }
+            ],
+            "heightVariance": {
+                "style": "STATIC"
+            },
             "stackMin": 1
         },
-          {
+        {
             "chance": 0.002,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "stackMax": 5,
-            "style": {"style": "STATIC"},
-            "palette": [{"block": "minecraft:cactus"}],
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "minecraft:cactus"
+                }
+            ],
             "topPalette": [
                 {
                     "block": "minecraft:cactus_flower",
                     "weight": 1
                 }
             ],
-            "heightVariance": {"style": "STATIC"},
+            "heightVariance": {
+                "style": "STATIC"
+            },
             "stackMin": 1
         },
         {
             "chance": 0.005,
-            "palette": [{"block": "minecraft:dead_bush"}]
+            "palette": [
+                {
+                    "block": "minecraft:dead_bush"
+                }
+            ]
         }
     ]
 }

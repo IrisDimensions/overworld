@@ -2,56 +2,76 @@
     "name": "Stranged Plains",
     "color": "#318A0A",
     "rarity": 5,
-    "derivative": "PLAINS",
-    "vanillaDerivative": "PLAINS",
-    "customDerivitives": [{
-        "id": "estrangedplains",
-        "category": "plains",
-        "humidity": 0.45,
-        "temperature": 0.875,
-        "grassColor": "#b9bf4e"
-    }],
-     "jigsawStructures": [
+    "derivative": "minecraft:plains",
+    "vanillaDerivative": "minecraft:plains",
+    "customDerivitives": [
         {
-            "structure": "pillager-outpost",
-            "rarity": 800
-        },
-        {
-            "structure": "village-plains",
-            "rarity": 800
+            "id": "estrangedplains",
+            "category": "plains",
+            "humidity": 0.45,
+            "temperature": 0.875,
+            "grassColor": "#b9bf4e"
         }
     ],
-    "generators": [{
-        "min": 4,
-        "max": 10,
-        "generator": "plain"
-    }],
-    "wall": {"palette": [
-        {"block": "minecraft:stone"},
-        {"block": "minecraft:andesite"}
-    ]},
+    "generators": [
+        {
+            "min": 4,
+            "max": 10,
+            "generator": "plain"
+        }
+    ],
+    "wall": {
+        "palette": [
+            {
+                "block": "minecraft:stone"
+            },
+            {
+                "block": "minecraft:andesite"
+            }
+        ]
+    },
     "layers": [
-        {"palette": [{"block": "minecraft:grass_block"}]},
+        {
+            "palette": [
+                {
+                    "block": "minecraft:grass_block"
+                }
+            ]
+        },
         {
             "minHeight": 2,
             "maxHeight": 2,
-            "palette": [{"block": "minecraft:dirt"}]
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                }
+            ]
         },
         {
             "minHeight": 1,
             "maxHeight": 3,
             "palette": [
-                {"block": "minecraft:dirt"},
-                {"block": "minecraft:coarse_dirt"}
+                {
+                    "block": "minecraft:dirt"
+                },
+                {
+                    "block": "minecraft:coarse_dirt"
+                }
             ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "palette": [
-                {"block": "minecraft:dirt"},
-                {"block": "minecraft:stone"}
+                {
+                    "block": "minecraft:dirt"
+                },
+                {
+                    "block": "minecraft:stone"
+                }
             ]
         }
     ],
@@ -107,7 +127,7 @@
             ]
         },
         {
-            "chance": 2.0E-7,
+            "chance": 2e-07,
             "mode": "PAINT",
             "rotation": {
                 "yAxis": {
@@ -151,13 +171,7 @@
             }
         },
         {
-            "place": [
-                "structures/landstone1",
-                "structures/landstone2",
-                "structures/landstone3",
-                "structures/landstone4",
-                "structures/landstone5"
-            ],
+            "place": [],
             "chance": 0.02,
             "mode": "PAINT",
             "rotation": {
@@ -180,7 +194,9 @@
             },
             "palette": [
                 {
-                    "data": {"age": 7},
+                    "data": {
+                        "age": 7
+                    },
                     "block": "minecraft:wheat",
                     "weight": 45
                 },
@@ -213,7 +229,7 @@
             ],
             "forcePlace": false
         },
-         "snippet/decorator/bush"
+        "snippet/decorator/bush"
     ],
     "childStyle": {
         "style": "NOWHERE",

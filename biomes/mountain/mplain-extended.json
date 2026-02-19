@@ -2,8 +2,8 @@
     "name": "Mountain Plains Hills",
     "color": "#616E75",
     "rarity": 1,
-    "derivative": "PLAINS",
-    "vanillaDerivative": "PLAINS",
+    "derivative": "minecraft:plains",
+    "vanillaDerivative": "minecraft:plains",
     "generators": [
         {
             "generator": "smooth-dunes",
@@ -16,28 +16,49 @@
             "min": 1
         }
     ],
-    "wall": {"palette": [
-        {"block": "minecraft:stone"},
-        {"block": "minecraft:andesite"}
-    ]},
+    "wall": {
+        "palette": [
+            {
+                "block": "minecraft:stone"
+            },
+            {
+                "block": "minecraft:andesite"
+            }
+        ]
+    },
     "layers": [
-        {"palette": [{"block": "minecraft:grass_block"}]},
+        {
+            "palette": [
+                {
+                    "block": "minecraft:grass_block"
+                }
+            ]
+        },
         {
             "minHeight": 2,
             "maxHeight": 2,
-            "palette": [{"block": "minecraft:dirt"}]
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                }
+            ]
         },
         {
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "minHeight": 1,
             "maxHeight": 1,
             "palette": [
-                {"block": "minecraft:dirt"},
-                {"block": "minecraft:stone"}
+                {
+                    "block": "minecraft:dirt"
+                },
+                {
+                    "block": "minecraft:stone"
+                }
             ]
         }
     ],
-
     "objects": [
         {
             "place": [
@@ -58,7 +79,7 @@
                 }
             }
         },
-          {
+        {
             "place": [
                 "trees/oak/lponderosa1",
                 "trees/oak/lponderosa2",
@@ -87,7 +108,7 @@
                 }
             }
         },
-                  {
+        {
             "place": [
                 "clutter/arbusto1",
                 "clutter/arbusto2",
@@ -107,13 +128,7 @@
             }
         },
         {
-            "place": [
-                "structures/landstone1",
-                "structures/landstone2",
-                "structures/landstone3",
-                "structures/landstone4",
-                "structures/landstone5"
-            ],
+            "place": [],
             "chance": 0.04,
             "mode": "PAINT",
             "rotation": {
@@ -148,33 +163,69 @@
                 }
             },
             "palette": [
-                {"block": "minecraft:dandelion"},
-                {"block": "minecraft:poppy"},
-                {"block": "minecraft:blue_orchid"},
-                {"block": "minecraft:allium"},
-                {"block": "minecraft:azure_bluet"},
-                {"block": "minecraft:red_tulip"},
-                {"block": "minecraft:orange_tulip"},
-                {"block": "minecraft:white_tulip"},
-                {"block": "minecraft:pink_tulip"},
-                {"block": "minecraft:oxeye_daisy"},
-                {"block": "minecraft:cornflower"},
-                {"block": "minecraft:lily_of_the_valley"}
+                {
+                    "block": "minecraft:dandelion"
+                },
+                {
+                    "block": "minecraft:poppy"
+                },
+                {
+                    "block": "minecraft:blue_orchid"
+                },
+                {
+                    "block": "minecraft:allium"
+                },
+                {
+                    "block": "minecraft:azure_bluet"
+                },
+                {
+                    "block": "minecraft:red_tulip"
+                },
+                {
+                    "block": "minecraft:orange_tulip"
+                },
+                {
+                    "block": "minecraft:white_tulip"
+                },
+                {
+                    "block": "minecraft:pink_tulip"
+                },
+                {
+                    "block": "minecraft:oxeye_daisy"
+                },
+                {
+                    "block": "minecraft:cornflower"
+                },
+                {
+                    "block": "minecraft:lily_of_the_valley"
+                }
             ]
         },
         {
             "chance": 0.01,
-            "palette": [{"block": "minecraft:tall_grass"}]
+            "palette": [
+                {
+                    "block": "minecraft:tall_grass"
+                }
+            ]
         },
-               {
+        {
             "chance": 0.025,
-            "palette": [{"block": "minecraft:oak_leaves"}]
+            "palette": [
+                {
+                    "block": "minecraft:oak_leaves"
+                }
+            ]
         },
         {
             "chance": 0.5,
-            "palette": [{"block": "minecraft:short_grass"}]
+            "palette": [
+                {
+                    "block": "minecraft:short_grass"
+                }
+            ]
         },
         "snippet/decorator/leaf",
-         "snippet/decorator/bush"
+        "snippet/decorator/bush"
     ]
 }

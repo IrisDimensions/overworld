@@ -3,7 +3,7 @@ The standard overworld for [Iris the Dimension Engine](https://www.spigotmc.org/
 
 
 Contributors & creators:
-- [Astrash](https://github.com/Astrashh) (A lot of biomes, objects, generator configurations, caves, jigsaw structures For v2. His pack here: [Continents](https://github.com/Astrashh/Continents))
+- [Astrash](https://github.com/Astrashh) (A lot of biomes, objects, generator configurations, caves, and v2 systems. His pack here: [Continents](https://github.com/Astrashh/Continents))
 - [ArMiN231](https://github.com/Armin231) (Lots of updates for Loot, and Structure systems galore)
 - [Brian](https://github.com/NextdoorPsycho) (Created the original (overworld) content in the pack. Most of the objects and biomes are of his making, and free to use for anyone who owns [Iris](https://www.spigotmc.org/resources/iris-world-gen-the-dimension-engine.84586/))
 - [Coco](https://github.com/CocoTheOwner/) (Did much of the bugfixing, configuration tweaks, merges, early v2 development)

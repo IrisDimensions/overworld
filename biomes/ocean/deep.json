@@ -1,14 +1,15 @@
 {
     "name": "Ocean Deep",
     "color": "#5C4DEA",
-    "derivative": "DEEP_OCEAN",
-    "vanillaDerivative": "DEEP_OCEAN",
-
-    "generators": [{
-        "generator": "smooth-dunes",
-        "max": -40,
-        "min": -80
-    }],
+    "derivative": "minecraft:deep_ocean",
+    "vanillaDerivative": "minecraft:deep_ocean",
+    "generators": [
+        {
+            "generator": "smooth-dunes",
+            "max": -40,
+            "min": -80
+        }
+    ],
     "layers": [
         {
             "minHeight": 2,
@@ -17,15 +18,29 @@
                 "minimumSlope": 0,
                 "maximumSlope": 3
             },
-            "style": {"style": "NOWHERE"},
+            "style": {
+                "style": "NOWHERE"
+            },
             "zoom": 0.6,
             "palette": [
-                {"block": "minecraft:sand"},
-                {"block": "minecraft:clay"},
-                {"block": "minecraft:sand"},
-                {"block": "minecraft:gravel"},
-                {"block": "minecraft:sand"},
-                {"block": "minecraft:dirt"},
+                {
+                    "block": "minecraft:sand"
+                },
+                {
+                    "block": "minecraft:clay"
+                },
+                {
+                    "block": "minecraft:sand"
+                },
+                {
+                    "block": "minecraft:gravel"
+                },
+                {
+                    "block": "minecraft:sand"
+                },
+                {
+                    "block": "minecraft:dirt"
+                },
                 {
                     "weight": 2,
                     "block": "minecraft:sand"
@@ -35,14 +50,18 @@
         {
             "minHeight": 2,
             "maxHeight": 10,
-            "palette": [{"block": "minecraft:gravel"}]
+            "palette": [
+                {
+                    "block": "minecraft:gravel"
+                }
+            ]
         }
     ],
     "objects": [
         {
             "underwater": true,
             "waterloggable": true,
-            "chance": 0.00003,
+            "chance": 3e-05,
             "mode": "PAINT",
             "rotation": {
                 "enabled": true,
@@ -53,38 +72,26 @@
                     "max": 360
                 }
             },
-            "place": [
-                "structures/gall1",
-                "structures/gall2",
-                "structures/gall3"
-            ]
+            "place": []
         },
         {
-            "place": [
-                "structures/shipgenericw",
-                "structures/shipgenericc",
-                "structures/shipgenericr",
-                "structures/shipgenericu",
-                "structures/shipgenericc",
-                "structures/BShip1",
-                "structures/BShip2",
-                "structures/BShip3",
-                "structures/BShip4",
-                "structures/BShip5",
-                "structures/BShip6",
-                "structures/kship1",
-                "structures/kship2",
-                "structures/kship3",
-                "structures/kship4"
-            ],
+            "place": [],
             "chance": 0.001,
-            "markers": [{
-                "mark": [{"block": "minecraft:spruce_planks"}],
-                "maximumMarkers": 4,
-                "marker": "skelepirate"
-            }],
+            "markers": [
+                {
+                    "mark": [
+                        {
+                            "block": "minecraft:spruce_planks"
+                        }
+                    ],
+                    "maximumMarkers": 4,
+                    "marker": "skelepirate"
+                }
+            ],
             "onwater": true,
-            "translate": {"y": -1},
+            "translate": {
+                "y": -1
+            },
             "waterloggable": true
         },
         {
@@ -101,28 +108,7 @@
                     "max": 360
                 }
             },
-            "place": [
-                "structures/shipwithmast",
-                "structures/shipwithmastdegraded",
-                "structures/shiprightsideupfull",
-                "structures/shiprightsideupfulldegraded",
-                "structures/shiprightsideupfronthalf",
-                "structures/shiprightsideupfronthalfdegraded",
-                "structures/shiprightsideupbackhalf",
-                "structures/shiprightsideupbackhalfdegraded",
-                "structures/shipsidewaysfull",
-                "structures/shipsidewaysfulldegraded",
-                "structures/shipsidewaysfronthalf",
-                "structures/shipsidewaysfronthalfdegraded",
-                "structures/shipsidewaysbackhalf",
-                "structures/shipsidewaysbackhalfdegraded",
-                "structures/shipupsidedownfull",
-                "structures/shipupsidedownfulldegraded",
-                "structures/shipupsidedownfronthalf",
-                "structures/shipupsidedownfronthalfdegraded",
-                "structures/shipupsidedownbackhalf",
-                "structures/shipupsidedownbackhalfdegraded"
-            ]
+            "place": []
         },
         {
             "chance": 0.0035,
@@ -136,11 +122,7 @@
                 "enabled": true
             },
             "underwater": true,
-            "place": [
-                "structures/oruins1",
-                "structures/oruins2",
-                "structures/oruins3"
-            ],
+            "place": [],
             "mode": "PAINT",
             "vanillaLoot": [
                 {
@@ -203,7 +185,7 @@
                 "maxFractureAccuracy": false,
                 "exponent": 1
             },
-            "place": ["jigsaw/ocean-monument/ocean_monument"],
+            "place": [],
             "markers": [
                 {
                     "marker": "guardian",
@@ -222,11 +204,8 @@
                     "mark": [
                         {
                             "block": "minecraft:prismarine"
-
                         }
-
                     ]
-
                 },
                 {
                     "marker": "elderguardian",
@@ -244,25 +223,41 @@
     "decorators": [
         {
             "chance": 0.09,
-            "palette": [{"block": "minecraft:kelp_plant"}],
+            "palette": [
+                {
+                    "block": "minecraft:kelp_plant"
+                }
+            ],
             "stackMin": 2,
             "stackMax": 12,
             "partOf": "SEA_FLOOR"
         },
         {
             "chance": 0.2,
-            "palette": [{"block": "minecraft:seagrass"}]
+            "palette": [
+                {
+                    "block": "minecraft:seagrass"
+                }
+            ]
         },
         {
             "chance": 0.2,
-            "palette": [{
-                "block": "minecraft:tall_seagrass",
-                "data": {"half": "lower"}
-            }],
-            "topPalette": [{
-                "block": "minecraft:tall_seagrass",
-                "data": {"half": "upper"}
-            }],
+            "palette": [
+                {
+                    "block": "minecraft:tall_seagrass",
+                    "data": {
+                        "half": "lower"
+                    }
+                }
+            ],
+            "topPalette": [
+                {
+                    "block": "minecraft:tall_seagrass",
+                    "data": {
+                        "half": "upper"
+                    }
+                }
+            ],
             "partOf": "SEA_FLOOR"
         }
     ]

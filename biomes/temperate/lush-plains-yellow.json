@@ -2,54 +2,73 @@
     "name": "Lush Plains Yellow",
     "color": "#67CB3C",
     "rarity": 3,
-    "derivative": "FLOWER_FOREST",
-    "vanillaDerivative": "FLOWER_FOREST",
-    "generators": [{
-        "min": 4,
-        "max": 7,
-        "generator": "plain"
-    }],
-     "jigsawStructures": [
+    "derivative": "minecraft:flower_forest",
+    "vanillaDerivative": "minecraft:flower_forest",
+    "generators": [
         {
-            "structure": "pillager-outpost",
-            "rarity": 800
-        },
-        {
-            "structure": "village-plains",
-            "rarity": 1200
+            "min": 4,
+            "max": 7,
+            "generator": "plain"
         }
     ],
-    "biomeStyle": {"style": "SIMPLEX"},
-    "wall": {"palette": [
-        {"block": "minecraft:stone"},
-        {"block": "minecraft:andesite"}
-    ]},
+    "biomeStyle": {
+        "style": "SIMPLEX"
+    },
+    "wall": {
+        "palette": [
+            {
+                "block": "minecraft:stone"
+            },
+            {
+                "block": "minecraft:andesite"
+            }
+        ]
+    },
     "layers": [
-        {"palette": [{"block": "minecraft:grass_block"}]},
+        {
+            "palette": [
+                {
+                    "block": "minecraft:grass_block"
+                }
+            ]
+        },
         {
             "minHeight": 2,
             "maxHeight": 2,
-            "palette": [{"block": "minecraft:dirt"}]
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                }
+            ]
         },
         {
             "minHeight": 1,
             "maxHeight": 3,
             "palette": [
-                {"block": "minecraft:dirt"},
-                {"block": "minecraft:coarse_dirt"}
+                {
+                    "block": "minecraft:dirt"
+                },
+                {
+                    "block": "minecraft:coarse_dirt"
+                }
             ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "palette": [
-                {"block": "minecraft:dirt"},
-                {"block": "minecraft:stone"}
+                {
+                    "block": "minecraft:dirt"
+                },
+                {
+                    "block": "minecraft:stone"
+                }
             ]
         }
     ],
-
     "objects": [
         {
             "mode": "PAINT",
@@ -108,7 +127,6 @@
                 "trees/oak/generic6"
             ]
         },
-
         {
             "chance": 0.004,
             "rotation": {
@@ -133,11 +151,6 @@
                 "clutter/genericpeak3",
                 "clutter/genericpeak5",
                 "clutter/genericpeak6",
-                "structures/landstone1",
-                "structures/landstone2",
-                "structures/landstone3",
-                "structures/landstone4",
-                "structures/landstone5",
                 "clutter/statue-villager-plains"
             ]
         },
@@ -167,13 +180,17 @@
                     "interval": 90
                 }
             },
-            "translate": {"y": 1}
+            "translate": {
+                "y": 1
+            }
         }
     ],
     "decorators": [
         {
             "chance": 0.05,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "palette": [
                 {
                     "block": "minecraft:dandelion",
@@ -187,7 +204,11 @@
         },
         {
             "chance": 0.01,
-            "palette": [{"block": "minecraft:tall_grass"}]
+            "palette": [
+                {
+                    "block": "minecraft:tall_grass"
+                }
+            ]
         },
         {
             "chance": 0.5,
@@ -204,12 +225,16 @@
         },
         {
             "chance": 0.08,
-            "palette": [{
-                "block": "minecraft:oak_leaves",
-                "data": {"persistent": true}
-            }]
+            "palette": [
+                {
+                    "block": "minecraft:oak_leaves",
+                    "data": {
+                        "persistent": true
+                    }
+                }
+            ]
         },
         "snippet/decorator/wildflowers",
-         "snippet/decorator/bush"
+        "snippet/decorator/bush"
     ]
 }

@@ -1,40 +1,76 @@
 {
     "name": "Mushroom Ocean",
     "color": "#295E9F",
-    "derivative": "OCEAN",
-    "vanillaDerivative": "OCEAN",
-    "generators": [{
-        "min": -82,
-        "max": -10,
-        "generator": "mountain"
-    }],
+    "derivative": "minecraft:ocean",
+    "vanillaDerivative": "minecraft:ocean",
+    "generators": [
+        {
+            "min": -82,
+            "max": -10,
+            "generator": "mountain"
+        }
+    ],
     "wall": {
-        "style": {"style": "NOWHERE"},
+        "style": {
+            "style": "NOWHERE"
+        },
         "palette": [
-            {"block": "minecraft:clay"},
-            {"block": "minecraft:smooth_sandstone"},
-            {"block": "minecraft:red_sand"},
-            {"block": "minecraft:smooth_red_sandstone"},
-            {"block": "minecraft:smooth_sandstone"},
-            {"block": "minecraft:sand"},
-            {"block": "minecraft:smooth_red_sandstone"}
+            {
+                "block": "minecraft:clay"
+            },
+            {
+                "block": "minecraft:smooth_sandstone"
+            },
+            {
+                "block": "minecraft:red_sand"
+            },
+            {
+                "block": "minecraft:smooth_red_sandstone"
+            },
+            {
+                "block": "minecraft:smooth_sandstone"
+            },
+            {
+                "block": "minecraft:sand"
+            },
+            {
+                "block": "minecraft:smooth_red_sandstone"
+            }
         ]
     },
     "layers": [
         {
             "minHeight": 2,
             "maxHeight": 3,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "zoom": 0.825,
             "palette": [
-                {"block": "minecraft:clay"},
-                {"block": "minecraft:stone"},
-                {"block": "minecraft:cobblestone"},
-                {"block": "minecraft:andesite"},
-                {"block": "minecraft:gravel"}
+                {
+                    "block": "minecraft:clay"
+                },
+                {
+                    "block": "minecraft:stone"
+                },
+                {
+                    "block": "minecraft:cobblestone"
+                },
+                {
+                    "block": "minecraft:andesite"
+                },
+                {
+                    "block": "minecraft:gravel"
+                }
             ]
         },
-        {"palette": [{"block": "minecraft:dirt"}]},
+        {
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                }
+            ]
+        },
         {
             "minHeight": 1,
             "maxHeight": 3,
@@ -43,7 +79,9 @@
                     "weight": 2,
                     "block": "minecraft:dirt"
                 },
-                {"block": "minecraft:coarse_dirt"}
+                {
+                    "block": "minecraft:coarse_dirt"
+                }
             ]
         }
     ],
@@ -60,15 +98,23 @@
                 "enabled": true
             },
             "underwater": true,
-            "place": [
-                "structures/swreck1",
-                "structures/usdship1",
-                "structures/usdship2"
+            "place": [],
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:oak_stairs"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:oak_planks"
+                            }
+                        ]
+                    }
+                }
             ],
-            "edit": [{
-                "find": [{"block": "minecraft:oak_stairs"}],
-                "replace": {"palette": [{"block": "minecraft:oak_planks"}]}
-            }],
             "translate": {
                 "x": 0,
                 "y": -4,
@@ -77,10 +123,22 @@
         },
         {
             "chance": 0.3,
-            "edit": [{
-                "find": [{"block": "minecraft:shroomlight"}],
-                "replace": {"palette": [{"block": "minecraft:mushroom_stem"}]}
-            }],
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:shroomlight"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:mushroom_stem"
+                            }
+                        ]
+                    }
+                }
+            ],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -133,35 +191,63 @@
     "decorators": [
         {
             "chance": 0.06,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 20,
-            "palette": [{"block": "minecraft:seagrass"}],
-            "style": {"style": "STATIC"}
+            "palette": [
+                {
+                    "block": "minecraft:seagrass"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
-            "chance": 6.0E-4,
-            "variance": {"style": "STATIC"},
+            "chance": 0.0006,
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 1,
             "palette": [
-                {"block": "minecraft:soul_sand"},
-                {"block": "minecraft:magma_block"}
+                {
+                    "block": "minecraft:soul_sand"
+                },
+                {
+                    "block": "minecraft:magma_block"
+                }
             ],
-            "style": {"style": "STATIC"}
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
             "chance": 0.1,
             "verticalZoom": 20,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "stackMax": 9,
             "zoom": 1,
-            "palette": [{"block": "minecraft:kelp_plant"}],
-            "style": {"style": "STATIC"},
-            "heightVariance": {"style": "STATIC"},
+            "palette": [
+                {
+                    "block": "minecraft:kelp_plant"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            },
+            "heightVariance": {
+                "style": "STATIC"
+            },
             "stackMin": 1
         },
         {
             "chance": 0.005,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 1,
             "palette": [
                 {
@@ -193,11 +279,15 @@
                     "block": "minecraft:sea_pickle"
                 }
             ],
-            "style": {"style": "STATIC"}
+            "style": {
+                "style": "STATIC"
+            }
         }
     ],
     "slab": {
-        "style": {"style": "STATIC"},
+        "style": {
+            "style": "STATIC"
+        },
         "palette": [
             {
                 "data": {

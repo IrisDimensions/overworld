@@ -2,8 +2,8 @@
     "name": "Frozen Pines",
     "color": "#0D6389",
     "rarity": 1,
-    "derivative": "SNOWY_TAIGA",
-    "vanillaDerivative": "SNOWY_TAIGA",
+    "derivative": "minecraft:snowy_taiga",
+    "vanillaDerivative": "minecraft:snowy_taiga",
     "customDerivitives": [
         {
             "category": "taiga",
@@ -14,9 +14,8 @@
             "fogColor": "#A6D1FF",
             "waterFogColor": "#216FC4",
             "grassColor": "#D0E1FF"
-
         },
-         {
+        {
             "category": "taiga",
             "downfallType": "snow",
             "foliageColor": "#5F84A2",
@@ -25,9 +24,8 @@
             "fogColor": "#A6D1FF",
             "waterFogColor": "#216FC4",
             "grassColor": "#D0E1FF"
-
         },
-         {
+        {
             "category": "taiga",
             "downfallType": "snow",
             "foliageColor": "#91AEC4",
@@ -36,73 +34,91 @@
             "fogColor": "#A6D1FF",
             "waterFogColor": "#216FC4",
             "grassColor": "#D0E1FF"
-
-        }],
-     "jigsawStructures": [
-        {
-            "structure": "village-snowy",
-            "rarity": 1200
-        },
-         {
-            "structure": "pillager-outpost",
-            "rarity": 1500
-        },
-        {
-            "structure": "igloo",
-            "rarity": 800
         }
-
     ],
-
-
-    "generators": [{
-        "min": 10,
-        "max": 25,
-        "generator": "mountain"
-    }],
+    "generators": [
+        {
+            "min": 10,
+            "max": 25,
+            "generator": "mountain"
+        }
+    ],
     "biomeZoom": 30,
-    "biomeStyle": {"style": "SIMPLEX"},
+    "biomeStyle": {
+        "style": "SIMPLEX"
+    },
     "wall": {
-        "style": {"style": "STATIC"},
+        "style": {
+            "style": "STATIC"
+        },
         "palette": [
-            {"block": "minecraft:stone"},
-            {"block": "minecraft:andesite"},
-            {"block": "minecraft:stone"}
+            {
+                "block": "minecraft:stone"
+            },
+            {
+                "block": "minecraft:andesite"
+            },
+            {
+                "block": "minecraft:stone"
+            }
         ]
     },
     "layers": [
         {
             "minHeight": 0,
             "maxHeight": 1,
-            "palette": [{"block": "minecraft:snow_block"}]
+            "palette": [
+                {
+                    "block": "minecraft:snow_block"
+                }
+            ]
         },
         {
             "minHeight": 1,
             "maxHeight": 1,
-            "palette": [{"block": "minecraft:grass_block"}]
+            "palette": [
+                {
+                    "block": "minecraft:grass_block"
+                }
+            ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "palette": [{"block": "minecraft:dirt"}]
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                }
+            ]
         },
         {
             "minHeight": 2,
             "maxHeight": 4,
-            "palette": [{"block": "minecraft:packed_ice"}]
+            "palette": [
+                {
+                    "block": "minecraft:packed_ice"
+                }
+            ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "palette": [
-                {"block": "minecraft:stone"},
-                {"block": "minecraft:andesite"},
-                {"block": "minecraft:stone"}
+                {
+                    "block": "minecraft:stone"
+                },
+                {
+                    "block": "minecraft:andesite"
+                },
+                {
+                    "block": "minecraft:stone"
+                }
             ]
         }
     ],
-
     "objects": [
         {
             "chance": 0.02,
@@ -117,19 +133,29 @@
                 },
                 "enabled": true
             },
-            "edit": [{
-                "find": [{"block": "minecraft:spruce_leaves"}],
-                "replace": {
-                    "style": {
-                        "style": "PERLIN",
-                        "zoom": 0.2
-                    },
-                    "palette": [
-                        {"block": "minecraft:oak_leaves"},
-                        {"block": "minecraft:dark_oak_leaves"}
-                    ]
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:spruce_leaves"
+                        }
+                    ],
+                    "replace": {
+                        "style": {
+                            "style": "PERLIN",
+                            "zoom": 0.2
+                        },
+                        "palette": [
+                            {
+                                "block": "minecraft:oak_leaves"
+                            },
+                            {
+                                "block": "minecraft:dark_oak_leaves"
+                            }
+                        ]
+                    }
                 }
-            }],
+            ],
             "place": [
                 "clutter/icecluster1",
                 "clutter/icecluster2",
@@ -158,19 +184,29 @@
             "chance": 0.5,
             "density": 1,
             "snow": 1,
-            "edit": [{
-                "find": [{"block": "minecraft:spruce_leaves"}],
-                "replace": {
-                    "style": {
-                        "style": "PERLIN",
-                        "zoom": 0.2
-                    },
-                    "palette": [
-                        {"block": "minecraft:oak_leaves"},
-                        {"block": "minecraft:dark_oak_leaves"}
-                    ]
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:spruce_leaves"
+                        }
+                    ],
+                    "replace": {
+                        "style": {
+                            "style": "PERLIN",
+                            "zoom": 0.2
+                        },
+                        "palette": [
+                            {
+                                "block": "minecraft:oak_leaves"
+                            },
+                            {
+                                "block": "minecraft:dark_oak_leaves"
+                            }
+                        ]
+                    }
                 }
-            }],
+            ],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -215,19 +251,25 @@
             ]
         }
     ],
-    "decorators": [{
-        "chance": 1,
-        "variance": {
-            "style": "NOWHERE",
-            "zoom": 0.23
-        },
-        "palette": [
-            {
-                "data": {"layers": 1},
-                "block": "minecraft:snow"
+    "decorators": [
+        {
+            "chance": 1,
+            "variance": {
+                "style": "NOWHERE",
+                "zoom": 0.23
             },
-            {"block": "minecraft:air"}
-        ]
-    }],
+            "palette": [
+                {
+                    "data": {
+                        "layers": 1
+                    },
+                    "block": "minecraft:snow"
+                },
+                {
+                    "block": "minecraft:air"
+                }
+            ]
+        }
+    ],
     "childShrinkFactor": 20
 }

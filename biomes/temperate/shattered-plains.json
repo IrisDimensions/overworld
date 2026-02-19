@@ -2,54 +2,73 @@
     "name": "Shattered Plains",
     "color": "#42A616",
     "rarity": 2,
-    "derivative": "PLAINS",
-    "vanillaDerivative": "PLAINS",
-    "generators": [{
-        "min": -4,
-        "max": 5,
-        "generator": "mountain"
-    }],
-    "jigsawStructures": [
+    "derivative": "minecraft:plains",
+    "vanillaDerivative": "minecraft:plains",
+    "generators": [
         {
-            "structure": "pillager-outpost",
-            "rarity": 800
-        },
-        {
-            "structure": "village-plains",
-            "rarity": 1200
+            "min": -4,
+            "max": 5,
+            "generator": "mountain"
         }
     ],
-    "biomeStyle": {"style": "SIMPLEX"},
-    "wall": {"palette": [
-        {"block": "minecraft:stone"},
-        {"block": "minecraft:andesite"}
-    ]},
+    "biomeStyle": {
+        "style": "SIMPLEX"
+    },
+    "wall": {
+        "palette": [
+            {
+                "block": "minecraft:stone"
+            },
+            {
+                "block": "minecraft:andesite"
+            }
+        ]
+    },
     "layers": [
-        {"palette": [{"block": "minecraft:grass_block"}]},
+        {
+            "palette": [
+                {
+                    "block": "minecraft:grass_block"
+                }
+            ]
+        },
         {
             "minHeight": 2,
             "maxHeight": 2,
-            "palette": [{"block": "minecraft:dirt"}]
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                }
+            ]
         },
         {
             "minHeight": 1,
             "maxHeight": 3,
             "palette": [
-                {"block": "minecraft:dirt"},
-                {"block": "minecraft:coarse_dirt"}
+                {
+                    "block": "minecraft:dirt"
+                },
+                {
+                    "block": "minecraft:coarse_dirt"
+                }
             ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "palette": [
-                {"block": "minecraft:dirt"},
-                {"block": "minecraft:stone"}
+                {
+                    "block": "minecraft:dirt"
+                },
+                {
+                    "block": "minecraft:stone"
+                }
             ]
         }
     ],
-
     "objects": [
         {
             "mode": "PAINT",
@@ -82,14 +101,28 @@
                 },
                 "enabled": true
             },
-            "place": ["clutter/camp2"]
+            "place": [
+                "clutter/camp2"
+            ]
         },
         {
             "chance": 0.002,
-            "edit": [{
-                "find": [{"block": "minecraft:glass"}],
-                "replace": {"palette": [{"block": "minecraft:void_air"}]}
-            }],
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:glass"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:void_air"
+                            }
+                        ]
+                    }
+                }
+            ],
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -99,7 +132,7 @@
                 },
                 "enabled": true
             },
-            "place": ["structures/cave2"],
+            "place": [],
             "translate": {
                 "x": 0,
                 "y": -57,
@@ -204,13 +237,7 @@
             }
         },
         {
-            "place": [
-                "structures/landstone1",
-                "structures/landstone2",
-                "structures/landstone3",
-                "structures/landstone4",
-                "structures/landstone5"
-            ],
+            "place": [],
             "chance": 0.02,
             "mode": "PAINT",
             "rotation": {
@@ -244,7 +271,9 @@
                     "max": 360
                 }
             },
-            "translate": {"y": 1}
+            "translate": {
+                "y": 1
+            }
         }
     ],
     "decorators": [
@@ -259,48 +288,84 @@
                     "multiplier": 10
                 }
             },
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "palette": [
-                {"block": "minecraft:dandelion"},
-                {"block": "minecraft:poppy"},
-                {"block": "minecraft:blue_orchid"},
-                {"block": "minecraft:allium"},
-                {"block": "minecraft:azure_bluet"},
-                {"block": "minecraft:red_tulip"},
-                {"block": "minecraft:orange_tulip"},
-                {"block": "minecraft:white_tulip"},
-                {"block": "minecraft:pink_tulip"},
-                {"block": "minecraft:oxeye_daisy"},
-                {"block": "minecraft:cornflower"},
-                {"block": "minecraft:lily_of_the_valley"}
+                {
+                    "block": "minecraft:dandelion"
+                },
+                {
+                    "block": "minecraft:poppy"
+                },
+                {
+                    "block": "minecraft:blue_orchid"
+                },
+                {
+                    "block": "minecraft:allium"
+                },
+                {
+                    "block": "minecraft:azure_bluet"
+                },
+                {
+                    "block": "minecraft:red_tulip"
+                },
+                {
+                    "block": "minecraft:orange_tulip"
+                },
+                {
+                    "block": "minecraft:white_tulip"
+                },
+                {
+                    "block": "minecraft:pink_tulip"
+                },
+                {
+                    "block": "minecraft:oxeye_daisy"
+                },
+                {
+                    "block": "minecraft:cornflower"
+                },
+                {
+                    "block": "minecraft:lily_of_the_valley"
+                }
             ]
         },
         {
             "chance": 0.01,
-            "palette": [{"block": "minecraft:tall_grass"}]
+            "palette": [
+                {
+                    "block": "minecraft:tall_grass"
+                }
+            ]
         },
         {
             "chance": 0.5,
-            "palette": [{"block": "minecraft:short_grass"}]
+            "palette": [
+                {
+                    "block": "minecraft:short_grass"
+                }
+            ]
         },
-         "snippet/decorator/bush"
+        "snippet/decorator/bush"
     ],
-    "features": [{
-        "rarity": 252,
-        "zone": {
-            "convergeToHeight": 64,
-            "interpolationRadius": 3,
-            "interpolator": "BILINEAR_STARCAST_6",
-            "blockRadius": 14,
-            "objectChance": 1,
-            "strength": 1,
-            "biomeStrengthThreshold": 0.18,
-            "customBiome": "temperate/flower-forest",
-            "fractureRadius": {
-                "style": "NOWHERE",
-                "zoom": 0.12,
-                "multiplier": 52
+    "features": [
+        {
+            "rarity": 252,
+            "zone": {
+                "convergeToHeight": 64,
+                "interpolationRadius": 3,
+                "interpolator": "BILINEAR_STARCAST_6",
+                "blockRadius": 14,
+                "objectChance": 1,
+                "strength": 1,
+                "biomeStrengthThreshold": 0.18,
+                "customBiome": "temperate/flower-forest",
+                "fractureRadius": {
+                    "style": "NOWHERE",
+                    "zoom": 0.12,
+                    "multiplier": 52
+                }
             }
         }
-    }]
+    ]
 }

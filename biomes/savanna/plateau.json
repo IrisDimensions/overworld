@@ -2,79 +2,116 @@
     "name": "Savanna Plateau",
     "color": "#9E621E",
     "rarity": 1,
-    "derivative": "SAVANNA_PLATEAU",
-    "vanillaDerivative": "SAVANNA",
+    "derivative": "minecraft:savanna_plateau",
+    "vanillaDerivative": "minecraft:savanna",
     "biomeScatter": [
-        "SAVANNA",
-        "DESERT"
+        "minecraft:savanna",
+        "minecraft:desert"
     ],
-    "jigsawStructures": [
+    "customDerivitives": [
         {
-            "structure": "village-savanna",
-            "rarity": 1200
+            "category": "savanna",
+            "id": "savanna_plateau",
+            "grassColor": "#FFCB31",
+            "foliageColor": "#D6A513",
+            "waterColor": "#33CB99",
+            "downfallType": "none"
         }
     ],
-    "customDerivitives": [{
-        "category": "savanna",
-        "id": "savanna_plateau",
-        "grassColor": "#FFCB31",
-        "foliageColor": "#D6A513",
-        "waterColor": "#33CB99",
-        "downfallType": "none"
-    }],
-    "generators": [{
-        "min": 13,
-        "max": 26,
-        "generator": "mountain"
-    }],
+    "generators": [
+        {
+            "min": 13,
+            "max": 26,
+            "generator": "mountain"
+        }
+    ],
     "biomeZoom": 60,
-    "biomeStyle": {"style": "SIMPLEX"},
+    "biomeStyle": {
+        "style": "SIMPLEX"
+    },
     "wall": {
-        "style": {"style": "STATIC"},
+        "style": {
+            "style": "STATIC"
+        },
         "palette": [
-            {"block": "minecraft:stone"},
-            {"block": "minecraft:andesite"},
-            {"block": "minecraft:stone"}
+            {
+                "block": "minecraft:stone"
+            },
+            {
+                "block": "minecraft:andesite"
+            },
+            {
+                "block": "minecraft:stone"
+            }
         ]
     },
     "layers": [
         {
             "minHeight": 3,
             "maxHeight": 5,
-            "slopeCondition": {"minimumSlope": 6.9},
-            "palette": [{"block": "minecraft:granite"}]
+            "slopeCondition": {
+                "minimumSlope": 6.9
+            },
+            "palette": [
+                {
+                    "block": "minecraft:granite"
+                }
+            ]
         },
         {
             "minHeight": 3,
             "maxHeight": 5,
-            "slopeCondition": {"minimumSlope": 4.6},
+            "slopeCondition": {
+                "minimumSlope": 4.6
+            },
             "palette": [
-                {"block": "minecraft:coarse_dirt"},
-                {"block": "minecraft:gravel"}
+                {
+                    "block": "minecraft:coarse_dirt"
+                },
+                {
+                    "block": "minecraft:gravel"
+                }
             ]
         },
         {
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "zoom": 0.75,
-            "palette": [{"block": "minecraft:grass_block"}]
+            "palette": [
+                {
+                    "block": "minecraft:grass_block"
+                }
+            ]
         },
         {
             "minHeight": 2,
             "maxHeight": 4,
-            "palette": [{"block": "minecraft:dirt"}]
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                }
+            ]
         },
         {
             "minHeight": 6,
             "maxHeight": 18,
-            "style": {"style": "STATIC"},
+            "style": {
+                "style": "STATIC"
+            },
             "palette": [
-                {"block": "minecraft:stone"},
-                {"block": "minecraft:andesite"},
-                {"block": "minecraft:stone"}
+                {
+                    "block": "minecraft:stone"
+                },
+                {
+                    "block": "minecraft:andesite"
+                },
+                {
+                    "block": "minecraft:stone"
+                }
             ]
         }
     ],
-
     "objects": [
         {
             "chance": 0.00175,
@@ -87,7 +124,9 @@
                 },
                 "enabled": true
             },
-            "place": ["clutter/camp1"]
+            "place": [
+                "clutter/camp1"
+            ]
         },
         {
             "mode": "PAINT",
@@ -101,7 +140,9 @@
                 },
                 "enabled": true
             },
-            "place": ["clutter/bincluster1"]
+            "place": [
+                "clutter/bincluster1"
+            ]
         },
         {
             "chance": 0.07,
@@ -204,26 +245,50 @@
     "decorators": [
         {
             "chance": 0.001,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 0.3,
-            "palette": [{"block": "minecraft:dead_bush"}],
-            "style": {"style": "STATIC"}
+            "palette": [
+                {
+                    "block": "minecraft:dead_bush"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
             "chance": 0.0005,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "stackMax": 2,
-            "style": {"style": "STATIC"},
-            "palette": [{"block": "minecraft:cactus"}],
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "minecraft:cactus"
+                }
+            ],
             "stackMin": 1
         },
-         {
+        {
             "chance": 0.0005,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "stackMax": 2,
-            "style": {"style": "STATIC"},
-            "palette": [{"block": "minecraft:cactus"}],
-             "topPalette": [
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "minecraft:cactus"
+                }
+            ],
+            "topPalette": [
                 {
                     "block": "minecraft:cactus_flower"
                 }
@@ -232,22 +297,38 @@
         },
         {
             "chance": 0.3,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 0.3,
-            "palette": [{"block": "minecraft:short_grass"}],
-            "style": {"style": "STATIC"}
+            "palette": [
+                {
+                    "block": "minecraft:short_grass"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
             "chance": 0.01,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 0.3,
-            "palette": [{"block": "minecraft:tall_grass"}],
-            "style": {"style": "STATIC"}
+            "palette": [
+                {
+                    "block": "minecraft:tall_grass"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
         },
         "snippet/decorator/dry_grass"
     ],
     "biomeSkyScatter": [
-        "DESERT",
-        "SAVANNA"
+        "minecraft:desert",
+        "minecraft:savanna"
     ]
 }

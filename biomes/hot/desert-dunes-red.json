@@ -2,25 +2,23 @@
     "name": "Hot Desert Dunes Red",
     "color": "#DBD155",
     "rarity": 1,
-    "derivative": "DESERT",
-    "vanillaDerivative": "DESERT",
-    "children": ["hot/mountain-cliffs"],
-   "childShrinkFactor": 1.5,
-    "childStyle":{
+    "derivative": "minecraft:desert",
+    "vanillaDerivative": "minecraft:desert",
+    "children": [
+        "hot/mountain-cliffs"
+    ],
+    "childShrinkFactor": 1.5,
+    "childStyle": {
         "style": "IRIS",
         "zoom": 1.5
     },
-    "jigsawStructures": [
+    "generators": [
         {
-            "structure": "village-desert",
-            "rarity": 1200
+            "generator": "smooth-dunes",
+            "max": 35,
+            "min": 30
         }
     ],
-    "generators": [{
-        "generator": "smooth-dunes",
-        "max": 35,
-        "min": 30
-    }],
     "layers": [
         {
             "minHeight": 3,
@@ -29,19 +27,24 @@
                 "minimumSlope": 4.5,
                 "maximumSlope": 20
             },
-            "palette": [{"block": "minecraft:orange_terracotta"}]
+            "palette": [
+                {
+                    "block": "minecraft:orange_terracotta"
+                }
+            ]
         },
         {
             "minHeight": 5,
             "maxHeight": 5,
             "zoom": 0.7,
-            "palette": [{
-                "weight": 1,
-                "block": "minecraft:red_sand"
-            }]
+            "palette": [
+                {
+                    "weight": 1,
+                    "block": "minecraft:red_sand"
+                }
+            ]
         }
     ],
-
     "objects": [
         {
             "chance": 0.001,
@@ -64,15 +67,14 @@
                 },
                 "enabled": true
             },
-                        "edit": [
+            "edit": [
                 {
                     "find": [
                         {
                             "block": "minecraft:glass"
                         }
                     ],
-                    "replace":
-                    {
+                    "replace": {
                         "palette": [
                             {
                                 "block": "minecraft:air"
@@ -81,10 +83,7 @@
                     }
                 }
             ],
-            "place": [
-                "jigsaw/pyramid/pyramid-red-extreme",
-                "jigsaw/pyramid/pyramid-red"
-            ],
+            "place": [],
             "translate": {
                 "x": 0,
                 "y": -10,
@@ -93,10 +92,7 @@
         },
         {
             "mode": "MIN_HEIGHT",
-            "place": [
-                "structures/ruins-desert-1",
-                "structures/ruins-desert-2"
-            ],
+            "place": [],
             "chance": 0.005,
             "rotation": {
                 "enabled": true,
@@ -134,19 +130,35 @@
     "decorators": [
         {
             "chance": 0.0005,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "stackMax": 5,
-            "style": {"style": "STATIC"},
-            "palette": [{"block": "minecraft:cactus"}],
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "minecraft:cactus"
+                }
+            ],
             "stackMin": 1
         },
-         {
+        {
             "chance": 0.0005,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "stackMax": 5,
-            "style": {"style": "STATIC"},
-            "palette": [{"block": "minecraft:cactus"}],
-             "topPalette": [
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "minecraft:cactus"
+                }
+            ],
+            "topPalette": [
                 {
                     "block": "minecraft:cactus_flower"
                 }
@@ -155,7 +167,11 @@
         },
         {
             "chance": 0.005,
-            "palette": [{"block": "minecraft:dead_bush"}]
+            "palette": [
+                {
+                    "block": "minecraft:dead_bush"
+                }
+            ]
         },
         "snippet/decorator/dry_grass"
     ]

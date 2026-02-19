@@ -1,51 +1,34 @@
-
-
 {
     "name": "Mountain Forest",
     "color": "#B0BDC4",
     "rarity": 1,
-    "children": ["frozen/fields/mountain-spruce-frosty"],
-    "childStyle":{
+    "children": [
+        "frozen/fields/mountain-spruce-frosty"
+    ],
+    "childStyle": {
         "style": "SIMPLEX_CELLS",
         "zoom": 0.3
     },
-      "jigsawStructures": [
-        {
-            "structure": "pillager-outpost",
-            "rarity": 800
-        },
-         {
-            "structure": "village-snowy",
-            "rarity": 800
-        },
-        {
-            "structure": "igloo",
-            "rarity": 800
-        }
-    ],
-    "derivative": "SNOWY_PLAINS",
-    "vanillaDerivative": "SNOWY_PLAINS",
+    "derivative": "minecraft:snowy_plains",
+    "vanillaDerivative": "minecraft:snowy_plains",
     "customDerivitives": [
         {
             "category": "taiga",
             "foliageColor": "#194569",
             "id": "winter_mountain_forest1",
             "grassColor": "#FFFAFA"
-
         },
-         {
+        {
             "category": "taiga",
             "foliageColor": "#5F84A2",
             "id": "winter_mountain_forest2",
             "grassColor": "#FFFAFA"
-
         },
-         {
+        {
             "category": "taiga",
             "foliageColor": "#91AEC4",
             "id": "winter_mountain_forest3",
             "grassColor": "#FFFAFA"
-
         }
     ],
     "generators": [
@@ -58,14 +41,25 @@
             "generator": "mountain",
             "max": 5,
             "min": 1
-        }],
-    "wall": {"palette": [
-        {"block": "minecraft:stone"},
-        {"block": "minecraft:andesite"},
-        {"block": "minecraft:gravel"},
-        {"block": "minecraft:cyan_terracotta"}
-    ]},
-   "layers": [
+        }
+    ],
+    "wall": {
+        "palette": [
+            {
+                "block": "minecraft:stone"
+            },
+            {
+                "block": "minecraft:andesite"
+            },
+            {
+                "block": "minecraft:gravel"
+            },
+            {
+                "block": "minecraft:cyan_terracotta"
+            }
+        ]
+    },
+    "layers": [
         {
             "minHeight": 1,
             "maxHeight": 1,
@@ -73,20 +67,23 @@
                 "minimumSlope": 0,
                 "maximumSlope": 3.3
             },
-            "style":{
+            "style": {
                 "style": "SIMPLEX",
                 "zoom": 0.5,
-               "fracture": {
-                "axialFracturing": true,
-                "style": "STATIC",
-                "multiplier": 4
-            }
+                "fracture": {
+                    "axialFracturing": true,
+                    "style": "STATIC",
+                    "multiplier": 4
+                }
             },
             "palette": [
-                {"block": "minecraft:grass_block"},
-                {"block": "minecraft:snow_block"}
-
-                ]
+                {
+                    "block": "minecraft:grass_block"
+                },
+                {
+                    "block": "minecraft:snow_block"
+                }
+            ]
         },
         {
             "minHeight": 3,
@@ -95,7 +92,11 @@
                 "minimumSlope": 0,
                 "maximumSlope": 3
             },
-            "palette": [{"block": "minecraft:dirt"}]
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                }
+            ]
         },
         {
             "minHeight": 3,
@@ -104,12 +105,18 @@
                 "minimumSlope": 0,
                 "maximumSlope": 3
             },
-            "palette": [{"block": "minecraft:dirt"}, {"block": "minecraft:stone"}]
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                },
+                {
+                    "block": "minecraft:stone"
+                }
+            ]
         }
     ],
-
     "objects": [
-         {
+        {
             "mode": "PAINT",
             "density": 1,
             "chance": 0.005,
@@ -186,19 +193,39 @@
                 "trees/spruce/vgeneric32"
             ],
             "snow": 0.5,
-            "edit": [{
-                "find": [
-                    {"block": "minecraft:dark_oak_fence"},
-                    {"block": "minecraft:dark_oak_fence_gate"}
-                ],
-                "replace": {"palette": [{"block": "minecraft:spruce_leaves"}]}
-            },
-             {
-                "find": [
-                    {"block": "minecraft:spruce_leaves"}
-                ],
-                "replace": {"palette": [{"block": "minecraft:oak_leaves"}]}
-            }],
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:dark_oak_fence"
+                        },
+                        {
+                            "block": "minecraft:dark_oak_fence_gate"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:spruce_leaves"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:spruce_leaves"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:oak_leaves"
+                            }
+                        ]
+                    }
+                }
+            ],
             "chance": 1,
             "density": 2,
             "rotation": {
@@ -212,86 +239,138 @@
             }
         }
     ],
-   "decorators": [
+    "decorators": [
         {
             "chance": 0.003,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 1,
             "palette": [
-                {"block": "minecraft:white_tulip"},
-                {"block": "minecraft:cornflower"},
-                {"block": "minecraft:blue_orchid"},
-                {"block": "minecraft:lily_of_the_valley"}
+                {
+                    "block": "minecraft:white_tulip"
+                },
+                {
+                    "block": "minecraft:cornflower"
+                },
+                {
+                    "block": "minecraft:blue_orchid"
+                },
+                {
+                    "block": "minecraft:lily_of_the_valley"
+                }
             ],
-            "style": {"style": "STATIC"}
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
             "chance": 0.01,
-            "variance": {"style": "STATIC"},
+            "variance": {
+                "style": "STATIC"
+            },
             "zoom": 0.3,
             "palette": [
                 {
-                    "data": {"age": 0},
+                    "data": {
+                        "age": 0
+                    },
                     "block": "minecraft:sweet_berry_bush"
                 },
                 {
-                    "data": {"age": 1},
+                    "data": {
+                        "age": 1
+                    },
                     "block": "minecraft:sweet_berry_bush"
                 },
                 {
-                    "data": {"age": 2},
+                    "data": {
+                        "age": 2
+                    },
                     "block": "minecraft:sweet_berry_bush"
                 },
                 {
-                    "data": {"age": 3},
+                    "data": {
+                        "age": 3
+                    },
                     "block": "minecraft:sweet_berry_bush"
                 }
             ],
-            "style": {"style": "STATIC"}
+            "style": {
+                "style": "STATIC"
+            }
         },
         {
             "chance": 0.25,
-            "palette": [{"block": "minecraft:snow"}]
+            "palette": [
+                {
+                    "block": "minecraft:snow"
+                }
+            ]
         },
-         {
+        {
             "chance": 0.01,
             "palette": [
                 {
                     "block": "minecraft:stone_button",
-                    "data": {"Facing": "north", "face": "floor"}
+                    "data": {
+                        "Facing": "north",
+                        "face": "floor"
+                    }
                 }
-
-                ]
+            ]
         },
-         {
+        {
             "chance": 0.01,
             "palette": [
                 {
                     "block": "minecraft:stone_button",
-                    "data": {"Facing": "east", "face": "floor"}
+                    "data": {
+                        "Facing": "east",
+                        "face": "floor"
+                    }
                 }
-
-                ]
+            ]
         },
         {
             "chance": 0.06,
-            "palette": [{"block": "minecraft:tall_grass"}]
+            "palette": [
+                {
+                    "block": "minecraft:tall_grass"
+                }
+            ]
         },
         {
             "chance": 0.25,
-            "palette": [{"block": "minecraft:short_grass"}]
+            "palette": [
+                {
+                    "block": "minecraft:short_grass"
+                }
+            ]
         },
         {
             "chance": 0.06,
-            "palette": [{"block": "minecraft:fern"}]
+            "palette": [
+                {
+                    "block": "minecraft:fern"
+                }
+            ]
         },
         {
             "chance": 0.1,
-            "palette": [{"block": "minecraft:large_fern"}]
+            "palette": [
+                {
+                    "block": "minecraft:large_fern"
+                }
+            ]
         },
         {
             "chance": 0.05,
-            "palette": [{"block": "minecraft:cobblestone_slab"}]
+            "palette": [
+                {
+                    "block": "minecraft:cobblestone_slab"
+                }
+            ]
         }
     ]
 }

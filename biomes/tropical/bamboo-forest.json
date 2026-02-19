@@ -1,337 +1,474 @@
 {
-    "name": "Tropical Bamboo Forest",
-    "color": "#7BF8C7",
-    "rarity": 1,
-    "derivative": "DESERT",
-    "vanillaDerivative": "BAMBOO_JUNGLE",
-    "biomeScatter": ["BAMBOO_JUNGLE"],
-    "customDerivitives": [{
-        "id": "tropical_bamboo_forest",
-        "foliageColor": "#20A52F",
-        "grassColor": "#1E7307",
-        "waterColor": "#3AB2A2",
-        "waterFogColor": "#3AB2A2",
-        "category": "jungle"
-    }],
-    "children": ["tropical/wilds"],
-    "generators": [{
-        "min": 5,
-        "max": 9,
-        "generator": "plain"
-    }],
-    "biomeZoom": 10,
-    "biomeStyle": {"style": "SIMPLEX"},
-    "wall": {
-        "style": {"style": "STATIC"},
-        "palette": [
-            {"block": "minecraft:stone"},
-            {"block": "minecraft:andesite"},
-            {"block": "minecraft:stone"}
-        ]
+  "name": "Tropical Bamboo Forest",
+  "color": "#7BF8C7",
+  "rarity": 1,
+  "derivative": "minecraft:desert",
+  "vanillaDerivative": "minecraft:bamboo_jungle",
+  "biomeScatter": [
+    "minecraft:bamboo_jungle"
+  ],
+  "customDerivitives": [
+    {
+      "id": "tropical_bamboo_forest",
+      "foliageColor": "#20A52F",
+      "grassColor": "#1E7307",
+      "waterColor": "#3AB2A2",
+      "waterFogColor": "#3AB2A2",
+      "category": "jungle"
+    }
+  ],
+  "children": [
+    "tropical/wilds"
+  ],
+  "generators": [
+    {
+      "min": 5,
+      "max": 9,
+      "generator": "plain"
+    }
+  ],
+  "biomeZoom": 10,
+  "biomeStyle": {
+    "style": "SIMPLEX"
+  },
+  "wall": {
+    "style": {
+      "style": "STATIC"
     },
-    "layers": [
-        {"palette": [{"block": "minecraft:grass_block"}]},
-        {"palette": [{"block": "minecraft:dirt"}]},
+    "palette": [
+      {
+        "block": "minecraft:stone"
+      },
+      {
+        "block": "minecraft:andesite"
+      },
+      {
+        "block": "minecraft:stone"
+      }
+    ]
+  },
+  "layers": [
+    {
+      "palette": [
         {
-            "minHeight": 1,
-            "maxHeight": 3,
+          "block": "minecraft:grass_block"
+        }
+      ]
+    },
+    {
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "block": "minecraft:coarse_dirt"
+        }
+      ]
+    },
+    {
+      "minHeight": 6,
+      "maxHeight": 18,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:andesite"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "chance": 0.5,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "clutter/boulder1",
+        "clutter/boulder2",
+        "clutter/boulder4",
+        "clutter/boulder5",
+        "clutter/boulder6",
+        "clutter/boulder7",
+        "clutter/boulder8"
+      ],
+      "translate": {
+        "x": 0,
+        "y": -2,
+        "z": 0
+      }
+    },
+    {
+      "chance": 0.5,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "edit": [
+        {
+          "find": [
+            {
+              "block": "minecraft:birch_fence"
+            }
+          ],
+          "replace": {
             "palette": [
-                {"block": "minecraft:dirt"},
-                {"block": "minecraft:coarse_dirt"}
+              {
+                "block": "minecraft:air"
+              }
             ]
+          }
         },
         {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {"style": "STATIC"},
+          "find": [
+            {
+              "block": "minecraft:birch_leaves"
+            }
+          ],
+          "replace": {
             "palette": [
-                {"block": "minecraft:stone"},
-                {"block": "minecraft:andesite"},
-                {"block": "minecraft:stone"}
+              {
+                "block": "minecraft:jungle_leaves"
+              }
             ]
-        }
-    ],
-
-    "objects": [
-        {
-            "chance": 0.5,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "clutter/boulder1",
-                "clutter/boulder2",
-                "clutter/boulder4",
-                "clutter/boulder5",
-                "clutter/boulder6",
-                "clutter/boulder7",
-                "clutter/boulder8"
-            ],
-            "translate": {
-                "x": 0,
-                "y": -2,
-                "z": 0
-            }
+          }
         },
         {
-            "chance": 0.5,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:birch_fence"}],
-                    "replace": {"palette": [{"block": "minecraft:air"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:birch_leaves"}],
-                    "replace": {"palette": [{"block": "minecraft:jungle_leaves"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:stripped_birch_log"}],
-                    "replace": {"palette": [{"block": "minecraft:jungle_wood"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:stripped_birch_wood"}],
-                    "replace": {"palette": [{"block": "minecraft:oak_wood"}]}
-                }
-            ],
-            "place": [
-                "trees/jungle/bmbogeneric1",
-                "trees/jungle/bmbogeneric2",
-                "trees/jungle/bmbogeneric3",
-                "trees/jungle/bmbogeneric4",
-                "trees/jungle/bmbogeneric5",
-                "trees/jungle/bmbogeneric6",
-                "trees/jungle/bmbogeneric7",
-                "trees/jungle/bmbogeneric8",
-                "trees/jungle/bmbogeneric9"
-            ],
-            "translate": {
-                "x": 0,
-                "y": -2,
-                "z": 0
+          "find": [
+            {
+              "block": "minecraft:stripped_birch_log"
             }
-        },
-        {
-            "chance": 0.35,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:birch_fence"}],
-                    "replace": {"palette": [{"block": "minecraft:air"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:birch_leaves"}],
-                    "replace": {"palette": [{"block": "minecraft:jungle_leaves"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:stripped_birch_log"}],
-                    "replace": {"palette": [{"block": "minecraft:stripped_jungle_log"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:stripped_birch_wood"}],
-                    "replace": {"palette": [{"block": "minecraft:stripped_jungle_wood"}]}
-                }
-            ],
-            "place": [
-                "trees/jungle/spire1",
-                "trees/jungle/spire2",
-                "trees/jungle/spire3",
-                "trees/jungle/spire4",
-                "trees/jungle/spire5",
-                "trees/jungle/spire6",
-                "trees/jungle/spire7"
-            ],
-            "translate": {
-                "x": 0,
-                "y": -2,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.008,
-            "mode": "PAINT",
-            "place": [
-                "clutter/melons1",
-                "clutter/melons2",
-                "clutter/melons3",
-                "clutter/melons4",
-                "clutter/melons5",
-                "clutter/melons6"
-            ],
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "max": 360,
-                    "min": 0,
-                    "interval": 90
-                }
-            },
-            "translate": {"y": 1}
-        }
-    ],
-    "decorators": [
-        {
-            "chance": 0.25,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.3,
+          ],
+          "replace": {
             "palette": [
-                {
-                    "weight": 3,
-                    "block": "minecraft:short_grass"
-                },
-                {"block": "minecraft:tall_grass"}
-            ],
-            "style": {"style": "STATIC"}
+              {
+                "block": "minecraft:jungle_wood"
+              }
+            ]
+          }
         },
         {
-            "stackMin": 1,
-            "stackMax": 11,
-            "chance": 0.07,
-            "variance": {
-                "style": "STATIC",
-                "zoom": 0.1
-            },
-            "topPalette": [{
-                "data": {
-                    "stage": 0,
-                    "age": 0,
-                    "leaves": "small"
-                },
-                "block": "minecraft:bamboo"
-            }],
+          "find": [
+            {
+              "block": "minecraft:stripped_birch_wood"
+            }
+          ],
+          "replace": {
             "palette": [
-                {
-                    "data": {
-                        "stage": 0,
-                        "age": 0,
-                        "leaves": "none"
-                    },
-                    "block": "minecraft:bamboo"
-                },
-                {
-                    "data": {
-                        "stage": 1,
-                        "age": 0,
-                        "leaves": "none"
-                    },
-                    "block": "minecraft:bamboo"
-                },
-                {
-                    "data": {
-                        "stage": 0,
-                        "age": 1,
-                        "leaves": "none"
-                    },
-                    "block": "minecraft:bamboo"
-                },
-                {
-                    "data": {
-                        "stage": 1,
-                        "age": 1,
-                        "leaves": "none"
-                    },
-                    "block": "minecraft:bamboo"
-                },
-                {
-                    "data": {
-                        "stage": 0,
-                        "age": 0,
-                        "leaves": "small"
-                    },
-                    "block": "minecraft:bamboo"
-                },
-                {
-                    "data": {
-                        "stage": 1,
-                        "age": 0,
-                        "leaves": "small"
-                    },
-                    "block": "minecraft:bamboo"
-                },
-                {
-                    "data": {
-                        "stage": 0,
-                        "age": 1,
-                        "leaves": "small"
-                    },
-                    "block": "minecraft:bamboo"
-                },
-                {
-                    "data": {
-                        "stage": 1,
-                        "age": 1,
-                        "leaves": "small"
-                    },
-                    "block": "minecraft:bamboo"
-                },
-                {
-                    "data": {
-                        "stage": 0,
-                        "age": 0,
-                        "leaves": "large"
-                    },
-                    "block": "minecraft:bamboo"
-                },
-                {
-                    "data": {
-                        "stage": 1,
-                        "age": 0,
-                        "leaves": "large"
-                    },
-                    "block": "minecraft:bamboo"
-                },
-                {
-                    "data": {
-                        "stage": 0,
-                        "age": 1,
-                        "leaves": "large"
-                    },
-                    "block": "minecraft:bamboo"
-                },
-                {
-                    "data": {
-                        "stage": 1,
-                        "age": 1,
-                        "leaves": "large"
-                    },
-                    "block": "minecraft:bamboo"
-                }
-            ],
-            "style": {"style": "STATIC"}
+              {
+                "block": "minecraft:oak_wood"
+              }
+            ]
+          }
         }
-    ],
-    "biomeSkyScatter": ["BAMBOO_JUNGLE"],
-    "effects": [{
-        "particleAltX": 0.301,
-        "particleAltY": -0.33885,
-        "particleAltZ": 0.301,
-        "chance": 1,
-        "particleEffect": "TOTEM_OF_UNDYING",
-        "particleOffset": 12,
-        "interval": 550,
-        "particleCount": 0
-    }]
+      ],
+      "place": [
+        "trees/jungle/bmbogeneric1",
+        "trees/jungle/bmbogeneric2",
+        "trees/jungle/bmbogeneric3",
+        "trees/jungle/bmbogeneric4",
+        "trees/jungle/bmbogeneric5",
+        "trees/jungle/bmbogeneric6",
+        "trees/jungle/bmbogeneric7",
+        "trees/jungle/bmbogeneric8",
+        "trees/jungle/bmbogeneric9"
+      ],
+      "translate": {
+        "x": 0,
+        "y": -2,
+        "z": 0
+      }
+    },
+    {
+      "chance": 0.35,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "edit": [
+        {
+          "find": [
+            {
+              "block": "minecraft:birch_fence"
+            }
+          ],
+          "replace": {
+            "palette": [
+              {
+                "block": "minecraft:air"
+              }
+            ]
+          }
+        },
+        {
+          "find": [
+            {
+              "block": "minecraft:birch_leaves"
+            }
+          ],
+          "replace": {
+            "palette": [
+              {
+                "block": "minecraft:jungle_leaves"
+              }
+            ]
+          }
+        },
+        {
+          "find": [
+            {
+              "block": "minecraft:stripped_birch_log"
+            }
+          ],
+          "replace": {
+            "palette": [
+              {
+                "block": "minecraft:stripped_jungle_log"
+              }
+            ]
+          }
+        },
+        {
+          "find": [
+            {
+              "block": "minecraft:stripped_birch_wood"
+            }
+          ],
+          "replace": {
+            "palette": [
+              {
+                "block": "minecraft:stripped_jungle_wood"
+              }
+            ]
+          }
+        }
+      ],
+      "place": [
+        "trees/jungle/spire1",
+        "trees/jungle/spire2",
+        "trees/jungle/spire3",
+        "trees/jungle/spire4",
+        "trees/jungle/spire5",
+        "trees/jungle/spire6",
+        "trees/jungle/spire7"
+      ],
+      "translate": {
+        "x": 0,
+        "y": -2,
+        "z": 0
+      }
+    },
+    {
+      "chance": 0.008,
+      "mode": "PAINT",
+      "place": [
+        "clutter/melons1",
+        "clutter/melons2",
+        "clutter/melons3",
+        "clutter/melons4",
+        "clutter/melons5",
+        "clutter/melons6"
+      ],
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "max": 360,
+          "min": 0,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": 1
+      }
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.25,
+      "variance": {
+        "style": "STATIC"
+      },
+      "zoom": 0.3,
+      "palette": [
+        {
+          "weight": 3,
+          "block": "minecraft:short_grass"
+        },
+        {
+          "block": "minecraft:tall_grass"
+        }
+      ],
+      "style": {
+        "style": "STATIC"
+      }
+    },
+    {
+      "stackMin": 1,
+      "stackMax": 11,
+      "chance": 0.07,
+      "variance": {
+        "style": "STATIC",
+        "zoom": 0.1
+      },
+      "topPalette": [
+        {
+          "data": {
+            "stage": 0,
+            "age": 0,
+            "leaves": "small"
+          },
+          "block": "minecraft:bamboo"
+        }
+      ],
+      "palette": [
+        {
+          "data": {
+            "stage": 0,
+            "age": 0,
+            "leaves": "none"
+          },
+          "block": "minecraft:bamboo"
+        },
+        {
+          "data": {
+            "stage": 1,
+            "age": 0,
+            "leaves": "none"
+          },
+          "block": "minecraft:bamboo"
+        },
+        {
+          "data": {
+            "stage": 0,
+            "age": 1,
+            "leaves": "none"
+          },
+          "block": "minecraft:bamboo"
+        },
+        {
+          "data": {
+            "stage": 1,
+            "age": 1,
+            "leaves": "none"
+          },
+          "block": "minecraft:bamboo"
+        },
+        {
+          "data": {
+            "stage": 0,
+            "age": 0,
+            "leaves": "small"
+          },
+          "block": "minecraft:bamboo"
+        },
+        {
+          "data": {
+            "stage": 1,
+            "age": 0,
+            "leaves": "small"
+          },
+          "block": "minecraft:bamboo"
+        },
+        {
+          "data": {
+            "stage": 0,
+            "age": 1,
+            "leaves": "small"
+          },
+          "block": "minecraft:bamboo"
+        },
+        {
+          "data": {
+            "stage": 1,
+            "age": 1,
+            "leaves": "small"
+          },
+          "block": "minecraft:bamboo"
+        },
+        {
+          "data": {
+            "stage": 0,
+            "age": 0,
+            "leaves": "large"
+          },
+          "block": "minecraft:bamboo"
+        },
+        {
+          "data": {
+            "stage": 1,
+            "age": 0,
+            "leaves": "large"
+          },
+          "block": "minecraft:bamboo"
+        },
+        {
+          "data": {
+            "stage": 0,
+            "age": 1,
+            "leaves": "large"
+          },
+          "block": "minecraft:bamboo"
+        },
+        {
+          "data": {
+            "stage": 1,
+            "age": 1,
+            "leaves": "large"
+          },
+          "block": "minecraft:bamboo"
+        }
+      ],
+      "style": {
+        "style": "STATIC"
+      }
+    }
+  ],
+  "biomeSkyScatter": [
+    "minecraft:bamboo_jungle"
+  ],
+  "effects": [
+    {
+      "particleAltX": 0.301,
+      "particleAltY": -0.33885,
+      "particleAltZ": 0.301,
+      "chance": 1,
+      "particleEffect": "TOTEM_OF_UNDYING",
+      "particleOffset": 12,
+      "interval": 550,
+      "particleCount": 0
+    }
+  ]
 }
