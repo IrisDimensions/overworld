@@ -1,34 +1,110 @@
 {
     "name": "Beach Clutter",
     "rarity": 1,
-    "maxPicked": 2,
+    "maxPicked": 3,
     "minPicked": 1,
+    "maxTries": 18,
     "loot": [
         {
+            "type": "sand",
+            "minAmount": 2,
+            "maxAmount": 8,
+            "rarity": 1,
+            "slotTypes": "STORAGE"
+        },
+        {
+            "type": "sandstone",
+            "minAmount": 1,
+            "maxAmount": 4,
+            "rarity": 2,
+            "slotTypes": "STORAGE"
+        },
+        {
+            "type": "clay_ball",
+            "minAmount": 1,
+            "maxAmount": 6,
+            "rarity": 2,
+            "slotTypes": "STORAGE"
+        },
+        {
             "type": "sugar_cane",
-            "maxAmount": 12,
+            "minAmount": 1,
+            "maxAmount": 5,
+            "rarity": 2,
+            "slotTypes": "STORAGE"
+        },
+        {
+            "type": "kelp",
+            "minAmount": 1,
+            "maxAmount": 6,
+            "rarity": 2,
+            "slotTypes": "STORAGE"
+        },
+        {
+            "type": "seagrass",
+            "minAmount": 1,
+            "maxAmount": 4,
+            "rarity": 3,
             "slotTypes": "STORAGE"
         },
         {
             "type": "fishing_rod",
+            "minAmount": 1,
             "maxAmount": 1,
-            "minDurability": 0.5,
+            "rarity": 5,
+            "slotTypes": "STORAGE",
+            "minDurability": 0.2,
+            "maxDurability": 0.9
+        },
+        {
+            "type": "nautilus_shell",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "rarity": 14,
             "slotTypes": "STORAGE"
         },
         {
-            "type": "sugar",
-            "maxAmount": 3,
+            "type": "turtle_scute",
+            "minAmount": 1,
+            "maxAmount": 2,
+            "rarity": 16,
             "slotTypes": "STORAGE"
         },
         {
-            "type": "sand",
-            "maxAmount": 8,
+            "type": "paper",
+            "minAmount": 1,
+            "maxAmount": 7,
+            "rarity": 6,
             "slotTypes": "STORAGE"
         },
         {
-            "type": "clay",
-            "maxAmount": 3,
+            "type": "glass_bottle",
+            "minAmount": 1,
+            "maxAmount": 4,
+            "rarity": 6,
             "slotTypes": "STORAGE"
+        },
+        {
+            "type": "lantern",
+            "minAmount": 1,
+            "maxAmount": 2,
+            "rarity": 9,
+            "slotTypes": "STORAGE"
+        },
+        {
+            "type": "enchanted_book",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "rarity": 30,
+            "slotTypes": "STORAGE",
+            "enchantments": [
+                {
+                    "enchantment": "lure",
+                    "minLevel": 2,
+                    "maxLevel": 3,
+                    "chance": 1.0
+                }
+            ]
         }
     ]
 }

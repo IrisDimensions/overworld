@@ -1,110 +1,181 @@
 {
     "name": "Pillager Outpost",
     "rarity": 1,
+    "maxPicked": 4,
+    "minPicked": 2,
+    "maxTries": 24,
     "loot": [
         {
             "type": "dark_oak_log",
-            "maxAmount": 7,
-            "minAmount": 3,
-            "rarity": 2,
+            "minAmount": 1,
+            "maxAmount": 8,
+            "rarity": 1,
             "slotTypes": "STORAGE"
         },
         {
             "type": "crossbow",
+            "minAmount": 1,
             "maxAmount": 1,
+            "rarity": 2,
+            "slotTypes": "STORAGE",
+            "minDurability": 0.25,
+            "maxDurability": 0.95
+        },
+        {
+            "type": "goat_horn",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "rarity": 7,
+            "slotTypes": "STORAGE"
+        },
+        {
+            "type": "wheat",
+            "minAmount": 1,
+            "maxAmount": 6,
             "rarity": 2,
             "slotTypes": "STORAGE"
         },
         {
-            "type": "goat_horn",
-            "maxAmount": 1,
-            "rarity": 2,
-            "slottypes": "STORAGE"
-        },
-        {
-            "type": "wheat",
-            "maxamount": 5,
-            "minAmount": 3,
-            "rarity": 2,
-            "slottypes": "STORAGE"
-        },
-        {
             "type": "experience_bottle",
-            "maxamount": 1,
-            "rarity": 3,
-            "slottypes": "STORAGE"
+            "minAmount": 1,
+            "maxAmount": 6,
+            "rarity": 5,
+            "slotTypes": "STORAGE"
         },
         {
             "type": "carrot",
-            "maxamount": 5,
-            "minAmount": 3,
-            "rarity": 8,
-            "slottypes": "STORAGE"
+            "minAmount": 1,
+            "maxAmount": 5,
+            "rarity": 2,
+            "slotTypes": "STORAGE"
         },
         {
             "type": "potato",
-            "maxamount": 5,
-            "minAmount": 2,
-            "rarity": 8,
-            "slottypes": "STORAGE"
+            "minAmount": 1,
+            "maxAmount": 5,
+            "rarity": 2,
+            "slotTypes": "STORAGE"
         },
         {
             "type": "arrow",
-            "maxamount": 7,
-            "minAmount": 2,
-            "rarity": 12,
-            "slottypes": "STORAGE"
+            "minAmount": 3,
+            "maxAmount": 14,
+            "rarity": 2,
+            "slotTypes": "STORAGE"
         },
         {
             "type": "string",
-            "maxamount": 6,
             "minAmount": 1,
-            "rarity": 22,
-            "slottypes": "STORAGE"
+            "maxAmount": 6,
+            "rarity": 3,
+            "slotTypes": "STORAGE"
         },
         {
             "type": "tripwire_hook",
-            "maxamount": 3,
             "minAmount": 1,
-            "rarity": 22,
-            "slottypes": "STORAGE"
+            "maxAmount": 3,
+            "rarity": 4,
+            "slotTypes": "STORAGE"
         },
         {
             "type": "iron_ingot",
-            "maxamount": 3,
             "minAmount": 1,
-            "rarity": 22,
-            "slottypes": "STORAGE"
+            "maxAmount": 5,
+            "rarity": 5,
+            "slotTypes": "STORAGE"
+        },
+        {
+            "type": "ominous_bottle",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "rarity": 14,
+            "slotTypes": "STORAGE"
+        },
+        {
+            "type": "wind_charge",
+            "minAmount": 1,
+            "maxAmount": 2,
+            "rarity": 20,
+            "slotTypes": "STORAGE"
         },
         {
             "type": "enchanted_book",
-            "maxamount": 1,
-            "rarity": 22,
-            "slottypes": "STORAGE",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "rarity": 7,
+            "slotTypes": "STORAGE",
             "enchantments": [
                 {
-                    "enchantment": "binding_curse",
-                    "chance": 0.25,
-                    "maxLevel": 1,
-                    "minLevel": 1
-                },
+                    "enchantment": "quick_charge",
+                    "minLevel": 1,
+                    "maxLevel": 3,
+                    "chance": 1.0
+                }
+            ]
+        },
+        {
+            "type": "enchanted_book",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "rarity": 7,
+            "slotTypes": "STORAGE",
+            "enchantments": [
                 {
-                    "enchantment": "vanishing_curse",
-                    "chance": 0.25,
-                    "maxLevel": 1,
-                    "minLevel": 1
-                },
+                    "enchantment": "piercing",
+                    "minLevel": 1,
+                    "maxLevel": 4,
+                    "chance": 1.0
+                }
+            ]
+        },
+        {
+            "type": "diamond",
+            "minAmount": 1,
+            "maxAmount": 2,
+            "rarity": 10,
+            "slotTypes": "STORAGE"
+        },
+        {
+            "type": "emerald",
+            "minAmount": 1,
+            "maxAmount": 4,
+            "rarity": 8,
+            "slotTypes": "STORAGE"
+        },
+        {
+            "type": "gold_ingot",
+            "minAmount": 1,
+            "maxAmount": 5,
+            "rarity": 7,
+            "slotTypes": "STORAGE"
+        },
+        {
+            "type": "enchanted_book",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "rarity": 14,
+            "slotTypes": "STORAGE",
+            "enchantments": [
                 {
-                    "enchantment": "frost_walker",
-                    "chance": 0.25,
-                    "maxLevel": 2,
-                    "minLevel": 1
-                },
+                    "enchantment": "efficiency",
+                    "minLevel": 2,
+                    "maxLevel": 4,
+                    "chance": 1.0
+                }
+            ]
+        },
+        {
+            "type": "enchanted_book",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "rarity": 18,
+            "slotTypes": "STORAGE",
+            "enchantments": [
                 {
-                    "enchantment": "mending",
-                    "chance": 0.25,
-                    "maxLevel": 1,
-                    "minLevel": 1
+                    "enchantment": "fortune",
+                    "minLevel": 2,
+                    "maxLevel": 3,
+                    "chance": 1.0
                 }
             ]
         }
