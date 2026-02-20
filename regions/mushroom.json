@@ -12,7 +12,11 @@
   "caveBiomes": [
     "carving/cavesv4/mushroom",
     "carving/rocky-cavebiome",
-    "carving/deepdark/standard-deepdark"
+    "carving/drip-lite",
+    "carving/cavesv4/moss-pillars",
+    "carving/cavesv4/crystalized-overgrown",
+    "carving/deepdark/standard-deepdark",
+    "carving/cavesv4/city-basin"
   ],
   "objects": [
     {
@@ -98,10 +102,10 @@
   "landBiomeZoom": 1.8,
   "effects": [
     {
-      "particleAltX": 0.00001,
+      "particleAltX": 1e-05,
       "particleAway": 1,
       "particleAltY": 0.01885,
-      "particleAltZ": 0.00001,
+      "particleAltZ": 1e-05,
       "chance": 3,
       "particleEffect": "CRIMSON_SPORE",
       "particleDistance": 5,
@@ -138,91 +142,80 @@
   "caveProfile": {
     "enabled": true,
     "verticalRange": {
-      "min": 0,
-      "max": 360
+      "min": 6,
+      "max": 760
     },
     "baseDensityStyle": {
-      "style": "CELLULAR_IRIS_DOUBLE",
-      "zoom": 1.9
+      "style": "PERLIN_IRIS",
+      "zoom": 0.72
     },
     "detailDensityStyle": {
       "style": "SIMPLEX",
-      "zoom": 1.1
+      "zoom": 0.54
     },
     "warpStyle": {
       "style": "FRACTAL_WATER",
-      "zoom": 0.92
+      "zoom": 0.5
     },
-    "baseWeight": 1.0,
-    "detailWeight": 0.28,
-    "warpStrength": 3.5,
+    "baseWeight": 0.9,
+    "detailWeight": 0.11,
+    "warpStrength": 0.24,
     "densityThreshold": {
-      "min": -0.24,
+      "min": -0.14,
       "max": -0.06,
       "style": {
         "style": "SIMPLEX",
-        "zoom": 1.0
+        "zoom": 0.74
       }
     },
-    "modules": [
-      {
-        "style": {
-          "style": "VASCULAR_THIN",
-          "zoom": 1.45
-        },
-        "weight": 0.34,
-        "threshold": -0.1,
-        "verticalRange": {
-          "min": 8,
-          "max": 310
-        },
-        "invert": false
-      },
-      {
-        "style": {
-          "style": "CELLULAR_IRIS_DOUBLE",
-          "zoom": 2.0
-        },
-        "weight": 0.18,
-        "threshold": 0.12,
-        "verticalRange": {
-          "min": 20,
-          "max": 290
-        },
-        "invert": false
-      },
-      {
-        "style": {
-          "style": "CELLULAR",
-          "zoom": 2.4
-        },
-        "weight": 0.12,
-        "threshold": 0.28,
-        "verticalRange": {
-          "min": 0,
-          "max": 210
-        },
-        "invert": true
-      }
-    ],
-    "defaultObjectAnchor": "FLOOR",
-    "anchorScanStep": 1,
-    "allowWater": true,
-    "allowLava": true,
-    "thresholdBias": 0.28,
-    "sampleStep": 2,
+    "thresholdBias": 0.14,
+    "sampleStep": 3,
     "surfaceClearance": 5,
     "allowSurfaceBreak": true,
     "surfaceBreakStyle": {
       "style": "SIMPLEX",
-      "zoom": 1.8
+      "zoom": 0.88
     },
-    "surfaceBreakNoiseThreshold": 0.68,
-    "surfaceBreakDepth": 18,
-    "surfaceBreakThresholdBoost": 0.08,
-    "objectMinDepthBelowSurface": 10,
-    "surfaceObjectExclusionDepth": 6,
-    "waterMinDepthBelowSurface": 18,
-    "waterRequiresFloor": true
-  }
+    "surfaceBreakNoiseThreshold": 0.6,
+    "surfaceBreakDepth": 16,
+    "surfaceBreakThresholdBoost": 0.07,
+    "objectMinDepthBelowSurface": 14,
+    "surfaceObjectExclusionDepth": 30,
+    "defaultObjectAnchor": "FLOOR",
+    "anchorScanStep": 1,
+    "anchorSearchAttempts": 6,
+    "allowWater": true,
+    "waterMinDepthBelowSurface": 20,
+    "waterRequiresFloor": true,
+    "allowLava": true,
+    "modules": [
+      {
+        "style": {
+          "style": "SIMPLEX_VASCULAR",
+          "zoom": 1.08
+        },
+        "weight": 0.08,
+        "threshold": 0.03,
+        "verticalRange": {
+          "min": 24,
+          "max": 660
+        },
+        "invert": false
+      },
+      {
+        "style": {
+          "style": "FRACTAL_FBM_SIMPLEX",
+          "zoom": 0.24
+        },
+        "weight": 0.04,
+        "threshold": 0.08,
+        "verticalRange": {
+          "min": 6,
+          "max": 240
+        },
+        "invert": true
+      }
+    ]
+  },
+  "caveBiomeZoom": 3.2
 }

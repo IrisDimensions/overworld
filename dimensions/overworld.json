@@ -23,7 +23,7 @@
   "logicalHeight": 1024,
   "dimensionHeight": {
     "max": 1024,
-    "min": -64
+    "min": -256
   },
   "logicalHeightEnd": 448,
   "dimensionHeightEnd": {
@@ -535,7 +535,8 @@
     }
   ],
   "caveBiomeStyle": {
-    "style": "SIMPLEX"
+    "style": "SIMPLEX",
+    "zoom": 2.6
   },
   "coordFractureZoom": 0.15,
   "layers": [
@@ -609,92 +610,83 @@
   "caveProfile": {
     "enabled": true,
     "verticalRange": {
-      "min": 0,
-      "max": 256
+      "min": 6,
+      "max": 700
     },
     "baseDensityStyle": {
-      "style": "SIMPLEX",
-      "zoom": 0.78
+      "style": "PERLIN_IRIS",
+      "zoom": 0.72
     },
     "detailDensityStyle": {
       "style": "SIMPLEX",
-      "zoom": 0.48
+      "zoom": 0.54
     },
     "warpStyle": {
       "style": "FRACTAL_WATER",
-      "zoom": 0.45
+      "zoom": 0.5
     },
-    "baseWeight": 1.05,
-    "detailWeight": 0.16,
-    "warpStrength": 2.0,
+    "baseWeight": 0.9,
+    "detailWeight": 0.11,
+    "warpStrength": 0.24,
     "densityThreshold": {
-      "min": -0.2,
-      "max": -0.09,
+      "min": -0.14,
+      "max": -0.06,
       "style": {
         "style": "SIMPLEX",
-        "zoom": 0.7
+        "zoom": 0.74
       }
     },
+    "thresholdBias": 0.14,
+    "sampleStep": 3,
+    "surfaceClearance": 5,
+    "allowSurfaceBreak": true,
+    "surfaceBreakStyle": {
+      "style": "SIMPLEX",
+      "zoom": 0.88
+    },
+    "surfaceBreakNoiseThreshold": 0.6,
+    "surfaceBreakDepth": 16,
+    "surfaceBreakThresholdBoost": 0.1,
+    "objectMinDepthBelowSurface": 14,
+    "surfaceObjectExclusionDepth": 30,
+    "defaultObjectAnchor": "FLOOR",
+    "anchorScanStep": 1,
+    "anchorSearchAttempts": 6,
+    "allowWater": true,
+    "waterMinDepthBelowSurface": 20,
+    "waterRequiresFloor": true,
+    "allowLava": true,
     "modules": [
       {
         "style": {
-          "style": "VASCULAR_THIN",
-          "zoom": 1.2
+          "style": "SIMPLEX_VASCULAR",
+          "zoom": 1.08
         },
-        "weight": 0.16,
-        "threshold": -0.05,
+        "weight": 0.08,
+        "threshold": 0.03,
         "verticalRange": {
-          "min": 6,
-          "max": 220
+          "min": 24,
+          "max": 660
         },
         "invert": false
       },
       {
         "style": {
-          "style": "CELLULAR_IRIS_DOUBLE",
-          "zoom": 1.6
-        },
-        "weight": 0.07,
-        "threshold": 0.18,
-        "verticalRange": {
-          "min": 16,
-          "max": 200
-        },
-        "invert": false
-      },
-      {
-        "style": {
-          "style": "CELLULAR",
-          "zoom": 2.0
+          "style": "FRACTAL_FBM_SIMPLEX",
+          "zoom": 0.24
         },
         "weight": 0.04,
-        "threshold": 0.33,
+        "threshold": 0.08,
         "verticalRange": {
-          "min": 0,
-          "max": 170
+          "min": 6,
+          "max": 240
         },
         "invert": true
       }
     ],
-    "defaultObjectAnchor": "FLOOR",
-    "anchorScanStep": 1,
-    "allowWater": true,
-    "allowLava": true,
-    "thresholdBias": 0.24,
-    "sampleStep": 2,
-    "surfaceClearance": 6,
-    "allowSurfaceBreak": true,
-    "surfaceBreakStyle": {
-      "style": "SIMPLEX",
-      "zoom": 1.25
-    },
-    "surfaceBreakNoiseThreshold": 0.56,
-    "surfaceBreakDepth": 14,
-    "surfaceBreakThresholdBoost": 0.14,
-    "objectMinDepthBelowSurface": 14,
-    "surfaceObjectExclusionDepth": 10,
-    "waterMinDepthBelowSurface": 24,
-    "waterRequiresFloor": true,
-    "anchorSearchAttempts": 8
+    "verticalEdgeFade": 24,
+    "verticalEdgeFadeStrength": 0.18,
+    "minCarveCells": 24,
+    "recoveryThresholdBoost": 0.07
   }
 }

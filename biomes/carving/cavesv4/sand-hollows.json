@@ -1,35 +1,55 @@
 {
-  "name": "Sandstone Oasis Caverns",
+  "name": "Sunken Oasis Hollows",
   "wall": {
     "style": {
-      "style": "VASCULAR"
+      "style": "SIMPLEX",
+      "zoom": 0.65
     },
     "palette": [
       {
         "block": "minecraft:sandstone"
+      },
+      {
+        "block": "minecraft:red_sandstone"
+      },
+      {
+        "block": "minecraft:smooth_sandstone"
       }
     ]
   },
   "layers": [
     {
+      "style": {
+        "style": "STATIC"
+      },
+      "minHeight": 1,
       "maxHeight": 2,
-      "minHeight": 2,
       "palette": [
         {
-          "block": "minecraft:smooth_sandstone",
-          "weight": 8
+          "block": "minecraft:smooth_sandstone"
+        },
+        {
+          "block": "minecraft:smooth_red_sandstone"
         }
       ]
     }
   ],
-  "caveCeilingLayers": [
+  "decorators": [
     {
-      "maxHeight": 2,
-      "minHeight": 2,
+      "chance": 0.028,
+      "absoluteMaxStack": 1,
       "palette": [
         {
-          "block": "minecraft:smooth_sandstone",
-          "weight": 8
+          "block": "minecraft:dead_bush"
+        }
+      ]
+    },
+    {
+      "chance": 0.014,
+      "absoluteMaxStack": 1,
+      "palette": [
+        {
+          "block": "minecraft:cactus"
         }
       ]
     }
@@ -154,14 +174,5 @@
     "minCarveCells": 20,
     "recoveryThresholdBoost": 0.07
   },
-  "caveMinDepthBelowSurface": 2,
-  "children": [
-    "carving/cavesv4/sand-hollows",
-    "carving/mixed-sandstone"
-  ],
-  "childShrinkFactor": 1.8,
-  "childStyle": {
-    "style": "SIMPLEX",
-    "zoom": 0.95
-  }
+  "caveMinDepthBelowSurface": 2
 }

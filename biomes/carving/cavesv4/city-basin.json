@@ -1,41 +1,63 @@
 {
-  "name": "Deepdark Eroded Faults",
-  "vanillaDerivative": "minecraft:deep_dark",
+  "name": "Ancient City Basin",
   "derivative": "minecraft:deep_dark",
+  "vanillaDerivative": "minecraft:deep_dark",
   "wall": {
+    "style": {
+      "style": "STATIC"
+    },
     "palette": [
       {
         "block": "minecraft:deepslate",
-        "weight": 6
+        "weight": 3
       },
       {
-        "block": "minecraft:tuff",
-        "weight": 2
-      },
-      {
-        "block": "minecraft:sculk",
-        "weight": 1
+        "block": "minecraft:sculk"
       }
     ]
   },
   "layers": [
     {
-      "maxHeight": 1,
+      "style": {
+        "style": "STATIC"
+      },
       "minHeight": 1,
+      "maxHeight": 2,
       "palette": [
         {
-          "block": "minecraft:obsidian"
+          "block": "minecraft:sculk",
+          "weight": 4
+        },
+        {
+          "block": "minecraft:deepslate"
         }
       ]
     }
   ],
   "caveCeilingLayers": [
     {
-      "maxHeight": 3,
-      "minHeight": 2,
       "palette": [
         {
-          "block": "minecraft:black_concrete"
+          "block": "minecraft:deepslate"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.028,
+      "palette": [
+        {
+          "block": "minecraft:sculk_sensor",
+          "weight": 120
+        },
+        {
+          "block": "minecraft:sculk_catalyst",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:sculk_shrieker",
+          "weight": 1
         }
       ]
     }
@@ -56,39 +78,39 @@
       "bottom": true
     }
   ],
-  "caveMinDepthBelowSurface": 54,
+  "caveMinDepthBelowSurface": 62,
   "caveProfile": {
     "enabled": true,
     "verticalRange": {
       "min": 4,
-      "max": 228
+      "max": 210
     },
     "baseDensityStyle": {
       "style": "PERLIN_IRIS",
-      "zoom": 0.88
+      "zoom": 0.86
     },
     "detailDensityStyle": {
-      "style": "SIMPLEX",
-      "zoom": 0.5
+      "style": "FRACTAL_BILLOW_SIMPLEX",
+      "zoom": 0.48
     },
     "warpStyle": {
       "style": "SIMPLEX",
-      "zoom": 0.56
+      "zoom": 0.52
     },
-    "baseWeight": 0.92,
-    "detailWeight": 0.08,
-    "warpStrength": 0.07,
+    "baseWeight": 0.94,
+    "detailWeight": 0.06,
+    "warpStrength": 0.04,
     "densityThreshold": {
-      "min": -0.07,
+      "min": -0.06,
       "max": 0.01,
       "style": {
         "style": "SIMPLEX",
-        "zoom": 0.62
+        "zoom": 0.54
       }
     },
     "thresholdBias": 0.055,
     "sampleStep": 2,
-    "surfaceClearance": 14,
+    "surfaceClearance": 16,
     "allowSurfaceBreak": false,
     "surfaceBreakStyle": {
       "style": "SIMPLEX",
@@ -97,8 +119,8 @@
     "surfaceBreakNoiseThreshold": 0.9,
     "surfaceBreakDepth": 8,
     "surfaceBreakThresholdBoost": 0.0,
-    "objectMinDepthBelowSurface": 46,
-    "surfaceObjectExclusionDepth": 42,
+    "objectMinDepthBelowSurface": 54,
+    "surfaceObjectExclusionDepth": 46,
     "defaultObjectAnchor": "FLOOR",
     "anchorScanStep": 1,
     "anchorSearchAttempts": 6,
@@ -110,33 +132,33 @@
       {
         "style": {
           "style": "SIMPLEX_VASCULAR",
-          "zoom": 0.9
+          "zoom": 0.82
         },
-        "weight": 0.08,
-        "threshold": 0.03,
+        "weight": 0.07,
+        "threshold": 0.025,
         "verticalRange": {
-          "min": 20,
-          "max": 220
+          "min": 12,
+          "max": 200
         },
         "invert": false
       },
       {
         "style": {
-          "style": "FRACTAL_BILLOW_SIMPLEX",
-          "zoom": 0.5
+          "style": "PERLIN_IRIS",
+          "zoom": 0.42
         },
-        "weight": 0.05,
-        "threshold": 0.03,
+        "weight": 0.04,
+        "threshold": 0.05,
         "verticalRange": {
           "min": 4,
-          "max": 228
+          "max": 210
         },
         "invert": true
       }
     ],
-    "verticalEdgeFade": 44,
-    "verticalEdgeFadeStrength": 0.28,
-    "minCarveCells": 10,
-    "recoveryThresholdBoost": 0.06
+    "verticalEdgeFade": 52,
+    "verticalEdgeFadeStrength": 0.32,
+    "minCarveCells": 8,
+    "recoveryThresholdBoost": 0.05
   }
 }

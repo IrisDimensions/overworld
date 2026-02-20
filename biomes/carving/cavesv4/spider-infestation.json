@@ -52,52 +52,102 @@
   ],
   "objects": [
     {
-      "chance": 0.12,
+      "chance": 0.007,
       "density": 1,
       "carvingSupport": "CARVING_ONLY",
       "caveAnchorMode": "PROFILE_DEFAULT",
-      "rotation": {
-        "enabled": true,
-        "yAxis": {
-          "enabled": true,
-          "min": 0,
-          "max": 270,
-          "interval": 90
-        }
-      },
       "translate": {
         "y": -1
       },
       "place": [
-        "clutter/bonespire14",
-        "clutter/bonespire15",
-        "clutter/skull1"
-      ],
-      "bottom": true
-    },
-    {
-      "chance": 0.12,
-      "density": 1,
-      "carvingSupport": "CARVING_ONLY",
-      "caveAnchorMode": "PROFILE_DEFAULT",
-      "rotation": {
-        "enabled": true,
-        "yAxis": {
-          "enabled": true,
-          "min": 0,
-          "max": 270,
-          "interval": 90
-        }
-      },
-      "translate": {
-        "y": -1
-      },
-      "place": [
-        "structures/deepslate1",
-        "structures/deepslate2",
-        "structures/deepslate3"
+        "clutter/stoneclutt4",
+        "clutter/stoneclutt5",
+        "clutter/ore-scluster4"
       ],
       "bottom": true
     }
-  ]
+  ],
+  "caveProfile": {
+    "enabled": true,
+    "verticalRange": {
+      "min": 6,
+      "max": 640
+    },
+    "baseDensityStyle": {
+      "style": "SIMPLEX_VASCULAR",
+      "zoom": 0.82
+    },
+    "detailDensityStyle": {
+      "style": "VASCULAR_THIN",
+      "zoom": 1.1
+    },
+    "warpStyle": {
+      "style": "SIMPLEX",
+      "zoom": 0.46
+    },
+    "baseWeight": 0.92,
+    "detailWeight": 0.08,
+    "warpStrength": 0.22,
+    "densityThreshold": {
+      "min": -0.17,
+      "max": -0.1,
+      "style": {
+        "style": "SIMPLEX",
+        "zoom": 0.72
+      }
+    },
+    "thresholdBias": 0.16,
+    "sampleStep": 2,
+    "surfaceClearance": 8,
+    "allowSurfaceBreak": false,
+    "surfaceBreakStyle": {
+      "style": "SIMPLEX",
+      "zoom": 0.9
+    },
+    "surfaceBreakNoiseThreshold": 0.9,
+    "surfaceBreakDepth": 8,
+    "surfaceBreakThresholdBoost": 0.0,
+    "objectMinDepthBelowSurface": 18,
+    "surfaceObjectExclusionDepth": 32,
+    "defaultObjectAnchor": "FLOOR",
+    "anchorScanStep": 1,
+    "anchorSearchAttempts": 6,
+    "allowWater": true,
+    "waterMinDepthBelowSurface": 22,
+    "waterRequiresFloor": true,
+    "allowLava": true,
+    "modules": [
+      {
+        "style": {
+          "style": "SIMPLEX_VASCULAR",
+          "zoom": 1.18
+        },
+        "weight": 0.08,
+        "threshold": 0.02,
+        "verticalRange": {
+          "min": 10,
+          "max": 620
+        },
+        "invert": false
+      },
+      {
+        "style": {
+          "style": "CELLULAR_BILINEAR",
+          "zoom": 1.52
+        },
+        "weight": 0.03,
+        "threshold": 0.18,
+        "verticalRange": {
+          "min": 20,
+          "max": 520
+        },
+        "invert": false
+      }
+    ],
+    "verticalEdgeFade": 40,
+    "verticalEdgeFadeStrength": 0.28,
+    "minCarveCells": 8,
+    "recoveryThresholdBoost": 0.07
+  },
+  "caveMinDepthBelowSurface": 10
 }

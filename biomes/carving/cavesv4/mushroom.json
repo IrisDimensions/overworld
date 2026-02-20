@@ -59,19 +59,10 @@
   ],
   "objects": [
     {
-      "chance": 0.2,
+      "chance": 0.01,
       "density": 1,
       "carvingSupport": "CARVING_ONLY",
       "caveAnchorMode": "PROFILE_DEFAULT",
-      "rotation": {
-        "enabled": true,
-        "yAxis": {
-          "enabled": true,
-          "min": 0,
-          "max": 270,
-          "interval": 90
-        }
-      },
       "translate": {
         "y": -1
       },
@@ -84,5 +75,88 @@
       ],
       "bottom": true
     }
-  ]
+  ],
+  "caveProfile": {
+    "enabled": true,
+    "verticalRange": {
+      "min": 6,
+      "max": 640
+    },
+    "baseDensityStyle": {
+      "style": "PERLIN_IRIS",
+      "zoom": 0.72
+    },
+    "detailDensityStyle": {
+      "style": "FRACTAL_BILLOW_SIMPLEX",
+      "zoom": 0.52
+    },
+    "warpStyle": {
+      "style": "SIMPLEX",
+      "zoom": 0.44
+    },
+    "baseWeight": 0.9,
+    "detailWeight": 0.11,
+    "warpStrength": 0.26,
+    "densityThreshold": {
+      "min": -0.13,
+      "max": -0.05,
+      "style": {
+        "style": "SIMPLEX",
+        "zoom": 0.72
+      }
+    },
+    "thresholdBias": 0.13,
+    "sampleStep": 2,
+    "surfaceClearance": 6,
+    "allowSurfaceBreak": true,
+    "surfaceBreakStyle": {
+      "style": "SIMPLEX",
+      "zoom": 0.86
+    },
+    "surfaceBreakNoiseThreshold": 0.6,
+    "surfaceBreakDepth": 14,
+    "surfaceBreakThresholdBoost": 0.1,
+    "objectMinDepthBelowSurface": 14,
+    "surfaceObjectExclusionDepth": 30,
+    "defaultObjectAnchor": "FLOOR",
+    "anchorScanStep": 1,
+    "anchorSearchAttempts": 6,
+    "allowWater": true,
+    "waterMinDepthBelowSurface": 18,
+    "waterRequiresFloor": true,
+    "allowLava": true,
+    "modules": [
+      {
+        "style": {
+          "style": "SIMPLEX_VASCULAR",
+          "zoom": 1.06
+        },
+        "weight": 0.08,
+        "threshold": 0.03,
+        "verticalRange": {
+          "min": 16,
+          "max": 620
+        },
+        "invert": false
+      },
+      {
+        "style": {
+          "style": "CELLULAR_BILINEAR",
+          "zoom": 1.28
+        },
+        "weight": 0.04,
+        "threshold": 0.15,
+        "verticalRange": {
+          "min": 30,
+          "max": 540
+        },
+        "invert": false
+      }
+    ],
+    "verticalEdgeFade": 24,
+    "verticalEdgeFadeStrength": 0.17,
+    "minCarveCells": 20,
+    "recoveryThresholdBoost": 0.07
+  },
+  "caveMinDepthBelowSurface": 12
 }

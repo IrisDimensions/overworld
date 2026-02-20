@@ -1,5 +1,5 @@
 {
-  "name": "DeepDark Tunnels",
+  "name": "Deepdark City Expanse",
   "derivative": "minecraft:deep_dark",
   "vanillaDerivative": "minecraft:deep_dark",
   "wall": {
@@ -58,52 +58,110 @@
   ],
   "objects": [
     {
-      "chance": 0.12,
+      "chance": 0.002,
       "density": 1,
       "carvingSupport": "CARVING_ONLY",
       "caveAnchorMode": "PROFILE_DEFAULT",
-      "rotation": {
-        "enabled": true,
-        "yAxis": {
-          "enabled": true,
-          "min": 0,
-          "max": 270,
-          "interval": 90
-        }
-      },
       "translate": {
         "y": -1
       },
       "place": [
-        "clutter/bonespire14",
-        "clutter/bonespire15",
-        "clutter/skull1"
-      ],
-      "bottom": true
-    },
-    {
-      "chance": 0.12,
-      "density": 1,
-      "carvingSupport": "CARVING_ONLY",
-      "caveAnchorMode": "PROFILE_DEFAULT",
-      "rotation": {
-        "enabled": true,
-        "yAxis": {
-          "enabled": true,
-          "min": 0,
-          "max": 270,
-          "interval": 90
-        }
-      },
-      "translate": {
-        "y": -1
-      },
-      "place": [
-        "structures/deepslate1",
-        "structures/deepslate2",
-        "structures/deepslate3"
+        "structures/monolith3",
+        "structures/monolith4"
       ],
       "bottom": true
     }
-  ]
+  ],
+  "caveMinDepthBelowSurface": 60,
+  "caveProfile": {
+    "enabled": true,
+    "verticalRange": {
+      "min": 4,
+      "max": 232
+    },
+    "baseDensityStyle": {
+      "style": "PERLIN_IRIS",
+      "zoom": 0.9
+    },
+    "detailDensityStyle": {
+      "style": "FRACTAL_FBM_SIMPLEX",
+      "zoom": 0.5
+    },
+    "warpStyle": {
+      "style": "SIMPLEX",
+      "zoom": 0.58
+    },
+    "baseWeight": 0.92,
+    "detailWeight": 0.07,
+    "warpStrength": 0.06,
+    "densityThreshold": {
+      "min": -0.08,
+      "max": 0.0,
+      "style": {
+        "style": "SIMPLEX",
+        "zoom": 0.6
+      }
+    },
+    "thresholdBias": 0.06,
+    "sampleStep": 2,
+    "surfaceClearance": 14,
+    "allowSurfaceBreak": false,
+    "surfaceBreakStyle": {
+      "style": "SIMPLEX",
+      "zoom": 1.0
+    },
+    "surfaceBreakNoiseThreshold": 0.9,
+    "surfaceBreakDepth": 8,
+    "surfaceBreakThresholdBoost": 0.0,
+    "objectMinDepthBelowSurface": 50,
+    "surfaceObjectExclusionDepth": 44,
+    "defaultObjectAnchor": "FLOOR",
+    "anchorScanStep": 1,
+    "anchorSearchAttempts": 6,
+    "allowWater": false,
+    "waterMinDepthBelowSurface": 30,
+    "waterRequiresFloor": true,
+    "allowLava": false,
+    "modules": [
+      {
+        "style": {
+          "style": "SIMPLEX_VASCULAR",
+          "zoom": 0.9
+        },
+        "weight": 0.08,
+        "threshold": 0.03,
+        "verticalRange": {
+          "min": 16,
+          "max": 220
+        },
+        "invert": false
+      },
+      {
+        "style": {
+          "style": "FRACTAL_BILLOW_SIMPLEX",
+          "zoom": 0.46
+        },
+        "weight": 0.05,
+        "threshold": 0.02,
+        "verticalRange": {
+          "min": 4,
+          "max": 232
+        },
+        "invert": true
+      }
+    ],
+    "verticalEdgeFade": 48,
+    "verticalEdgeFadeStrength": 0.3,
+    "minCarveCells": 10,
+    "recoveryThresholdBoost": 0.06
+  },
+  "children": [
+    "carving/cavesv4/city-basin",
+    "carving/cavesv4/dark-depths"
+  ],
+  "childShrinkFactor": 1.85,
+  "childStyle": {
+    "style": "PERLIN_IRIS",
+    "zoom": 1.2
+  }
 }

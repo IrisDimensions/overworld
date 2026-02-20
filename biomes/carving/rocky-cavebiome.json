@@ -1,6 +1,6 @@
 {
-  "name": "RockyHollows",
-  "vanillaDerivative": "minecraft:the_void",
+  "name": "Rocky Hollows",
+  "vanillaDerivative": "minecraft:dripstone_caves",
   "generators": [
     {
       "generator": "rare-hills",
@@ -10,52 +10,174 @@
   ],
   "objects": [
     {
-      "chance": 0.12,
+      "chance": 0.009,
       "density": 1,
       "carvingSupport": "CARVING_ONLY",
       "caveAnchorMode": "PROFILE_DEFAULT",
-      "rotation": {
-        "enabled": true,
-        "yAxis": {
-          "enabled": true,
-          "min": 0,
-          "max": 270,
-          "interval": 90
-        }
-      },
       "translate": {
         "y": -1
       },
       "place": [
-        "clutter/stoneclutt1",
-        "clutter/stoneclutt2",
-        "clutter/stoneclutt3"
-      ],
-      "bottom": true
-    },
-    {
-      "chance": 0.12,
-      "density": 1,
-      "carvingSupport": "CARVING_ONLY",
-      "caveAnchorMode": "PROFILE_DEFAULT",
-      "rotation": {
-        "enabled": true,
-        "yAxis": {
-          "enabled": true,
-          "min": 0,
-          "max": 270,
-          "interval": 90
-        }
-      },
-      "translate": {
-        "y": -1
-      },
-      "place": [
-        "structures/cave1",
-        "structures/cave2",
-        "structures/cave3"
+        "clutter/stoneclutt4",
+        "clutter/stoneclutt5",
+        "clutter/stoneclutt6",
+        "clutter/ore-scluster4"
       ],
       "bottom": true
     }
-  ]
+  ],
+  "caveProfile": {
+    "enabled": true,
+    "verticalRange": {
+      "min": 6,
+      "max": 700
+    },
+    "baseDensityStyle": {
+      "style": "PERLIN_IRIS",
+      "zoom": 0.72
+    },
+    "detailDensityStyle": {
+      "style": "FRACTAL_BILLOW_SIMPLEX",
+      "zoom": 0.56
+    },
+    "warpStyle": {
+      "style": "SIMPLEX",
+      "zoom": 0.5
+    },
+    "baseWeight": 0.9,
+    "detailWeight": 0.1,
+    "warpStrength": 0.22,
+    "densityThreshold": {
+      "min": -0.13,
+      "max": -0.04,
+      "style": {
+        "style": "SIMPLEX",
+        "zoom": 0.74
+      }
+    },
+    "thresholdBias": 0.1,
+    "sampleStep": 2,
+    "surfaceClearance": 5,
+    "allowSurfaceBreak": true,
+    "surfaceBreakStyle": {
+      "style": "SIMPLEX",
+      "zoom": 0.84
+    },
+    "surfaceBreakNoiseThreshold": 0.61,
+    "surfaceBreakDepth": 18,
+    "surfaceBreakThresholdBoost": 0.1,
+    "objectMinDepthBelowSurface": 12,
+    "surfaceObjectExclusionDepth": 32,
+    "defaultObjectAnchor": "FLOOR",
+    "anchorScanStep": 1,
+    "anchorSearchAttempts": 6,
+    "allowWater": true,
+    "waterMinDepthBelowSurface": 18,
+    "waterRequiresFloor": true,
+    "allowLava": true,
+    "modules": [
+      {
+        "style": {
+          "style": "SIMPLEX_VASCULAR",
+          "zoom": 1.0
+        },
+        "weight": 0.08,
+        "threshold": 0.02,
+        "verticalRange": {
+          "min": 24,
+          "max": 660
+        },
+        "invert": false
+      },
+      {
+        "style": {
+          "style": "FRACTAL_BILLOW_SIMPLEX",
+          "zoom": 0.32
+        },
+        "weight": 0.04,
+        "threshold": 0.08,
+        "verticalRange": {
+          "min": 8,
+          "max": 280
+        },
+        "invert": true
+      }
+    ],
+    "verticalEdgeFade": 24,
+    "verticalEdgeFadeStrength": 0.16,
+    "minCarveCells": 24,
+    "recoveryThresholdBoost": 0.07
+  },
+  "caveMinDepthBelowSurface": 8,
+  "derivative": "minecraft:dripstone_caves",
+  "wall": {
+    "style": {
+      "style": "SIMPLEX",
+      "zoom": 0.6
+    },
+    "palette": [
+      {
+        "block": "minecraft:stone",
+        "weight": 6
+      },
+      {
+        "block": "minecraft:deepslate",
+        "weight": 4
+      },
+      {
+        "block": "minecraft:tuff",
+        "weight": 2
+      }
+    ]
+  },
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:andesite",
+          "weight": 4
+        },
+        {
+          "block": "minecraft:cobblestone",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:stone",
+          "weight": 6
+        }
+      ]
+    }
+  ],
+  "caveCeilingLayers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:stone",
+          "weight": 6
+        },
+        {
+          "block": "minecraft:deepslate",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:andesite",
+          "weight": 2
+        }
+      ]
+    }
+  ],
+  "children": [
+    "carving/deep",
+    "carving/drip-lite",
+    "carving/cavesv4/chalk-gardens"
+  ],
+  "childShrinkFactor": 1.9,
+  "childStyle": {
+    "style": "SIMPLEX",
+    "zoom": 1.1
+  }
 }

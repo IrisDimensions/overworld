@@ -128,29 +128,131 @@
   ],
   "objects": [
     {
-      "chance": 0.2,
+      "chance": 0.009,
       "density": 1,
       "carvingSupport": "CARVING_ONLY",
       "caveAnchorMode": "PROFILE_DEFAULT",
-      "rotation": {
-        "enabled": true,
-        "yAxis": {
-          "enabled": true,
-          "min": 0,
-          "max": 270,
-          "interval": 90
-        }
-      },
       "translate": {
-        "y": -2
+        "y": -1
       },
       "place": [
-        "trees/jungle/lgeneric1",
-        "trees/jungle/lgeneric2",
-        "trees/jungle/lgeneric3",
-        "trees/jungle/lgeneric4"
+        "clutter/jungleclutt11",
+        "clutter/jungleclutt12",
+        "clutter/jungleclutt13",
+        "clutter/jungleclutt4"
+      ],
+      "bottom": true
+    },
+    {
+      "chance": 0.0032,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "trees/jungle/mgeneric1",
+        "trees/jungle/mgeneric2",
+        "trees/jungle/mgeneric3",
+        "trees/jungle/mgeneric4",
+        "trees/jungle/deligeneric2",
+        "trees/jungle/deligeneric3",
+        "trees/jungle/deligeneric4"
       ],
       "bottom": true
     }
-  ]
+  ],
+  "caveProfile": {
+    "enabled": true,
+    "verticalRange": {
+      "min": 6,
+      "max": 700
+    },
+    "baseDensityStyle": {
+      "style": "IRIS_DOUBLE",
+      "zoom": 0.68
+    },
+    "detailDensityStyle": {
+      "style": "SIMPLEX",
+      "zoom": 0.5
+    },
+    "warpStyle": {
+      "style": "FRACTAL_WATER",
+      "zoom": 0.46
+    },
+    "baseWeight": 0.89,
+    "detailWeight": 0.12,
+    "warpStrength": 0.32,
+    "densityThreshold": {
+      "min": -0.13,
+      "max": -0.04,
+      "style": {
+        "style": "SIMPLEX",
+        "zoom": 0.7
+      }
+    },
+    "thresholdBias": 0.12,
+    "sampleStep": 2,
+    "surfaceClearance": 5,
+    "allowSurfaceBreak": true,
+    "surfaceBreakStyle": {
+      "style": "SIMPLEX",
+      "zoom": 0.82
+    },
+    "surfaceBreakNoiseThreshold": 0.56,
+    "surfaceBreakDepth": 22,
+    "surfaceBreakThresholdBoost": 0.1,
+    "objectMinDepthBelowSurface": 10,
+    "surfaceObjectExclusionDepth": 34,
+    "defaultObjectAnchor": "FLOOR",
+    "anchorScanStep": 1,
+    "anchorSearchAttempts": 6,
+    "allowWater": true,
+    "waterMinDepthBelowSurface": 14,
+    "waterRequiresFloor": true,
+    "allowLava": true,
+    "modules": [
+      {
+        "style": {
+          "style": "VASCULAR_THIN",
+          "zoom": 1.08
+        },
+        "weight": 0.09,
+        "threshold": 0.02,
+        "verticalRange": {
+          "min": 18,
+          "max": 680
+        },
+        "invert": false
+      },
+      {
+        "style": {
+          "style": "SIMPLEX",
+          "zoom": 0.22
+        },
+        "weight": 0.05,
+        "threshold": 0.08,
+        "verticalRange": {
+          "min": 6,
+          "max": 220
+        },
+        "invert": true
+      }
+    ],
+    "verticalEdgeFade": 24,
+    "verticalEdgeFadeStrength": 0.17,
+    "minCarveCells": 20,
+    "recoveryThresholdBoost": 0.07
+  },
+  "caveMinDepthBelowSurface": 8,
+  "children": [
+    "carving/cavesv4/moss-pillars",
+    "carving/cavesv4/sand-hollows"
+  ],
+  "childShrinkFactor": 1.85,
+  "childStyle": {
+    "style": "PERLIN_IRIS",
+    "zoom": 1.0
+  }
 }

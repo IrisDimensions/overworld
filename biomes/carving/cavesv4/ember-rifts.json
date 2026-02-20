@@ -1,68 +1,63 @@
 {
-  "name": "Crystalized",
+  "name": "Ember Rifts",
   "wall": {
+    "style": {
+      "style": "STATIC"
+    },
     "palette": [
       {
-        "block": "minecraft:amethyst_block"
+        "block": "minecraft:deepslate"
+      },
+      {
+        "block": "minecraft:basalt"
+      },
+      {
+        "block": "minecraft:blackstone"
       }
     ]
   },
   "layers": [
     {
-      "maxHeight": 1,
+      "style": {
+        "style": "STATIC"
+      },
       "minHeight": 1,
+      "maxHeight": 2,
       "palette": [
         {
-          "block": "minecraft:amethyst_block"
+          "block": "minecraft:blackstone"
+        },
+        {
+          "block": "minecraft:magma_block"
         }
       ]
     }
   ],
   "decorators": [
     {
-      "chance": 0.35,
-      "style": {
-        "style": "STATIC"
-      },
+      "chance": 0.022,
+      "partOf": "CEILING",
+      "stackMin": 1,
+      "stackMax": 2,
       "palette": [
         {
-          "block": "minecraft:small_amethyst_bud"
-        },
-        {
-          "block": "minecraft:medium_amethyst_bud"
-        },
-        {
-          "block": "minecraft:large_amethyst_bud"
+          "block": "minecraft:glow_lichen"
         }
       ]
     },
     {
-      "chance": 0.01,
-      "style": {
-        "style": "STATIC"
-      },
-      "partOf": "CEILING",
+      "chance": 0.02,
+      "absoluteMaxStack": 1,
       "palette": [
         {
-          "block": "minecraft:shroomlight"
-        }
-      ]
-    }
-  ],
-  "caveCeilingLayers": [
-    {
-      "maxHeight": 1,
-      "minHeight": 1,
-      "palette": [
-        {
-          "block": "minecraft:stone"
+          "block": "minecraft:fire"
         }
       ]
     }
   ],
   "objects": [
     {
-      "chance": 0.007,
+      "chance": 0.006,
       "density": 1,
       "carvingSupport": "CARVING_ONLY",
       "caveAnchorMode": "PROFILE_DEFAULT",
@@ -70,10 +65,9 @@
         "y": -1
       },
       "place": [
-        "clutter/amethyst-cluster1",
-        "clutter/amethyst-cluster2",
-        "clutter/amethyst-cluster3",
-        "clutter/amethyst-cluster4"
+        "clutter/magmaspire1",
+        "clutter/magmaspire2",
+        "clutter/magmaspire3"
       ],
       "bottom": true
     },
@@ -86,7 +80,7 @@
         "y": -1
       },
       "place": [
-        "structures/monolith1"
+        "structures/monolith4"
       ],
       "bottom": true
     }
@@ -95,82 +89,82 @@
     "enabled": true,
     "verticalRange": {
       "min": 6,
-      "max": 620
+      "max": 520
     },
     "baseDensityStyle": {
       "style": "PERLIN_IRIS",
-      "zoom": 0.8
+      "zoom": 0.76
     },
     "detailDensityStyle": {
-      "style": "FRACTAL_BILLOW_SIMPLEX",
-      "zoom": 0.52
+      "style": "SIMPLEX",
+      "zoom": 0.56
     },
     "warpStyle": {
-      "style": "SIMPLEX",
-      "zoom": 0.46
+      "style": "IRIS_DOUBLE",
+      "zoom": 0.44
     },
-    "baseWeight": 0.91,
-    "detailWeight": 0.1,
-    "warpStrength": 0.18,
+    "baseWeight": 0.9,
+    "detailWeight": 0.11,
+    "warpStrength": 0.28,
     "densityThreshold": {
-      "min": -0.12,
-      "max": -0.04,
+      "min": -0.14,
+      "max": -0.05,
       "style": {
-        "style": "SIMPLEX",
+        "style": "PERLIN_IRIS",
         "zoom": 0.7
       }
     },
-    "thresholdBias": 0.12,
+    "thresholdBias": 0.13,
     "sampleStep": 2,
-    "surfaceClearance": 6,
+    "surfaceClearance": 7,
     "allowSurfaceBreak": true,
     "surfaceBreakStyle": {
       "style": "SIMPLEX",
-      "zoom": 0.9
+      "zoom": 0.88
     },
-    "surfaceBreakNoiseThreshold": 0.68,
-    "surfaceBreakDepth": 12,
+    "surfaceBreakNoiseThreshold": 0.62,
+    "surfaceBreakDepth": 14,
     "surfaceBreakThresholdBoost": 0.1,
     "objectMinDepthBelowSurface": 16,
     "surfaceObjectExclusionDepth": 30,
     "defaultObjectAnchor": "FLOOR",
     "anchorScanStep": 1,
     "anchorSearchAttempts": 6,
-    "allowWater": true,
-    "waterMinDepthBelowSurface": 20,
+    "allowWater": false,
+    "waterMinDepthBelowSurface": 24,
     "waterRequiresFloor": true,
     "allowLava": true,
     "modules": [
       {
         "style": {
-          "style": "SIMPLEX_VASCULAR",
-          "zoom": 0.98
+          "style": "FRACTAL_BILLOW_SIMPLEX",
+          "zoom": 0.9
         },
-        "weight": 0.08,
-        "threshold": 0.03,
+        "weight": 0.09,
+        "threshold": 0.04,
         "verticalRange": {
-          "min": 24,
-          "max": 680
+          "min": 6,
+          "max": 460
         },
         "invert": false
       },
       {
         "style": {
-          "style": "FRACTAL_BILLOW_SIMPLEX",
-          "zoom": 0.34
+          "style": "CELLULAR_BILINEAR",
+          "zoom": 1.5
         },
         "weight": 0.04,
-        "threshold": 0.07,
+        "threshold": 0.18,
         "verticalRange": {
-          "min": 8,
-          "max": 260
+          "min": 20,
+          "max": 320
         },
-        "invert": true
+        "invert": false
       }
     ],
-    "verticalEdgeFade": 26,
-    "verticalEdgeFadeStrength": 0.18,
-    "minCarveCells": 24,
+    "verticalEdgeFade": 24,
+    "verticalEdgeFadeStrength": 0.17,
+    "minCarveCells": 20,
     "recoveryThresholdBoost": 0.07
   },
   "caveMinDepthBelowSurface": 10
