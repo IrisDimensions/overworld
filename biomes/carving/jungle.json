@@ -1,79 +1,156 @@
 {
-    "name": "Jungle Cavern",
-    "wall": {
-        "minHeight": 2,
-        "maxHeight": 2,
-        "style": {"style": "STATIC"},
-        "zoom": 0.4,
-        "palette": [
-            {"block": "minecraft:jungle_wood"},
-            {"block": "minecraft:stripped_jungle_wood"}
-        ]
+  "name": "Jungle Cavern",
+  "wall": {
+    "minHeight": 2,
+    "maxHeight": 2,
+    "style": {
+      "style": "STATIC"
     },
-    "layers": [{
-        "style": {"style": "STATIC"},
-        "palette": [{"block": "minecraft:grass_block"}]
-    }],
-    "decorators": [
+    "zoom": 0.4,
+    "palette": [
+      {
+        "block": "minecraft:jungle_wood"
+      },
+      {
+        "block": "minecraft:stripped_jungle_wood"
+      }
+    ]
+  },
+  "layers": [
+    {
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
         {
-            "chance": 5.0E-4,
-            "scaleStack": true,
-            "stackMin": 1,
-            "stackMax": 5,
-            "absoluteMaxStack": 5,
-            "style": {"style": "STATIC"},
-            "palette": [{"block": "minecraft:big_dripleaf"}]
-        },
-        {
-            "chance": 0.001,
-            "partOf": "CEILING",
-            "scaleStack": true,
-            "stackMin": 5,
-            "stackMax": 55,
-            "absoluteMaxStack": 4,
-            "style": {"style": "STATIC"},
-            "palette": [{"block": "minecraft:cave_vines"}]
-        },
-        {
-            "chance": 0.4,
-            "style": {"style": "STATIC"},
-            "palette": [
-                {
-                    "block": "minecraft:jungle_sapling",
-                    "weight": 10
-                },
-                {
-                    "block": "minecraft:tall_grass",
-                    "weight": 10
-                },
-                {
-                    "block": "minecraft:fern",
-                    "weight": 10
-                },
-                {
-                    "block": "minecraft:short_grass",
-                    "weight": 100
-                },
-                {"block": "minecraft:azalea"},
-                {"block": "minecraft:flowering_azalea"},
-                {"block": "minecraft:twisting_vines"}
-            ]
-        },
-        {
-            "chance": 0.05,
-            "style": {"style": "STATIC"},
-            "topPalette": [{"block": "minecraft:jungle_leaves"}],
-            "stackMax": 2,
-            "stackMin": 1,
-            "palette": [{"block": "minecraft:jungle_wood"}]
+          "block": "minecraft:grass_block"
         }
-    ],
-    "caveCeilingLayers": [{
-        "maxHeight": 2,
-        "minHeight": 2,
-        "palette": [
-            {"block": "minecraft:rooted_dirt"},
-            {"block": "minecraft:coarse_dirt"}
-        ]
-    }]
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.0005,
+      "scaleStack": true,
+      "stackMin": 1,
+      "stackMax": 5,
+      "absoluteMaxStack": 5,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:big_dripleaf"
+        }
+      ]
+    },
+    {
+      "chance": 0.001,
+      "partOf": "CEILING",
+      "scaleStack": true,
+      "stackMin": 5,
+      "stackMax": 55,
+      "absoluteMaxStack": 4,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:cave_vines"
+        }
+      ]
+    },
+    {
+      "chance": 0.4,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:jungle_sapling",
+          "weight": 10
+        },
+        {
+          "block": "minecraft:tall_grass",
+          "weight": 10
+        },
+        {
+          "block": "minecraft:fern",
+          "weight": 10
+        },
+        {
+          "block": "minecraft:short_grass",
+          "weight": 100
+        },
+        {
+          "block": "minecraft:azalea"
+        },
+        {
+          "block": "minecraft:flowering_azalea"
+        },
+        {
+          "block": "minecraft:twisting_vines"
+        }
+      ]
+    },
+    {
+      "chance": 0.05,
+      "style": {
+        "style": "STATIC"
+      },
+      "topPalette": [
+        {
+          "block": "minecraft:jungle_leaves"
+        }
+      ],
+      "stackMax": 2,
+      "stackMin": 1,
+      "palette": [
+        {
+          "block": "minecraft:jungle_wood"
+        }
+      ]
+    }
+  ],
+  "caveCeilingLayers": [
+    {
+      "maxHeight": 2,
+      "minHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:rooted_dirt"
+        },
+        {
+          "block": "minecraft:coarse_dirt"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "chance": 0.2,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -2
+      },
+      "place": [
+        "trees/jungle/lgeneric1",
+        "trees/jungle/lgeneric2",
+        "trees/jungle/lgeneric3",
+        "trees/jungle/lgeneric4"
+      ],
+      "bottom": true
+    }
+  ]
 }

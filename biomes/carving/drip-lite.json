@@ -1,49 +1,123 @@
 {
-    "name": "Dripstone Cavern Child",
-    "wall": {"palette": [{"block": "minecraft:dripstone_block"}]},
-    "layers": [{
-        "maxHeight": 2,
-        "minHeight": 2,
-        "palette": [{"block": "minecraft:dripstone_block"}]
-    }],
-    "decorators": [
+  "name": "Dripstone Cavern Child",
+  "wall": {
+    "palette": [
+      {
+        "block": "minecraft:dripstone_block"
+      }
+    ]
+  },
+  "layers": [
+    {
+      "maxHeight": 2,
+      "minHeight": 2,
+      "palette": [
         {
-            "chance": 0.03,
-            "scaleStack": true,
-            "stackMin": 5,
-            "stackMax": 55,
-            "absoluteMaxStack": 4,
-            "palette": [{
-                "block": "minecraft:pointed_dripstone",
-                "data": {"vertical_direction": "up"}
-            }]
+          "block": "minecraft:dripstone_block"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.03,
+      "scaleStack": true,
+      "stackMin": 5,
+      "stackMax": 55,
+      "absoluteMaxStack": 4,
+      "palette": [
+        {
+          "block": "minecraft:pointed_dripstone",
+          "data": {
+            "vertical_direction": "up"
+          }
+        }
+      ]
+    },
+    {
+      "partOf": "CEILING",
+      "chance": 0.03,
+      "absoluteMaxStack": 4,
+      "scaleStack": true,
+      "stackMin": 5,
+      "stackMax": 55,
+      "palette": [
+        {
+          "block": "minecraft:pointed_dripstone",
+          "data": {
+            "vertical_direction": "down"
+          }
+        }
+      ]
+    }
+  ],
+  "caveCeilingLayers": [
+    {
+      "style": {
+        "style": "NOWHERE"
+      },
+      "maxHeight": 2,
+      "minHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:dripstone_block",
+          "weight": 15
         },
         {
-            "partOf": "CEILING",
-            "chance": 0.03,
-            "absoluteMaxStack": 4,
-            "scaleStack": true,
-            "stackMin": 5,
-            "stackMax": 55,
-            "palette": [{
-                "block": "minecraft:pointed_dripstone",
-                "data": {"vertical_direction": "down"}
-            }]
+          "block": "minecraft:shroomlight",
+          "weight": 1
         }
-    ],
-    "caveCeilingLayers": [{
-        "style": {"style": "NOWHERE"},
-        "maxHeight": 2,
-        "minHeight": 2,
-        "palette": [
-            {
-                "block": "minecraft:dripstone_block",
-                "weight": 15
-            },
-            {
-                "block": "minecraft:shroomlight",
-                "weight": 1
-            }
-        ]
-    }]
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "chance": 0.12,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "clutter/stoneclutt4",
+        "clutter/stoneclutt5",
+        "clutter/stoneclutt6"
+      ],
+      "bottom": true
+    },
+    {
+      "chance": 0.12,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "structures/cave4",
+        "structures/cave5",
+        "structures/cave6"
+      ],
+      "bottom": true
+    }
+  ]
 }

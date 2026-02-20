@@ -1,82 +1,162 @@
 {
-    "name": "Rocky Cavern",
-    "wall": {
-        "style": {"style": "STATIC"},
-        "palette": [
-            {
-                "block": "minecraft:stone",
-                "weight": 3
-            },
-            {"block": "minecraft:cobblestone"},
-            {"block": "minecraft:stone"}
-        ]
+  "name": "Rocky Cavern",
+  "wall": {
+    "style": {
+      "style": "STATIC"
     },
-    "layers": [{
-        "style": {"style": "STATIC"},
-        "maxHeight": 2,
-        "minHeight": 2,
-        "palette": [
-            {
-                "block": "minecraft:stone",
-                "weight": 3
-            },
-            {"block": "minecraft:cobblestone"},
-            {
-                "block": "minecraft:andesite",
-                "weight": 3
-            }
-        ]
-    }],
-    "decorators": [
+    "palette": [
+      {
+        "block": "minecraft:stone",
+        "weight": 3
+      },
+      {
+        "block": "minecraft:cobblestone"
+      },
+      {
+        "block": "minecraft:stone"
+      }
+    ]
+  },
+  "layers": [
+    {
+      "style": {
+        "style": "STATIC"
+      },
+      "maxHeight": 2,
+      "minHeight": 2,
+      "palette": [
         {
-            "chance": 0.03,
-            "scaleStack": true,
-            "stackMin": 10,
-            "stackMax": 90,
-            "absoluteMaxStack": 5,
-            "palette": [
-                {"block": "minecraft:stone"},
-                {"block": "minecraft:andesite"}
-            ]
+          "block": "minecraft:stone",
+          "weight": 3
         },
         {
-            "chance": 0.08,
-            "scaleStack": true,
-            "stackMin": 1,
-            "stackMax": 3,
-            "absoluteMaxStack": 5,
-            "palette": [
-                {"block": "minecraft:stone"},
-                {"block": "minecraft:andesite"}
-            ]
+          "block": "minecraft:cobblestone"
         },
         {
-            "partOf": "CEILING",
-            "chance": 0.03,
-            "absoluteMaxStack": 15,
-            "scaleStack": true,
-            "stackMin": 10,
-            "stackMax": 90,
-            "palette": [
-                {"block": "minecraft:stone"},
-                {"block": "minecraft:andesite"}
-            ]
+          "block": "minecraft:andesite",
+          "weight": 3
         }
-    ],
-    "caveCeilingLayers": [{
-        "style": {"style": "STATIC"},
-        "maxHeight": 2,
-        "minHeight": 2,
-        "palette": [
-            {
-                "block": "minecraft:stone",
-                "weight": 3
-            },
-            {"block": "minecraft:cobblestone"},
-            {
-                "block": "minecraft:andesite",
-                "weight": 3
-            }
-        ]
-    }]
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.03,
+      "scaleStack": true,
+      "stackMin": 10,
+      "stackMax": 90,
+      "absoluteMaxStack": 5,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:andesite"
+        }
+      ]
+    },
+    {
+      "chance": 0.08,
+      "scaleStack": true,
+      "stackMin": 1,
+      "stackMax": 3,
+      "absoluteMaxStack": 5,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:andesite"
+        }
+      ]
+    },
+    {
+      "partOf": "CEILING",
+      "chance": 0.03,
+      "absoluteMaxStack": 15,
+      "scaleStack": true,
+      "stackMin": 10,
+      "stackMax": 90,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:andesite"
+        }
+      ]
+    }
+  ],
+  "caveCeilingLayers": [
+    {
+      "style": {
+        "style": "STATIC"
+      },
+      "maxHeight": 2,
+      "minHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:stone",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:cobblestone"
+        },
+        {
+          "block": "minecraft:andesite",
+          "weight": 3
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "chance": 0.12,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "clutter/stoneclutt4",
+        "clutter/stoneclutt5",
+        "clutter/stoneclutt6"
+      ],
+      "bottom": true
+    },
+    {
+      "chance": 0.12,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "structures/cave4",
+        "structures/cave5",
+        "structures/cave6"
+      ],
+      "bottom": true
+    }
+  ]
 }

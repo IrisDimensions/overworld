@@ -1,67 +1,137 @@
 {
-    "name": "Dripstone Cavern",
-    "wall": {"palette": [{
+  "name": "Dripstone Cavern",
+  "wall": {
+    "palette": [
+      {
         "block": "minecraft:dripstone_block",
         "weight": 4
-    }]},
-    "layers": [{
-        "minHeight": 1,
-        "maxHeight": 2,
-        "style": {"style": "GLOB_IRIS_THICK"},
-        "zoom": 0.4,
-        "palette": [
-            {
-                "weight": 2,
-                "block": "minecraft:tuff"
-            },
-            {
-                "weight": 2,
-                "block": "minecraft:granite"
-            },
-            {
-                "block": "minecraft:dripstone_block",
-                "weight": 6
-            }
-        ]
-    }],
-    "decorators": [
+      }
+    ]
+  },
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 2,
+      "style": {
+        "style": "GLOB_IRIS_THICK"
+      },
+      "zoom": 0.4,
+      "palette": [
         {
-            "chance": 0.066,
-            "scaleStack": true,
-            "stackMin": 25,
-            "stackMax": 80,
-            "absoluteMaxStack": 6,
-            "palette": [{
-                "block": "minecraft:pointed_dripstone",
-                "data": {"vertical_direction": "up"}
-            }]
+          "weight": 2,
+          "block": "minecraft:tuff"
         },
         {
-            "partOf": "CEILING",
-            "chance": 0.1,
-            "absoluteMaxStack": 6,
-            "scaleStack": true,
-            "stackMin": 25,
-            "stackMax": 80,
-            "palette": [{
-                "block": "minecraft:pointed_dripstone",
-                "data": {"vertical_direction": "down"}
-            }]
+          "weight": 2,
+          "block": "minecraft:granite"
+        },
+        {
+          "block": "minecraft:dripstone_block",
+          "weight": 6
         }
-    ],
-    "caveCeilingLayers": [{
-        "maxHeight": 2,
-        "style": {"style": "STATIC"},
-        "minHeight": 2,
-        "palette": [
-            {
-                "block": "minecraft:dripstone_block",
-                "weight": 20
-            },
-            {
-                "block": "minecraft:shroomlight",
-                "weight": 1
-            }
-        ]
-    }]
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.066,
+      "scaleStack": true,
+      "stackMin": 25,
+      "stackMax": 80,
+      "absoluteMaxStack": 6,
+      "palette": [
+        {
+          "block": "minecraft:pointed_dripstone",
+          "data": {
+            "vertical_direction": "up"
+          }
+        }
+      ]
+    },
+    {
+      "partOf": "CEILING",
+      "chance": 0.1,
+      "absoluteMaxStack": 6,
+      "scaleStack": true,
+      "stackMin": 25,
+      "stackMax": 80,
+      "palette": [
+        {
+          "block": "minecraft:pointed_dripstone",
+          "data": {
+            "vertical_direction": "down"
+          }
+        }
+      ]
+    }
+  ],
+  "caveCeilingLayers": [
+    {
+      "maxHeight": 2,
+      "style": {
+        "style": "STATIC"
+      },
+      "minHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:dripstone_block",
+          "weight": 20
+        },
+        {
+          "block": "minecraft:shroomlight",
+          "weight": 1
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "chance": 0.12,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "clutter/stoneclutt4",
+        "clutter/stoneclutt5",
+        "clutter/stoneclutt6"
+      ],
+      "bottom": true
+    },
+    {
+      "chance": 0.12,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "structures/cave4",
+        "structures/cave5",
+        "structures/cave6"
+      ],
+      "bottom": true
+    }
+  ]
 }

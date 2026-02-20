@@ -1,28 +1,108 @@
 {
-    "name": "Calcite Cavern",
-    "wall": {"palette": [{"block": "minecraft:tuff"}]},
-    "layers": [{
-        "maxHeight": 1,
-        "minHeight": 1,
-        "palette": [
-            {"block": "minecraft:calcite"},
-            {"block": "minecraft:diorite"}
-        ]
-    }],
-    "decorators": [{
-        "chance": 0.001,
-        "style": {"style": "STATIC"},
-        "topPalette": [{"block": "minecraft:andesite"}],
-        "stackMax": 5,
-        "stackMin": 1,
-        "palette": [{"block": "minecraft:calcite"}]
-    }],
-    "caveCeilingLayers": [{
-        "maxHeight": 1,
-        "minHeight": 1,
-        "palette": [
-            {"block": "minecraft:calcite"},
-            {"block": "minecraft:diorite"}
-        ]
-    }]
+  "name": "Calcite Cavern",
+  "wall": {
+    "palette": [
+      {
+        "block": "minecraft:tuff"
+      }
+    ]
+  },
+  "layers": [
+    {
+      "maxHeight": 1,
+      "minHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:calcite"
+        },
+        {
+          "block": "minecraft:diorite"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.001,
+      "style": {
+        "style": "STATIC"
+      },
+      "topPalette": [
+        {
+          "block": "minecraft:andesite"
+        }
+      ],
+      "stackMax": 5,
+      "stackMin": 1,
+      "palette": [
+        {
+          "block": "minecraft:calcite"
+        }
+      ]
+    }
+  ],
+  "caveCeilingLayers": [
+    {
+      "maxHeight": 1,
+      "minHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:calcite"
+        },
+        {
+          "block": "minecraft:diorite"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "chance": 0.12,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "clutter/ore-scluster4",
+        "clutter/ore-scluster5",
+        "clutter/ore-scluster6"
+      ],
+      "bottom": true
+    },
+    {
+      "chance": 0.12,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "structures/crystal1",
+        "structures/crystal2",
+        "structures/crystal3"
+      ],
+      "bottom": true
+    }
+  ]
 }

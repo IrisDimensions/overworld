@@ -1,20 +1,84 @@
 {
-    "name": "Red Sandstone Cavern",
-    "wall": {"palette": [{"block": "minecraft:red_sandstone"}]},
-    "layers": [{
-        "maxHeight": 2,
-        "minHeight": 2,
-        "palette": [{
-            "block": "minecraft:smooth_red_sandstone",
-            "weight": 8
-        }]
-    }],
-    "caveCeilingLayers": [{
-        "maxHeight": 2,
-        "minHeight": 2,
-        "palette": [{
-            "block": "minecraft:smooth_red_sandstone",
-            "weight": 8
-        }]
-    }]
+  "name": "Red Sandstone Cavern",
+  "wall": {
+    "palette": [
+      {
+        "block": "minecraft:red_sandstone"
+      }
+    ]
+  },
+  "layers": [
+    {
+      "maxHeight": 2,
+      "minHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:smooth_red_sandstone",
+          "weight": 8
+        }
+      ]
+    }
+  ],
+  "caveCeilingLayers": [
+    {
+      "maxHeight": 2,
+      "minHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:smooth_red_sandstone",
+          "weight": 8
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "chance": 0.12,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "trees/oak/arid1",
+        "trees/oak/arid2",
+        "trees/oak/arid3"
+      ],
+      "bottom": true
+    },
+    {
+      "chance": 0.12,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "clutter/rdesertpost1",
+        "clutter/rdesertpost2",
+        "clutter/rdesertpost3"
+      ],
+      "bottom": true
+    }
+  ]
 }

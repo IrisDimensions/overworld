@@ -1,223 +1,238 @@
 {
-    "name": "Hot",
-    "color": "#D1CD44",
-    "rarity": 4,
-    "seaBiomeZoom": 3.5,
-    "landBiomes": [
-        "hot/desert-dunes",
-        "hot/small-valley",
-        "hot/desert-dunes-red",
-        "savanna/savanna",
-        "mesa/dark",
-        "savanna/plateau",
-        "savanna/forest",
-        "savanna/acacia-denmyre",
-        "mesa/plateau",
-        "mesa/valleys",
-        "mesa/plateau-high",
-        "mesa/valleys",
-        "mesa/mesa"
-    ],
-    "caveBiomes": [
-        "carving/rocky-cavebiome"
-    ],
-    "objects": [
-        {
-            "heightmap": {
-                "seed": 1337,
-                "style": {
-                    "style": "SIMPLEX",
-                    "multiplier": 10
-                },
-                "offsetY": 5
-            },
-            "chance": 0.05,
-            "bottom": true,
-            "density": 1,
-            "place": [],
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "minecraft:glass"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "minecraft:void_air"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "enabled": true,
-            "xAxis": {
-                "interval": 90,
-                "max": 360,
-                "min": 0
-            },
-            "yAxis": {
-                "interval": 90,
-                "max": 270,
-                "min": 0
-            },
-            "translate": {
-                "yRandom": 10,
-                "y": 2
-            }
-        }
-    ],
-    "shoreBiomes": [
-        "hot/shore/beach"
-    ],
-    "seaBiomes": [
-        "hot/sea/ocean",
-        "ocean/rich-oceans"
-    ],
-    "entitySpawners": [
-        "hot/passive",
-        "hot/hostile",
-        "hot/cave",
-        "hot/water"
-    ],
-    "deposits": [
-        {
-            "minHeight": 2,
-            "maxPerChunk": 20,
-            "maxHeight": 100,
-            "minPerChunk": 1,
-            "minSize": 3,
-            "maxSize": 8,
-            "palette": [
-                {
-                    "block": "minecraft:gold_ore"
-                }
-            ],
-            "varience": 5
+  "name": "Hot",
+  "color": "#D1CD44",
+  "rarity": 4,
+  "seaBiomeZoom": 3.5,
+  "landBiomes": [
+    "hot/desert-dunes",
+    "hot/small-valley",
+    "hot/desert-dunes-red",
+    "savanna/savanna",
+    "mesa/dark",
+    "savanna/plateau",
+    "savanna/forest",
+    "savanna/acacia-denmyre",
+    "mesa/plateau",
+    "mesa/valleys",
+    "mesa/plateau-high",
+    "mesa/valleys",
+    "mesa/mesa"
+  ],
+  "caveBiomes": [
+    "carving/sandstone",
+    "carving/red-sandstone",
+    "carving/volcanic",
+    "carving/deepdark/standard-deepdark"
+  ],
+  "objects": [
+    {
+      "heightmap": {
+        "seed": 1337,
+        "style": {
+          "style": "SIMPLEX",
+          "multiplier": 10
         },
+        "offsetY": 5
+      },
+      "chance": 0.05,
+      "bottom": true,
+      "density": 1,
+      "place": [],
+      "edit": [
         {
-            "minHeight": 15,
-            "maxPerChunk": 8,
-            "maxHeight": 70,
-            "minPerChunk": 1,
-            "minSize": 3,
-            "maxSize": 8,
+          "find": [
+            {
+              "block": "minecraft:glass"
+            }
+          ],
+          "replace": {
             "palette": [
-                {
-                    "block": "minecraft:lapis_ore"
-                }
-            ],
-            "varience": 5
+              {
+                "block": "minecraft:void_air"
+              }
+            ]
+          }
         }
-    ],
-    "landBiomeZoom": 7,
-    "effects": [
-        {
-            "potionTicksMin": 87,
-            "potionEffect": "CONFUSION",
-            "chance": 1200,
-            "potionStrength": 0,
-            "potionTicksMax": 67,
-            "interval": 500
-        },
-        {
-            "particleAltX": 0.001,
-            "particleAltY": 0.00885,
-            "particleAltZ": 0.001,
-            "chance": 2,
-            "particleEffect": "CAMPFIRE_SIGNAL_SMOKE",
-            "particleOffset": 0,
-            "interval": 1350,
-            "particleCount": 0
-        }
-    ],
-    "carving": {
-        "ravines": [
-            {
-                "rarity": 731,
-                "ravine": "drip/main"
-            },
-            {
-                "rarity": 331,
-                "ravine": "sandstone/main"
-            },
-            {
-                "rarity": 331,
-                "ravine": "red-sandstone/main"
-            }
-        ],
-        "caves": [
-            {
-                "breakSurface": true,
-                "cave": "sandstone/main",
-                "rarity": 20,
-                "caveStartHeight": {
-                    "max": 400,
-                    "min": 15,
-                    "style": {
-                        "style": "STATIC"
-                    }
-                }
-            },
-            {
-                "breakSurface": true,
-                "cave": "red-sandstone/main",
-                "rarity": 20,
-                "caveStartHeight": {
-                    "max": 400,
-                    "min": 15,
-                    "style": {
-                        "style": "STATIC"
-                    }
-                }
-            },
-            {
-                "breakSurface": true,
-                "cave": "mixed-sandstone/main",
-                "rarity": 15,
-                "caveStartHeight": {
-                    "max": 400,
-                    "min": 15,
-                    "style": {
-                        "style": "STATIC"
-                    }
-                }
-            },
-            {
-                "breakSurface": true,
-                "cave": "drip/main",
-                "rarity": 46,
-                "caveStartHeight": {
-                    "max": 400,
-                    "min": 15,
-                    "style": {
-                        "style": "STATIC"
-                    }
-                }
-            },
-            {
-                "breakSurface": true,
-                "cave": "rocky/main",
-                "rarity": 50,
-                "caveStartHeight": {
-                    "max": 400,
-                    "min": 15,
-                    "style": {
-                        "style": "STATIC"
-                    }
-                }
-            }
-        ]
-    },
-    "shoreHeightMin": 3.2,
-    "shoreHeightMax": 6.2,
-    "shoreHeightZoom": 1.14,
-    "loot": {
-        "mode": "FALLBACK",
-        "tables": [
-            "hot/food",
-            "hot/treasure"
-        ]
+      ],
+      "enabled": true,
+      "xAxis": {
+        "interval": 90,
+        "max": 360,
+        "min": 0
+      },
+      "yAxis": {
+        "interval": 90,
+        "max": 270,
+        "min": 0
+      },
+      "translate": {
+        "yRandom": 10,
+        "y": 2
+      }
     }
+  ],
+  "shoreBiomes": [
+    "hot/shore/beach"
+  ],
+  "seaBiomes": [
+    "hot/sea/ocean",
+    "ocean/rich-oceans"
+  ],
+  "entitySpawners": [
+    "hot/passive",
+    "hot/hostile",
+    "hot/cave",
+    "hot/water"
+  ],
+  "deposits": [
+    {
+      "minHeight": 2,
+      "maxPerChunk": 20,
+      "maxHeight": 100,
+      "minPerChunk": 1,
+      "minSize": 3,
+      "maxSize": 8,
+      "palette": [
+        {
+          "block": "minecraft:gold_ore"
+        }
+      ],
+      "varience": 5
+    },
+    {
+      "minHeight": 15,
+      "maxPerChunk": 8,
+      "maxHeight": 70,
+      "minPerChunk": 1,
+      "minSize": 3,
+      "maxSize": 8,
+      "palette": [
+        {
+          "block": "minecraft:lapis_ore"
+        }
+      ],
+      "varience": 5
+    }
+  ],
+  "landBiomeZoom": 7,
+  "effects": [
+    {
+      "potionTicksMin": 87,
+      "potionEffect": "CONFUSION",
+      "chance": 1200,
+      "potionStrength": 0,
+      "potionTicksMax": 67,
+      "interval": 500
+    },
+    {
+      "particleAltX": 0.001,
+      "particleAltY": 0.00885,
+      "particleAltZ": 0.001,
+      "chance": 2,
+      "particleEffect": "CAMPFIRE_SIGNAL_SMOKE",
+      "particleOffset": 0,
+      "interval": 1350,
+      "particleCount": 0
+    }
+  ],
+  "shoreHeightMin": 3.2,
+  "shoreHeightMax": 6.2,
+  "shoreHeightZoom": 1.14,
+  "loot": {
+    "mode": "FALLBACK",
+    "tables": [
+      "hot/food",
+      "hot/treasure"
+    ]
+  },
+  "caveProfile": {
+    "enabled": true,
+    "verticalRange": {
+      "min": 0,
+      "max": 300
+    },
+    "baseDensityStyle": {
+      "style": "CELLULAR_IRIS_DOUBLE",
+      "zoom": 1.9
+    },
+    "detailDensityStyle": {
+      "style": "SIMPLEX",
+      "zoom": 1.1
+    },
+    "warpStyle": {
+      "style": "FRACTAL_WATER",
+      "zoom": 0.92
+    },
+    "baseWeight": 1.0,
+    "detailWeight": 0.28,
+    "warpStrength": 3.5,
+    "densityThreshold": {
+      "min": -0.24,
+      "max": -0.06,
+      "style": {
+        "style": "SIMPLEX",
+        "zoom": 1.0
+      }
+    },
+    "modules": [
+      {
+        "style": {
+          "style": "VASCULAR_THIN",
+          "zoom": 1.45
+        },
+        "weight": 0.34,
+        "threshold": -0.1,
+        "verticalRange": {
+          "min": 8,
+          "max": 310
+        },
+        "invert": false
+      },
+      {
+        "style": {
+          "style": "CELLULAR_IRIS_DOUBLE",
+          "zoom": 2.0
+        },
+        "weight": 0.18,
+        "threshold": 0.12,
+        "verticalRange": {
+          "min": 20,
+          "max": 290
+        },
+        "invert": false
+      },
+      {
+        "style": {
+          "style": "CELLULAR",
+          "zoom": 2.4
+        },
+        "weight": 0.12,
+        "threshold": 0.28,
+        "verticalRange": {
+          "min": 0,
+          "max": 210
+        },
+        "invert": true
+      }
+    ],
+    "defaultObjectAnchor": "FLOOR",
+    "anchorScanStep": 1,
+    "allowWater": false,
+    "allowLava": true,
+    "thresholdBias": 0.28,
+    "sampleStep": 2,
+    "surfaceClearance": 5,
+    "allowSurfaceBreak": true,
+    "surfaceBreakStyle": {
+      "style": "SIMPLEX",
+      "zoom": 1.8
+    },
+    "surfaceBreakNoiseThreshold": 0.68,
+    "surfaceBreakDepth": 18,
+    "surfaceBreakThresholdBoost": 0.08,
+    "objectMinDepthBelowSurface": 10,
+    "surfaceObjectExclusionDepth": 6,
+    "waterMinDepthBelowSurface": 18,
+    "waterRequiresFloor": true
+  }
 }

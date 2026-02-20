@@ -1,56 +1,118 @@
 {
-    "name": "Sandstone Cavern",
-    "wall": {
-        "minHeight": 2,
-        "maxHeight": 2,
-        "style": {"style": "GLOB_IRIS_THICK"},
-        "zoom": 0.4,
-        "palette": [
-            {
-                "weight": 3,
-                "block": "minecraft:smooth_red_sandstone"
-            },
-            {
-                "block": "minecraft:smooth_sandstone",
-                "weight": 8
-            }
-        ]
+  "name": "Sandstone Cavern",
+  "wall": {
+    "minHeight": 2,
+    "maxHeight": 2,
+    "style": {
+      "style": "GLOB_IRIS_THICK"
     },
-    "layers": [{
-        "style": {"style": "GLOB_IRIS_THICK"},
-        "zoom": 0.4,
-        "palette": [
-            {
-                "weight": 3,
-                "block": "minecraft:smooth_red_sandstone"
-            },
-            {
-                "block": "minecraft:smooth_sandstone",
-                "weight": 8
-            }
-        ]
-    }],
-    "caveCeilingLayers": [{
-        "style": {"style": "GLOB_IRIS_THICK"},
-        "zoom": 0.4,
-        "palette": [
-            {
-                "weight": 2,
-                "block": "minecraft:smooth_sandstone"
-            },
-            {"block": "minecraft:red_sandstone"},
-            {
-                "weight": 3,
-                "block": "minecraft:smooth_red_sandstone"
-            },
-            {
-                "weight": 2,
-                "block": "minecraft:red_sandstone"
-            },
-            {
-                "block": "minecraft:smooth_sandstone",
-                "weight": 8
-            }
-        ]
-    }]
+    "zoom": 0.4,
+    "palette": [
+      {
+        "weight": 3,
+        "block": "minecraft:smooth_red_sandstone"
+      },
+      {
+        "block": "minecraft:smooth_sandstone",
+        "weight": 8
+      }
+    ]
+  },
+  "layers": [
+    {
+      "style": {
+        "style": "GLOB_IRIS_THICK"
+      },
+      "zoom": 0.4,
+      "palette": [
+        {
+          "weight": 3,
+          "block": "minecraft:smooth_red_sandstone"
+        },
+        {
+          "block": "minecraft:smooth_sandstone",
+          "weight": 8
+        }
+      ]
+    }
+  ],
+  "caveCeilingLayers": [
+    {
+      "style": {
+        "style": "GLOB_IRIS_THICK"
+      },
+      "zoom": 0.4,
+      "palette": [
+        {
+          "weight": 2,
+          "block": "minecraft:smooth_sandstone"
+        },
+        {
+          "block": "minecraft:red_sandstone"
+        },
+        {
+          "weight": 3,
+          "block": "minecraft:smooth_red_sandstone"
+        },
+        {
+          "weight": 2,
+          "block": "minecraft:red_sandstone"
+        },
+        {
+          "block": "minecraft:smooth_sandstone",
+          "weight": 8
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "chance": 0.12,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "clutter/rdesertpost1",
+        "clutter/rdesertpost2",
+        "clutter/rdesertpost3"
+      ],
+      "bottom": true
+    },
+    {
+      "chance": 0.12,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "structures/landstone1",
+        "structures/landstone2",
+        "structures/landstone3"
+      ],
+      "bottom": true
+    }
+  ]
 }

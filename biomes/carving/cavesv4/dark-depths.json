@@ -1,28 +1,89 @@
 {
-    "name": "Dark depths",
-    "vanillaDerivative": "minecraft:deep_dark",
-    "derivative": "minecraft:deep_dark",
-    "wall": {"palette": [
-        {"block": "minecraft:black_concrete", "weight": 25},
-        {"block": "minecraft:crying_obsidian", "weight": 1}
-
-        ]},
-
-    "layers": [{
-        "maxHeight": 1,
-        "minHeight": 1,
-        "palette": [
-            {"block": "minecraft:obsidian"}
-        ]
-    }],
-
-
-    "caveCeilingLayers": [
+  "name": "Dark depths",
+  "vanillaDerivative": "minecraft:deep_dark",
+  "derivative": "minecraft:deep_dark",
+  "wall": {
+    "palette": [
+      {
+        "block": "minecraft:black_concrete",
+        "weight": 25
+      },
+      {
+        "block": "minecraft:crying_obsidian",
+        "weight": 1
+      }
+    ]
+  },
+  "layers": [
     {
-        "maxHeight": 3,
-        "minHeight": 2,
-        "palette": [
-            {"block": "minecraft:black_concrete" }
-        ]
-    }]
+      "maxHeight": 1,
+      "minHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:obsidian"
+        }
+      ]
+    }
+  ],
+  "caveCeilingLayers": [
+    {
+      "maxHeight": 3,
+      "minHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:black_concrete"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "chance": 0.12,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "clutter/bonespire14",
+        "clutter/bonespire15",
+        "clutter/skull1"
+      ],
+      "bottom": true
+    },
+    {
+      "chance": 0.12,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "structures/deepslate1",
+        "structures/deepslate2",
+        "structures/deepslate3"
+      ],
+      "bottom": true
+    }
+  ]
 }

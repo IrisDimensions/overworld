@@ -1,176 +1,211 @@
 {
-    "name": "Tropical",
-    "color": "#54EA2C",
-    "rarity": 2,
-    "landBiomes": [
-        "tropical/rainforest",
-        "tropical/volcanic-plains",
-        "tropical/rainforest-hills",
-        "tropical/wilds",
-        "tropical/plains",
-        "tropical/bamboo-forest",
-        "tropical/rainforest-wicked",
-        "tropical/mountain",
-        "tropical/mountain-extreme",
-        "tropical/mountain-plains",
-        "tropical/plains-hills"
-    ],
-    "caveBiomes": [
-        "carving/rocky-cavebiome"
-    ],
-    "objects": [
+  "name": "Tropical",
+  "color": "#54EA2C",
+  "rarity": 2,
+  "landBiomes": [
+    "tropical/rainforest",
+    "tropical/volcanic-plains",
+    "tropical/rainforest-hills",
+    "tropical/wilds",
+    "tropical/plains",
+    "tropical/bamboo-forest",
+    "tropical/rainforest-wicked",
+    "tropical/mountain",
+    "tropical/mountain-extreme",
+    "tropical/mountain-plains",
+    "tropical/plains-hills"
+  ],
+  "caveBiomes": [
+    "carving/jungle",
+    "carving/lush",
+    "carving/volcanic",
+    "carving/deepdark/standard-deepdark"
+  ],
+  "objects": [
+    {
+      "heightmap": {
+        "seed": 1337,
+        "style": {
+          "style": "SIMPLEX",
+          "multiplier": 10
+        },
+        "offsetY": 5
+      },
+      "chance": 0.05,
+      "bottom": true,
+      "density": 1,
+      "place": [],
+      "edit": [
         {
-            "heightmap": {
-                "seed": 1337,
-                "style": {
-                    "style": "SIMPLEX",
-                    "multiplier": 10
-                },
-                "offsetY": 5
-            },
-            "chance": 0.05,
-            "bottom": true,
-            "density": 1,
-            "place": [],
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "minecraft:glass"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "minecraft:void_air"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "enabled": true,
-            "xAxis": {
-                "interval": 90,
-                "max": 360,
-                "min": 0
-            },
-            "yAxis": {
-                "interval": 90,
-                "max": 270,
-                "min": 0
-            },
-            "translate": {
-                "yRandom": 10,
-                "y": 2
+          "find": [
+            {
+              "block": "minecraft:glass"
             }
-        }
-    ],
-    "shoreBiomes": [
-        "tropical/island-beach",
-        "tropical/beach",
-        "tropical/beach-bamboo"
-    ],
-    "seaBiomeZoom": 4,
-    "seaBiomes": [
-        "tropical/submerged-volcanic",
-        "tropical/sea/ocean",
-        "ocean/dark-depth-ocean",
-        "ocean/rich-oceans"
-    ],
-    "carving": {
-        "ravines": [
-            {
-                "rarity": 170,
-                "ravine": "jungle/main"
-            }
-        ],
-        "caves": [
-            {
-                "breakSurface": true,
-                "cave": "volcanic/main",
-                "rarity": 75,
-                "caveStartHeight": {
-                    "max": 400,
-                    "min": 15,
-                    "style": {
-                        "style": "STATIC"
-                    }
-                }
-            },
-            {
-                "breakSurface": true,
-                "cave": "drip/main",
-                "rarity": 45,
-                "caveStartHeight": {
-                    "max": 400,
-                    "min": 15,
-                    "style": {
-                        "style": "STATIC"
-                    }
-                }
-            },
-            {
-                "breakSurface": true,
-                "cave": "rocky/main",
-                "rarity": 50,
-                "caveStartHeight": {
-                    "max": 400,
-                    "min": 15,
-                    "style": {
-                        "style": "STATIC"
-                    }
-                }
-            },
-            {
-                "breakSurface": true,
-                "cave": "jungle/main",
-                "rarity": 25,
-                "caveStartHeight": {
-                    "max": 400,
-                    "min": 15,
-                    "style": {
-                        "style": "STATIC"
-                    }
-                }
-            }
-        ]
-    },
-    "deposits": [
-        {
-            "minHeight": 10,
-            "maxPerChunk": 9,
-            "maxHeight": 92,
-            "minPerChunk": 2,
-            "minSize": 3,
-            "maxSize": 8,
+          ],
+          "replace": {
             "palette": [
-                {
-                    "block": "minecraft:lapis_ore"
-                },
-                {
-                    "block": "minecraft:redstone_ore"
-                }
-            ],
-            "varience": 8
+              {
+                "block": "minecraft:void_air"
+              }
+            ]
+          }
         }
-    ],
-    "entitySpawners": [
-        "tropical/passive",
-        "tropical/hostile",
-        "tropical/water",
-        "tropical/cave",
-        "tropical/beach"
-    ],
-    "landBiomeZoom": 5.5,
-    "shoreHeightMin": 3.2,
-    "shoreHeightMax": 9.2,
-    "shoreHeightZoom": 2.14,
-    "loot": {
-        "mode": "FALLBACK",
-        "tables": [
-            "tropical/treasure",
-            "tropical/food",
-            "tropical/dungeon"
-        ]
+      ],
+      "enabled": true,
+      "xAxis": {
+        "interval": 90,
+        "max": 360,
+        "min": 0
+      },
+      "yAxis": {
+        "interval": 90,
+        "max": 270,
+        "min": 0
+      },
+      "translate": {
+        "yRandom": 10,
+        "y": 2
+      }
     }
+  ],
+  "shoreBiomes": [
+    "tropical/island-beach",
+    "tropical/beach",
+    "tropical/beach-bamboo"
+  ],
+  "seaBiomeZoom": 4,
+  "seaBiomes": [
+    "tropical/submerged-volcanic",
+    "tropical/sea/ocean",
+    "ocean/dark-depth-ocean",
+    "ocean/rich-oceans"
+  ],
+  "deposits": [
+    {
+      "minHeight": 10,
+      "maxPerChunk": 9,
+      "maxHeight": 92,
+      "minPerChunk": 2,
+      "minSize": 3,
+      "maxSize": 8,
+      "palette": [
+        {
+          "block": "minecraft:lapis_ore"
+        },
+        {
+          "block": "minecraft:redstone_ore"
+        }
+      ],
+      "varience": 8
+    }
+  ],
+  "entitySpawners": [
+    "tropical/passive",
+    "tropical/hostile",
+    "tropical/water",
+    "tropical/cave",
+    "tropical/beach"
+  ],
+  "landBiomeZoom": 5.5,
+  "shoreHeightMin": 3.2,
+  "shoreHeightMax": 9.2,
+  "shoreHeightZoom": 2.14,
+  "loot": {
+    "mode": "FALLBACK",
+    "tables": [
+      "tropical/treasure",
+      "tropical/food",
+      "tropical/dungeon"
+    ]
+  },
+  "caveProfile": {
+    "enabled": true,
+    "verticalRange": {
+      "min": 0,
+      "max": 360
+    },
+    "baseDensityStyle": {
+      "style": "CELLULAR_IRIS_DOUBLE",
+      "zoom": 1.9
+    },
+    "detailDensityStyle": {
+      "style": "SIMPLEX",
+      "zoom": 1.1
+    },
+    "warpStyle": {
+      "style": "FRACTAL_WATER",
+      "zoom": 0.92
+    },
+    "baseWeight": 1.0,
+    "detailWeight": 0.28,
+    "warpStrength": 3.5,
+    "densityThreshold": {
+      "min": -0.24,
+      "max": -0.06,
+      "style": {
+        "style": "SIMPLEX",
+        "zoom": 1.0
+      }
+    },
+    "modules": [
+      {
+        "style": {
+          "style": "VASCULAR_THIN",
+          "zoom": 1.45
+        },
+        "weight": 0.34,
+        "threshold": -0.1,
+        "verticalRange": {
+          "min": 8,
+          "max": 310
+        },
+        "invert": false
+      },
+      {
+        "style": {
+          "style": "CELLULAR_IRIS_DOUBLE",
+          "zoom": 2.0
+        },
+        "weight": 0.18,
+        "threshold": 0.12,
+        "verticalRange": {
+          "min": 20,
+          "max": 290
+        },
+        "invert": false
+      },
+      {
+        "style": {
+          "style": "CELLULAR",
+          "zoom": 2.4
+        },
+        "weight": 0.12,
+        "threshold": 0.28,
+        "verticalRange": {
+          "min": 0,
+          "max": 210
+        },
+        "invert": true
+      }
+    ],
+    "defaultObjectAnchor": "FLOOR",
+    "anchorScanStep": 1,
+    "allowWater": true,
+    "allowLava": true,
+    "thresholdBias": 0.28,
+    "sampleStep": 2,
+    "surfaceClearance": 5,
+    "allowSurfaceBreak": true,
+    "surfaceBreakStyle": {
+      "style": "SIMPLEX",
+      "zoom": 1.8
+    },
+    "surfaceBreakNoiseThreshold": 0.68,
+    "surfaceBreakDepth": 18,
+    "surfaceBreakThresholdBoost": 0.08,
+    "objectMinDepthBelowSurface": 10,
+    "surfaceObjectExclusionDepth": 6,
+    "waterMinDepthBelowSurface": 18,
+    "waterRequiresFloor": true
+  }
 }

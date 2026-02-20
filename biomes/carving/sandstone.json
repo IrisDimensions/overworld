@@ -1,23 +1,88 @@
 {
-    "name": "Red Sandstone Cavern",
-    "wall": {
-        "style": {"style": "VASCULAR"},
-        "palette": [{"block": "minecraft:sandstone"}]
+  "name": "Red Sandstone Cavern",
+  "wall": {
+    "style": {
+      "style": "VASCULAR"
     },
-    "layers": [{
-        "maxHeight": 2,
-        "minHeight": 2,
-        "palette": [{
-            "block": "minecraft:smooth_sandstone",
-            "weight": 8
-        }]
-    }],
-    "caveCeilingLayers": [{
-        "maxHeight": 2,
-        "minHeight": 2,
-        "palette": [{
-            "block": "minecraft:smooth_sandstone",
-            "weight": 8
-        }]
-    }]
+    "palette": [
+      {
+        "block": "minecraft:sandstone"
+      }
+    ]
+  },
+  "layers": [
+    {
+      "maxHeight": 2,
+      "minHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:smooth_sandstone",
+          "weight": 8
+        }
+      ]
+    }
+  ],
+  "caveCeilingLayers": [
+    {
+      "maxHeight": 2,
+      "minHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:smooth_sandstone",
+          "weight": 8
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "chance": 0.12,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "trees/oak/arid4",
+        "trees/oak/arid5",
+        "trees/oak/arid6",
+        "trees/oak/arid7"
+      ],
+      "bottom": true
+    },
+    {
+      "chance": 0.12,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "structures/landstone1",
+        "structures/landstone2",
+        "structures/landstone3"
+      ],
+      "bottom": true
+    }
+  ]
 }

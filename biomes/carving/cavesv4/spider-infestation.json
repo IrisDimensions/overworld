@@ -1,35 +1,103 @@
 {
-    "name": "Spider Infestation",
-    "wall": {"palette": [{"block": "minecraft:tuff"}]},
-    "entitySpawners": [
-        "cavesv4/spider-infestation"
-    ],
-    "layers": [{
-        "maxHeight": 1,
-        "minHeight": 1,
-        "palette": [
-            {"block": "minecraft:calcite"},
-            {"block": "minecraft:bone_block"}
-        ]
-    }],
-    "decorators": [ {
-            "chance": 0.2,
-            "scaleStack": true,
-            "stackMin": 30,
-            "stackMax": 60,
-            "partOf": "CEILING",
-            "absoluteMaxStack": 5,
-            "palette": [
-                {"block": "minecraft:cobweb"}
-            ]
-        }],
-
-    "caveCeilingLayers": [
+  "name": "Spider Infestation",
+  "wall": {
+    "palette": [
+      {
+        "block": "minecraft:tuff"
+      }
+    ]
+  },
+  "entitySpawners": [
+    "cavesv4/spider-infestation"
+  ],
+  "layers": [
     {
-        "maxHeight": 1,
-        "minHeight": 1,
-        "palette": [
-            {"block": "minecraft:stone"}
-        ]
-    }]
+      "maxHeight": 1,
+      "minHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:calcite"
+        },
+        {
+          "block": "minecraft:bone_block"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.2,
+      "scaleStack": true,
+      "stackMin": 30,
+      "stackMax": 60,
+      "partOf": "CEILING",
+      "absoluteMaxStack": 5,
+      "palette": [
+        {
+          "block": "minecraft:cobweb"
+        }
+      ]
+    }
+  ],
+  "caveCeilingLayers": [
+    {
+      "maxHeight": 1,
+      "minHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "chance": 0.12,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "clutter/bonespire14",
+        "clutter/bonespire15",
+        "clutter/skull1"
+      ],
+      "bottom": true
+    },
+    {
+      "chance": 0.12,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "structures/deepslate1",
+        "structures/deepslate2",
+        "structures/deepslate3"
+      ],
+      "bottom": true
+    }
+  ]
 }

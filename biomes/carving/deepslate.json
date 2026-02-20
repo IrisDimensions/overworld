@@ -1,21 +1,89 @@
 {
-    "name": "Deepslate Cavern",
-    "wall": {"palette": [{"block": "minecraft:deepslate"}]},
-    "layers": [{
-        "style": {
-            "style": "STATIC",
-            "zoom": 0.5
+  "name": "Deepslate Cavern",
+  "wall": {
+    "palette": [
+      {
+        "block": "minecraft:deepslate"
+      }
+    ]
+  },
+  "layers": [
+    {
+      "style": {
+        "style": "STATIC",
+        "zoom": 0.5
+      },
+      "maxHeight": 2,
+      "minHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:deepslate"
         },
-        "maxHeight": 2,
-        "minHeight": 2,
-        "palette": [
-            {"block": "minecraft:deepslate"},
-            {"block": "minecraft:tuff"}
-        ]
-    }],
-    "caveCeilingLayers": [{
-        "maxHeight": 2,
-        "minHeight": 2,
-        "palette": [{"block": "minecraft:deepslate"}]
-    }]
+        {
+          "block": "minecraft:tuff"
+        }
+      ]
+    }
+  ],
+  "caveCeilingLayers": [
+    {
+      "maxHeight": 2,
+      "minHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:deepslate"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "chance": 0.12,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "clutter/bonespire14",
+        "clutter/bonespire15",
+        "clutter/skull1"
+      ],
+      "bottom": true
+    },
+    {
+      "chance": 0.12,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "structures/deepslate1",
+        "structures/deepslate2",
+        "structures/deepslate3"
+      ],
+      "bottom": true
+    }
+  ]
 }

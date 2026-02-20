@@ -1,166 +1,220 @@
 {
-    "name": "Temperate",
-    "color": "#9BEE61",
-    "rarity": 1,
-    "landBiomes": [
-        "temperate/plains",
-        "temperate/combo-forest",
-        "temperate/reaching-forest",
-        "temperate/wilds",
-        "temperate/cherry-blossom-forest",
-        "temperate/stranged-plains",
-        "temperate/lush-plains",
-        "mountain/plains",
-        "temperate/birch-thin",
-        "temperate/birch-forest",
-        "temperate/longtree-forest",
-        "temperate/oak-forest",
-        "temperate/osaka-violet-forest",
-        "temperate/osaka-red-forest",
-        "mountain/Cute_Cliffs",
-        "temperate/roughplains",
-        "temperate/calmplains",
-        "temperate/fancyplains",
-        "temperate/sakura-forest",
-        "temperate/oak-forest-flat",
-        "temperate/croak"
-    ],
-    "caveBiomes": [
-        "carving/rocky-cavebiome"
-    ],
-    "objects": [
+  "name": "Temperate",
+  "color": "#9BEE61",
+  "rarity": 1,
+  "landBiomes": [
+    "temperate/plains",
+    "temperate/combo-forest",
+    "temperate/reaching-forest",
+    "temperate/wilds",
+    "temperate/cherry-blossom-forest",
+    "temperate/stranged-plains",
+    "temperate/lush-plains",
+    "mountain/plains",
+    "temperate/birch-thin",
+    "temperate/birch-forest",
+    "temperate/longtree-forest",
+    "temperate/oak-forest",
+    "temperate/osaka-violet-forest",
+    "temperate/osaka-red-forest",
+    "mountain/Cute_Cliffs",
+    "temperate/roughplains",
+    "temperate/calmplains",
+    "temperate/fancyplains",
+    "temperate/sakura-forest",
+    "temperate/oak-forest-flat",
+    "temperate/croak"
+  ],
+  "caveBiomes": [
+    "carving/rocky-cavebiome",
+    "carving/drip",
+    "carving/deepdark/standard-deepdark"
+  ],
+  "objects": [
+    {
+      "heightmap": {
+        "seed": 1337,
+        "style": {
+          "style": "SIMPLEX",
+          "multiplier": 10
+        },
+        "offsetY": 5
+      },
+      "chance": 0.05,
+      "bottom": true,
+      "density": 1,
+      "place": [],
+      "edit": [
         {
-            "heightmap": {
-                "seed": 1337,
-                "style": {
-                    "style": "SIMPLEX",
-                    "multiplier": 10
-                },
-                "offsetY": 5
-            },
-            "chance": 0.05,
-            "bottom": true,
-            "density": 1,
-            "place": [],
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "minecraft:glass"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "minecraft:void_air"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "enabled": true,
-            "xAxis": {
-                "interval": 90,
-                "max": 360,
-                "min": 0
-            },
-            "yAxis": {
-                "interval": 90,
-                "max": 270,
-                "min": 0
-            },
-            "translate": {
-                "yRandom": 10,
-                "y": 2
+          "find": [
+            {
+              "block": "minecraft:glass"
             }
-        }
-    ],
-    "shoreBiomes": [
-        "temperate/shore/beach",
-        "temperate/shore/oak-beach"
-    ],
-    "seaBiomeZoom": 6,
-    "seaBiomes": [
-        "ocean/deep",
-        "ocean/dark-depth-ocean",
-        "ocean/rich-oceans"
-    ],
-    "ENTITY_SPAWNS": "ALL ENTITY SPAWNS FOR THE REGION",
-    "entitySpawners": [
-        "temperate/passive",
-        "temperate/hostile",
-        "temperate/cave",
-        "temperate/water"
-    ],
-    "shoreBiomeZoom": 0.15,
-    "deposits": [
-        {
-            "minHeight": 15,
-            "maxPerChunk": 26,
-            "maxHeight": 410,
-            "minPerChunk": 4,
-            "minSize": 3,
-            "maxSize": 8,
+          ],
+          "replace": {
             "palette": [
-                {
-                    "block": "minecraft:iron_ore"
-                },
-                {
-                    "block": "minecraft:coal_ore"
-                }
-            ],
-            "varience": 4
+              {
+                "block": "minecraft:void_air"
+              }
+            ]
+          }
         }
-    ],
-    "carving": {
-        "ravines": [
-            {
-                "rarity": 421,
-                "ravine": "drip/main"
-            },
-            {
-                "rarity": 271,
-                "ravine": "rocky/main"
-            }
-        ],
-        "caves": [
-            {
-                "breakSurface": true,
-                "cave": "drip/main",
-                "rarity": 30,
-                "caveStartHeight": {
-                    "max": 400,
-                    "min": 15,
-                    "style": {
-                        "style": "STATIC"
-                    }
-                }
-            },
-            {
-                "breakSurface": true,
-                "cave": "rocky/main",
-                "rarity": 15,
-                "caveStartHeight": {
-                    "max": 400,
-                    "min": 15,
-                    "style": {
-                        "style": "STATIC"
-                    }
-                }
-            }
-        ]
-    },
-    "riverRarity": 1,
-    "landBiomeZoom": 3.5,
-    "shoreHeightMin": 1,
-    "shoreHeightMax": 5.2,
-    "shoreHeightZoom": 1.14,
-    "riverThickness": 0.025,
-    "loot": {
-        "mode": "FALLBACK",
-        "tables": [
-            "temperate/clutter",
-            "temperate/food"
-        ]
+      ],
+      "enabled": true,
+      "xAxis": {
+        "interval": 90,
+        "max": 360,
+        "min": 0
+      },
+      "yAxis": {
+        "interval": 90,
+        "max": 270,
+        "min": 0
+      },
+      "translate": {
+        "yRandom": 10,
+        "y": 2
+      }
     }
+  ],
+  "shoreBiomes": [
+    "temperate/shore/beach",
+    "temperate/shore/oak-beach"
+  ],
+  "seaBiomeZoom": 6,
+  "seaBiomes": [
+    "ocean/deep",
+    "ocean/dark-depth-ocean",
+    "ocean/rich-oceans"
+  ],
+  "ENTITY_SPAWNS": "ALL ENTITY SPAWNS FOR THE REGION",
+  "entitySpawners": [
+    "temperate/passive",
+    "temperate/hostile",
+    "temperate/cave",
+    "temperate/water"
+  ],
+  "shoreBiomeZoom": 0.15,
+  "deposits": [
+    {
+      "minHeight": 15,
+      "maxPerChunk": 26,
+      "maxHeight": 410,
+      "minPerChunk": 4,
+      "minSize": 3,
+      "maxSize": 8,
+      "palette": [
+        {
+          "block": "minecraft:iron_ore"
+        },
+        {
+          "block": "minecraft:coal_ore"
+        }
+      ],
+      "varience": 4
+    }
+  ],
+  "riverRarity": 1,
+  "landBiomeZoom": 3.5,
+  "shoreHeightMin": 1,
+  "shoreHeightMax": 5.2,
+  "shoreHeightZoom": 1.14,
+  "riverThickness": 0.025,
+  "loot": {
+    "mode": "FALLBACK",
+    "tables": [
+      "temperate/clutter",
+      "temperate/food"
+    ]
+  },
+  "caveProfile": {
+    "enabled": true,
+    "verticalRange": {
+      "min": 0,
+      "max": 384
+    },
+    "baseDensityStyle": {
+      "style": "CELLULAR_IRIS_DOUBLE",
+      "zoom": 1.9
+    },
+    "detailDensityStyle": {
+      "style": "SIMPLEX",
+      "zoom": 1.1
+    },
+    "warpStyle": {
+      "style": "FRACTAL_WATER",
+      "zoom": 0.92
+    },
+    "baseWeight": 1.0,
+    "detailWeight": 0.28,
+    "warpStrength": 3.5,
+    "densityThreshold": {
+      "min": -0.24,
+      "max": -0.06,
+      "style": {
+        "style": "SIMPLEX",
+        "zoom": 1.0
+      }
+    },
+    "modules": [
+      {
+        "style": {
+          "style": "VASCULAR_THIN",
+          "zoom": 1.45
+        },
+        "weight": 0.34,
+        "threshold": -0.1,
+        "verticalRange": {
+          "min": 8,
+          "max": 310
+        },
+        "invert": false
+      },
+      {
+        "style": {
+          "style": "CELLULAR_IRIS_DOUBLE",
+          "zoom": 2.0
+        },
+        "weight": 0.18,
+        "threshold": 0.12,
+        "verticalRange": {
+          "min": 20,
+          "max": 290
+        },
+        "invert": false
+      },
+      {
+        "style": {
+          "style": "CELLULAR",
+          "zoom": 2.4
+        },
+        "weight": 0.12,
+        "threshold": 0.28,
+        "verticalRange": {
+          "min": 0,
+          "max": 210
+        },
+        "invert": true
+      }
+    ],
+    "defaultObjectAnchor": "FLOOR",
+    "anchorScanStep": 1,
+    "allowWater": true,
+    "allowLava": true,
+    "thresholdBias": 0.28,
+    "sampleStep": 2,
+    "surfaceClearance": 5,
+    "allowSurfaceBreak": true,
+    "surfaceBreakStyle": {
+      "style": "SIMPLEX",
+      "zoom": 1.8
+    },
+    "surfaceBreakNoiseThreshold": 0.68,
+    "surfaceBreakDepth": 18,
+    "surfaceBreakThresholdBoost": 0.08,
+    "objectMinDepthBelowSurface": 10,
+    "surfaceObjectExclusionDepth": 6,
+    "waterMinDepthBelowSurface": 18,
+    "waterRequiresFloor": true
+  }
 }

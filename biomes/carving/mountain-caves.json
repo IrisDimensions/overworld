@@ -1,44 +1,108 @@
 {
-    "name": "M cave",
-    "wall": {
-        "style": {"style": "STATIC"},
-        "palette": [
-            {
-                "block": "minecraft:stone",
-                "weight": 3
-            },
-            {"block": "minecraft:cobblestone"},
-            {"block": "minecraft:stone"}
-        ]
+  "name": "M cave",
+  "wall": {
+    "style": {
+      "style": "STATIC"
     },
-    "layers": [{
-        "style": {"style": "STATIC"},
-        "maxHeight": 2,
-        "minHeight": 2,
-        "palette": [
-            {
-                "block": "minecraft:stone",
-                "weight": 3
-            },
-            {
-                "block": "minecraft:andesite",
-                "weight": 3
-            }
-        ]
-    }],
-    "caveCeilingLayers": [{
-        "style": {"style": "STATIC"},
-        "maxHeight": 2,
-        "minHeight": 2,
-        "palette": [
-            {
-                "block": "minecraft:stone",
-                "weight": 3
-            },
-            {
-                "block": "minecraft:andesite",
-                "weight": 3
-            }
-        ]
-    }]
+    "palette": [
+      {
+        "block": "minecraft:stone",
+        "weight": 3
+      },
+      {
+        "block": "minecraft:cobblestone"
+      },
+      {
+        "block": "minecraft:stone"
+      }
+    ]
+  },
+  "layers": [
+    {
+      "style": {
+        "style": "STATIC"
+      },
+      "maxHeight": 2,
+      "minHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:stone",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:andesite",
+          "weight": 3
+        }
+      ]
+    }
+  ],
+  "caveCeilingLayers": [
+    {
+      "style": {
+        "style": "STATIC"
+      },
+      "maxHeight": 2,
+      "minHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:stone",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:andesite",
+          "weight": 3
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "chance": 0.12,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "clutter/stoneclutt4",
+        "clutter/stoneclutt5",
+        "clutter/stoneclutt6"
+      ],
+      "bottom": true
+    },
+    {
+      "chance": 0.12,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "structures/cave4",
+        "structures/cave5",
+        "structures/cave6"
+      ],
+      "bottom": true
+    }
+  ]
 }

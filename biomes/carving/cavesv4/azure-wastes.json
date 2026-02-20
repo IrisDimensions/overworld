@@ -1,56 +1,140 @@
 {
-    "name": "Azure Wastes",
-    "vanillaDerivative": "minecraft:jungle",
-    "wall": {"palette": [
-        {"block": "minecraft:stone"},
-        {"block": "minecraft:cobblestone"},
-        {"block": "minecraft:mossy_cobblestone"}
-
-        ]},
-    "layers": [{
-        "maxHeight": 1,
-        "minHeight": 1,
-        "palette": [
-            {"block": "minecraft:grass_block", "weight": 2}
-        ]
-    }],
-    "decorators": [
+  "name": "Azure Wastes",
+  "vanillaDerivative": "minecraft:jungle",
+  "wall": {
+    "palette": [
+      {
+        "block": "minecraft:stone"
+      },
+      {
+        "block": "minecraft:cobblestone"
+      },
+      {
+        "block": "minecraft:mossy_cobblestone"
+      }
+    ]
+  },
+  "layers": [
     {
-        "chance": 0.2,
-        "scaleStack": true,
-        "stackMin": 10,
-        "stackMax": 20,
-        "partOf": "CEILING",
-        "absoluteMaxStack": 5,
-        "palette": [{"block": "minecraft:jungle_leaves"}]
+      "maxHeight": 1,
+      "minHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:grass_block",
+          "weight": 2
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.2,
+      "scaleStack": true,
+      "stackMin": 10,
+      "stackMax": 20,
+      "partOf": "CEILING",
+      "absoluteMaxStack": 5,
+      "palette": [
+        {
+          "block": "minecraft:jungle_leaves"
+        }
+      ]
     },
     {
-        "chance": 0.05,
-        "style": {"style": "STATIC"},
-        "partOf": "CEILING",
-        "palette": [{"block": "minecraft:shroomlight"}]
+      "chance": 0.05,
+      "style": {
+        "style": "STATIC"
+      },
+      "partOf": "CEILING",
+      "palette": [
+        {
+          "block": "minecraft:shroomlight"
+        }
+      ]
     },
     {
-        "chance": 0.35,
-        "style": {"style": "STATIC"},
-        "palette": [
-            {"block": "minecraft:tall_grass"}
-            ]
+      "chance": 0.35,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:tall_grass"
+        }
+      ]
     },
-     {
-        "chance": 0.35,
-        "style": {"style": "STATIC"},
-        "palette": [
-            {"block": "minecraft:short_grass"}
-            ]
-    }],
-
-    "caveCeilingLayers": [
-         {
-        "maxHeight": 1,
-        "minHeight": 1,
-        "palette": [
-            {"block": "minecraft:jungle_leaves"}
-        ]
-    }]
+    {
+      "chance": 0.35,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:short_grass"
+        }
+      ]
+    }
+  ],
+  "caveCeilingLayers": [
+    {
+      "maxHeight": 1,
+      "minHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:jungle_leaves"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "chance": 0.12,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "trees/jungle/sgeneric1",
+        "trees/jungle/sgeneric2",
+        "trees/jungle/sgeneric3",
+        "trees/jungle/sgeneric4"
+      ],
+      "bottom": true
+    },
+    {
+      "chance": 0.12,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "structures/crystal1",
+        "structures/crystal2",
+        "structures/crystal3"
+      ],
+      "bottom": true
+    }
+  ]
 }

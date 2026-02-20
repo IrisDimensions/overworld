@@ -1,51 +1,124 @@
 {
-    "name": "Mantle Core Tubes",
-    "wall": {
-        "palette": [
-            {"block": "minecraft:deepslate", "weight": 5},
-            {"block": "minecraft:obsidian", "weight": 1}
-            ],
-            "style":{
-                "style": "IRIS",
-                "zoom": 1
-            }
-
-            },
-    "layers": [{
-        "maxHeight": 1,
-        "minHeight": 1,
-        "palette": [
-            {"block": "minecraft:netherrack", "weight": 5},
-            {"block": "minecraft:crimson_nylium", "weight": 1}
-        ]
-    }],
-    "decorators": [
-         {
-        "chance": 0.5,
-        "style": {"style": "STATIC"},
-        "whitelist": [
-            {
-                "block": "minecraft:netherrack"
-            }
-        ],
-
-        "palette": [{"block": "minecraft:fire"}]
-    },
-         {
-            "chance": 0.0005,
-            "stackMin": 3,
-            "stackMax": 2,
-            "palette": [
-                {"block": "minecraft:bone_block"}
-            ]
-        }],
-
-    "caveCeilingLayers": [
+  "name": "Mantle Core Tubes",
+  "wall": {
+    "palette": [
+      {
+        "block": "minecraft:deepslate",
+        "weight": 5
+      },
+      {
+        "block": "minecraft:obsidian",
+        "weight": 1
+      }
+    ],
+    "style": {
+      "style": "IRIS",
+      "zoom": 1
+    }
+  },
+  "layers": [
     {
-        "maxHeight": 1,
-        "minHeight": 1,
-        "palette": [
-            {"block": "minecraft:netherrack"}
-        ]
-    }]
+      "maxHeight": 1,
+      "minHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:netherrack",
+          "weight": 5
+        },
+        {
+          "block": "minecraft:crimson_nylium",
+          "weight": 1
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.5,
+      "style": {
+        "style": "STATIC"
+      },
+      "whitelist": [
+        {
+          "block": "minecraft:netherrack"
+        }
+      ],
+      "palette": [
+        {
+          "block": "minecraft:fire"
+        }
+      ]
+    },
+    {
+      "chance": 0.0005,
+      "stackMin": 3,
+      "stackMax": 2,
+      "palette": [
+        {
+          "block": "minecraft:bone_block"
+        }
+      ]
+    }
+  ],
+  "caveCeilingLayers": [
+    {
+      "maxHeight": 1,
+      "minHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:netherrack"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "chance": 0.12,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "clutter/magmaspire1",
+        "clutter/magmaspire2",
+        "clutter/magmaspire3"
+      ],
+      "bottom": true
+    },
+    {
+      "chance": 0.12,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "trees/mushroom/crimsonwood1",
+        "trees/mushroom/crimsonwood2",
+        "trees/mushroom/crimsonwood3"
+      ],
+      "bottom": true
+    }
+  ]
 }

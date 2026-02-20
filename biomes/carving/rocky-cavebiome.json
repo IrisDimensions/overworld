@@ -1,10 +1,61 @@
 {
-    "name": "RockyHollows",
-    "vanillaDerivative": "minecraft:the_void",
-    "generators": [{
-        "generator": "rare-hills",
-        "max": 1,
-        "min": 1
-        }]
-
+  "name": "RockyHollows",
+  "vanillaDerivative": "minecraft:the_void",
+  "generators": [
+    {
+      "generator": "rare-hills",
+      "max": 1,
+      "min": 1
+    }
+  ],
+  "objects": [
+    {
+      "chance": 0.12,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "clutter/stoneclutt1",
+        "clutter/stoneclutt2",
+        "clutter/stoneclutt3"
+      ],
+      "bottom": true
+    },
+    {
+      "chance": 0.12,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "structures/cave1",
+        "structures/cave2",
+        "structures/cave3"
+      ],
+      "bottom": true
+    }
+  ]
 }

@@ -1,42 +1,108 @@
 {
-    "name": "Volcanic Cavern",
-    "wall": {"palette": [
+  "name": "Volcanic Cavern",
+  "wall": {
+    "palette": [
+      {
+        "block": "minecraft:smooth_basalt",
+        "weight": 10
+      },
+      {
+        "block": "minecraft:magma_block"
+      }
+    ]
+  },
+  "layers": [
+    {
+      "maxHeight": 2,
+      "minHeight": 2,
+      "palette": [
         {
-            "block": "minecraft:smooth_basalt",
-            "weight": 10
+          "block": "minecraft:smooth_basalt",
+          "weight": 3
         },
-        {"block": "minecraft:magma_block"}
-    ]},
-    "layers": [{
-        "maxHeight": 2,
-        "minHeight": 2,
-        "palette": [
-            {
-                "block": "minecraft:smooth_basalt",
-                "weight": 3
-            },
-            {
-                "block": "minecraft:basalt",
-                "data": {"axis": "y"},
-                "weight": 7
-            },
-            {"block": "minecraft:magma_block"}
-        ]
-    }],
-    "caveCeilingLayers": [{
-        "maxHeight": 2,
-        "minHeight": 2,
-        "palette": [
-            {
-                "block": "minecraft:smooth_basalt",
-                "weight": 3
-            },
-            {
-                "block": "minecraft:basalt",
-                "data": {"axis": "y"},
-                "weight": 7
-            },
-            {"block": "minecraft:magma_block"}
-        ]
-    }]
+        {
+          "block": "minecraft:basalt",
+          "data": {
+            "axis": "y"
+          },
+          "weight": 7
+        },
+        {
+          "block": "minecraft:magma_block"
+        }
+      ]
+    }
+  ],
+  "caveCeilingLayers": [
+    {
+      "maxHeight": 2,
+      "minHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:smooth_basalt",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:basalt",
+          "data": {
+            "axis": "y"
+          },
+          "weight": 7
+        },
+        {
+          "block": "minecraft:magma_block"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "chance": 0.12,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "clutter/magmaspire1",
+        "clutter/magmaspire2",
+        "clutter/magmaspire3"
+      ],
+      "bottom": true
+    },
+    {
+      "chance": 0.12,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "trees/mushroom/crimsonwood1",
+        "trees/mushroom/crimsonwood2",
+        "trees/mushroom/crimsonwood3"
+      ],
+      "bottom": true
+    }
+  ]
 }

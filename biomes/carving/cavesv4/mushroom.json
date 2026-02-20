@@ -1,35 +1,88 @@
 {
-    "name": "Mushroom Tunnels",
-    "wall": {"palette": [{"block": "minecraft:stone"}]},
-    "layers": [{
-        "maxHeight": 1,
-        "minHeight": 1,
-        "palette": [
-            {"block": "minecraft:mycelium"}
-        ]
-    }],
-    "decorators": [
+  "name": "Mushroom Tunnels",
+  "wall": {
+    "palette": [
+      {
+        "block": "minecraft:stone"
+      }
+    ]
+  },
+  "layers": [
     {
-        "chance": 0.05,
-        "style": {"style": "STATIC"},
-        "partOf": "CEILING",
-        "palette": [{"block": "minecraft:shroomlight"}]
+      "maxHeight": 1,
+      "minHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:mycelium"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.05,
+      "style": {
+        "style": "STATIC"
+      },
+      "partOf": "CEILING",
+      "palette": [
+        {
+          "block": "minecraft:shroomlight"
+        }
+      ]
     },
     {
-        "chance": 0.05,
-        "style": {"style": "STATIC"},
-        "palette": [
-            {"block": "minecraft:red_mushroom"},
-            {"block": "minecraft:brown_mushroom"}
-            ]
-    }],
-
-    "caveCeilingLayers": [
+      "chance": 0.05,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:red_mushroom"
+        },
+        {
+          "block": "minecraft:brown_mushroom"
+        }
+      ]
+    }
+  ],
+  "caveCeilingLayers": [
     {
-        "maxHeight": 1,
-        "minHeight": 1,
-        "palette": [
-            {"block": "minecraft:red_mushroom_block"}
-        ]
-    }]
+      "maxHeight": 1,
+      "minHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:red_mushroom_block"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "chance": 0.2,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "trees/mushroom/smolshroom1",
+        "trees/mushroom/smolshroom2",
+        "trees/mushroom/smolshroom3",
+        "trees/mushroom/smolshroom4",
+        "trees/mushroom/smolshroom5"
+      ],
+      "bottom": true
+    }
+  ]
 }

@@ -1,41 +1,112 @@
 {
-    "name": "Glacial",
-    "wall": {"palette": [{"block": "minecraft:tuff"}]},
-    "layers": [{
-        "maxHeight": 1,
-        "minHeight": 1,
-        "palette": [
-            {"block": "minecraft:powder_snow"}
-        ]
-    }],
-    "decorators": [
+  "name": "Glacial",
+  "wall": {
+    "palette": [
+      {
+        "block": "minecraft:tuff"
+      }
+    ]
+  },
+  "layers": [
+    {
+      "maxHeight": 1,
+      "minHeight": 1,
+      "palette": [
         {
-        "chance": 0.01,
-        "style": {"style": "STATIC"},
-        "stackMax": 60,
-        "stackMin": 30,
-        "absoluteMaxStack": 6,
-        "scaleStack": true,
-        "partOf": "CEILING",
-
-        "palette": [
-            {"block": "minecraft:packed_ice"}
-
-            ]
+          "block": "minecraft:powder_snow"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.01,
+      "style": {
+        "style": "STATIC"
+      },
+      "stackMax": 60,
+      "stackMin": 30,
+      "absoluteMaxStack": 6,
+      "scaleStack": true,
+      "partOf": "CEILING",
+      "palette": [
+        {
+          "block": "minecraft:packed_ice"
+        }
+      ]
     },
     {
-        "chance": 0.001,
-        "style": {"style": "STATIC"},
-        "partOf": "CEILING",
-        "palette": [{"block": "minecraft:shroomlight"}]
-    }],
-
-    "caveCeilingLayers": [
+      "chance": 0.001,
+      "style": {
+        "style": "STATIC"
+      },
+      "partOf": "CEILING",
+      "palette": [
+        {
+          "block": "minecraft:shroomlight"
+        }
+      ]
+    }
+  ],
+  "caveCeilingLayers": [
     {
-        "maxHeight": 3,
-        "minHeight": 2,
-        "palette": [
-            {"block": "minecraft:packed_ice"}
-        ]
-    }]
+      "maxHeight": 3,
+      "minHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:packed_ice"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "chance": 0.12,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "clutter/icecluster8",
+        "clutter/icecluster9",
+        "clutter/icecluster10"
+      ],
+      "bottom": true
+    },
+    {
+      "chance": 0.12,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "trees/mushroom/ice7",
+        "trees/mushroom/ice8",
+        "trees/mushroom/ice9"
+      ],
+      "bottom": true
+    }
+  ]
 }

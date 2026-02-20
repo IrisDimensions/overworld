@@ -1,102 +1,176 @@
 {
-    "name": "Ice Cavern Child",
-    "wall": {"palette": [{"block": "minecraft:packed_ice"}]},
-    "layers": [
-        {
-            "minHeight": 1,
-            "maxHeight": 1,
-            "style": {"style": "STATIC"},
-            "zoom": 0.4,
-            "palette": [
-                {
-                    "weight": 5,
-                    "block": "minecraft:ice"
-                },
-                {
-                    "weight": 1,
-                    "block": "minecraft:packed_ice"
-                }
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 1,
-            "style": {"style": "STATIC"},
-            "zoom": 0.4,
-            "palette": [
-                {
-                    "weight": 1,
-                    "block": "minecraft:blue_ice"
-                },
-                {
-                    "weight": 5,
-                    "block": "minecraft:ice"
-                }
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 1,
-            "palette": [{
-                "weight": 5,
-                "block": "minecraft:blackstone"
-            }]
-        }
-    ],
-    "decorators": [
-        {
-            "chance": 0.001,
-            "palette": [{"block": "minecraft:cornflower"}]
-        },
-        {
-            "chance": 0.0015,
-            "scaleStack": true,
-            "stackMin": 25,
-            "stackMax": 50,
-            "absoluteMaxStack": 3,
-            "palette": [
-                {
-                    "block": "minecraft:ice",
-                    "weight": 3
-                },
-                {
-                    "block": "minecraft:packed_ice",
-                    "weight": 1
-                }
-            ]
-        },
-        {
-            "partOf": "CEILING",
-            "chance": 0.005,
-            "absoluteMaxStack": 3,
-            "scaleStack": true,
-            "stackMin": 25,
-            "stackMax": 50,
-            "palette": [
-                {
-                    "block": "minecraft:ice",
-                    "weight": 3
-                },
-                {
-                    "block": "minecraft:packed_ice",
-                    "weight": 1
-                }
-            ]
-        }
-    ],
-    "caveCeilingLayers": [
-        {
-            "maxHeight": 2,
-            "minHeight": 1,
-            "palette": [{"block": "minecraft:ice"}]
-        },
-        {
-            "maxHeight": 1,
-            "minHeight": 1,
-            "palette": [
-                {"block": "minecraft:blackstone"},
-                {"block": "minecraft:blue_ice"}
-            ]
-        }
+  "name": "Ice Cavern Child",
+  "wall": {
+    "palette": [
+      {
+        "block": "minecraft:packed_ice"
+      }
     ]
+  },
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "style": {
+        "style": "STATIC"
+      },
+      "zoom": 0.4,
+      "palette": [
+        {
+          "weight": 5,
+          "block": "minecraft:ice"
+        },
+        {
+          "weight": 1,
+          "block": "minecraft:packed_ice"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "style": {
+        "style": "STATIC"
+      },
+      "zoom": 0.4,
+      "palette": [
+        {
+          "weight": 1,
+          "block": "minecraft:blue_ice"
+        },
+        {
+          "weight": 5,
+          "block": "minecraft:ice"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "palette": [
+        {
+          "weight": 5,
+          "block": "minecraft:blackstone"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.001,
+      "palette": [
+        {
+          "block": "minecraft:cornflower"
+        }
+      ]
+    },
+    {
+      "chance": 0.0015,
+      "scaleStack": true,
+      "stackMin": 25,
+      "stackMax": 50,
+      "absoluteMaxStack": 3,
+      "palette": [
+        {
+          "block": "minecraft:ice",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:packed_ice",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "partOf": "CEILING",
+      "chance": 0.005,
+      "absoluteMaxStack": 3,
+      "scaleStack": true,
+      "stackMin": 25,
+      "stackMax": 50,
+      "palette": [
+        {
+          "block": "minecraft:ice",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:packed_ice",
+          "weight": 1
+        }
+      ]
+    }
+  ],
+  "caveCeilingLayers": [
+    {
+      "maxHeight": 2,
+      "minHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:ice"
+        }
+      ]
+    },
+    {
+      "maxHeight": 1,
+      "minHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:blackstone"
+        },
+        {
+          "block": "minecraft:blue_ice"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "chance": 0.12,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "clutter/smoleicespike6",
+        "clutter/smoleicespike7",
+        "clutter/smoleicespike8"
+      ],
+      "bottom": true
+    },
+    {
+      "chance": 0.12,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "trees/mushroom/ice1",
+        "trees/mushroom/ice2",
+        "trees/mushroom/ice3"
+      ],
+      "bottom": true
+    }
+  ]
 }

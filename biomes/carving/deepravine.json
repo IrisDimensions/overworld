@@ -1,64 +1,136 @@
 {
-    "name": "Deepened Ravine",
-    "wall": {
-        "style": {"style": "NOWHERE"},
-        "palette": [
-            {
-                "block": "minecraft:stone",
-                "weight": 3
-            },
-            {"block": "minecraft:stone"}
-        ]
+  "name": "Deepened Ravine",
+  "wall": {
+    "style": {
+      "style": "NOWHERE"
     },
-    "layers": [{
-        "style": {"style": "STATIC"},
-        "maxHeight": 2,
-        "minHeight": 2,
-        "palette": [
-            {
-                "block": "minecraft:stone",
-                "weight": 3
-            },
-            {
-                "block": "minecraft:andesite",
-                "weight": 3
-            }
-        ]
-    }],
-    "decorators": [
+    "palette": [
+      {
+        "block": "minecraft:stone",
+        "weight": 3
+      },
+      {
+        "block": "minecraft:stone"
+      }
+    ]
+  },
+  "layers": [
+    {
+      "style": {
+        "style": "STATIC"
+      },
+      "maxHeight": 2,
+      "minHeight": 2,
+      "palette": [
         {
-            "partOf": "CEILING",
-            "chance": 0.03,
-            "palette": [{"block": "minecraft:hanging_roots"}]
+          "block": "minecraft:stone",
+          "weight": 3
         },
         {
-            "partOf": "CEILING",
-            "chance": 0.05,
-            "scaleStack": true,
-            "stackMin": 20,
-            "stackMax": 70,
-            "absoluteMaxStack": 10,
-            "heightVariance": {"style": "STATIC"},
-            "palette": [{"block": "minecraft:stone"}]
+          "block": "minecraft:andesite",
+          "weight": 3
         }
-    ],
-    "caveCeilingLayers": [{
-        "maxHeight": 1,
-        "minHeight": 1,
-        "style": {"style": "STATIC"},
-        "palette": [
-            {
-                "block": "minecraft:shroomlight",
-                "weight": 1
-            },
-            {
-                "block": "minecraft:stone",
-                "weight": 20
-            }
-        ]
-    }],
-    "childStyle": {
-        "style": "STATIC",
-        "zoom": 2
+      ]
     }
+  ],
+  "decorators": [
+    {
+      "partOf": "CEILING",
+      "chance": 0.03,
+      "palette": [
+        {
+          "block": "minecraft:hanging_roots"
+        }
+      ]
+    },
+    {
+      "partOf": "CEILING",
+      "chance": 0.05,
+      "scaleStack": true,
+      "stackMin": 20,
+      "stackMax": 70,
+      "absoluteMaxStack": 10,
+      "heightVariance": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  ],
+  "caveCeilingLayers": [
+    {
+      "maxHeight": 1,
+      "minHeight": 1,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:shroomlight",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:stone",
+          "weight": 20
+        }
+      ]
+    }
+  ],
+  "childStyle": {
+    "style": "STATIC",
+    "zoom": 2
+  },
+  "objects": [
+    {
+      "chance": 0.12,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "clutter/bonespire14",
+        "clutter/bonespire15",
+        "clutter/skull1"
+      ],
+      "bottom": true
+    },
+    {
+      "chance": 0.12,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "structures/deepslate1",
+        "structures/deepslate2",
+        "structures/deepslate3"
+      ],
+      "bottom": true
+    }
+  ]
 }
