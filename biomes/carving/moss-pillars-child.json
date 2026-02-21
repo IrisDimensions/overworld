@@ -1,0 +1,296 @@
+{
+  "name": "Moss Pillars Child",
+  "wall": {
+    "style": {
+      "style": "NOWHERE",
+      "zoom": 0.55
+    },
+    "palette": [
+      {
+        "block": "minecraft:deepslate",
+        "weight": 12
+      },
+      {
+        "block": "minecraft:moss_block",
+        "weight": 13
+      },
+      {
+        "block": "minecraft:mossy_cobblestone",
+        "weight": 8
+      },
+      {
+        "block": "minecraft:tuff",
+        "weight": 2
+      }
+    ]
+  },
+  "layers": [
+    {
+      "style": {
+        "style": "CELLULAR"
+      },
+      "minHeight": 1,
+      "maxHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:moss_block",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:clay",
+          "weight": 12
+        },
+        {
+          "block": "minecraft:grass_block",
+          "weight": 2
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.0483,
+      "absoluteMaxStack": 1,
+      "palette": [
+        {
+          "block": "minecraft:short_grass"
+        },
+        {
+          "block": "minecraft:tall_grass"
+        },
+        {
+          "block": "minecraft:fern"
+        },
+        {
+          "block": "minecraft:large_fern"
+        },
+        {
+          "block": "minecraft:azalea"
+        },
+        {
+          "block": "minecraft:flowering_azalea"
+        }
+      ]
+    },
+    {
+      "partOf": "CEILING",
+      "chance": 0.036,
+      "stackMin": 1,
+      "stackMax": 1,
+      "palette": [
+        {
+          "block": "minecraft:glow_lichen"
+        }
+      ]
+    },
+    {
+      "partOf": "CEILING",
+      "chance": 0.004375,
+      "absoluteMaxStack": 1,
+      "palette": [
+        {
+          "block": "minecraft:shroomlight"
+        },
+        {
+          "block": "minecraft:ochre_froglight"
+        },
+        {
+          "block": "minecraft:verdant_froglight"
+        },
+        {
+          "block": "minecraft:pearlescent_froglight"
+        }
+      ]
+    },
+    {
+      "chance": 0.0161,
+      "absoluteMaxStack": 1,
+      "palette": [
+        {
+          "block": "minecraft:jungle_leaves"
+        },
+        {
+          "block": "minecraft:moss_carpet"
+        },
+        {
+          "block": "minecraft:small_dripleaf"
+        },
+        {
+          "block": "minecraft:big_dripleaf"
+        }
+      ]
+    },
+    {
+      "partOf": "CEILING",
+      "chance": 0.0216,
+      "stackMin": 1,
+      "stackMax": 2,
+      "palette": [
+        {
+          "block": "minecraft:weeping_vines"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "chance": 0.063,
+      "density": 3,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "clutter/jungleclutt11",
+        "clutter/jungleclutt12",
+        "clutter/jungleclutt13",
+        "clutter/jungleclutt4"
+      ],
+      "bottom": true,
+      "force": true
+    },
+    {
+      "chance": 0.02496,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "trees/jungle/mgeneric1",
+        "trees/jungle/mgeneric2",
+        "trees/jungle/mgeneric3",
+        "trees/jungle/mgeneric4",
+        "trees/jungle/deligeneric2",
+        "trees/jungle/deligeneric3",
+        "trees/jungle/deligeneric4"
+      ],
+      "bottom": true,
+      "force": true
+    },
+    {
+      "chance": 0.0162,
+      "density": 3,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "clutter/rock1",
+        "clutter/rock2",
+        "clutter/rock3",
+        "clutter/rock4",
+        "clutter/boulder1",
+        "clutter/boulder2",
+        "clutter/boulder3",
+        "clutter/boulder4"
+      ],
+      "bottom": true,
+      "force": true
+    },
+    {
+      "chance": 0.015,
+      "density": 3,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "clutter/jungleclutt1",
+        "clutter/jungleclutt2",
+        "clutter/jungleclutt3",
+        "clutter/junglestone1",
+        "clutter/junglestone2"
+      ],
+      "bottom": true,
+      "force": true
+    }
+  ],
+  "caveProfile": {
+    "enabled": true,
+    "verticalRange": {
+      "min": 6,
+      "max": 700
+    },
+    "baseDensityStyle": {
+      "style": "PERLIN_IRIS",
+      "zoom": 0.558
+    },
+    "detailDensityStyle": {
+      "style": "PERLIN_IRIS",
+      "zoom": 0.64
+    },
+    "warpStyle": {
+      "style": "PERLIN_IRIS",
+      "zoom": 0.35
+    },
+    "baseWeight": 0.801,
+    "detailWeight": 0.17,
+    "warpStrength": 0.4104,
+    "densityThreshold": {
+      "min": -0.145,
+      "max": -0.032,
+      "style": {
+        "style": "FRACTAL_BILLOW_SIMPLEX",
+        "zoom": 0.784
+      }
+    },
+    "thresholdBias": 0.12,
+    "sampleStep": 2,
+    "surfaceClearance": 5,
+    "allowSurfaceBreak": true,
+    "surfaceBreakStyle": {
+      "style": "FRACTAL_BILLOW_SIMPLEX",
+      "zoom": 0.738
+    },
+    "surfaceBreakNoiseThreshold": 0.56,
+    "surfaceBreakDepth": 22,
+    "surfaceBreakThresholdBoost": 0.1,
+    "objectMinDepthBelowSurface": 10,
+    "surfaceObjectExclusionDepth": 34,
+    "defaultObjectAnchor": "FLOOR",
+    "anchorScanStep": 1,
+    "anchorSearchAttempts": 6,
+    "allowWater": true,
+    "waterMinDepthBelowSurface": 14,
+    "waterRequiresFloor": true,
+    "allowLava": true,
+    "modules": [
+      {
+        "style": {
+          "style": "PERLIN_IRIS",
+          "zoom": 0.95
+        },
+        "weight": 0.09,
+        "threshold": 0.02,
+        "verticalRange": {
+          "min": 18,
+          "max": 680
+        },
+        "invert": false
+      },
+      {
+        "style": {
+          "style": "SIMPLEX_VASCULAR",
+          "zoom": 0.205
+        },
+        "weight": 0.05,
+        "threshold": 0.08,
+        "verticalRange": {
+          "min": 6,
+          "max": 220
+        },
+        "invert": true
+      }
+    ],
+    "verticalEdgeFade": 24,
+    "verticalEdgeFadeStrength": 0.17,
+    "minCarveCells": 20,
+    "recoveryThresholdBoost": 0.07
+  },
+  "caveMinDepthBelowSurface": 10
+}

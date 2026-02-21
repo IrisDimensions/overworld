@@ -1,0 +1,310 @@
+{
+  "name": "Sandstone Cavern Child",
+  "wall": {
+    "minHeight": 2,
+    "maxHeight": 2,
+    "style": {
+      "style": "FRACTAL_WATER",
+      "zoom": 0.72
+    },
+    "zoom": 0.4,
+    "palette": [
+      {
+        "block": "minecraft:sandstone",
+        "weight": 4
+      },
+      {
+        "block": "minecraft:smooth_sandstone",
+        "weight": 3
+      },
+      {
+        "block": "minecraft:cut_sandstone",
+        "weight": 3
+      },
+      {
+        "block": "minecraft:red_sandstone",
+        "weight": 2
+      },
+      {
+        "block": "minecraft:smooth_red_sandstone",
+        "weight": 2
+      },
+      {
+        "block": "minecraft:calcite",
+        "weight": 1
+      }
+    ]
+  },
+  "layers": [
+    {
+      "style": {
+        "style": "SIMPLEX",
+        "zoom": 0.92
+      },
+      "zoom": 0.4,
+      "palette": [
+        {
+          "block": "minecraft:sand",
+          "weight": 4
+        },
+        {
+          "block": "minecraft:red_sand",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:smooth_sandstone",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:sandstone",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:terracotta",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:red_sandstone",
+          "weight": 1
+        }
+      ],
+      "minHeight": 1,
+      "maxHeight": 2
+    }
+  ],
+  "caveCeilingLayers": [
+    {
+      "style": {
+        "style": "GLOB_IRIS_THICK"
+      },
+      "zoom": 0.4,
+      "palette": [
+        {
+          "weight": 2,
+          "block": "minecraft:smooth_sandstone"
+        },
+        {
+          "block": "minecraft:red_sandstone",
+          "weight": 13
+        },
+        {
+          "weight": 2,
+          "block": "minecraft:smooth_red_sandstone"
+        },
+        {
+          "weight": 2,
+          "block": "minecraft:red_sandstone"
+        },
+        {
+          "block": "minecraft:smooth_sandstone",
+          "weight": 8
+        },
+        {
+          "block": "minecraft:terracotta",
+          "weight": 2
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "chance": 0.05292,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "clutter/rdesertpost1",
+        "clutter/rdesertpost2",
+        "clutter/rdesertpost3",
+        "structures/mlandstone4"
+      ],
+      "bottom": true,
+      "force": true
+    },
+    {
+      "chance": 0.0125,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "trees/jungle/mgeneric1",
+        "trees/jungle/mgeneric2",
+        "trees/jungle/mgeneric3",
+        "trees/jungle/mgeneric4",
+        "trees/jungle/deligeneric2",
+        "trees/jungle/deligeneric3",
+        "trees/jungle/deligeneric4"
+      ],
+      "bottom": true,
+      "force": true
+    },
+    {
+      "chance": 0.0156,
+      "density": 3,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "clutter/rock1",
+        "clutter/rock2",
+        "clutter/rock3",
+        "clutter/rock4",
+        "clutter/boulder1",
+        "clutter/boulder2",
+        "clutter/boulder3",
+        "clutter/boulder4"
+      ],
+      "bottom": true,
+      "force": true
+    },
+    {
+      "chance": 0.0162,
+      "density": 3,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "clutter/rdesertpost1",
+        "clutter/rdesertpost2",
+        "clutter/rdesertpost3",
+        "clutter/desertpost1",
+        "clutter/desertpost2",
+        "clutter/desertpost3",
+        "clutter/rock1",
+        "clutter/rock2",
+        "clutter/rock3"
+      ],
+      "bottom": true,
+      "force": true
+    }
+  ],
+  "caveProfile": {
+    "enabled": true,
+    "verticalRange": {
+      "min": 6,
+      "max": 700
+    },
+    "baseDensityStyle": {
+      "style": "SIMPLEX",
+      "zoom": 0.607
+    },
+    "detailDensityStyle": {
+      "style": "IRIS_DOUBLE",
+      "zoom": 0.691
+    },
+    "warpStyle": {
+      "style": "SIMPLEX",
+      "zoom": 0.365
+    },
+    "baseWeight": 0.81,
+    "detailWeight": 0.1575,
+    "warpStrength": 0.386,
+    "densityThreshold": {
+      "min": -0.135,
+      "max": -0.032,
+      "style": {
+        "style": "PERLIN_IRIS",
+        "zoom": 0.829
+      }
+    },
+    "thresholdBias": 0.12,
+    "sampleStep": 2,
+    "surfaceClearance": 5,
+    "allowSurfaceBreak": true,
+    "surfaceBreakStyle": {
+      "style": "PERLIN_IRIS",
+      "zoom": 0.756
+    },
+    "surfaceBreakNoiseThreshold": 0.57,
+    "surfaceBreakDepth": 18,
+    "surfaceBreakThresholdBoost": 0.1,
+    "objectMinDepthBelowSurface": 12,
+    "surfaceObjectExclusionDepth": 34,
+    "defaultObjectAnchor": "FLOOR",
+    "anchorScanStep": 1,
+    "anchorSearchAttempts": 6,
+    "allowWater": true,
+    "waterMinDepthBelowSurface": 16,
+    "waterRequiresFloor": true,
+    "allowLava": true,
+    "modules": [
+      {
+        "style": {
+          "style": "SIMPLEX",
+          "zoom": 1.098
+        },
+        "weight": 0.09,
+        "threshold": 0.02,
+        "verticalRange": {
+          "min": 20,
+          "max": 700
+        },
+        "invert": false
+      },
+      {
+        "style": {
+          "style": "SIMPLEX_VASCULAR",
+          "zoom": 0.211
+        },
+        "weight": 0.05,
+        "threshold": 0.08,
+        "verticalRange": {
+          "min": 6,
+          "max": 220
+        },
+        "invert": true
+      }
+    ],
+    "verticalEdgeFade": 24,
+    "verticalEdgeFadeStrength": 0.17,
+    "minCarveCells": 20,
+    "recoveryThresholdBoost": 0.07
+  },
+  "caveMinDepthBelowSurface": 4,
+  "decorators": [
+    {
+      "partOf": "CEILING",
+      "chance": 0.004375,
+      "absoluteMaxStack": 1,
+      "palette": [
+        {
+          "block": "minecraft:shroomlight"
+        },
+        {
+          "block": "minecraft:ochre_froglight"
+        },
+        {
+          "block": "minecraft:verdant_froglight"
+        },
+        {
+          "block": "minecraft:pearlescent_froglight"
+        }
+      ]
+    },
+    {
+      "chance": 0.0207,
+      "absoluteMaxStack": 1,
+      "palette": [
+        {
+          "block": "minecraft:short_grass"
+        },
+        {
+          "block": "minecraft:tall_grass"
+        },
+        {
+          "block": "minecraft:dead_bush"
+        }
+      ]
+    }
+  ]
+}

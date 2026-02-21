@@ -1,0 +1,244 @@
+{
+  "name": "Ember Rifts Child",
+  "wall": {
+    "style": {
+      "style": "STATIC"
+    },
+    "palette": [
+      {
+        "block": "minecraft:deepslate",
+        "weight": 10
+      },
+      {
+        "block": "minecraft:basalt",
+        "weight": 12
+      },
+      {
+        "block": "minecraft:blackstone",
+        "weight": 13
+      },
+      {
+        "block": "minecraft:smooth_basalt",
+        "weight": 3
+      }
+    ]
+  },
+  "layers": [
+    {
+      "style": {
+        "style": "STATIC"
+      },
+      "minHeight": 1,
+      "maxHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:blackstone",
+          "weight": 9
+        },
+        {
+          "block": "minecraft:magma_block",
+          "weight": 10
+        },
+        {
+          "block": "minecraft:netherrack",
+          "weight": 2
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.0275,
+      "partOf": "CEILING",
+      "stackMin": 1,
+      "stackMax": 2,
+      "palette": [
+        {
+          "block": "minecraft:glow_lichen"
+        }
+      ]
+    },
+    {
+      "chance": 0.023,
+      "absoluteMaxStack": 1,
+      "palette": [
+        {
+          "block": "minecraft:fire"
+        }
+      ]
+    },
+    {
+      "partOf": "CEILING",
+      "chance": 0.0042,
+      "absoluteMaxStack": 1,
+      "palette": [
+        {
+          "block": "minecraft:shroomlight"
+        },
+        {
+          "block": "minecraft:ochre_froglight"
+        },
+        {
+          "block": "minecraft:verdant_froglight"
+        },
+        {
+          "block": "minecraft:pearlescent_froglight"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "chance": 0.04536,
+      "density": 3,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "clutter/magmaspire1",
+        "clutter/magmaspire2",
+        "clutter/magmaspire3"
+      ],
+      "bottom": true,
+      "force": true
+    },
+    {
+      "chance": 0.01,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "structures/monolith4"
+      ],
+      "bottom": true,
+      "force": true
+    },
+    {
+      "chance": 0.013,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "trees/oak/generic1",
+        "trees/oak/generic2",
+        "trees/oak/generic3",
+        "trees/oak/generic4"
+      ],
+      "bottom": true,
+      "force": true
+    },
+    {
+      "chance": 0.0162,
+      "density": 3,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "clutter/magmaspire1",
+        "clutter/magmaspire2",
+        "clutter/magmaspire3",
+        "clutter/rock1",
+        "clutter/rock2",
+        "clutter/rock3",
+        "clutter/boulder7",
+        "clutter/boulder8",
+        "clutter/boulder9"
+      ],
+      "bottom": true,
+      "force": true
+    }
+  ],
+  "caveProfile": {
+    "enabled": true,
+    "verticalRange": {
+      "min": 6,
+      "max": 520
+    },
+    "baseDensityStyle": {
+      "style": "SIMPLEX",
+      "zoom": 0.623
+    },
+    "detailDensityStyle": {
+      "style": "IRIS_DOUBLE",
+      "zoom": 0.717
+    },
+    "warpStyle": {
+      "style": "SIMPLEX",
+      "zoom": 0.334
+    },
+    "baseWeight": 0.81,
+    "detailWeight": 0.1575,
+    "warpStrength": 0.3616,
+    "densityThreshold": {
+      "min": -0.155,
+      "max": -0.042,
+      "style": {
+        "style": "SIMPLEX",
+        "zoom": 0.784
+      }
+    },
+    "thresholdBias": 0.13,
+    "sampleStep": 2,
+    "surfaceClearance": 7,
+    "allowSurfaceBreak": true,
+    "surfaceBreakStyle": {
+      "style": "PERLIN_IRIS",
+      "zoom": 0.792
+    },
+    "surfaceBreakNoiseThreshold": 0.62,
+    "surfaceBreakDepth": 14,
+    "surfaceBreakThresholdBoost": 0.1,
+    "objectMinDepthBelowSurface": 16,
+    "surfaceObjectExclusionDepth": 30,
+    "defaultObjectAnchor": "FLOOR",
+    "anchorScanStep": 1,
+    "anchorSearchAttempts": 6,
+    "allowWater": false,
+    "waterMinDepthBelowSurface": 24,
+    "waterRequiresFloor": true,
+    "allowLava": true,
+    "modules": [
+      {
+        "style": {
+          "style": "SIMPLEX",
+          "zoom": 0.882
+        },
+        "weight": 0.09,
+        "threshold": 0.04,
+        "verticalRange": {
+          "min": 6,
+          "max": 460
+        },
+        "invert": false
+      },
+      {
+        "style": {
+          "style": "SIMPLEX_VASCULAR",
+          "zoom": 1.32
+        },
+        "weight": 0.04,
+        "threshold": 0.18,
+        "verticalRange": {
+          "min": 20,
+          "max": 320
+        },
+        "invert": false
+      }
+    ],
+    "verticalEdgeFade": 24,
+    "verticalEdgeFadeStrength": 0.17,
+    "minCarveCells": 20,
+    "recoveryThresholdBoost": 0.07
+  },
+  "caveMinDepthBelowSurface": 10
+}
