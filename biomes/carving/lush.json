@@ -1,353 +1,365 @@
 {
-  "name": "Lush Cavern",
-  "wall": {
-    "style": {
-      "style": "NOWHERE",
-      "zoom": 0.5
-    },
-    "palette": [
-      {
-        "block": "minecraft:deepslate"
-      },
-      {
-        "block": "minecraft:mossy_cobblestone"
-      },
-      {
-        "block": "minecraft:moss_block"
-      }
-    ]
-  },
-  "layers": [
-    {
-      "style": {
-        "style": "CELLULAR"
-      },
-      "maxHeight": 1,
-      "minHeight": 1,
-      "zoom": 0.5,
-      "palette": [
-        {
-          "block": "minecraft:moss_block",
-          "weight": 2
-        },
-        {
-          "block": "minecraft:clay"
-        },
-        {
-          "block": "minecraft:clay"
-        },
-        {
-          "block": "minecraft:deepslate"
-        },
-        {
-          "block": "minecraft:grass_block"
-        }
-      ]
-    },
-    {
-      "style": {
-        "style": "CELLULAR"
-      },
-      "maxHeight": 2,
-      "minHeight": 1,
-      "palette": [
-        {
-          "block": "minecraft:clay",
-          "weight": 5
-        },
-        {
-          "block": "minecraft:deepslate"
-        }
-      ]
-    }
-  ],
-  "decorators": [
-    {
-      "chance": 0.01,
-      "absoluteMaxStack": 1,
-      "palette": [
-        {
-          "block": "minecraft:big_dripleaf"
-        }
-      ]
-    },
-    {
-      "chance": 0.03,
-      "style": {
-        "style": "STATIC"
-      },
-      "absoluteMaxStack": 1,
-      "palette": [
-        {
-          "block": "minecraft:short_grass"
-        },
-        {
-          "block": "minecraft:azalea_leaves"
-        },
-        {
-          "block": "minecraft:azalea"
-        },
-        {
-          "block": "minecraft:flowering_azalea"
-        },
-        {
-          "block": "minecraft:flowering_azalea_leaves"
-        }
-      ]
-    },
-    {
-      "partOf": "CEILING",
-      "chance": 0.05,
-      "absoluteMaxStack": 30,
-      "scaleStack": true,
-      "stackMin": 4,
-      "stackMax": 25,
-      "topPalette": [
-        {
-          "block": "minecraft:cave_vines"
-        },
-        {
-          "block": "minecraft:spore_blossom"
-        },
-        {
-          "block": "minecraft:cave_vines",
-          "data": {
-            "berries": "true"
-          }
-        }
-      ],
-      "palette": [
-        {
-          "block": "minecraft:cave_vines_plant",
-          "data": {
-            "berries": false
-          }
-        },
-        {
-          "block": "minecraft:cave_vines_plant",
-          "data": {
-            "berries": true
-          }
-        }
-      ]
-    },
-    {
-      "partOf": "CEILING",
-      "chance": 0.03,
-      "stackMin": 1,
-      "stackMax": 1,
-      "palette": [
-        {
-          "block": "minecraft:glow_lichen"
-        }
-      ]
-    },
-    {
-      "partOf": "CEILING",
-      "chance": 0.0035,
-      "absoluteMaxStack": 1,
-      "palette": [
-        {
-          "block": "minecraft:shroomlight"
-        },
-        {
-          "block": "minecraft:ochre_froglight"
-        },
-        {
-          "block": "minecraft:verdant_froglight"
-        },
-        {
-          "block": "minecraft:pearlescent_froglight"
-        }
-      ]
-    }
-  ],
-  "caveCeilingLayers": [
-    {
-      "style": {
-        "style": "NOWHERE"
-      },
-      "maxHeight": 2,
-      "minHeight": 2,
-      "palette": [
-        {
-          "block": "minecraft:moss_block",
-          "weight": 2
-        },
-        {
-          "block": "minecraft:deepslate"
-        }
-      ]
-    }
-  ],
-  "objects": [
-    {
-      "chance": 0.0504,
-      "density": 2,
-      "carvingSupport": "CARVING_ONLY",
-      "caveAnchorMode": "PROFILE_DEFAULT",
-      "translate": {
-        "y": -1
-      },
-      "place": [
-        "clutter/jungleclutt11",
-        "clutter/jungleclutt12",
-        "clutter/jungleclutt13",
-        "clutter/jungleclutt4"
-      ],
-      "bottom": true,
-      "force": true
-    },
-    {
-      "chance": 0.02048,
-      "density": 1,
-      "carvingSupport": "CARVING_ONLY",
-      "caveAnchorMode": "PROFILE_DEFAULT",
-      "translate": {
-        "y": -1
-      },
-      "place": [
-        "trees/jungle/mgeneric1",
-        "trees/jungle/mgeneric2",
-        "trees/jungle/mgeneric3",
-        "trees/jungle/mgeneric4",
-        "trees/jungle/deligeneric2",
-        "trees/jungle/deligeneric3",
-        "trees/jungle/deligeneric4"
-      ],
-      "bottom": true,
-      "force": true
-    },
-    {
-      "chance": 0.012,
-      "density": 2,
-      "carvingSupport": "CARVING_ONLY",
-      "caveAnchorMode": "PROFILE_DEFAULT",
-      "translate": {
-        "y": -1
-      },
-      "place": [
-        "clutter/rock1",
-        "clutter/rock2",
-        "clutter/rock3",
-        "clutter/rock4",
-        "clutter/boulder1",
-        "clutter/boulder2",
-        "clutter/boulder3",
-        "clutter/boulder4"
-      ],
-      "bottom": true,
-      "force": true
-    },
-    {
-      "chance": 0.012,
-      "density": 2,
-      "carvingSupport": "CARVING_ONLY",
-      "caveAnchorMode": "PROFILE_DEFAULT",
-      "translate": {
-        "y": -1
-      },
-      "place": [
-        "clutter/jungleclutt1",
-        "clutter/jungleclutt2",
-        "clutter/jungleclutt3",
-        "clutter/junglestone1",
-        "clutter/junglestone2"
-      ],
-      "bottom": true,
-      "force": true
-    }
-  ],
-  "caveProfile": {
-    "enabled": true,
-    "verticalRange": {
-      "min": 6,
-      "max": 700
-    },
-    "baseDensityStyle": {
-      "style": "IRIS_DOUBLE",
-      "zoom": 0.68
-    },
-    "detailDensityStyle": {
-      "style": "SIMPLEX",
-      "zoom": 0.5
-    },
-    "warpStyle": {
-      "style": "FRACTAL_WATER",
-      "zoom": 0.46
-    },
-    "baseWeight": 0.89,
-    "detailWeight": 0.12,
-    "warpStrength": 0.32,
-    "densityThreshold": {
-      "min": -0.13,
-      "max": -0.04,
-      "style": {
-        "style": "SIMPLEX",
-        "zoom": 0.7
-      }
-    },
-    "thresholdBias": 0.12,
-    "sampleStep": 2,
-    "surfaceClearance": 5,
-    "allowSurfaceBreak": true,
-    "surfaceBreakStyle": {
-      "style": "SIMPLEX",
-      "zoom": 0.82
-    },
-    "surfaceBreakNoiseThreshold": 0.56,
-    "surfaceBreakDepth": 22,
-    "surfaceBreakThresholdBoost": 0.1,
-    "objectMinDepthBelowSurface": 10,
-    "surfaceObjectExclusionDepth": 34,
-    "defaultObjectAnchor": "FLOOR",
-    "anchorScanStep": 1,
-    "anchorSearchAttempts": 6,
-    "allowWater": true,
-    "waterMinDepthBelowSurface": 14,
-    "waterRequiresFloor": true,
-    "allowLava": true,
-    "modules": [
-      {
+    "name": "Lush Cavern",
+    "wall": {
         "style": {
-          "style": "VASCULAR_THIN",
-          "zoom": 1.08
+            "style": "NOWHERE",
+            "zoom": 0.5
         },
-        "weight": 0.09,
-        "threshold": 0.02,
-        "verticalRange": {
-          "min": 18,
-          "max": 680
+        "palette": [
+            {
+                "block": "minecraft:deepslate"
+            },
+            {
+                "block": "minecraft:mossy_cobblestone"
+            },
+            {
+                "block": "minecraft:moss_block"
+            }
+        ]
+    },
+    "layers": [
+        {
+            "style": {
+                "style": "CELLULAR"
+            },
+            "maxHeight": 1,
+            "minHeight": 1,
+            "zoom": 0.5,
+            "palette": [
+                {
+                    "block": "minecraft:moss_block",
+                    "weight": 2
+                },
+                {
+                    "block": "minecraft:clay"
+                },
+                {
+                    "block": "minecraft:clay"
+                },
+                {
+                    "block": "minecraft:deepslate"
+                },
+                {
+                    "block": "minecraft:grass_block"
+                }
+            ]
         },
-        "invert": false
-      },
-      {
-        "style": {
-          "style": "SIMPLEX",
-          "zoom": 0.22
-        },
-        "weight": 0.05,
-        "threshold": 0.08,
-        "verticalRange": {
-          "min": 6,
-          "max": 220
-        },
-        "invert": true
-      }
+        {
+            "style": {
+                "style": "CELLULAR"
+            },
+            "maxHeight": 2,
+            "minHeight": 1,
+            "palette": [
+                {
+                    "block": "minecraft:clay",
+                    "weight": 5
+                },
+                {
+                    "block": "minecraft:deepslate"
+                }
+            ]
+        }
     ],
-    "verticalEdgeFade": 24,
-    "verticalEdgeFadeStrength": 0.17,
-    "minCarveCells": 20,
-    "recoveryThresholdBoost": 0.07
-  },
-  "caveMinDepthBelowSurface": 8,
-  "children": [
-    "carving/moss-pillars",
-    "carving/lush-child"
-  ],
-  "childShrinkFactor": 1.42,
-  "childStyle": {
-    "style": "PERLIN_IRIS",
-    "zoom": 1.1
-  }
+    "decorators": [
+        {
+            "chance": 0.01,
+            "absoluteMaxStack": 1,
+            "palette": [
+                {
+                    "block": "minecraft:big_dripleaf"
+                }
+            ]
+        },
+        {
+            "chance": 0.03,
+            "style": {
+                "style": "STATIC"
+            },
+            "absoluteMaxStack": 1,
+            "palette": [
+                {
+                    "block": "minecraft:short_grass"
+                },
+                {
+                    "block": "minecraft:azalea_leaves"
+                },
+                {
+                    "block": "minecraft:azalea"
+                },
+                {
+                    "block": "minecraft:flowering_azalea"
+                },
+                {
+                    "block": "minecraft:flowering_azalea_leaves"
+                }
+            ]
+        },
+        {
+            "partOf": "CEILING",
+            "chance": 0.05,
+            "absoluteMaxStack": 30,
+            "scaleStack": true,
+            "stackMin": 4,
+            "stackMax": 25,
+            "topPalette": [
+                {
+                    "block": "minecraft:cave_vines"
+                },
+                {
+                    "block": "minecraft:spore_blossom"
+                },
+                {
+                    "block": "minecraft:cave_vines",
+                    "data": {
+                        "berries": "true"
+                    }
+                }
+            ],
+            "palette": [
+                {
+                    "block": "minecraft:cave_vines_plant",
+                    "data": {
+                        "berries": false
+                    }
+                },
+                {
+                    "block": "minecraft:cave_vines_plant",
+                    "data": {
+                        "berries": true
+                    }
+                }
+            ]
+        },
+        {
+            "partOf": "CEILING",
+            "chance": 0.03,
+            "stackMin": 1,
+            "stackMax": 1,
+            "palette": [
+                {
+                    "block": "minecraft:glow_lichen"
+                }
+            ]
+        },
+        {
+            "partOf": "CEILING",
+            "chance": 0.0035,
+            "absoluteMaxStack": 1,
+            "palette": [
+                {
+                    "block": "minecraft:shroomlight"
+                },
+                {
+                    "block": "minecraft:ochre_froglight"
+                },
+                {
+                    "block": "minecraft:verdant_froglight"
+                },
+                {
+                    "block": "minecraft:pearlescent_froglight"
+                }
+            ]
+        }
+    ],
+    "caveCeilingLayers": [
+        {
+            "style": {
+                "style": "NOWHERE"
+            },
+            "maxHeight": 2,
+            "minHeight": 2,
+            "palette": [
+                {
+                    "block": "minecraft:moss_block",
+                    "weight": 2
+                },
+                {
+                    "block": "minecraft:deepslate"
+                }
+            ]
+        }
+    ],
+    "objects": [
+        {
+            "chance": 0.07,
+            "density": 2,
+            "carvingSupport": "CARVING_ONLY",
+            "caveAnchorMode": "PROFILE_DEFAULT",
+            "translate": {
+                "y": -1
+            },
+            "place": [
+                "clutter/jungleclutt11",
+                "clutter/jungleclutt12",
+                "clutter/jungleclutt13",
+                "clutter/jungleclutt4"
+            ],
+            "bottom": true,
+            "force": true
+        },
+        {
+            "chance": 0.11264,
+            "density": 2,
+            "carvingSupport": "CARVING_ONLY",
+            "caveAnchorMode": "PROFILE_DEFAULT",
+            "translate": {
+                "y": -1
+            },
+            "place": [
+                "trees/jungle/mgeneric1",
+                "trees/jungle/mgeneric2",
+                "trees/jungle/mgeneric3",
+                "trees/jungle/mgeneric4",
+                "trees/jungle/deligeneric2",
+                "trees/jungle/deligeneric3",
+                "trees/jungle/deligeneric4"
+            ],
+            "bottom": true,
+            "force": true
+        },
+        {
+            "chance": 0.0324,
+            "density": 2,
+            "carvingSupport": "CARVING_ONLY",
+            "caveAnchorMode": "PROFILE_DEFAULT",
+            "translate": {
+                "y": -1
+            },
+            "place": [
+                "clutter/rock1",
+                "clutter/rock2",
+                "clutter/rock3",
+                "clutter/rock4",
+                "clutter/boulder1",
+                "clutter/boulder2",
+                "clutter/boulder3",
+                "clutter/boulder4"
+            ],
+            "bottom": true,
+            "force": true
+        },
+        {
+            "chance": 0.0324,
+            "density": 2,
+            "carvingSupport": "CARVING_ONLY",
+            "caveAnchorMode": "PROFILE_DEFAULT",
+            "translate": {
+                "y": -1
+            },
+            "place": [
+                "clutter/jungleclutt1",
+                "clutter/jungleclutt2",
+                "clutter/jungleclutt3",
+                "clutter/junglestone1",
+                "clutter/junglestone2"
+            ],
+            "bottom": true,
+            "force": true
+        },
+        {
+            "chance": 0.045,
+            "density": 2,
+            "carvingSupport": "CARVING_ONLY",
+            "bottom": true,
+            "place": [
+                "structures/monolith1",
+                "structures/monolith3",
+                "structures/monolith4"
+            ],
+            "force": true
+        }
+    ],
+    "caveProfile": {
+        "enabled": true,
+        "verticalRange": {
+            "min": 6,
+            "max": 700
+        },
+        "baseDensityStyle": {
+            "style": "IRIS_DOUBLE",
+            "zoom": 0.68
+        },
+        "detailDensityStyle": {
+            "style": "SIMPLEX",
+            "zoom": 0.5
+        },
+        "warpStyle": {
+            "style": "FRACTAL_WATER",
+            "zoom": 0.46
+        },
+        "baseWeight": 0.89,
+        "detailWeight": 0.12,
+        "warpStrength": 0.32,
+        "densityThreshold": {
+            "min": -0.13,
+            "max": -0.04,
+            "style": {
+                "style": "SIMPLEX",
+                "zoom": 0.7
+            }
+        },
+        "thresholdBias": 0.12,
+        "sampleStep": 2,
+        "surfaceClearance": 5,
+        "allowSurfaceBreak": true,
+        "surfaceBreakStyle": {
+            "style": "SIMPLEX",
+            "zoom": 0.82
+        },
+        "surfaceBreakNoiseThreshold": 0.56,
+        "surfaceBreakDepth": 22,
+        "surfaceBreakThresholdBoost": 0.1,
+        "objectMinDepthBelowSurface": 10,
+        "surfaceObjectExclusionDepth": 34,
+        "defaultObjectAnchor": "FLOOR",
+        "anchorScanStep": 1,
+        "anchorSearchAttempts": 18,
+        "allowWater": true,
+        "waterMinDepthBelowSurface": 14,
+        "waterRequiresFloor": true,
+        "allowLava": true,
+        "modules": [
+            {
+                "style": {
+                    "style": "VASCULAR_THIN",
+                    "zoom": 1.08
+                },
+                "weight": 0.09,
+                "threshold": 0.02,
+                "verticalRange": {
+                    "min": 18,
+                    "max": 680
+                },
+                "invert": false
+            },
+            {
+                "style": {
+                    "style": "SIMPLEX",
+                    "zoom": 0.22
+                },
+                "weight": 0.05,
+                "threshold": 0.08,
+                "verticalRange": {
+                    "min": 6,
+                    "max": 220
+                },
+                "invert": true
+            }
+        ],
+        "verticalEdgeFade": 24,
+        "verticalEdgeFadeStrength": 0.17,
+        "minCarveCells": 20,
+        "recoveryThresholdBoost": 0.07
+    },
+    "caveMinDepthBelowSurface": 8,
+    "children": [
+        "carving/moss-pillars",
+        "carving/lush-child"
+    ],
+    "childShrinkFactor": 1.42,
+    "childStyle": {
+        "style": "PERLIN_IRIS",
+        "zoom": 1.1
+    }
 }

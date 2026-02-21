@@ -1,243 +1,257 @@
 {
-  "name": "Ancient City Basin Child",
-  "derivative": "minecraft:deep_dark",
-  "vanillaDerivative": "minecraft:deep_dark",
-  "wall": {
-    "style": {
-      "style": "STATIC"
-    },
-    "palette": [
-      {
-        "block": "minecraft:deepslate",
-        "weight": 3
-      },
-      {
-        "block": "minecraft:sculk",
-        "weight": 10
-      },
-      {
-        "block": "minecraft:tuff",
-        "weight": 1
-      }
-    ]
-  },
-  "layers": [
-    {
-      "style": {
-        "style": "STATIC"
-      },
-      "minHeight": 1,
-      "maxHeight": 2,
-      "palette": [
-        {
-          "block": "minecraft:sculk",
-          "weight": 3
-        },
-        {
-          "block": "minecraft:deepslate",
-          "weight": 9
-        },
-        {
-          "block": "minecraft:blackstone",
-          "weight": 2
-        }
-      ]
-    }
-  ],
-  "caveCeilingLayers": [
-    {
-      "palette": [
-        {
-          "block": "minecraft:deepslate",
-          "weight": 10
-        },
-        {
-          "block": "minecraft:tuff",
-          "weight": 3
-        }
-      ]
-    }
-  ],
-  "decorators": [
-    {
-      "chance": 0.0322,
-      "palette": [
-        {
-          "block": "minecraft:sculk_sensor",
-          "weight": 120
-        },
-        {
-          "block": "minecraft:sculk_catalyst",
-          "weight": 2
-        },
-        {
-          "block": "minecraft:sculk_shrieker",
-          "weight": 1
-        }
-      ]
-    }
-  ],
-  "objects": [
-    {
-      "chance": 0.014286,
-      "density": 1,
-      "carvingSupport": "CARVING_ONLY",
-      "caveAnchorMode": "PROFILE_DEFAULT",
-      "translate": {
-        "y": -1
-      },
-      "place": [
-        "structures/monolith3",
-        "structures/monolith4"
-      ],
-      "bottom": true,
-      "force": true
-    },
-    {
-      "chance": 0.018572,
-      "density": 1,
-      "carvingSupport": "CARVING_ONLY",
-      "caveAnchorMode": "PROFILE_DEFAULT",
-      "translate": {
-        "y": -1
-      },
-      "place": [
-        "trees/oak/generic1",
-        "trees/oak/generic2",
-        "trees/oak/generic3",
-        "trees/oak/generic4"
-      ],
-      "bottom": true,
-      "force": true
-    },
-    {
-      "chance": 0.023143,
-      "density": 3,
-      "carvingSupport": "CARVING_ONLY",
-      "caveAnchorMode": "PROFILE_DEFAULT",
-      "translate": {
-        "y": -1
-      },
-      "place": [
-        "clutter/rock1",
-        "clutter/rock2",
-        "clutter/rock3",
-        "clutter/rock4",
-        "clutter/boulder1",
-        "clutter/boulder2",
-        "clutter/boulder3",
-        "clutter/boulder4"
-      ],
-      "bottom": true,
-      "force": true
-    },
-    {
-      "chance": 0.021429,
-      "density": 3,
-      "carvingSupport": "CARVING_ONLY",
-      "caveAnchorMode": "PROFILE_DEFAULT",
-      "translate": {
-        "y": -1
-      },
-      "place": [
-        "clutter/stoneclutt1",
-        "clutter/stoneclutt2",
-        "clutter/stoneclutt3",
-        "clutter/ore-scluster1",
-        "clutter/ore-scluster2",
-        "clutter/ore-scluster3",
-        "clutter/rock1",
-        "clutter/rock2",
-        "clutter/rock3",
-        "clutter/boulder1",
-        "clutter/boulder2",
-        "clutter/boulder3"
-      ],
-      "bottom": true,
-      "force": true
-    }
-  ],
-  "caveMinDepthBelowSurface": 62,
-  "caveProfile": {
-    "enabled": true,
-    "verticalRange": {
-      "min": 6,
-      "max": 81
-    },
-    "baseDensityStyle": {
-      "style": "SIMPLEX",
-      "zoom": 0.705
-    },
-    "detailDensityStyle": {
-      "style": "IRIS_DOUBLE",
-      "zoom": 0.614
-    },
-    "warpStyle": {
-      "style": "PERLIN_IRIS",
-      "zoom": 0.395
-    },
-    "baseWeight": 0.846,
-    "detailWeight": 0.095,
-    "warpStrength": 0.0688,
-    "densityThreshold": {
-      "min": -0.075,
-      "max": 0.018,
-      "style": {
-        "style": "PERLIN_IRIS",
-        "zoom": 0.605
-      }
-    },
-    "thresholdBias": 0.055,
-    "sampleStep": 2,
-    "surfaceClearance": 16,
-    "allowSurfaceBreak": false,
-    "surfaceBreakStyle": {
-      "style": "PERLIN_IRIS",
-      "zoom": 0.9
-    },
-    "surfaceBreakNoiseThreshold": 0.9,
-    "surfaceBreakDepth": 8,
-    "surfaceBreakThresholdBoost": 0.0,
-    "objectMinDepthBelowSurface": 54,
-    "surfaceObjectExclusionDepth": 46,
-    "defaultObjectAnchor": "FLOOR",
-    "anchorScanStep": 1,
-    "anchorSearchAttempts": 6,
-    "allowWater": false,
-    "waterMinDepthBelowSurface": 30,
-    "waterRequiresFloor": true,
-    "allowLava": false,
-    "modules": [
-      {
+    "name": "Ancient City Basin Child",
+    "derivative": "minecraft:deep_dark",
+    "vanillaDerivative": "minecraft:deep_dark",
+    "wall": {
         "style": {
-          "style": "SIMPLEX",
-          "zoom": 0.722
+            "style": "STATIC"
         },
-        "weight": 0.07,
-        "threshold": 0.025,
-        "verticalRange": {
-          "min": 12,
-          "max": 81
-        },
-        "invert": false
-      },
-      {
-        "style": {
-          "style": "SIMPLEX_VASCULAR",
-          "zoom": 0.391
-        },
-        "weight": 0.04,
-        "threshold": 0.05,
-        "verticalRange": {
-          "min": 6,
-          "max": 81
-        },
-        "invert": true
-      }
+        "palette": [
+            {
+                "block": "minecraft:deepslate",
+                "weight": 3
+            },
+            {
+                "block": "minecraft:sculk",
+                "weight": 10
+            },
+            {
+                "block": "minecraft:tuff",
+                "weight": 1
+            }
+        ]
+    },
+    "layers": [
+        {
+            "style": {
+                "style": "STATIC"
+            },
+            "minHeight": 1,
+            "maxHeight": 2,
+            "palette": [
+                {
+                    "block": "minecraft:sculk",
+                    "weight": 3
+                },
+                {
+                    "block": "minecraft:deepslate",
+                    "weight": 9
+                },
+                {
+                    "block": "minecraft:blackstone",
+                    "weight": 2
+                }
+            ]
+        }
     ],
-    "verticalEdgeFade": 52,
-    "verticalEdgeFadeStrength": 0.32,
-    "minCarveCells": 8,
-    "recoveryThresholdBoost": 0.05
-  }
+    "caveCeilingLayers": [
+        {
+            "palette": [
+                {
+                    "block": "minecraft:deepslate",
+                    "weight": 10
+                },
+                {
+                    "block": "minecraft:tuff",
+                    "weight": 3
+                }
+            ]
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.0322,
+            "palette": [
+                {
+                    "block": "minecraft:sculk_sensor",
+                    "weight": 120
+                },
+                {
+                    "block": "minecraft:sculk_catalyst",
+                    "weight": 2
+                },
+                {
+                    "block": "minecraft:sculk_shrieker",
+                    "weight": 1
+                }
+            ]
+        }
+    ],
+    "objects": [
+        {
+            "chance": 0.085716,
+            "density": 2,
+            "carvingSupport": "CARVING_ONLY",
+            "caveAnchorMode": "PROFILE_DEFAULT",
+            "translate": {
+                "y": -1
+            },
+            "place": [
+                "structures/monolith3",
+                "structures/monolith4"
+            ],
+            "bottom": true,
+            "force": true
+        },
+        {
+            "chance": 0.102146,
+            "density": 2,
+            "carvingSupport": "CARVING_ONLY",
+            "caveAnchorMode": "PROFILE_DEFAULT",
+            "translate": {
+                "y": -1
+            },
+            "place": [
+                "clutter/stoneclutt1",
+                "clutter/stoneclutt2",
+                "clutter/stoneclutt3",
+                "clutter/stoneclutt4",
+                "clutter/stoneclutt5",
+                "clutter/stoneclutt6",
+                "clutter/stoneclutt7",
+                "clutter/ore-scluster1",
+                "clutter/ore-scluster2",
+                "clutter/ore-scluster3",
+                "clutter/ore-scluster4",
+                "clutter/rock1",
+                "clutter/rock2",
+                "clutter/rock3",
+                "clutter/boulder1",
+                "clutter/boulder2",
+                "clutter/boulder3",
+                "clutter/boulder4"
+            ],
+            "bottom": true,
+            "force": true
+        },
+        {
+            "chance": 0.062486,
+            "density": 3,
+            "carvingSupport": "CARVING_ONLY",
+            "caveAnchorMode": "PROFILE_DEFAULT",
+            "translate": {
+                "y": -1
+            },
+            "place": [
+                "clutter/rock1",
+                "clutter/rock2",
+                "clutter/rock3",
+                "clutter/rock4",
+                "clutter/boulder1",
+                "clutter/boulder2",
+                "clutter/boulder3",
+                "clutter/boulder4"
+            ],
+            "bottom": true,
+            "force": true
+        },
+        {
+            "chance": 0.057858,
+            "density": 3,
+            "carvingSupport": "CARVING_ONLY",
+            "caveAnchorMode": "PROFILE_DEFAULT",
+            "translate": {
+                "y": -1
+            },
+            "place": [
+                "clutter/stoneclutt1",
+                "clutter/stoneclutt2",
+                "clutter/stoneclutt3",
+                "clutter/ore-scluster1",
+                "clutter/ore-scluster2",
+                "clutter/ore-scluster3",
+                "clutter/rock1",
+                "clutter/rock2",
+                "clutter/rock3",
+                "clutter/boulder1",
+                "clutter/boulder2",
+                "clutter/boulder3"
+            ],
+            "bottom": true,
+            "force": true
+        }
+    ],
+    "caveMinDepthBelowSurface": 62,
+    "caveProfile": {
+        "enabled": true,
+        "verticalRange": {
+            "min": 6,
+            "max": 81
+        },
+        "baseDensityStyle": {
+            "style": "SIMPLEX",
+            "zoom": 0.705
+        },
+        "detailDensityStyle": {
+            "style": "IRIS_DOUBLE",
+            "zoom": 0.614
+        },
+        "warpStyle": {
+            "style": "PERLIN_IRIS",
+            "zoom": 0.395
+        },
+        "baseWeight": 0.846,
+        "detailWeight": 0.095,
+        "warpStrength": 0.0688,
+        "densityThreshold": {
+            "min": -0.075,
+            "max": 0.018,
+            "style": {
+                "style": "PERLIN_IRIS",
+                "zoom": 0.605
+            }
+        },
+        "thresholdBias": 0.055,
+        "sampleStep": 2,
+        "surfaceClearance": 16,
+        "allowSurfaceBreak": false,
+        "surfaceBreakStyle": {
+            "style": "PERLIN_IRIS",
+            "zoom": 0.9
+        },
+        "surfaceBreakNoiseThreshold": 0.9,
+        "surfaceBreakDepth": 8,
+        "surfaceBreakThresholdBoost": 0.0,
+        "objectMinDepthBelowSurface": 40,
+        "surfaceObjectExclusionDepth": 46,
+        "defaultObjectAnchor": "FLOOR",
+        "anchorScanStep": 1,
+        "anchorSearchAttempts": 28,
+        "allowWater": false,
+        "waterMinDepthBelowSurface": 30,
+        "waterRequiresFloor": true,
+        "allowLava": false,
+        "modules": [
+            {
+                "style": {
+                    "style": "SIMPLEX",
+                    "zoom": 0.722
+                },
+                "weight": 0.07,
+                "threshold": 0.025,
+                "verticalRange": {
+                    "min": 12,
+                    "max": 81
+                },
+                "invert": false
+            },
+            {
+                "style": {
+                    "style": "SIMPLEX_VASCULAR",
+                    "zoom": 0.391
+                },
+                "weight": 0.04,
+                "threshold": 0.05,
+                "verticalRange": {
+                    "min": 6,
+                    "max": 81
+                },
+                "invert": true
+            }
+        ],
+        "verticalEdgeFade": 52,
+        "verticalEdgeFadeStrength": 0.32,
+        "minCarveCells": 8,
+        "recoveryThresholdBoost": 0.05
+    }
 }

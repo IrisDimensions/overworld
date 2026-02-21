@@ -1,267 +1,279 @@
 {
-  "name": "Mushroom Tunnels",
-  "wall": {
-    "palette": [
-      {
-        "block": "minecraft:stone"
-      }
-    ]
-  },
-  "layers": [
-    {
-      "maxHeight": 1,
-      "minHeight": 1,
-      "palette": [
+    "name": "Mushroom Tunnels",
+    "wall": {
+        "palette": [
+            {
+                "block": "minecraft:stone"
+            }
+        ]
+    },
+    "layers": [
         {
-          "block": "minecraft:mycelium"
+            "maxHeight": 1,
+            "minHeight": 1,
+            "palette": [
+                {
+                    "block": "minecraft:mycelium"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "decorators": [
-    {
-      "chance": 0.012,
-      "style": {
-        "style": "STATIC"
-      },
-      "partOf": "CEILING",
-      "palette": [
-        {
-          "block": "minecraft:shroomlight"
-        }
-      ]
-    },
-    {
-      "chance": 0.05,
-      "style": {
-        "style": "STATIC"
-      },
-      "palette": [
-        {
-          "block": "minecraft:red_mushroom"
-        },
-        {
-          "block": "minecraft:brown_mushroom"
-        }
-      ]
-    },
-    {
-      "partOf": "CEILING",
-      "chance": 0.002,
-      "absoluteMaxStack": 1,
-      "palette": [
-        {
-          "block": "minecraft:ochre_froglight"
-        },
-        {
-          "block": "minecraft:verdant_froglight"
-        },
-        {
-          "block": "minecraft:pearlescent_froglight"
-        }
-      ]
-    }
-  ],
-  "caveCeilingLayers": [
-    {
-      "maxHeight": 1,
-      "minHeight": 1,
-      "palette": [
-        {
-          "block": "minecraft:red_mushroom_block"
-        }
-      ]
-    }
-  ],
-  "objects": [
-    {
-      "chance": 0.035,
-      "density": 1,
-      "carvingSupport": "CARVING_ONLY",
-      "caveAnchorMode": "PROFILE_DEFAULT",
-      "translate": {
-        "y": -1
-      },
-      "place": [
-        "trees/mushroom/smolshroom1",
-        "trees/mushroom/smolshroom2",
-        "trees/mushroom/smolshroom3",
-        "trees/mushroom/smolshroom4",
-        "trees/mushroom/smolshroom5"
-      ],
-      "bottom": true,
-      "force": true
-    },
-    {
-      "chance": 0.012,
-      "density": 2,
-      "carvingSupport": "CARVING_ONLY",
-      "caveAnchorMode": "PROFILE_DEFAULT",
-      "translate": {
-        "y": -1
-      },
-      "place": [
-        "clutter/rock1",
-        "clutter/rock2",
-        "clutter/rock3",
-        "clutter/rock4",
-        "clutter/boulder1",
-        "clutter/boulder2",
-        "clutter/boulder3",
-        "clutter/boulder4"
-      ],
-      "bottom": true,
-      "force": true
-    },
-    {
-      "chance": 0.012,
-      "density": 2,
-      "carvingSupport": "CARVING_ONLY",
-      "caveAnchorMode": "PROFILE_DEFAULT",
-      "translate": {
-        "y": -1
-      },
-      "place": [
-        "clutter/stoneclutt5",
-        "clutter/stoneclutt6",
-        "clutter/stoneclutt7",
-        "clutter/ore-scluster4",
-        "clutter/ore-scluster5",
-        "clutter/ore-scluster6",
-        "clutter/rock2",
-        "clutter/rock3",
-        "clutter/rock4",
-        "clutter/boulder13",
-        "clutter/boulder14",
-        "clutter/boulder15"
-      ],
-      "bottom": true,
-      "force": true
-    },
-    {
-      "chance": 0.03456,
-      "density": 1,
-      "carvingSupport": "CARVING_ONLY",
-      "caveAnchorMode": "PROFILE_DEFAULT",
-      "translate": {
-        "y": -1
-      },
-      "place": [
-        "trees/mushroom/mushclut1",
-        "trees/mushroom/mushclut2",
-        "trees/mushroom/mushclut3",
-        "trees/mushroom/mushclut4",
-        "trees/mushroom/mushclut5",
-        "trees/mushroom/mushclut6",
-        "trees/mushroom/mushclut7",
-        "trees/mushroom/mushclut8",
-        "trees/mushroom/mushclut9",
-        "trees/mushroom/mushclut10",
-        "trees/mushroom/browngeneric1",
-        "trees/mushroom/browngeneric2",
-        "trees/mushroom/redgeneric3",
-        "trees/mushroom/redgeneric4",
-        "trees/mushroom/redgeneric5",
-        "trees/mushroom/redgeneric6",
-        "trees/mushroom/redgeneric7",
-        "trees/mushroom/redgeneric8",
-        "trees/mushroom/redgeneric9",
-        "trees/mushroom/redgeneric10",
-        "trees/mushroom/redgeneric11"
-      ],
-      "bottom": true,
-      "force": true
-    }
-  ],
-  "caveProfile": {
-    "enabled": true,
-    "verticalRange": {
-      "min": 6,
-      "max": 640
-    },
-    "baseDensityStyle": {
-      "style": "PERLIN_IRIS",
-      "zoom": 0.72
-    },
-    "detailDensityStyle": {
-      "style": "FRACTAL_BILLOW_SIMPLEX",
-      "zoom": 0.52
-    },
-    "warpStyle": {
-      "style": "SIMPLEX",
-      "zoom": 0.44
-    },
-    "baseWeight": 0.9,
-    "detailWeight": 0.11,
-    "warpStrength": 0.26,
-    "densityThreshold": {
-      "min": -0.13,
-      "max": -0.05,
-      "style": {
-        "style": "SIMPLEX",
-        "zoom": 0.72
-      }
-    },
-    "thresholdBias": 0.13,
-    "sampleStep": 2,
-    "surfaceClearance": 6,
-    "allowSurfaceBreak": true,
-    "surfaceBreakStyle": {
-      "style": "SIMPLEX",
-      "zoom": 0.86
-    },
-    "surfaceBreakNoiseThreshold": 0.6,
-    "surfaceBreakDepth": 14,
-    "surfaceBreakThresholdBoost": 0.1,
-    "objectMinDepthBelowSurface": 14,
-    "surfaceObjectExclusionDepth": 30,
-    "defaultObjectAnchor": "FLOOR",
-    "anchorScanStep": 1,
-    "anchorSearchAttempts": 6,
-    "allowWater": true,
-    "waterMinDepthBelowSurface": 18,
-    "waterRequiresFloor": true,
-    "allowLava": true,
-    "modules": [
-      {
-        "style": {
-          "style": "SIMPLEX_VASCULAR",
-          "zoom": 1.06
-        },
-        "weight": 0.08,
-        "threshold": 0.03,
-        "verticalRange": {
-          "min": 16,
-          "max": 620
-        },
-        "invert": false
-      },
-      {
-        "style": {
-          "style": "CELLULAR_BILINEAR",
-          "zoom": 1.28
-        },
-        "weight": 0.04,
-        "threshold": 0.15,
-        "verticalRange": {
-          "min": 30,
-          "max": 540
-        },
-        "invert": false
-      }
     ],
-    "verticalEdgeFade": 24,
-    "verticalEdgeFadeStrength": 0.17,
-    "minCarveCells": 20,
-    "recoveryThresholdBoost": 0.07
-  },
-  "caveMinDepthBelowSurface": 12,
-  "children": [
-    "carving/mushroom-child"
-  ],
-  "childStyle": {
-    "style": "CELLULAR_IRIS_DOUBLE",
-    "zoom": 1.06
-  },
-  "childShrinkFactor": 1.54
+    "decorators": [
+        {
+            "chance": 0.012,
+            "style": {
+                "style": "STATIC"
+            },
+            "partOf": "CEILING",
+            "palette": [
+                {
+                    "block": "minecraft:shroomlight"
+                }
+            ]
+        },
+        {
+            "chance": 0.05,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "minecraft:red_mushroom"
+                },
+                {
+                    "block": "minecraft:brown_mushroom"
+                }
+            ]
+        },
+        {
+            "partOf": "CEILING",
+            "chance": 0.002,
+            "absoluteMaxStack": 1,
+            "palette": [
+                {
+                    "block": "minecraft:ochre_froglight"
+                },
+                {
+                    "block": "minecraft:verdant_froglight"
+                },
+                {
+                    "block": "minecraft:pearlescent_froglight"
+                }
+            ]
+        }
+    ],
+    "caveCeilingLayers": [
+        {
+            "maxHeight": 1,
+            "minHeight": 1,
+            "palette": [
+                {
+                    "block": "minecraft:red_mushroom_block"
+                }
+            ]
+        }
+    ],
+    "objects": [
+        {
+            "chance": 0.12,
+            "density": 2,
+            "carvingSupport": "CARVING_ONLY",
+            "caveAnchorMode": "PROFILE_DEFAULT",
+            "translate": {
+                "y": -1
+            },
+            "place": [
+                "trees/mushroom/smolshroom1",
+                "trees/mushroom/smolshroom2",
+                "trees/mushroom/smolshroom3",
+                "trees/mushroom/smolshroom4",
+                "trees/mushroom/smolshroom5"
+            ],
+            "bottom": true,
+            "force": true
+        },
+        {
+            "chance": 0.0324,
+            "density": 2,
+            "carvingSupport": "CARVING_ONLY",
+            "caveAnchorMode": "PROFILE_DEFAULT",
+            "translate": {
+                "y": -1
+            },
+            "place": [
+                "clutter/rock1",
+                "clutter/rock2",
+                "clutter/rock3",
+                "clutter/rock4",
+                "clutter/boulder1",
+                "clutter/boulder2",
+                "clutter/boulder3",
+                "clutter/boulder4"
+            ],
+            "bottom": true,
+            "force": true
+        },
+        {
+            "chance": 0.0324,
+            "density": 2,
+            "carvingSupport": "CARVING_ONLY",
+            "caveAnchorMode": "PROFILE_DEFAULT",
+            "translate": {
+                "y": -1
+            },
+            "place": [
+                "clutter/stoneclutt5",
+                "clutter/stoneclutt6",
+                "clutter/stoneclutt7",
+                "clutter/ore-scluster4",
+                "clutter/ore-scluster5",
+                "clutter/ore-scluster6",
+                "clutter/rock2",
+                "clutter/rock3",
+                "clutter/rock4",
+                "clutter/boulder13",
+                "clutter/boulder14",
+                "clutter/boulder15"
+            ],
+            "bottom": true,
+            "force": true
+        },
+        {
+            "chance": 0.12,
+            "density": 2,
+            "carvingSupport": "CARVING_ONLY",
+            "caveAnchorMode": "PROFILE_DEFAULT",
+            "translate": {
+                "y": -1
+            },
+            "place": [
+                "trees/mushroom/mushclut1",
+                "trees/mushroom/mushclut2",
+                "trees/mushroom/mushclut3",
+                "trees/mushroom/mushclut4",
+                "trees/mushroom/mushclut5",
+                "trees/mushroom/mushclut6",
+                "trees/mushroom/mushclut7",
+                "trees/mushroom/mushclut8",
+                "trees/mushroom/mushclut9",
+                "trees/mushroom/mushclut10",
+                "trees/mushroom/browngeneric1",
+                "trees/mushroom/browngeneric2",
+                "trees/mushroom/redgeneric3",
+                "trees/mushroom/redgeneric4",
+                "trees/mushroom/redgeneric5",
+                "trees/mushroom/redgeneric6",
+                "trees/mushroom/redgeneric7",
+                "trees/mushroom/redgeneric8",
+                "trees/mushroom/redgeneric9",
+                "trees/mushroom/redgeneric10",
+                "trees/mushroom/redgeneric11"
+            ],
+            "bottom": true,
+            "force": true
+        },
+        {
+            "chance": 0.045,
+            "density": 2,
+            "carvingSupport": "CARVING_ONLY",
+            "bottom": true,
+            "place": [
+                "structures/monolith1",
+                "structures/monolith3",
+                "structures/monolith4"
+            ],
+            "force": true
+        }
+    ],
+    "caveProfile": {
+        "enabled": true,
+        "verticalRange": {
+            "min": 6,
+            "max": 640
+        },
+        "baseDensityStyle": {
+            "style": "PERLIN_IRIS",
+            "zoom": 0.72
+        },
+        "detailDensityStyle": {
+            "style": "FRACTAL_BILLOW_SIMPLEX",
+            "zoom": 0.52
+        },
+        "warpStyle": {
+            "style": "SIMPLEX",
+            "zoom": 0.44
+        },
+        "baseWeight": 0.9,
+        "detailWeight": 0.11,
+        "warpStrength": 0.26,
+        "densityThreshold": {
+            "min": -0.13,
+            "max": -0.05,
+            "style": {
+                "style": "SIMPLEX",
+                "zoom": 0.72
+            }
+        },
+        "thresholdBias": 0.13,
+        "sampleStep": 2,
+        "surfaceClearance": 6,
+        "allowSurfaceBreak": true,
+        "surfaceBreakStyle": {
+            "style": "SIMPLEX",
+            "zoom": 0.86
+        },
+        "surfaceBreakNoiseThreshold": 0.6,
+        "surfaceBreakDepth": 14,
+        "surfaceBreakThresholdBoost": 0.1,
+        "objectMinDepthBelowSurface": 14,
+        "surfaceObjectExclusionDepth": 30,
+        "defaultObjectAnchor": "FLOOR",
+        "anchorScanStep": 1,
+        "anchorSearchAttempts": 18,
+        "allowWater": true,
+        "waterMinDepthBelowSurface": 18,
+        "waterRequiresFloor": true,
+        "allowLava": true,
+        "modules": [
+            {
+                "style": {
+                    "style": "SIMPLEX_VASCULAR",
+                    "zoom": 1.06
+                },
+                "weight": 0.08,
+                "threshold": 0.03,
+                "verticalRange": {
+                    "min": 16,
+                    "max": 620
+                },
+                "invert": false
+            },
+            {
+                "style": {
+                    "style": "CELLULAR_BILINEAR",
+                    "zoom": 1.28
+                },
+                "weight": 0.04,
+                "threshold": 0.15,
+                "verticalRange": {
+                    "min": 30,
+                    "max": 540
+                },
+                "invert": false
+            }
+        ],
+        "verticalEdgeFade": 24,
+        "verticalEdgeFadeStrength": 0.17,
+        "minCarveCells": 20,
+        "recoveryThresholdBoost": 0.07
+    },
+    "caveMinDepthBelowSurface": 12,
+    "children": [
+        "carving/mushroom-child"
+    ],
+    "childStyle": {
+        "style": "CELLULAR_IRIS_DOUBLE",
+        "zoom": 1.06
+    },
+    "childShrinkFactor": 1.54
 }
