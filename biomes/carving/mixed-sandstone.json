@@ -4,36 +4,68 @@
     "minHeight": 2,
     "maxHeight": 2,
     "style": {
-      "style": "GLOB_IRIS_THICK"
+      "style": "FRACTAL_WATER",
+      "zoom": 0.72
     },
     "zoom": 0.4,
     "palette": [
       {
-        "weight": 3,
-        "block": "minecraft:smooth_red_sandstone"
+        "block": "minecraft:sandstone",
+        "weight": 4
       },
       {
         "block": "minecraft:smooth_sandstone",
-        "weight": 8
+        "weight": 3
+      },
+      {
+        "block": "minecraft:cut_sandstone",
+        "weight": 2
+      },
+      {
+        "block": "minecraft:red_sandstone",
+        "weight": 3
+      },
+      {
+        "block": "minecraft:smooth_red_sandstone",
+        "weight": 2
+      },
+      {
+        "block": "minecraft:calcite",
+        "weight": 1
       }
     ]
   },
   "layers": [
     {
       "style": {
-        "style": "GLOB_IRIS_THICK"
+        "style": "SIMPLEX",
+        "zoom": 0.92
       },
       "zoom": 0.4,
       "palette": [
         {
-          "weight": 3,
-          "block": "minecraft:smooth_red_sandstone"
+          "block": "minecraft:sand",
+          "weight": 4
+        },
+        {
+          "block": "minecraft:red_sand",
+          "weight": 3
         },
         {
           "block": "minecraft:smooth_sandstone",
-          "weight": 8
+          "weight": 2
+        },
+        {
+          "block": "minecraft:sandstone",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:terracotta",
+          "weight": 1
         }
-      ]
+      ],
+      "minHeight": 1,
+      "maxHeight": 2
     }
   ],
   "caveCeilingLayers": [
@@ -79,6 +111,61 @@
         "clutter/rdesertpost2",
         "clutter/rdesertpost3",
         "structures/mlandstone4"
+      ],
+      "bottom": true
+    },
+    {
+      "chance": 0.0012,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "trees/jungle/mgeneric1",
+        "trees/jungle/mgeneric2",
+        "trees/jungle/mgeneric3",
+        "trees/jungle/mgeneric4",
+        "trees/jungle/deligeneric2",
+        "trees/jungle/deligeneric3",
+        "trees/jungle/deligeneric4"
+      ],
+      "bottom": true
+    },
+    {
+      "chance": 0.0018,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "clutter/rock1",
+        "clutter/rock2",
+        "clutter/rock3",
+        "clutter/rock4",
+        "clutter/boulder1",
+        "clutter/boulder2",
+        "clutter/boulder3",
+        "clutter/boulder4"
+      ],
+      "bottom": true
+    },
+    {
+      "chance": 0.0009,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "clutter/literalgarbage1",
+        "clutter/literalgarbage2",
+        "clutter/literalgarbage3",
+        "clutter/literalgarbage4"
       ],
       "bottom": true
     }
@@ -165,5 +252,41 @@
     "minCarveCells": 20,
     "recoveryThresholdBoost": 0.07
   },
-  "caveMinDepthBelowSurface": 4
+  "caveMinDepthBelowSurface": 4,
+  "decorators": [
+    {
+      "partOf": "CEILING",
+      "chance": 0.0035,
+      "absoluteMaxStack": 1,
+      "palette": [
+        {
+          "block": "minecraft:shroomlight"
+        },
+        {
+          "block": "minecraft:ochre_froglight"
+        },
+        {
+          "block": "minecraft:verdant_froglight"
+        },
+        {
+          "block": "minecraft:pearlescent_froglight"
+        }
+      ]
+    },
+    {
+      "chance": 0.018,
+      "absoluteMaxStack": 1,
+      "palette": [
+        {
+          "block": "minecraft:short_grass"
+        },
+        {
+          "block": "minecraft:tall_grass"
+        },
+        {
+          "block": "minecraft:dead_bush"
+        }
+      ]
+    }
+  ]
 }

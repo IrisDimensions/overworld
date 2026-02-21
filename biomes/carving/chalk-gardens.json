@@ -1,19 +1,19 @@
 {
-  "name": "Moss Pillars",
+  "name": "Chalk Gardens",
   "wall": {
     "style": {
-      "style": "NOWHERE",
-      "zoom": 0.55
+      "style": "CELLULAR",
+      "zoom": 0.75
     },
     "palette": [
       {
+        "block": "minecraft:calcite"
+      },
+      {
+        "block": "minecraft:diorite"
+      },
+      {
         "block": "minecraft:deepslate"
-      },
-      {
-        "block": "minecraft:moss_block"
-      },
-      {
-        "block": "minecraft:mossy_cobblestone"
       }
     ]
   },
@@ -26,8 +26,7 @@
       "maxHeight": 2,
       "palette": [
         {
-          "block": "minecraft:moss_block",
-          "weight": 2
+          "block": "minecraft:calcite"
         },
         {
           "block": "minecraft:clay"
@@ -37,17 +36,11 @@
   ],
   "decorators": [
     {
-      "chance": 0.035,
+      "chance": 0.026,
       "absoluteMaxStack": 1,
       "palette": [
         {
-          "block": "minecraft:short_grass"
-        },
-        {
-          "block": "minecraft:azalea"
-        },
-        {
-          "block": "minecraft:flowering_azalea"
+          "block": "minecraft:small_dripleaf"
         }
       ]
     },
@@ -61,11 +54,30 @@
           "block": "minecraft:glow_lichen"
         }
       ]
+    },
+    {
+      "partOf": "CEILING",
+      "chance": 0.0035,
+      "absoluteMaxStack": 1,
+      "palette": [
+        {
+          "block": "minecraft:shroomlight"
+        },
+        {
+          "block": "minecraft:ochre_froglight"
+        },
+        {
+          "block": "minecraft:verdant_froglight"
+        },
+        {
+          "block": "minecraft:pearlescent_froglight"
+        }
+      ]
     }
   ],
   "objects": [
     {
-      "chance": 0.009,
+      "chance": 0.008,
       "density": 1,
       "carvingSupport": "CARVING_ONLY",
       "caveAnchorMode": "PROFILE_DEFAULT",
@@ -73,15 +85,14 @@
         "y": -1
       },
       "place": [
-        "clutter/jungleclutt11",
-        "clutter/jungleclutt12",
-        "clutter/jungleclutt13",
-        "clutter/jungleclutt4"
+        "clutter/stoneclutt4",
+        "clutter/stoneclutt5",
+        "clutter/amethyst-cluster4"
       ],
       "bottom": true
     },
     {
-      "chance": 0.003,
+      "chance": 0.0012,
       "density": 1,
       "carvingSupport": "CARVING_ONLY",
       "caveAnchorMode": "PROFILE_DEFAULT",
@@ -89,13 +100,26 @@
         "y": -1
       },
       "place": [
-        "trees/jungle/mgeneric1",
-        "trees/jungle/mgeneric2",
-        "trees/jungle/mgeneric3",
-        "trees/jungle/mgeneric4",
-        "trees/jungle/deligeneric2",
-        "trees/jungle/deligeneric3",
-        "trees/jungle/deligeneric4"
+        "trees/oak/generic1",
+        "trees/oak/generic2",
+        "trees/oak/generic3",
+        "trees/oak/generic4"
+      ],
+      "bottom": true
+    },
+    {
+      "chance": 0.0009,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "clutter/literalgarbage1",
+        "clutter/literalgarbage2",
+        "clutter/literalgarbage3",
+        "clutter/literalgarbage4"
       ],
       "bottom": true
     }
@@ -107,72 +131,72 @@
       "max": 700
     },
     "baseDensityStyle": {
-      "style": "IRIS_DOUBLE",
-      "zoom": 0.68
+      "style": "PERLIN_IRIS",
+      "zoom": 0.72
     },
     "detailDensityStyle": {
       "style": "SIMPLEX",
-      "zoom": 0.5
+      "zoom": 0.54
     },
     "warpStyle": {
       "style": "FRACTAL_WATER",
-      "zoom": 0.46
+      "zoom": 0.5
     },
-    "baseWeight": 0.89,
-    "detailWeight": 0.12,
-    "warpStrength": 0.32,
+    "baseWeight": 0.9,
+    "detailWeight": 0.11,
+    "warpStrength": 0.3,
     "densityThreshold": {
-      "min": -0.13,
-      "max": -0.04,
+      "min": -0.14,
+      "max": -0.06,
       "style": {
         "style": "SIMPLEX",
-        "zoom": 0.7
+        "zoom": 0.74
       }
     },
-    "thresholdBias": 0.12,
+    "thresholdBias": 0.14,
     "sampleStep": 2,
     "surfaceClearance": 5,
     "allowSurfaceBreak": true,
     "surfaceBreakStyle": {
       "style": "SIMPLEX",
-      "zoom": 0.82
+      "zoom": 0.88
     },
-    "surfaceBreakNoiseThreshold": 0.56,
-    "surfaceBreakDepth": 22,
+    "surfaceBreakNoiseThreshold": 0.64,
+    "surfaceBreakDepth": 14,
     "surfaceBreakThresholdBoost": 0.1,
-    "objectMinDepthBelowSurface": 10,
-    "surfaceObjectExclusionDepth": 34,
+    "objectMinDepthBelowSurface": 14,
+    "surfaceObjectExclusionDepth": 30,
     "defaultObjectAnchor": "FLOOR",
     "anchorScanStep": 1,
     "anchorSearchAttempts": 6,
     "allowWater": true,
-    "waterMinDepthBelowSurface": 14,
+    "waterMinDepthBelowSurface": 20,
     "waterRequiresFloor": true,
     "allowLava": true,
     "modules": [
       {
         "style": {
-          "style": "VASCULAR_THIN",
+          "style": "SIMPLEX_VASCULAR",
           "zoom": 1.08
         },
-        "weight": 0.09,
-        "threshold": 0.02,
+        "weight": 0.08,
+        "threshold": 0.03,
         "verticalRange": {
-          "min": 18,
-          "max": 680
+          "min": 24,
+          "max": 660
         },
         "invert": false
       },
       {
         "style": {
-          "style": "SIMPLEX",
-          "zoom": 0.22
+          "style": "FRACTAL_FBM_SIMPLEX",
+          "zoom": 0.24
         },
-        "weight": 0.05,
+        "weight": 0.04,
         "threshold": 0.08,
         "verticalRange": {
           "min": 6,
-          "max": 220
+          "max": 240
         },
         "invert": true
       }

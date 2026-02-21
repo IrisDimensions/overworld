@@ -2,11 +2,33 @@
   "name": "Sandstone Oasis Caverns",
   "wall": {
     "style": {
-      "style": "VASCULAR"
+      "style": "FRACTAL_WATER",
+      "zoom": 0.72
     },
     "palette": [
       {
-        "block": "minecraft:sandstone"
+        "block": "minecraft:sandstone",
+        "weight": 5
+      },
+      {
+        "block": "minecraft:smooth_sandstone",
+        "weight": 4
+      },
+      {
+        "block": "minecraft:cut_sandstone",
+        "weight": 2
+      },
+      {
+        "block": "minecraft:red_sandstone",
+        "weight": 2
+      },
+      {
+        "block": "minecraft:smooth_red_sandstone",
+        "weight": 1
+      },
+      {
+        "block": "minecraft:calcite",
+        "weight": 1
       }
     ]
   },
@@ -16,10 +38,30 @@
       "minHeight": 2,
       "palette": [
         {
+          "block": "minecraft:sand",
+          "weight": 5
+        },
+        {
+          "block": "minecraft:red_sand",
+          "weight": 2
+        },
+        {
           "block": "minecraft:smooth_sandstone",
-          "weight": 8
+          "weight": 2
+        },
+        {
+          "block": "minecraft:sandstone",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:terracotta",
+          "weight": 1
         }
-      ]
+      ],
+      "style": {
+        "style": "SIMPLEX",
+        "zoom": 0.92
+      }
     }
   ],
   "caveCeilingLayers": [
@@ -68,6 +110,22 @@
         "trees/jungle/deligeneric2",
         "trees/jungle/deligeneric3",
         "trees/jungle/deligeneric4"
+      ],
+      "bottom": true
+    },
+    {
+      "chance": 0.0009,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "clutter/literalgarbage1",
+        "clutter/literalgarbage2",
+        "clutter/literalgarbage3",
+        "clutter/literalgarbage4"
       ],
       "bottom": true
     }
@@ -156,12 +214,48 @@
   },
   "caveMinDepthBelowSurface": 2,
   "children": [
-    "carving/cavesv4/sand-hollows",
+    "carving/sand-hollows",
     "carving/mixed-sandstone"
   ],
   "childShrinkFactor": 1.8,
   "childStyle": {
     "style": "SIMPLEX",
     "zoom": 0.95
-  }
+  },
+  "decorators": [
+    {
+      "partOf": "CEILING",
+      "chance": 0.0035,
+      "absoluteMaxStack": 1,
+      "palette": [
+        {
+          "block": "minecraft:shroomlight"
+        },
+        {
+          "block": "minecraft:ochre_froglight"
+        },
+        {
+          "block": "minecraft:verdant_froglight"
+        },
+        {
+          "block": "minecraft:pearlescent_froglight"
+        }
+      ]
+    },
+    {
+      "chance": 0.018,
+      "absoluteMaxStack": 1,
+      "palette": [
+        {
+          "block": "minecraft:short_grass"
+        },
+        {
+          "block": "minecraft:tall_grass"
+        },
+        {
+          "block": "minecraft:dead_bush"
+        }
+      ]
+    }
+  ]
 }

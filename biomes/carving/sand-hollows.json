@@ -2,34 +2,64 @@
   "name": "Sunken Oasis Hollows",
   "wall": {
     "style": {
-      "style": "SIMPLEX",
-      "zoom": 0.65
+      "style": "FRACTAL_WATER",
+      "zoom": 0.72
     },
     "palette": [
       {
-        "block": "minecraft:sandstone"
+        "block": "minecraft:sandstone",
+        "weight": 5
       },
       {
-        "block": "minecraft:red_sandstone"
+        "block": "minecraft:smooth_sandstone",
+        "weight": 4
       },
       {
-        "block": "minecraft:smooth_sandstone"
+        "block": "minecraft:cut_sandstone",
+        "weight": 2
+      },
+      {
+        "block": "minecraft:red_sandstone",
+        "weight": 2
+      },
+      {
+        "block": "minecraft:smooth_red_sandstone",
+        "weight": 1
+      },
+      {
+        "block": "minecraft:calcite",
+        "weight": 1
       }
     ]
   },
   "layers": [
     {
       "style": {
-        "style": "STATIC"
+        "style": "SIMPLEX",
+        "zoom": 0.92
       },
       "minHeight": 1,
       "maxHeight": 2,
       "palette": [
         {
-          "block": "minecraft:smooth_sandstone"
+          "block": "minecraft:sand",
+          "weight": 5
         },
         {
-          "block": "minecraft:smooth_red_sandstone"
+          "block": "minecraft:red_sand",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:smooth_sandstone",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:sandstone",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:terracotta",
+          "weight": 1
         }
       ]
     }
@@ -50,6 +80,40 @@
       "palette": [
         {
           "block": "minecraft:cactus"
+        }
+      ]
+    },
+    {
+      "partOf": "CEILING",
+      "chance": 0.0035,
+      "absoluteMaxStack": 1,
+      "palette": [
+        {
+          "block": "minecraft:shroomlight"
+        },
+        {
+          "block": "minecraft:ochre_froglight"
+        },
+        {
+          "block": "minecraft:verdant_froglight"
+        },
+        {
+          "block": "minecraft:pearlescent_froglight"
+        }
+      ]
+    },
+    {
+      "chance": 0.018,
+      "absoluteMaxStack": 1,
+      "palette": [
+        {
+          "block": "minecraft:short_grass"
+        },
+        {
+          "block": "minecraft:tall_grass"
+        },
+        {
+          "block": "minecraft:dead_bush"
         }
       ]
     }
@@ -88,6 +152,22 @@
         "trees/jungle/deligeneric2",
         "trees/jungle/deligeneric3",
         "trees/jungle/deligeneric4"
+      ],
+      "bottom": true
+    },
+    {
+      "chance": 0.0009,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "clutter/literalgarbage1",
+        "clutter/literalgarbage2",
+        "clutter/literalgarbage3",
+        "clutter/literalgarbage4"
       ],
       "bottom": true
     }
