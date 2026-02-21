@@ -1,343 +1,341 @@
 {
-    "name": "Swamp Ocean tree",
-    "color": "#183860",
-    "derivative": "minecraft:swamp",
-    "vanillaDerivative": "minecraft:ocean",
-    "generators": [
-        {
-            "min": -2,
-            "max": -1,
-            "generator": "river"
-        }
-    ],
-    "wall": {
-        "style": {
-            "style": "NOWHERE"
-        },
-        "palette": [
-            {
-                "block": "minecraft:clay"
-            },
-            {
-                "weight": 2,
-                "block": "minecraft:smooth_sandstone"
-            },
-            {
-                "block": "minecraft:sand"
-            }
-        ]
-    },
-    "layers": [
-        {
-            "minHeight": 2,
-            "maxHeight": 3,
-            "style": {
-                "style": "VASCULAR",
-                "zoom": 0.8,
-                "fracture": {
-                    "multiplier": 2,
-                    "style": "STATIC"
-                }
-            },
-            "zoom": 0.82,
-            "palette": [
-                {
-                    "block": "minecraft:sand"
-                },
-                {
-                    "block": "minecraft:dirt"
-                },
-                {
-                    "block": "minecraft:gravel"
-                },
-                {
-                    "block": "minecraft:clay"
-                }
-            ]
-        },
-        {
-            "palette": [
-                {
-                    "block": "minecraft:dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                {
-                    "weight": 2,
-                    "block": "minecraft:dirt"
-                },
-                {
-                    "block": "minecraft:coarse_dirt"
-                }
-            ]
-        }
-    ],
-    "objects": [
-        {
-            "chance": 0.05,
-            "density": 1,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "underwater": true,
-            "place": [],
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "minecraft:oak_stairs"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "minecraft:oak_planks"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "translate": {
-                "x": 0,
-                "y": 4,
-                "z": 0
-            }
-        },
-        {
-            "mode": "MIN_HEIGHT",
-            "place": [
-                "trees/jungle/lgeneric1",
-                "trees/jungle/lgeneric2",
-                "trees/jungle/lgeneric3",
-                "trees/jungle/lgeneric4",
-                "trees/jungle/lgeneric5",
-                "trees/jungle/lgeneric7",
-                "trees/jungle/lgeneric8",
-                "trees/jungle/lgeneric9"
-            ],
-            "chance": 0.3,
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "minecraft:jungle_leaves"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "minecraft:oak_leaves"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "find": [
-                        {
-                            "block": "minecraft:jungle_wood"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "minecraft:dark_oak_wood"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "find": [
-                        {
-                            "block": "minecraft:vine"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "minecraft:air"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "find": [
-                        {
-                            "block": "minecraft:jungle_log"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "minecraft:dark_oak_wood"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "onwater": true,
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "interval": 90,
-                    "min": -360,
-                    "max": 360
-                }
-            }
-        }
-    ],
-    "decorators": [
-        {
-            "partOf": "SEA_SURFACE",
-            "chance": 0.025,
-            "variance": {
-                "style": "STATIC"
-            },
-            "zoom": 2.25,
-            "palette": [
-                {
-                    "block": "minecraft:lily_pad"
-                }
-            ],
-            "style": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "chance": 0.07,
-            "variance": {
-                "style": "STATIC"
-            },
-            "zoom": 20,
-            "palette": [
-                {
-                    "block": "minecraft:seagrass"
-                }
-            ],
-            "style": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "chance": 0.0006,
-            "variance": {
-                "style": "STATIC"
-            },
-            "zoom": 1,
-            "palette": [
-                {
-                    "block": "minecraft:soul_sand"
-                },
-                {
-                    "block": "minecraft:magma_block"
-                }
-            ],
-            "style": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "chance": 0.0013,
-            "verticalZoom": 88,
-            "variance": {
-                "style": "STATIC"
-            },
-            "stackMax": 24,
-            "zoom": 1,
-            "palette": [
-                {
-                    "block": "minecraft:kelp_plant"
-                }
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "heightVariance": {
-                "style": "NOWHERE"
-            },
-            "stackMin": 2
-        },
-        {
-            "chance": 0.0095,
-            "verticalZoom": 20,
-            "variance": {
-                "style": "STATIC"
-            },
-            "stackMax": 9,
-            "zoom": 1,
-            "palette": [
-                {
-                    "block": "minecraft:kelp_plant"
-                }
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "heightVariance": {
-                "style": "STATIC"
-            },
-            "stackMin": 1
-        },
-        {
-            "chance": 0.004,
-            "variance": {
-                "style": "STATIC"
-            },
-            "zoom": 1,
-            "palette": [
-                {
-                    "data": {
-                        "waterlogged": true,
-                        "pickles": 1
-                    },
-                    "block": "minecraft:sea_pickle"
-                },
-                {
-                    "data": {
-                        "waterlogged": true,
-                        "pickles": 2
-                    },
-                    "block": "minecraft:sea_pickle"
-                }
-            ],
-            "style": {
-                "style": "STATIC"
-            }
-        }
-    ],
-    "slab": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            {
-                "data": {
-                    "waterlogged": false,
-                    "type": "bottom"
-                },
-                "block": "minecraft:sandstone_slab"
-            },
-            {
-                "data": {
-                    "waterlogged": false,
-                    "type": "bottom"
-                },
-                "block": "minecraft:smooth_sandstone_slab"
-            },
-            {
-                "weight": 6,
-                "block": "minecraft:air"
-            }
-        ]
+  "name": "Swamp Ocean tree",
+  "color": "#183860",
+  "derivative": "minecraft:swamp",
+  "vanillaDerivative": "minecraft:ocean",
+  "generators": [
+    {
+      "min": -2,
+      "max": -1,
+      "generator": "river"
     }
+  ],
+  "wall": {
+    "style": {
+      "style": "NOWHERE"
+    },
+    "palette": [
+      {
+        "block": "minecraft:clay"
+      },
+      {
+        "weight": 2,
+        "block": "minecraft:smooth_sandstone"
+      },
+      {
+        "block": "minecraft:sand"
+      }
+    ]
+  },
+  "layers": [
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "style": {
+        "style": "VASCULAR",
+        "zoom": 0.8,
+        "fracture": {
+          "multiplier": 2,
+          "style": "STATIC"
+        }
+      },
+      "zoom": 0.82,
+      "palette": [
+        {
+          "block": "minecraft:sand"
+        },
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "block": "minecraft:gravel"
+        },
+        {
+          "block": "minecraft:clay"
+        }
+      ]
+    },
+    {
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "weight": 2,
+          "block": "minecraft:dirt"
+        },
+        {
+          "block": "minecraft:coarse_dirt"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "chance": 0.05,
+      "density": 1,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "underwater": true,
+      "place": [],
+      "edit": [
+        {
+          "find": [
+            {
+              "block": "minecraft:oak_stairs"
+            }
+          ],
+          "replace": {
+            "palette": [
+              {
+                "block": "minecraft:oak_planks"
+              }
+            ]
+          }
+        }
+      ],
+      "translate": {
+        "x": 0,
+        "y": 4,
+        "z": 0
+      }
+    },
+    {
+      "mode": "MIN_HEIGHT",
+      "place": [
+        "trees/jungle/lgeneric1",
+        "trees/jungle/lgeneric2",
+        "trees/jungle/lgeneric3",
+        "trees/jungle/lgeneric4",
+        "trees/jungle/lgeneric5",
+        "trees/jungle/lgeneric7",
+        "trees/jungle/lgeneric8",
+        "trees/jungle/lgeneric9"
+      ],
+      "chance": 0.3,
+      "edit": [
+        {
+          "find": [
+            {
+              "block": "minecraft:jungle_leaves"
+            }
+          ],
+          "replace": {
+            "palette": [
+              {
+                "block": "minecraft:oak_leaves"
+              }
+            ]
+          }
+        },
+        {
+          "find": [
+            {
+              "block": "minecraft:jungle_wood"
+            }
+          ],
+          "replace": {
+            "palette": [
+              {
+                "block": "minecraft:dark_oak_wood"
+              }
+            ]
+          }
+        },
+        {
+          "find": [
+            {
+              "block": "minecraft:vine"
+            }
+          ],
+          "replace": {
+            "palette": [
+              {
+                "block": "minecraft:air"
+              }
+            ]
+          }
+        },
+        {
+          "find": [
+            {
+              "block": "minecraft:jungle_log"
+            }
+          ],
+          "replace": {
+            "palette": [
+              {
+                "block": "minecraft:dark_oak_wood"
+              }
+            ]
+          }
+        }
+      ],
+      "onwater": true,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "interval": 90,
+          "min": -360,
+          "max": 360
+        }
+      }
+    }
+  ],
+  "decorators": [
+    {
+      "partOf": "SEA_SURFACE",
+      "chance": 0.025,
+      "variance": {
+        "style": "STATIC"
+      },
+      "zoom": 2.25,
+      "palette": [
+        {
+          "block": "minecraft:lily_pad"
+        }
+      ],
+      "style": {
+        "style": "STATIC"
+      }
+    },
+    {
+      "chance": 0.07,
+      "variance": {
+        "style": "STATIC"
+      },
+      "zoom": 20,
+      "palette": [
+        {
+          "block": "minecraft:seagrass"
+        }
+      ],
+      "style": {
+        "style": "STATIC"
+      }
+    },
+    {
+      "chance": 0.0006,
+      "variance": {
+        "style": "STATIC"
+      },
+      "zoom": 1,
+      "palette": [
+        {
+          "block": "minecraft:soul_sand"
+        },
+        {
+          "block": "minecraft:magma_block"
+        }
+      ],
+      "style": {
+        "style": "STATIC"
+      }
+    },
+    {
+      "chance": 0.0013,
+      "variance": {
+        "style": "STATIC"
+      },
+      "stackMax": 24,
+      "zoom": 1,
+      "palette": [
+        {
+          "block": "minecraft:kelp_plant"
+        }
+      ],
+      "style": {
+        "style": "STATIC"
+      },
+      "heightVariance": {
+        "style": "NOWHERE"
+      },
+      "stackMin": 2
+    },
+    {
+      "chance": 0.0095,
+      "variance": {
+        "style": "STATIC"
+      },
+      "stackMax": 9,
+      "zoom": 1,
+      "palette": [
+        {
+          "block": "minecraft:kelp_plant"
+        }
+      ],
+      "style": {
+        "style": "STATIC"
+      },
+      "heightVariance": {
+        "style": "STATIC"
+      },
+      "stackMin": 1
+    },
+    {
+      "chance": 0.004,
+      "variance": {
+        "style": "STATIC"
+      },
+      "zoom": 1,
+      "palette": [
+        {
+          "data": {
+            "waterlogged": true,
+            "pickles": 1
+          },
+          "block": "minecraft:sea_pickle"
+        },
+        {
+          "data": {
+            "waterlogged": true,
+            "pickles": 2
+          },
+          "block": "minecraft:sea_pickle"
+        }
+      ],
+      "style": {
+        "style": "STATIC"
+      }
+    }
+  ],
+  "slab": {
+    "style": {
+      "style": "STATIC"
+    },
+    "palette": [
+      {
+        "data": {
+          "waterlogged": false,
+          "type": "bottom"
+        },
+        "block": "minecraft:sandstone_slab"
+      },
+      {
+        "data": {
+          "waterlogged": false,
+          "type": "bottom"
+        },
+        "block": "minecraft:smooth_sandstone_slab"
+      },
+      {
+        "weight": 6,
+        "block": "minecraft:air"
+      }
+    ]
+  }
 }

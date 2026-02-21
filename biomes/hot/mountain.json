@@ -1,57 +1,86 @@
 {
-    "name": "Hot Mountains",
-    "color": "#C3A02A",
-    "rarity": 1,
-    "derivative": "minecraft:desert",
-    "vanillaDerivative": "minecraft:desert",
-    "generators": [{
-        "min": 120,
-        "max": 214,
-        "generator": "mountain"
-    }],
-    "biomeZoom": 30,
-    "biomeStyle": {
-        "style": "NOWHERE",
-        "zoom": 0.7,
-        "exponent": 4
+  "name": "Hot Mountains",
+  "color": "#C3A02A",
+  "rarity": 1,
+  "derivative": "minecraft:desert",
+  "vanillaDerivative": "minecraft:desert",
+  "generators": [
+    {
+      "min": 120,
+      "max": 214,
+      "generator": "mountain"
+    }
+  ],
+  "biomeStyle": {
+    "style": "NOWHERE",
+    "zoom": 0.7,
+    "exponent": 4
+  },
+  "wall": {
+    "style": {
+      "style": "STATIC"
     },
-    "wall": {
-        "style": {"style": "STATIC"},
-        "palette": [{"block": "minecraft:gray_terracotta"}]
-    },
-    "layers": [
-        {
-            "minHeight": 1,
-            "maxHeight": 1,
-            "slopeCondition": {
-                "minimumSlope": 0,
-                "maximumSlope": 3
-            },
-            "palette": [{"block": "minecraft:red_sand"}]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 4,
-            "slopeCondition": {"minimumSlope": 3.95},
-            "palette": [
-                {"block": "minecraft:brown_terracotta"},
-                {"block": "minecraft:gray_terracotta"}
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 3,
-            "palette": [{"block": "minecraft:brown_terracotta"}]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {"style": "STATIC"},
-            "palette": [
-                {"block": "minecraft:stone"},
-                {"block": "minecraft:andesite"},
-                {"block": "minecraft:stone"}
-            ]
-        }
+    "palette": [
+      {
+        "block": "minecraft:gray_terracotta"
+      }
     ]
+  },
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 3
+      },
+      "palette": [
+        {
+          "block": "minecraft:red_sand"
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 4,
+      "slopeCondition": {
+        "minimumSlope": 3.95
+      },
+      "palette": [
+        {
+          "block": "minecraft:brown_terracotta"
+        },
+        {
+          "block": "minecraft:gray_terracotta"
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:brown_terracotta"
+        }
+      ]
+    },
+    {
+      "minHeight": 6,
+      "maxHeight": 18,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:andesite"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  ]
 }

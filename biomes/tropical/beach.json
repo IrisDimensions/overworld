@@ -1,100 +1,147 @@
 {
-    "name": "Tropical Beach",
-    "color": "#57DFA9",
-    "rarity": 1,
-    "derivative": "minecraft:jungle",
-    "vanillaDerivative": "minecraft:jungle",
-    "generators": [{
-        "min": -3,
-        "max": 3,
-        "generator": "plain"
-    }],
-    "wall": {"palette": [{"block": "minecraft:smooth_sandstone"}]},
-    "layers": [
+  "name": "Tropical Beach",
+  "color": "#57DFA9",
+  "rarity": 1,
+  "derivative": "minecraft:jungle",
+  "vanillaDerivative": "minecraft:jungle",
+  "generators": [
+    {
+      "min": -3,
+      "max": 3,
+      "generator": "plain"
+    }
+  ],
+  "wall": {
+    "palette": [
+      {
+        "block": "minecraft:smooth_sandstone"
+      }
+    ]
+  },
+  "layers": [
+    {
+      "minHeight": 3,
+      "maxHeight": 6,
+      "palette": [
         {
-            "minHeight": 3,
-            "maxHeight": 6,
-            "palette": [{"block": "minecraft:sand"}]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [{"block": "minecraft:dirt"}]
+          "block": "minecraft:sand"
         }
-    ],
-    "objects": [{
-        "chance": 0.34,
-        "density": 2,
-        "edit": [{
-            "find": [{"block": "minecraft:player_wall_head"}],
-            "replace": {"palette": [{"block": "minecraft:air"}]}
-        }],
-        "rotation": {
-            "yAxis": {
-                "min": 0,
-                "max": 270,
-                "interval": 90,
-                "enabled": true
-            },
-            "enabled": true
-        },
-        "place": [
-            "trees/jungle/palm1",
-            "trees/jungle/palm2",
-            "trees/jungle/palm3",
-            "trees/jungle/palm12",
-            "trees/jungle/palm11",
-            "trees/jungle/palm10",
-            "trees/jungle/palm9"
-        ]
-    }],
-    "decorators": [
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 3,
+      "palette": [
         {
-            "chance": 0.01,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.3,
+          "block": "minecraft:dirt"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "chance": 0.34,
+      "density": 2,
+      "edit": [
+        {
+          "find": [
+            {
+              "block": "minecraft:player_wall_head"
+            }
+          ],
+          "replace": {
             "palette": [
-                {
-                    "data": {
-                        "face": "floor",
-                        "powered": false,
-                        "facing": "east"
-                    },
-                    "block": "minecraft:jungle_button"
-                },
-                {"block": "minecraft:air"},
-                {
-                    "data": {
-                        "face": "floor",
-                        "powered": false,
-                        "facing": "south"
-                    },
-                    "block": "minecraft:jungle_button"
-                }
-            ],
-            "style": {"style": "STATIC"}
+              {
+                "block": "minecraft:air"
+              }
+            ]
+          }
+        }
+      ],
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "trees/jungle/palm1",
+        "trees/jungle/palm2",
+        "trees/jungle/palm3",
+        "trees/jungle/palm12",
+        "trees/jungle/palm11",
+        "trees/jungle/palm10",
+        "trees/jungle/palm9"
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.01,
+      "variance": {
+        "style": "STATIC"
+      },
+      "zoom": 0.3,
+      "palette": [
+        {
+          "data": {
+            "face": "floor",
+            "powered": false,
+            "facing": "east"
+          },
+          "block": "minecraft:jungle_button"
         },
         {
-            "partOf": "SHORE_LINE",
-            "verticalZoom": 0.2,
-            "chance": 0.21,
-            "variance": {"style": "SIMPLEX"},
-            "stackMax": 6,
-            "zoom": 5,
-            "palette": [{"block": "minecraft:sugar_cane"}],
-            "style": {"style": "STATIC"},
-            "heightVariance": {"style": "NOWHERE"},
-            "stackMin": 1
+          "block": "minecraft:air"
+        },
+        {
+          "data": {
+            "face": "floor",
+            "powered": false,
+            "facing": "south"
+          },
+          "block": "minecraft:jungle_button"
         }
-    ],
-    "effects": [{
-        "particleAltX": 0.301,
-        "particleAltY": -0.33885,
-        "particleAltZ": 0.301,
-        "chance": 1,
-        "particleEffect": "TOTEM_OF_UNDYING",
-        "particleOffset": 12,
-        "interval": 550,
-        "particleCount": 0
-    }]
+      ],
+      "style": {
+        "style": "STATIC"
+      }
+    },
+    {
+      "partOf": "SHORE_LINE",
+      "chance": 0.21,
+      "variance": {
+        "style": "SIMPLEX"
+      },
+      "stackMax": 6,
+      "zoom": 5,
+      "palette": [
+        {
+          "block": "minecraft:sugar_cane"
+        }
+      ],
+      "style": {
+        "style": "STATIC"
+      },
+      "heightVariance": {
+        "style": "NOWHERE"
+      },
+      "stackMin": 1
+    }
+  ],
+  "effects": [
+    {
+      "particleAltX": 0.301,
+      "particleAltY": -0.33885,
+      "particleAltZ": 0.301,
+      "chance": 1,
+      "particleEffect": "TOTEM_OF_UNDYING",
+      "particleOffset": 12,
+      "interval": 550,
+      "particleCount": 0
+    }
+  ]
 }

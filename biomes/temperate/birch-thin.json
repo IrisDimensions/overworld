@@ -1,204 +1,265 @@
 {
-    "name": "Birch Thin Forest",
-    "color": "#9FF07D",
-    "rarity": 4,
-    "derivative": "minecraft:birch_forest",
-    "vanillaDerivative": "minecraft:birch_forest",
-    "generators": [
-        {
-            "min": 5,
-            "max": 15,
-            "generator": "highplains"
-        },
-        {
-            "min": 0,
-            "max": 40,
-            "generator": "rare-hills"
-        }
-    ],
-    "biomeZoom": 50,
-    "biomeStyle": {"style": "SIMPLEX"},
-    "wall": {
-        "style": {"style": "STATIC"},
-        "palette": [
-            {"block": "minecraft:stone"},
-            {"block": "minecraft:andesite"},
-            {"block": "minecraft:stone"}
-        ]
+  "name": "Birch Thin Forest",
+  "color": "#9FF07D",
+  "rarity": 4,
+  "derivative": "minecraft:birch_forest",
+  "vanillaDerivative": "minecraft:birch_forest",
+  "generators": [
+    {
+      "min": 5,
+      "max": 15,
+      "generator": "highplains"
     },
-    "layers": [
-        {
-            "style": {"style": "STATIC"},
-            "palette": [
-                {
-                    "block": "minecraft:grass_block",
-                    "weight": 30
-                },
-                {"block": "minecraft:coarse_dirt"}
-            ]
-        },
-        {"palette": [{"block": "minecraft:dirt"}]},
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                {"block": "minecraft:dirt"},
-                {"block": "minecraft:coarse_dirt"}
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {"style": "STATIC"},
-            "palette": [
-                {"block": "minecraft:stone"},
-                {"block": "minecraft:andesite"},
-                {"block": "minecraft:stone"}
-            ]
-        }
-    ],
-
-    "objects": [
-        {
-            "mode": "PAINT",
-            "chance": 0.0025,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": ["clutter/bincluster1"]
-        },
-        {
-            "mode": "PAINT",
-            "chance": 0.00375,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": ["clutter/camp1"]
-        },
-        {
-            "chance": 0.9,
-            "density": 1,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "trees/birch/antioch3",
-                "trees/birch/antioch4",
-                "trees/birch/antioch5",
-                "trees/birch/antioch6",
-                "trees/birch/antioch7",
-                "trees/birch/antioch8",
-                "trees/birch/antioch9",
-                "trees/birch/antioch10",
-                "trees/birch/antioch11",
-                "trees/birch/antioch12",
-                "trees/birch/antioch13"
-            ]
-        },
-        {
-            "chance": 0.08,
-            "density": 1,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "trees/birch/antioch3b",
-                "trees/birch/antioch4b",
-                "trees/birch/antioch5b",
-                "trees/birch/antioch6b"
-            ],
-            "addFeatures": [{
-                "rarity": 1,
-                "zone": {
-                    "blockRadius": 8,
-                    "entitySpawners": ["hives"]
-                }
-            }]
-        },
-        {
-            "chance": 0.008,
-            "mode": "PAINT",
-            "place": [
-                "clutter/pumpkins1",
-                "clutter/pumpkins2",
-                "clutter/pumpkins3",
-                "clutter/pumpkins4",
-                "clutter/pumpkins5",
-                "clutter/pumpkins6"
-            ],
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "max": 360,
-                    "min": 0,
-                    "interval": 90
-                }
-            },
-            "translate": {"y": 1}
-        }
-    ],
-    "decorators": [
-        {
-            "chance": 0.03,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.1,
-            "palette": [
-                {"block": "minecraft:short_grass"},
-                {"block": "minecraft:allium"},
-                {"block": "minecraft:poppy"},
-                {"block": "minecraft:dandelion"},
-                {"block": "minecraft:azure_bluet"},
-                {"block": "minecraft:pink_tulip"},
-                {"block": "minecraft:lily_of_the_valley"}
-            ],
-            "style": {"style": "STATIC"}
-        },
-        {
-            "chance": 0.4,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.3,
-            "palette": [
-                {
-                    "block": "minecraft:short_grass",
-                    "weight": 10
-                },
-                {"block": "minecraft:fern"}
-            ],
-            "style": {"style": "STATIC"}
-        },
-        {
-            "chance": 0.017,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.3,
-            "palette": [{"block": "minecraft:tall_grass"}],
-            "style": {"style": "STATIC"}
-        },
-         "snippet/decorator/wildflowers",
-         "snippet/decorator/bush"
+    {
+      "min": 0,
+      "max": 40,
+      "generator": "rare-hills"
+    }
+  ],
+  "biomeStyle": {
+    "style": "SIMPLEX"
+  },
+  "wall": {
+    "style": {
+      "style": "STATIC"
+    },
+    "palette": [
+      {
+        "block": "minecraft:stone"
+      },
+      {
+        "block": "minecraft:andesite"
+      },
+      {
+        "block": "minecraft:stone"
+      }
     ]
+  },
+  "layers": [
+    {
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:grass_block",
+          "weight": 30
+        },
+        {
+          "block": "minecraft:coarse_dirt"
+        }
+      ]
+    },
+    {
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "block": "minecraft:coarse_dirt"
+        }
+      ]
+    },
+    {
+      "minHeight": 6,
+      "maxHeight": 18,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:andesite"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "mode": "PAINT",
+      "chance": 0.0025,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "clutter/bincluster1"
+      ]
+    },
+    {
+      "mode": "PAINT",
+      "chance": 0.00375,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "clutter/camp1"
+      ]
+    },
+    {
+      "chance": 0.9,
+      "density": 1,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "trees/birch/antioch3",
+        "trees/birch/antioch4",
+        "trees/birch/antioch5",
+        "trees/birch/antioch6",
+        "trees/birch/antioch7",
+        "trees/birch/antioch8",
+        "trees/birch/antioch9",
+        "trees/birch/antioch10",
+        "trees/birch/antioch11",
+        "trees/birch/antioch12",
+        "trees/birch/antioch13"
+      ]
+    },
+    {
+      "chance": 0.08,
+      "density": 1,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "trees/birch/antioch3b",
+        "trees/birch/antioch4b",
+        "trees/birch/antioch5b",
+        "trees/birch/antioch6b"
+      ]
+    },
+    {
+      "chance": 0.008,
+      "mode": "PAINT",
+      "place": [
+        "clutter/pumpkins1",
+        "clutter/pumpkins2",
+        "clutter/pumpkins3",
+        "clutter/pumpkins4",
+        "clutter/pumpkins5",
+        "clutter/pumpkins6"
+      ],
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "max": 360,
+          "min": 0,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": 1
+      }
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.03,
+      "variance": {
+        "style": "STATIC"
+      },
+      "zoom": 0.1,
+      "palette": [
+        {
+          "block": "minecraft:short_grass"
+        },
+        {
+          "block": "minecraft:allium"
+        },
+        {
+          "block": "minecraft:poppy"
+        },
+        {
+          "block": "minecraft:dandelion"
+        },
+        {
+          "block": "minecraft:azure_bluet"
+        },
+        {
+          "block": "minecraft:pink_tulip"
+        },
+        {
+          "block": "minecraft:lily_of_the_valley"
+        }
+      ],
+      "style": {
+        "style": "STATIC"
+      }
+    },
+    {
+      "chance": 0.4,
+      "variance": {
+        "style": "STATIC"
+      },
+      "zoom": 0.3,
+      "palette": [
+        {
+          "block": "minecraft:short_grass",
+          "weight": 10
+        },
+        {
+          "block": "minecraft:fern"
+        }
+      ],
+      "style": {
+        "style": "STATIC"
+      }
+    },
+    {
+      "chance": 0.017,
+      "variance": {
+        "style": "STATIC"
+      },
+      "zoom": 0.3,
+      "palette": [
+        {
+          "block": "minecraft:tall_grass"
+        }
+      ],
+      "style": {
+        "style": "STATIC"
+      }
+    },
+    "snippet/decorator/wildflowers",
+    "snippet/decorator/bush"
+  ]
 }

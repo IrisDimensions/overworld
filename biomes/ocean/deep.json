@@ -1,264 +1,263 @@
 {
-    "name": "Ocean Deep",
-    "color": "#5C4DEA",
-    "derivative": "minecraft:deep_ocean",
-    "vanillaDerivative": "minecraft:deep_ocean",
-    "generators": [
+  "name": "Ocean Deep",
+  "color": "#5C4DEA",
+  "derivative": "minecraft:deep_ocean",
+  "vanillaDerivative": "minecraft:deep_ocean",
+  "generators": [
+    {
+      "generator": "smooth-dunes",
+      "max": -40,
+      "min": -80
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 2,
+      "maxHeight": 2,
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 3
+      },
+      "style": {
+        "style": "NOWHERE"
+      },
+      "zoom": 0.6,
+      "palette": [
         {
-            "generator": "smooth-dunes",
-            "max": -40,
-            "min": -80
+          "block": "minecraft:sand"
+        },
+        {
+          "block": "minecraft:clay"
+        },
+        {
+          "block": "minecraft:sand"
+        },
+        {
+          "block": "minecraft:gravel"
+        },
+        {
+          "block": "minecraft:sand"
+        },
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "weight": 2,
+          "block": "minecraft:sand"
         }
-    ],
-    "layers": [
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 10,
+      "palette": [
         {
-            "minHeight": 2,
-            "maxHeight": 2,
-            "slopeCondition": {
-                "minimumSlope": 0,
-                "maximumSlope": 3
-            },
-            "style": {
-                "style": "NOWHERE"
-            },
-            "zoom": 0.6,
-            "palette": [
-                {
-                    "block": "minecraft:sand"
-                },
-                {
-                    "block": "minecraft:clay"
-                },
-                {
-                    "block": "minecraft:sand"
-                },
-                {
-                    "block": "minecraft:gravel"
-                },
-                {
-                    "block": "minecraft:sand"
-                },
-                {
-                    "block": "minecraft:dirt"
-                },
-                {
-                    "weight": 2,
-                    "block": "minecraft:sand"
-                }
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 10,
-            "palette": [
-                {
-                    "block": "minecraft:gravel"
-                }
-            ]
+          "block": "minecraft:gravel"
         }
-    ],
-    "objects": [
-        {
-            "underwater": true,
-            "waterloggable": true,
-            "chance": 3e-05,
-            "mode": "PAINT",
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "interval": 90,
-                    "min": 0,
-                    "max": 360
-                }
-            },
-            "place": []
-        },
-        {
-            "place": [],
-            "chance": 0.001,
-            "markers": [
-                {
-                    "mark": [
-                        {
-                            "block": "minecraft:spruce_planks"
-                        }
-                    ],
-                    "maximumMarkers": 4,
-                    "marker": "skelepirate"
-                }
-            ],
-            "onwater": true,
-            "translate": {
-                "y": -1
-            },
-            "waterloggable": true
-        },
-        {
-            "underwater": true,
-            "waterloggable": true,
-            "chance": 0.01,
-            "mode": "PAINT",
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "interval": 90,
-                    "min": -360,
-                    "max": 360
-                }
-            },
-            "place": []
-        },
-        {
-            "chance": 0.0035,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "underwater": true,
-            "place": [],
-            "mode": "PAINT",
-            "vanillaLoot": [
-                {
-                    "name": "minecraft:chests/underwater_ruin_small"
-                }
-            ]
-        },
-        {
-            "vanillaLoot": [
-                {
-                    "name": "minecraft:chests/underwater_ruin_small"
-                }
-            ],
-            "overStilt": 0,
-            "chance": 0.0007,
-            "meld": false,
-            "density": 1,
-            "bottom": false,
-            "translateCenter": false,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "xAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 0,
-                    "enabled": false
-                },
-                "zAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 0,
-                    "enabled": false
-                },
-                "enabled": true
-            },
-            "boreExtendMinY": 0,
-            "smartBore": false,
-            "waterloggable": true,
-            "bore": false,
-            "translate": {
-                "yRandom": 0,
-                "x": 0,
-                "y": -1,
-                "z": 0
-            },
-            "mode": "STILT",
-            "snow": 0,
-            "underwater": true,
-            "boreExtendMaxY": 0,
-            "onwater": false,
-            "warp": {
-                "multiplier": 1,
-                "style": "FLAT",
-                "zoom": 1,
-                "maxFractureAccuracy": false,
-                "exponent": 1
-            },
-            "place": [],
-            "markers": [
-                {
-                    "marker": "guardian",
-                    "exact": false,
-                    "maximumMarkers": 4,
-                    "mark": [
-                        {
-                            "block": "minecraft:dark_prismarine_slab"
-                        }
-                    ]
-                },
-                {
-                    "marker": "guardian",
-                    "exact": false,
-                    "maximumMarkers": 9,
-                    "mark": [
-                        {
-                            "block": "minecraft:prismarine"
-                        }
-                    ]
-                },
-                {
-                    "marker": "elderguardian",
-                    "exact": false,
-                    "maximumMarkers": 3,
-                    "mark": [
-                        {
-                            "block": "minecraft:sea_pickle"
-                        }
-                    ]
-                }
-            ]
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "underwater": true,
+      "waterloggable": true,
+      "chance": 3e-05,
+      "mode": "PAINT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "interval": 90,
+          "min": 0,
+          "max": 360
         }
-    ],
-    "decorators": [
+      },
+      "place": []
+    },
+    {
+      "place": [],
+      "chance": 0.001,
+      "markers": [
         {
-            "chance": 0.09,
-            "palette": [
-                {
-                    "block": "minecraft:kelp_plant"
-                }
-            ],
-            "stackMin": 2,
-            "stackMax": 12,
-            "partOf": "SEA_FLOOR"
-        },
-        {
-            "chance": 0.2,
-            "palette": [
-                {
-                    "block": "minecraft:seagrass"
-                }
-            ]
-        },
-        {
-            "chance": 0.2,
-            "palette": [
-                {
-                    "block": "minecraft:tall_seagrass",
-                    "data": {
-                        "half": "lower"
-                    }
-                }
-            ],
-            "topPalette": [
-                {
-                    "block": "minecraft:tall_seagrass",
-                    "data": {
-                        "half": "upper"
-                    }
-                }
-            ],
-            "partOf": "SEA_FLOOR"
+          "mark": [
+            {
+              "block": "minecraft:spruce_planks"
+            }
+          ],
+          "maximumMarkers": 4,
+          "marker": "skelepirate"
         }
-    ]
+      ],
+      "onwater": true,
+      "translate": {
+        "y": -1
+      },
+      "waterloggable": true
+    },
+    {
+      "underwater": true,
+      "waterloggable": true,
+      "chance": 0.01,
+      "mode": "PAINT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "interval": 90,
+          "min": -360,
+          "max": 360
+        }
+      },
+      "place": []
+    },
+    {
+      "chance": 0.0035,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "underwater": true,
+      "place": [],
+      "mode": "PAINT",
+      "vanillaLoot": [
+        {
+          "name": "minecraft:chests/underwater_ruin_small"
+        }
+      ]
+    },
+    {
+      "vanillaLoot": [
+        {
+          "name": "minecraft:chests/underwater_ruin_small"
+        }
+      ],
+      "overStilt": 0,
+      "chance": 0.0007,
+      "meld": false,
+      "density": 1,
+      "bottom": false,
+      "translateCenter": false,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "xAxis": {
+          "min": 0,
+          "max": 0,
+          "interval": 0,
+          "enabled": false
+        },
+        "zAxis": {
+          "min": 0,
+          "max": 0,
+          "interval": 0,
+          "enabled": false
+        },
+        "enabled": true
+      },
+      "boreExtendMinY": 0,
+      "smartBore": false,
+      "waterloggable": true,
+      "bore": false,
+      "translate": {
+        "yRandom": 0,
+        "x": 0,
+        "y": -1,
+        "z": 0
+      },
+      "mode": "STILT",
+      "snow": 0,
+      "underwater": true,
+      "boreExtendMaxY": 0,
+      "onwater": false,
+      "warp": {
+        "multiplier": 1,
+        "style": "FLAT",
+        "zoom": 1,
+        "exponent": 1
+      },
+      "place": [],
+      "markers": [
+        {
+          "marker": "guardian",
+          "exact": false,
+          "maximumMarkers": 4,
+          "mark": [
+            {
+              "block": "minecraft:dark_prismarine_slab"
+            }
+          ]
+        },
+        {
+          "marker": "guardian",
+          "exact": false,
+          "maximumMarkers": 9,
+          "mark": [
+            {
+              "block": "minecraft:prismarine"
+            }
+          ]
+        },
+        {
+          "marker": "elderguardian",
+          "exact": false,
+          "maximumMarkers": 3,
+          "mark": [
+            {
+              "block": "minecraft:sea_pickle"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.09,
+      "palette": [
+        {
+          "block": "minecraft:kelp_plant"
+        }
+      ],
+      "stackMin": 2,
+      "stackMax": 12,
+      "partOf": "SEA_FLOOR"
+    },
+    {
+      "chance": 0.2,
+      "palette": [
+        {
+          "block": "minecraft:seagrass"
+        }
+      ]
+    },
+    {
+      "chance": 0.2,
+      "palette": [
+        {
+          "block": "minecraft:tall_seagrass",
+          "data": {
+            "half": "lower"
+          }
+        }
+      ],
+      "topPalette": [
+        {
+          "block": "minecraft:tall_seagrass",
+          "data": {
+            "half": "upper"
+          }
+        }
+      ],
+      "partOf": "SEA_FLOOR"
+    }
+  ]
 }

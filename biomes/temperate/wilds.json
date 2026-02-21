@@ -1,194 +1,280 @@
 {
-    "name": "Temperate Wilds",
-    "color": "#2B8305",
-    "rarity": 1,
-    "derivative": "minecraft:plains",
-    "vanillaDerivative": "minecraft:plains",
-    "customDerivitives": [{
-        "id": "wilds",
-        "foliageColor": "#237031",
-        "waterColor": "#236270",
-        "grassColor": "#28A538",
-        "category": "forest"
-    }],
-    "children": [
-        "temperate/highlands",
-        "temperate/wilds-extended"
-    ],
-    "generators": [{
-        "min": 4,
-        "max": 7,
-        "generator": "plain"
-    }],
-    "biomeZoom": 40,
-    "biomeStyle": {"style": "SIMPLEX"},
-    "wall": {
-        "style": {"style": "STATIC"},
-        "palette": [
-            {"block": "minecraft:stone"},
-            {"block": "minecraft:andesite"},
-            {"block": "minecraft:stone"}
-        ]
+  "name": "Temperate Wilds",
+  "color": "#2B8305",
+  "rarity": 1,
+  "derivative": "minecraft:plains",
+  "vanillaDerivative": "minecraft:plains",
+  "customDerivitives": [
+    {
+      "id": "wilds",
+      "foliageColor": "#237031",
+      "waterColor": "#236270",
+      "grassColor": "#28A538",
+      "category": "forest"
+    }
+  ],
+  "children": [
+    "temperate/highlands",
+    "temperate/wilds-extended"
+  ],
+  "generators": [
+    {
+      "min": 4,
+      "max": 7,
+      "generator": "plain"
+    }
+  ],
+  "biomeStyle": {
+    "style": "SIMPLEX"
+  },
+  "wall": {
+    "style": {
+      "style": "STATIC"
     },
-    "layers": [
-        {"palette": [{"block": "minecraft:grass_block"}]},
-        {"palette": [{"block": "minecraft:dirt"}]},
+    "palette": [
+      {
+        "block": "minecraft:stone"
+      },
+      {
+        "block": "minecraft:andesite"
+      },
+      {
+        "block": "minecraft:stone"
+      }
+    ]
+  },
+  "layers": [
+    {
+      "palette": [
         {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                {"block": "minecraft:dirt"},
-                {"block": "minecraft:coarse_dirt"}
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {"style": "STATIC"},
-            "palette": [
-                {"block": "minecraft:stone"},
-                {"block": "minecraft:andesite"},
-                {"block": "minecraft:stone"}
-            ]
+          "block": "minecraft:grass_block"
         }
-    ],
-
-    "objects": [
+      ]
+    },
+    {
+      "palette": [
         {
-            "chance": 0.125,
-            "place": [
-                "clutter/oakshrub1",
-                "clutter/oakshrub2",
-                "clutter/oakshrub3"
-            ],
-            "translate": {"y": -1}
-        },
-        {
-            "chance": 0.001,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "clutter/obelisk1",
-                "clutter/obelisk2",
-                "clutter/obelisk3",
-                "clutter/obelisk4",
-                "clutter/obelisk5",
-                "clutter/obelisk6",
-                "clutter/obelisk7"
-            ]
-        },
-        {
-            "chance": 0.001,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "clutter/camp1",
-                "clutter/bincluster1"
-            ]
-        },
-        {
-            "chance": 0.008,
-            "mode": "PAINT",
-            "place": [
-                "clutter/pumpkins1",
-                "clutter/pumpkins2",
-                "clutter/pumpkins3",
-                "clutter/pumpkins4",
-                "clutter/pumpkins5",
-                "clutter/pumpkins6"
-            ],
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "max": 360,
-                    "min": 0,
-                    "interval": 90
-                }
-            },
-            "translate": {"y": 1}
+          "block": "minecraft:dirt"
         }
-    ],
-    "decorators": [
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 3,
+      "palette": [
         {
-            "chance": 0.22,
-            "palette": [{"block": "minecraft:tall_grass"}]
+          "block": "minecraft:dirt"
         },
         {
-            "chance": 0.42,
-            "palette": [
-                {"block": "minecraft:short_grass"},
-                {"block": "minecraft:fern"}
-            ]
+          "block": "minecraft:coarse_dirt"
+        }
+      ]
+    },
+    {
+      "minHeight": 6,
+      "maxHeight": 18,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:stone"
         },
         {
-            "chance": 0.003,
-            "palette": [
-                {"block": "minecraft:oxeye_daisy"},
-                {"block": "minecraft:pink_tulip"},
-                {"block": "minecraft:lily_of_the_valley"}
-            ]
+          "block": "minecraft:andesite"
         },
         {
-            "chance": 0.02,
-            "palette": [
-                {"block": "minecraft:dandelion"},
-                {"block": "minecraft:poppy"},
-                {"block": "minecraft:rose_bush"}
-            ]
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "chance": 0.125,
+      "place": [
+        "clutter/oakshrub1",
+        "clutter/oakshrub2",
+        "clutter/oakshrub3"
+      ],
+      "translate": {
+        "y": -1
+      }
+    },
+    {
+      "chance": 0.001,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "clutter/obelisk1",
+        "clutter/obelisk2",
+        "clutter/obelisk3",
+        "clutter/obelisk4",
+        "clutter/obelisk5",
+        "clutter/obelisk6",
+        "clutter/obelisk7"
+      ]
+    },
+    {
+      "chance": 0.001,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "clutter/camp1",
+        "clutter/bincluster1"
+      ]
+    },
+    {
+      "chance": 0.008,
+      "mode": "PAINT",
+      "place": [
+        "clutter/pumpkins1",
+        "clutter/pumpkins2",
+        "clutter/pumpkins3",
+        "clutter/pumpkins4",
+        "clutter/pumpkins5",
+        "clutter/pumpkins6"
+      ],
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "max": 360,
+          "min": 0,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": 1
+      }
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.22,
+      "palette": [
+        {
+          "block": "minecraft:tall_grass"
+        }
+      ]
+    },
+    {
+      "chance": 0.42,
+      "palette": [
+        {
+          "block": "minecraft:short_grass"
         },
         {
-            "chance": 0.01,
-            "variance": {"style": "NOWHERE"},
-            "zoom": 0.5,
-            "palette": [{
-                "data": {"age": 7},
-                "block": "minecraft:potatoes"
-            }],
-            "style": {"style": "NOWHERE"}
+          "block": "minecraft:fern"
+        }
+      ]
+    },
+    {
+      "chance": 0.003,
+      "palette": [
+        {
+          "block": "minecraft:oxeye_daisy"
         },
         {
-            "chance": 0.01,
-            "variance": {"style": "NOWHERE"},
-            "zoom": 0.5,
-            "palette": [{
-                "data": {"age": 7},
-                "block": "minecraft:carrots"
-            }],
-            "style": {"style": "NOWHERE"}
+          "block": "minecraft:pink_tulip"
         },
         {
-            "chance": 0.01,
-            "variance": {"style": "NOWHERE"},
-            "zoom": 0.5,
-            "palette": [{
-                "data": {"age": 7},
-                "block": "minecraft:beetroots"
-            }],
-            "style": {"style": "NOWHERE"}
+          "block": "minecraft:lily_of_the_valley"
+        }
+      ]
+    },
+    {
+      "chance": 0.02,
+      "palette": [
+        {
+          "block": "minecraft:dandelion"
         },
-         "snippet/decorator/bush"
-    ],
-    "effects": [{
-        "interval": 250,
-        "chance": 5,
-        "particleEffect": "TOTEM_OF_UNDYING",
-        "particleOffset": 2,
-        "particleAltY": 0.2,
-        "particleCount": 5
-    }]
+        {
+          "block": "minecraft:poppy"
+        },
+        {
+          "block": "minecraft:rose_bush"
+        }
+      ]
+    },
+    {
+      "chance": 0.01,
+      "variance": {
+        "style": "NOWHERE"
+      },
+      "zoom": 0.5,
+      "palette": [
+        {
+          "data": {
+            "age": 7
+          },
+          "block": "minecraft:potatoes"
+        }
+      ],
+      "style": {
+        "style": "NOWHERE"
+      }
+    },
+    {
+      "chance": 0.01,
+      "variance": {
+        "style": "NOWHERE"
+      },
+      "zoom": 0.5,
+      "palette": [
+        {
+          "data": {
+            "age": 7
+          },
+          "block": "minecraft:carrots"
+        }
+      ],
+      "style": {
+        "style": "NOWHERE"
+      }
+    },
+    {
+      "chance": 0.01,
+      "variance": {
+        "style": "NOWHERE"
+      },
+      "zoom": 0.5,
+      "palette": [
+        {
+          "data": {
+            "age": 7
+          },
+          "block": "minecraft:beetroots"
+        }
+      ],
+      "style": {
+        "style": "NOWHERE"
+      }
+    },
+    "snippet/decorator/bush"
+  ],
+  "effects": [
+    {
+      "interval": 250,
+      "chance": 5,
+      "particleEffect": "TOTEM_OF_UNDYING",
+      "particleOffset": 2,
+      "particleAltY": 0.2,
+      "particleCount": 5
+    }
+  ]
 }

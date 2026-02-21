@@ -1,144 +1,194 @@
 {
-    "name": "Extreme mountains",
-    "color": "#29AB79",
-    "rarity": 1,
-    "derivative": "minecraft:jungle",
-    "vanillaDerivative": "minecraft:jungle",
-    "customDerivitives": [{
-        "id": "tropical_mountain",
-        "foliageColor": "#478F04",
-        "grassColor": "#41A726",
-        "category": "jungle",
-        "waterColor": "#3AB2A2",
-        "waterFogColor": "#3AB2A2"
-    }],
-    "children": ["tropical/mountain-middle"],
-    "generators": [{
-        "min": 75,
-        "max": 150,
-        "generator": "mountain"
-    }],
-    "biomeZoom": 30,
-    "biomeStyle": {
-        "style": "NOWHERE",
-        "zoom": 0.7,
-        "exponent": 4
+  "name": "Extreme mountains",
+  "color": "#29AB79",
+  "rarity": 1,
+  "derivative": "minecraft:jungle",
+  "vanillaDerivative": "minecraft:jungle",
+  "customDerivitives": [
+    {
+      "id": "tropical_mountain",
+      "foliageColor": "#478F04",
+      "grassColor": "#41A726",
+      "category": "jungle",
+      "waterColor": "#3AB2A2",
+      "waterFogColor": "#3AB2A2"
+    }
+  ],
+  "children": [
+    "tropical/mountain-middle"
+  ],
+  "generators": [
+    {
+      "min": 75,
+      "max": 150,
+      "generator": "mountain"
+    }
+  ],
+  "biomeStyle": {
+    "style": "NOWHERE",
+    "zoom": 0.7,
+    "exponent": 4
+  },
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:grass_block"
+        }
+      ]
     },
-    "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "palette": [
         {
-            "minHeight": 1,
-            "maxHeight": 1,
-            "palette": [{"block": "minecraft:grass_block"}]
+          "block": "minecraft:dirt"
         },
         {
-            "minHeight": 1,
-            "maxHeight": 1,
-            "palette": [
-                {"block": "minecraft:dirt"},
-                {"block": "minecraft:rooted_dirt"}
-            ]
+          "block": "minecraft:rooted_dirt"
         }
-    ],
-
-    "objects": [
-        {
-            "mode": "PAINT",
-            "place": [
-                "clutter/sbush1",
-                "clutter/sbush2",
-                "clutter/sbush3"
-            ],
-            "chance": 0.25,
-            "density": 5
-        },
-        {
-            "place": [
-                "trees/jungle/lgeneric1",
-                "trees/jungle/lgeneric2",
-                "trees/jungle/lgeneric3",
-                "trees/jungle/lgeneric4",
-                "trees/jungle/lgeneric5",
-                "trees/jungle/lgeneric6",
-                "trees/jungle/lgeneric7",
-                "trees/jungle/lgeneric8",
-                "trees/jungle/lgeneric9"
-            ],
-            "mode": "PAINT",
-            "chance": 0.63,
-            "density": 2,
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "interval": 90,
-                    "min": -360,
-                    "max": 360
-                }
-            },
-            "translate": {"y": -2}
-        },
-        {
-            "chance": 0.008,
-            "mode": "PAINT",
-            "place": [
-                "clutter/melons1",
-                "clutter/melons2",
-                "clutter/melons3",
-                "clutter/melons4",
-                "clutter/melons5",
-                "clutter/melons6"
-            ],
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "max": 360,
-                    "min": 0,
-                    "interval": 90
-                }
-            },
-            "translate": {"y": 1}
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "mode": "PAINT",
+      "place": [
+        "clutter/sbush1",
+        "clutter/sbush2",
+        "clutter/sbush3"
+      ],
+      "chance": 0.25,
+      "density": 5
+    },
+    {
+      "place": [
+        "trees/jungle/lgeneric1",
+        "trees/jungle/lgeneric2",
+        "trees/jungle/lgeneric3",
+        "trees/jungle/lgeneric4",
+        "trees/jungle/lgeneric5",
+        "trees/jungle/lgeneric6",
+        "trees/jungle/lgeneric7",
+        "trees/jungle/lgeneric8",
+        "trees/jungle/lgeneric9"
+      ],
+      "mode": "PAINT",
+      "chance": 0.63,
+      "density": 2,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "interval": 90,
+          "min": -360,
+          "max": 360
         }
-    ],
-    "decorators": [
-        {
-            "chance": 0.7,
-            "palette": [
-                {
-                    "weight": 2,
-                    "block": "minecraft:short_grass"
-                },
-                {
-                    "weight": 1,
-                    "block": "minecraft:tall_grass"
-                }
-            ]
-        },
-        {
-            "chance": 0.06,
-            "variance": {"style": "STATIC"},
-            "palette": [
-                {"block": "minecraft:dandelion"},
-                {"block": "minecraft:poppy"},
-                {"block": "minecraft:blue_orchid"},
-                {"block": "minecraft:allium"},
-                {"block": "minecraft:azure_bluet"},
-                {"block": "minecraft:red_tulip"},
-                {"block": "minecraft:orange_tulip"},
-                {"block": "minecraft:white_tulip"},
-                {"block": "minecraft:pink_tulip"},
-                {"block": "minecraft:oxeye_daisy"},
-                {"block": "minecraft:cornflower"},
-                {"block": "minecraft:lily_of_the_valley"}
-            ]
-        },
-        {
-            "chance": 0.01,
-            "palette": [{"block": "minecraft:tall_grass"}]
-        },
-        {
-            "chance": 0.5,
-            "palette": [{"block": "minecraft:short_grass"}]
+      },
+      "translate": {
+        "y": -2
+      }
+    },
+    {
+      "chance": 0.008,
+      "mode": "PAINT",
+      "place": [
+        "clutter/melons1",
+        "clutter/melons2",
+        "clutter/melons3",
+        "clutter/melons4",
+        "clutter/melons5",
+        "clutter/melons6"
+      ],
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "max": 360,
+          "min": 0,
+          "interval": 90
         }
-    ]
+      },
+      "translate": {
+        "y": 1
+      }
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.7,
+      "palette": [
+        {
+          "weight": 2,
+          "block": "minecraft:short_grass"
+        },
+        {
+          "weight": 1,
+          "block": "minecraft:tall_grass"
+        }
+      ]
+    },
+    {
+      "chance": 0.06,
+      "variance": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:dandelion"
+        },
+        {
+          "block": "minecraft:poppy"
+        },
+        {
+          "block": "minecraft:blue_orchid"
+        },
+        {
+          "block": "minecraft:allium"
+        },
+        {
+          "block": "minecraft:azure_bluet"
+        },
+        {
+          "block": "minecraft:red_tulip"
+        },
+        {
+          "block": "minecraft:orange_tulip"
+        },
+        {
+          "block": "minecraft:white_tulip"
+        },
+        {
+          "block": "minecraft:pink_tulip"
+        },
+        {
+          "block": "minecraft:oxeye_daisy"
+        },
+        {
+          "block": "minecraft:cornflower"
+        },
+        {
+          "block": "minecraft:lily_of_the_valley"
+        }
+      ]
+    },
+    {
+      "chance": 0.01,
+      "palette": [
+        {
+          "block": "minecraft:tall_grass"
+        }
+      ]
+    },
+    {
+      "chance": 0.5,
+      "palette": [
+        {
+          "block": "minecraft:short_grass"
+        }
+      ]
+    }
+  ]
 }

@@ -1,340 +1,339 @@
 {
-    "name": "Savanna Forest",
-    "color": "#B06F27",
-    "rarity": 3,
-    "derivative": "minecraft:savanna",
-    "vanillaDerivative": "minecraft:savanna",
-    "biomeScatter": [
-        "minecraft:savanna",
-        "minecraft:desert"
-    ],
-    "customDerivitives": [
-        {
-            "category": "savanna",
-            "id": "savanna_forest",
-            "grassColor": "#E2EF3B",
-            "foliageColor": "#D6A513",
-            "waterColor": "#33CB99",
-            "downfallType": "none"
-        }
-    ],
-    "generators": [
-        {
-            "min": 7,
-            "max": 10,
-            "generator": "plain"
-        }
-    ],
-    "biomeZoom": 20,
-    "biomeStyle": {
-        "style": "SIMPLEX"
+  "name": "Savanna Forest",
+  "color": "#B06F27",
+  "rarity": 3,
+  "derivative": "minecraft:savanna",
+  "vanillaDerivative": "minecraft:savanna",
+  "biomeScatter": [
+    "minecraft:savanna",
+    "minecraft:desert"
+  ],
+  "customDerivitives": [
+    {
+      "category": "savanna",
+      "id": "savanna_forest",
+      "grassColor": "#E2EF3B",
+      "foliageColor": "#D6A513",
+      "waterColor": "#33CB99",
+      "downfallType": "none"
+    }
+  ],
+  "generators": [
+    {
+      "min": 7,
+      "max": 10,
+      "generator": "plain"
+    }
+  ],
+  "biomeStyle": {
+    "style": "SIMPLEX"
+  },
+  "wall": {
+    "style": {
+      "style": "STATIC"
     },
-    "wall": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            {
-                "block": "minecraft:stone"
-            },
-            {
-                "block": "minecraft:andesite"
-            },
-            {
-                "block": "minecraft:stone"
-            }
-        ]
-    },
-    "layers": [
-        {
-            "style": {
-                "style": "STATIC"
-            },
-            "zoom": 0.75,
-            "palette": [
-                {
-                    "weight": 2,
-                    "block": "minecraft:grass_block"
-                },
-                {
-                    "block": "minecraft:brown_concrete_powder"
-                },
-                {
-                    "weight": 4,
-                    "block": "minecraft:grass_block"
-                },
-                {
-                    "block": "minecraft:brown_concrete_powder"
-                },
-                {
-                    "weight": 7,
-                    "block": "minecraft:grass_block"
-                }
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 4,
-            "palette": [
-                {
-                    "block": "minecraft:dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "minecraft:stone"
-                },
-                {
-                    "block": "minecraft:andesite"
-                },
-                {
-                    "block": "minecraft:stone"
-                }
-            ]
-        }
-    ],
-    "objects": [
-        {
-            "mode": "PAINT",
-            "chance": 0.0025,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "clutter/bincluster1"
-            ]
-        },
-        {
-            "chance": 0.05,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "clutter/hay1",
-                "clutter/hay3",
-                "clutter/hay2"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 1,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.335,
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "minecraft:oak_wood"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "minecraft:stripped_oak_wood"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "find": [
-                        {
-                            "block": "minecraft:oak_log"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "minecraft:stripped_oak_log"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "find": [
-                        {
-                            "block": "minecraft:spruce_slab"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "minecraft:oak_slab"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "trees/oak/dadwood1",
-                "trees/oak/dadwood2",
-                "trees/oak/dadwood3",
-                "trees/oak/dadwood4",
-                "trees/oak/dadwood5",
-                "trees/oak/dadwood6"
-            ]
-        },
-        {
-            "chance": 0.05,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "clutter/hay1",
-                "clutter/hay3",
-                "clutter/hay2"
-            ]
-        },
-        {
-            "chance": 0.15,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "clutter/oakclutt1",
-                "clutter/oakclutt2",
-                "clutter/oakclutt3",
-                "clutter/oakclutt4",
-                "clutter/oakclutt5"
-            ]
-        }
-    ],
-    "decorators": [
-        {
-            "chance": 0.00435,
-            "variance": {
-                "style": "STATIC"
-            },
-            "zoom": 0.3,
-            "palette": [
-                {
-                    "data": {
-                        "face": "floor",
-                        "powered": false,
-                        "facing": "east"
-                    },
-                    "block": "minecraft:stone_button"
-                },
-                {
-                    "data": {
-                        "face": "floor",
-                        "powered": false,
-                        "facing": "south"
-                    },
-                    "block": "minecraft:stone_button"
-                }
-            ],
-            "style": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "chance": 0.092,
-            "variance": {
-                "style": "STATIC"
-            },
-            "zoom": 0.3,
-            "palette": [
-                {
-                    "block": "minecraft:dead_bush"
-                }
-            ],
-            "style": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "chance": 0.1,
-            "variance": {
-                "style": "STATIC"
-            },
-            "zoom": 0.5,
-            "palette": [
-                {
-                    "block": "minecraft:short_grass"
-                },
-                {
-                    "block": "minecraft:tall_grass"
-                }
-            ],
-            "style": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "chance": 1e-06,
-            "variance": {
-                "style": "STATIC"
-            },
-            "zoom": 0.3,
-            "palette": [
-                {
-                    "weight": 8,
-                    "block": "minecraft:air"
-                },
-                {
-                    "block": "minecraft:pumpkin"
-                },
-                {
-                    "weight": 4,
-                    "block": "minecraft:air"
-                },
-                {
-                    "block": "minecraft:carved_pumpkin"
-                },
-                {
-                    "weight": 8,
-                    "block": "minecraft:air"
-                }
-            ],
-            "style": {
-                "style": "STATIC"
-            }
-        },
-        "snippet/decorator/dry_grass"
-    ],
-    "biomeSkyScatter": [
-        "minecraft:desert"
+    "palette": [
+      {
+        "block": "minecraft:stone"
+      },
+      {
+        "block": "minecraft:andesite"
+      },
+      {
+        "block": "minecraft:stone"
+      }
     ]
+  },
+  "layers": [
+    {
+      "style": {
+        "style": "STATIC"
+      },
+      "zoom": 0.75,
+      "palette": [
+        {
+          "weight": 2,
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:brown_concrete_powder"
+        },
+        {
+          "weight": 4,
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:brown_concrete_powder"
+        },
+        {
+          "weight": 7,
+          "block": "minecraft:grass_block"
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    },
+    {
+      "minHeight": 6,
+      "maxHeight": 18,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:andesite"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "mode": "PAINT",
+      "chance": 0.0025,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "clutter/bincluster1"
+      ]
+    },
+    {
+      "chance": 0.05,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "clutter/hay1",
+        "clutter/hay3",
+        "clutter/hay2"
+      ],
+      "translate": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      }
+    },
+    {
+      "chance": 0.335,
+      "edit": [
+        {
+          "find": [
+            {
+              "block": "minecraft:oak_wood"
+            }
+          ],
+          "replace": {
+            "palette": [
+              {
+                "block": "minecraft:stripped_oak_wood"
+              }
+            ]
+          }
+        },
+        {
+          "find": [
+            {
+              "block": "minecraft:oak_log"
+            }
+          ],
+          "replace": {
+            "palette": [
+              {
+                "block": "minecraft:stripped_oak_log"
+              }
+            ]
+          }
+        },
+        {
+          "find": [
+            {
+              "block": "minecraft:spruce_slab"
+            }
+          ],
+          "replace": {
+            "palette": [
+              {
+                "block": "minecraft:oak_slab"
+              }
+            ]
+          }
+        }
+      ],
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "trees/oak/dadwood1",
+        "trees/oak/dadwood2",
+        "trees/oak/dadwood3",
+        "trees/oak/dadwood4",
+        "trees/oak/dadwood5",
+        "trees/oak/dadwood6"
+      ]
+    },
+    {
+      "chance": 0.05,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "clutter/hay1",
+        "clutter/hay3",
+        "clutter/hay2"
+      ]
+    },
+    {
+      "chance": 0.15,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "clutter/oakclutt1",
+        "clutter/oakclutt2",
+        "clutter/oakclutt3",
+        "clutter/oakclutt4",
+        "clutter/oakclutt5"
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.00435,
+      "variance": {
+        "style": "STATIC"
+      },
+      "zoom": 0.3,
+      "palette": [
+        {
+          "data": {
+            "face": "floor",
+            "powered": false,
+            "facing": "east"
+          },
+          "block": "minecraft:stone_button"
+        },
+        {
+          "data": {
+            "face": "floor",
+            "powered": false,
+            "facing": "south"
+          },
+          "block": "minecraft:stone_button"
+        }
+      ],
+      "style": {
+        "style": "STATIC"
+      }
+    },
+    {
+      "chance": 0.092,
+      "variance": {
+        "style": "STATIC"
+      },
+      "zoom": 0.3,
+      "palette": [
+        {
+          "block": "minecraft:dead_bush"
+        }
+      ],
+      "style": {
+        "style": "STATIC"
+      }
+    },
+    {
+      "chance": 0.1,
+      "variance": {
+        "style": "STATIC"
+      },
+      "zoom": 0.5,
+      "palette": [
+        {
+          "block": "minecraft:short_grass"
+        },
+        {
+          "block": "minecraft:tall_grass"
+        }
+      ],
+      "style": {
+        "style": "STATIC"
+      }
+    },
+    {
+      "chance": 1e-06,
+      "variance": {
+        "style": "STATIC"
+      },
+      "zoom": 0.3,
+      "palette": [
+        {
+          "weight": 8,
+          "block": "minecraft:air"
+        },
+        {
+          "block": "minecraft:pumpkin"
+        },
+        {
+          "weight": 4,
+          "block": "minecraft:air"
+        },
+        {
+          "block": "minecraft:carved_pumpkin"
+        },
+        {
+          "weight": 8,
+          "block": "minecraft:air"
+        }
+      ],
+      "style": {
+        "style": "STATIC"
+      }
+    },
+    "snippet/decorator/dry_grass"
+  ],
+  "biomeSkyScatter": [
+    "minecraft:desert"
+  ]
 }
