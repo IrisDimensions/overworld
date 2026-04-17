@@ -4,17 +4,25 @@
     "vanillaDerivative": "minecraft:lush_caves",
     "wall": {
         "style": {
-            "style": "CLOVER_BICUBIC",
-            "zoom": 0.88
+            "style": "CELLULAR_IRIS_DOUBLE",
+            "zoom": 0.72
         },
         "palette": [
             {
                 "block": "minecraft:magenta_concrete",
-                "weight": 7
+                "weight": 4
+            },
+            {
+                "block": "minecraft:purpur_block",
+                "weight": 3
             },
             {
                 "block": "minecraft:magenta_concrete_powder",
-                "weight": 4
+                "weight": 2
+            },
+            {
+                "block": "minecraft:magenta_terracotta",
+                "weight": 2
             }
         ]
     },
@@ -23,16 +31,21 @@
             "minHeight": 1,
             "maxHeight": 2,
             "style": {
-                "style": "STATIC"
+                "style": "CELLULAR_IRIS_DOUBLE",
+                "zoom": 0.55
             },
             "palette": [
                 {
-                    "block": "minecraft:magenta_concrete_powder",
-                    "weight": 6
+                    "block": "minecraft:magenta_terracotta",
+                    "weight": 3
                 },
                 {
-                    "block": "minecraft:magenta_concrete",
+                    "block": "minecraft:purpur_pillar",
                     "weight": 2
+                },
+                {
+                    "block": "minecraft:magenta_concrete_powder",
+                    "weight": 3
                 }
             ]
         }
@@ -40,23 +53,83 @@
     "caveCeilingLayers": [
         {
             "minHeight": 2,
-            "maxHeight": 3,
+            "maxHeight": 4,
             "style": {
-                "style": "STATIC"
+                "style": "CELLULAR_IRIS_DOUBLE",
+                "zoom": 0.65
             },
             "palette": [
                 {
-                    "block": "minecraft:magenta_concrete_powder",
-                    "weight": 7
+                    "block": "minecraft:magenta_concrete",
+                    "weight": 4
                 },
                 {
-                    "block": "minecraft:magenta_concrete",
-                    "weight": 2
+                    "block": "minecraft:purpur_block",
+                    "weight": 3
+                },
+                {
+                    "block": "minecraft:crying_obsidian",
+                    "weight": 1
                 }
             ]
         }
     ],
-    "decorators": [],
+    "decorators": [
+        {
+            "chance": 0.06,
+            "absoluteMaxStack": 1,
+            "palette": [
+                {
+                    "block": "minecraft:amethyst_cluster",
+                    "weight": 3
+                },
+                {
+                    "block": "minecraft:large_amethyst_bud",
+                    "weight": 2
+                },
+                {
+                    "block": "minecraft:medium_amethyst_bud",
+                    "weight": 1
+                }
+            ]
+        },
+        {
+            "partOf": "CEILING",
+            "chance": 0.05,
+            "absoluteMaxStack": 1,
+            "palette": [
+                {
+                    "block": "minecraft:amethyst_cluster",
+                    "data": {
+                        "facing": "down"
+                    },
+                    "weight": 3
+                },
+                {
+                    "block": "minecraft:large_amethyst_bud",
+                    "data": {
+                        "facing": "down"
+                    },
+                    "weight": 2
+                }
+            ]
+        },
+        {
+            "partOf": "CEILING",
+            "chance": 0.005,
+            "absoluteMaxStack": 1,
+            "palette": [
+                {
+                    "block": "minecraft:pearlescent_froglight",
+                    "weight": 2
+                },
+                {
+                    "block": "minecraft:verdant_froglight",
+                    "weight": 1
+                }
+            ]
+        }
+    ],
     "caveProfile": {
         "enabled": true,
         "verticalRange": {
@@ -64,29 +137,29 @@
             "max": 720
         },
         "baseDensityStyle": {
-            "style": "CLOVER_BICUBIC",
-            "zoom": 0.72
+            "style": "CELLULAR_IRIS_DOUBLE",
+            "zoom": 0.65
         },
         "detailDensityStyle": {
-            "style": "CLOVER_BILINEAR",
-            "zoom": 0.58
+            "style": "CELLULAR_IRIS_DOUBLE",
+            "zoom": 0.72
         },
         "warpStyle": {
             "style": "FRACTAL_WATER",
             "zoom": 0.44
         },
-        "baseWeight": 0.9,
-        "detailWeight": 0.12,
-        "warpStrength": 0.28,
+        "baseWeight": 0.9500000000000001,
+        "detailWeight": 0.08,
+        "warpStrength": 0.22,
         "densityThreshold": {
-            "min": -0.13,
-            "max": -0.03,
+            "min": -0.12,
+            "max": -0.02,
             "style": {
-                "style": "SIMPLEX",
-                "zoom": 0.72
+                "style": "CELLULAR_IRIS_DOUBLE",
+                "zoom": 0.78
             }
         },
-        "thresholdBias": 0.1,
+        "thresholdBias": 0.09,
         "sampleStep": 2,
         "surfaceClearance": 5,
         "allowSurfaceBreak": false,
@@ -100,6 +173,7 @@
         "objectMinDepthBelowSurface": 12,
         "surfaceObjectExclusionDepth": 32,
         "defaultObjectAnchor": "FLOOR",
+        "defaultObjectPlaceMode": "FAST_MIN_STILT",
         "anchorScanStep": 1,
         "anchorSearchAttempts": 18,
         "allowWater": true,
@@ -110,20 +184,33 @@
             {
                 "style": {
                     "style": "SIMPLEX_VASCULAR",
-                    "zoom": 1.0
+                    "zoom": 0.92
                 },
-                "weight": 0.08,
+                "weight": 0.1,
                 "threshold": 0.02,
                 "verticalRange": {
                     "min": 20,
-                    "max": 700
+                    "max": 720
+                },
+                "invert": false
+            },
+            {
+                "style": {
+                    "style": "CELLULAR_BILINEAR",
+                    "zoom": 1.28
+                },
+                "weight": 0.05,
+                "threshold": 0.1,
+                "verticalRange": {
+                    "min": 30,
+                    "max": 600
                 },
                 "invert": false
             },
             {
                 "style": {
                     "style": "FRACTAL_FBM_SIMPLEX",
-                    "zoom": 0.24
+                    "zoom": 0.2
                 },
                 "weight": 0.04,
                 "threshold": 0.09,
@@ -139,42 +226,124 @@
         "minCarveCells": 20,
         "recoveryThresholdBoost": 0.07
     },
-    "caveMinDepthBelowSurface": 10,
+    "caveMinDepthBelowSurface": 16,
     "objects": [
         {
-            "chance": 0.06,
-            "density": 2,
+            "chance": 0.18,
+            "density": 4,
             "carvingSupport": "CARVING_ONLY",
             "bottom": true,
+            "force": true,
             "place": [
                 "clutter/stoneclutt1",
                 "clutter/stoneclutt2",
                 "clutter/stoneclutt3",
                 "clutter/stoneclutt4",
                 "clutter/stoneclutt5",
-                "clutter/ore-scluster1",
-                "clutter/ore-scluster2",
-                "clutter/ore-scluster3",
                 "clutter/rock1",
                 "clutter/rock2",
                 "clutter/rock3",
                 "clutter/boulder1",
                 "clutter/boulder2",
                 "clutter/boulder3"
-            ],
-            "force": true
+            ]
         },
         {
-            "chance": 0.045,
+            "chance": 0.18,
+            "density": 4,
+            "carvingSupport": "CARVING_ONLY",
+            "bottom": true,
+            "force": true,
+            "mode": "CENTER_HEIGHT",
+            "place": [
+                "clutter/ore-scluster1",
+                "clutter/ore-scluster2",
+                "clutter/ore-scluster3"
+            ]
+        },
+        {
+            "chance": 0.12,
+            "density": 3,
+            "carvingSupport": "CARVING_ONLY",
+            "bottom": true,
+            "force": true,
+            "place": [
+                "clutter/amethyst-cluster1",
+                "clutter/amethyst-cluster2",
+                "clutter/amethyst-cluster3"
+            ]
+        },
+        {
+            "chance": 0.07,
             "density": 2,
             "carvingSupport": "CARVING_ONLY",
             "bottom": true,
+            "force": true,
             "place": [
-                "structures/monolith1",
-                "structures/monolith3",
-                "structures/monolith4"
+                "structures/crystal1",
+                "structures/crystal2",
+                "structures/crystal3"
+            ]
+        },
+        {
+            "chance": 0.1,
+            "density": 3,
+            "carvingSupport": "CARVING_ONLY",
+            "bottom": true,
+            "force": true,
+            "place": [
+                "clutter/concretelith1",
+                "clutter/concretelith2",
+                "clutter/concretelith3",
+                "clutter/concretelith4",
+                "clutter/concretelith5",
+                "clutter/concretelith6",
+                "clutter/concretelith7"
+            ]
+        },
+        {
+            "chance": 0.1,
+            "density": 3,
+            "carvingSupport": "CARVING_ONLY",
+            "bottom": true,
+            "force": true,
+            "place": [
+                "clutter/concretelith1",
+                "clutter/concretelith2",
+                "clutter/concretelith3",
+                "clutter/concretelith4",
+                "clutter/concretelith5",
+                "clutter/concretelith6",
+                "clutter/concretelith7"
             ],
-            "force": true
+            "scale": {
+                "minimumScale": 0.5,
+                "maximumScale": 0.75,
+                "variations": 5,
+                "interpolation": "TRILINEAR"
+            }
+        },
+        {
+            "chance": 0.1,
+            "density": 3,
+            "carvingSupport": "CARVING_ONLY",
+            "bottom": true,
+            "force": true,
+            "place": [
+                "clutter/concretelith1",
+                "clutter/concretelith2",
+                "clutter/concretelith3",
+                "clutter/concretelith4",
+                "clutter/concretelith5",
+                "clutter/concretelith6",
+                "clutter/concretelith7"
+            ],
+            "scale": {
+                "minimumScale": 2.0,
+                "maximumScale": 4.0,
+                "variations": 7,
+                "interpolation": "TRILINEAR"
+            }
         }
     ]
 }

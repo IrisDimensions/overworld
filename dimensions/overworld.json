@@ -3,7 +3,7 @@
   "name": "Overworld",
   "environment": "NORMAL",
   "dimensionAngleDeg": 69,
-  "fluidHeight": 75,
+  "fluidHeight": 50,
   "continentZoom": 1,
   "continentalStyle": {
     "style": "NOWHERE_CELLULAR",
@@ -410,8 +410,8 @@
       "varience": 4
     },
     {
-      "minHeight": 64,
-      "maxHeight": 384,
+      "minHeight": 39,
+      "maxHeight": 359,
       "maxPerChunk": 30,
       "minPerChunk": 20,
       "minSize": 3,
@@ -424,8 +424,8 @@
       "varience": 5
     },
     {
-      "minHeight": 48,
-      "maxHeight": 280,
+      "minHeight": 23,
+      "maxHeight": 255,
       "maxPerChunk": 16,
       "minPerChunk": 16,
       "minSize": 3,
@@ -511,8 +511,8 @@
       "varience": 5
     },
     {
-      "minHeight": 48,
-      "maxHeight": 384,
+      "minHeight": 23,
+      "maxHeight": 359,
       "maxPerChunk": 4,
       "minPerChunk": 1,
       "minSize": 3,
@@ -585,8 +585,9 @@
     "objectMinDepthBelowSurface": 14,
     "surfaceObjectExclusionDepth": 30,
     "defaultObjectAnchor": "FLOOR",
+    "defaultObjectPlaceMode": "FAST_MIN_STILT",
     "anchorScanStep": 1,
-    "anchorSearchAttempts": 6,
+    "anchorSearchAttempts": 12,
     "allowWater": true,
     "waterMinDepthBelowSurface": 20,
     "waterRequiresFloor": true,
@@ -856,10 +857,14 @@
       "url": "https://modrinth.com/datapack/dungeons-and-taverns-jungle-temple-overhaul/version/v2.1",
       "enabled": true,
       "required": false,
-      "replaceVanilla": false,
+      "replaceVanilla": true,
       "replaceTargets": {
-        "structures": [],
-        "structureSets": [],
+        "structures": [
+          "minecraft:jungle_pyramid"
+        ],
+        "structureSets": [
+          "minecraft:jungle_pyramids"
+        ],
         "templatePools": [],
         "processorLists": [],
         "biomeHasStructureTags": [],
