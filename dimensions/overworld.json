@@ -625,353 +625,70 @@
     "minCarveCells": 24,
     "recoveryThresholdBoost": 0.07
   },
+  "vanillaStructures": false,
   "externalDatapacks": [
     {
-      "id": "dnt-stronghold-overhaul",
+      "id": "dnt-strong",
       "url": "https://modrinth.com/datapack/dungeons-and-taverns-stronghold-overhaul/version/v2.4.0",
       "enabled": true,
       "required": true,
-      "replaceVanilla": true,
-      "replaceTargets": {
-        "structures": [
-          "minecraft:stronghold"
-        ],
-        "structureSets": [
-          "minecraft:strongholds"
-        ],
-        "templatePools": [
-          "minecraft:stronghold/stronghold_chest",
-          "minecraft:stronghold/stronghold_complex_entryhall",
-          "minecraft:stronghold/stronghold_door",
-          "minecraft:stronghold/stronghold_endportal",
-          "minecraft:stronghold/stronghold_endportal_bridge",
-          "minecraft:stronghold/stronghold_endportal_chamber",
-          "minecraft:stronghold/stronghold_endportal_chamber_anchor",
-          "minecraft:stronghold/stronghold_generic_complex_entry",
-          "minecraft:stronghold/stronghold_generic_hallway",
-          "minecraft:stronghold/stronghold_generic_hallway_lock",
-          "minecraft:stronghold/stronghold_generic_room",
-          "minecraft:stronghold/stronghold_generic_room_lock",
-          "minecraft:stronghold/stronghold_jail_complex",
-          "minecraft:stronghold/stronghold_jail_hallway",
-          "minecraft:stronghold/stronghold_jail_hallway_lock",
-          "minecraft:stronghold/stronghold_jail_room",
-          "minecraft:stronghold/stronghold_jail_room_lock",
-          "minecraft:stronghold/stronghold_library_complex",
-          "minecraft:stronghold/stronghold_library_hallway",
-          "minecraft:stronghold/stronghold_library_hallway_lock",
-          "minecraft:stronghold/stronghold_library_room",
-          "minecraft:stronghold/stronghold_library_room_lock",
-          "minecraft:stronghold/stronghold_mob_generic",
-          "minecraft:stronghold/stronghold_mob_jail",
-          "minecraft:stronghold/stronghold_mob_library",
-          "minecraft:stronghold/stronghold_mob_nether",
-          "minecraft:stronghold/stronghold_mob_sewer",
-          "minecraft:stronghold/stronghold_nether_complex",
-          "minecraft:stronghold/stronghold_nether_hallway",
-          "minecraft:stronghold/stronghold_nether_hallway_lock",
-          "minecraft:stronghold/stronghold_nether_room",
-          "minecraft:stronghold/stronghold_nether_room_lock",
-          "minecraft:stronghold/stronghold_sewer_complex",
-          "minecraft:stronghold/stronghold_sewer_hallway",
-          "minecraft:stronghold/stronghold_sewer_hallway_lock",
-          "minecraft:stronghold/stronghold_sewer_room",
-          "minecraft:stronghold/stronghold_sewer_room_lock",
-          "minecraft:stronghold/stronghold_stair_complex",
-          "minecraft:stronghold/stronghold_surface_hallway",
-          "minecraft:stronghold/stronghold_surface_hallway_lock",
-          "minecraft:stronghold/stronghold_surface_room",
-          "minecraft:stronghold/stronghold_surface_room_lock",
-          "minecraft:stronghold/stronghold_town_center"
-        ],
-        "processorLists": [
-          "minecraft:stronghold_generic_degradation",
-          "minecraft:stronghold_jail_degradation",
-          "minecraft:stronghold_library_degradation",
-          "minecraft:stronghold_nether_degradation",
-          "minecraft:stronghold_sewer_degradation",
-          "minecraft:stronghold_surface_degradation"
-        ],
-        "biomeHasStructureTags": [],
-        "configuredFeatures": [],
-        "placedFeatures": []
-      },
-      "structurePatches": []
+      "replace": true
     },
     {
-      "id": "dnt-ancient-city-overhaul",
+      "id": "dnt-acity",
       "url": "https://modrinth.com/datapack/dungeons-and-taverns-ancient-city-overhaul/version/3.2.3",
       "enabled": true,
       "required": true,
-      "replaceVanilla": true,
-      "supportSmartBore": true,
-      "replaceTargets": {
-        "structures": [
-          "minecraft:ancient_city"
-        ],
-        "structureSets": [
-          "minecraft:ancient_cities"
-        ],
-        "templatePools": [
-          "minecraft:ancient_city/city/enterance_pillar",
-          "minecraft:ancient_city/city/entrance",
-          "minecraft:ancient_city/city_center",
-          "minecraft:ancient_city/city_center/walls",
-          "minecraft:ancient_city/lantern",
-          "minecraft:ancient_city/roads",
-          "minecraft:ancient_city/sculk",
-          "minecraft:ancient_city/structures",
-          "minecraft:ancient_city/walls",
-          "minecraft:ancient_city/walls/no_corners",
-          "minecraft:ancient_city/walls_enterance",
-          "minecraft:ancient_city/walls_lock"
-        ],
-        "processorLists": [
-          "minecraft:ancient_city_generic_degradation",
-          "minecraft:ancient_city_generic_degradation_small"
-        ],
-        "biomeHasStructureTags": [],
-        "configuredFeatures": [],
-        "placedFeatures": []
-      },
-      "templateAliases": [
-        {
-          "from": "minecraft:ancient_city/structures/ancient_city_small_pillars_1",
-          "to": "minecraft:ancient_city/structures/ancient_city_temple_small_pillars_1",
-          "enabled": true
-        },
-        {
-          "from": "minecraft:ancient_city/structures/ancient_city_small_pillars_2",
-          "to": "minecraft:ancient_city/structures/ancient_city_temple_small_pillars_2",
-          "enabled": true
-        },
-        {
-          "from": "minecraft:ancient_city/structures/ancient_city_small_pillars_3",
-          "to": "minecraft:ancient_city/structures/ancient_city_temple_small_pillars_3",
-          "enabled": true
-        },
-        {
-          "from": "minecraft:ancient_city/structures/large_pillar",
-          "to": "minecraft:ancient_city/structures/large_pillar_1",
-          "enabled": true
-        },
-        {
-          "from": "minecraft:ancient_city/structures/medium_pillar",
-          "to": "minecraft:ancient_city/structures/medium_pillar_1",
-          "enabled": true
-        },
-        {
-          "from": "minecraft:ancient_city/walls/intact_horizontal_wall_stairs_5",
-          "to": "minecraft:ancient_city/walls/intact_horizontal_wall_stairs_4",
-          "enabled": true
-        },
-        {
-          "from": "minecraft:ancient_city/structures/ancient_citty_lantern",
-          "to": "minecraft:empty",
-          "enabled": true
-        },
-        {
-          "from": "minecraft:ancient_city/structures/ancient_citty_lantern_fail",
-          "to": "minecraft:empty",
-          "enabled": true
-        }
-      ],
-      "structurePatches": [
-        {
-          "structure": "minecraft:ancient_city",
-          "enabled": true,
-          "startHeightAbsolute": -210
-        }
-      ]
+      "replace": true
     },
     {
       "id": "dnt-pillager",
       "url": "https://modrinth.com/datapack/dungeons-and-taverns-pillager-outpost-overhaul/version/v3.3",
       "enabled": true,
       "required": false,
-      "replaceVanilla": false,
-      "replaceTargets": {
-        "structures": [],
-        "structureSets": [],
-        "templatePools": [],
-        "processorLists": [],
-        "biomeHasStructureTags": [],
-        "configuredFeatures": [],
-        "placedFeatures": []
-      },
-      "structurePatches": []
+      "replace": true
     },
     {
       "id": "dnt-witchhut",
       "url": "https://modrinth.com/datapack/dungeons-and-taverns-swamp-hut-overhaul/version/v2.3",
       "enabled": true,
       "required": false,
-      "replaceVanilla": false,
-      "replaceTargets": {
-        "structures": [],
-        "structureSets": [],
-        "templatePools": [],
-        "processorLists": [],
-        "biomeHasStructureTags": [],
-        "configuredFeatures": [],
-        "placedFeatures": []
-      },
-      "structurePatches": []
+      "replace": true
     },
     {
       "id": "dnt-mansion",
       "url": "https://modrinth.com/datapack/dungeons-and-taverns-woodland-mansion-overhaul/version/v2",
       "enabled": true,
       "required": false,
-      "replaceVanilla": false,
-      "replaceTargets": {
-        "structures": [],
-        "structureSets": [],
-        "templatePools": [],
-        "processorLists": [],
-        "biomeHasStructureTags": [],
-        "configuredFeatures": [],
-        "placedFeatures": []
-      },
-      "structurePatches": []
+      "replace": true
     },
     {
       "id": "dnt-omonument",
       "url": "https://modrinth.com/datapack/dungeons-and-taverns-ocean-monument-overhaul/version/v2.2",
       "enabled": true,
       "required": false,
-      "replaceVanilla": false,
-      "replaceTargets": {
-        "structures": [],
-        "structureSets": [],
-        "templatePools": [],
-        "processorLists": [],
-        "biomeHasStructureTags": [],
-        "configuredFeatures": [],
-        "placedFeatures": []
-      },
-      "structurePatches": []
+      "replace": true
     },
     {
       "id": "dnt-jtemple",
       "url": "https://modrinth.com/datapack/dungeons-and-taverns-jungle-temple-overhaul/version/v2.1",
       "enabled": true,
       "required": false,
-      "replaceVanilla": true,
-      "replaceTargets": {
-        "structures": [
-          "minecraft:jungle_pyramid"
-        ],
-        "structureSets": [
-          "minecraft:jungle_pyramids"
-        ],
-        "templatePools": [],
-        "processorLists": [],
-        "biomeHasStructureTags": [],
-        "configuredFeatures": [],
-        "placedFeatures": []
-      },
-      "structurePatches": []
+      "replace": true
     },
     {
       "id": "dnt-dtemple",
       "url": "https://modrinth.com/datapack/dungeons-and-taverns-desert-temple-overhaul/version/v2.1",
       "enabled": true,
       "required": false,
-      "replaceVanilla": false,
-      "replaceTargets": {
-        "structures": [],
-        "structureSets": [],
-        "templatePools": [],
-        "processorLists": [],
-        "biomeHasStructureTags": [],
-        "configuredFeatures": [],
-        "placedFeatures": []
-      },
-      "structurePatches": []
+      "replace": true
     },
     {
-      "id": "hopo-bettermineshaft",
+      "id": "hopo-mineshaft",
       "url": "https://modrinth.com/datapack/hopo-better-mineshaft/version/Ip56knaM",
       "enabled": true,
       "required": false,
-      "replaceVanilla": true,
-      "supportSmartBore": true,
-      "replaceTargets": {
-        "structures": [
-          "minecraft:mineshaft",
-          "minecraft:mineshaft_mesa"
-        ],
-        "structureSets": [
-          "minecraft:mineshafts"
-        ],
-        "templatePools": [],
-        "processorLists": [],
-        "biomeHasStructureTags": [],
-        "configuredFeatures": [],
-        "placedFeatures": []
-      },
-      "structureAliases": [
-        {
-          "target": "minecraft:mineshaft",
-          "source": "hopo:mineshaft/acacia_mineshaft"
-        },
-        {
-          "target": "minecraft:mineshaft",
-          "source": "hopo:mineshaft/bamboo_mineshaft"
-        },
-        {
-          "target": "minecraft:mineshaft",
-          "source": "hopo:mineshaft/birch_mineshaft"
-        },
-        {
-          "target": "minecraft:mineshaft",
-          "source": "hopo:mineshaft/cherry_mineshaft"
-        },
-        {
-          "target": "minecraft:mineshaft",
-          "source": "hopo:mineshaft/jungle_mineshaft"
-        },
-        {
-          "target": "minecraft:mineshaft",
-          "source": "hopo:mineshaft/pale_mineshaft"
-        },
-        {
-          "target": "minecraft:mineshaft",
-          "source": "hopo:mineshaft/oak_mineshaft"
-        },
-        {
-          "target": "minecraft:mineshaft",
-          "source": "hopo:mineshaft/spruce_mineshaft"
-        },
-        {
-          "target": "minecraft:mineshaft",
-          "source": "hopo:mineshaft/mangrove_mineshaft"
-        },
-        {
-          "target": "minecraft:mineshaft",
-          "source": "hopo:mineshaft/mud_mineshaft"
-        },
-        {
-          "target": "minecraft:mineshaft",
-          "source": "hopo:mineshaft/stone_mineshaft"
-        },
-        {
-          "target": "minecraft:mineshaft",
-          "source": "hopo:mineshaft/deepslate_mineshaft"
-        },
-        {
-          "target": "minecraft:mineshaft_mesa",
-          "source": "hopo:mineshaft/dark_oak_mineshaft"
-        }
-      ],
-      "structureSetAliases": [
-        {
-          "target": "minecraft:mineshafts",
-          "source": "hopo:mineshafts"
-        }
-      ],
-      "structurePatches": []
+      "replace": true
     }
   ],
   "carving": [
