@@ -1,0 +1,201 @@
+{
+    "name": "Magnetics Glass Shard",
+    "color": "#A8D4E8",
+    "rarity": 1,
+    "derivative": "minecraft:plains",
+    "vanillaDerivative": "minecraft:plains",
+    "generators": [
+        {
+            "min": 0,
+            "max": 8,
+            "generator": "plain"
+        }
+    ],
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {"block": "minecraft:glass"}
+        ]
+    },
+    "layers": [
+        {
+            "maxHeight": 1,
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "minecraft:light_blue_stained_glass"}]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "minecraft:glass"},
+                {"block": "minecraft:light_blue_stained_glass"}
+            ]
+        },
+        {
+            "minHeight": 3,
+            "maxHeight": 5,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "minecraft:tinted_glass"},
+                {"block": "minecraft:glass"}
+            ]
+        },
+        {
+            "minHeight": 5,
+            "maxHeight": 12,
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "minecraft:glass"},
+                {"block": "minecraft:light_blue_stained_glass"},
+                {"block": "minecraft:tinted_glass"}
+            ]
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.08,
+            "palette": [
+                {"block": "minecraft:amethyst_cluster"},
+                {"block": "minecraft:large_amethyst_bud"},
+                {"block": "minecraft:medium_amethyst_bud"},
+                {"block": "minecraft:small_amethyst_bud"}
+            ]
+        }
+    ],
+    "objects": [
+        {
+            "place": [
+                "clutter/amethyst-cluster1",
+                "clutter/amethyst-cluster2",
+                "clutter/amethyst-cluster3",
+                "clutter/amethyst-cluster4",
+                "clutter/amethyst-cluster5",
+                "clutter/icespec1",
+                "clutter/icespec2",
+                "clutter/icespec3"
+            ],
+            "chance": 0.55,
+            "mode": "CENTER_HEIGHT",
+            "density": 8,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 270,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:ice"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:glass"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:packed_ice"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:light_blue_stained_glass"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:blue_ice"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:tinted_glass"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "place": [
+                "clutter/singleicespike1",
+                "clutter/singleicespike2",
+                "clutter/singleicespike3",
+                "clutter/singleicespike4",
+                "clutter/singleicespike5"
+            ],
+            "chance": 0.32,
+            "mode": "CENTER_HEIGHT",
+            "density": 4,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 270,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:ice"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:glass"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:packed_ice"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:light_blue_stained_glass"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:blue_ice"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:tinted_glass"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

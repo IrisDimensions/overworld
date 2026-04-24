@@ -58,44 +58,44 @@
     "enabled": true,
     "verticalRange": {
       "min": 6,
-      "max": 760
+      "max": 110
     },
     "baseDensityStyle": {
-      "style": "PERLIN_IRIS",
-      "zoom": 0.72
+      "style": "CELLULAR",
+      "zoom": 0.5
     },
     "detailDensityStyle": {
       "style": "SIMPLEX",
-      "zoom": 0.54
-    },
-    "warpStyle": {
-      "style": "FRACTAL_WATER",
       "zoom": 0.5
     },
-    "baseWeight": 0.9,
-    "detailWeight": 0.11,
-    "warpStrength": 0.24,
+    "warpStyle": {
+      "style": "SIMPLEX",
+      "zoom": 0.5
+    },
+    "baseWeight": 1.0,
+    "detailWeight": 0.0,
+    "warpStrength": 0.0,
     "densityThreshold": {
       "min": -0.14,
-      "max": -0.06,
+      "max": -0.08,
       "style": {
         "style": "SIMPLEX",
-        "zoom": 0.74
+        "zoom": 0.5
       }
     },
-    "thresholdBias": 0.14,
+    "thresholdBias": 0.08,
     "sampleStep": 3,
-    "surfaceClearance": 5,
-    "allowSurfaceBreak": true,
+    "surfaceClearance": 12,
+    "allowSurfaceBreak": false,
     "surfaceBreakStyle": {
       "style": "SIMPLEX",
       "zoom": 0.88
     },
-    "surfaceBreakNoiseThreshold": 0.6,
-    "surfaceBreakDepth": 16,
-    "surfaceBreakThresholdBoost": 0.07,
+    "surfaceBreakNoiseThreshold": 0.99,
+    "surfaceBreakDepth": 4,
+    "surfaceBreakThresholdBoost": 0.02,
     "objectMinDepthBelowSurface": 14,
-    "surfaceObjectExclusionDepth": 30,
+    "surfaceObjectExclusionDepth": 10,
     "defaultObjectAnchor": "FLOOR",
     "defaultObjectPlaceMode": "FAST_MIN_STILT",
     "anchorScanStep": 1,
@@ -104,33 +104,6 @@
     "waterMinDepthBelowSurface": 20,
     "waterRequiresFloor": true,
     "allowLava": true,
-    "modules": [
-      {
-        "style": {
-          "style": "SIMPLEX_VASCULAR",
-          "zoom": 1.08
-        },
-        "weight": 0.08,
-        "threshold": 0.03,
-        "verticalRange": {
-          "min": 24,
-          "max": 660
-        },
-        "invert": false
-      },
-      {
-        "style": {
-          "style": "FRACTAL_FBM_SIMPLEX",
-          "zoom": 0.24
-        },
-        "weight": 0.04,
-        "threshold": 0.08,
-        "verticalRange": {
-          "min": 6,
-          "max": 240
-        },
-        "invert": true
-      }
-    ]
+    "modules": []
   }
 }

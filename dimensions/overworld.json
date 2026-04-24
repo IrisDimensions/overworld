@@ -3,6 +3,7 @@
   "name": "Overworld",
   "fullbright": false,
   "upperDimension": "",
+  "focusRegion": "magnetics",
   "upperDimensionGap": 32,
   "upperDimensionCarving": false,
   "upperDimensionObjects": false,
@@ -54,6 +55,7 @@
     "mushroom",
     "forests",
     "tundra",
+    "magnetics",
     "temperate",
     "tropical",
     "swamp",
@@ -318,7 +320,7 @@
       "maxSize": 8,
       "palette": [
         {
-          "block": "minecraft:deepslate_copper_ore"
+          "block": "minecraft:copper_ore"
         }
       ]
     },
@@ -331,7 +333,7 @@
       "maxSize": 8,
       "palette": [
         {
-          "block": "minecraft:deepslate_diamond_ore"
+          "block": "minecraft:diamond_ore"
         }
       ]
     },
@@ -344,7 +346,7 @@
       "maxSize": 8,
       "palette": [
         {
-          "block": "minecraft:deepslate_emerald_ore"
+          "block": "minecraft:emerald_ore"
         }
       ]
     },
@@ -357,7 +359,7 @@
       "maxSize": 8,
       "palette": [
         {
-          "block": "minecraft:deepslate_gold_ore"
+          "block": "minecraft:gold_ore"
         }
       ]
     },
@@ -370,7 +372,7 @@
       "maxSize": 8,
       "palette": [
         {
-          "block": "minecraft:deepslate_iron_ore"
+          "block": "minecraft:iron_ore"
         }
       ]
     },
@@ -383,7 +385,7 @@
       "maxSize": 8,
       "palette": [
         {
-          "block": "minecraft:deepslate_coal_ore"
+          "block": "minecraft:coal_ore"
         }
       ]
     },
@@ -396,7 +398,7 @@
       "maxSize": 8,
       "palette": [
         {
-          "block": "minecraft:deepslate_redstone_ore"
+          "block": "minecraft:redstone_ore"
         }
       ]
     },
@@ -409,7 +411,7 @@
       "maxSize": 8,
       "palette": [
         {
-          "block": "minecraft:deepslate_lapis_ore"
+          "block": "minecraft:lapis_ore"
         }
       ],
       "varience": 4
@@ -528,6 +530,22 @@
         }
       ],
       "varience": 5
+    }
+  ],
+  "depositVariants": [
+    {
+      "minHeight": -64,
+      "maxHeight": 0,
+      "remap": {
+        "minecraft:iron_ore": "minecraft:deepslate_iron_ore",
+        "minecraft:gold_ore": "minecraft:deepslate_gold_ore",
+        "minecraft:diamond_ore": "minecraft:deepslate_diamond_ore",
+        "minecraft:redstone_ore": "minecraft:deepslate_redstone_ore",
+        "minecraft:lapis_ore": "minecraft:deepslate_lapis_ore",
+        "minecraft:copper_ore": "minecraft:deepslate_copper_ore",
+        "minecraft:coal_ore": "minecraft:deepslate_coal_ore",
+        "minecraft:emerald_ore": "minecraft:deepslate_emerald_ore"
+      }
     }
   ],
   "caveBiomeStyle": {

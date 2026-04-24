@@ -1,0 +1,362 @@
+{
+  "name": "Magnetics Dunes",
+  "color": "#D4A843",
+  "rarity": 1,
+  "derivative": "minecraft:desert",
+  "vanillaDerivative": "minecraft:desert",
+  "generators": [
+    {
+      "min": -3,
+      "max": 18,
+      "generator": "magnetics/dunes"
+    }
+  ],
+  "wall": {
+    "palette": [
+      {
+        "block": "minecraft:sandstone"
+      },
+      {
+        "block": "minecraft:smooth_sandstone"
+      },
+      {
+        "block": "minecraft:cut_sandstone"
+      },
+      {
+        "block": "minecraft:chiseled_sandstone"
+      }
+    ]
+  },
+  "layers": [
+    {
+      "maxHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:sandstone"
+        },
+        {
+          "block": "minecraft:smooth_sandstone"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:sandstone"
+        },
+        {
+          "block": "minecraft:cut_sandstone"
+        }
+      ]
+    },
+    {
+      "minHeight": 4,
+      "maxHeight": 8,
+      "palette": [
+        {
+          "block": "minecraft:smooth_sandstone"
+        },
+        {
+          "block": "minecraft:sandstone"
+        },
+        {
+          "block": "minecraft:terracotta"
+        }
+      ]
+    },
+    {
+      "minHeight": 8,
+      "maxHeight": 18,
+      "palette": [
+        {
+          "block": "minecraft:sandstone"
+        },
+        {
+          "block": "minecraft:smooth_sandstone"
+        },
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:terracotta"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "place": [
+        "clutter/desertpost1",
+        "clutter/desertpost2",
+        "clutter/desertpost3"
+      ],
+      "chance": 0.002,
+      "density": 3,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      }
+    },
+    {
+      "place": [
+        "clutter/boulder1",
+        "clutter/boulder2",
+        "clutter/boulder3",
+        "clutter/boulder4",
+        "clutter/boulder5",
+        "clutter/savrock1",
+        "clutter/savrock2",
+        "clutter/savrock3",
+        "clutter/savrock4"
+      ],
+      "chance": 0.08,
+      "mode": "CENTER_HEIGHT",
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      }
+    },
+    {
+      "place": [
+        "clutter/bone1",
+        "clutter/bone2",
+        "clutter/bone3",
+        "clutter/bone4",
+        "clutter/bone5",
+        "clutter/skull1"
+      ],
+      "scale": {
+        "size": 0.25
+      },
+      "chance": 0.04,
+      "mode": "CENTER_HEIGHT",
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      }
+    },
+    {
+      "place": [
+        "clutter/shrub1",
+        "clutter/shrub2",
+        "clutter/shrub3",
+        "clutter/shrub4",
+        "clutter/sshrubb1",
+        "clutter/sshrubb2",
+        "clutter/sshrubb3"
+      ],
+      "chance": 0.12,
+      "mode": "CENTER_HEIGHT",
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      }
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.03,
+      "palette": [
+        {
+          "block": "minecraft:dead_bush"
+        }
+      ]
+    }
+  ],
+  "floatingChildBiomes": [
+    {
+      "biome": "magnetics/dunes",
+      "rarity": 1,
+      "footprintStyle": {
+        "style": "CELLULAR_IRIS",
+        "zoom": 0.55,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.2,
+          "multiplier": 8
+        }
+      },
+      "footprintThreshold": 0.52,
+      "pickerStyle": {
+        "style": "SIMPLEX",
+        "zoom": 4.0
+      },
+      "altitudeStyle": {
+        "style": "SIMPLEX",
+        "zoom": 2.6
+      },
+      "minHeightAboveSurface": 90,
+      "maxHeightAboveSurface": 130,
+      "topShapeMode": "NOISE",
+      "maxTopHeight": 16,
+      "topShapeStyle": {
+        "style": "FRACTAL_SMOKE",
+        "zoom": 0.45,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.22,
+          "multiplier": 4
+        }
+      },
+      "topShapeAmp": 0.75,
+      "bottomStyle": {
+        "style": "FRACTAL_RM_SIMPLEX",
+        "zoom": 0.32,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.18,
+          "multiplier": 5
+        }
+      },
+      "bottomDepthMin": 10,
+      "bottomDepthMax": 20,
+      "bottomExponent": 1.35,
+      "bottomPaletteMode": "CUSTOM",
+      "bottomPalette": [
+        {
+          "minHeight": 2,
+          "maxHeight": 5,
+          "palette": [
+            {
+              "block": "minecraft:sandstone"
+            },
+            {
+              "block": "minecraft:smooth_sandstone"
+            },
+            {
+              "block": "minecraft:cut_sandstone"
+            }
+          ]
+        },
+        {
+          "minHeight": 5,
+          "maxHeight": 18,
+          "palette": [
+            {
+              "block": "minecraft:sandstone"
+            },
+            {
+              "block": "minecraft:smooth_sandstone"
+            },
+            {
+              "block": "minecraft:terracotta"
+            },
+            {
+              "block": "minecraft:stone"
+            }
+          ]
+        }
+      ],
+      "maxThickness": 38,
+      "wallWarpStyle": {
+        "style": "SIMPLEX_VASCULAR",
+        "zoom": 0.28,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.14,
+          "multiplier": 4
+        }
+      },
+      "wallWarpAmplitude": 5.0,
+      "carveStyle": {
+        "style": "SIMPLEX",
+        "zoom": 0.2,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.12,
+          "multiplier": 3
+        }
+      },
+      "carveThreshold": 0.86,
+      "inheritDecorators": true,
+      "inheritObjects": false,
+      "objectShrinkFactor": 0.55,
+      "topObjectMode": "MERGE",
+      "topObjectOverrides": [
+        {
+          "place": [
+            "clutter/boulder1",
+            "clutter/boulder2",
+            "clutter/boulder3",
+            "clutter/savrock1",
+            "clutter/savrock2"
+          ],
+          "chance": 0.55,
+          "mode": "CENTER_HEIGHT",
+          "density": 5,
+          "rotation": {
+            "yAxis": {
+              "min": 0,
+              "max": 270,
+              "interval": 90,
+              "enabled": true
+            },
+            "enabled": true
+          }
+        },
+        {
+          "place": [
+            "clutter/shrub1",
+            "clutter/shrub2",
+            "clutter/sshrubb1"
+          ],
+          "chance": 0.42,
+          "mode": "CENTER_HEIGHT",
+          "density": 4,
+          "rotation": {
+            "yAxis": {
+              "min": 0,
+              "max": 270,
+              "interval": 90,
+              "enabled": true
+            },
+            "enabled": true
+          }
+        }
+      ],
+      "bottomObjectMode": "REPLACE",
+      "bottomObjectOverrides": [
+        {
+          "place": [
+            "clutter/bone4",
+            "clutter/bone5"
+          ],
+          "chance": 0.18,
+          "mode": "FAST_MIN_HEIGHT",
+          "density": 2,
+          "rotation": {
+            "yAxis": {
+              "min": 0,
+              "max": 270,
+              "interval": 90,
+              "enabled": true
+            },
+            "enabled": true
+          }
+        }
+      ]
+    }
+  ]
+}

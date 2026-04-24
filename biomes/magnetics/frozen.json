@@ -1,0 +1,571 @@
+{
+  "name": "Magnetics Frozen",
+  "color": "#A8C8E8",
+  "rarity": 1,
+  "derivative": "minecraft:frozen_peaks",
+  "vanillaDerivative": "minecraft:frozen_peaks",
+  "generators": [
+    {
+      "min": 8,
+      "max": 36,
+      "generator": "magnetics/frozen"
+    }
+  ],
+  "wall": {
+    "palette": [
+      {
+        "block": "minecraft:packed_ice"
+      },
+      {
+        "block": "minecraft:blue_ice"
+      },
+      {
+        "block": "minecraft:ice"
+      },
+      {
+        "block": "minecraft:diorite"
+      }
+    ]
+  },
+  "layers": [
+    {
+      "maxHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:snow_block"
+        },
+        {
+          "block": "minecraft:powder_snow"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:packed_ice"
+        },
+        {
+          "block": "minecraft:snow_block"
+        }
+      ]
+    },
+    {
+      "minHeight": 3,
+      "maxHeight": 6,
+      "palette": [
+        {
+          "block": "minecraft:blue_ice"
+        },
+        {
+          "block": "minecraft:ice"
+        },
+        {
+          "block": "minecraft:packed_ice"
+        }
+      ]
+    },
+    {
+      "minHeight": 6,
+      "maxHeight": 18,
+      "palette": [
+        {
+          "block": "minecraft:diorite"
+        },
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:andesite"
+        },
+        {
+          "block": "minecraft:blue_ice"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "place": [
+        "trees/sproak/generic1",
+        "trees/sproak/generic2",
+        "trees/sproak/generic3",
+        "trees/sproak/generic4",
+        "trees/sproak/generic5",
+        "trees/sproak/generic6",
+        "trees/sproak/generic7",
+        "trees/sproak/generic8",
+        "trees/sproak/generic9",
+        "trees/sproak/generic10",
+        "trees/sproak/generic11",
+        "trees/sproak/generic12"
+      ],
+      "chance": 0.35,
+      "mode": "CENTER_STILT",
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      }
+    },
+    {
+      "place": [
+        "clutter/singleicespike1",
+        "clutter/singleicespike2",
+        "clutter/singleicespike3",
+        "clutter/singleicespike4",
+        "clutter/singleicespike5",
+        "clutter/icespiresmol1",
+        "clutter/icespiresmol2",
+        "clutter/icespiresmol3"
+      ],
+      "chance": 0.08,
+      "mode": "CENTER_HEIGHT",
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      }
+    },
+    {
+      "place": [
+        "clutter/spruceclutt1",
+        "clutter/spruceclutt2",
+        "clutter/spruceclutt3",
+        "clutter/spruceclutt4",
+        "clutter/spruceclutt5",
+        "clutter/spruceclutt6"
+      ],
+      "chance": 0.15,
+      "mode": "CENTER_HEIGHT",
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      }
+    },
+    {
+      "place": [
+        "clutter/smoleicespike1",
+        "clutter/smoleicespike2",
+        "clutter/smoleicespike3",
+        "clutter/smoleicespike4",
+        "clutter/smoleicespike5",
+        "clutter/smoleicespike6",
+        "clutter/smoleicespike7",
+        "clutter/smoleicespike8",
+        "clutter/smoleicespike9",
+        "clutter/icespec1",
+        "clutter/icespec2",
+        "clutter/icespec3"
+      ],
+      "chance": 0.35,
+      "mode": "CENTER_HEIGHT"
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.5,
+      "palette": [
+        {
+          "data": {
+            "layers": 1
+          },
+          "block": "minecraft:snow"
+        },
+        {
+          "block": "minecraft:air"
+        }
+      ]
+    }
+  ],
+  "floatingChildBiomes": [
+    {
+      "biome": "frozen/vander",
+      "rarity": 1,
+      "footprintStyle": {
+        "style": "SIMPLEX",
+        "zoom": 0.52,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.18,
+          "multiplier": 10
+        }
+      },
+      "footprintThreshold": 0.48,
+      "pickerStyle": {
+        "style": "SIMPLEX",
+        "zoom": 3.5
+      },
+      "altitudeStyle": {
+        "style": "SIMPLEX",
+        "zoom": 3.0
+      },
+      "minHeightAboveSurface": 150,
+      "maxHeightAboveSurface": 185,
+      "topShapeMode": "NOISE",
+      "maxTopHeight": 18,
+      "topShapeStyle": {
+        "style": "PERLIN_IRIS_THICK",
+        "zoom": 0.42,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.2,
+          "multiplier": 5
+        }
+      },
+      "topShapeAmp": 0.82,
+      "bottomStyle": {
+        "style": "PERLIN_IRIS_DOUBLE",
+        "zoom": 0.34,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.18,
+          "multiplier": 5
+        }
+      },
+      "bottomDepthMin": 12,
+      "bottomDepthMax": 20,
+      "bottomExponent": 1.7,
+      "bottomPaletteMode": "MIRROR_TOP",
+      "maxThickness": 40,
+      "wallWarpStyle": {
+        "style": "SIMPLEX",
+        "zoom": 0.42,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.18,
+          "multiplier": 4
+        }
+      },
+      "wallWarpAmplitude": 2.5,
+      "carveStyle": {
+        "style": "SIMPLEX",
+        "zoom": 0.2,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.12,
+          "multiplier": 3
+        }
+      },
+      "carveThreshold": 0.86,
+      "inheritDecorators": true,
+      "inheritObjects": true,
+      "objectShrinkFactor": 0.45,
+      "topObjectMode": "MERGE",
+      "topObjectOverrides": [
+        {
+          "place": [
+            "clutter/singleicespike1",
+            "clutter/singleicespike2",
+            "clutter/singleicespike3"
+          ],
+          "chance": 0.7,
+          "mode": "FAST_MIN_HEIGHT",
+          "density": 8,
+          "rotation": {
+            "yAxis": {
+              "min": 0,
+              "max": 270,
+              "interval": 90,
+              "enabled": true
+            },
+            "enabled": true
+          },
+          "translate": {
+            "x": 0,
+            "y": -2,
+            "z": 0
+          }
+        }
+      ],
+      "bottomObjectMode": "INHERIT_ONLY",
+      "bottomObjectOverrides": [
+        {
+          "place": [
+            "trees/mushroom/ice1",
+            "trees/mushroom/ice2",
+            "trees/mushroom/ice3",
+            "clutter/singleicespike4",
+            "clutter/singleicespike5"
+          ],
+          "chance": 0.62,
+          "mode": "FAST_MIN_HEIGHT",
+          "density": 7,
+          "rotation": {
+            "yAxis": {
+              "min": 0,
+              "max": 270,
+              "interval": 90,
+              "enabled": true
+            },
+            "enabled": true
+          }
+        }
+      ]
+    },
+    {
+      "biome": "frozen/vander",
+      "rarity": 1,
+      "footprintStyle": {
+        "style": "GLOB_IRIS_THICK",
+        "zoom": 0.68,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.22,
+          "multiplier": 8
+        }
+      },
+      "footprintThreshold": 0.48,
+      "pickerStyle": {
+        "style": "SIMPLEX",
+        "zoom": 3.8
+      },
+      "altitudeStyle": {
+        "style": "SIMPLEX",
+        "zoom": 2.7
+      },
+      "minHeightAboveSurface": 110,
+      "maxHeightAboveSurface": 145,
+      "topShapeMode": "NOISE",
+      "maxTopHeight": 16,
+      "topShapeStyle": {
+        "style": "PERLIN_IRIS_THICK",
+        "zoom": 0.55,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.24,
+          "multiplier": 4
+        }
+      },
+      "topShapeAmp": 0.8,
+      "bottomStyle": {
+        "style": "PERLIN_IRIS_DOUBLE",
+        "zoom": 0.45,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.2,
+          "multiplier": 4
+        }
+      },
+      "bottomDepthMin": 10,
+      "bottomDepthMax": 18,
+      "bottomExponent": 0.85,
+      "bottomPaletteMode": "MIRROR_TOP",
+      "maxThickness": 36,
+      "wallWarpStyle": {
+        "style": "SIMPLEX",
+        "zoom": 0.5,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.2,
+          "multiplier": 4
+        }
+      },
+      "wallWarpAmplitude": 3.0,
+      "carveStyle": {
+        "style": "SIMPLEX",
+        "zoom": 0.22,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.14,
+          "multiplier": 3
+        }
+      },
+      "carveThreshold": 0.85,
+      "inheritDecorators": true,
+      "inheritObjects": true,
+      "objectShrinkFactor": 0.6,
+      "topObjectMode": "MERGE",
+      "topObjectOverrides": [
+        {
+          "place": [
+            "clutter/spruceclutt1",
+            "clutter/spruceclutt2",
+            "clutter/spruceclutt3"
+          ],
+          "chance": 0.65,
+          "mode": "FAST_MIN_HEIGHT",
+          "density": 7,
+          "rotation": {
+            "yAxis": {
+              "min": 0,
+              "max": 270,
+              "interval": 90,
+              "enabled": true
+            },
+            "enabled": true
+          },
+          "translate": {
+            "x": 0,
+            "y": -4,
+            "z": 0
+          }
+        }
+      ],
+      "bottomObjectMode": "INHERIT_ONLY",
+      "bottomObjectOverrides": [
+        {
+          "place": [
+            "trees/mushroom/ice4",
+            "trees/mushroom/ice5",
+            "trees/mushroom/ice6",
+            "clutter/smoleicespike1",
+            "clutter/smoleicespike2",
+            "clutter/smoleicespike3"
+          ],
+          "chance": 0.55,
+          "mode": "FAST_MIN_HEIGHT",
+          "density": 6,
+          "rotation": {
+            "yAxis": {
+              "min": 0,
+              "max": 270,
+              "interval": 90,
+              "enabled": true
+            },
+            "enabled": true
+          }
+        }
+      ]
+    },
+    {
+      "biome": "frozen/vander",
+      "rarity": 1,
+      "footprintStyle": {
+        "style": "SIMPLEX",
+        "zoom": 0.42,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.16,
+          "multiplier": 12
+        }
+      },
+      "footprintThreshold": 0.54,
+      "pickerStyle": {
+        "style": "SIMPLEX",
+        "zoom": 4.5
+      },
+      "altitudeStyle": {
+        "style": "SIMPLEX",
+        "zoom": 3.6
+      },
+      "minHeightAboveSurface": 220,
+      "maxHeightAboveSurface": 270,
+      "topShapeMode": "NOISE",
+      "maxTopHeight": 20,
+      "topShapeStyle": {
+        "style": "FRACTAL_RM_SIMPLEX",
+        "zoom": 0.32,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.18,
+          "multiplier": 5
+        }
+      },
+      "topShapeAmp": 0.9,
+      "bottomStyle": {
+        "style": "FRACTAL_RM_SIMPLEX",
+        "zoom": 0.24,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.16,
+          "multiplier": 5
+        }
+      },
+      "bottomDepthMin": 14,
+      "bottomDepthMax": 20,
+      "bottomExponent": 1.9,
+      "bottomPaletteMode": "MIRROR_TOP",
+      "maxThickness": 40,
+      "wallWarpStyle": {
+        "style": "SIMPLEX",
+        "zoom": 0.38,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.16,
+          "multiplier": 4
+        }
+      },
+      "wallWarpAmplitude": 2.5,
+      "carveStyle": {
+        "style": "SIMPLEX",
+        "zoom": 0.18,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.12,
+          "multiplier": 3
+        }
+      },
+      "carveThreshold": 0.88,
+      "inheritDecorators": true,
+      "inheritObjects": true,
+      "objectShrinkFactor": 0.95,
+      "topObjectMode": "MERGE",
+      "topObjectOverrides": [
+        {
+          "place": [
+            "clutter/icespiresmol1",
+            "clutter/icespiresmol2",
+            "clutter/icespiresmol3"
+          ],
+          "chance": 0.6,
+          "mode": "FAST_MIN_HEIGHT",
+          "density": 6,
+          "rotation": {
+            "yAxis": {
+              "min": 0,
+              "max": 270,
+              "interval": 90,
+              "enabled": true
+            },
+            "enabled": true
+          },
+          "translate": {
+            "x": 0,
+            "y": -7,
+            "z": 0
+          }
+        }
+      ],
+      "bottomObjectMode": "REPLACE",
+      "bottomObjectOverrides": [
+        {
+          "place": [
+            "trees/mushroom/ice7",
+            "trees/mushroom/ice8",
+            "trees/mushroom/ice9",
+            "clutter/smoleicespike7",
+            "clutter/smoleicespike8",
+            "clutter/smoleicespike9"
+          ],
+          "chance": 0.5,
+          "mode": "FAST_MIN_HEIGHT",
+          "density": 5,
+          "rotation": {
+            "yAxis": {
+              "min": 0,
+              "max": 270,
+              "interval": 90,
+              "enabled": true
+            },
+            "enabled": true
+          }
+        }
+      ]
+    }
+  ]
+}

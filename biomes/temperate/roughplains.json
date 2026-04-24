@@ -255,20 +255,54 @@
         {
             "biome": "mushroom/forest",
             "rarity": 1,
-            "footprintStyle": {"style": "CELLULAR", "zoom": 0.4},
+            "footprintStyle": {
+                "style": "CELLULAR",
+                "zoom": 0.4,
+                "fracture": {
+                    "style": "SIMPLEX",
+                    "zoom": 0.18,
+                    "multiplier": 8
+                }
+            },
             "footprintThreshold": 0.6,
             "pickerStyle": {"style": "SIMPLEX", "zoom": 4.0},
             "altitudeStyle": {"style": "SIMPLEX", "zoom": 2.0},
-            "minHeightAboveSurface": 170,
-            "maxHeightAboveSurface": 210,
+            "minHeightAboveSurface": 95,
+            "maxHeightAboveSurface": 170,
             "topShapeMode": "BIOME",
             "maxTopHeight": 32,
-            "bottomStyle": {"style": "VASCULAR", "zoom": 0.35},
-            "bottomDepthMin": 6,
-            "bottomDepthMax": 22,
-            "bottomExponent": 1.4,
+            "bottomStyle": {
+                "style": "CELLULAR",
+                "zoom": 0.3,
+                "fracture": {
+                    "style": "SIMPLEX",
+                    "zoom": 0.16,
+                    "multiplier": 5
+                }
+            },
+            "bottomDepthMin": 0,
+            "bottomDepthMax": 5,
+            "bottomExponent": 0.9,
             "maxThickness": 72,
-            "carveStyle": {"style": "CELLULAR", "zoom": 0.3},
+            "wallWarpStyle": {
+                "style": "SIMPLEX",
+                "zoom": 0.25,
+                "fracture": {
+                    "style": "SIMPLEX",
+                    "zoom": 0.14,
+                    "multiplier": 4
+                }
+            },
+            "wallWarpAmplitude": 10.0,
+            "carveStyle": {
+                "style": "CELLULAR",
+                "zoom": 0.3,
+                "fracture": {
+                    "style": "SIMPLEX",
+                    "zoom": 0.14,
+                    "multiplier": 3
+                }
+            },
             "carveThreshold": 0.75,
             "inheritDecorators": true,
             "inheritObjects": true,
@@ -276,21 +310,55 @@
         },
         {
             "biome": "tropical/wilds",
-            "rarity": 2,
-            "footprintStyle": {"style": "FRACTAL_FBM_SIMPLEX", "zoom": 0.35},
+            "rarity": 1,
+            "footprintStyle": {
+                "style": "CELLULAR_IRIS",
+                "zoom": 0.35,
+                "fracture": {
+                    "style": "SIMPLEX",
+                    "zoom": 0.16,
+                    "multiplier": 8
+                }
+            },
             "footprintThreshold": 0.62,
             "pickerStyle": {"style": "SIMPLEX", "zoom": 4.0},
             "altitudeStyle": {"style": "SIMPLEX", "zoom": 2.0},
-            "minHeightAboveSurface": 220,
-            "maxHeightAboveSurface": 280,
+            "minHeightAboveSurface": 35,
+            "maxHeightAboveSurface": 170,
             "topShapeMode": "BIOME",
             "maxTopHeight": 64,
-            "bottomStyle": {"style": "FRACTAL_RM_SIMPLEX", "zoom": 0.25},
-            "bottomDepthMin": 10,
-            "bottomDepthMax": 40,
+            "bottomStyle": {
+                "style": "NOWHERE",
+                "zoom": 0.25,
+                "fracture": {
+                    "style": "SIMPLEX",
+                    "zoom": 0.16,
+                    "multiplier": 4
+                }
+            },
+            "bottomDepthMin": 0,
+            "bottomDepthMax": 5,
             "bottomExponent": 1.8,
             "maxThickness": 112,
-            "carveStyle": {"style": "VASCULAR", "zoom": 0.25},
+            "wallWarpStyle": {
+                "style": "SIMPLEX",
+                "zoom": 0.25,
+                "fracture": {
+                    "style": "SIMPLEX",
+                    "zoom": 0.14,
+                    "multiplier": 4
+                }
+            },
+            "wallWarpAmplitude": 10.0,
+            "carveStyle": {
+                "style": "CELLULAR",
+                "zoom": 0.3,
+                "fracture": {
+                    "style": "SIMPLEX",
+                    "zoom": 0.14,
+                    "multiplier": 3
+                }
+            },
             "carveThreshold": 0.7,
             "inheritDecorators": true,
             "inheritObjects": true,
