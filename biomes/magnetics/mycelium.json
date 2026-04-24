@@ -96,20 +96,12 @@
         "trees/mushroom/redgeneric3",
         "trees/mushroom/redgeneric4",
         "trees/mushroom/redgeneric5",
-        "trees/mushroom/blackgeneric1",
-        "trees/mushroom/blackgeneric2",
-        "trees/mushroom/blackgeneric3",
-        "trees/mushroom/blackgeneric4",
-        "trees/mushroom/blackgeneric5",
-        "trees/mushroom/greygeneric1",
-        "trees/mushroom/greygeneric2",
-        "trees/mushroom/greygeneric3",
-        "trees/mushroom/greygeneric4",
-        "trees/mushroom/greygeneric5",
-        "trees/mushroom/fantasygenericred1",
-        "trees/mushroom/fantasygenericred2",
-        "trees/mushroom/fantasygenericred3",
-        "trees/mushroom/fantasygenericred4"
+        "trees/mushroom/redgeneric6",
+        "trees/mushroom/redgeneric7",
+        "trees/mushroom/redgeneric8",
+        "trees/mushroom/redgeneric9",
+        "trees/mushroom/redgeneric10",
+        "trees/mushroom/redgeneric11"
       ],
       "chance": 0.25,
       "mode": "CENTER_STILT",
@@ -214,7 +206,21 @@
       "bottomDepthMin": 10,
       "bottomDepthMax": 20,
       "bottomExponent": 0.65,
-      "bottomPaletteMode": "MIRROR_TOP",
+      "bottomPaletteMode": "CUSTOM",
+      "bottomPalette": [
+        {
+          "minHeight": 8,
+          "maxHeight": 18,
+          "palette": [
+            {
+              "block": "minecraft:andesite"
+            },
+            {
+              "block": "minecraft:stone"
+            }
+          ]
+        }
+      ],
       "maxThickness": 40,
       "wallWarpStyle": {
         "style": "SIMPLEX",
@@ -226,6 +232,7 @@
         }
       },
       "wallWarpAmplitude": 2.0,
+      "carving": "carving/mushroom",
       "carveStyle": {
         "style": "SIMPLEX",
         "zoom": 0.24,
@@ -239,7 +246,7 @@
       "inheritDecorators": true,
       "inheritObjects": true,
       "objectShrinkFactor": 0.52,
-      "topObjectMode": "MERGE",
+      "topObjectMode": "INHERIT_ONLY",
       "topObjectOverrides": [
         {
           "place": [
