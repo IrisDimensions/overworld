@@ -1,202 +1,155 @@
 {
-  "name": "Swamp",
-  "color": "#69943C",
-  "rarity": 2,
-  "landBiomes": [
-    "swamp/roofed-forest",
-    "swamp/sea/lake",
-    "swamp/roofed-wayward",
-    "swamp/marsh",
-    "swamp/handy-willow-forest",
-    "swamp/cambian-drift",
-    "swamp/swamp-forest",
-    "swamp/willow-forest",
-    "swamp/creaks"
-  ],
-  "objects": [
-    {
-      "heightmap": {
-        "seed": 1337,
-        "style": {
-          "style": "SIMPLEX",
-          "multiplier": 10
-        },
-        "offsetY": 5
-      },
-      "chance": 0.05,
-      "bottom": true,
-      "density": 1,
-      "place": [],
-      "edit": [
+    "name": "Swamp",
+    "color": "#69943C",
+    "rarity": 2,
+    "landBiomes": [
+        "swamp/roofed-forest",
+        "swamp/sea/lake",
+        "swamp/roofed-wayward",
+        "swamp/marsh",
+        "swamp/handy-willow-forest",
+        "swamp/cambian-drift",
+        "swamp/swamp-forest",
+        "swamp/willow-forest",
+        "swamp/creaks"
+    ],
+    "caveBiomes": [
+        "carving/swamp",
+        "carving/lush",
+        "carving/drip-lite",
+        "carving/drip",
+        "carving/moss-pillars"
+    ],
+    "shoreBiomes": [
+        "swamp/shore/beach"
+    ],
+    "seaBiomes": [
+        "swamp/sea/ocean",
+        "swamp/swamp-mangrove-lake",
+        "swamp/sea/ocean-tree"
+    ],
+    "entitySpawners": [
+        "swamp/passive",
+        "swamp/hostile",
+        "swamp/cave",
+        "swamp/water"
+    ],
+    "deposits": [
         {
-          "find": [
-            {
-              "block": "minecraft:glass"
-            }
-          ],
-          "replace": {
+            "minHeight": 35,
+            "maxPerChunk": 6,
+            "maxHeight": 109,
+            "minPerChunk": 1,
+            "minSize": 3,
+            "maxSize": 8,
             "palette": [
-              {
-                "block": "minecraft:void_air"
-              }
+                {
+                    "block": "minecraft:coal_ore"
+                }
+            ],
+            "varience": 4
+        },
+        {
+            "minHeight": 35,
+            "maxPerChunk": 10,
+            "maxHeight": 109,
+            "minPerChunk": 4,
+            "minSize": 3,
+            "maxSize": 8,
+            "palette": [
+                {
+                    "block": "minecraft:iron_ore"
+                }
+            ],
+            "varience": 4
+        }
+    ],
+    "landBiomeZoom": 2,
+    "shoreHeightMin": 1.2,
+    "shoreHeightMax": 3,
+    "shoreHeightZoom": 3.14,
+    "blockDrops": [
+        {
+            "drops": [
+                {
+                    "type": "slime_ball",
+                    "rarity": 24
+                }
+            ],
+            "blocks": [
+                {
+                    "block": "minecraft:grass_block"
+                },
+                {
+                    "block": "minecraft:dark_oak_leaves"
+                },
+                {
+                    "block": "minecraft:short_grass"
+                },
+                {
+                    "block": "minecraft:tall_grass"
+                }
             ]
-          }
         }
-      ],
-      "enabled": true,
-      "xAxis": {
-        "interval": 90,
-        "max": 360,
-        "min": 0
-      },
-      "yAxis": {
-        "interval": 90,
-        "max": 360,
-        "min": 0
-      },
-      "translate": {
-        "yRandom": 10,
-        "y": 2
-      }
-    }
-  ],
-  "caveBiomes": [
-    "carving/swamp",
-    "carving/lush",
-    "carving/drip-lite",
-    "carving/drip",
-    "carving/moss-pillars"
-  ],
-  "shoreBiomes": [
-    "swamp/shore/beach"
-  ],
-  "seaBiomes": [
-    "swamp/sea/ocean",
-    "swamp/swamp-mangrove-lake",
-    "swamp/sea/ocean-tree"
-  ],
-  "entitySpawners": [
-    "swamp/passive",
-    "swamp/hostile",
-    "swamp/cave",
-    "swamp/water"
-  ],
-  "deposits": [
-    {
-      "minHeight": 35,
-      "maxPerChunk": 6,
-      "maxHeight": 109,
-      "minPerChunk": 1,
-      "minSize": 3,
-      "maxSize": 8,
-      "palette": [
-        {
-          "block": "minecraft:coal_ore"
-        }
-      ],
-      "varience": 4
+    ],
+    "loot": {
+        "mode": "FALLBACK",
+        "tables": [
+            "swamp/clutter",
+            "swamp/food"
+        ]
     },
-    {
-      "minHeight": 35,
-      "maxPerChunk": 10,
-      "maxHeight": 109,
-      "minPerChunk": 4,
-      "minSize": 3,
-      "maxSize": 8,
-      "palette": [
-        {
-          "block": "minecraft:iron_ore"
-        }
-      ],
-      "varience": 4
-    }
-  ],
-  "landBiomeZoom": 2,
-  "shoreHeightMin": 1.2,
-  "shoreHeightMax": 3,
-  "shoreHeightZoom": 3.14,
-  "blockDrops": [
-    {
-      "drops": [
-        {
-          "type": "slime_ball",
-          "rarity": 24
-        }
-      ],
-      "blocks": [
-        {
-          "block": "minecraft:grass_block"
+    "caveProfile": {
+        "enabled": true,
+        "verticalRange": {
+            "min": 6,
+            "max": 80
         },
-        {
-          "block": "minecraft:dark_oak_leaves"
+        "baseDensityStyle": {
+            "style": "FRACTAL_SMOKE",
+            "zoom": 0.45
         },
-        {
-          "block": "minecraft:short_grass"
+        "detailDensityStyle": {
+            "style": "SIMPLEX",
+            "zoom": 0.5
         },
-        {
-          "block": "minecraft:tall_grass"
-        }
-      ]
-    }
-  ],
-  "loot": {
-    "mode": "FALLBACK",
-    "tables": [
-      "swamp/clutter",
-      "swamp/food"
-    ]
-  },
-  "caveProfile": {
-    "enabled": true,
-    "verticalRange": {
-      "min": 6,
-      "max": 80
+        "warpStyle": {
+            "style": "SIMPLEX",
+            "zoom": 0.5
+        },
+        "baseWeight": 1.0,
+        "detailWeight": 0.0,
+        "warpStrength": 0.0,
+        "densityThreshold": {
+            "min": -0.14,
+            "max": -0.06,
+            "style": {
+                "style": "SIMPLEX",
+                "zoom": 0.5
+            }
+        },
+        "thresholdBias": 0.06,
+        "sampleStep": 3,
+        "surfaceClearance": 12,
+        "allowSurfaceBreak": false,
+        "surfaceBreakStyle": {
+            "style": "SIMPLEX",
+            "zoom": 0.88
+        },
+        "surfaceBreakNoiseThreshold": 0.99,
+        "surfaceBreakDepth": 4,
+        "surfaceBreakThresholdBoost": 0.02,
+        "objectMinDepthBelowSurface": 14,
+        "surfaceObjectExclusionDepth": 10,
+        "defaultObjectAnchor": "FLOOR",
+        "defaultObjectPlaceMode": "ORGANIC_STILT",
+        "anchorScanStep": 1,
+        "anchorSearchAttempts": 12,
+        "allowWater": true,
+        "waterMinDepthBelowSurface": 20,
+        "waterRequiresFloor": true,
+        "allowLava": true,
+        "modules": []
     },
-    "baseDensityStyle": {
-      "style": "FRACTAL_SMOKE",
-      "zoom": 0.45
-    },
-    "detailDensityStyle": {
-      "style": "SIMPLEX",
-      "zoom": 0.5
-    },
-    "warpStyle": {
-      "style": "SIMPLEX",
-      "zoom": 0.5
-    },
-    "baseWeight": 1.0,
-    "detailWeight": 0.0,
-    "warpStrength": 0.0,
-    "densityThreshold": {
-      "min": -0.14,
-      "max": -0.06,
-      "style": {
-        "style": "SIMPLEX",
-        "zoom": 0.5
-      }
-    },
-    "thresholdBias": 0.06,
-    "sampleStep": 3,
-    "surfaceClearance": 12,
-    "allowSurfaceBreak": false,
-    "surfaceBreakStyle": {
-      "style": "SIMPLEX",
-      "zoom": 0.88
-    },
-    "surfaceBreakNoiseThreshold": 0.99,
-    "surfaceBreakDepth": 4,
-    "surfaceBreakThresholdBoost": 0.02,
-    "objectMinDepthBelowSurface": 14,
-    "surfaceObjectExclusionDepth": 10,
-    "defaultObjectAnchor": "FLOOR",
-    "defaultObjectPlaceMode": "FAST_MIN_STILT",
-    "anchorScanStep": 1,
-    "anchorSearchAttempts": 12,
-    "allowWater": true,
-    "waterMinDepthBelowSurface": 20,
-    "waterRequiresFloor": true,
-    "allowLava": true,
-    "modules": []
-  },
-  "caveBiomeZoom": 3.2
+    "caveBiomeZoom": 3.2
 }

@@ -1,365 +1,193 @@
 {
-  "name": "Ocean Warm Bottom",
-  "color": "#4639C0",
-  "derivative": "minecraft:warm_ocean",
-  "vanillaDerivative": "minecraft:warm_ocean",
-  "generators": [
-    {
-      "generator": "plain",
-      "max": -30,
-      "min": -50
-    }
-  ],
-  "layers": [
-    {
-      "minHeight": 2,
-      "maxHeight": 10,
-      "palette": [
+    "name": "Ocean Warm Bottom",
+    "color": "#4639C0",
+    "derivative": "minecraft:warm_ocean",
+    "vanillaDerivative": "minecraft:warm_ocean",
+    "generators": [
         {
-          "block": "minecraft:sand"
+            "generator": "plain",
+            "max": -30,
+            "min": -50
         }
-      ]
-    }
-  ],
-  "objects": [
-    {
-      "place": [
-        "clutter/coralpink1",
-        "clutter/coralpink2",
-        "clutter/coralpink3",
-        "clutter/coralpink4",
-        "clutter/coralpurp1",
-        "clutter/coralpurp2",
-        "clutter/coralpurp3",
-        "clutter/coralred1",
-        "clutter/coralby1",
-        "clutter/coralby2",
-        "clutter/coralby3",
-        "clutter/coralby4"
-      ],
-      "chance": 0.3,
-      "density": 3,
-      "underwater": true,
-      "mode": "CENTER_HEIGHT",
-      "rotation": {
-        "enabled": true,
-        "yAxis": {
-          "enabled": true,
-          "interval": 90,
-          "max": 360,
-          "min": -360
-        }
-      }
-    },
-    {
-      "place": [
-        "clutter/stonedirtsetter1",
-        "clutter/stonedirtsetter2",
-        "clutter/stonedirtsetter3",
-        "clutter/stonedirtsetter4",
-        "clutter/stonedirtsetter5",
-        "clutter/stonedirtsetter6",
-        "clutter/stonedirtsetter7"
-      ],
-      "chance": 0.24,
-      "density": 4,
-      "underwater": true,
-      "mode": "CENTER_HEIGHT",
-      "rotation": {
-        "enabled": true,
-        "yAxis": {
-          "enabled": true,
-          "interval": 90,
-          "max": 360,
-          "min": -360
-        }
-      },
-      "edit": [
+    ],
+    "layers": [
         {
-          "find": [
-            {
-              "block": "minecraft:stone"
-            },
-            {
-              "block": "minecraft:dirt"
-            }
-          ],
-          "replace": {
+            "minHeight": 2,
+            "maxHeight": 10,
             "palette": [
-              {
-                "block": "minecraft:brain_coral_block"
-              },
-              {
-                "block": "minecraft:horn_coral_block"
-              },
-              {
-                "block": "minecraft:tube_coral_block"
-              },
-              {
-                "block": "minecraft:fire_coral_block"
-              },
-              {
-                "block": "minecraft:bubble_coral_block"
-              }
+                {
+                    "block": "minecraft:sand"
+                }
+            ]
+        }
+    ],
+    "objects": [
+        {
+            "place": [
+                "clutter/coralpink1",
+                "clutter/coralpink2",
+                "clutter/coralpink3",
+                "clutter/coralpink4",
+                "clutter/coralpurp1",
+                "clutter/coralpurp2",
+                "clutter/coralpurp3",
+                "clutter/coralred1",
+                "clutter/coralby1",
+                "clutter/coralby2",
+                "clutter/coralby3",
+                "clutter/coralby4"
             ],
+            "chance": 0.3,
+            "density": 3,
+            "underwater": true,
+            "mode": "CENTER_HEIGHT",
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "max": 360,
+                    "min": -360
+                }
+            }
+        },
+        {
+            "place": [
+                "clutter/stonedirtsetter1",
+                "clutter/stonedirtsetter2",
+                "clutter/stonedirtsetter3",
+                "clutter/stonedirtsetter4",
+                "clutter/stonedirtsetter5",
+                "clutter/stonedirtsetter6",
+                "clutter/stonedirtsetter7"
+            ],
+            "chance": 0.24,
+            "density": 4,
+            "underwater": true,
+            "mode": "CENTER_HEIGHT",
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "max": 360,
+                    "min": -360
+                }
+            },
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:stone"
+                        },
+                        {
+                            "block": "minecraft:dirt"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:brain_coral_block"
+                            },
+                            {
+                                "block": "minecraft:horn_coral_block"
+                            },
+                            {
+                                "block": "minecraft:tube_coral_block"
+                            },
+                            {
+                                "block": "minecraft:fire_coral_block"
+                            },
+                            {
+                                "block": "minecraft:bubble_coral_block"
+                            }
+                        ],
+                        "style": {
+                            "style": "CELLULAR"
+                        },
+                        "zoom": 0.07
+                    }
+                }
+            ]
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.05,
             "style": {
-              "style": "CELLULAR"
+                "style": "STATIC"
             },
-            "zoom": 0.07
-          }
-        }
-      ]
-    },
-    {
-      "place": [],
-      "chance": 0.334,
-      "density": 3,
-      "mode": "PAINT",
-      "underwater": true,
-      "waterloggable": true,
-      "edit": [
-        {
-          "find": [
-            {
-              "block": "minecraft:grass_block"
+            "variance": {
+                "style": "STATIC"
             },
-            {
-              "block": "minecraft:dirt"
-            }
-          ],
-          "replace": {
             "palette": [
-              {
-                "block": "minecraft:clay"
-              }
+                {
+                    "block": "minecraft:sea_pickle",
+                    "data": {
+                        "pickles": 1
+                    }
+                },
+                {
+                    "weight": 2,
+                    "block": "minecraft:sea_pickle",
+                    "data": {
+                        "pickles": 2
+                    }
+                },
+                {
+                    "weight": 3,
+                    "block": "minecraft:sea_pickle",
+                    "data": {
+                        "pickles": 3
+                    }
+                },
+                {
+                    "weight": 4,
+                    "block": "minecraft:sea_pickle",
+                    "data": {
+                        "pickles": 4
+                    }
+                }
             ]
-          }
         },
         {
-          "find": [
-            {
-              "block": "minecraft:tall_grass"
-            },
-            {
-              "block": "minecraft:short_grass"
-            }
-          ],
-          "replace": {
+            "chance": 0.02,
             "palette": [
-              {
-                "block": "minecraft:seagrass"
-              }
+                {
+                    "block": "minecraft:kelp_plant"
+                }
+            ],
+            "stackMin": 2,
+            "stackMax": 6,
+            "partOf": "SEA_FLOOR"
+        },
+        {
+            "chance": 0.2,
+            "palette": [
+                {
+                    "block": "minecraft:seagrass"
+                }
             ]
-          }
-        }
-      ]
-    },
-    {
-      "place": [],
-      "markers": [
-        {
-          "mark": [
-            {
-              "block": "minecraft:spruce_planks"
-            }
-          ],
-          "maximumMarkers": 4,
-          "marker": "skelepirate"
-        }
-      ],
-      "chance": 0.005,
-      "onwater": true,
-      "translate": {
-        "y": -1
-      },
-      "waterloggable": true
-    },
-    {
-      "chance": 0.0035,
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "underwater": true,
-      "place": [],
-      "mode": "PAINT",
-      "vanillaLoot": [
-        {
-          "name": "minecraft:chests/underwater_ruin_small"
-        }
-      ]
-    },
-    {
-      "vanillaLoot": [
-        {
-          "name": "minecraft:chests/underwater_ruin_small"
-        }
-      ],
-      "overStilt": 0,
-      "chance": 0.0006,
-      "meld": false,
-      "density": 1,
-      "bottom": false,
-      "translateCenter": false,
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "xAxis": {
-          "min": 0,
-          "max": 0,
-          "interval": 0,
-          "enabled": false
-        },
-        "zAxis": {
-          "min": 0,
-          "max": 0,
-          "interval": 0,
-          "enabled": false
-        },
-        "enabled": true
-      },
-      "boreExtendMinY": 0,
-      "smartBore": false,
-      "waterloggable": true,
-      "bore": false,
-      "translate": {
-        "yRandom": 0,
-        "x": 0,
-        "y": -1,
-        "z": 0
-      },
-      "mode": "STILT",
-      "snow": 0,
-      "underwater": true,
-      "boreExtendMaxY": 0,
-      "onwater": false,
-      "warp": {
-        "multiplier": 1,
-        "style": "FLAT",
-        "zoom": 1,
-        "exponent": 1
-      },
-      "place": [],
-      "markers": [
-        {
-          "marker": "guardian",
-          "exact": false,
-          "maximumMarkers": 4,
-          "mark": [
-            {
-              "block": "minecraft:dark_prismarine_slab"
-            }
-          ]
         },
         {
-          "marker": "guardian",
-          "exact": false,
-          "maximumMarkers": 9,
-          "mark": [
-            {
-              "block": "minecraft:prismarine"
-            }
-          ]
-        },
-        {
-          "marker": "elderguardian",
-          "exact": false,
-          "maximumMarkers": 3,
-          "mark": [
-            {
-              "block": "minecraft:sea_pickle"
-            }
-          ]
+            "chance": 0.2,
+            "palette": [
+                {
+                    "block": "minecraft:tall_seagrass",
+                    "data": {
+                        "half": "lower"
+                    }
+                }
+            ],
+            "topPalette": [
+                {
+                    "block": "minecraft:tall_seagrass",
+                    "data": {
+                        "half": "upper"
+                    }
+                }
+            ],
+            "partOf": "SEA_FLOOR"
         }
-      ]
-    }
-  ],
-  "decorators": [
-    {
-      "chance": 0.05,
-      "style": {
-        "style": "STATIC"
-      },
-      "variance": {
-        "style": "STATIC"
-      },
-      "palette": [
-        {
-          "block": "minecraft:sea_pickle",
-          "data": {
-            "pickles": 1
-          }
-        },
-        {
-          "weight": 2,
-          "block": "minecraft:sea_pickle",
-          "data": {
-            "pickles": 2
-          }
-        },
-        {
-          "weight": 3,
-          "block": "minecraft:sea_pickle",
-          "data": {
-            "pickles": 3
-          }
-        },
-        {
-          "weight": 4,
-          "block": "minecraft:sea_pickle",
-          "data": {
-            "pickles": 4
-          }
-        }
-      ]
-    },
-    {
-      "chance": 0.02,
-      "palette": [
-        {
-          "block": "minecraft:kelp_plant"
-        }
-      ],
-      "stackMin": 2,
-      "stackMax": 6,
-      "partOf": "SEA_FLOOR"
-    },
-    {
-      "chance": 0.2,
-      "palette": [
-        {
-          "block": "minecraft:seagrass"
-        }
-      ]
-    },
-    {
-      "chance": 0.2,
-      "palette": [
-        {
-          "block": "minecraft:tall_seagrass",
-          "data": {
-            "half": "lower"
-          }
-        }
-      ],
-      "topPalette": [
-        {
-          "block": "minecraft:tall_seagrass",
-          "data": {
-            "half": "upper"
-          }
-        }
-      ],
-      "partOf": "SEA_FLOOR"
-    }
-  ]
+    ]
 }

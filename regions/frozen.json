@@ -1,187 +1,140 @@
 {
-  "name": "Frozen",
-  "color": "#44C3D1",
-  "rarity": 1,
-  "landBiomes": [
-    "frozen/plains",
-    "frozen/hills",
-    "frozen/tundra-winter",
-    "frozen/pines",
-    "frozen/vander",
-    "frozen/fields/hilly-plains",
-    "frozen/fields/mountain-spruce-winter",
-    "frozen/fields/mountain-spruce-winter-extended",
-    "frozen/fields/cold-spines",
-    "frozen/fields/cold-plains",
-    "frozen/ice-spikes",
-    "frozen/mountains/large-mountain",
-    "frozen/mountains/extreem-ice-spikes",
-    "frozen/mountains/mountian-alpha",
-    "frozen/pine-plains",
-    "frozen/spruce-plains"
-  ],
-  "caveBiomes": [
-    "carving/ice-lite",
-    "carving/ice",
-    "carving/ice-ravine",
-    "carving/frost-shards",
-    "carving/glacial"
-  ],
-  "objects": [
-    {
-      "heightmap": {
-        "seed": 1337,
-        "style": {
-          "style": "SIMPLEX",
-          "multiplier": 10
-        },
-        "offsetY": 5
-      },
-      "chance": 0.05,
-      "bottom": true,
-      "density": 1,
-      "place": [],
-      "edit": [
+    "name": "Frozen",
+    "color": "#44C3D1",
+    "rarity": 1,
+    "landBiomes": [
+        "frozen/plains",
+        "frozen/hills",
+        "frozen/tundra-winter",
+        "frozen/pines",
+        "frozen/vander",
+        "frozen/fields/hilly-plains",
+        "frozen/fields/mountain-spruce-winter",
+        "frozen/fields/mountain-spruce-winter-extended",
+        "frozen/fields/cold-spines",
+        "frozen/fields/cold-plains",
+        "frozen/ice-spikes",
+        "frozen/mountains/large-mountain",
+        "frozen/mountains/extreem-ice-spikes",
+        "frozen/mountains/mountian-alpha",
+        "frozen/pine-plains",
+        "frozen/spruce-plains"
+    ],
+    "caveBiomes": [
+        "carving/ice-lite",
+        "carving/ice",
+        "carving/ice-ravine",
+        "carving/frost-shards",
+        "carving/glacial"
+    ],
+    "shoreBiomes": [
+        "frozen/shore/beach"
+    ],
+    "seaBiomeZoom": 1,
+    "seaBiomes": [
+        "frozen/sea/ocean",
+        "frozen/sea/frozen-river-ice",
+        "frozen/sea/river"
+    ],
+    "deposits": [
         {
-          "find": [
-            {
-              "block": "minecraft:glass"
-            }
-          ],
-          "replace": {
+            "minHeight": 8,
+            "maxPerChunk": 5,
+            "maxHeight": 45,
+            "minPerChunk": 1,
+            "minSize": 2,
+            "maxSize": 4,
             "palette": [
-              {
-                "block": "minecraft:void_air"
-              }
-            ]
-          }
-        }
-      ],
-      "enabled": true,
-      "xAxis": {
-        "interval": 90,
-        "max": 360,
-        "min": 0
-      },
-      "yAxis": {
-        "interval": 90,
-        "max": 270,
-        "min": 0
-      },
-      "translate": {
-        "yRandom": 10,
-        "y": 2
-      }
-    }
-  ],
-  "shoreBiomes": [
-    "frozen/shore/beach"
-  ],
-  "seaBiomeZoom": 1,
-  "seaBiomes": [
-    "frozen/sea/ocean",
-    "frozen/sea/frozen-river-ice",
-    "frozen/sea/river"
-  ],
-  "deposits": [
-    {
-      "minHeight": 8,
-      "maxPerChunk": 5,
-      "maxHeight": 45,
-      "minPerChunk": 1,
-      "minSize": 2,
-      "maxSize": 4,
-      "palette": [
+                {
+                    "block": "minecraft:diamond_ore"
+                }
+            ],
+            "varience": 4
+        },
         {
-          "block": "minecraft:diamond_ore"
+            "minHeight": 1,
+            "maxPerChunk": 5,
+            "maxHeight": 84,
+            "minPerChunk": 1,
+            "minSize": 3,
+            "maxSize": 8,
+            "palette": [
+                {
+                    "block": "minecraft:copper_ore"
+                }
+            ],
+            "varience": 8
         }
-      ],
-      "varience": 4
+    ],
+    "landBiomeZoom": 3,
+    "shoreHeightMin": 2.2,
+    "shoreHeightMax": 4.2,
+    "entitySpawners": [
+        "frozen/passive",
+        "frozen/hostile",
+        "frozen/cave",
+        "frozen/water"
+    ],
+    "shoreHeightZoom": 1.14,
+    "loot": {
+        "mode": "FALLBACK",
+        "tables": [
+            "frozen/clutter",
+            "frozen/food",
+            "snow/clutter"
+        ]
     },
-    {
-      "minHeight": 1,
-      "maxPerChunk": 5,
-      "maxHeight": 84,
-      "minPerChunk": 1,
-      "minSize": 3,
-      "maxSize": 8,
-      "palette": [
-        {
-          "block": "minecraft:copper_ore"
-        }
-      ],
-      "varience": 8
-    }
-  ],
-  "landBiomeZoom": 3,
-  "shoreHeightMin": 2.2,
-  "shoreHeightMax": 4.2,
-  "entitySpawners": [
-    "frozen/passive",
-    "frozen/hostile",
-    "frozen/cave",
-    "frozen/water"
-  ],
-  "shoreHeightZoom": 1.14,
-  "loot": {
-    "mode": "FALLBACK",
-    "tables": [
-      "frozen/clutter",
-      "frozen/food",
-      "snow/clutter"
-    ]
-  },
-  "caveProfile": {
-    "enabled": true,
-    "verticalRange": {
-      "min": 6,
-      "max": 100
+    "caveProfile": {
+        "enabled": true,
+        "verticalRange": {
+            "min": 6,
+            "max": 100
+        },
+        "baseDensityStyle": {
+            "style": "CELLULAR",
+            "zoom": 0.65
+        },
+        "detailDensityStyle": {
+            "style": "SIMPLEX",
+            "zoom": 0.5
+        },
+        "warpStyle": {
+            "style": "SIMPLEX",
+            "zoom": 0.5
+        },
+        "baseWeight": 1.0,
+        "detailWeight": 0.0,
+        "warpStrength": 0.0,
+        "densityThreshold": {
+            "min": -0.15,
+            "max": -0.08,
+            "style": {
+                "style": "SIMPLEX",
+                "zoom": 0.5
+            }
+        },
+        "thresholdBias": 0.05,
+        "sampleStep": 3,
+        "surfaceClearance": 12,
+        "allowSurfaceBreak": false,
+        "surfaceBreakStyle": {
+            "style": "SIMPLEX",
+            "zoom": 0.88
+        },
+        "surfaceBreakNoiseThreshold": 0.99,
+        "surfaceBreakDepth": 4,
+        "surfaceBreakThresholdBoost": 0.02,
+        "objectMinDepthBelowSurface": 14,
+        "surfaceObjectExclusionDepth": 10,
+        "defaultObjectAnchor": "FLOOR",
+        "defaultObjectPlaceMode": "ORGANIC_STILT",
+        "anchorScanStep": 1,
+        "anchorSearchAttempts": 12,
+        "allowWater": true,
+        "waterMinDepthBelowSurface": 20,
+        "waterRequiresFloor": true,
+        "allowLava": true,
+        "modules": []
     },
-    "baseDensityStyle": {
-      "style": "CELLULAR",
-      "zoom": 0.65
-    },
-    "detailDensityStyle": {
-      "style": "SIMPLEX",
-      "zoom": 0.5
-    },
-    "warpStyle": {
-      "style": "SIMPLEX",
-      "zoom": 0.5
-    },
-    "baseWeight": 1.0,
-    "detailWeight": 0.0,
-    "warpStrength": 0.0,
-    "densityThreshold": {
-      "min": -0.15,
-      "max": -0.08,
-      "style": {
-        "style": "SIMPLEX",
-        "zoom": 0.5
-      }
-    },
-    "thresholdBias": 0.05,
-    "sampleStep": 3,
-    "surfaceClearance": 12,
-    "allowSurfaceBreak": false,
-    "surfaceBreakStyle": {
-      "style": "SIMPLEX",
-      "zoom": 0.88
-    },
-    "surfaceBreakNoiseThreshold": 0.99,
-    "surfaceBreakDepth": 4,
-    "surfaceBreakThresholdBoost": 0.02,
-    "objectMinDepthBelowSurface": 14,
-    "surfaceObjectExclusionDepth": 10,
-    "defaultObjectAnchor": "FLOOR",
-    "defaultObjectPlaceMode": "FAST_MIN_STILT",
-    "anchorScanStep": 1,
-    "anchorSearchAttempts": 12,
-    "allowWater": true,
-    "waterMinDepthBelowSurface": 20,
-    "waterRequiresFloor": true,
-    "allowLava": true,
-    "modules": []
-  },
-  "caveBiomeZoom": 3.4
+    "caveBiomeZoom": 3.4
 }

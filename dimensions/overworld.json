@@ -1,6 +1,27 @@
 {
   "version": 4000,
   "name": "Overworld",
+  "vanillaStructures": {
+    "mode": "ALL_ON",
+    "disabled": []
+  },
+  "structures": [
+    {
+      "structures": [
+        "minecraft_ancient_city"
+      ],
+      "route": "IRIS_PLACED",
+      "underground": true,
+      "bore": true,
+      "borePadding": 2,
+      "minHeight": -215,
+      "maxHeight": -185,
+      "distribution": "RANDOM_SPREAD",
+      "spacing": 18,
+      "separation": 5,
+      "salt": 20240811
+    }
+  ],
   "fullbright": false,
   "upperDimension": "",
   "upperDimensionGap": 32,
@@ -558,11 +579,7 @@
   "decorate": true,
   "loot": {
     "mode": "FALLBACK",
-    "tables": [
-      "global-clutter",
-      "global-tools",
-      "global-treasure"
-    ]
+    "tables": ["global-clutter", "global-tools", "global-treasure"]
   },
   "caveProfile": {
     "enabled": true,
@@ -607,7 +624,7 @@
     "objectMinDepthBelowSurface": 14,
     "surfaceObjectExclusionDepth": 30,
     "defaultObjectAnchor": "FLOOR",
-    "defaultObjectPlaceMode": "FAST_MIN_STILT",
+    "defaultObjectPlaceMode": "ORGANIC_STILT",
     "anchorScanStep": 1,
     "anchorSearchAttempts": 12,
     "allowWater": true,
@@ -647,72 +664,6 @@
     "minCarveCells": 24,
     "recoveryThresholdBoost": 0.07
   },
-  "vanillaStructures": false,
-  "externalDatapacks": [
-    {
-      "id": "dnt-strong",
-      "url": "https://modrinth.com/datapack/dungeons-and-taverns-stronghold-overhaul/version/v2.4.0",
-      "enabled": true,
-      "required": true,
-      "replace": true
-    },
-    {
-      "id": "dnt-acity",
-      "url": "https://modrinth.com/datapack/dungeons-and-taverns-ancient-city-overhaul/version/3.2.3",
-      "enabled": true,
-      "required": true,
-      "replace": true
-    },
-    {
-      "id": "dnt-pillager",
-      "url": "https://modrinth.com/datapack/dungeons-and-taverns-pillager-outpost-overhaul/version/v3.3",
-      "enabled": true,
-      "required": false,
-      "replace": true
-    },
-    {
-      "id": "dnt-witchhut",
-      "url": "https://modrinth.com/datapack/dungeons-and-taverns-swamp-hut-overhaul/version/v2.3",
-      "enabled": true,
-      "required": false,
-      "replace": true
-    },
-    {
-      "id": "dnt-mansion",
-      "url": "https://modrinth.com/datapack/dungeons-and-taverns-woodland-mansion-overhaul/version/v2",
-      "enabled": true,
-      "required": false,
-      "replace": true
-    },
-    {
-      "id": "dnt-omonument",
-      "url": "https://modrinth.com/datapack/dungeons-and-taverns-ocean-monument-overhaul/version/v2.2",
-      "enabled": true,
-      "required": false,
-      "replace": true
-    },
-    {
-      "id": "dnt-jtemple",
-      "url": "https://modrinth.com/datapack/dungeons-and-taverns-jungle-temple-overhaul/version/v2.1",
-      "enabled": true,
-      "required": false,
-      "replace": true
-    },
-    {
-      "id": "dnt-dtemple",
-      "url": "https://modrinth.com/datapack/dungeons-and-taverns-desert-temple-overhaul/version/v2.1",
-      "enabled": true,
-      "required": false,
-      "replace": true
-    },
-    {
-      "id": "hopo-mineshaft",
-      "url": "https://modrinth.com/datapack/hopo-better-mineshaft/version/Ip56knaM",
-      "enabled": true,
-      "required": false,
-      "replace": true
-    }
-  ],
   "carving": [
     {
       "id": "global-deepdark-band",

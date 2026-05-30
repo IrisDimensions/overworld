@@ -1,179 +1,132 @@
 {
-  "name": "Tundra",
-  "color": "#9CB0B9",
-  "rarity": 2,
-  "landBiomes": [
-    "tundra/taiga",
-    "tundra/redwood-forest",
-    "tundra/sequia-redwoods",
-    "tundra/forest",
-    "tundra/mountains",
-    "tundra/mountains",
-    "tundra/mountains-extended-cliffs",
-    "mountain/hills",
-    "mountain/forest-extended",
-    "tundra/frosted-peaks",
-    "mountain/forest",
-    "mountain/plains",
-    "mountain/cliffs",
-    "tundra/autumn",
-    "mountain/mountain",
-    "tundra/ether",
-    "tundra/magic-forest",
-    "tundra/bonsai-forest",
-    "tundra/ether-extended",
-    "tundra/spruce-denmyre",
-    "mountain/calcite-base"
-  ],
-  "seaBiomes": [
-    "tundra/sea/lake",
-    "tundra/sea/river",
-    "mountain/sea/river"
-  ],
-  "caveBiomes": [
-    "carving/calcite",
-    "carving/ice",
-    "carving/ice-lite",
-    "carving/frost-shards",
-    "carving/glacial"
-  ],
-  "objects": [
-    {
-      "heightmap": {
-        "seed": 1337,
-        "style": {
-          "style": "SIMPLEX",
-          "multiplier": 10
-        },
-        "offsetY": 5
-      },
-      "chance": 0.05,
-      "bottom": true,
-      "density": 1,
-      "place": [],
-      "edit": [
+    "name": "Tundra",
+    "color": "#9CB0B9",
+    "rarity": 2,
+    "landBiomes": [
+        "tundra/taiga",
+        "tundra/redwood-forest",
+        "tundra/sequia-redwoods",
+        "tundra/forest",
+        "tundra/mountains",
+        "tundra/mountains",
+        "tundra/mountains-extended-cliffs",
+        "mountain/hills",
+        "mountain/forest-extended",
+        "tundra/frosted-peaks",
+        "mountain/forest",
+        "mountain/plains",
+        "mountain/cliffs",
+        "tundra/autumn",
+        "mountain/mountain",
+        "tundra/ether",
+        "tundra/magic-forest",
+        "tundra/bonsai-forest",
+        "tundra/ether-extended",
+        "tundra/spruce-denmyre",
+        "mountain/calcite-base"
+    ],
+    "seaBiomes": [
+        "tundra/sea/lake",
+        "tundra/sea/river",
+        "mountain/sea/river"
+    ],
+    "caveBiomes": [
+        "carving/calcite",
+        "carving/ice",
+        "carving/ice-lite",
+        "carving/frost-shards",
+        "carving/glacial"
+    ],
+    "shoreBiomes": [
+        "tundra/shore/beach",
+        "tundra/shore/beach-stone"
+    ],
+    "seaBiomeZoom": 4,
+    "entitySpawners": [
+        "tundra/passive",
+        "tundra/hostile",
+        "tundra/cave",
+        "tundra/water"
+    ],
+    "deposits": [
         {
-          "find": [
-            {
-              "block": "minecraft:glass"
-            }
-          ],
-          "replace": {
+            "minHeight": 20,
+            "maxPerChunk": 8,
+            "maxHeight": 102,
+            "minPerChunk": 2,
+            "minSize": 3,
+            "maxSize": 8,
             "palette": [
-              {
-                "block": "minecraft:void_air"
-              }
-            ]
-          }
+                {
+                    "block": "minecraft:emerald_ore"
+                }
+            ],
+            "varience": 8
         }
-      ],
-      "enabled": true,
-      "xAxis": {
-        "interval": 90,
-        "max": 360,
-        "min": 0
-      },
-      "yAxis": {
-        "interval": 90,
-        "max": 360,
-        "min": 0
-      },
-      "translate": {
-        "yRandom": 10,
-        "y": 2
-      }
-    }
-  ],
-  "shoreBiomes": [
-    "tundra/shore/beach",
-    "tundra/shore/beach-stone"
-  ],
-  "seaBiomeZoom": 4,
-  "entitySpawners": [
-    "tundra/passive",
-    "tundra/hostile",
-    "tundra/cave",
-    "tundra/water"
-  ],
-  "deposits": [
-    {
-      "minHeight": 20,
-      "maxPerChunk": 8,
-      "maxHeight": 102,
-      "minPerChunk": 2,
-      "minSize": 3,
-      "maxSize": 8,
-      "palette": [
-        {
-          "block": "minecraft:emerald_ore"
-        }
-      ],
-      "varience": 8
-    }
-  ],
-  "landBiomeZoom": 4.5,
-  "shoreHeightMin": 2.2,
-  "shoreHeightMax": 5.2,
-  "shoreHeightZoom": 1.14,
-  "loot": {
-    "mode": "FALLBACK",
-    "tables": [
-      "cold/food",
-      "cold/treasure",
-      "snow/clutter"
-    ]
-  },
-  "caveProfile": {
-    "enabled": true,
-    "verticalRange": {
-      "min": 6,
-      "max": 95
+    ],
+    "landBiomeZoom": 4.5,
+    "shoreHeightMin": 2.2,
+    "shoreHeightMax": 5.2,
+    "shoreHeightZoom": 1.14,
+    "loot": {
+        "mode": "FALLBACK",
+        "tables": [
+            "cold/food",
+            "cold/treasure",
+            "snow/clutter"
+        ]
     },
-    "baseDensityStyle": {
-      "style": "IRIS",
-      "zoom": 0.75
+    "caveProfile": {
+        "enabled": true,
+        "verticalRange": {
+            "min": 6,
+            "max": 95
+        },
+        "baseDensityStyle": {
+            "style": "IRIS",
+            "zoom": 0.75
+        },
+        "detailDensityStyle": {
+            "style": "SIMPLEX",
+            "zoom": 0.5
+        },
+        "warpStyle": {
+            "style": "SIMPLEX",
+            "zoom": 0.5
+        },
+        "baseWeight": 1.0,
+        "detailWeight": 0.0,
+        "warpStrength": 0.0,
+        "densityThreshold": {
+            "min": -0.1,
+            "max": -0.04,
+            "style": {
+                "style": "SIMPLEX",
+                "zoom": 0.5
+            }
+        },
+        "thresholdBias": 0.14,
+        "sampleStep": 3,
+        "surfaceClearance": 12,
+        "allowSurfaceBreak": false,
+        "surfaceBreakStyle": {
+            "style": "SIMPLEX",
+            "zoom": 0.88
+        },
+        "surfaceBreakNoiseThreshold": 0.99,
+        "surfaceBreakDepth": 4,
+        "surfaceBreakThresholdBoost": 0.02,
+        "objectMinDepthBelowSurface": 14,
+        "surfaceObjectExclusionDepth": 10,
+        "defaultObjectAnchor": "FLOOR",
+        "defaultObjectPlaceMode": "ORGANIC_STILT",
+        "anchorScanStep": 1,
+        "anchorSearchAttempts": 12,
+        "allowWater": true,
+        "waterMinDepthBelowSurface": 20,
+        "waterRequiresFloor": true,
+        "allowLava": true,
+        "modules": []
     },
-    "detailDensityStyle": {
-      "style": "SIMPLEX",
-      "zoom": 0.5
-    },
-    "warpStyle": {
-      "style": "SIMPLEX",
-      "zoom": 0.5
-    },
-    "baseWeight": 1.0,
-    "detailWeight": 0.0,
-    "warpStrength": 0.0,
-    "densityThreshold": {
-      "min": -0.1,
-      "max": -0.04,
-      "style": {
-        "style": "SIMPLEX",
-        "zoom": 0.5
-      }
-    },
-    "thresholdBias": 0.14,
-    "sampleStep": 3,
-    "surfaceClearance": 12,
-    "allowSurfaceBreak": false,
-    "surfaceBreakStyle": {
-      "style": "SIMPLEX",
-      "zoom": 0.88
-    },
-    "surfaceBreakNoiseThreshold": 0.99,
-    "surfaceBreakDepth": 4,
-    "surfaceBreakThresholdBoost": 0.02,
-    "objectMinDepthBelowSurface": 14,
-    "surfaceObjectExclusionDepth": 10,
-    "defaultObjectAnchor": "FLOOR",
-    "defaultObjectPlaceMode": "FAST_MIN_STILT",
-    "anchorScanStep": 1,
-    "anchorSearchAttempts": 12,
-    "allowWater": true,
-    "waterMinDepthBelowSurface": 20,
-    "waterRequiresFloor": true,
-    "allowLava": true,
-    "modules": []
-  },
-  "caveBiomeZoom": 3.4
+    "caveBiomeZoom": 3.4
 }

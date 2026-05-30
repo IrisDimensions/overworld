@@ -1,0 +1,42 @@
+{
+  "object": "minecraft_trial_chambers/piece/minecraft_trial_chambers_corridor_addon_walled_walkway",
+  "connectors": [
+    {
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "direction": "DOWN_NEGATIVE_Y",
+      "pool": "minecraft_trial_chambers/pool/minecraft_empty",
+      "name": "minecraft:addon",
+      "targetName": "minecraft:empty",
+      "joint": "ROLLABLE"
+    },
+    {
+      "position": {
+        "x": 0,
+        "y": 4,
+        "z": 1
+      },
+      "direction": "UP_POSITIVE_Y",
+      "pool": "minecraft_trial_chambers/pool/minecraft_trial_chambers_corridors_addon_middle_upper",
+      "name": "minecraft:empty",
+      "targetName": "minecraft:addon_upper",
+      "joint": "ALIGNED"
+    },
+    {
+      "position": {
+        "x": 2,
+        "y": 2,
+        "z": 2
+      },
+      "direction": "WEST_NEGATIVE_X",
+      "pool": "minecraft_trial_chambers/pool/minecraft_trial_chambers_spawner_all",
+      "name": "minecraft:empty",
+      "targetName": "minecraft:spawner_connector",
+      "joint": "ALIGNED"
+    }
+  ],
+  "rotatable": true
+}
