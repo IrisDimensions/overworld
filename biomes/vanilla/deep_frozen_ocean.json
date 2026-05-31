@@ -1,0 +1,178 @@
+{
+    "name": "Deep Frozen Ocean",
+    "color": "#1C3A6E",
+    "derivative": "minecraft:deep_frozen_ocean",
+    "vanillaDerivative": "minecraft:deep_frozen_ocean",
+    "generators": [
+        {
+            "min": -32,
+            "max": -10,
+            "generator": "mountain"
+        }
+    ],
+    "layers": [
+        {
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                },
+                {
+                    "block": "minecraft:gravel"
+                },
+                {
+                    "block": "minecraft:stone"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 3,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "weight": 5,
+                    "block": "minecraft:sand"
+                },
+                {
+                    "block": "minecraft:clay"
+                },
+                {
+                    "block": "minecraft:gravel"
+                },
+                {
+                    "block": "minecraft:dirt"
+                }
+            ]
+        }
+    ],
+    "objects": [
+        {
+            "chance": 0.003,
+            "mode": "PAINT",
+            "density": 3,
+            "snow": 0.35,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 270,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "onwater": true,
+            "place": [
+                "clutter/twoicespike1",
+                "clutter/twoicespike2",
+                "clutter/twoicespike3",
+                "clutter/twoicespike4"
+            ]
+        },
+        {
+            "chance": 0.2,
+            "mode": "PAINT",
+            "density": 3,
+            "snow": 0.35,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 270,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "onwater": true,
+            "place": [
+                "clutter/smoleicespike1",
+                "clutter/smoleicespike2",
+                "clutter/smoleicespike3",
+                "clutter/smoleicespike4",
+                "clutter/smoleicespike5",
+                "clutter/smoleicespike6",
+                "clutter/smoleicespike7",
+                "clutter/smoleicespike8",
+                "clutter/smoleicespike9"
+            ]
+        },
+        {
+            "chance": 0.2,
+            "mode": "PAINT",
+            "density": 3,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 270,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "onwater": true,
+            "place": [
+                "clutter/singleicespike1",
+                "clutter/singleicespike2",
+                "clutter/singleicespike3",
+                "clutter/singleicespike4",
+                "clutter/singleicespike5",
+                "clutter/icespec1",
+                "clutter/icespec2",
+                "clutter/icespec3",
+                "clutter/icespec4",
+                "clutter/icespec5"
+            ]
+        }
+    ],
+    "seaLayers": [
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "style": {
+                "style": "CELLULAR_HEIGHT_IRIS"
+            },
+            "zoom": 0.5,
+            "palette": [
+                {
+                    "weight": 1,
+                    "block": "minecraft:ice"
+                },
+                {
+                    "weight": 2,
+                    "block": "minecraft:packed_ice"
+                },
+                {
+                    "block": "minecraft:blue_ice"
+                },
+                {
+                    "weight": 2,
+                    "block": "minecraft:packed_ice"
+                },
+                {
+                    "weight": 1,
+                    "block": "minecraft:ice"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 2,
+            "palette": [
+                {
+                    "block": "minecraft:packed_ice"
+                }
+            ]
+        }
+    ],
+    "customDerivitives": [
+        {
+            "category": "ocean",
+            "id": "deep_frozen_ocean",
+            "grassColor": "#80B497",
+            "foliageColor": "#60A17B",
+            "waterColor": "#3938C9",
+            "downfallType": "none"
+        }
+    ]
+}

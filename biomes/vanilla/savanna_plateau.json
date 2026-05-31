@@ -1,0 +1,248 @@
+{
+    "name": "Savanna Plateau",
+    "color": "#C9BD6A",
+    "rarity": 1,
+    "derivative": "minecraft:savanna_plateau",
+    "vanillaDerivative": "minecraft:savanna_plateau",
+    "customDerivitives": [
+        {
+            "category": "savanna",
+            "id": "savanna_plateau",
+            "grassColor": "#BFB755",
+            "foliageColor": "#AEA42A",
+            "waterColor": "#2C8B9C",
+            "downfallType": "none"
+        }
+    ],
+    "generators": [
+        {
+            "min": 4,
+            "max": 7,
+            "generator": "plain"
+        }
+    ],
+    "wall": {
+        "style": {
+            "style": "STATIC"
+        },
+        "palette": [
+            {
+                "block": "minecraft:stone"
+            },
+            {
+                "block": "minecraft:andesite"
+            },
+            {
+                "block": "minecraft:stone"
+            }
+        ]
+    },
+    "layers": [
+        {
+            "style": {
+                "style": "FLAT"
+            },
+            "palette": [
+                {
+                    "block": "minecraft:grass_block"
+                }
+            ]
+        },
+        {
+            "palette": [
+                {
+                    "block": "minecraft:dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 3,
+            "palette": [
+                {
+                    "block": "minecraft:coarse_dirt"
+                }
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "minecraft:stone"
+                },
+                {
+                    "block": "minecraft:andesite"
+                },
+                {
+                    "block": "minecraft:stone"
+                }
+            ]
+        }
+    ],
+    "objects": [
+        {
+            "chance": 0.5,
+            "density": 2,
+            "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:acacia_planks"
+                        }
+                    ],
+                    "replace": {
+                        "palette": [
+                            {
+                                "block": "minecraft:stripped_acacia_wood"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 270,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "trees/acacia/denmyre1",
+                "trees/acacia/denmyre2",
+                "trees/acacia/denmyre3",
+                "trees/acacia/denmyre4",
+                "trees/acacia/denmyre5",
+                "trees/acacia/denmyre6",
+                "trees/acacia/denmyre7"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            }
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.1,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.01,
+            "palette": [
+                {
+                    "weight": 4,
+                    "block": "minecraft:dead_bush"
+                },
+                {
+                    "block": "minecraft:brown_mushroom"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "chance": 0.0005,
+            "variance": {
+                "style": "STATIC"
+            },
+            "stackMax": 2,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "minecraft:cactus"
+                }
+            ],
+            "stackMin": 1
+        },
+        {
+            "chance": 0.0005,
+            "variance": {
+                "style": "STATIC"
+            },
+            "stackMax": 2,
+            "style": {
+                "style": "STATIC"
+            },
+            "palette": [
+                {
+                    "block": "minecraft:cactus"
+                }
+            ],
+            "topPalette": [
+                {
+                    "block": "minecraft:cactus_flower"
+                }
+            ],
+            "stackMin": 1
+        },
+        {
+            "chance": 0.4,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "block": "minecraft:short_grass"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "chance": 0.03,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "east"
+                    },
+                    "block": "minecraft:stone_button"
+                },
+                {
+                    "data": {
+                        "face": "floor",
+                        "powered": false,
+                        "facing": "south"
+                    },
+                    "block": "minecraft:stone_button"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        },
+        {
+            "chance": 0.017,
+            "variance": {
+                "style": "STATIC"
+            },
+            "zoom": 0.3,
+            "palette": [
+                {
+                    "block": "minecraft:tall_grass"
+                }
+            ],
+            "style": {
+                "style": "STATIC"
+            }
+        },
+        "snippet/decorator/dry_grass"
+    ]
+}

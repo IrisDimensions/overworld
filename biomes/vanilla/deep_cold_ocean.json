@@ -1,0 +1,111 @@
+{
+    "name": "Deep Cold Ocean",
+    "color": "#1F4480",
+    "derivative": "minecraft:deep_cold_ocean",
+    "vanillaDerivative": "minecraft:deep_cold_ocean",
+    "generators": [
+        {
+            "generator": "smooth-dunes",
+            "max": -70,
+            "min": -80
+        }
+    ],
+    "layers": [
+        {
+            "minHeight": 2,
+            "maxHeight": 2,
+            "slopeCondition": {
+                "minimumSlope": 0,
+                "maximumSlope": 3
+            },
+            "style": {
+                "style": "NOWHERE"
+            },
+            "zoom": 0.6,
+            "palette": [
+                {
+                    "block": "minecraft:sand"
+                },
+                {
+                    "block": "minecraft:clay"
+                },
+                {
+                    "block": "minecraft:sand"
+                },
+                {
+                    "block": "minecraft:gravel"
+                },
+                {
+                    "block": "minecraft:sand"
+                },
+                {
+                    "block": "minecraft:dirt"
+                },
+                {
+                    "weight": 2,
+                    "block": "minecraft:sand"
+                }
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 10,
+            "palette": [
+                {
+                    "block": "minecraft:gravel"
+                }
+            ]
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.09,
+            "palette": [
+                {
+                    "block": "minecraft:kelp_plant"
+                }
+            ],
+            "stackMin": 2,
+            "stackMax": 12,
+            "partOf": "SEA_FLOOR"
+        },
+        {
+            "chance": 0.2,
+            "palette": [
+                {
+                    "block": "minecraft:seagrass"
+                }
+            ]
+        },
+        {
+            "chance": 0.2,
+            "palette": [
+                {
+                    "block": "minecraft:tall_seagrass",
+                    "data": {
+                        "half": "lower"
+                    }
+                }
+            ],
+            "topPalette": [
+                {
+                    "block": "minecraft:tall_seagrass",
+                    "data": {
+                        "half": "upper"
+                    }
+                }
+            ],
+            "partOf": "SEA_FLOOR"
+        }
+    ],
+    "customDerivitives": [
+        {
+            "category": "ocean",
+            "id": "deep_cold_ocean",
+            "grassColor": "#8AB689",
+            "foliageColor": "#6DA36B",
+            "waterColor": "#3D57D6",
+            "downfallType": "none"
+        }
+    ]
+}
