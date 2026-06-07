@@ -1,0 +1,98 @@
+{
+    "name": "Stiltroot Shallows",
+    "color": "#5E8A3C",
+    "rarity": 2,
+    "derivative": "minecraft:mangrove_swamp",
+    "vanillaDerivative": "minecraft:mangrove_swamp",
+    "customDerivitives": [{
+        "id": "estranged_stiltroot",
+        "foliageColor": "#5E8A3C",
+        "grassColor": "#5E8A3C",
+        "category": "swamp"
+    }],
+    "generators": [
+        {"generator": "plain", "max": 5, "min": 2}
+    ],
+    "wall": {"palette": [
+        {"block": "minecraft:stone"},
+        {"block": "minecraft:mossy_cobblestone"}
+    ]},
+    "layers": [
+        {"palette": [
+            {"weight": 12, "block": "minecraft:grass_block"},
+            {"block": "minecraft:mud"},
+            {"block": "minecraft:dirt"}
+        ]},
+        {"minHeight": 2, "maxHeight": 3, "palette": [
+            {"block": "minecraft:mud"},
+            {"block": "minecraft:dirt"}
+        ]}
+    ],
+    "proceduralObjects": {
+        "trees": [
+            {
+                "name": "stiltroot",
+                "chance": 0.55,
+                "density": 2,
+                "variants": 6,
+                "seed": 8301,
+                "trunk": "minecraft:mangrove_wood",
+                "trunkPalette": {
+                    "style": {"style": "CELLULAR", "zoom": 0.4},
+                    "zoom": 2,
+                    "palette": [
+                        {"block": "minecraft:mangrove_wood", "weight": 5},
+                        {"block": "minecraft:oak_wood", "weight": 2}
+                    ]
+                },
+                "leaves": "minecraft:mangrove_leaves",
+                "leavesPalette": {
+                    "style": {"style": "CELLULAR", "zoom": 0.3},
+                    "palette": [
+                        {"block": "minecraft:mangrove_leaves", "weight": 5},
+                        {"block": "minecraft:oak_leaves", "weight": 2}
+                    ]
+                },
+                "profile": "WILLOW",
+                "heightMin": 12,
+                "heightMax": 18,
+                "trunkWidth": 2,
+                "roots": true,
+                "rootStyle": "STILT",
+                "rootFlare": 6,
+                "rotation": {"enabled": true, "yAxis": {"enabled": true, "min": 0, "max": 360, "interval": 90}},
+                "canopy": {
+                    "startAngle": 70,
+                    "squish": 0.7,
+                    "mode": "DENSITY",
+                    "leafDensity": 0.82,
+                    "branches": {
+                        "probabilityFunction": "TOP_HEAVY",
+                        "probabilityExponent": 1.8,
+                        "lengthFunction": "LINEAR",
+                        "lengthBase": 3,
+                        "lengthCrown": 6,
+                        "azimuthMode": "RANDOM",
+                        "elevation": -14,
+                        "sag": 0.4,
+                        "clusterRadius": 2,
+                        "clusterMode": "DENSITY",
+                        "clusterDensity": 0.8
+                    }
+                },
+                "decorators": [
+                    {"target": "CANOPY_HANG", "block": "minecraft:vine", "chance": 0.4, "length": 4}
+                ]
+            }
+        ]
+    },
+    "decorators": [
+        {"chance": 0.3, "palette": [
+            {"block": "minecraft:short_grass", "weight": 3},
+            {"block": "minecraft:fern", "weight": 1}
+        ]},
+        {"chance": 0.03, "palette": [{"block": "minecraft:brown_mushroom"}]},
+        "snippet/decorator/leaf",
+        "snippet/decorator/bush"
+    ]
+}

@@ -1,0 +1,115 @@
+{
+    "name": "Taxodium Stand",
+    "color": "#9C7A52",
+    "rarity": 3,
+    "derivative": "minecraft:savanna",
+    "vanillaDerivative": "minecraft:savanna",
+    "customDerivitives": [{
+        "id": "estranged_taxodium",
+        "foliageColor": "#8C7B4A",
+        "grassColor": "#9A8B52",
+        "category": "savanna"
+    }],
+    "generators": [
+        {"generator": "plain", "max": 7, "min": 2},
+        {"generator": "rare-hills", "max": 28, "min": 0}
+    ],
+    "wall": {"palette": [
+        {"block": "minecraft:stone"},
+        {"block": "minecraft:andesite"},
+        {"block": "minecraft:cobblestone"}
+    ]},
+    "layers": [
+        {"palette": [
+            {"weight": 10, "block": "minecraft:grass_block"},
+            {"block": "minecraft:coarse_dirt"},
+            {"block": "minecraft:gravel"},
+            {"block": "minecraft:podzol"}
+        ]},
+        {"minHeight": 2, "maxHeight": 3, "palette": [
+            {"block": "minecraft:dirt"},
+            {"block": "minecraft:coarse_dirt"}
+        ]}
+    ],
+    "proceduralObjects": {
+        "trees": [
+            {
+                "name": "taxodium",
+                "chance": 0.4,
+                "density": 1,
+                "variants": 8,
+                "seed": 8901,
+                "trunk": "minecraft:spruce_wood",
+                "trunkPalette": {
+                    "style": {"style": "SIMPLEX", "zoom": 0.7},
+                    "zoom": 1.5,
+                    "palette": [
+                        {"block": "minecraft:spruce_wood", "weight": 4},
+                        {"block": "minecraft:stripped_spruce_wood", "weight": 3},
+                        {"block": "minecraft:dark_oak_wood", "weight": 2},
+                        {"block": "minecraft:mangrove_wood", "weight": 2},
+                        {"block": "minecraft:stripped_oak_wood", "weight": 2}
+                    ]
+                },
+                "leaves": "minecraft:stripped_spruce_wood",
+                "leavesPalette": {
+                    "style": {"style": "CELLULAR", "zoom": 0.35},
+                    "zoom": 2,
+                    "palette": [
+                        {"block": "minecraft:stripped_spruce_wood", "weight": 3},
+                        {"block": "minecraft:stripped_birch_wood", "weight": 3},
+                        {"block": "minecraft:stripped_oak_wood", "weight": 2},
+                        {"block": "minecraft:cherry_wood", "weight": 2},
+                        {"block": "minecraft:mangrove_wood", "weight": 2}
+                    ]
+                },
+                "profile": "OAK",
+                "heightMin": 20,
+                "heightMax": 34,
+                "trunkWidth": 1,
+                "trunkShape": "LINEAR",
+                "shapeStart": 1.1,
+                "shapeEnd": 0.6,
+                "roots": true,
+                "rootStyle": "STILT",
+                "rootFlare": 4,
+                "rotation": {"enabled": true, "yAxis": {"enabled": true, "min": 0, "max": 360, "interval": 45}},
+                "canopy": {
+                    "mode": "SPARSE",
+                    "leafDensity": 0.15,
+                    "branches": {
+                        "probabilityFunction": "LINEAR",
+                        "probabilityBase": 0.5,
+                        "probabilityCrown": 0.95,
+                        "lengthFunction": "LINEAR",
+                        "lengthBase": 2,
+                        "lengthCrown": 5,
+                        "azimuthMode": "GOLDEN_ANGLE",
+                        "elevation": 32,
+                        "branchDepth": 4,
+                        "clusterRadius": 1,
+                        "clusterMode": "SPARSE",
+                        "clusterDensity": 0.2,
+                        "subBranches": {
+                            "count": 2,
+                            "pitchDelta": 6,
+                            "yawDelta": 65,
+                            "lengthScale": 0.62,
+                            "clusterRadius": 1,
+                            "clusterMode": "SPARSE",
+                            "clusterDensity": 0.15
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    "decorators": [
+        {"chance": 0.2, "palette": [
+            {"block": "minecraft:short_grass", "weight": 3},
+            {"block": "minecraft:dead_bush", "weight": 1}
+        ]},
+        {"chance": 0.03, "palette": [{"block": "minecraft:brown_mushroom"}]},
+        "snippet/decorator/bush"
+    ]
+}

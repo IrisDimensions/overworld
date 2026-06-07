@@ -1,0 +1,143 @@
+{
+    "name": "Bonsai Hollow",
+    "color": "#7FB04A",
+    "rarity": 3,
+    "derivative": "minecraft:forest",
+    "vanillaDerivative": "minecraft:forest",
+    "customDerivitives": [{
+        "id": "estranged_bonsai",
+        "foliageColor": "#6FA63E",
+        "grassColor": "#7BB041",
+        "category": "forest"
+    }],
+    "generators": [
+        {"generator": "plain", "max": 6, "min": 2},
+        {"generator": "smooth-dunes", "max": 6, "min": 0}
+    ],
+    "wall": {"palette": [
+        {"block": "minecraft:stone"},
+        {"block": "minecraft:andesite"},
+        {"block": "minecraft:cobblestone"}
+    ]},
+    "layers": [
+        {"palette": [
+            {"weight": 16, "block": "minecraft:grass_block"},
+            {"block": "minecraft:moss_block"},
+            {"block": "minecraft:gravel"}
+        ]},
+        {"minHeight": 2, "maxHeight": 2, "palette": [{"block": "minecraft:dirt"}]},
+        {"minHeight": 1, "maxHeight": 3, "palette": [
+            {"block": "minecraft:dirt"},
+            {"block": "minecraft:stone"}
+        ]}
+    ],
+    "proceduralObjects": {
+        "trees": [
+            {
+                "name": "bonsai-green",
+                "chance": 0.45,
+                "density": 2,
+                "variants": 8,
+                "seed": 8801,
+                "trunk": "minecraft:oak_wood",
+                "trunkPalette": {
+                    "style": {"style": "SIMPLEX", "zoom": 0.5},
+                    "zoom": 1.5,
+                    "palette": [
+                        {"block": "minecraft:oak_wood", "weight": 4},
+                        {"block": "minecraft:stripped_oak_wood", "weight": 3},
+                        {"block": "minecraft:spruce_wood", "weight": 2}
+                    ]
+                },
+                "leaves": "minecraft:azalea_leaves",
+                "leavesPalette": {
+                    "style": {"style": "CELLULAR", "zoom": 0.3},
+                    "palette": [
+                        {"block": "minecraft:azalea_leaves", "weight": 5},
+                        {"block": "minecraft:oak_leaves", "weight": 3}
+                    ]
+                },
+                "profile": "DARK_OAK_FLAT",
+                "heightMin": 6,
+                "heightMax": 10,
+                "trunkWidth": 2,
+                "trunkShape": "BELL",
+                "shapeStart": 1.1,
+                "shapeEnd": 0.8,
+                "leanAngle": 16,
+                "leanAzimuthMode": "CONSTANT",
+                "leanAzimuth": 0,
+                "trunkCurve": "EXPONENTIAL",
+                "trunkForks": 3,
+                "forkHeight": 0.4,
+                "forkAngle": 38,
+                "rotation": {"enabled": true, "yAxis": {"enabled": true, "min": 0, "max": 360, "interval": 45}},
+                "canopy": {
+                    "startAngle": 100,
+                    "squish": 0.3,
+                    "mode": "TRIMMED",
+                    "leafDensity": 0.95
+                }
+            },
+            {
+                "name": "bonsai-blossom",
+                "chance": 0.35,
+                "density": 2,
+                "variants": 6,
+                "seed": 8802,
+                "trunk": "minecraft:cherry_wood",
+                "trunkPalette": {
+                    "style": {"style": "SIMPLEX", "zoom": 0.5},
+                    "palette": [
+                        {"block": "minecraft:cherry_wood", "weight": 4},
+                        {"block": "minecraft:stripped_oak_wood", "weight": 2}
+                    ]
+                },
+                "leaves": "minecraft:cherry_leaves",
+                "leavesPalette": {
+                    "style": {"style": "CELLULAR", "zoom": 0.3},
+                    "palette": [
+                        {"block": "minecraft:cherry_leaves", "weight": 5},
+                        {"block": "minecraft:flowering_azalea_leaves", "weight": 2}
+                    ]
+                },
+                "profile": "DARK_OAK_FLAT",
+                "heightMin": 6,
+                "heightMax": 9,
+                "trunkWidth": 2,
+                "trunkShape": "BELL",
+                "shapeStart": 1.1,
+                "shapeEnd": 0.8,
+                "leanAngle": 18,
+                "leanAzimuthMode": "CONSTANT",
+                "leanAzimuth": 0,
+                "trunkCurve": "EXPONENTIAL",
+                "trunkForks": 2,
+                "forkHeight": 0.45,
+                "forkAngle": 32,
+                "rotation": {"enabled": true, "yAxis": {"enabled": true, "min": 0, "max": 360, "interval": 45}},
+                "canopy": {
+                    "startAngle": 100,
+                    "squish": 0.3,
+                    "mode": "TRIMMED",
+                    "leafDensity": 0.95,
+                    "crownStretchX": 1.15,
+                    "crownStretchZ": 1.15
+                },
+                "decorators": [
+                    {"target": "GROUND_SCATTER", "block": "minecraft:pink_petals", "chance": 0.1}
+                ]
+            }
+        ]
+    },
+    "decorators": [
+        {"chance": 0.35, "palette": [{"block": "minecraft:short_grass"}]},
+        {"chance": 0.08, "palette": [{"block": "minecraft:moss_carpet"}]},
+        {"chance": 0.04, "palette": [
+            {"block": "minecraft:oxeye_daisy"},
+            {"block": "minecraft:azure_bluet"}
+        ]},
+        "snippet/decorator/leaf",
+        "snippet/decorator/bush"
+    ]
+}

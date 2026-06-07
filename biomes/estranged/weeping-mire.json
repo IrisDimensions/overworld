@@ -36,13 +36,13 @@
                 "density": 2,
                 "variants": 6,
                 "seed": 7201,
-                "trunk": "minecraft:mangrove_log",
+                "trunk": "minecraft:mangrove_wood",
                 "trunkPalette": {
                     "style": {"style": "CELLULAR", "zoom": 0.4},
                     "zoom": 2,
                     "palette": [
-                        {"block": "minecraft:mangrove_log", "weight": 5},
-                        {"block": "minecraft:oak_log", "weight": 3}
+                        {"block": "minecraft:mangrove_wood", "weight": 5},
+                        {"block": "minecraft:oak_wood", "weight": 3}
                     ]
                 },
                 "leaves": "minecraft:oak_leaves",
@@ -72,10 +72,22 @@
                         "lengthBase": 4,
                         "lengthCrown": 7,
                         "azimuthMode": "RANDOM",
-                        "elevation": -28,
+                        "elevation": -22,
+                        "sag": 0.6,
+                        "branchDepth": 2,
                         "clusterRadius": 2,
                         "clusterMode": "DENSITY",
-                        "clusterDensity": 0.8
+                        "clusterDensity": 0.8,
+                        "subBranches": {
+                            "count": 1,
+                            "pitchDelta": -12,
+                            "yawDelta": 25,
+                            "lengthScale": 0.7,
+                            "sag": 0.6,
+                            "clusterRadius": 2,
+                            "clusterMode": "DENSITY",
+                            "clusterDensity": 0.8
+                        }
                     }
                 },
                 "decorators": [

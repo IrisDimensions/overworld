@@ -1,0 +1,158 @@
+{
+    "name": "Birchglass Heath",
+    "color": "#D7E4C8",
+    "rarity": 3,
+    "derivative": "minecraft:birch_forest",
+    "vanillaDerivative": "minecraft:birch_forest",
+    "customDerivitives": [{
+        "id": "estranged_birchglass",
+        "foliageColor": "#CFE2BE",
+        "grassColor": "#A9C98C",
+        "category": "forest"
+    }],
+    "generators": [
+        {"generator": "smooth-dunes", "max": 10, "min": 4},
+        {"generator": "rare-hills", "max": 30, "min": 0}
+    ],
+    "wall": {"palette": [
+        {"block": "minecraft:stone"},
+        {"block": "minecraft:andesite"}
+    ]},
+    "layers": [
+        {"palette": [{"block": "minecraft:grass_block"}]},
+        {"minHeight": 2, "maxHeight": 2, "palette": [{"block": "minecraft:dirt"}]},
+        {"minHeight": 1, "maxHeight": 3, "palette": [
+            {"block": "minecraft:dirt"},
+            {"block": "minecraft:stone"}
+        ]}
+    ],
+    "proceduralObjects": {
+        "trees": [
+            {
+                "name": "birchglass",
+                "chance": 0.55,
+                "density": 2,
+                "variants": 8,
+                "seed": 8101,
+                "trunk": "minecraft:birch_wood",
+                "trunkPalette": {
+                    "style": {"style": "SIMPLEX", "zoom": 0.6},
+                    "zoom": 2,
+                    "palette": [
+                        {"block": "minecraft:birch_wood", "weight": 4},
+                        {"block": "minecraft:stripped_birch_wood", "weight": 3},
+                        {"block": "minecraft:pale_oak_wood", "weight": 2}
+                    ]
+                },
+                "leaves": "minecraft:birch_leaves",
+                "leavesPalette": {
+                    "style": {"style": "STATIC", "zoom": 0.25},
+                    "palette": [
+                        {"block": "minecraft:pale_oak_leaves", "weight": 1}
+                    ]
+                },
+                "profile": "OAK",
+                "heightMin": 16,
+                "heightMax": 26,
+                "trunkWidth": 1,
+                "leanAngle": 7,
+                "leanAzimuthMode": "NOISE",
+                "azimuthScale": 1.3,
+                "trunkCurve": "LINEAR",
+                "rotation": {"enabled": true, "yAxis": {"enabled": true, "min": 0, "max": 360, "interval": 45}},
+                "canopy": {
+                    "mode": "CLUMPED",
+                    "leafDensity": 0.62,
+                    "crownStretchX": 1.25,
+                    "crownStretchZ": 0.85,
+                    "branches": {
+                        "probabilityFunction": "TOP_HEAVY",
+                        "probabilityExponent": 1.5,
+                        "lengthFunction": "LINEAR",
+                        "lengthBase": 2,
+                        "lengthCrown": 5,
+                        "azimuthMode": "GOLDEN_ANGLE",
+                        "elevation": 18,
+                        "sag": 0.25,
+                        "branchDepth": 2,
+                        "clusterRadius": 2,
+                        "clusterMode": "CLUMPED",
+                        "clusterDensity": 0.6,
+                        "subBranches": {
+                            "count": 2,
+                            "pitchDelta": 12,
+                            "yawDelta": 80,
+                            "lengthScale": 0.6,
+                            "sag": 0.3,
+                            "clusterRadius": 2,
+                            "clusterMode": "NOISE",
+                            "clusterDensity": 0.55
+                        }
+                    }
+                }
+            },
+            {
+                "name": "birchglass-wide",
+                "chance": 0.3,
+                "density": 2,
+                "variants": 6,
+                "seed": 8102,
+                "trunk": "minecraft:pale_oak_wood",
+                "trunkPalette": {
+                    "style": {"style": "SIMPLEX", "zoom": 0.6},
+                    "palette": [
+                        {"block": "minecraft:pale_oak_wood", "weight": 4},
+                        {"block": "minecraft:birch_wood", "weight": 3},
+                        {"block": "minecraft:stripped_birch_wood", "weight": 2}
+                    ]
+                },
+                "leaves": "minecraft:pale_oak_leaves",
+                "leavesPalette": {
+                    "style": {"style": "STATIC", "zoom": 0.25},
+                    "palette": [
+                        {"block": "minecraft:pale_oak_leaves", "weight": 1}
+                    ]
+                },
+                "profile": "OAK",
+                "heightMin": 12,
+                "heightMax": 18,
+                "trunkWidth": 1,
+                "leanAngle": 9,
+                "leanAzimuthMode": "NOISE",
+                "azimuthScale": 1.6,
+                "trunkCurve": "LINEAR",
+                "rotation": {"enabled": true, "yAxis": {"enabled": true, "min": 0, "max": 360, "interval": 45}},
+                "canopy": {
+                    "mode": "NOISE",
+                    "leafDensity": 0.55,
+                    "crownStretchX": 0.85,
+                    "crownStretchZ": 1.3,
+                    "branches": {
+                        "probabilityFunction": "TOP_HEAVY",
+                        "probabilityExponent": 1.4,
+                        "lengthFunction": "LINEAR",
+                        "lengthBase": 2,
+                        "lengthCrown": 4,
+                        "azimuthMode": "GOLDEN_ANGLE",
+                        "elevation": 14,
+                        "sag": 0.3,
+                        "branchDepth": 2,
+                        "clusterRadius": 2,
+                        "clusterMode": "CLUMPED",
+                        "clusterDensity": 0.55
+                    }
+                }
+            }
+        ]
+    },
+    "decorators": [
+        {"chance": 0.4, "palette": [{"block": "minecraft:short_grass"}]},
+        {"chance": 0.05, "palette": [
+            {"block": "minecraft:oxeye_daisy"},
+            {"block": "minecraft:lily_of_the_valley"},
+            {"block": "minecraft:white_tulip"}
+        ]},
+        "snippet/decorator/leaf",
+        "snippet/decorator/bush"
+    ]
+}

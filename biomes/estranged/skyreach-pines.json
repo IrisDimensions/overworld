@@ -1,0 +1,93 @@
+{
+    "name": "Skyreach Pines",
+    "color": "#2F5A3A",
+    "rarity": 2,
+    "derivative": "minecraft:grove",
+    "vanillaDerivative": "minecraft:grove",
+    "customDerivitives": [{
+        "id": "estranged_skyreach",
+        "foliageColor": "#39613F",
+        "grassColor": "#5C8C5A",
+        "category": "taiga"
+    }],
+    "generators": [
+        {"generator": "highplains", "max": 38, "min": 18},
+        {"generator": "rare-hills", "max": 60, "min": 0}
+    ],
+    "wall": {"palette": [
+        {"block": "minecraft:stone"},
+        {"block": "minecraft:andesite"},
+        {"block": "minecraft:cobblestone"}
+    ]},
+    "layers": [
+        {"palette": [
+            {"weight": 16, "block": "minecraft:grass_block"},
+            {"block": "minecraft:podzol"},
+            {"block": "minecraft:stone"}
+        ]},
+        {"minHeight": 2, "maxHeight": 2, "palette": [{"block": "minecraft:dirt"}]},
+        {"minHeight": 1, "maxHeight": 3, "palette": [
+            {"block": "minecraft:dirt"},
+            {"block": "minecraft:stone"}
+        ]}
+    ],
+    "proceduralObjects": {
+        "trees": [
+            {
+                "name": "skyreach-pine",
+                "chance": 0.6,
+                "density": 2,
+                "variants": 6,
+                "seed": 8401,
+                "trunk": "minecraft:spruce_wood",
+                "trunkPalette": {
+                    "style": {"style": "CELLULAR", "zoom": 0.4},
+                    "zoom": 2,
+                    "palette": [
+                        {"block": "minecraft:spruce_wood", "weight": 6},
+                        {"block": "minecraft:dark_oak_wood", "weight": 1}
+                    ]
+                },
+                "leaves": "minecraft:spruce_leaves",
+                "profile": "MEGA_SPRUCE",
+                "heightMin": 22,
+                "heightMax": 34,
+                "trunkWidth": 2,
+                "roots": true,
+                "rootStyle": "TAPROOT",
+                "rotation": {"enabled": true, "yAxis": {"enabled": true, "min": 0, "max": 360, "interval": 90}},
+                "canopy": {
+                    "mode": "DENSITY",
+                    "leafDensity": 0.85,
+                    "branches": {
+                        "probabilityFunction": "PERIODIC",
+                        "probabilityConstant": 0.95,
+                        "probabilityPeriods": 8,
+                        "lengthFunction": "LINEAR",
+                        "lengthBase": 2,
+                        "lengthCrown": 6,
+                        "azimuthMode": "WHORL",
+                        "elevation": -6,
+                        "sag": 0.25,
+                        "clusterRadius": 2,
+                        "clusterMode": "DENSITY",
+                        "clusterDensity": 0.8
+                    }
+                },
+                "azimuthWhorlCount": 5,
+                "decorators": [
+                    {"target": "CANOPY_TOP", "block": "minecraft:snow", "chance": 0.4}
+                ]
+            }
+        ]
+    },
+    "decorators": [
+        {"chance": 0.3, "palette": [
+            {"block": "minecraft:fern", "weight": 2},
+            {"block": "minecraft:short_grass", "weight": 2}
+        ]},
+        {"chance": 0.05, "palette": [{"block": "minecraft:large_fern"}]},
+        "snippet/decorator/leaf",
+        "snippet/decorator/bush"
+    ]
+}

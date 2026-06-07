@@ -1,11 +1,11 @@
 {
-    "name": "Slinky Spires",
+    "name": "Wilted Lollipops",
     "color": "#E58FD0",
-    "rarity": 3,
+    "rarity": 4,
     "derivative": "minecraft:forest",
     "vanillaDerivative": "minecraft:forest",
     "customDerivitives": [{
-        "id": "estranged_slinky",
+        "id": "estranged_lollipop",
         "foliageColor": "#E08FCB",
         "grassColor": "#84B94E",
         "category": "forest"
@@ -16,8 +16,7 @@
     ],
     "wall": {"palette": [
         {"block": "minecraft:stone"},
-        {"block": "minecraft:andesite"},
-        {"block": "minecraft:mossy_cobblestone"}
+        {"block": "minecraft:andesite"}
     ]},
     "layers": [
         {"palette": [{"block": "minecraft:grass_block"}]},
@@ -30,66 +29,117 @@
     "proceduralObjects": {
         "trees": [
             {
-                "name": "slinky-tall",
-                "chance": 0.65,
-                "density": 2,
+                "name": "lollipop-pink",
+                "chance": 0.28,
+                "density": 1,
                 "variants": 6,
-                "seed": 7101,
-                "trunk": "minecraft:birch_log",
+                "seed": 8701,
+                "trunk": "minecraft:birch_wood",
                 "trunkPalette": {
-                    "style": {"style": "CELLULAR", "zoom": 0.4},
-                    "zoom": 2,
+                    "style": {"style": "SIMPLEX", "zoom": 0.7},
+                    "zoom": 1.5,
                     "palette": [
-                        {"block": "minecraft:birch_log", "weight": 5},
-                        {"block": "minecraft:cherry_log", "weight": 3}
+                        {"block": "minecraft:birch_wood", "weight": 5},
+                        {"block": "minecraft:stripped_birch_wood", "weight": 3},
+                        {"block": "minecraft:cherry_wood", "weight": 2}
                     ]
                 },
                 "leaves": "minecraft:cherry_leaves",
+                "leavesPalette": {
+                    "style": {"style": "CELLULAR", "zoom": 0.4},
+                    "zoom": 3,
+                    "palette": [
+                        {"block": "minecraft:cherry_leaves", "weight": 5},
+                        {"block": "minecraft:flowering_azalea_leaves", "weight": 2}
+                    ]
+                },
                 "profile": "COLUMNAR",
-                "heightMin": 14,
-                "heightMax": 22,
-                "trunkWidth": 1,
-                "leanAngle": 24,
-                "leanAzimuthMode": "SPIRAL",
-                "azimuthStart": 0,
-                "azimuthTurns": 3,
-                "trunkCurve": "LINEAR",
-                "rotation": {"enabled": true, "yAxis": {"enabled": true, "min": 0, "max": 360, "interval": 90}},
+                "heightMin": 32,
+                "heightMax": 48,
+                "trunkWidth": 2,
+                "leanAngle": 26,
+                "leanAzimuthMode": "CONSTANT",
+                "leanAzimuth": 0,
+                "trunkCurve": "EXPONENTIAL",
+                "curveSteepness": 4,
+                "rotation": {"enabled": true, "yAxis": {"enabled": true, "min": 0, "max": 360, "interval": 45}},
                 "canopy": {
-                    "startAngle": 80,
-                    "squish": 0.9,
                     "mode": "DENSITY",
-                    "leafDensity": 0.82
+                    "leafDensity": 0.95,
+                    "branches": {
+                        "probabilityFunction": "GAUSSIAN",
+                        "probabilityMean": 0.95,
+                        "probabilityStd": 0.08,
+                        "lengthFunction": "LINEAR",
+                        "lengthBase": 4,
+                        "lengthCrown": 5,
+                        "azimuthMode": "GOLDEN_ANGLE",
+                        "elevation": -16,
+                        "sag": 0.4,
+                        "clusterRadius": 5,
+                        "clusterMode": "DENSITY",
+                        "clusterDensity": 0.92
+                    }
                 }
             },
             {
-                "name": "slinky-stout",
-                "chance": 0.45,
-                "density": 2,
+                "name": "lollipop-teal",
+                "chance": 0.22,
+                "density": 1,
                 "variants": 6,
-                "seed": 7102,
-                "trunk": "minecraft:dark_oak_log",
-                "leaves": "minecraft:cherry_leaves",
+                "seed": 8702,
+                "trunk": "minecraft:birch_wood",
+                "trunkPalette": {
+                    "style": {"style": "SIMPLEX", "zoom": 0.7},
+                    "zoom": 1.5,
+                    "palette": [
+                        {"block": "minecraft:stripped_birch_wood", "weight": 5},
+                        {"block": "minecraft:birch_wood", "weight": 3},
+                        {"block": "minecraft:stripped_oak_wood", "weight": 2}
+                    ]
+                },
+                "leaves": "minecraft:azalea_leaves",
+                "leavesPalette": {
+                    "style": {"style": "CELLULAR", "zoom": 0.4},
+                    "zoom": 3,
+                    "palette": [
+                        {"block": "minecraft:azalea_leaves", "weight": 5},
+                        {"block": "minecraft:jungle_leaves", "weight": 3}
+                    ]
+                },
                 "profile": "COLUMNAR",
-                "heightMin": 9,
-                "heightMax": 13,
-                "trunkWidth": 1,
-                "leanAngle": 30,
-                "leanAzimuthMode": "SPIRAL",
-                "azimuthStart": 90,
-                "azimuthTurns": 2,
-                "trunkCurve": "LINEAR",
-                "rotation": {"enabled": true, "yAxis": {"enabled": true, "min": 0, "max": 360, "interval": 90}},
+                "heightMin": 30,
+                "heightMax": 44,
+                "trunkWidth": 2,
+                "leanAngle": 24,
+                "leanAzimuthMode": "CONSTANT",
+                "leanAzimuth": 0,
+                "trunkCurve": "EXPONENTIAL",
+                "curveSteepness": 4,
+                "rotation": {"enabled": true, "yAxis": {"enabled": true, "min": 0, "max": 360, "interval": 45}},
                 "canopy": {
-                    "startAngle": 75,
-                    "squish": 0.85,
-                    "mode": "TRIMMED"
+                    "mode": "DENSITY",
+                    "leafDensity": 0.95,
+                    "branches": {
+                        "probabilityFunction": "GAUSSIAN",
+                        "probabilityMean": 0.95,
+                        "probabilityStd": 0.08,
+                        "lengthFunction": "LINEAR",
+                        "lengthBase": 4,
+                        "lengthCrown": 5,
+                        "azimuthMode": "GOLDEN_ANGLE",
+                        "elevation": -14,
+                        "sag": 0.4,
+                        "clusterRadius": 5,
+                        "clusterMode": "DENSITY",
+                        "clusterDensity": 0.92
+                    }
                 }
             }
         ]
     },
     "decorators": [
-        {"chance": 0.45, "palette": [{"block": "minecraft:short_grass"}]},
+        {"chance": 0.4, "palette": [{"block": "minecraft:short_grass"}]},
         {"chance": 0.05, "palette": [
             {"block": "minecraft:pink_tulip"},
             {"block": "minecraft:allium"},

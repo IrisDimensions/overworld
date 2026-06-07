@@ -1,0 +1,100 @@
+{
+    "name": "Candlewood Grove",
+    "color": "#7BD24A",
+    "rarity": 3,
+    "derivative": "minecraft:forest",
+    "vanillaDerivative": "minecraft:forest",
+    "customDerivitives": [{
+        "id": "estranged_candlewood",
+        "foliageColor": "#7BD24A",
+        "grassColor": "#7FB840",
+        "category": "forest"
+    }],
+    "generators": [
+        {"generator": "smooth-dunes", "max": 11, "min": 5},
+        {"generator": "rare-hills", "max": 34, "min": 0}
+    ],
+    "wall": {"palette": [
+        {"block": "minecraft:stone"},
+        {"block": "minecraft:andesite"},
+        {"block": "minecraft:cobblestone"}
+    ]},
+    "layers": [
+        {"palette": [{"block": "minecraft:grass_block"}]},
+        {"minHeight": 2, "maxHeight": 2, "palette": [{"block": "minecraft:dirt"}]},
+        {"minHeight": 1, "maxHeight": 3, "palette": [
+            {"block": "minecraft:dirt"},
+            {"block": "minecraft:stone"}
+        ]}
+    ],
+    "proceduralObjects": {
+        "trees": [
+            {
+                "name": "candlewood",
+                "chance": 0.5,
+                "density": 1,
+                "variants": 6,
+                "seed": 8601,
+                "trunk": "minecraft:acacia_wood",
+                "trunkPalette": {
+                    "style": {"style": "CELLULAR", "zoom": 0.4},
+                    "zoom": 2,
+                    "palette": [
+                        {"block": "minecraft:acacia_wood", "weight": 4},
+                        {"block": "minecraft:oak_wood", "weight": 3}
+                    ]
+                },
+                "leaves": "minecraft:azalea_leaves",
+                "leavesPalette": {
+                    "style": {"style": "CELLULAR", "zoom": 0.3},
+                    "palette": [
+                        {"block": "minecraft:azalea_leaves", "weight": 5},
+                        {"block": "minecraft:oak_leaves", "weight": 2}
+                    ]
+                },
+                "profile": "OAK",
+                "heightMin": 13,
+                "heightMax": 19,
+                "trunkWidth": 2,
+                "trunkForks": 3,
+                "forkHeight": 0.4,
+                "forkAngle": 22,
+                "rotation": {"enabled": true, "yAxis": {"enabled": true, "min": 0, "max": 360, "interval": 90}},
+                "canopy": {
+                    "mode": "FILLED",
+                    "leafDensity": 0.9,
+                    "branches": {
+                        "probabilityFunction": "TOP_HEAVY",
+                        "probabilityExponent": 2,
+                        "lengthFunction": "LINEAR",
+                        "lengthBase": 2,
+                        "lengthCrown": 4,
+                        "azimuthMode": "GOLDEN_ANGLE",
+                        "elevation": 25,
+                        "branchDepth": 2,
+                        "clusterRadius": 2,
+                        "clusterMode": "FILLED",
+                        "clusterDensity": 0.9,
+                        "subBranches": {
+                            "count": 2,
+                            "pitchDelta": 15,
+                            "yawDelta": 60,
+                            "lengthScale": 0.6,
+                            "clusterRadius": 1,
+                            "clusterMode": "FILLED"
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    "decorators": [
+        {"chance": 0.4, "palette": [{"block": "minecraft:short_grass"}]},
+        {"chance": 0.05, "palette": [
+            {"block": "minecraft:dandelion"},
+            {"block": "minecraft:cornflower"}
+        ]},
+        "snippet/decorator/leaf",
+        "snippet/decorator/bush"
+    ]
+}

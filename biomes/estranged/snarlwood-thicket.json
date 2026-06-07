@@ -1,0 +1,110 @@
+{
+    "name": "Snarlwood Thicket",
+    "color": "#3E5C2A",
+    "rarity": 3,
+    "derivative": "minecraft:dark_forest",
+    "vanillaDerivative": "minecraft:dark_forest",
+    "customDerivitives": [{
+        "id": "estranged_snarlwood",
+        "foliageColor": "#3E5C2A",
+        "grassColor": "#445A30",
+        "category": "forest"
+    }],
+    "generators": [
+        {"generator": "smooth-dunes", "max": 9, "min": 4},
+        {"generator": "rare-hills", "max": 36, "min": 0}
+    ],
+    "wall": {"palette": [
+        {"block": "minecraft:stone"},
+        {"block": "minecraft:mossy_cobblestone"},
+        {"block": "minecraft:cobblestone"}
+    ]},
+    "layers": [
+        {"palette": [
+            {"weight": 14, "block": "minecraft:grass_block"},
+            {"block": "minecraft:podzol"},
+            {"block": "minecraft:coarse_dirt"}
+        ]},
+        {"minHeight": 2, "maxHeight": 2, "palette": [{"block": "minecraft:dirt"}]},
+        {"minHeight": 1, "maxHeight": 3, "palette": [
+            {"block": "minecraft:dirt"},
+            {"block": "minecraft:stone"}
+        ]}
+    ],
+    "proceduralObjects": {
+        "trees": [
+            {
+                "name": "snarlwood",
+                "chance": 0.8,
+                "density": 2,
+                "variants": 8,
+                "seed": 8201,
+                "trunk": "minecraft:dark_oak_wood",
+                "trunkPalette": {
+                    "style": {"style": "STATIC"},
+                    "palette": [
+                        {"block": "minecraft:dark_oak_wood", "weight": 5},
+                        {"block": "minecraft:spruce_wood", "weight": 2},
+                        {"block": "minecraft:oak_wood", "weight": 1}
+                    ]
+                },
+                "leaves": "minecraft:dark_oak_leaves",
+                "profile": "OAK",
+                "heightMin": 8,
+                "heightMax": 13,
+                "trunkWidth": 1,
+                "trunkShape": "SINE",
+                "shapeAmplitude": 0.3,
+                "shapePeriod": 0.4,
+                "leanAngle": 22,
+                "leanAzimuthMode": "NOISE",
+                "azimuthScale": 2.0,
+                "trunkCurve": "SIGMOID",
+                "rotation": {"enabled": true, "yAxis": {"enabled": true, "min": 0, "max": 360, "interval": 90}},
+                "canopy": {
+                    "mode": "TATTERED",
+                    "leafDensity": 0.8,
+                    "crownStretchX": 1.4,
+                    "crownStretchZ": 0.8,
+                    "branches": {
+                        "probabilityFunction": "TOP_HEAVY",
+                        "probabilityExponent": 1.6,
+                        "lengthFunction": "LINEAR",
+                        "lengthBase": 2,
+                        "lengthCrown": 4,
+                        "azimuthMode": "ZIGZAG",
+                        "elevation": -10,
+                        "sag": 0.5,
+                        "branchDepth": 2,
+                        "clusterRadius": 2,
+                        "clusterMode": "TATTERED",
+                        "clusterDensity": 0.7,
+                        "subBranches": {
+                            "count": 2,
+                            "pitchDelta": -12,
+                            "yawDelta": 70,
+                            "lengthScale": 0.6,
+                            "sag": 0.4,
+                            "clusterRadius": 1,
+                            "clusterMode": "TATTERED"
+                        }
+                    }
+                },
+                "decorators": [
+                    {"target": "TRUNK_SURFACE", "block": "minecraft:vine", "chance": 0.3},
+                    {"target": "CANOPY_HANG", "block": "minecraft:vine", "chance": 0.4, "length": 4}
+                ]
+            }
+        ]
+    },
+    "decorators": [
+        {"chance": 0.35, "palette": [
+            {"block": "minecraft:fern", "weight": 2},
+            {"block": "minecraft:short_grass", "weight": 3}
+        ]},
+        {"chance": 0.04, "palette": [{"block": "minecraft:red_mushroom"}]},
+        {"chance": 0.04, "palette": [{"block": "minecraft:brown_mushroom"}]},
+        "snippet/decorator/leaf",
+        "snippet/decorator/bush"
+    ]
+}
