@@ -1,0 +1,156 @@
+{
+    "name": "Emberbark Woods",
+    "color": "#C57B2C",
+    "rarity": 3,
+    "derivative": "minecraft:forest",
+    "vanillaDerivative": "minecraft:forest",
+    "customDerivitives": [{
+        "id": "estranged_emberbark",
+        "foliageColor": "#C57B2C",
+        "grassColor": "#A88B3A",
+        "category": "forest"
+    }],
+    "generators": [
+        {"generator": "smooth-dunes", "max": 12, "min": 5},
+        {"generator": "rare-hills", "max": 38, "min": 0}
+    ],
+    "wall": {"palette": [
+        {"block": "minecraft:stone"},
+        {"block": "minecraft:andesite"},
+        {"block": "minecraft:cobblestone"},
+        {"block": "minecraft:mossy_cobblestone"}
+    ]},
+    "layers": [
+        {"palette": [
+            {"weight": 16, "block": "minecraft:grass_block"},
+            {"block": "minecraft:coarse_dirt"},
+            {"block": "minecraft:podzol"}
+        ]},
+        {"minHeight": 2, "maxHeight": 2, "palette": [{"block": "minecraft:dirt"}]},
+        {"minHeight": 1, "maxHeight": 3, "palette": [
+            {"block": "minecraft:dirt"},
+            {"block": "minecraft:stone"}
+        ]}
+    ],
+    "proceduralObjects": {
+        "trees": [
+            {
+                "name": "emberbark",
+                "chance": 0.75,
+                "density": 2,
+                "variants": 8,
+                "seed": 7301,
+                "trunk": "minecraft:oak_log",
+                "trunkPalette": {
+                    "style": {"style": "STATIC"},
+                    "zoom": 1.5,
+                    "palette": [
+                        {"block": "minecraft:oak_log", "weight": 5},
+                        {"block": "minecraft:dark_oak_log", "weight": 3},
+                        {"block": "minecraft:spruce_log", "weight": 2},
+                        {"block": "minecraft:mangrove_log", "weight": 2}
+                    ]
+                },
+                "leaves": "minecraft:oak_leaves",
+                "leavesPalette": {
+                    "style": {"style": "CELLULAR", "zoom": 0.3},
+                    "zoom": 3.5,
+                    "palette": [
+                        {"block": "minecraft:oak_leaves", "weight": 6},
+                        {"block": "minecraft:jungle_leaves", "weight": 3},
+                        {"block": "minecraft:flowering_azalea_leaves", "weight": 2}
+                    ]
+                },
+                "profile": "OAK",
+                "heightMin": 9,
+                "heightMax": 15,
+                "trunkWidth": 1,
+                "trunkShape": "SINE",
+                "shapeAmplitude": 0.25,
+                "shapePeriod": 0.5,
+                "rotation": {"enabled": true, "yAxis": {"enabled": true, "min": 0, "max": 360, "interval": 90}},
+                "canopy": {
+                    "mode": "DENSITY",
+                    "leafDensity": 0.85,
+                    "branches": {
+                        "probabilityFunction": "TOP_HEAVY",
+                        "probabilityExponent": 2,
+                        "lengthFunction": "LINEAR",
+                        "lengthBase": 2,
+                        "lengthCrown": 5,
+                        "azimuthMode": "RANDOM",
+                        "elevation": 0,
+                        "clusterRadius": 2,
+                        "clusterMode": "DENSITY",
+                        "clusterDensity": 0.82,
+                        "subBranches": {
+                            "count": 2,
+                            "pitchDelta": -8,
+                            "yawDelta": 55,
+                            "lengthScale": 0.5,
+                            "clusterRadius": 1,
+                            "clusterMode": "TRIMMED"
+                        }
+                    }
+                },
+                "decorators": [
+                    {"target": "TRUNK_SURFACE", "block": "minecraft:vine", "chance": 0.12}
+                ]
+            },
+            {
+                "name": "emberbark-tall",
+                "chance": 0.35,
+                "density": 1,
+                "variants": 6,
+                "seed": 7302,
+                "trunk": "minecraft:dark_oak_log",
+                "trunkPalette": {
+                    "style": {"style": "STATIC"},
+                    "palette": [
+                        {"block": "minecraft:dark_oak_log", "weight": 5},
+                        {"block": "minecraft:spruce_log", "weight": 3},
+                        {"block": "minecraft:oak_wood", "weight": 2}
+                    ]
+                },
+                "leaves": "minecraft:jungle_leaves",
+                "leavesPalette": {
+                    "style": {"style": "CELLULAR", "zoom": 0.3},
+                    "palette": [
+                        {"block": "minecraft:jungle_leaves", "weight": 6},
+                        {"block": "minecraft:oak_leaves", "weight": 3},
+                        {"block": "minecraft:flowering_azalea_leaves", "weight": 1}
+                    ]
+                },
+                "profile": "OAK",
+                "heightMin": 15,
+                "heightMax": 19,
+                "trunkWidth": 2,
+                "trunkShape": "LOG",
+                "shapeBase": 2.2,
+                "rotation": {"enabled": true, "yAxis": {"enabled": true, "min": 0, "max": 360, "interval": 90}},
+                "canopy": {
+                    "mode": "DENSITY",
+                    "leafDensity": 0.82,
+                    "branches": {
+                        "probabilityFunction": "TOP_HEAVY",
+                        "probabilityExponent": 1.8,
+                        "lengthFunction": "LINEAR",
+                        "lengthBase": 3,
+                        "lengthCrown": 6,
+                        "azimuthMode": "RANDOM",
+                        "clusterRadius": 3,
+                        "clusterMode": "DENSITY",
+                        "clusterDensity": 0.8
+                    }
+                }
+            }
+        ]
+    },
+    "decorators": [
+        {"chance": 0.4, "palette": [{"block": "minecraft:short_grass"}]},
+        {"chance": 0.08, "palette": [{"block": "minecraft:fern"}]},
+        {"chance": 0.04, "palette": [{"block": "minecraft:red_mushroom"}]},
+        "snippet/decorator/leaf",
+        "snippet/decorator/bush"
+    ]
+}

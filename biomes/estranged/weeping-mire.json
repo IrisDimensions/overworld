@@ -1,0 +1,97 @@
+{
+    "name": "Weeping Mire",
+    "color": "#6E7A3C",
+    "rarity": 2,
+    "derivative": "minecraft:swamp",
+    "vanillaDerivative": "minecraft:swamp",
+    "customDerivitives": [{
+        "id": "estranged_weeping",
+        "foliageColor": "#6A7039",
+        "grassColor": "#6A7039",
+        "category": "swamp"
+    }],
+    "generators": [
+        {"generator": "plain", "max": 6, "min": 2}
+    ],
+    "wall": {"palette": [
+        {"block": "minecraft:stone"},
+        {"block": "minecraft:mossy_cobblestone"}
+    ]},
+    "layers": [
+        {"palette": [
+            {"weight": 14, "block": "minecraft:grass_block"},
+            {"block": "minecraft:mud"},
+            {"block": "minecraft:coarse_dirt"}
+        ]},
+        {"minHeight": 2, "maxHeight": 3, "palette": [
+            {"block": "minecraft:dirt"},
+            {"block": "minecraft:mud"}
+        ]}
+    ],
+    "proceduralObjects": {
+        "trees": [
+            {
+                "name": "weeping-willow",
+                "chance": 0.55,
+                "density": 2,
+                "variants": 6,
+                "seed": 7201,
+                "trunk": "minecraft:mangrove_log",
+                "trunkPalette": {
+                    "style": {"style": "CELLULAR", "zoom": 0.4},
+                    "zoom": 2,
+                    "palette": [
+                        {"block": "minecraft:mangrove_log", "weight": 5},
+                        {"block": "minecraft:oak_log", "weight": 3}
+                    ]
+                },
+                "leaves": "minecraft:oak_leaves",
+                "leavesPalette": {
+                    "style": {"style": "CELLULAR", "zoom": 0.3},
+                    "zoom": 4,
+                    "palette": [
+                        {"block": "minecraft:oak_leaves", "weight": 5},
+                        {"block": "minecraft:jungle_leaves", "weight": 3}
+                    ]
+                },
+                "profile": "WILLOW",
+                "heightMin": 11,
+                "heightMax": 17,
+                "trunkWidth": 2,
+                "rotation": {"enabled": true, "yAxis": {"enabled": true, "min": 0, "max": 360, "interval": 90}},
+                "canopy": {
+                    "startAngle": 55,
+                    "squish": 0.5,
+                    "mode": "DENSITY",
+                    "leafDensity": 0.82,
+                    "branches": {
+                        "probabilityFunction": "GAUSSIAN",
+                        "probabilityMean": 0.8,
+                        "probabilityStd": 0.2,
+                        "lengthFunction": "LINEAR",
+                        "lengthBase": 4,
+                        "lengthCrown": 7,
+                        "azimuthMode": "RANDOM",
+                        "elevation": -28,
+                        "clusterRadius": 2,
+                        "clusterMode": "DENSITY",
+                        "clusterDensity": 0.8
+                    }
+                },
+                "decorators": [
+                    {"target": "CANOPY_HANG", "block": "minecraft:vine", "chance": 0.5, "length": 5},
+                    {"target": "TRUNK_SURFACE", "block": "minecraft:vine", "chance": 0.25}
+                ]
+            }
+        ]
+    },
+    "decorators": [
+        {"chance": 0.3, "palette": [
+            {"block": "minecraft:short_grass", "weight": 3},
+            {"block": "minecraft:fern", "weight": 1}
+        ]},
+        {"chance": 0.02, "palette": [{"block": "minecraft:brown_mushroom"}]},
+        "snippet/decorator/leaf",
+        "snippet/decorator/bush"
+    ]
+}

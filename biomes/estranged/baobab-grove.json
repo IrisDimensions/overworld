@@ -1,0 +1,149 @@
+{
+    "name": "Baobab Grove",
+    "color": "#C8B45A",
+    "rarity": 2,
+    "derivative": "minecraft:savanna",
+    "vanillaDerivative": "minecraft:savanna",
+    "customDerivitives": [{
+        "id": "estranged_baobab",
+        "foliageColor": "#A6B24A",
+        "grassColor": "#BFB755",
+        "category": "savanna"
+    }],
+    "generators": [
+        {"generator": "smooth-dunes", "max": 10, "min": 4},
+        {"generator": "rare-hills", "max": 32, "min": 0}
+    ],
+    "wall": {"palette": [
+        {"block": "minecraft:stone"},
+        {"block": "minecraft:andesite"},
+        {"block": "minecraft:cobblestone"}
+    ]},
+    "layers": [
+        {"palette": [
+            {"weight": 18, "block": "minecraft:grass_block"},
+            {"block": "minecraft:coarse_dirt"}
+        ]},
+        {"minHeight": 2, "maxHeight": 2, "palette": [{"block": "minecraft:dirt"}]},
+        {"minHeight": 1, "maxHeight": 3, "palette": [
+            {"block": "minecraft:dirt"},
+            {"block": "minecraft:stone"}
+        ]}
+    ],
+    "proceduralObjects": {
+        "trees": [
+            {
+                "name": "baobab-giant",
+                "chance": 0.22,
+                "density": 1,
+                "variants": 6,
+                "seed": 7001,
+                "trunk": "minecraft:acacia_log",
+                "trunkPalette": {
+                    "style": {"style": "STATIC"},
+                    "zoom": 2,
+                    "palette": [
+                        {"block": "minecraft:acacia_log", "weight": 6},
+                        {"block": "minecraft:oak_wood", "weight": 3},
+                        {"block": "minecraft:jungle_log", "weight": 2}
+                    ]
+                },
+                "leaves": "minecraft:acacia_leaves",
+                "leavesPalette": {
+                    "style": {"style": "CELLULAR", "zoom": 0.35},
+                    "zoom": 4,
+                    "palette": [
+                        {"block": "minecraft:acacia_leaves", "weight": 6},
+                        {"block": "minecraft:oak_leaves", "weight": 3}
+                    ]
+                },
+                "profile": "DARK_OAK_FLAT_WIDE",
+                "heightMin": 16,
+                "heightMax": 24,
+                "trunkWidth": 4,
+                "trunkShape": "LINEAR",
+                "shapeStart": 1.3,
+                "shapeEnd": 0.4,
+                "rotation": {"enabled": true, "yAxis": {"enabled": true, "min": 0, "max": 360, "interval": 90}},
+                "canopy": {
+                    "startAngle": 112,
+                    "squish": 0.5,
+                    "mode": "DENSITY",
+                    "leafDensity": 0.85,
+                    "branches": {
+                        "probabilityFunction": "TOP_HEAVY",
+                        "probabilityExponent": 3,
+                        "lengthFunction": "LINEAR",
+                        "lengthBase": 3,
+                        "lengthCrown": 8,
+                        "azimuthMode": "RANDOM",
+                        "elevation": 8,
+                        "clusterRadius": 3,
+                        "clusterMode": "DENSITY",
+                        "clusterDensity": 0.82,
+                        "subBranches": {
+                            "count": 2,
+                            "pitchDelta": 12,
+                            "yawDelta": 60,
+                            "lengthScale": 0.5,
+                            "clusterRadius": 2,
+                            "clusterMode": "DENSITY",
+                            "clusterDensity": 0.8
+                        }
+                    }
+                }
+            },
+            {
+                "name": "baobab-young",
+                "chance": 0.18,
+                "density": 1,
+                "variants": 5,
+                "seed": 7002,
+                "trunk": "minecraft:acacia_log",
+                "trunkPalette": {
+                    "style": {"style": "STATIC"},
+                    "palette": [
+                        {"block": "minecraft:acacia_log", "weight": 5},
+                        {"block": "minecraft:oak_wood", "weight": 2}
+                    ]
+                },
+                "leaves": "minecraft:acacia_leaves",
+                "profile": "DARK_OAK_FLAT_WIDE",
+                "heightMin": 10,
+                "heightMax": 14,
+                "trunkWidth": 2,
+                "trunkShape": "LINEAR",
+                "shapeStart": 1.2,
+                "shapeEnd": 0.5,
+                "rotation": {"enabled": true, "yAxis": {"enabled": true, "min": 0, "max": 360, "interval": 90}},
+                "canopy": {
+                    "startAngle": 108,
+                    "squish": 0.5,
+                    "mode": "DENSITY",
+                    "leafDensity": 0.85,
+                    "branches": {
+                        "probabilityFunction": "TOP_HEAVY",
+                        "probabilityExponent": 2.5,
+                        "lengthFunction": "LINEAR",
+                        "lengthBase": 2,
+                        "lengthCrown": 5,
+                        "azimuthMode": "RANDOM",
+                        "elevation": 6,
+                        "clusterRadius": 2,
+                        "clusterMode": "DENSITY",
+                        "clusterDensity": 0.82
+                    }
+                }
+            }
+        ]
+    },
+    "decorators": [
+        {"chance": 0.4, "palette": [{"block": "minecraft:short_grass"}]},
+        {"chance": 0.04, "palette": [
+            {"block": "minecraft:dandelion"},
+            {"block": "minecraft:oxeye_daisy"}
+        ]},
+        "snippet/decorator/leaf",
+        "snippet/decorator/bush"
+    ]
+}

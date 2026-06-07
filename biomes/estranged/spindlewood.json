@@ -1,0 +1,130 @@
+{
+    "name": "Spindlewood",
+    "color": "#88BB55",
+    "rarity": 3,
+    "derivative": "minecraft:forest",
+    "vanillaDerivative": "minecraft:forest",
+    "customDerivitives": [{
+        "id": "estranged_spindle",
+        "foliageColor": "#88BB55",
+        "grassColor": "#82B84E",
+        "category": "forest"
+    }],
+    "generators": [
+        {"generator": "smooth-dunes", "max": 12, "min": 5},
+        {"generator": "rare-hills", "max": 36, "min": 0}
+    ],
+    "wall": {"palette": [
+        {"block": "minecraft:stone"},
+        {"block": "minecraft:andesite"},
+        {"block": "minecraft:cobblestone"}
+    ]},
+    "layers": [
+        {"palette": [{"block": "minecraft:grass_block"}]},
+        {"minHeight": 2, "maxHeight": 2, "palette": [{"block": "minecraft:dirt"}]},
+        {"minHeight": 1, "maxHeight": 3, "palette": [
+            {"block": "minecraft:dirt"},
+            {"block": "minecraft:stone"}
+        ]}
+    ],
+    "proceduralObjects": {
+        "trees": [
+            {
+                "name": "spindle-golden",
+                "chance": 0.6,
+                "density": 2,
+                "variants": 8,
+                "seed": 7501,
+                "trunk": "minecraft:birch_log",
+                "trunkPalette": {
+                    "style": {"style": "CELLULAR", "zoom": 0.4},
+                    "zoom": 2,
+                    "palette": [
+                        {"block": "minecraft:birch_log", "weight": 5},
+                        {"block": "minecraft:oak_log", "weight": 2}
+                    ]
+                },
+                "leaves": "minecraft:birch_leaves",
+                "leavesPalette": {
+                    "style": {"style": "CELLULAR", "zoom": 0.3},
+                    "palette": [
+                        {"block": "minecraft:birch_leaves", "weight": 5},
+                        {"block": "minecraft:azalea_leaves", "weight": 2}
+                    ]
+                },
+                "profile": "BUSH",
+                "heightMin": 8,
+                "heightMax": 13,
+                "trunkWidth": 1,
+                "rotation": {"enabled": true, "yAxis": {"enabled": true, "min": 0, "max": 360, "interval": 90}},
+                "canopy": {
+                    "mode": "CLUMPED",
+                    "leafDensity": 0.7,
+                    "branches": {
+                        "probabilityFunction": "LINEAR",
+                        "probabilityBase": 0.2,
+                        "probabilityCrown": 0.9,
+                        "lengthFunction": "LINEAR",
+                        "lengthBase": 2,
+                        "lengthCrown": 4,
+                        "azimuthMode": "GOLDEN_ANGLE",
+                        "elevation": 15,
+                        "clusterRadius": 2,
+                        "clusterMode": "CLUMPED",
+                        "clusterDensity": 0.75,
+                        "subBranches": {
+                            "count": 2,
+                            "pitchDelta": 20,
+                            "yawDelta": 80,
+                            "lengthScale": 0.55,
+                            "clusterRadius": 1,
+                            "clusterMode": "CLUMPED"
+                        }
+                    }
+                }
+            },
+            {
+                "name": "spindle-whorl",
+                "chance": 0.4,
+                "density": 2,
+                "variants": 6,
+                "seed": 7502,
+                "trunk": "minecraft:oak_log",
+                "leaves": "minecraft:birch_leaves",
+                "profile": "COLUMNAR",
+                "heightMin": 11,
+                "heightMax": 16,
+                "trunkWidth": 1,
+                "azimuthWhorlCount": 5,
+                "rotation": {"enabled": true, "yAxis": {"enabled": true, "min": 0, "max": 360, "interval": 90}},
+                "canopy": {
+                    "mode": "DENSITY",
+                    "leafDensity": 0.78,
+                    "branches": {
+                        "probabilityFunction": "PERIODIC",
+                        "probabilityConstant": 0.9,
+                        "probabilityPeriods": 4,
+                        "lengthFunction": "LINEAR",
+                        "lengthBase": 2,
+                        "lengthCrown": 4,
+                        "azimuthMode": "WHORL",
+                        "elevation": 8,
+                        "clusterRadius": 2,
+                        "clusterMode": "DENSITY",
+                        "clusterDensity": 0.78
+                    }
+                }
+            }
+        ]
+    },
+    "decorators": [
+        {"chance": 0.45, "palette": [{"block": "minecraft:short_grass"}]},
+        {"chance": 0.06, "palette": [
+            {"block": "minecraft:cornflower"},
+            {"block": "minecraft:oxeye_daisy"},
+            {"block": "minecraft:azure_bluet"}
+        ]},
+        "snippet/decorator/leaf",
+        "snippet/decorator/bush"
+    ]
+}
