@@ -1,5 +1,89 @@
 {
     "name": "Ocean Warm",
+    "proceduralObjects": {
+        "coral": [
+            {
+                "name": "reef-branch",
+                "chance": 0.7,
+                "density": 4,
+                "variants": 8,
+                "seed": 9411,
+                "underwater": true,
+                "waterlogged": true,
+                "form": "BRANCHING",
+                "block": "minecraft:fire_coral_block",
+                "blockPalette": {
+                    "style": {"style": "CELLULAR", "zoom": 0.3},
+                    "palette": [
+                        {"block": "minecraft:fire_coral_block", "weight": 3},
+                        {"block": "minecraft:tube_coral_block", "weight": 2},
+                        {"block": "minecraft:bubble_coral_block", "weight": 2},
+                        {"block": "minecraft:horn_coral_block", "weight": 2},
+                        {"block": "minecraft:brain_coral_block", "weight": 2}
+                    ]
+                },
+                "tipBlock": "minecraft:sea_pickle",
+                "tipChance": 0.5,
+                "heightMin": 4,
+                "heightMax": 8,
+                "spread": 1.1,
+                "sway": 0.45,
+                "branchCount": 6,
+                "branchLength": 4,
+                "branchElevation": 40,
+                "branchAzimuth": "GOLDEN_ANGLE",
+                "subBranches": true,
+                "subBranchCount": 2,
+                "subBranchScale": 0.6,
+                "tipClusterRadius": 1,
+                "rotation": {"enabled": true, "yAxis": {"enabled": true, "min": 0, "max": 360, "interval": 90}}
+            },
+            {
+                "name": "reef-brain",
+                "chance": 0.45,
+                "density": 3,
+                "variants": 5,
+                "seed": 9412,
+                "underwater": true,
+                "waterlogged": true,
+                "form": "BRAIN",
+                "block": "minecraft:brain_coral_block",
+                "blockPalette": {
+                    "style": {"style": "CELLULAR", "zoom": 0.35},
+                    "palette": [
+                        {"block": "minecraft:brain_coral_block", "weight": 3},
+                        {"block": "minecraft:bubble_coral_block", "weight": 2}
+                    ]
+                },
+                "brainRadius": 4,
+                "brainRoughness": 0.4,
+                "rotation": {"enabled": true, "yAxis": {"enabled": true, "min": 0, "max": 360, "interval": 90}}
+            },
+            {
+                "name": "reef-fan",
+                "chance": 0.4,
+                "density": 3,
+                "variants": 5,
+                "seed": 9413,
+                "underwater": true,
+                "waterlogged": true,
+                "form": "FAN",
+                "block": "minecraft:horn_coral_block",
+                "blockPalette": {
+                    "style": {"style": "CELLULAR", "zoom": 0.3},
+                    "palette": [
+                        {"block": "minecraft:horn_coral_block", "weight": 3},
+                        {"block": "minecraft:fire_coral_block", "weight": 2}
+                    ]
+                },
+                "heightMin": 3,
+                "heightMax": 6,
+                "fanWidth": 5,
+                "sway": 0.3,
+                "rotation": {"enabled": true, "yAxis": {"enabled": true, "min": 0, "max": 360, "interval": 90}}
+            }
+        ]
+    },
     "color": "#382CAA",
     "derivative": "minecraft:warm_ocean",
     "vanillaDerivative": "minecraft:warm_ocean",

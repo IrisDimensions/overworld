@@ -1,5 +1,65 @@
 {
     "name": "Temperate Ocean",
+    "proceduralObjects": {
+        "coral": [
+            {
+                "name": "branch-coral",
+                "chance": 0.5,
+                "density": 3,
+                "variants": 6,
+                "seed": 9401,
+                "underwater": true,
+                "waterlogged": true,
+                "form": "BRANCHING",
+                "block": "minecraft:tube_coral_block",
+                "blockPalette": {
+                    "style": {"style": "CELLULAR", "zoom": 0.3},
+                    "palette": [
+                        {"block": "minecraft:tube_coral_block", "weight": 3},
+                        {"block": "minecraft:brain_coral_block", "weight": 2},
+                        {"block": "minecraft:bubble_coral_block", "weight": 2},
+                        {"block": "minecraft:horn_coral_block", "weight": 2}
+                    ]
+                },
+                "tipBlock": "minecraft:sea_pickle",
+                "tipChance": 0.4,
+                "heightMin": 3,
+                "heightMax": 6,
+                "spread": 1.0,
+                "sway": 0.4,
+                "branchCount": 5,
+                "branchLength": 3,
+                "branchElevation": 35,
+                "branchAzimuth": "GOLDEN_ANGLE",
+                "subBranches": true,
+                "subBranchCount": 2,
+                "subBranchScale": 0.6,
+                "tipClusterRadius": 1,
+                "rotation": {"enabled": true, "yAxis": {"enabled": true, "min": 0, "max": 360, "interval": 90}}
+            },
+            {
+                "name": "brain-coral",
+                "chance": 0.35,
+                "density": 2,
+                "variants": 5,
+                "seed": 9402,
+                "underwater": true,
+                "waterlogged": true,
+                "form": "BRAIN",
+                "block": "minecraft:brain_coral_block",
+                "blockPalette": {
+                    "style": {"style": "CELLULAR", "zoom": 0.35},
+                    "palette": [
+                        {"block": "minecraft:brain_coral_block", "weight": 3},
+                        {"block": "minecraft:bubble_coral_block", "weight": 1}
+                    ]
+                },
+                "brainRadius": 3,
+                "brainRoughness": 0.4,
+                "rotation": {"enabled": true, "yAxis": {"enabled": true, "min": 0, "max": 360, "interval": 90}}
+            }
+        ]
+    },
     "color": "#395FDF",
     "derivative": "minecraft:lukewarm_ocean",
     "vanillaDerivative": "minecraft:ocean",
