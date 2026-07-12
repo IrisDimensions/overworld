@@ -1,0 +1,92 @@
+name: Publish Master as Beta Pack
+
+on:
+  push:
+    branches:
+      - "**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: overworld-beta-release
+  cancel-in-progress: true
+
+env:
+  RELEASE_TAG: beta
+  RELEASE_TITLE: Overworld Beta
+  ASSET_PATH: overworld.zip
+
+jobs:
+  publish:
+    name: Archive latest master
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out latest master
+        uses: actions/checkout@v6
+        with:
+          ref: refs/heads/master
+          fetch-depth: 1
+
+      - name: Build and verify master archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          remote_master_sha="$(git ls-remote origin refs/heads/master | cut -f1)"
+          archive_sha="$(git rev-parse HEAD)"
+
+          if [[ "$archive_sha" != "$remote_master_sha" ]]; then
+            echo "Checked out commit $archive_sha does not match master head $remote_master_sha" >&2
+            exit 1
+          fi
+
+          echo "ARCHIVE_SHA=$archive_sha" >> "$GITHUB_ENV"
+          git archive --format=zip --output="$ASSET_PATH" HEAD
+          unzip -t "$ASSET_PATH"
+          unzip -Z1 "$ASSET_PATH" | grep -Fx "dimensions/overworld.json"
+
+      - name: Publish beta release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          release_notes="Automated beta archive from master commit ${ARCHIVE_SHA}."
+
+          if gh api "repos/${GITHUB_REPOSITORY}/git/ref/tags/${RELEASE_TAG}" >/dev/null 2>&1; then
+            gh api \
+              --method PATCH \
+              "repos/${GITHUB_REPOSITORY}/git/refs/tags/${RELEASE_TAG}" \
+              -f sha="$ARCHIVE_SHA" \
+              -F force=true \
+              >/dev/null
+          else
+            gh api \
+              --method POST \
+              "repos/${GITHUB_REPOSITORY}/git/refs" \
+              -f ref="refs/tags/${RELEASE_TAG}" \
+              -f sha="$ARCHIVE_SHA" \
+              >/dev/null
+          fi
+
+          if gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release upload "$RELEASE_TAG" "$ASSET_PATH" \
+              --repo "$GITHUB_REPOSITORY" \
+              --clobber
+            gh release edit "$RELEASE_TAG" \
+              --repo "$GITHUB_REPOSITORY" \
+              --title "$RELEASE_TITLE" \
+              --notes "$release_notes" \
+              --prerelease \
+              --latest=false
+          else
+            gh release create "$RELEASE_TAG" "$ASSET_PATH" \
+              --repo "$GITHUB_REPOSITORY" \
+              --verify-tag \
+              --title "$RELEASE_TITLE" \
+              --notes "$release_notes" \
+              --prerelease \
+              --latest=false
+          fi
