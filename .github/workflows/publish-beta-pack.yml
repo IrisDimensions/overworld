@@ -3,7 +3,7 @@ name: Publish Master as Beta Pack
 on:
   push:
     branches:
-      - "**"
+      - master
   workflow_dispatch:
 
 permissions:
@@ -11,7 +11,7 @@ permissions:
 
 concurrency:
   group: overworld-beta-release
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 env:
   RELEASE_TAG: beta
@@ -20,11 +20,11 @@ env:
 
 jobs:
   publish:
-    name: Archive latest master
+    name: Archive latest master build
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out latest master
+      - name: Check out latest master build
         uses: actions/checkout@v6
         with:
           ref: refs/heads/master
@@ -79,6 +79,7 @@ jobs:
               --repo "$GITHUB_REPOSITORY" \
               --title "$RELEASE_TITLE" \
               --notes "$release_notes" \
+              --draft=false \
               --prerelease \
               --latest=false
           else
