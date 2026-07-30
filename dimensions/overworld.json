@@ -36,26 +36,46 @@
   },
   "structures": [
     {
-      "structures": [
-        "minecraft_ancient_city"
+      "nativeStructures": [
+        {
+          "structure": "minecraft:ancient_city"
+        }
       ],
-      "placementId": "ancient-city-overbore",
+      "placementId": "ancient-city-native",
       "nativeSuppression": "REPLACE_SOURCE",
       "underground": true,
-      "overbore": true,
-      "overboreShape": "ERODED",
-      "overboreErosionStrength": 1.0,
-      "overboreErosionFrequency": 0.16,
-      "overboreRadius": 6,
-      "overboreHeight": 10,
-      "overboreFloor": 0,
+      "terrain": {
+        "mode": "FORCE_CARVE",
+        "horizontalPadding": 24,
+        "ceilingPadding": 16,
+        "floorPadding": 0,
+        "shape": "ERODED",
+        "erosionStrength": 1.0,
+        "erosionFrequency": 0.16
+      },
       "stilt": {
         "maxDepth": 768,
-        "supportNonOccluding": true,
+        "spacing": 4,
         "palette": {
+          "style": {
+            "style": "STATIC"
+          },
           "palette": [
             {
-              "block": "minecraft:deepslate_bricks"
+              "block": "minecraft:deepslate_bricks",
+              "weight": 6
+            },
+            {
+              "block": "minecraft:cracked_deepslate_bricks",
+              "weight": 1
+            },
+            {
+              "block": "minecraft:deepslate_tiles",
+              "weight": 2
+            },
+            {
+              "block": "minecraft:cracked_deepslate_tiles",
+              "weight": 1
             }
           ]
         }
