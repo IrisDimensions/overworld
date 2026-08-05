@@ -1,15 +1,53 @@
 {
   "version": 4000,
   "name": "Overworld",
+  "datapackImports": [
+    "https://modrinth.com/datapack/towns-and-towers",
+    "https://modrinth.com/datapack/dungeons-and-taverns"
+  ],
   "importedStructures": {
     "datapackOverrides": true,
-    "disabled": [],
+    "disabled": [
+      "minecraft:village",
+      "minecraft:pillager_outpost",
+      "nova_structures:"
+    ],
     "adjustments": [
       {
         "match": [
           "minecraft:stronghold"
         ],
-        "yShift": -64
+        "yBand": {
+          "min": -120,
+          "max": -20
+        },
+        "terrain": {
+          "mode": "ENCASE",
+          "horizontalPadding": 4,
+          "ceilingPadding": 4,
+          "floorPadding": 4,
+          "encasePalette": {
+            "zoom": 1,
+            "palette": [
+              {
+                "block": "minecraft:stone_bricks",
+                "weight": 6
+              },
+              {
+                "block": "minecraft:mossy_stone_bricks",
+                "weight": 2
+              },
+              {
+                "block": "minecraft:cracked_stone_bricks",
+                "weight": 2
+              },
+              {
+                "block": "minecraft:cobblestone",
+                "weight": 1
+              }
+            ]
+          }
+        }
       },
       {
         "match": [
@@ -19,7 +57,28 @@
       },
       {
         "match": [
+          "minecraft:mineshaft"
+        ],
+        "preserveSourceY": true
+      },
+      {
+        "match": [
           "minecraft:village"
+        ],
+        "stilt": {
+          "maxDepth": 768,
+          "palette": {
+            "palette": [
+              {
+                "block": "minecraft:cobblestone"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "match": [
+          "towns_and_towers:"
         ],
         "stilt": {
           "maxDepth": 768,
@@ -46,12 +105,12 @@
       "underground": true,
       "terrain": {
         "mode": "FORCE_CARVE",
-        "horizontalPadding": 24,
-        "ceilingPadding": 16,
+        "horizontalPadding": 14,
+        "ceilingPadding": 12,
         "floorPadding": 0,
         "shape": "ERODED",
         "erosionStrength": 1.0,
-        "erosionFrequency": 0.16
+        "erosionFrequency": 0.05
       },
       "stilt": {
         "maxDepth": 768,
@@ -89,7 +148,7 @@
     }
   ],
   "fullbright": false,
-   "upperDimension": "",
+  "upperDimension": "",
   "upperDimensionGap": 32,
   "upperDimensionCarving": false,
   "upperDimensionObjects": false,
