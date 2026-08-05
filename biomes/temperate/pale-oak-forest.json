@@ -1,0 +1,91 @@
+{
+    "name": "Pale Oak Forest",
+    "color": "#A0A69D",
+    "rarity": 6,
+    "derivative": "minecraft:forest",
+    "vanillaDerivative": "minecraft:pale_garden",
+    "customDerivitives": [
+        {
+            "id": "temperate_pale_oak_forest",
+            "foliageColor": "#A8AAA5",
+            "grassColor": "#7E867A",
+            "fogColor": "#A6AAA7",
+            "category": "forest"
+        }
+    ],
+    "generators": [
+        {"generator": "smooth-dunes", "max": 14, "min": 5},
+        {"generator": "rare-hills", "max": 36, "min": 0}
+    ],
+    "wall": {
+        "palette": [
+            {"block": "minecraft:stone", "weight": 4},
+            {"block": "minecraft:andesite", "weight": 2},
+            {"block": "minecraft:calcite", "weight": 1}
+        ]
+    },
+    "layers": [
+        {
+            "style": {"style": "SIMPLEX", "zoom": 0.55},
+            "palette": [
+                {"block": "minecraft:grass_block", "weight": 4},
+                {"block": "minecraft:pale_moss_block", "weight": 5},
+                {"block": "minecraft:coarse_dirt", "weight": 1}
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 3,
+            "palette": [
+                {"block": "minecraft:dirt", "weight": 5},
+                {"block": "minecraft:rooted_dirt", "weight": 1}
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 5,
+            "palette": [
+                {"block": "minecraft:stone", "weight": 5},
+                {"block": "minecraft:calcite", "weight": 1}
+            ]
+        }
+    ],
+    "objects": [
+        {
+            "chance": 0.64,
+            "density": 2,
+            "rotation": {
+                "enabled": true,
+                "yAxis": {"enabled": true, "min": 0, "max": 270, "interval": 90}
+            },
+            "place": [
+                "vanilla/trees/pale_oak",
+                "vanilla/trees/pale_oak_2",
+                "vanilla/trees/pale_oak_3",
+                "vanilla/trees/pale_oak_bonemeal",
+                "vanilla/trees/pale_oak_bonemeal_2",
+                "vanilla/trees/pale_oak_bonemeal_3",
+                "vanilla/trees/pale_oak_creaking",
+                "vanilla/trees/pale_oak_creaking_2",
+                "vanilla/trees/pale_oak_creaking_3"
+            ]
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.36,
+            "palette": [
+                {"block": "minecraft:pale_moss_carpet", "weight": 6},
+                {"block": "minecraft:short_grass", "weight": 2},
+                {"block": "minecraft:air", "weight": 2}
+            ]
+        },
+        {
+            "chance": 0.018,
+            "palette": [
+                {"block": "minecraft:closed_eyeblossom", "weight": 3},
+                {"block": "minecraft:open_eyeblossom", "weight": 1}
+            ]
+        }
+    ]
+}

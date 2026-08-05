@@ -1,0 +1,162 @@
+{
+    "name": "Pale Denmyre",
+    "color": "#8A8E86",
+    "rarity": 5,
+    "derivative": "minecraft:swamp",
+    "vanillaDerivative": "minecraft:pale_garden",
+    "customDerivitives": [
+        {
+            "id": "pale_denmyre",
+            "foliageColor": "#9A9D96",
+            "grassColor": "#6F746E",
+            "skyColor": "#777B78",
+            "fogColor": "#656A67",
+            "category": "swamp"
+        }
+    ],
+    "generators": [
+        {
+            "min": 4,
+            "max": 8,
+            "generator": "plain"
+        },
+        {
+            "min": 0,
+            "max": 12,
+            "generator": "rare-hills"
+        }
+    ],
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {"block": "minecraft:stone", "weight": 4},
+            {"block": "minecraft:calcite", "weight": 2},
+            {"block": "minecraft:tuff", "weight": 2}
+        ]
+    },
+    "layers": [
+        {
+            "style": {"style": "CELLULAR", "zoom": 0.45},
+            "palette": [
+                {"block": "minecraft:pale_moss_block", "weight": 8},
+                {"block": "minecraft:mud", "weight": 2},
+                {"block": "minecraft:rooted_dirt", "weight": 1}
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "palette": [
+                {"block": "minecraft:dirt", "weight": 3},
+                {"block": "minecraft:mud", "weight": 2},
+                {"block": "minecraft:calcite", "weight": 1}
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "palette": [
+                {"block": "minecraft:stone", "weight": 4},
+                {"block": "minecraft:tuff", "weight": 2},
+                {"block": "minecraft:calcite", "weight": 1}
+            ]
+        }
+    ],
+    "objects": [
+        {
+            "chance": 0.72,
+            "density": 2,
+            "edit": [
+                {
+                    "find": [
+                        {"block": "minecraft:dark_oak_log"},
+                        {"block": "minecraft:dark_oak_wood"},
+                        {"block": "minecraft:stripped_dark_oak_log"},
+                        {"block": "minecraft:stripped_dark_oak_wood"}
+                    ],
+                    "replace": {"palette": [{"block": "minecraft:pale_oak_wood"}]}
+                },
+                {
+                    "find": [{"block": "minecraft:dark_oak_leaves"}],
+                    "replace": {"palette": [{"block": "minecraft:pale_oak_leaves"}]}
+                },
+                {
+                    "find": [
+                        {"block": "minecraft:dark_oak_planks"},
+                        {"block": "minecraft:spruce_planks"}
+                    ],
+                    "replace": {"palette": [{"block": "minecraft:pale_oak_planks"}]}
+                },
+                {
+                    "find": [
+                        {"block": "minecraft:dark_oak_fence"},
+                        {"block": "minecraft:spruce_fence"}
+                    ],
+                    "replace": {"palette": [{"block": "minecraft:pale_oak_fence"}]}
+                }
+            ],
+            "rotation": {
+                "enabled": true,
+                "yAxis": {"enabled": true, "min": 0, "max": 270, "interval": 90}
+            },
+            "place": [
+                "trees/darkoak/denmyre1",
+                "trees/darkoak/denmyre2",
+                "trees/darkoak/denmyre3",
+                "trees/darkoak/denmyre4",
+                "trees/darkoak/denmyre5",
+                "trees/darkoak/denmyre6",
+                "trees/darkoak/denmyre7",
+                "trees/darkoak/denmyre8",
+                "trees/darkoak/denmyre9",
+                "trees/darkoak/denmyre10",
+                "trees/darkoak/denmyre11",
+                "trees/darkoak/denmyre12",
+                "trees/darkoak/denmyre13",
+                "trees/darkoak/denmyre14",
+                "trees/darkoak/denmyre15",
+                "trees/darkoak/denmyre16"
+            ],
+            "translate": {"x": 0, "y": -1, "z": 0}
+        },
+        {
+            "chance": 0.14,
+            "density": 1,
+            "rotation": {
+                "enabled": true,
+                "yAxis": {"enabled": true, "min": 0, "max": 270, "interval": 90}
+            },
+            "place": [
+                "vanilla/trees/pale_oak",
+                "vanilla/trees/pale_oak_2",
+                "vanilla/trees/pale_oak_3",
+                "vanilla/trees/pale_oak_creaking",
+                "vanilla/trees/pale_oak_creaking_2",
+                "vanilla/trees/pale_oak_creaking_3"
+            ]
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.42,
+            "palette": [
+                {"block": "minecraft:pale_moss_carpet", "weight": 7},
+                {"block": "minecraft:air", "weight": 3}
+            ]
+        },
+        {
+            "chance": 0.035,
+            "palette": [
+                {"block": "minecraft:closed_eyeblossom", "weight": 3},
+                {"block": "minecraft:open_eyeblossom", "weight": 1}
+            ]
+        },
+        {
+            "chance": 0.02,
+            "palette": [
+                {"block": "minecraft:brown_mushroom"},
+                {"block": "minecraft:red_mushroom"}
+            ]
+        }
+    ]
+}

@@ -1,0 +1,125 @@
+{
+    "name": "Pale Pines",
+    "color": "#C4D1D3",
+    "rarity": 6,
+    "derivative": "minecraft:snowy_taiga",
+    "vanillaDerivative": "minecraft:snowy_taiga",
+    "customDerivitives": [
+        {
+            "id": "frozen_pale_pines",
+            "category": "taiga",
+            "downfallType": "snow",
+            "temperature": -3,
+            "foliageColor": "#BCC3C2",
+            "grassColor": "#D5DDDC",
+            "fogColor": "#DCE6E8",
+            "waterFogColor": "#728A99"
+        }
+    ],
+    "generators": [
+        {"min": 10, "max": 26, "generator": "mountain"}
+    ],
+    "wall": {
+        "palette": [
+            {"block": "minecraft:stone", "weight": 4},
+            {"block": "minecraft:calcite", "weight": 3},
+            {"block": "minecraft:packed_ice", "weight": 1}
+        ]
+    },
+    "layers": [
+        {
+            "minHeight": 0,
+            "maxHeight": 1,
+            "palette": [{"block": "minecraft:snow_block"}]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "palette": [
+                {"block": "minecraft:pale_moss_block", "weight": 4},
+                {"block": "minecraft:grass_block", "weight": 2}
+            ]
+        },
+        {
+            "minHeight": 3,
+            "maxHeight": 6,
+            "palette": [
+                {"block": "minecraft:dirt", "weight": 4},
+                {"block": "minecraft:calcite", "weight": 1},
+                {"block": "minecraft:packed_ice", "weight": 1}
+            ]
+        },
+        {
+            "minHeight": 6,
+            "maxHeight": 18,
+            "palette": [
+                {"block": "minecraft:stone", "weight": 5},
+                {"block": "minecraft:calcite", "weight": 2}
+            ]
+        }
+    ],
+    "objects": [
+        {
+            "chance": 0.58,
+            "density": 2,
+            "snow": 1,
+            "edit": [
+                {
+                    "find": [
+                        {"block": "minecraft:spruce_log"},
+                        {"block": "minecraft:spruce_wood"},
+                        {"block": "minecraft:stripped_spruce_log"},
+                        {"block": "minecraft:stripped_spruce_wood"}
+                    ],
+                    "replace": {"palette": [{"block": "minecraft:pale_oak_wood"}]}
+                },
+                {
+                    "find": [{"block": "minecraft:spruce_leaves"}],
+                    "replace": {"palette": [{"block": "minecraft:pale_oak_leaves"}]}
+                },
+                {
+                    "find": [{"block": "minecraft:spruce_planks"}],
+                    "replace": {"palette": [{"block": "minecraft:pale_oak_planks"}]}
+                },
+                {
+                    "find": [{"block": "minecraft:spruce_fence"}],
+                    "replace": {"palette": [{"block": "minecraft:pale_oak_fence"}]}
+                }
+            ],
+            "rotation": {
+                "enabled": true,
+                "yAxis": {"enabled": true, "min": 0, "max": 270, "interval": 90}
+            },
+            "place": [
+                "trees/spruce/levergreen1",
+                "trees/spruce/mevergreen1",
+                "trees/spruce/mevergreen2",
+                "trees/spruce/mevergreen3",
+                "trees/spruce/vgeneric1",
+                "trees/spruce/vgeneric2",
+                "trees/spruce/vgeneric3",
+                "trees/spruce/vgeneric4",
+                "trees/spruce/vgeneric5",
+                "trees/spruce/vgeneric6"
+            ],
+            "translate": {"x": 0, "y": -2, "z": 0}
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 1,
+            "variance": {"style": "NOWHERE", "zoom": 0.23},
+            "palette": [
+                {"block": "minecraft:snow", "data": {"layers": 1}},
+                {"block": "minecraft:air"}
+            ]
+        },
+        {
+            "chance": 0.12,
+            "palette": [
+                {"block": "minecraft:pale_moss_carpet", "weight": 2},
+                {"block": "minecraft:air", "weight": 8}
+            ]
+        }
+    ]
+}

@@ -1,0 +1,118 @@
+{
+    "name": "Pale Oak Highlands",
+    "color": "#C3C8C2",
+    "rarity": 6,
+    "derivative": "minecraft:old_growth_spruce_taiga",
+    "vanillaDerivative": "minecraft:pale_garden",
+    "customDerivitives": [
+        {
+            "id": "pale_oak_highlands",
+            "category": "forest",
+            "temperature": 0.35,
+            "foliageColor": "#B1B5AF",
+            "grassColor": "#919A8E",
+            "fogColor": "#C5CCCA"
+        }
+    ],
+    "generators": [
+        {"generator": "mountain", "max": 34, "min": 16},
+        {"generator": "vascular-cracked-cliffs", "max": 12, "min": 0}
+    ],
+    "wall": {
+        "palette": [
+            {"block": "minecraft:calcite", "weight": 4},
+            {"block": "minecraft:stone", "weight": 3},
+            {"block": "minecraft:tuff", "weight": 2},
+            {"block": "minecraft:diorite", "weight": 1}
+        ]
+    },
+    "layers": [
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "slopeCondition": {"minimumSlope": 0, "maximumSlope": 3.3},
+            "palette": [
+                {"block": "minecraft:pale_moss_block", "weight": 5},
+                {"block": "minecraft:grass_block", "weight": 2}
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "slopeCondition": {"minimumSlope": 3.4},
+            "palette": [
+                {"block": "minecraft:calcite", "weight": 4},
+                {"block": "minecraft:diorite", "weight": 2},
+                {"block": "minecraft:tuff", "weight": 1}
+            ]
+        },
+        {
+            "minHeight": 3,
+            "maxHeight": 5,
+            "slopeCondition": {"minimumSlope": 0, "maximumSlope": 3.3},
+            "palette": [
+                {"block": "minecraft:dirt", "weight": 4},
+                {"block": "minecraft:rooted_dirt", "weight": 1}
+            ]
+        }
+    ],
+    "objects": [
+        {
+            "chance": 0.38,
+            "density": 2,
+            "edit": [
+                {
+                    "find": [
+                        {"block": "minecraft:spruce_log"},
+                        {"block": "minecraft:spruce_wood"},
+                        {"block": "minecraft:stripped_spruce_log"},
+                        {"block": "minecraft:stripped_spruce_wood"}
+                    ],
+                    "replace": {"palette": [{"block": "minecraft:pale_oak_wood"}]}
+                },
+                {
+                    "find": [
+                        {"block": "minecraft:spruce_leaves"},
+                        {"block": "minecraft:dark_oak_fence"},
+                        {"block": "minecraft:dark_oak_fence_gate"}
+                    ],
+                    "replace": {"palette": [{"block": "minecraft:pale_oak_leaves"}]}
+                }
+            ],
+            "rotation": {
+                "enabled": true,
+                "yAxis": {"enabled": true, "min": -360, "max": 360, "interval": 90}
+            },
+            "place": [
+                "trees/spruce/vgeneric1",
+                "trees/spruce/vgeneric2",
+                "trees/spruce/vgeneric3",
+                "trees/spruce/vgeneric4",
+                "trees/spruce/vgeneric5",
+                "trees/spruce/vgeneric6",
+                "trees/spruce/vgeneric7",
+                "trees/spruce/vgeneric8",
+                "trees/spruce/vgeneric9",
+                "trees/spruce/vgeneric10",
+                "trees/spruce/vgeneric11",
+                "trees/spruce/vgeneric12"
+            ]
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.26,
+            "palette": [
+                {"block": "minecraft:pale_moss_carpet", "weight": 5},
+                {"block": "minecraft:air", "weight": 5}
+            ]
+        },
+        {
+            "chance": 0.012,
+            "palette": [
+                {"block": "minecraft:closed_eyeblossom", "weight": 3},
+                {"block": "minecraft:open_eyeblossom", "weight": 1}
+            ]
+        }
+    ]
+}
