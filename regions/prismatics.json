@@ -1,101 +1,107 @@
 {
-  "name": "Prismatics",
-  "color": "#8E6CFF",
-  "rarity": 20,
-  "landBiomes": [
-    "prismatics/white",
-    "prismatics/orange",
-    "prismatics/magenta",
-    "prismatics/light-blue",
-    "prismatics/yellow",
-    "prismatics/lime",
-    "prismatics/pink",
-    "prismatics/gray",
-    "prismatics/light-gray",
-    "prismatics/cyan",
-    "prismatics/purple",
-    "prismatics/blue",
-    "prismatics/brown",
-    "prismatics/green",
-    "prismatics/red",
-    "prismatics/black"
-  ],
-  "shoreBiomes": [
-    "prismatics/shore"
-  ],
-  "seaBiomes": [
-    "prismatics/sea"
-  ],
-  "caveBiomes": [
-    "carving/prismatic-white",
-    "carving/prismatic-orange",
-    "carving/prismatic-magenta",
-    "carving/prismatic-light-blue",
-    "carving/prismatic-yellow",
-    "carving/prismatic-lime",
-    "carving/prismatic-pink",
-    "carving/prismatic-gray",
-    "carving/prismatic-light-gray",
-    "carving/prismatic-cyan",
-    "carving/prismatic-purple",
-    "carving/prismatic-blue",
-    "carving/prismatic-brown",
-    "carving/prismatic-green",
-    "carving/prismatic-red",
-    "carving/prismatic-black"
-  ],
-  "landBiomeZoom": 2.2,
-  "shoreBiomeZoom": 0.18,
-  "seaBiomeZoom": 3.0,
-  "caveBiomeZoom": 2.3,
-  "caveProfile": {
-    "enabled": true,
-    "verticalRange": {
-      "min": 6,
-      "max": 110
+    "name": "Prismatics",
+    "color": "#8E6CFF",
+    "rarity": 20,
+    "landBiomes": [
+        "prismatics/white",
+        "prismatics/orange",
+        "prismatics/magenta",
+        "prismatics/light-blue",
+        "prismatics/yellow",
+        "prismatics/lime",
+        "prismatics/pink",
+        "prismatics/gray",
+        "prismatics/light-gray",
+        "prismatics/cyan",
+        "prismatics/purple",
+        "prismatics/blue",
+        "prismatics/brown",
+        "prismatics/green",
+        "prismatics/red",
+        "prismatics/black"
+    ],
+    "shoreBiomes": [
+        "prismatics/shore"
+    ],
+    "seaBiomes": [
+        "prismatics/sea"
+    ],
+    "caveBiomes": [
+        "carving/prismatic-white",
+        "carving/prismatic-orange",
+        "carving/prismatic-magenta",
+        "carving/prismatic-light-blue",
+        "carving/prismatic-yellow",
+        "carving/prismatic-lime",
+        "carving/prismatic-pink",
+        "carving/prismatic-gray",
+        "carving/prismatic-light-gray",
+        "carving/prismatic-cyan",
+        "carving/prismatic-purple",
+        "carving/prismatic-blue",
+        "carving/prismatic-brown",
+        "carving/prismatic-green",
+        "carving/prismatic-red",
+        "carving/prismatic-black"
+    ],
+    "landBiomeZoom": 2.2,
+    "shoreBiomeZoom": 0.18,
+    "seaBiomeZoom": 3.0,
+    "caveBiomeZoom": 2.3,
+    "caveProfile": {
+        "enabled": true,
+        "verticalRange": {
+            "min": 6,
+            "max": 110
+        },
+        "baseDensityStyle": {
+            "style": "CELLULAR",
+            "zoom": 0.5
+        },
+        "detailDensityStyle": {
+            "style": "SIMPLEX",
+            "zoom": 0.5
+        },
+        "warpStyle": {
+            "style": "SIMPLEX",
+            "zoom": 0.5
+        },
+        "baseWeight": 1.0,
+        "detailWeight": 0.0,
+        "warpStrength": 0.0,
+        "densityThreshold": {
+            "min": -0.14,
+            "max": -0.08,
+            "style": {
+                "style": "SIMPLEX",
+                "zoom": 0.5
+            }
+        },
+        "thresholdBias": 0.08,
+        "sampleStep": 3,
+        "surfaceClearance": 12,
+        "allowSurfaceBreak": false,
+        "surfaceBreakStyle": {
+            "style": "SIMPLEX",
+            "zoom": 0.88
+        },
+        "surfaceBreakNoiseThreshold": 0.99,
+        "surfaceBreakDepth": 4,
+        "surfaceBreakThresholdBoost": 0.02,
+        "objectMinDepthBelowSurface": 14,
+        "defaultObjectAnchor": "FLOOR",
+        "defaultObjectPlaceMode": "ORGANIC_STILT",
+        "anchorScanStep": 1,
+        "anchorSearchAttempts": 12,
+        "allowWater": true,
+        "waterMinDepthBelowSurface": 20,
+        "waterRequiresFloor": true,
+        "allowLava": true
     },
-    "baseDensityStyle": {
-      "style": "CELLULAR",
-      "zoom": 0.5
-    },
-    "detailDensityStyle": {
-      "style": "SIMPLEX",
-      "zoom": 0.5
-    },
-    "warpStyle": {
-      "style": "SIMPLEX",
-      "zoom": 0.5
-    },
-    "baseWeight": 1.0,
-    "detailWeight": 0.0,
-    "warpStrength": 0.0,
-    "densityThreshold": {
-      "min": -0.14,
-      "max": -0.08,
-      "style": {
-        "style": "SIMPLEX",
-        "zoom": 0.5
-      }
-    },
-    "thresholdBias": 0.08,
-    "sampleStep": 3,
-    "surfaceClearance": 12,
-    "allowSurfaceBreak": false,
-    "surfaceBreakStyle": {
-      "style": "SIMPLEX",
-      "zoom": 0.88
-    },
-    "surfaceBreakNoiseThreshold": 0.99,
-    "surfaceBreakDepth": 4,
-    "surfaceBreakThresholdBoost": 0.02,
-    "objectMinDepthBelowSurface": 14,
-    "defaultObjectAnchor": "FLOOR",
-    "defaultObjectPlaceMode": "ORGANIC_STILT",
-    "anchorScanStep": 1,
-    "anchorSearchAttempts": 12,
-    "allowWater": true,
-    "waterMinDepthBelowSurface": 20,
-    "waterRequiresFloor": true,
-    "allowLava": true
-  }
+    "entitySpawners": [
+        "temperate/cave",
+        "temperate/hostile",
+        "temperate/passive",
+        "temperate/water"
+    ]
 }

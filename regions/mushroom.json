@@ -27,7 +27,15 @@
                 "capOverhang": 2,
                 "gillBlock": "minecraft:mushroom_stem",
                 "gillChance": 0.7,
-                "rotation": {"enabled": true, "yAxis": {"enabled": true, "min": 0, "max": 360, "interval": 90}}
+                "rotation": {
+                    "enabled": true,
+                    "yAxis": {
+                        "enabled": true,
+                        "min": 0,
+                        "max": 360,
+                        "interval": 90
+                    }
+                }
             },
             {
                 "name": "brown-table",
@@ -50,7 +58,15 @@
                 "capOverhang": 3,
                 "gillBlock": "minecraft:shroomlight",
                 "gillChance": 0.5,
-                "rotation": {"enabled": true, "yAxis": {"enabled": true, "min": 0, "max": 360, "interval": 90}}
+                "rotation": {
+                    "enabled": true,
+                    "yAxis": {
+                        "enabled": true,
+                        "min": 0,
+                        "max": 360,
+                        "interval": 90
+                    }
+                }
             },
             {
                 "name": "spindle-toadstool",
@@ -60,10 +76,19 @@
                 "seed": 9303,
                 "stem": "minecraft:mushroom_stem",
                 "stemPalette": {
-                    "style": {"style": "SIMPLEX", "zoom": 0.6},
+                    "style": {
+                        "style": "SIMPLEX",
+                        "zoom": 0.6
+                    },
                     "palette": [
-                        {"block": "minecraft:mushroom_stem", "weight": 5},
-                        {"block": "minecraft:pale_oak_wood", "weight": 1}
+                        {
+                            "block": "minecraft:mushroom_stem",
+                            "weight": 5
+                        },
+                        {
+                            "block": "minecraft:pale_oak_wood",
+                            "weight": 1
+                        }
                     ]
                 },
                 "cap": "minecraft:red_mushroom_block",
@@ -84,7 +109,15 @@
                 "spotChance": 0.25,
                 "gillBlock": "minecraft:shroomlight",
                 "gillChance": 0.6,
-                "rotation": {"enabled": true, "yAxis": {"enabled": true, "min": 0, "max": 360, "interval": 90}}
+                "rotation": {
+                    "enabled": true,
+                    "yAxis": {
+                        "enabled": true,
+                        "min": 0,
+                        "max": 360,
+                        "interval": 90
+                    }
+                }
             }
         ]
     },
@@ -223,5 +256,11 @@
         "allowLava": true,
         "modules": []
     },
-    "caveBiomeZoom": 3.2
+    "caveBiomeZoom": 3.2,
+    "entitySpawners": [
+        "mushroom/cave",
+        "mushroom/hostile",
+        "mushroom/passive",
+        "mushroom/water"
+    ]
 }
