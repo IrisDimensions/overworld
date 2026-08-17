@@ -241,13 +241,36 @@
         }
       },
       "topShapeAmp": 0.75,
-      "bottomStyle": {
-        "style": "FLAT"
+      "edgeTaperWidth": 14,
+      "edgeTaperExponent": 1.45,
+      "edgeTaperVariationStyle": {
+        "style": "SIMPLEX",
+        "zoom": 0.18
       },
-      "bottomDepthMin": 20,
-      "bottomDepthMax": 20,
-      "bottomExponent": 1.0,
-      "maxThickness": 40,
+      "edgeTaperVariationAmplitude": 4,
+      "bottomStyle": {
+        "style": "SIMPLEX_VASCULAR",
+        "zoom": 0.27,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.12,
+          "multiplier": 5
+        }
+      },
+      "bottomDepthMin": 5,
+      "bottomDepthMax": 48,
+      "bottomExponent": 2.4,
+      "maxThickness": 72,
+      "wallWarpStyle": {
+        "style": "SIMPLEX",
+        "zoom": 0.23,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.11,
+          "multiplier": 3
+        }
+      },
+      "wallWarpAmplitude": 5,
       "carving": "carving/rocky-cavebiome-child",
       "carveStyle": {
         "style": "SIMPLEX",

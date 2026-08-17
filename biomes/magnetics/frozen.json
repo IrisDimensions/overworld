@@ -1,4 +1,5 @@
 {
+  "proceduralObjects": "snippet/procedural-objects/frozen/magical-ice-spikes-surface",
   "name": "Magnetics Frozen",
   "color": "#A8C8E8",
   "rarity": 1,
@@ -115,29 +116,6 @@
     },
     {
       "place": [
-        "clutter/singleicespike1",
-        "clutter/singleicespike2",
-        "clutter/singleicespike3",
-        "clutter/singleicespike4",
-        "clutter/singleicespike5",
-        "clutter/icespiresmol1",
-        "clutter/icespiresmol2",
-        "clutter/icespiresmol3"
-      ],
-      "chance": 0.08,
-      "mode": "CENTER_HEIGHT",
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      }
-    },
-    {
-      "place": [
         "clutter/spruceclutt1",
         "clutter/spruceclutt2",
         "clutter/spruceclutt3",
@@ -156,24 +134,6 @@
         },
         "enabled": true
       }
-    },
-    {
-      "place": [
-        "clutter/smoleicespike1",
-        "clutter/smoleicespike2",
-        "clutter/smoleicespike3",
-        "clutter/smoleicespike4",
-        "clutter/smoleicespike5",
-        "clutter/smoleicespike6",
-        "clutter/smoleicespike7",
-        "clutter/smoleicespike8",
-        "clutter/smoleicespike9",
-        "clutter/icespec1",
-        "clutter/icespec2",
-        "clutter/icespec3"
-      ],
-      "chance": 0.35,
-      "mode": "CENTER_HEIGHT"
     }
   ],
   "decorators": [
@@ -229,14 +189,37 @@
         }
       },
       "topShapeAmp": 0.82,
-      "bottomStyle": {
-        "style": "FLAT"
+      "edgeTaperWidth": 14,
+      "edgeTaperExponent": 1.5,
+      "edgeTaperVariationStyle": {
+        "style": "SIMPLEX",
+        "zoom": 0.17
       },
-      "bottomDepthMin": 20,
-      "bottomDepthMax": 20,
-      "bottomExponent": 1.0,
+      "edgeTaperVariationAmplitude": 4,
+      "bottomStyle": {
+        "style": "SIMPLEX_VASCULAR",
+        "zoom": 0.27,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.11,
+          "multiplier": 5
+        }
+      },
+      "bottomDepthMin": 5,
+      "bottomDepthMax": 50,
+      "bottomExponent": 2.45,
       "bottomPaletteMode": "MIRROR_TOP",
-      "maxThickness": 40,
+      "maxThickness": 76,
+      "wallWarpStyle": {
+        "style": "SIMPLEX",
+        "zoom": 0.22,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.11,
+          "multiplier": 3
+        }
+      },
+      "wallWarpAmplitude": 5,
       "carving": "carving/ice-child",
       "carveStyle": {
         "style": "SIMPLEX",
@@ -252,41 +235,14 @@
       "inheritObjects": true,
       "objectShrinkFactor": 0.45,
       "topObjectMode": "MERGE",
-      "topObjectOverrides": [
-        {
-          "place": [
-            "clutter/singleicespike1",
-            "clutter/singleicespike2",
-            "clutter/singleicespike3"
-          ],
-          "chance": 0.7,
-          "mode": "FAST_MIN_HEIGHT",
-          "density": 8,
-          "rotation": {
-            "yAxis": {
-              "min": 0,
-              "max": 270,
-              "interval": 90,
-              "enabled": true
-            },
-            "enabled": true
-          },
-          "translate": {
-            "x": 0,
-            "y": -2,
-            "z": 0
-          }
-        }
-      ],
+      "topObjectOverrides": [],
       "bottomObjectMode": "INHERIT_ONLY",
       "bottomObjectOverrides": [
         {
           "place": [
             "trees/mushroom/ice1",
             "trees/mushroom/ice2",
-            "trees/mushroom/ice3",
-            "clutter/singleicespike4",
-            "clutter/singleicespike5"
+            "trees/mushroom/ice3"
           ],
           "chance": 0.62,
           "mode": "FAST_MIN_HEIGHT",
@@ -354,14 +310,37 @@
         }
       },
       "topShapeAmp": 0.8,
-      "bottomStyle": {
-        "style": "FLAT"
+      "edgeTaperWidth": 14,
+      "edgeTaperExponent": 1.45,
+      "edgeTaperVariationStyle": {
+        "style": "SIMPLEX",
+        "zoom": 0.18
       },
-      "bottomDepthMin": 18,
-      "bottomDepthMax": 18,
-      "bottomExponent": 1.0,
+      "edgeTaperVariationAmplitude": 4,
+      "bottomStyle": {
+        "style": "SIMPLEX_VASCULAR",
+        "zoom": 0.3,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.12,
+          "multiplier": 5
+        }
+      },
+      "bottomDepthMin": 5,
+      "bottomDepthMax": 46,
+      "bottomExponent": 2.35,
       "bottomPaletteMode": "MIRROR_TOP",
-      "maxThickness": 36,
+      "maxThickness": 72,
+      "wallWarpStyle": {
+        "style": "SIMPLEX",
+        "zoom": 0.24,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.12,
+          "multiplier": 3
+        }
+      },
+      "wallWarpAmplitude": 5,
       "carving": "carving/glacial-child",
       "carveStyle": {
         "style": "SIMPLEX",
@@ -409,10 +388,7 @@
           "place": [
             "trees/mushroom/ice4",
             "trees/mushroom/ice5",
-            "trees/mushroom/ice6",
-            "clutter/smoleicespike1",
-            "clutter/smoleicespike2",
-            "clutter/smoleicespike3"
+            "trees/mushroom/ice6"
           ],
           "chance": 0.55,
           "mode": "FAST_MIN_HEIGHT",
@@ -480,14 +456,37 @@
         }
       },
       "topShapeAmp": 0.9,
-      "bottomStyle": {
-        "style": "FLAT"
+      "edgeTaperWidth": 13,
+      "edgeTaperExponent": 1.6,
+      "edgeTaperVariationStyle": {
+        "style": "SIMPLEX",
+        "zoom": 0.16
       },
-      "bottomDepthMin": 20,
-      "bottomDepthMax": 20,
-      "bottomExponent": 1.0,
+      "edgeTaperVariationAmplitude": 3,
+      "bottomStyle": {
+        "style": "FRACTAL_RM_SIMPLEX",
+        "zoom": 0.25,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.1,
+          "multiplier": 5
+        }
+      },
+      "bottomDepthMin": 4,
+      "bottomDepthMax": 54,
+      "bottomExponent": 2.6,
       "bottomPaletteMode": "MIRROR_TOP",
-      "maxThickness": 41,
+      "maxThickness": 80,
+      "wallWarpStyle": {
+        "style": "SIMPLEX",
+        "zoom": 0.2,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.1,
+          "multiplier": 3
+        }
+      },
+      "wallWarpAmplitude": 4,
       "carving": "carving/frost-shards-child",
       "carveStyle": {
         "style": "SIMPLEX",
@@ -503,42 +502,14 @@
       "inheritObjects": true,
       "objectShrinkFactor": 0.95,
       "topObjectMode": "MERGE",
-      "topObjectOverrides": [
-        {
-          "place": [
-            "clutter/icespiresmol1",
-            "clutter/icespiresmol2",
-            "clutter/icespiresmol3"
-          ],
-          "chance": 0.6,
-          "mode": "FAST_MIN_HEIGHT",
-          "density": 6,
-          "rotation": {
-            "yAxis": {
-              "min": 0,
-              "max": 270,
-              "interval": 90,
-              "enabled": true
-            },
-            "enabled": true
-          },
-          "translate": {
-            "x": 0,
-            "y": -7,
-            "z": 0
-          }
-        }
-      ],
+      "topObjectOverrides": [],
       "bottomObjectMode": "REPLACE",
       "bottomObjectOverrides": [
         {
           "place": [
             "trees/mushroom/ice7",
             "trees/mushroom/ice8",
-            "trees/mushroom/ice9",
-            "clutter/smoleicespike7",
-            "clutter/smoleicespike8",
-            "clutter/smoleicespike9"
+            "trees/mushroom/ice9"
           ],
           "chance": 0.5,
           "mode": "FAST_MIN_HEIGHT",

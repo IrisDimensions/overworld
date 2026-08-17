@@ -198,12 +198,25 @@
         }
       },
       "topShapeAmp": 0.75,
-      "bottomStyle": {
-        "style": "FLAT"
+      "edgeTaperWidth": 14,
+      "edgeTaperExponent": 1.4,
+      "edgeTaperVariationStyle": {
+        "style": "SIMPLEX",
+        "zoom": 0.18
       },
-      "bottomDepthMin": 18,
-      "bottomDepthMax": 18,
-      "bottomExponent": 1.0,
+      "edgeTaperVariationAmplitude": 4,
+      "bottomStyle": {
+        "style": "SIMPLEX_VASCULAR",
+        "zoom": 0.3,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.13,
+          "multiplier": 5
+        }
+      },
+      "bottomDepthMin": 6,
+      "bottomDepthMax": 46,
+      "bottomExponent": 2.2,
       "bottomPaletteMode": "CUSTOM",
       "bottomPalette": [
         {
@@ -216,7 +229,17 @@
           ]
         }
       ],
-      "maxThickness": 36,
+      "maxThickness": 72,
+      "wallWarpStyle": {
+        "style": "SIMPLEX",
+        "zoom": 0.25,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.12,
+          "multiplier": 3
+        }
+      },
+      "wallWarpAmplitude": 5,
       "carving": "carving/mushroom",
       "carveStyle": {
         "style": "SIMPLEX",
@@ -415,13 +438,36 @@
         }
       },
       "topShapeAmp": 0.7,
-      "bottomStyle": {
-        "style": "FLAT"
+      "edgeTaperWidth": 15,
+      "edgeTaperExponent": 1.35,
+      "edgeTaperVariationStyle": {
+        "style": "SIMPLEX",
+        "zoom": 0.2
       },
-      "bottomDepthMin": 20,
-      "bottomDepthMax": 20,
-      "bottomExponent": 1.0,
-      "maxThickness": 40,
+      "edgeTaperVariationAmplitude": 4,
+      "bottomStyle": {
+        "style": "SIMPLEX_VASCULAR",
+        "zoom": 0.32,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.14,
+          "multiplier": 5
+        }
+      },
+      "bottomDepthMin": 6,
+      "bottomDepthMax": 44,
+      "bottomExponent": 2.15,
+      "maxThickness": 72,
+      "wallWarpStyle": {
+        "style": "SIMPLEX",
+        "zoom": 0.26,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.13,
+          "multiplier": 3
+        }
+      },
+      "wallWarpAmplitude": 5,
       "carving": "carving/lush-child",
       "carveStyle": {
         "style": "SIMPLEX",

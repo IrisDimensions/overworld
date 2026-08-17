@@ -221,12 +221,25 @@
         }
       },
       "topShapeAmp": 0.75,
-      "bottomStyle": {
-        "style": "FLAT"
+      "edgeTaperWidth": 14,
+      "edgeTaperExponent": 1.45,
+      "edgeTaperVariationStyle": {
+        "style": "SIMPLEX",
+        "zoom": 0.18
       },
-      "bottomDepthMin": 20,
-      "bottomDepthMax": 20,
-      "bottomExponent": 1.0,
+      "edgeTaperVariationAmplitude": 4,
+      "bottomStyle": {
+        "style": "SIMPLEX_VASCULAR",
+        "zoom": 0.28,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.12,
+          "multiplier": 5
+        }
+      },
+      "bottomDepthMin": 5,
+      "bottomDepthMax": 48,
+      "bottomExponent": 2.35,
       "bottomPaletteMode": "CUSTOM",
       "bottomPalette": [
         {
@@ -263,7 +276,17 @@
           ]
         }
       ],
-      "maxThickness": 38,
+      "maxThickness": 72,
+      "wallWarpStyle": {
+        "style": "SIMPLEX",
+        "zoom": 0.24,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.12,
+          "multiplier": 3
+        }
+      },
+      "wallWarpAmplitude": 5,
       "carving": "carving/sand-hollows-child",
       "carveStyle": {
         "style": "SIMPLEX",

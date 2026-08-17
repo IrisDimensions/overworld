@@ -10,7 +10,11 @@
         "magnetics/glass",
         "magnetics/noise"
     ],
-    "caveBiomes": [],
+    "caveBiomes": [
+        "carving/magnetic-hollows",
+        "carving/flux-crystal-caverns",
+        "carving/polarity-grotto"
+    ],
     "shoreBiomes": [
         "temperate/shore/beach",
         "ocean/shore/beach"
@@ -29,21 +33,65 @@
     "shoreHeightZoom": 1.14,
     "deposits": [
         {
-            "minHeight": 15,
-            "maxPerChunk": 20,
-            "maxHeight": 410,
-            "minPerChunk": 3,
-            "minSize": 3,
-            "maxSize": 8,
-            "palette": [
-                {
-                    "block": "minecraft:iron_ore"
-                },
-                {
-                    "block": "minecraft:coal_ore"
-                }
+            "minHeight": 392,
+            "maxHeight": 767,
+            "heightDistribution": "UNIFORM",
+            "placementScope": "ABOVE_TERRAIN",
+            "surfaceClearance": 0,
+            "minPerChunk": 8,
+            "maxPerChunk": 8,
+            "minSize": 17,
+            "maxSize": 17,
+            "shape": "VANILLA_ELLIPSOID",
+            "biomeScope": "SURFACE",
+            "includedBiomes": [
+                "magnetics/dunes",
+                "magnetics/frozen",
+                "magnetics/mycelium",
+                "magnetics/noise",
+                "magnetics/plains"
             ],
-            "varience": 4
+            "palette": [{"block": "minecraft:coal_ore"}],
+            "replaceableBlocks": ["minecraft:stone", "minecraft:andesite"]
+        },
+        {
+            "minHeight": 336,
+            "maxHeight": 640,
+            "heightDistribution": "TRIANGLE",
+            "placementScope": "ABOVE_TERRAIN",
+            "surfaceClearance": 0,
+            "minPerChunk": 8,
+            "maxPerChunk": 8,
+            "minSize": 9,
+            "maxSize": 9,
+            "shape": "VANILLA_ELLIPSOID",
+            "biomeScope": "SURFACE",
+            "includedBiomes": [
+                "magnetics/dunes",
+                "magnetics/frozen",
+                "magnetics/mycelium",
+                "magnetics/noise",
+                "magnetics/plains"
+            ],
+            "palette": [{"block": "minecraft:iron_ore"}],
+            "replaceableBlocks": ["minecraft:stone", "minecraft:andesite"]
+        },
+        {
+            "minHeight": 240,
+            "maxHeight": 736,
+            "heightDistribution": "TRIANGLE",
+            "placementScope": "ABOVE_TERRAIN",
+            "surfaceClearance": 0,
+            "minPerChunk": 4,
+            "maxPerChunk": 4,
+            "spawnChance": 0.25,
+            "minSize": 3,
+            "maxSize": 3,
+            "shape": "VANILLA_ELLIPSOID",
+            "biomeScope": "SURFACE",
+            "includedBiomes": ["magnetics/frozen"],
+            "palette": [{"block": "minecraft:emerald_ore"}],
+            "replaceableBlocks": ["minecraft:stone", "minecraft:andesite"]
         }
     ],
     "loot": {

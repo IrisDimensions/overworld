@@ -1,4 +1,5 @@
 {
+  "proceduralObjects": "snippet/procedural-objects/magnetics/magical-glass-spikes-surface",
   "name": "Magnetics Glass",
   "color": "#A8D4E8",
   "rarity": 1,
@@ -111,125 +112,6 @@
     },
     {
       "place": [
-        "clutter/singleicespike1",
-        "clutter/singleicespike2",
-        "clutter/singleicespike3",
-        "clutter/singleicespike4",
-        "clutter/singleicespike5"
-      ],
-      "chance": 0.06,
-      "mode": "CENTER_HEIGHT",
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "edit": [
-        {
-          "find": [
-            {
-              "block": "minecraft:ice"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:glass"
-              }
-            ]
-          }
-        },
-        {
-          "find": [
-            {
-              "block": "minecraft:packed_ice"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:light_blue_stained_glass"
-              }
-            ]
-          }
-        },
-        {
-          "find": [
-            {
-              "block": "minecraft:blue_ice"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:tinted_glass"
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "place": [
-        "clutter/icespec1",
-        "clutter/icespec2",
-        "clutter/icespec3",
-        "clutter/icespec4",
-        "clutter/icespec5"
-      ],
-      "chance": 0.25,
-      "mode": "CENTER_HEIGHT",
-      "edit": [
-        {
-          "find": [
-            {
-              "block": "minecraft:ice"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:glass"
-              }
-            ]
-          }
-        },
-        {
-          "find": [
-            {
-              "block": "minecraft:packed_ice"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:light_blue_stained_glass"
-              }
-            ]
-          }
-        },
-        {
-          "find": [
-            {
-              "block": "minecraft:blue_ice"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:tinted_glass"
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "place": [
         "clutter/stoneboulder1",
         "clutter/stoneboulder2",
         "clutter/stoneboulder3",
@@ -298,14 +180,37 @@
         }
       },
       "topShapeAmp": 1.0,
-      "bottomStyle": {
-        "style": "FLAT"
+      "edgeTaperWidth": 12,
+      "edgeTaperExponent": 1.7,
+      "edgeTaperVariationStyle": {
+        "style": "SIMPLEX",
+        "zoom": 0.16
       },
-      "bottomDepthMin": 18,
-      "bottomDepthMax": 18,
-      "bottomExponent": 1.0,
+      "edgeTaperVariationAmplitude": 3,
+      "bottomStyle": {
+        "style": "FRACTAL_RM_SIMPLEX",
+        "zoom": 0.24,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.1,
+          "multiplier": 5
+        }
+      },
+      "bottomDepthMin": 4,
+      "bottomDepthMax": 50,
+      "bottomExponent": 2.65,
       "bottomPaletteMode": "MIRROR_TOP",
-      "maxThickness": 40,
+      "maxThickness": 76,
+      "wallWarpStyle": {
+        "style": "SIMPLEX",
+        "zoom": 0.2,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.1,
+          "multiplier": 3
+        }
+      },
+      "wallWarpAmplitude": 4,
       "carving": "carving/amethyst-child",
       "carveStyle": {
         "style": "SIMPLEX",
@@ -328,10 +233,7 @@
             "clutter/amethyst-cluster2",
             "clutter/amethyst-cluster3",
             "clutter/amethyst-cluster4",
-            "clutter/amethyst-cluster5",
-            "clutter/icespec1",
-            "clutter/icespec2",
-            "clutter/icespec3"
+            "clutter/amethyst-cluster5"
           ],
           "chance": 0.8,
           "mode": "CENTER_HEIGHT",
@@ -389,144 +291,10 @@
               }
             }
           ]
-        },
-        {
-          "place": [
-            "clutter/singleicespike1",
-            "clutter/singleicespike2",
-            "clutter/singleicespike3",
-            "clutter/singleicespike4",
-            "clutter/singleicespike5"
-          ],
-          "chance": 0.55,
-          "mode": "CENTER_HEIGHT",
-          "density": 6,
-          "rotation": {
-            "yAxis": {
-              "min": 0,
-              "max": 270,
-              "interval": 90,
-              "enabled": true
-            },
-            "enabled": true
-          },
-          "edit": [
-            {
-              "find": [
-                {
-                  "block": "minecraft:ice"
-                }
-              ],
-              "replace": {
-                "palette": [
-                  {
-                    "block": "minecraft:glass"
-                  }
-                ]
-              }
-            },
-            {
-              "find": [
-                {
-                  "block": "minecraft:packed_ice"
-                }
-              ],
-              "replace": {
-                "palette": [
-                  {
-                    "block": "minecraft:light_blue_stained_glass"
-                  }
-                ]
-              }
-            },
-            {
-              "find": [
-                {
-                  "block": "minecraft:blue_ice"
-                }
-              ],
-              "replace": {
-                "palette": [
-                  {
-                    "block": "minecraft:tinted_glass"
-                  }
-                ]
-              }
-            }
-          ]
         }
       ],
       "bottomObjectMode": "REPLACE",
-      "bottomObjectOverrides": [
-        {
-          "place": [
-            "clutter/singleicespike1",
-            "clutter/singleicespike2",
-            "clutter/singleicespike3",
-            "clutter/singleicespike4",
-            "clutter/singleicespike5",
-            "clutter/icespiresmol1",
-            "clutter/icespiresmol2",
-            "clutter/icespiresmol3"
-          ],
-          "chance": 0.75,
-          "mode": "FAST_MIN_HEIGHT",
-          "density": 9,
-          "rotation": {
-            "yAxis": {
-              "min": 0,
-              "max": 270,
-              "interval": 90,
-              "enabled": true
-            },
-            "enabled": true
-          },
-          "edit": [
-            {
-              "find": [
-                {
-                  "block": "minecraft:ice"
-                }
-              ],
-              "replace": {
-                "palette": [
-                  {
-                    "block": "minecraft:glass"
-                  }
-                ]
-              }
-            },
-            {
-              "find": [
-                {
-                  "block": "minecraft:packed_ice"
-                }
-              ],
-              "replace": {
-                "palette": [
-                  {
-                    "block": "minecraft:light_blue_stained_glass"
-                  }
-                ]
-              }
-            },
-            {
-              "find": [
-                {
-                  "block": "minecraft:blue_ice"
-                }
-              ],
-              "replace": {
-                "palette": [
-                  {
-                    "block": "minecraft:tinted_glass"
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      ]
+      "bottomObjectOverrides": []
     }
   ]
 }

@@ -1,0 +1,178 @@
+{
+  "name": "Magnetic Hollows",
+  "derivative": "minecraft:dripstone_caves",
+  "vanillaDerivative": "minecraft:dripstone_caves",
+  "caveMinDepthBelowSurface": 10,
+  "caveProfile": {
+    "enabled": true,
+    "verticalRange": {
+      "min": 6,
+      "max": 700
+    },
+    "baseDensityStyle": {
+      "style": "CELLULAR_IRIS_DOUBLE",
+      "zoom": 0.74
+    },
+    "detailDensityStyle": {
+      "style": "FRACTAL_BILLOW_SIMPLEX",
+      "zoom": 0.46
+    },
+    "warpStyle": {
+      "style": "SIMPLEX",
+      "zoom": 0.34
+    },
+    "baseWeight": 0.9,
+    "detailWeight": 0.12,
+    "warpStrength": 0.28,
+    "densityThreshold": {
+      "min": -0.14,
+      "max": -0.04,
+      "style": {
+        "style": "SIMPLEX",
+        "zoom": 0.68
+      }
+    },
+    "thresholdBias": 0.09,
+    "sampleStep": 2,
+    "surfaceClearance": 10,
+    "allowSurfaceBreak": false,
+    "objectMinDepthBelowSurface": 14,
+    "defaultObjectAnchor": "FLOOR",
+    "defaultObjectPlaceMode": "ORGANIC_STILT",
+    "anchorScanStep": 1,
+    "anchorSearchAttempts": 16,
+    "allowFluid": true,
+    "fluidMinDepthBelowSurface": 22,
+    "fluidRequiresFloor": true,
+    "allowLava": true,
+    "modules": [
+      {
+        "style": {
+          "style": "SIMPLEX_VASCULAR",
+          "zoom": 0.92
+        },
+        "weight": 0.07,
+        "threshold": 0.03,
+        "verticalRange": {
+          "min": 20,
+          "max": 660
+        },
+        "invert": false
+      }
+    ],
+    "verticalEdgeFade": 24,
+    "verticalEdgeFadeStrength": 0.16,
+    "minCarveCells": 24,
+    "recoveryThresholdBoost": 0.07
+  },
+  "wall": {
+    "style": {
+      "style": "SIMPLEX",
+      "zoom": 0.58
+    },
+    "palette": [
+      {
+        "block": "minecraft:stone",
+        "weight": 5
+      },
+      {
+        "block": "minecraft:andesite",
+        "weight": 4
+      },
+      {
+        "block": "minecraft:tuff",
+        "weight": 3
+      },
+      {
+        "block": "minecraft:deepslate",
+        "weight": 2
+      }
+    ]
+  },
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:smooth_basalt",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:andesite",
+          "weight": 5
+        },
+        {
+          "block": "minecraft:tuff",
+          "weight": 3
+        }
+      ]
+    }
+  ],
+  "caveCeilingLayers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:tuff",
+          "weight": 4
+        },
+        {
+          "block": "minecraft:deepslate",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:smooth_basalt",
+          "weight": 2
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "chance": 0.16,
+      "density": 2,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "clutter/stoneclutt1",
+        "clutter/stoneclutt2",
+        "clutter/stoneclutt3",
+        "clutter/stoneclutt4",
+        "clutter/stoneclutt5",
+        "clutter/stoneclutt6"
+      ],
+      "bottom": true,
+      "force": true,
+      "scale": {
+        "size": 0.65
+      }
+    },
+    {
+      "chance": 0.09,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "clutter/rock1",
+        "clutter/rock2",
+        "clutter/rock3",
+        "clutter/boulder1",
+        "clutter/boulder2",
+        "clutter/boulder3"
+      ],
+      "bottom": true,
+      "force": true,
+      "scale": {
+        "size": 0.6
+      }
+    }
+  ]
+}

@@ -61,69 +61,6 @@
     ],
     "objects": [
         {
-            "chance": 0.48,
-            "density": 2,
-            "edit": [
-                {
-                    "find": [
-                        {"block": "minecraft:dark_oak_log"},
-                        {"block": "minecraft:dark_oak_wood"},
-                        {"block": "minecraft:stripped_dark_oak_log"},
-                        {"block": "minecraft:stripped_dark_oak_wood"}
-                    ],
-                    "replace": {
-                        "style": {"style": "SIMPLEX", "zoom": 0.35},
-                        "palette": [
-                            {"block": "minecraft:pale_oak_wood", "weight": 8},
-                            {"block": "minecraft:stripped_pale_oak_wood", "weight": 2},
-                            {"block": "minecraft:bone_block", "weight": 1}
-                        ]
-                    }
-                },
-                {
-                    "find": [{"block": "minecraft:dark_oak_leaves"}],
-                    "replace": {"palette": [{"block": "minecraft:pale_oak_leaves"}]}
-                },
-                {
-                    "find": [
-                        {"block": "minecraft:dark_oak_planks"},
-                        {"block": "minecraft:spruce_planks"}
-                    ],
-                    "replace": {"palette": [{"block": "minecraft:pale_oak_planks"}]}
-                },
-                {
-                    "find": [
-                        {"block": "minecraft:dark_oak_fence"},
-                        {"block": "minecraft:spruce_fence"}
-                    ],
-                    "replace": {"palette": [{"block": "minecraft:pale_oak_fence"}]}
-                }
-            ],
-            "rotation": {
-                "enabled": true,
-                "yAxis": {"enabled": true, "min": 0, "max": 360, "interval": 45}
-            },
-            "place": [
-                "trees/darkoak/denmyre1",
-                "trees/darkoak/denmyre2",
-                "trees/darkoak/denmyre3",
-                "trees/darkoak/denmyre4",
-                "trees/darkoak/denmyre5",
-                "trees/darkoak/denmyre6",
-                "trees/darkoak/denmyre7",
-                "trees/darkoak/denmyre8",
-                "trees/darkoak/denmyre9",
-                "trees/darkoak/denmyre10",
-                "trees/darkoak/denmyre11",
-                "trees/darkoak/denmyre12",
-                "trees/darkoak/denmyre13",
-                "trees/darkoak/denmyre14",
-                "trees/darkoak/denmyre15",
-                "trees/darkoak/denmyre16"
-            ],
-            "translate": {"x": 0, "y": -1, "z": 0}
-        },
-        {
             "chance": 0.018,
             "density": 2,
             "rotation": {
@@ -157,8 +94,8 @@
     "proceduralObjects": {
         "trees": [
             {
-                "name": "pallid-contortion",
-                "chance": 0.42,
+                "name": "pallid-willow",
+                "chance": 0.24,
                 "density": 1,
                 "variants": 10,
                 "seed": 9401,
@@ -176,57 +113,60 @@
                     "style": {"style": "CELLULAR", "zoom": 0.3},
                     "palette": [{"block": "minecraft:pale_oak_leaves"}]
                 },
-                "profile": "OAK",
-                "heightMin": 19,
-                "heightMax": 34,
+                "profile": "WILLOW",
+                "heightMin": 18,
+                "heightMax": 31,
                 "trunkWidth": 2,
                 "trunkShape": "SINE",
-                "shapeAmplitude": 0.9,
-                "shapePeriod": 0.17,
-                "leanAngle": 34,
+                "shapeAmplitude": 0.35,
+                "shapePeriod": 0.12,
+                "leanAngle": 18,
                 "leanAzimuthMode": "NOISE",
-                "azimuthScale": 2.4,
+                "azimuthScale": 1.2,
                 "trunkCurve": "SIGMOID",
-                "trunkForks": 3,
-                "forkHeight": 0.38,
-                "forkAngle": 46,
+                "trunkForks": 2,
+                "forkHeight": 0.48,
+                "forkAngle": 32,
                 "rotation": {
                     "enabled": true,
                     "yAxis": {"enabled": true, "min": 0, "max": 360, "interval": 45}
                 },
                 "canopy": {
-                    "mode": "TATTERED",
-                    "leafDensity": 0.44,
-                    "crownStretchX": 1.8,
-                    "crownStretchZ": 0.62,
+                    "startAngle": 55,
+                    "squish": 0.48,
+                    "mode": "DENSITY",
+                    "leafDensity": 0.8,
+                    "crownStretchX": 1.25,
+                    "crownStretchZ": 1.1,
                     "branches": {
                         "probabilityFunction": "TOP_HEAVY",
-                        "probabilityExponent": 1.8,
+                        "probabilityExponent": 1.5,
                         "lengthFunction": "LINEAR",
                         "lengthBase": 3,
-                        "lengthCrown": 8,
-                        "azimuthMode": "ZIGZAG",
-                        "elevation": -18,
-                        "sag": 0.72,
-                        "branchDepth": 3,
-                        "clusterRadius": 2,
-                        "clusterMode": "TATTERED",
-                        "clusterDensity": 0.42,
+                        "lengthCrown": 7,
+                        "azimuthMode": "GOLDEN_ANGLE",
+                        "elevation": -20,
+                        "sag": 0.55,
+                        "branchDepth": 2,
+                        "clusterRadius": 3,
+                        "clusterMode": "DENSITY",
+                        "clusterDensity": 0.82,
                         "subBranches": {
-                            "count": 3,
-                            "pitchDelta": -16,
-                            "yawDelta": 73,
-                            "lengthScale": 0.7,
-                            "sag": 0.6,
-                            "clusterRadius": 1,
-                            "clusterMode": "TATTERED"
+                            "count": 1,
+                            "pitchDelta": -10,
+                            "yawDelta": 41,
+                            "lengthScale": 0.6,
+                            "sag": 0.5,
+                            "clusterRadius": 2,
+                            "clusterMode": "DENSITY",
+                            "clusterDensity": 0.84
                         }
                     }
                 }
             },
             {
-                "name": "pallid-candelabra",
-                "chance": 0.24,
+                "name": "pallid-spindle",
+                "chance": 0.14,
                 "density": 1,
                 "variants": 8,
                 "seed": 9402,
@@ -239,31 +179,44 @@
                     ]
                 },
                 "leaves": "minecraft:pale_oak_leaves",
-                "profile": "DARK_OAK_FLAT_WIDE",
-                "heightMin": 10,
-                "heightMax": 17,
-                "trunkWidth": 3,
-                "trunkShape": "BELL",
-                "shapeStart": 1.35,
-                "shapeEnd": 0.55,
-                "leanAngle": 20,
-                "leanAzimuthMode": "CONSTANT",
-                "leanAzimuth": 0,
-                "trunkCurve": "EXPONENTIAL",
-                "trunkForks": 5,
-                "forkHeight": 0.3,
-                "forkAngle": 55,
+                "profile": "COLUMNAR",
+                "heightMin": 14,
+                "heightMax": 24,
+                "trunkWidth": 2,
+                "trunkShape": "SINE",
+                "shapeAmplitude": 0.3,
+                "shapePeriod": 0.11,
+                "leanAngle": 12,
+                "leanAzimuthMode": "NOISE",
+                "azimuthScale": 1.4,
+                "trunkCurve": "SIGMOID",
+                "trunkForks": 2,
+                "forkHeight": 0.62,
+                "forkAngle": 28,
+                "azimuthWhorlCount": 5,
                 "rotation": {
                     "enabled": true,
                     "yAxis": {"enabled": true, "min": 0, "max": 360, "interval": 45}
                 },
                 "canopy": {
-                    "startAngle": 105,
-                    "squish": 0.22,
-                    "mode": "SPARSE",
-                    "leafDensity": 0.5,
-                    "crownStretchX": 1.7,
-                    "crownStretchZ": 1.1
+                    "mode": "CLUMPED",
+                    "leafDensity": 0.72,
+                    "crownStretchX": 0.65,
+                    "crownStretchZ": 0.65,
+                    "branches": {
+                        "probabilityFunction": "PERIODIC",
+                        "probabilityConstant": 0.82,
+                        "probabilityPeriods": 3,
+                        "lengthFunction": "LINEAR",
+                        "lengthBase": 2,
+                        "lengthCrown": 4,
+                        "azimuthMode": "WHORL",
+                        "elevation": 12,
+                        "sag": 0.12,
+                        "clusterRadius": 2,
+                        "clusterMode": "CLUMPED",
+                        "clusterDensity": 0.82
+                    }
                 }
             }
         ],
