@@ -2,7 +2,7 @@
     "formations": [
         {
             "name": "glacial-iceberg",
-            "chance": 0.06,
+            "chance": 0.08,
             "density": 1,
             "variants": 24,
             "seed": 5055001,
@@ -23,20 +23,20 @@
             },
             "form": "ICEBERG",
             "translate": {
-                "y": -2
+                "y": -4
             },
-            "heightMin": 10,
-            "heightMax": 24,
-            "baseWidthMin": 4,
-            "baseWidthMax": 7,
-            "icebergPeaks": 5,
-            "roughness": 0.38,
-            "jitter": 0.12
+            "heightMin": 12,
+            "heightMax": 22,
+            "baseWidthMin": 5,
+            "baseWidthMax": 8,
+            "icebergPeaks": 4,
+            "roughness": 0.42,
+            "jitter": 0.14
         },
         {
             "name": "glacial-fissure",
-            "chance": 0.08,
-            "density": 2,
+            "chance": 0.12,
+            "density": 1,
             "variants": 24,
             "seed": 5055002,
             "mode": "CENTER_HEIGHT",
@@ -56,21 +56,21 @@
             },
             "form": "FISSURE",
             "translate": {
-                "y": -2
+                "y": -4
             },
-            "heightMin": 14,
-            "heightMax": 28,
-            "baseWidthMin": 3,
-            "baseWidthMax": 5,
-            "fractureCount": 4,
-            "fractureSeparation": 4,
-            "roughness": 0.24,
-            "jitter": 0.06
+            "heightMin": 13,
+            "heightMax": 23,
+            "baseWidthMin": 6,
+            "baseWidthMax": 9,
+            "fractureCount": 3,
+            "fractureSeparation": 3,
+            "roughness": 0.3,
+            "jitter": 0.08
         },
         {
             "name": "glacial-spiral",
-            "chance": 0.06,
-            "density": 2,
+            "chance": 0.15,
+            "density": 1,
             "variants": 24,
             "seed": 5055003,
             "mode": "CENTER_HEIGHT",
@@ -90,21 +90,21 @@
             },
             "form": "SPIRAL",
             "translate": {
-                "y": -1
+                "y": -4
             },
-            "heightMin": 12,
+            "heightMin": 15,
             "heightMax": 24,
-            "baseWidthMin": 3,
-            "baseWidthMax": 5,
-            "spiralTurns": 1.65,
-            "spiralRadius": 5,
-            "spiralThickness": 1,
-            "roughness": 0.16,
-            "jitter": 0.03
+            "baseWidthMin": 5,
+            "baseWidthMax": 8,
+            "spiralTurns": 1.15,
+            "spiralRadius": 6,
+            "spiralThickness": 3,
+            "roughness": 0.24,
+            "jitter": 0.07
         },
         {
             "name": "glacial-overhang",
-            "chance": 0.05,
+            "chance": 0.18,
             "density": 1,
             "variants": 24,
             "seed": 5055004,
@@ -125,20 +125,20 @@
             },
             "form": "OVERHANG",
             "translate": {
-                "y": -2
+                "y": -4
             },
-            "heightMin": 12,
-            "heightMax": 24,
-            "baseWidthMin": 3,
-            "baseWidthMax": 5,
+            "heightMin": 16,
+            "heightMax": 25,
+            "baseWidthMin": 5,
+            "baseWidthMax": 8,
             "overhangReach": 13,
             "overhangDrop": 6,
-            "roughness": 0.22,
-            "jitter": 0.05
+            "roughness": 0.3,
+            "jitter": 0.08
         },
         {
             "name": "glacial-arch",
-            "chance": 0.06,
+            "chance": 0.07,
             "density": 1,
             "variants": 24,
             "seed": 5055005,
@@ -159,21 +159,21 @@
             },
             "form": "ARCH",
             "translate": {
-                "y": -2
+                "y": -4
             },
-            "heightMin": 12,
-            "heightMax": 22,
-            "baseWidthMin": 3,
-            "baseWidthMax": 5,
-            "archSpan": 11,
-            "archThickness": 2,
-            "archAsymmetry": 0.85,
-            "roughness": 0.2,
-            "jitter": 0.04
+            "heightMin": 11,
+            "heightMax": 20,
+            "baseWidthMin": 4,
+            "baseWidthMax": 7,
+            "archSpan": 12,
+            "archThickness": 4,
+            "archAsymmetry": 1.0,
+            "roughness": 0.28,
+            "jitter": 0.07
         },
         {
-            "name": "glacial-needle",
-            "chance": 1.0,
+            "name": "glacial-crooked-spire",
+            "chance": 0.3,
             "density": 1,
             "variants": 32,
             "seed": 5055021,
@@ -194,23 +194,27 @@
             },
             "form": "SPIRE",
             "translate": {
-                "y": -2
+                "y": -4
             },
-            "heightMin": 10,
-            "heightMax": 20,
-            "baseWidthMin": 3,
-            "baseWidthMax": 5,
+            "heightMin": 14,
+            "heightMax": 24,
+            "baseWidthMin": 5,
+            "baseWidthMax": 8,
             "topWidth": 0,
-            "profile": "LINEAR",
-            "roughness": 0.12,
-            "jitter": 0.02
+            "profile": "PARABOLIC",
+            "profileWaist": 0.38,
+            "profileWaistFloor": 0.72,
+            "lean": 18,
+            "leanAzimuth": 18,
+            "roughness": 0.32,
+            "jitter": 0.09
         },
         {
-            "name": "glacial-leaning-lance",
-            "chance": 0.125,
-            "density": 1,
-            "variants": 32,
-            "seed": 5055022,
+            "name": "glacial-drift",
+            "chance": 0.4,
+            "density": 2,
+            "variants": 24,
+            "seed": 5055041,
             "mode": "CENTER_HEIGHT",
             "carvingSupport": "SURFACE_ONLY",
             "surfaceSupportBuffer": 1,
@@ -226,26 +230,22 @@
                     "interval": 45
                 }
             },
-            "form": "SPIRE",
+            "form": "BOULDER",
             "translate": {
-                "y": -2
+                "y": -1
             },
-            "heightMin": 18,
-            "heightMax": 34,
-            "baseWidthMin": 1,
-            "baseWidthMax": 2,
-            "topWidth": 0,
-            "profile": "TAPER",
-            "lean": 10,
-            "leanAzimuth": 18,
-            "roughness": 0.14,
-            "jitter": 0.02
+            "heightMin": 3,
+            "heightMax": 5,
+            "baseWidthMin": 2,
+            "baseWidthMax": 4,
+            "roughness": 0.48,
+            "jitter": 0.12
         },
         {
             "name": "glacial-shard-fan",
-            "chance": 0.3,
-            "density": 2,
-            "variants": 32,
+            "chance": 0.16,
+            "density": 1,
+            "variants": 24,
             "seed": 5055023,
             "mode": "CENTER_HEIGHT",
             "carvingSupport": "SURFACE_ONLY",
@@ -264,16 +264,16 @@
             },
             "form": "FISSURE",
             "translate": {
-                "y": -2
+                "y": -4
             },
-            "heightMin": 10,
-            "heightMax": 22,
-            "baseWidthMin": 3,
-            "baseWidthMax": 5,
-            "fractureCount": 4,
+            "heightMin": 12,
+            "heightMax": 21,
+            "baseWidthMin": 6,
+            "baseWidthMax": 9,
+            "fractureCount": 3,
             "fractureSeparation": 3,
-            "roughness": 0.18,
-            "jitter": 0.04
+            "roughness": 0.28,
+            "jitter": 0.08
         }
     ],
     "crystals": [
@@ -294,26 +294,26 @@
             "blockPalette": "snippet/palette/frozen/magical-ice",
             "tipBlock": "minecraft:blue_ice",
             "baseBlock": "minecraft:blue_ice",
-            "tipChance": 0.75,
-            "name": "glacial-needle-bloom",
-            "chance": 0.11,
+            "tipChance": 0.65,
+            "name": "glacial-frost-bloom",
+            "chance": 0.28,
             "density": 2,
             "variants": 24,
             "seed": 5055031,
             "translate": {
                 "y": -1
             },
-            "baseRadius": 1.6,
-            "baseNoise": 0.3,
-            "shardCountMin": 4,
-            "shardCountMax": 8,
-            "shardLengthMin": 6,
-            "shardLengthMax": 12,
-            "shardBaseRadius": 1.15,
-            "shardTaper": 0.95,
-            "spreadAngle": 25,
+            "baseRadius": 1.8,
+            "baseNoise": 0.4,
+            "shardCountMin": 3,
+            "shardCountMax": 6,
+            "shardLengthMin": 2,
+            "shardLengthMax": 5,
+            "shardBaseRadius": 1.1,
+            "shardTaper": 1.0,
+            "spreadAngle": 68,
             "distribution": "GOLDEN_ANGLE",
-            "jitter": 0.25
+            "jitter": 0.35
         },
         {
             "mode": "CENTER_HEIGHT",
@@ -332,26 +332,26 @@
             "blockPalette": "snippet/palette/frozen/magical-ice",
             "tipBlock": "minecraft:blue_ice",
             "baseBlock": "minecraft:blue_ice",
-            "tipChance": 0.75,
-            "name": "glacial-chaos-bloom",
-            "chance": 0.02,
-            "density": 1,
+            "tipChance": 0.55,
+            "name": "glacial-frost-sprigs",
+            "chance": 0.12,
+            "density": 2,
             "variants": 24,
             "seed": 5055032,
             "translate": {
                 "y": -1
             },
-            "baseRadius": 1.0,
-            "baseNoise": 0.45,
-            "shardCountMin": 3,
-            "shardCountMax": 7,
-            "shardLengthMin": 14,
-            "shardLengthMax": 24,
-            "shardBaseRadius": 0.75,
+            "baseRadius": 1.2,
+            "baseNoise": 0.5,
+            "shardCountMin": 2,
+            "shardCountMax": 5,
+            "shardLengthMin": 1,
+            "shardLengthMax": 3,
+            "shardBaseRadius": 1.0,
             "shardTaper": 1.0,
-            "spreadAngle": 40,
+            "spreadAngle": 80,
             "distribution": "RANDOM",
-            "jitter": 0.5
+            "jitter": 0.55
         }
     ]
 }

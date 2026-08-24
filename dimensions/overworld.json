@@ -134,97 +134,145 @@
   "rivers": {
     "enabled": true,
     "topology": {
-      "cellSize": 512,
-      "tileCells": 4,
-      "siteJitter": 0.35,
-      "maxRouteReaches": 16,
-      "minimumSourcesPerTile": 1,
+      "cellSize": 1700,
+      "tileCells": 3,
+      "siteJitter": 0.48,
+      "maxRouteReaches": 8,
+      "minimumSourcesPerTile": 9,
       "sinkSearchReaches": 5,
-      "routingBasinCells": 64,
-      "routingPlateauHeight": 8,
+      "routingBasinCells": 112,
+      "routingDeviationScaleCells": 24,
+      "routingDeviationStrengthCells": 8,
+      "routingPlateauHeight": 1.5,
       "source": {
-        "chance": 0.05,
+        "chance": 0.08,
         "style": {
           "style": "IRIS",
-          "zoom": 8192
+          "zoom": 18432
         },
         "influence": 0.035
       },
       "continuation": {
-        "chance": 0.99,
+        "chance": 0.997,
         "style": {
-          "style": "VASCULAR",
-          "zoom": 4096
+          "style": "VASCULAR_IRIS",
+          "zoom": 18432
         },
-        "influence": 0.01
+        "influence": 0.002
       },
       "routingStyle": {
-        "style": "VASCULAR",
-        "zoom": 8192
+        "style": "VASCULAR_IRIS",
+        "zoom": 6144,
+        "fracture": {
+          "style": "IRIS",
+          "zoom": 2048,
+          "multiplier": 768
+        }
       },
-      "routingNoiseWeight": 48,
-      "terrainHeightWeight": 0.45,
-      "terrainSlopeWeight": 0.35,
-      "oceanAttraction": 12,
+      "routingNoiseWeight": 96,
+      "flowAlignmentWeight": 32,
+      "confluenceWeight": 192,
+      "branchSoftCap": 4,
+      "branchChildShrinkFactor": 0.35,
+      "terrainHeightWeight": 0,
+      "terrainSlopeWeight": 0,
+      "oceanAttraction": 8,
       "requireOcean": false
     },
     "terrain": {
       "channelWidth": {
-        "min": 8,
-        "max": 22,
+        "min": 1,
+        "max": 7,
         "style": {
-          "style": "VASCULAR",
-          "zoom": 1536
+          "style": "IRIS",
+          "zoom": 768,
+          "fracture": {
+            "style": "SIMPLEX",
+            "zoom": 1920,
+            "multiplier": 160
+          }
         }
       },
       "bankWidth": {
-        "min": 6,
-        "max": 20,
+        "min": 0.75,
+        "max": 2.75,
         "style": {
           "style": "IRIS",
-          "zoom": 1280
+          "zoom": 512
         }
       },
       "depth": {
-        "min": 2,
-        "max": 7,
+        "min": 1.5,
+        "max": 8.5,
         "style": {
           "style": "SIMPLEX",
           "zoom": 896
         }
       },
-      "orderWidthFactor": 0.38,
-      "orderDepthFactor": 0.2,
+      "maxChannelWidth": 7,
+      "maxBankWidth": 3,
+      "maxDepth": 10,
+      "orderWidthFactor": 0.18,
+      "orderDepthFactor": 0.16,
       "incision": {
-        "chance": 0.99,
+        "chance": 1,
         "style": {
           "style": "IRIS",
           "zoom": 3072
         },
-        "influence": 0.01
+        "influence": 0
       },
-      "maxIncision": 512,
-      "bankExponent": 1.85,
+      "maxIncision": 15,
+      "bankExponent": 1.05,
+      "tunnelMouthBlend": 2,
+      "tunnelWidthMultiplier": {
+        "min": 2,
+        "max": 4,
+        "style": {
+          "style": "IRIS",
+          "zoom": 96
+        }
+      },
+      "tunnelFloorStyle": {
+        "style": "IRIS",
+        "zoom": 48
+      },
+      "tunnelFloorVariation": 2,
+      "tunnelRoofStyle": {
+        "style": "IRIS",
+        "zoom": 64
+      },
+      "tunnelRoofVariation": 3,
       "meanderStyle": {
-        "style": "VASCULAR",
-        "zoom": 768
+        "style": "IRIS",
+        "zoom": 384,
+        "fracture": {
+          "style": "IRIS",
+          "zoom": 1024,
+          "multiplier": 160
+        }
       },
-      "meanderStrength": 180,
-      "meanderSubdivisions": 16,
+      "meanderStrength": 384,
+      "meanderSubdivisions": 48,
       "bedRoughnessStyle": {
         "style": "IRIS",
-        "zoom": 112
+        "zoom": 96,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 256,
+          "multiplier": 32
+        }
       },
-      "bedRoughness": 0.65,
+      "bedRoughness": 1,
       "terminalMode": "DRY_CHANNEL",
       "terminalTaper": 112,
       "dryContinuationChance": 0.3
     },
     "water": {
-      "mode": "TERRACED",
+      "mode": "SEA_LEVEL",
       "poolLength": 128,
-      "maximumPoolRise": 48,
-      "dropHeight": 2
+      "maximumPoolRise": 0,
+      "dropHeight": 1
     },
     "biomes": {
       "selectionStyle": {
@@ -240,18 +288,18 @@
     "caves": {
       "mode": "GENERATE_GROTTO",
       "entry": {
-        "chance": 0.045,
+        "chance": 0.35,
         "style": {
           "style": "IRIS",
           "zoom": 2048
         },
-        "influence": 0.025
+        "influence": 0.2
       },
       "minimumSpacing": 384,
       "maximumPerReach": 1,
       "maxBoreDepth": 64,
       "throatRadius": 2,
-      "waterLevelOffset": -2,
+      "waterLevelOffset": -16,
       "dryHeadroom": 4,
       "grottoHorizontalRadius": 10,
       "grottoVerticalRadius": 6,
@@ -264,7 +312,8 @@
         "zoom": 56
       },
       "grottoWarpStrength": 1.5,
-      "maxFloodRadius": 32,
+      "parentBiomeInheritance": 0.5,
+      "maxFloodRadius": 16,
       "maxFloodDepth": 64,
       "maxFloodVolume": 8192,
       "fallback": "SEALED",
