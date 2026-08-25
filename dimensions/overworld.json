@@ -138,27 +138,27 @@
       "tileCells": 3,
       "siteJitter": 0.48,
       "maxRouteReaches": 8,
-      "minimumSourcesPerTile": 9,
+      "minimumSourcesPerTile": 6,
       "sinkSearchReaches": 5,
       "routingBasinCells": 112,
       "routingDeviationScaleCells": 24,
       "routingDeviationStrengthCells": 8,
       "routingPlateauHeight": 1.5,
       "source": {
-        "chance": 0.08,
+        "chance": 0.24,
         "style": {
           "style": "IRIS",
           "zoom": 18432
         },
-        "influence": 0.035
+        "influence": 0.16
       },
       "continuation": {
-        "chance": 0.997,
+        "chance": 0.994,
         "style": {
           "style": "VASCULAR_IRIS",
           "zoom": 18432
         },
-        "influence": 0.002
+        "influence": 0.006
       },
       "routingStyle": {
         "style": "VASCULAR_IRIS",
@@ -171,9 +171,7 @@
       },
       "routingNoiseWeight": 96,
       "flowAlignmentWeight": 32,
-      "confluenceWeight": 192,
-      "branchSoftCap": 4,
-      "branchChildShrinkFactor": 0.35,
+      "confluenceWeight": 224,
       "terrainHeightWeight": 0,
       "terrainSlopeWeight": 0,
       "oceanAttraction": 8,
@@ -181,8 +179,8 @@
     },
     "terrain": {
       "channelWidth": {
-        "min": 1,
-        "max": 7,
+        "min": 3,
+        "max": 14,
         "style": {
           "style": "IRIS",
           "zoom": 768,
@@ -194,26 +192,27 @@
         }
       },
       "bankWidth": {
-        "min": 0.75,
-        "max": 2.75,
+        "min": 4,
+        "max": 6,
         "style": {
           "style": "IRIS",
           "zoom": 512
         }
       },
       "depth": {
-        "min": 1.5,
-        "max": 8.5,
+        "min": 2,
+        "max": 9,
         "style": {
           "style": "SIMPLEX",
           "zoom": 896
         }
       },
-      "maxChannelWidth": 7,
-      "maxBankWidth": 3,
-      "maxDepth": 10,
-      "orderWidthFactor": 0.18,
-      "orderDepthFactor": 0.16,
+      "channelRadiusBonus": 3,
+      "maxChannelWidth": 38,
+      "maxBankWidth": 24,
+      "maxDepth": 24,
+      "orderWidthFactor": 0.22,
+      "orderDepthFactor": 0.18,
       "incision": {
         "chance": 1,
         "style": {
@@ -224,7 +223,7 @@
       },
       "maxIncision": 15,
       "bankExponent": 1.05,
-      "tunnelMouthBlend": 2,
+      "tunnelMouthBlend": 6,
       "tunnelWidthMultiplier": {
         "min": 2,
         "max": 4,
@@ -233,6 +232,7 @@
           "zoom": 96
         }
       },
+      "tunnelHeadroom": 12,
       "tunnelFloorStyle": {
         "style": "IRIS",
         "zoom": 48
@@ -243,17 +243,338 @@
         "zoom": 64
       },
       "tunnelRoofVariation": 3,
-      "meanderStyle": {
-        "style": "IRIS",
-        "zoom": 384,
-        "fracture": {
-          "style": "IRIS",
-          "zoom": 1024,
-          "multiplier": 160
+      "worms": [
+        {
+          "id": "floodplain_trunk",
+          "seed": 1101,
+          "weight": 45,
+          "wavelength": 3072,
+          "detailWavelength": 768,
+          "tortuosity": 0.18,
+          "detailTortuosity": 0.06,
+          "maxOffset": 220,
+          "segments": 32,
+          "widthMultiplier": 1.9,
+          "bankMultiplier": 1.85,
+          "depthMultiplier": 0.55,
+          "bodyWavelength": 96,
+          "bodyDetailWavelength": 20,
+          "bodyDetailInfluence": 0.72,
+          "widthVariation": 0.65,
+          "bankVariation": 0.75,
+          "depthVariation": 0.45,
+          "roofVariation": 0.55,
+          "branchCap": 3,
+          "branchDecay": 0.25,
+          "confluenceMultiplier": 1.6,
+          "childChance": 0.14,
+          "branchChildChance": 0.28,
+          "children": [
+            {
+              "id": "floodplain_tributary",
+              "seed": 1102,
+              "weight": 60,
+              "wavelength": 1536,
+              "detailWavelength": 384,
+              "tortuosity": 0.42,
+              "detailTortuosity": 0.12,
+              "maxOffset": 300,
+              "segments": 40,
+              "widthMultiplier": 1.15,
+              "bankMultiplier": 1.35,
+              "depthMultiplier": 0.72,
+              "bodyWavelength": 64,
+              "bodyDetailWavelength": 16,
+              "bodyDetailInfluence": 0.76,
+              "widthVariation": 0.55,
+              "bankVariation": 0.7,
+              "depthVariation": 0.5,
+              "roofVariation": 0.6,
+              "branchCap": 3,
+              "branchDecay": 0.2,
+              "confluenceMultiplier": 1.35,
+              "childChance": 0.2,
+              "branchChildChance": 0.24,
+              "children": [
+                {
+                  "id": "reed_thread",
+                  "seed": 1104,
+                  "weight": 100,
+                  "wavelength": 320,
+                  "detailWavelength": 80,
+                  "tortuosity": 0.68,
+                  "detailTortuosity": 0.3,
+                  "maxOffset": 140,
+                  "segments": 48,
+                  "widthMultiplier": 0.32,
+                  "bankMultiplier": 0.55,
+                  "depthMultiplier": 0.3,
+                  "bodyWavelength": 32,
+                  "bodyDetailWavelength": 8,
+                  "bodyDetailInfluence": 0.85,
+                  "widthVariation": 0.8,
+                  "bankVariation": 0.8,
+                  "depthVariation": 0.65,
+                  "roofVariation": 0.75,
+                  "branchCap": 1,
+                  "branchDecay": 0,
+                  "confluenceMultiplier": 0.4,
+                  "childChance": 0,
+                  "branchChildChance": 0,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "marsh_meander",
+              "seed": 1103,
+              "weight": 40,
+              "wavelength": 576,
+              "detailWavelength": 144,
+              "tortuosity": 0.92,
+              "detailTortuosity": 0.16,
+              "maxOffset": 360,
+              "segments": 64,
+              "widthMultiplier": 0.72,
+              "bankMultiplier": 1.25,
+              "depthMultiplier": 0.42,
+              "bodyWavelength": 48,
+              "bodyDetailWavelength": 12,
+              "bodyDetailInfluence": 0.82,
+              "widthVariation": 0.75,
+              "bankVariation": 0.85,
+              "depthVariation": 0.35,
+              "roofVariation": 0.6,
+              "branchCap": 2,
+              "branchDecay": 0.12,
+              "confluenceMultiplier": 0.7,
+              "childChance": 0,
+              "branchChildChance": 0,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "canyon_trunk",
+          "seed": 2201,
+          "weight": 30,
+          "wavelength": 2560,
+          "detailWavelength": 640,
+          "tortuosity": 0.12,
+          "detailTortuosity": 0.04,
+          "maxOffset": 140,
+          "segments": 28,
+          "widthMultiplier": 1.3,
+          "bankMultiplier": 0.28,
+          "depthMultiplier": 2.05,
+          "bodyWavelength": 128,
+          "bodyDetailWavelength": 20,
+          "bodyDetailInfluence": 0.65,
+          "widthVariation": 0.55,
+          "bankVariation": 0.35,
+          "depthVariation": 0.7,
+          "roofVariation": 0.7,
+          "branchCap": 2,
+          "branchDecay": 0.12,
+          "confluenceMultiplier": 2.1,
+          "childChance": 0.1,
+          "branchChildChance": 0.34,
+          "children": [
+            {
+              "id": "ravine_tributary",
+              "seed": 2202,
+              "weight": 65,
+              "wavelength": 1152,
+              "detailWavelength": 288,
+              "tortuosity": 0.38,
+              "detailTortuosity": 0.1,
+              "maxOffset": 240,
+              "segments": 40,
+              "widthMultiplier": 0.78,
+              "bankMultiplier": 0.26,
+              "depthMultiplier": 1.72,
+              "bodyWavelength": 72,
+              "bodyDetailWavelength": 16,
+              "bodyDetailInfluence": 0.72,
+              "widthVariation": 0.65,
+              "bankVariation": 0.3,
+              "depthVariation": 0.75,
+              "roofVariation": 0.75,
+              "branchCap": 2,
+              "branchDecay": 0.1,
+              "confluenceMultiplier": 1.7,
+              "childChance": 0,
+              "branchChildChance": 0,
+              "children": []
+            },
+            {
+              "id": "fault_run",
+              "seed": 2203,
+              "weight": 35,
+              "wavelength": 768,
+              "detailWavelength": 96,
+              "tortuosity": 0.16,
+              "detailTortuosity": 0.36,
+              "maxOffset": 110,
+              "segments": 52,
+              "widthMultiplier": 0.46,
+              "bankMultiplier": 0.18,
+              "depthMultiplier": 1.35,
+              "bodyWavelength": 48,
+              "bodyDetailWavelength": 12,
+              "bodyDetailInfluence": 0.82,
+              "widthVariation": 0.6,
+              "bankVariation": 0.4,
+              "depthVariation": 0.8,
+              "roofVariation": 0.8,
+              "branchCap": 2,
+              "branchDecay": 0.08,
+              "confluenceMultiplier": 1.1,
+              "childChance": 0.3,
+              "branchChildChance": 0.28,
+              "children": [
+                {
+                  "id": "gully_thread",
+                  "seed": 2204,
+                  "weight": 100,
+                  "wavelength": 384,
+                  "detailWavelength": 72,
+                  "tortuosity": 0.62,
+                  "detailTortuosity": 0.28,
+                  "maxOffset": 120,
+                  "segments": 56,
+                  "widthMultiplier": 0.28,
+                  "bankMultiplier": 0.16,
+                  "depthMultiplier": 0.82,
+                  "bodyWavelength": 32,
+                  "bodyDetailWavelength": 8,
+                  "bodyDetailInfluence": 0.86,
+                  "widthVariation": 0.7,
+                  "bankVariation": 0.65,
+                  "depthVariation": 0.7,
+                  "roofVariation": 0.8,
+                  "branchCap": 1,
+                  "branchDecay": 0,
+                  "confluenceMultiplier": 0.7,
+                  "childChance": 0,
+                  "branchChildChance": 0,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "serpentine_trunk",
+          "seed": 3301,
+          "weight": 25,
+          "wavelength": 1536,
+          "detailWavelength": 320,
+          "tortuosity": 0.78,
+          "detailTortuosity": 0.14,
+          "maxOffset": 480,
+          "segments": 56,
+          "widthMultiplier": 1.45,
+          "bankMultiplier": 1.15,
+          "depthMultiplier": 0.92,
+          "bodyWavelength": 80,
+          "bodyDetailWavelength": 18,
+          "bodyDetailInfluence": 0.78,
+          "widthVariation": 0.7,
+          "bankVariation": 0.65,
+          "depthVariation": 0.6,
+          "roofVariation": 0.55,
+          "branchCap": 4,
+          "branchDecay": 0.35,
+          "confluenceMultiplier": 1.25,
+          "childChance": 0.18,
+          "branchChildChance": 0.3,
+          "children": [
+            {
+              "id": "hairpin_tributary",
+              "seed": 3302,
+              "weight": 58,
+              "wavelength": 720,
+              "detailWavelength": 180,
+              "tortuosity": 1,
+              "detailTortuosity": 0.18,
+              "maxOffset": 420,
+              "segments": 64,
+              "widthMultiplier": 0.88,
+              "bankMultiplier": 0.92,
+              "depthMultiplier": 0.76,
+              "bodyWavelength": 48,
+              "bodyDetailWavelength": 12,
+              "bodyDetailInfluence": 0.84,
+              "widthVariation": 0.8,
+              "bankVariation": 0.7,
+              "depthVariation": 0.65,
+              "roofVariation": 0.65,
+              "branchCap": 3,
+              "branchDecay": 0.3,
+              "confluenceMultiplier": 1,
+              "childChance": 0,
+              "branchChildChance": 0,
+              "children": []
+            },
+            {
+              "id": "riffle_feeder",
+              "seed": 3303,
+              "weight": 42,
+              "wavelength": 896,
+              "detailWavelength": 96,
+              "tortuosity": 0.54,
+              "detailTortuosity": 0.38,
+              "maxOffset": 240,
+              "segments": 64,
+              "widthMultiplier": 0.62,
+              "bankMultiplier": 0.46,
+              "depthMultiplier": 1.1,
+              "bodyWavelength": 40,
+              "bodyDetailWavelength": 10,
+              "bodyDetailInfluence": 0.86,
+              "widthVariation": 0.65,
+              "bankVariation": 0.45,
+              "depthVariation": 0.8,
+              "roofVariation": 0.7,
+              "branchCap": 3,
+              "branchDecay": 0.22,
+              "confluenceMultiplier": 0.8,
+              "childChance": 0.34,
+              "branchChildChance": 0.24,
+              "children": [
+                {
+                  "id": "spring_thread",
+                  "seed": 3304,
+                  "weight": 100,
+                  "wavelength": 288,
+                  "detailWavelength": 64,
+                  "tortuosity": 0.88,
+                  "detailTortuosity": 0.32,
+                  "maxOffset": 160,
+                  "segments": 56,
+                  "widthMultiplier": 0.26,
+                  "bankMultiplier": 0.3,
+                  "depthMultiplier": 0.48,
+                  "bodyWavelength": 24,
+                  "bodyDetailWavelength": 8,
+                  "bodyDetailInfluence": 0.88,
+                  "widthVariation": 0.8,
+                  "bankVariation": 0.75,
+                  "depthVariation": 0.7,
+                  "roofVariation": 0.8,
+                  "branchCap": 1,
+                  "branchDecay": 0,
+                  "confluenceMultiplier": 0.55,
+                  "childChance": 0,
+                  "branchChildChance": 0,
+                  "children": []
+                }
+              ]
+            }
+          ]
         }
-      },
-      "meanderStrength": 384,
-      "meanderSubdivisions": 48,
+      ],
       "bedRoughnessStyle": {
         "style": "IRIS",
         "zoom": 96,
@@ -269,18 +590,49 @@
       "dryContinuationChance": 0.3
     },
     "water": {
-      "mode": "SEA_LEVEL",
+      "mode": "TERRACED",
+      "fluidHeight": 50,
+      "fluidPalette": {
+        "palette": [
+          {
+            "block": "minecraft:water"
+          }
+        ]
+      },
       "poolLength": 128,
-      "maximumPoolRise": 0,
-      "dropHeight": 1
+      "maximumPoolRise": 64,
+      "dropHeight": 4
+    },
+    "waterfalls": {
+      "enabled": true,
+      "allowSubterranean": true,
+      "event": {
+        "chance": 0.18,
+        "style": {
+          "style": "IRIS",
+          "zoom": 2048
+        },
+        "influence": 0.08
+      },
+      "minimumDropHeight": 4,
+      "maximumDropHeight": 16,
+      "minimumSpacing": 256,
+      "maximumPerReach": 1,
+      "widthMultiplier": 0.8,
+      "curtainThickness": 1,
+      "plungePoolLength": 18,
+      "plungePoolDepth": 4
     },
     "biomes": {
       "selectionStyle": {
         "style": "CELLULAR_IRIS_DOUBLE",
         "zoom": 640
       },
+      "bankBlendStyle": {
+        "style": "IRIS",
+        "zoom": 4
+      },
       "channel": [],
-      "bank": [],
       "mouth": [],
       "dry": [],
       "floodedCave": []
@@ -317,7 +669,45 @@
       "maxFloodDepth": 64,
       "maxFloodVolume": 8192,
       "fallback": "SEALED",
-      "existingFluidPolicy": "REJECT"
+      "existingFluidPolicy": "REJECT",
+      "deepPools": {
+        "enabled": true,
+        "reach": {
+          "chance": 0.3333333333333333,
+          "style": {
+            "style": "IRIS",
+            "zoom": 4096
+          },
+          "influence": 0.08
+        },
+        "minimumSpacing": 768,
+        "maximumPerReach": 1,
+        "minimumFluidY": -224,
+        "maximumFluidY": -108,
+        "searchRadius": 20,
+        "searchAttempts": 12,
+        "horizontalRadius": 24,
+        "verticalRadius": 10,
+        "dryHeadroom": 5,
+        "shapeStyle": {
+          "style": "IRIS",
+          "zoom": 12
+        },
+        "shapeVariation": 0.6,
+        "warpStyle": {
+          "style": "IRIS",
+          "zoom": 24
+        },
+        "warpStrength": 8,
+        "maximumVolume": 65536,
+        "fluidPalette": {
+          "palette": [
+            {
+              "block": "minecraft:lava"
+            }
+          ]
+        }
+      }
     }
   },
   "continentZoom": 1,
@@ -632,10 +1022,18 @@
       "minSize": 17,
       "maxSize": 17,
       "shape": "VANILLA_ELLIPSOID",
-      "palette": [{"block": "minecraft:coal_ore"}],
+      "palette": [
+        {
+          "block": "minecraft:coal_ore"
+        }
+      ],
       "replaceableBlocks": [
-        "minecraft:stone", "minecraft:granite", "minecraft:diorite",
-        "minecraft:andesite", "minecraft:deepslate", "minecraft:tuff"
+        "minecraft:stone",
+        "minecraft:granite",
+        "minecraft:diorite",
+        "minecraft:andesite",
+        "minecraft:deepslate",
+        "minecraft:tuff"
       ]
     },
     {
@@ -643,16 +1041,16 @@
       "maxHeight": 512,
       "heightDistribution": "TRIANGLE",
       "surfaceClearance": 0,
-      "minPerChunk": 40,
-      "maxPerChunk": 40,
+      "minPerChunk": 80,
+      "maxPerChunk": 80,
       "minSize": 17,
       "maxSize": 17,
       "shape": "VANILLA_ELLIPSOID",
       "discardChanceOnAirExposure": 0.5,
-      "palette": [{"block": "minecraft:coal_ore"}],
-      "replaceableBlocks": [
-        "minecraft:stone", "minecraft:granite", "minecraft:diorite",
-        "minecraft:andesite", "minecraft:deepslate", "minecraft:tuff"
+      "palette": [
+        {
+          "block": "minecraft:coal_ore"
+        }
       ]
     },
     {
@@ -665,10 +1063,18 @@
       "minSize": 9,
       "maxSize": 9,
       "shape": "VANILLA_ELLIPSOID",
-      "palette": [{"block": "minecraft:iron_ore"}],
+      "palette": [
+        {
+          "block": "minecraft:iron_ore"
+        }
+      ],
       "replaceableBlocks": [
-        "minecraft:stone", "minecraft:granite", "minecraft:diorite",
-        "minecraft:andesite", "minecraft:deepslate", "minecraft:tuff"
+        "minecraft:stone",
+        "minecraft:granite",
+        "minecraft:diorite",
+        "minecraft:andesite",
+        "minecraft:deepslate",
+        "minecraft:tuff"
       ]
     },
     {
@@ -676,15 +1082,15 @@
       "maxHeight": 240,
       "heightDistribution": "TRIANGLE",
       "surfaceClearance": 0,
-      "minPerChunk": 20,
-      "maxPerChunk": 20,
+      "minPerChunk": 40,
+      "maxPerChunk": 40,
       "minSize": 9,
       "maxSize": 9,
       "shape": "VANILLA_ELLIPSOID",
-      "palette": [{"block": "minecraft:iron_ore"}],
-      "replaceableBlocks": [
-        "minecraft:stone", "minecraft:granite", "minecraft:diorite",
-        "minecraft:andesite", "minecraft:deepslate", "minecraft:tuff"
+      "palette": [
+        {
+          "block": "minecraft:iron_ore"
+        }
       ]
     },
     {
@@ -692,15 +1098,15 @@
       "maxHeight": 272,
       "heightDistribution": "UNIFORM",
       "surfaceClearance": 0,
-      "minPerChunk": 20,
-      "maxPerChunk": 20,
+      "minPerChunk": 40,
+      "maxPerChunk": 40,
       "minSize": 4,
       "maxSize": 4,
       "shape": "VANILLA_ELLIPSOID",
-      "palette": [{"block": "minecraft:iron_ore"}],
-      "replaceableBlocks": [
-        "minecraft:stone", "minecraft:granite", "minecraft:diorite",
-        "minecraft:andesite", "minecraft:deepslate", "minecraft:tuff"
+      "palette": [
+        {
+          "block": "minecraft:iron_ore"
+        }
       ]
     },
     {
@@ -708,20 +1114,22 @@
       "maxHeight": 352,
       "heightDistribution": "TRIANGLE",
       "surfaceClearance": 0,
-      "minPerChunk": 32,
-      "maxPerChunk": 32,
+      "minPerChunk": 64,
+      "maxPerChunk": 64,
       "minSize": 10,
       "maxSize": 10,
       "shape": "VANILLA_ELLIPSOID",
       "biomeScope": "CAVE",
       "excludedBiomes": [
-        "carving/drip", "carving/drip-child",
-        "carving/drip-lite", "carving/drip-lite-child"
+        "carving/drip",
+        "carving/drip-child",
+        "carving/drip-lite",
+        "carving/drip-lite-child"
       ],
-      "palette": [{"block": "minecraft:copper_ore"}],
-      "replaceableBlocks": [
-        "minecraft:stone", "minecraft:granite", "minecraft:diorite",
-        "minecraft:andesite", "minecraft:deepslate", "minecraft:tuff"
+      "palette": [
+        {
+          "block": "minecraft:copper_ore"
+        }
       ]
     },
     {
@@ -729,20 +1137,22 @@
       "maxHeight": 352,
       "heightDistribution": "TRIANGLE",
       "surfaceClearance": 0,
-      "minPerChunk": 32,
-      "maxPerChunk": 32,
+      "minPerChunk": 64,
+      "maxPerChunk": 64,
       "minSize": 20,
       "maxSize": 20,
       "shape": "VANILLA_ELLIPSOID",
       "biomeScope": "CAVE",
       "includedBiomes": [
-        "carving/drip", "carving/drip-child",
-        "carving/drip-lite", "carving/drip-lite-child"
+        "carving/drip",
+        "carving/drip-child",
+        "carving/drip-lite",
+        "carving/drip-lite-child"
       ],
-      "palette": [{"block": "minecraft:copper_ore"}],
-      "replaceableBlocks": [
-        "minecraft:stone", "minecraft:granite", "minecraft:diorite",
-        "minecraft:andesite", "minecraft:deepslate", "minecraft:tuff"
+      "palette": [
+        {
+          "block": "minecraft:copper_ore"
+        }
       ]
     },
     {
@@ -750,16 +1160,16 @@
       "maxHeight": 192,
       "heightDistribution": "TRIANGLE",
       "surfaceClearance": 0,
-      "minPerChunk": 8,
-      "maxPerChunk": 8,
+      "minPerChunk": 16,
+      "maxPerChunk": 16,
       "minSize": 9,
       "maxSize": 9,
       "shape": "VANILLA_ELLIPSOID",
       "discardChanceOnAirExposure": 0.5,
-      "palette": [{"block": "minecraft:gold_ore"}],
-      "replaceableBlocks": [
-        "minecraft:stone", "minecraft:granite", "minecraft:diorite",
-        "minecraft:andesite", "minecraft:deepslate", "minecraft:tuff"
+      "palette": [
+        {
+          "block": "minecraft:gold_ore"
+        }
       ]
     },
     {
@@ -773,10 +1183,18 @@
       "maxSize": 9,
       "shape": "VANILLA_ELLIPSOID",
       "discardChanceOnAirExposure": 0.5,
-      "palette": [{"block": "minecraft:gold_ore"}],
+      "palette": [
+        {
+          "block": "minecraft:gold_ore"
+        }
+      ],
       "replaceableBlocks": [
-        "minecraft:stone", "minecraft:granite", "minecraft:diorite",
-        "minecraft:andesite", "minecraft:deepslate", "minecraft:tuff"
+        "minecraft:stone",
+        "minecraft:granite",
+        "minecraft:diorite",
+        "minecraft:andesite",
+        "minecraft:deepslate",
+        "minecraft:tuff"
       ]
     },
     {
@@ -791,13 +1209,22 @@
       "shape": "VANILLA_ELLIPSOID",
       "biomeScope": "SURFACE",
       "includedBiomes": [
-        "minecraft:badlands", "minecraft:eroded_badlands",
+        "minecraft:badlands",
+        "minecraft:eroded_badlands",
         "minecraft:wooded_badlands"
       ],
-      "palette": [{"block": "minecraft:gold_ore"}],
+      "palette": [
+        {
+          "block": "minecraft:gold_ore"
+        }
+      ],
       "replaceableBlocks": [
-        "minecraft:stone", "minecraft:granite", "minecraft:diorite",
-        "minecraft:andesite", "minecraft:deepslate", "minecraft:tuff"
+        "minecraft:stone",
+        "minecraft:granite",
+        "minecraft:diorite",
+        "minecraft:andesite",
+        "minecraft:deepslate",
+        "minecraft:tuff"
       ]
     },
     {
@@ -805,15 +1232,18 @@
       "maxHeight": 158,
       "heightDistribution": "UNIFORM",
       "surfaceClearance": 0,
-      "minPerChunk": 8,
-      "maxPerChunk": 8,
+      "minPerChunk": 16,
+      "maxPerChunk": 16,
       "minSize": 8,
       "maxSize": 8,
       "shape": "VANILLA_ELLIPSOID",
-      "palette": [{"data": {"lit": false}, "block": "minecraft:redstone_ore"}],
-      "replaceableBlocks": [
-        "minecraft:stone", "minecraft:granite", "minecraft:diorite",
-        "minecraft:andesite", "minecraft:deepslate", "minecraft:tuff"
+      "palette": [
+        {
+          "data": {
+            "lit": false
+          },
+          "block": "minecraft:redstone_ore"
+        }
       ]
     },
     {
@@ -826,10 +1256,21 @@
       "minSize": 8,
       "maxSize": 8,
       "shape": "VANILLA_ELLIPSOID",
-      "palette": [{"data": {"lit": false}, "block": "minecraft:redstone_ore"}],
+      "palette": [
+        {
+          "data": {
+            "lit": false
+          },
+          "block": "minecraft:redstone_ore"
+        }
+      ],
       "replaceableBlocks": [
-        "minecraft:stone", "minecraft:granite", "minecraft:diorite",
-        "minecraft:andesite", "minecraft:deepslate", "minecraft:tuff"
+        "minecraft:stone",
+        "minecraft:granite",
+        "minecraft:diorite",
+        "minecraft:andesite",
+        "minecraft:deepslate",
+        "minecraft:tuff"
       ]
     },
     {
@@ -837,16 +1278,16 @@
       "maxHeight": 160,
       "heightDistribution": "TRIANGLE",
       "surfaceClearance": 0,
-      "minPerChunk": 14,
-      "maxPerChunk": 14,
+      "minPerChunk": 28,
+      "maxPerChunk": 28,
       "minSize": 4,
       "maxSize": 4,
       "shape": "VANILLA_ELLIPSOID",
       "discardChanceOnAirExposure": 0.5,
-      "palette": [{"block": "minecraft:diamond_ore"}],
-      "replaceableBlocks": [
-        "minecraft:stone", "minecraft:granite", "minecraft:diorite",
-        "minecraft:andesite", "minecraft:deepslate", "minecraft:tuff"
+      "palette": [
+        {
+          "block": "minecraft:diamond_ore"
+        }
       ]
     },
     {
@@ -854,51 +1295,51 @@
       "maxHeight": 120,
       "heightDistribution": "UNIFORM",
       "surfaceClearance": 0,
-      "minPerChunk": 4,
-      "maxPerChunk": 4,
-      "minSize": 8,
-      "maxSize": 8,
-      "shape": "VANILLA_ELLIPSOID",
-      "discardChanceOnAirExposure": 0.5,
-      "palette": [{"block": "minecraft:diamond_ore"}],
-      "replaceableBlocks": [
-        "minecraft:stone", "minecraft:granite", "minecraft:diorite",
-        "minecraft:andesite", "minecraft:deepslate", "minecraft:tuff"
-      ]
-    },
-    {
-      "minHeight": -160,
-      "maxHeight": 160,
-      "heightDistribution": "TRIANGLE",
-      "surfaceClearance": 0,
-      "minPerChunk": 2,
-      "maxPerChunk": 2,
-      "spawnChance": 0.1111111111111111,
-      "minSize": 12,
-      "maxSize": 12,
-      "shape": "VANILLA_ELLIPSOID",
-      "discardChanceOnAirExposure": 0.7,
-      "palette": [{"block": "minecraft:diamond_ore"}],
-      "replaceableBlocks": [
-        "minecraft:stone", "minecraft:granite", "minecraft:diorite",
-        "minecraft:andesite", "minecraft:deepslate", "minecraft:tuff"
-      ]
-    },
-    {
-      "minHeight": -160,
-      "maxHeight": 160,
-      "heightDistribution": "TRIANGLE",
-      "surfaceClearance": 0,
       "minPerChunk": 8,
       "maxPerChunk": 8,
       "minSize": 8,
       "maxSize": 8,
       "shape": "VANILLA_ELLIPSOID",
+      "discardChanceOnAirExposure": 0.5,
+      "palette": [
+        {
+          "block": "minecraft:diamond_ore"
+        }
+      ]
+    },
+    {
+      "minHeight": -160,
+      "maxHeight": 160,
+      "heightDistribution": "TRIANGLE",
+      "surfaceClearance": 0,
+      "minPerChunk": 4,
+      "maxPerChunk": 4,
+      "spawnChance": 0.1111111111111111,
+      "minSize": 12,
+      "maxSize": 12,
+      "shape": "VANILLA_ELLIPSOID",
+      "discardChanceOnAirExposure": 0.7,
+      "palette": [
+        {
+          "block": "minecraft:diamond_ore"
+        }
+      ]
+    },
+    {
+      "minHeight": -160,
+      "maxHeight": 160,
+      "heightDistribution": "TRIANGLE",
+      "surfaceClearance": 0,
+      "minPerChunk": 16,
+      "maxPerChunk": 16,
+      "minSize": 8,
+      "maxSize": 8,
+      "shape": "VANILLA_ELLIPSOID",
       "discardChanceOnAirExposure": 1.0,
-      "palette": [{"block": "minecraft:diamond_ore"}],
-      "replaceableBlocks": [
-        "minecraft:stone", "minecraft:granite", "minecraft:diorite",
-        "minecraft:andesite", "minecraft:deepslate", "minecraft:tuff"
+      "palette": [
+        {
+          "block": "minecraft:diamond_ore"
+        }
       ]
     },
     {
@@ -906,15 +1347,15 @@
       "maxHeight": 192,
       "heightDistribution": "TRIANGLE",
       "surfaceClearance": 0,
-      "minPerChunk": 4,
-      "maxPerChunk": 4,
+      "minPerChunk": 8,
+      "maxPerChunk": 8,
       "minSize": 7,
       "maxSize": 7,
       "shape": "VANILLA_ELLIPSOID",
-      "palette": [{"block": "minecraft:lapis_ore"}],
-      "replaceableBlocks": [
-        "minecraft:stone", "minecraft:granite", "minecraft:diorite",
-        "minecraft:andesite", "minecraft:deepslate", "minecraft:tuff"
+      "palette": [
+        {
+          "block": "minecraft:lapis_ore"
+        }
       ]
     },
     {
@@ -922,16 +1363,16 @@
       "maxHeight": 256,
       "heightDistribution": "UNIFORM",
       "surfaceClearance": 0,
-      "minPerChunk": 8,
-      "maxPerChunk": 8,
+      "minPerChunk": 16,
+      "maxPerChunk": 16,
       "minSize": 7,
       "maxSize": 7,
       "shape": "VANILLA_ELLIPSOID",
       "discardChanceOnAirExposure": 1.0,
-      "palette": [{"block": "minecraft:lapis_ore"}],
-      "replaceableBlocks": [
-        "minecraft:stone", "minecraft:granite", "minecraft:diorite",
-        "minecraft:andesite", "minecraft:deepslate", "minecraft:tuff"
+      "palette": [
+        {
+          "block": "minecraft:lapis_ore"
+        }
       ]
     },
     {
@@ -946,15 +1387,29 @@
       "shape": "VANILLA_ELLIPSOID",
       "biomeScope": "SURFACE",
       "includedBiomes": [
-        "minecraft:cherry_grove", "minecraft:frozen_peaks", "minecraft:grove",
-        "minecraft:jagged_peaks", "minecraft:meadow", "minecraft:snowy_slopes",
-        "minecraft:stony_peaks", "minecraft:windswept_forest",
-        "minecraft:windswept_gravelly_hills", "minecraft:windswept_hills"
+        "minecraft:cherry_grove",
+        "minecraft:frozen_peaks",
+        "minecraft:grove",
+        "minecraft:jagged_peaks",
+        "minecraft:meadow",
+        "minecraft:snowy_slopes",
+        "minecraft:stony_peaks",
+        "minecraft:windswept_forest",
+        "minecraft:windswept_gravelly_hills",
+        "minecraft:windswept_hills"
       ],
-      "palette": [{"block": "minecraft:emerald_ore"}],
+      "palette": [
+        {
+          "block": "minecraft:emerald_ore"
+        }
+      ],
       "replaceableBlocks": [
-        "minecraft:stone", "minecraft:granite", "minecraft:diorite",
-        "minecraft:andesite", "minecraft:deepslate", "minecraft:tuff"
+        "minecraft:stone",
+        "minecraft:granite",
+        "minecraft:diorite",
+        "minecraft:andesite",
+        "minecraft:deepslate",
+        "minecraft:tuff"
       ]
     }
   ],
@@ -969,7 +1424,9 @@
   "decorate": true,
   "loot": {
     "mode": "FALLBACK",
-    "tables": ["global-clutter"]
+    "tables": [
+      "global-clutter"
+    ]
   },
   "caveProfile": {
     "enabled": true,

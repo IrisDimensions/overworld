@@ -1,0 +1,163 @@
+name: Publish V+ Pack Release
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Build and verify the marked commit without publishing
+        required: true
+        default: true
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: overworld-pack-publication
+  cancel-in-progress: false
+
+env:
+  PACK_TITLE: Overworld
+  ASSET_PATH: overworld.zip
+  DIMENSION_PATH: dimensions/overworld.json
+
+jobs:
+  publish:
+    name: Archive exact marked commit
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out triggering commit
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+
+      - name: Resolve immutable release identity
+        id: release
+        shell: bash
+        run: |
+          set -euo pipefail
+          archive_sha="$(git rev-parse HEAD)"
+          commit_message="$(git log -1 --format=%B HEAD)"
+
+          if [[ "$archive_sha" != "$GITHUB_SHA" ]]; then
+            echo "Checked out commit $archive_sha does not match triggering commit $GITHUB_SHA" >&2
+            exit 1
+          fi
+
+          if [[ "$commit_message" != *"V+"* ]]; then
+            if [[ "$GITHUB_EVENT_NAME" == "workflow_dispatch" ]]; then
+              echo "The selected commit does not contain the literal V+ release marker." >&2
+              exit 1
+            fi
+
+            echo "requested=false" >> "$GITHUB_OUTPUT"
+            echo "No V+ marker in commit $archive_sha; stable publication is skipped."
+            exit 0
+          fi
+
+          pack_version="$(jq -er '.version | select(type == "number" and floor == . and . > 0) | tostring' "$DIMENSION_PATH")"
+          echo "requested=true" >> "$GITHUB_OUTPUT"
+          {
+            echo "ARCHIVE_SHA=$archive_sha"
+            echo "PACK_VERSION=$pack_version"
+            echo "RELEASE_TAG=$pack_version"
+            echo "RELEASE_TITLE=${PACK_TITLE} ${pack_version}"
+          } >> "$GITHUB_ENV"
+
+      - name: Build and verify release archive
+        if: steps.release.outputs.requested == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git archive --format=zip --output="$ASSET_PATH" "$ARCHIVE_SHA"
+          unzip -t "$ASSET_PATH"
+          unzip -Z1 "$ASSET_PATH" | grep -Fx "$DIMENSION_PATH"
+          unzip -p "$ASSET_PATH" "$DIMENSION_PATH" \
+            | jq -e --arg version "$PACK_VERSION" '(.version | tostring) == $version'
+
+          asset_sha256="$(sha256sum "$ASSET_PATH" | cut -d' ' -f1)"
+          echo "ASSET_SHA256=$asset_sha256" >> "$GITHUB_ENV"
+
+      - name: Publish immutable stable release
+        if: steps.release.outputs.requested == 'true' && (github.event_name == 'push' || inputs.dry_run != true)
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+
+          if gh api "repos/${GITHUB_REPOSITORY}/git/ref/tags/${RELEASE_TAG}" >/dev/null 2>&1; then
+            git fetch --quiet --force origin \
+              "+refs/tags/${RELEASE_TAG}:refs/tags/${RELEASE_TAG}"
+            tagged_sha="$(git rev-list -n1 "refs/tags/${RELEASE_TAG}")"
+
+            if [[ "$tagged_sha" != "$ARCHIVE_SHA" ]]; then
+              echo "Release tag $RELEASE_TAG already points to $tagged_sha, not $ARCHIVE_SHA" >&2
+              exit 1
+            fi
+          else
+            gh api \
+              --method POST \
+              "repos/${GITHUB_REPOSITORY}/git/refs" \
+              -f ref="refs/tags/${RELEASE_TAG}" \
+              -f sha="$ARCHIVE_SHA" \
+              >/dev/null
+          fi
+
+          release_notes="Stable ${PACK_TITLE} pack ${PACK_VERSION} from exact commit ${ARCHIVE_SHA}. Asset SHA-256: ${ASSET_SHA256}."
+
+          if gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            existing_asset="$(gh release view "$RELEASE_TAG" \
+              --repo "$GITHUB_REPOSITORY" \
+              --json assets \
+              --jq ".assets[] | select(.name == \"${ASSET_PATH}\") | .name")"
+
+            if [[ -n "$existing_asset" ]]; then
+              existing_dir="${RUNNER_TEMP}/existing-${RELEASE_TAG}"
+              mkdir -p "$existing_dir"
+              gh release download "$RELEASE_TAG" \
+                --repo "$GITHUB_REPOSITORY" \
+                --pattern "$ASSET_PATH" \
+                --dir "$existing_dir"
+              cmp "$ASSET_PATH" "${existing_dir}/${ASSET_PATH}"
+            else
+              gh release upload "$RELEASE_TAG" "$ASSET_PATH" \
+                --repo "$GITHUB_REPOSITORY"
+            fi
+
+            gh release edit "$RELEASE_TAG" \
+              --repo "$GITHUB_REPOSITORY" \
+              --title "$RELEASE_TITLE" \
+              --notes "$release_notes" \
+              --draft=false \
+              --prerelease=false \
+              --latest
+          else
+            gh release create "$RELEASE_TAG" "$ASSET_PATH" \
+              --repo "$GITHUB_REPOSITORY" \
+              --verify-tag \
+              --title "$RELEASE_TITLE" \
+              --notes "$release_notes" \
+              --latest
+          fi
+
+      - name: Report release candidate
+        if: steps.release.outputs.requested == 'true'
+        shell: bash
+        run: |
+          {
+            echo "### ${PACK_TITLE} ${PACK_VERSION}"
+            echo "- Commit: \`${ARCHIVE_SHA}\`"
+            echo "- Asset: \`${ASSET_PATH}\`"
+            echo "- SHA-256: \`${ASSET_SHA256}\`"
+            if [[ "$GITHUB_EVENT_NAME" == "workflow_dispatch" && "${{ inputs.dry_run }}" == "true" ]]; then
+              echo "- Result: dry run; no tag, release, or asset was published"
+            else
+              echo "- Result: immutable stable release published"
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"

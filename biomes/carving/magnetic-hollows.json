@@ -7,34 +7,34 @@
     "enabled": true,
     "verticalRange": {
       "min": 6,
-      "max": 700
+      "max": 660
     },
     "baseDensityStyle": {
-      "style": "CELLULAR_IRIS_DOUBLE",
-      "zoom": 0.74
+      "style": "SIMPLEX_VASCULAR",
+      "zoom": 0.92
     },
     "detailDensityStyle": {
-      "style": "FRACTAL_BILLOW_SIMPLEX",
-      "zoom": 0.46
+      "style": "VASCULAR_THIN",
+      "zoom": 1.14
     },
     "warpStyle": {
       "style": "SIMPLEX",
-      "zoom": 0.34
+      "zoom": 0.44
     },
-    "baseWeight": 0.9,
-    "detailWeight": 0.12,
-    "warpStrength": 0.28,
+    "baseWeight": 0.92,
+    "detailWeight": 0.08,
+    "warpStrength": 0.22,
     "densityThreshold": {
-      "min": -0.14,
-      "max": -0.04,
+      "min": -0.17,
+      "max": -0.09,
       "style": {
         "style": "SIMPLEX",
-        "zoom": 0.68
+        "zoom": 0.76
       }
     },
-    "thresholdBias": 0.09,
+    "thresholdBias": 0.15,
     "sampleStep": 2,
-    "surfaceClearance": 10,
+    "surfaceClearance": 12,
     "allowSurfaceBreak": false,
     "objectMinDepthBelowSurface": 14,
     "defaultObjectAnchor": "FLOOR",
@@ -49,21 +49,32 @@
       {
         "style": {
           "style": "SIMPLEX_VASCULAR",
-          "zoom": 0.92
+          "zoom": 1.22
         },
         "weight": 0.07,
         "threshold": 0.03,
         "verticalRange": {
-          "min": 20,
-          "max": 660
+          "min": 18,
+          "max": 620
+        },
+        "invert": false
+      },
+      {
+        "style": {
+          "style": "CELLULAR_BILINEAR",
+          "zoom": 1.58
+        },
+        "weight": 0.035,
+        "threshold": 0.2,
+        "verticalRange": {
+          "min": 40,
+          "max": 560
         },
         "invert": false
       }
     ],
-    "verticalEdgeFade": 24,
-    "verticalEdgeFadeStrength": 0.16,
-    "minCarveCells": 24,
-    "recoveryThresholdBoost": 0.07
+    "verticalEdgeFade": 36,
+    "verticalEdgeFadeStrength": 0.24
   },
   "wall": {
     "style": {
@@ -86,6 +97,10 @@
       {
         "block": "minecraft:deepslate",
         "weight": 2
+      },
+      {
+        "block": "minecraft:calcite",
+        "weight": 1
       }
     ]
   },
@@ -105,6 +120,14 @@
         {
           "block": "minecraft:tuff",
           "weight": 3
+        },
+        {
+          "block": "minecraft:calcite",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:amethyst_block",
+          "weight": 1
         }
       ]
     }
@@ -125,14 +148,79 @@
         {
           "block": "minecraft:smooth_basalt",
           "weight": 2
+        },
+        {
+          "block": "minecraft:calcite",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:amethyst_block",
+          "weight": 1
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.045,
+      "palette": [
+        {
+          "block": "minecraft:small_amethyst_bud",
+          "weight": 4
+        },
+        {
+          "block": "minecraft:medium_amethyst_bud",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:large_amethyst_bud",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:amethyst_cluster",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "partOf": "CEILING",
+      "chance": 0.045,
+      "palette": [
+        {
+          "block": "minecraft:small_amethyst_bud",
+          "data": {
+            "facing": "down"
+          },
+          "weight": 4
+        },
+        {
+          "block": "minecraft:medium_amethyst_bud",
+          "data": {
+            "facing": "down"
+          },
+          "weight": 3
+        },
+        {
+          "block": "minecraft:large_amethyst_bud",
+          "data": {
+            "facing": "down"
+          },
+          "weight": 2
+        },
+        {
+          "block": "minecraft:amethyst_cluster",
+          "data": {
+            "facing": "down"
+          },
+          "weight": 1
         }
       ]
     }
   ],
   "objects": [
     {
-      "chance": 0.16,
-      "density": 2,
+      "chance": 0.22,
+      "density": 3,
       "carvingSupport": "CARVING_ONLY",
       "caveAnchorMode": "PROFILE_DEFAULT",
       "translate": {
@@ -149,12 +237,12 @@
       "bottom": true,
       "force": true,
       "scale": {
-        "size": 0.65
+        "size": 0.55
       }
     },
     {
-      "chance": 0.09,
-      "density": 1,
+      "chance": 0.14,
+      "density": 2,
       "carvingSupport": "CARVING_ONLY",
       "caveAnchorMode": "PROFILE_DEFAULT",
       "translate": {
@@ -171,7 +259,45 @@
       "bottom": true,
       "force": true,
       "scale": {
-        "size": 0.6
+        "size": 0.5
+      }
+    },
+    {
+      "chance": 0.035,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "structures/monolith1",
+        "structures/monolith3",
+        "structures/monolith4"
+      ],
+      "bottom": true,
+      "force": true,
+      "scale": {
+        "size": 0.45
+      }
+    },
+    {
+      "chance": 0.025,
+      "density": 1,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "structures/crystal7",
+        "structures/crystal8",
+        "structures/crystal9"
+      ],
+      "bottom": true,
+      "force": true,
+      "scale": {
+        "size": 0.4
       }
     }
   ]

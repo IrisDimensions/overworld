@@ -1,4 +1,4 @@
-name: Publish Master as Beta Pack
+name: Publish Unmarked Commit as Beta Pack
 
 on:
   push:
@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: overworld-beta-release
+  group: overworld-pack-publication
   cancel-in-progress: false
 
 env:
@@ -20,17 +20,32 @@ env:
 
 jobs:
   publish:
-    name: Archive latest master build
+    name: Archive unmarked master build
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out latest master build
+      - name: Check out triggering commit
         uses: actions/checkout@v6
         with:
-          ref: refs/heads/master
+          ref: ${{ github.sha }}
           fetch-depth: 1
 
+      - name: Detect stable release marker
+        id: release_marker
+        shell: bash
+        run: |
+          set -euo pipefail
+          commit_message="$(git log -1 --format=%B HEAD)"
+
+          if [[ "$commit_message" == *"V+"* ]]; then
+            echo "found=true" >> "$GITHUB_OUTPUT"
+            echo "This exact commit contains V+; beta publication is skipped."
+          else
+            echo "found=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Build and verify master archive
+        if: steps.release_marker.outputs.found != 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -48,6 +63,7 @@ jobs:
           unzip -Z1 "$ASSET_PATH" | grep -Fx "dimensions/overworld.json"
 
       - name: Publish beta release
+        if: steps.release_marker.outputs.found != 'true'
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
@@ -91,3 +107,9 @@ jobs:
               --prerelease \
               --latest=false
           fi
+
+      - name: Report stable release handoff
+        if: steps.release_marker.outputs.found == 'true'
+        shell: bash
+        run: |
+          echo "Stable release workflow owns commit ${GITHUB_SHA}." >> "$GITHUB_STEP_SUMMARY"
