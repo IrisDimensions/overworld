@@ -134,23 +134,24 @@
   "hydrology": {
     "rivers": {
       "enabled": true,
-    "routing": {
+      "routing": {
         "tileSize": 1024,
         "sampleSpacing": 64,
-      "refinementSpacing": 4,
-      "branching": {
-        "minimumSurfaceCourseLength": 384,
-          "minimumUndergroundCourseLength": 384
-      },
         "maximumRouteLength": 16384,
+        "minimumSurfaceCourseLength": 384,
+        "minimumUndergroundCourseLength": 384,
         "maximumOutletsPerTile": 1,
         "oceanOutlets": true,
         "inlandOutlets": [
           "SINKHOLE_GROTTO"
-      ]
-    },
-    "geometry": {
-      "meanders": {
+        ],
+        "valleyPreference": 1.5,
+        "uphillPenalty": 24.0,
+        "slopePenalty": 2.0,
+        "confluenceAttraction": 0.2
+      },
+      "geometry": {
+        "meanders": {
           "primaryWavelength": 192,
           "detailWavelength": 48,
           "primaryStrength": 0.55,
@@ -158,102 +159,73 @@
           "maximumOffsetRatio": 0.45,
           "smoothingPasses": 2,
           "maximumTurnDegrees": 20
+        },
+        "underground": {
+          "bedRoundness": 3.0,
+          "bedRoughness": 0.36,
+          "wallRoughness": 0.32,
+          "roughnessWavelength": 9
+        },
+        "grottos": {
+          "bedRoundness": 3.2,
+          "bedRoughness": 0.38,
+          "wallRoughness": 0.34,
+          "roughnessWavelength": 11
+        },
+        "drops": {
+          "cascadeRunPerBlock": 2,
+          "cascadeExponent": 1.4,
+          "maximumCascadeStep": 2,
+          "flowWidthRatio": 0.45,
+          "maximumFlowDepth": 2,
+          "basinWidthRatio": 1.8,
+          "maximumBasinDepth": 8
+        }
       },
       "surface": {
-        "bedRoundness": 2.8,
-        "bedRoughness": 0.32,
-        "wallRoughness": 0.08,
-        "roughnessWavelength": 24
-      },
-      "underground": {
-        "bedRoundness": 3.0,
-        "bedRoughness": 0.36,
-        "wallRoughness": 0.32,
-        "roughnessWavelength": 9
-      },
-      "grottos": {
-        "bedRoundness": 3.2,
-        "bedRoughness": 0.38,
-        "wallRoughness": 0.34,
-        "roughnessWavelength": 11
-      },
-      "drops": {
-        "cascadeRunPerBlock": 2,
-        "cascadeExponent": 1.4,
-        "maximumCascadeStep": 2,
-        "flowWidthRatio": 0.45,
-        "maximumFlowDepth": 2,
-        "basinWidthRatio": 1.8,
-        "maximumBasinDepth": 8
-      }
-    },
-    "surface": {
         "enabled": true,
         "sources": {
           "density": 1.75,
-        "minimumElevation": 64,
-        "minimumPerTile": 0,
+          "minimumElevation": 64,
+          "minimumPerTile": 0,
           "minimumSpacing": 384
         },
         "channel": {
           "width": {
             "min": 4,
-          "max": 8,
+            "max": 8,
             "style": {
               "style": "IRIS",
               "zoom": 384
             }
           },
           "depth": {
-          "min": 1,
-          "max": 3,
+            "min": 2,
+            "max": 4,
             "style": {
               "style": "IRIS",
-              "zoom": 320,
-              "exponent": 2
+              "zoom": 320
             }
           },
-          "surfaceInset": {
-          "min": 2,
-          "max": 2,
-            "style": {
-              "style": "IRIS",
-              "zoom": 384,
-              "exponent": 2
-            }
-          },
-          "maximumIncision": 6,
-          "shoreWidth": 1.0,
-          "terrainBlendWidth": {
-          "min": 12,
-          "max": 24,
-            "style": {
-              "style": "IRIS",
-              "zoom": 512
-            }
-          }
+          "inset": 1,
+          "maximumIncision": 10,
+          "roughness": 0.25,
+          "roughnessWavelength": 16
         },
-        "hydraulics": {
-          "targetPoolLength": {
-          "min": 80,
-          "max": 180,
-            "style": {
-              "style": "IRIS",
-              "zoom": 384
-            }
-          },
-          "riffleDrop": 1,
-        "maximumGradualDrop": 7,
-        "maximumGradualLength": 24,
-        "waterfallMinimumDrop": 8
+        "banks": {
+          "freeboard": 1,
+          "shoreWidth": 1.5,
+          "blendSlope": 3.0,
+          "minimumBlendWidth": 4,
+          "maximumBlendWidth": 32,
+          "exposeCutStrata": true
         },
-        "ridgeTunnels": {
-          "enabled": true,
-        "maximumLength": 384,
-          "headroom": 10
+        "flow": {
+          "cascadeRun": 2,
+          "waterfallMinimumDrop": 6
         },
         "mouths": {
-          "levelingDistance": 128,
+          "flareRatio": 1.6,
           "maximumOceanApron": 8
         }
       },
@@ -261,12 +233,12 @@
         "enabled": true,
         "sources": {
           "density": 1.5,
-        "minimumPerTile": 0,
+          "minimumPerTile": 0,
           "minimumSpacing": 640
         },
         "fluidLevel": {
           "min": -48,
-        "max": 32,
+          "max": 32,
           "style": {
             "style": "IRIS",
             "zoom": 512
@@ -274,29 +246,30 @@
         },
         "channelWidth": {
           "min": 3,
-        "max": 8,
+          "max": 8,
           "style": {
             "style": "IRIS",
             "zoom": 384
           }
         },
         "depth": {
-        "min": 1,
-        "max": 3,
+          "min": 1,
+          "max": 3,
           "style": {
             "style": "IRIS",
             "zoom": 320
           }
         },
         "headroom": {
-        "min": 6,
-        "max": 14,
+          "min": 6,
+          "max": 14,
           "style": {
             "style": "IRIS",
             "zoom": 384
           }
         },
-      "connectToExistingCaves": true
+        "connectToExistingCaves": true,
+        "mouthLevelingDistance": 128
       },
       "grottos": {
         "coastal": {
@@ -304,16 +277,16 @@
           "poolLevel": "SEA_LEVEL",
           "horizontalRadius": 12,
           "verticalRadius": 7,
-        "headroom": 10,
-        "maximumVolume": 16384
+          "headroom": 10,
+          "maximumVolume": 16384
         },
         "inland": {
           "enabled": true,
           "connectSurfaceRivers": true,
           "horizontalRadius": 10,
           "verticalRadius": 6,
-        "headroom": 10,
-        "maximumVolume": 16384
+          "headroom": 10,
+          "maximumVolume": 16384
         }
       },
       "profiles": [
@@ -347,13 +320,13 @@
             "zoom": 1024
           }
         },
-      "density": 0.5,
-      "spacing": 1024,
-      "horizontalRadius": 12,
-      "verticalRadius": 5,
-      "channelWidth": 3,
-      "depth": 1,
-      "headroom": 6,
+        "density": 0.5,
+        "spacing": 1024,
+        "horizontalRadius": 12,
+        "verticalRadius": 5,
+        "channelWidth": 3,
+        "depth": 1,
+        "headroom": 6,
         "containedPools": true,
         "shortChannels": false
       }
@@ -378,7 +351,7 @@
       "temperate/shore/beach",
       "temperate/shore/oak-beach"
     ],
-    "dryBiomes": [
+    "bankBiomes": [
       "temperate/plains",
       "temperate/calmplains"
     ],
@@ -388,7 +361,6 @@
     ],
     "widthMultiplier": 1.0,
     "depthMultiplier": 1.0,
-    "incisionMultiplier": 1.0,
     "routingMultiplier": 1.0
   },
   "continentZoom": 1,
