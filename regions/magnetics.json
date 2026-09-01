@@ -2,20 +2,22 @@
     "name": "The Magnetics",
     "color": "#7B9EC9",
     "rarity": 15,
-    "riverOverride": {
-        "allowSources": true,
-        "routingCostMultiplier": 1.55,
-        "widthMultiplier": 0.62,
-        "bankWidthMultiplier": 0.55,
-        "depthMultiplier": 1.55,
-        "maxIncisionMultiplier": 1.0,
-        "continuationChanceMultiplier": 1.0,
-        "caveEntryMultiplier": 0.45,
-        "channelBiomes": [
+    "riverPolicy": {
+        "placement": "NATURAL",
+        "routing": "AVOID",
+        "outletAdmission": true,
+        "profiles": [
+            "water"
+        ],
+        "surfaceBiomes": [
             "prismatics/sea"
         ],
         "mouthBiomes": [
             "prismatics/sea"
+        ],
+        "shoreBiomes": [
+            "temperate/shore/beach",
+            "ocean/shore/beach"
         ],
         "dryBiomes": [
             "magnetics/glass",
@@ -24,7 +26,11 @@
         "floodedCaveBiomes": [
             "carving/magnetic-hollows",
             "carving/polarity-grotto"
-        ]
+        ],
+        "widthMultiplier": 0.62,
+        "depthMultiplier": 1.55,
+        "incisionMultiplier": 1.0,
+        "routingMultiplier": 1.55
     },
     "landBiomes": [
         "magnetics/plains",

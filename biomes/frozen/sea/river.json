@@ -1,5 +1,12 @@
 {
-    "proceduralObjects": "snippet/procedural-objects/frozen/magical-ice-spikes-surface",
+    "riverPolicy": {
+        "placement": "TRANSIT_ONLY",
+        "routing": "PREFER",
+        "outletAdmission": false,
+        "profiles": [
+            "water"
+        ]
+    },
     "name": "Frozen River",
     "color": "#3DB9F5",
     "derivative": "minecraft:frozen_river",
@@ -10,15 +17,20 @@
         "generator": "mountain"
     }],
     "layers": [
-        {"palette": [
-            {"block": "minecraft:dirt"},
-            {"block": "minecraft:gravel"},
-            {"block": "minecraft:stone"}
-        ]},
+        {
+            "style": {"style": "IRIS"},
+            "zoom": 8,
+            "palette": [
+                {"block": "minecraft:dirt"},
+                {"block": "minecraft:gravel"},
+                {"block": "minecraft:stone"}
+            ]
+        },
         {
             "minHeight": 2,
             "maxHeight": 3,
-            "style": {"style": "STATIC"},
+            "style": {"style": "IRIS"},
+            "zoom": 12,
             "palette": [
                 {"block": "minecraft:sand"},
                 {"block": "minecraft:clay"},

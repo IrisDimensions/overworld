@@ -2,22 +2,26 @@
     "name": "Hot",
     "color": "#D1CD44",
     "rarity": 3,
-    "riverOverride": {
-        "allowSources": true,
-        "routingCostMultiplier": 1.45,
-        "widthMultiplier": 0.65,
-        "bankWidthMultiplier": 0.75,
-        "depthMultiplier": 0.55,
-        "maxIncisionMultiplier": 1.0,
-        "continuationChanceMultiplier": 1.0,
-        "caveEntryMultiplier": 0.2,
-        "channelBiomes": [
+    "riverPolicy": {
+        "placement": "NATURAL",
+        "routing": "AVOID",
+        "outletAdmission": true,
+        "profiles": [
+            "water"
+        ],
+        "surfaceBiomes": [
             "hot/sea/river",
             "mesa/sea/river"
         ],
         "mouthBiomes": [
             "hot/sea/ocean",
             "ocean/rich-oceans"
+        ],
+        "shoreBiomes": [
+            "hot/shore/beach",
+            "hot/shore/beach-grass",
+            "mesa/shore/beach",
+            "savanna/shore/beach"
         ],
         "dryBiomes": [
             "hot/desert-dunes",
@@ -27,7 +31,11 @@
         "floodedCaveBiomes": [
             "carving/sandstone",
             "carving/sand-hollows"
-        ]
+        ],
+        "widthMultiplier": 0.65,
+        "depthMultiplier": 0.55,
+        "incisionMultiplier": 1.0,
+        "routingMultiplier": 1.45
     },
     "seaBiomeZoom": 3.5,
     "landBiomes": [

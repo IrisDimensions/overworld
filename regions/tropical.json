@@ -2,22 +2,26 @@
     "name": "Tropical",
     "color": "#54EA2C",
     "rarity": 2,
-    "riverOverride": {
-        "allowSources": true,
-        "routingCostMultiplier": 0.65,
-        "widthMultiplier": 0.95,
-        "bankWidthMultiplier": 0.95,
-        "depthMultiplier": 1.15,
-        "maxIncisionMultiplier": 1.0,
-        "continuationChanceMultiplier": 1.0,
-        "caveEntryMultiplier": 1.5,
-        "channelBiomes": [
+    "riverPolicy": {
+        "placement": "NATURAL",
+        "routing": "PREFER",
+        "outletAdmission": true,
+        "profiles": [
+            "water"
+        ],
+        "surfaceBiomes": [
             "tropical/sea/river-soft",
             "tropical/sea/river-steep"
         ],
         "mouthBiomes": [
             "tropical/sea/ocean",
             "ocean/rich-oceans"
+        ],
+        "shoreBiomes": [
+            "tropical/island-beach",
+            "tropical/beach",
+            "tropical/beach-bamboo",
+            "tropical/beach-charred"
         ],
         "dryBiomes": [
             "tropical/plains",
@@ -26,7 +30,11 @@
         "floodedCaveBiomes": [
             "carving/jungle",
             "carving/lush"
-        ]
+        ],
+        "widthMultiplier": 0.95,
+        "depthMultiplier": 1.15,
+        "incisionMultiplier": 1.0,
+        "routingMultiplier": 0.65
     },
     "landBiomes": [
         "tropical/rainforest",

@@ -2,22 +2,23 @@
     "name": "Frozen",
     "color": "#44C3D1",
     "rarity": 1,
-    "riverOverride": {
-        "allowSources": true,
-        "routingCostMultiplier": 1.1,
-        "widthMultiplier": 0.85,
-        "bankWidthMultiplier": 0.8,
-        "depthMultiplier": 0.7,
-        "maxIncisionMultiplier": 1.0,
-        "continuationChanceMultiplier": 1.0,
-        "caveEntryMultiplier": 0.25,
-        "channelBiomes": [
+    "riverPolicy": {
+        "placement": "PREFERRED_HEADWATER",
+        "routing": "ALLOW",
+        "outletAdmission": true,
+        "profiles": [
+            "water"
+        ],
+        "surfaceBiomes": [
             "frozen/sea/frozen-river-ice",
             "frozen/sea/river"
         ],
         "mouthBiomes": [
             "frozen/sea/ocean",
             "vanilla/deep_frozen_ocean"
+        ],
+        "shoreBiomes": [
+            "frozen/shore/beach"
         ],
         "dryBiomes": [
             "frozen/plains",
@@ -26,7 +27,11 @@
         "floodedCaveBiomes": [
             "carving/ice-lite",
             "carving/glacial"
-        ]
+        ],
+        "widthMultiplier": 0.85,
+        "depthMultiplier": 0.7,
+        "incisionMultiplier": 1.0,
+        "routingMultiplier": 1.1
     },
     "landBiomes": [
         "frozen/plains",

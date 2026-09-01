@@ -2,22 +2,27 @@
     "name": "Temperate",
     "color": "#9BEE61",
     "rarity": 1,
-    "riverOverride": {
-        "allowSources": true,
-        "routingCostMultiplier": 0.8,
-        "widthMultiplier": 0.85,
-        "bankWidthMultiplier": 0.8,
-        "depthMultiplier": 1.0,
-        "maxIncisionMultiplier": 1.0,
-        "continuationChanceMultiplier": 1.0,
-        "caveEntryMultiplier": 0.8,
-        "channelBiomes": [
+    "riverPolicy": {
+        "placement": "PREFERRED_HEADWATER",
+        "routing": "PREFER",
+        "outletAdmission": true,
+        "profiles": [
+            "water"
+        ],
+        "surfaceBiomes": [
             "temperate/sea/river",
             "mountain/sea/river-soft"
         ],
         "mouthBiomes": [
             "temperate/sea/ocean",
             "ocean/rich-oceans"
+        ],
+        "shoreBiomes": [
+            "temperate/shore/beach",
+            "temperate/shore/oak-beach",
+            "ocean/shore/beach",
+            "mountain/shore/beach",
+            "vanilla/stony_shore"
         ],
         "dryBiomes": [
             "temperate/plains",
@@ -26,7 +31,11 @@
         "floodedCaveBiomes": [
             "carving/rocky-cavebiome",
             "carving/chalk-gardens"
-        ]
+        ],
+        "widthMultiplier": 0.85,
+        "depthMultiplier": 1.0,
+        "incisionMultiplier": 1.0,
+        "routingMultiplier": 0.8
     },
     "landBiomes": [
         "temperate/plains",

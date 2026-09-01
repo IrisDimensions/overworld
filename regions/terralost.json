@@ -2,21 +2,21 @@
     "name": "Terralost",
     "color": "#446600",
     "rarity": 5,
-    "riverOverride": {
-        "allowSources": true,
-        "routingCostMultiplier": 0.72,
-        "widthMultiplier": 0.8,
-        "bankWidthMultiplier": 0.65,
-        "depthMultiplier": 1.55,
-        "maxIncisionMultiplier": 1.0,
-        "continuationChanceMultiplier": 1.0,
-        "caveEntryMultiplier": 1.6,
-        "terminalMode": "SINKHOLE_GROTTO",
-        "channelBiomes": [
+    "riverPolicy": {
+        "placement": "PREFERRED_HEADWATER",
+        "routing": "PREFER",
+        "outletAdmission": true,
+        "profiles": [
+            "water"
+        ],
+        "surfaceBiomes": [
             "mountain/sea/river"
         ],
         "mouthBiomes": [
             "mountain/sea/river"
+        ],
+        "shoreBiomes": [
+            "tundra/shore/beach"
         ],
         "dryBiomes": [
             "terralost/ancient-sands",
@@ -25,7 +25,11 @@
         "floodedCaveBiomes": [
             "carving/amethyst",
             "carving/calcite"
-        ]
+        ],
+        "widthMultiplier": 0.8,
+        "depthMultiplier": 1.55,
+        "incisionMultiplier": 1.0,
+        "routingMultiplier": 0.72
     },
     "landBiomes": [
         "terralost/amethyst-rainforest",

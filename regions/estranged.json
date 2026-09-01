@@ -2,22 +2,27 @@
     "name": "Estranged",
     "color": "#B26BE8",
     "rarity": 1,
-    "riverOverride": {
-        "allowSources": true,
-        "routingCostMultiplier": 0.9,
-        "widthMultiplier": 0.9,
-        "bankWidthMultiplier": 0.85,
-        "depthMultiplier": 0.9,
-        "maxIncisionMultiplier": 1.0,
-        "continuationChanceMultiplier": 1.0,
-        "caveEntryMultiplier": 1.35,
-        "channelBiomes": [
+    "riverPolicy": {
+        "placement": "NATURAL",
+        "routing": "ALLOW",
+        "outletAdmission": true,
+        "profiles": [
+            "water"
+        ],
+        "surfaceBiomes": [
             "temperate/sea/river",
             "mountain/sea/river-soft"
         ],
         "mouthBiomes": [
             "ocean/dark-depth-ocean",
             "ocean/rich-oceans"
+        ],
+        "shoreBiomes": [
+            "temperate/shore/beach",
+            "temperate/shore/oak-beach",
+            "ocean/shore/beach",
+            "mountain/shore/beach",
+            "vanilla/stony_shore"
         ],
         "dryBiomes": [
             "estranged/weeping-mire",
@@ -26,7 +31,11 @@
         "floodedCaveBiomes": [
             "carving/chalk-gardens",
             "carving/moss-pillars"
-        ]
+        ],
+        "widthMultiplier": 0.9,
+        "depthMultiplier": 0.9,
+        "incisionMultiplier": 1.0,
+        "routingMultiplier": 0.9
     },
     "proceduralObjects": {
         "formations": [

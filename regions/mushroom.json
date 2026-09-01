@@ -2,20 +2,21 @@
     "name": "Mushroom",
     "color": "#F1C3EF",
     "rarity": 15,
-    "riverOverride": {
-        "allowSources": true,
-        "routingCostMultiplier": 0.68,
-        "widthMultiplier": 0.95,
-        "bankWidthMultiplier": 0.9,
-        "depthMultiplier": 0.5,
-        "maxIncisionMultiplier": 1.0,
-        "continuationChanceMultiplier": 1.0,
-        "caveEntryMultiplier": 1.15,
-        "channelBiomes": [
+    "riverPolicy": {
+        "placement": "NATURAL",
+        "routing": "PREFER",
+        "outletAdmission": true,
+        "profiles": [
+            "water"
+        ],
+        "surfaceBiomes": [
             "mushroom/sea/ocean"
         ],
         "mouthBiomes": [
             "mushroom/sea/ocean"
+        ],
+        "shoreBiomes": [
+            "mushroom/shore/beach"
         ],
         "dryBiomes": [
             "mushroom/plains",
@@ -24,7 +25,11 @@
         "floodedCaveBiomes": [
             "carving/mushroom",
             "carving/crystalized-overgrown"
-        ]
+        ],
+        "widthMultiplier": 0.95,
+        "depthMultiplier": 0.5,
+        "incisionMultiplier": 1.0,
+        "routingMultiplier": 0.68
     },
     "proceduralObjects": {
         "fungi": [

@@ -2,22 +2,23 @@
     "name": "Swamp",
     "color": "#69943C",
     "rarity": 2,
-    "riverOverride": {
-        "allowSources": true,
-        "routingCostMultiplier": 0.55,
-        "widthMultiplier": 1.1,
-        "bankWidthMultiplier": 1.0,
-        "depthMultiplier": 0.45,
-        "maxIncisionMultiplier": 1.0,
-        "continuationChanceMultiplier": 1.0,
-        "caveEntryMultiplier": 1.6,
-        "channelBiomes": [
+    "riverPolicy": {
+        "placement": "NATURAL",
+        "routing": "PREFER",
+        "outletAdmission": true,
+        "profiles": [
+            "water"
+        ],
+        "surfaceBiomes": [
             "swamp/sea/ocean",
             "swamp/sea/ocean-tree"
         ],
         "mouthBiomes": [
             "swamp/sea/ocean",
             "swamp/sea/ocean-tree"
+        ],
+        "shoreBiomes": [
+            "swamp/shore/beach"
         ],
         "dryBiomes": [
             "swamp/marsh",
@@ -26,7 +27,11 @@
         "floodedCaveBiomes": [
             "carving/swamp",
             "carving/lush"
-        ]
+        ],
+        "widthMultiplier": 1.1,
+        "depthMultiplier": 0.45,
+        "incisionMultiplier": 1.0,
+        "routingMultiplier": 0.55
     },
     "landBiomes": [
         "swamp/roofed-forest",

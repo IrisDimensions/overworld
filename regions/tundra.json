@@ -2,22 +2,24 @@
     "name": "Tundra",
     "color": "#9CB0B9",
     "rarity": 2,
-    "riverOverride": {
-        "allowSources": true,
-        "routingCostMultiplier": 0.95,
-        "widthMultiplier": 0.82,
-        "bankWidthMultiplier": 0.75,
-        "depthMultiplier": 1.0,
-        "maxIncisionMultiplier": 1.0,
-        "continuationChanceMultiplier": 1.0,
-        "caveEntryMultiplier": 0.65,
-        "channelBiomes": [
+    "riverPolicy": {
+        "placement": "PREFERRED_HEADWATER",
+        "routing": "ALLOW",
+        "outletAdmission": true,
+        "profiles": [
+            "water"
+        ],
+        "surfaceBiomes": [
             "tundra/sea/river",
             "mountain/sea/river"
         ],
         "mouthBiomes": [
             "vanilla/cold_ocean",
             "vanilla/deep_cold_ocean"
+        ],
+        "shoreBiomes": [
+            "tundra/shore/beach",
+            "tundra/shore/beach-stone"
         ],
         "dryBiomes": [
             "tundra/taiga",
@@ -26,7 +28,11 @@
         "floodedCaveBiomes": [
             "carving/calcite",
             "carving/frost-shards"
-        ]
+        ],
+        "widthMultiplier": 0.82,
+        "depthMultiplier": 1.0,
+        "incisionMultiplier": 1.0,
+        "routingMultiplier": 0.95
     },
     "landBiomes": [
         "tundra/taiga",
