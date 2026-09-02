@@ -14,7 +14,6 @@
     "customDerivitives": [
         {
             "id": "frozen_river_ice",
-            "temperature": 0.0,
             "grassColor": "#ADE5FF",
             "downfallType": "snow",
             "category": "icy"
@@ -114,5 +113,41 @@
     ],
     "childStyle": {
         "style": "SIMPLEX"
-    }
+    },
+    "seaLayers": [
+        {
+            "minHeight": 1,
+            "maxHeight": 2,
+            "style": {
+                "style": "GLOB_IRIS_THICK",
+                "axialFracturing": true
+            },
+            "zoom": 0.4,
+            "palette": [
+                {
+                    "weight": 2,
+                    "block": "minecraft:ice"
+                },
+                {
+                    "weight": 3,
+                    "block": "minecraft:packed_ice"
+                },
+                {
+                    "block": "minecraft:blue_ice"
+                },
+                {
+                    "weight": 3,
+                    "block": "minecraft:packed_ice"
+                },
+                {
+                    "weight": 2,
+                    "block": "minecraft:ice"
+                },
+                {
+                    "block": "minecraft:water",
+                    "weight": 8
+                }
+            ]
+        }
+    ]
 }
