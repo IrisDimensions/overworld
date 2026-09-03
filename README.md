@@ -1,4 +1,4 @@
-# Overworld V4000
+# Overworld V4005
 The standard overworld for [Iris the Dimension Engine](https://www.spigotmc.org/resources/iris-world-gen-the-dimension-engine.84586/). New and Improved!
 
 
@@ -23,7 +23,9 @@ Please contact us on Discord if you have some changes up for review!
 
 An unmarked commit at the head of `master` updates the mutable `beta` prerelease. If the full head commit message contains the literal, case-sensitive marker `V+`, beta publication is skipped and that exact commit is published as a stable release instead. The release tag is the positive integer `version` in `dimensions/overworld.json`, and the flat-root release asset is `overworld.zip`.
 
-Stable version tags are immutable. Increment the dimension version before marking another commit with `V+`; publication fails if that version tag already belongs to a different commit. The `Publish V+ Pack Release` manual workflow defaults to a non-publishing dry run and also requires the selected commit to contain `V+`.
+Stable version tags are immutable. Increment the dimension version before marking another commit with `V+`; publication fails if that version tag already exists. Stable publication only checks the archive and dimension identity, creates the flat-root ZIP, and publishes it with the commit changes since the previous stable release. It does not clone or build Iris or run generation probes.
+
+The `Publish V+ Pack Release` manual workflow defaults to a non-publishing dry run and can publish the selected commit without a `V+` marker when `dry_run` is disabled.
 
 Every ore deposit permits placement on an exterior terrain surface only when the replaced block is `minecraft:stone`; cave-air walls and buried candidates still use each pass's broader host rules. A biome can replace the surface host list through `surfaceOreReplaceableBlocks`. The 19 subterranean ore passes retain 70% of their configured clump attempts, reducing expected underground ore frequency by 30%, while the 15 above-terrain floating passes keep their authored frequency.
 
@@ -31,7 +33,7 @@ Terrain-first hydrology uses independently budgeted surface, underground, and de
 
 ## Validate and package
 
-Use Java 25 from a current Iris checkout for the same offline generation and bounded hydrology coverage gates used by publication:
+Before marking terrain or generation changes with `V+`, use Java 25 from a current Iris checkout for the offline generation and bounded hydrology coverage gates:
 
 ```text
 ./gradlew --no-daemon :probe:genProbe \
@@ -68,4 +70,4 @@ Use Java 25 from a current Iris checkout for the same offline generation and bou
 
 The generation probe runs the canonical pack validator before creating its test engine. The hydrology probe scans 1,024 explicit seed-tile combinations and fails unless every required feature/profile selector is accepted. The generation-order probe requires identical block and biome output across forward, reverse, shuffled, and bounded-parallel generation. On a live Bukkit-family server, use `/iris pack validate pack=overworld` and `/iris pack package dimension=overworld obfuscate=false minify=true`.
 
-Both publication workflows build a flat-root `overworld.zip` from the exact commit and extract that candidate archive. Nothing is published unless Java 25 validation and the focused Studio generation, hydrology coverage, and generation-order gates all pass against that archive.
+Both publication workflows build and integrity-check a flat-root `overworld.zip` from the exact triggering commit, then publish that archive. Generation probes remain an explicit pre-release QA step and are not part of publication.

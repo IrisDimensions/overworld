@@ -23,13 +23,10 @@ env:
   PACK_TITLE: Overworld
   ASSET_PATH: overworld.zip
   DIMENSION_PATH: dimensions/overworld.json
-  PACK_DIMENSION: overworld
-  IRIS_REPOSITORY: https://github.com/VolmitSoftware/Iris.git
-  IRIS_REF: master
 
 jobs:
   publish:
-    name: Validate and archive exact marked commit
+    name: Archive and publish exact marked commit
     runs-on: ubuntu-latest
 
     steps:
@@ -38,6 +35,7 @@ jobs:
         with:
           ref: ${{ github.sha }}
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Resolve immutable release identity
         id: release
@@ -52,12 +50,7 @@ jobs:
             exit 1
           fi
 
-          if [[ "$commit_message" != *"V+"* ]]; then
-            if [[ "$GITHUB_EVENT_NAME" == "workflow_dispatch" ]]; then
-              echo "The selected commit does not contain the literal V+ release marker." >&2
-              exit 1
-            fi
-
+          if [[ "$GITHUB_EVENT_NAME" == "push" && "$commit_message" != *"V+"* ]]; then
             echo "requested=false" >> "$GITHUB_OUTPUT"
             echo "No V+ marker in commit $archive_sha; stable publication is skipped."
             exit 0
@@ -86,52 +79,6 @@ jobs:
           asset_sha256="$(sha256sum "$ASSET_PATH" | cut -d' ' -f1)"
           echo "ASSET_SHA256=$asset_sha256" >> "$GITHUB_ENV"
 
-      - name: Set up Java 25
-        if: steps.release.outputs.requested == 'true'
-        uses: actions/setup-java@v5
-        with:
-          distribution: temurin
-          java-version: '25'
-
-      - name: Validate candidate and run Studio generation, hydrology, and order probes
-        if: steps.release.outputs.requested == 'true'
-        shell: bash
-        run: |
-          set -euo pipefail
-          candidate_root="${RUNNER_TEMP}/${PACK_DIMENSION}-candidate"
-          iris_root="${RUNNER_TEMP}/iris-engine"
-          mkdir -p "$candidate_root"
-          unzip -q "$ASSET_PATH" -d "$candidate_root"
-          git clone --depth 1 --single-branch --branch "$IRIS_REF" "$IRIS_REPOSITORY" "$iris_root"
-          "$iris_root/gradlew" --no-daemon -p "$iris_root" :probe:genProbe \
-            -PprobePack="$candidate_root" \
-            -PprobeDimension="$PACK_DIMENSION" \
-            -PprobeWarmupChunks=64 \
-            -PprobeMeasuredChunks=256 \
-            -PprobeStudio=true
-          "$iris_root/gradlew" --no-daemon -p "$iris_root" :probe:hydrologyPackProbe \
-            -PprobePack="$candidate_root" \
-            -PprobeDimension="$PACK_DIMENSION" \
-            -PprobeSeeds=1,19,331,1337 \
-            -PprobeMinimumTileX=8 \
-            -PprobeMaximumTileX=23 \
-            -PprobeMinimumTileZ=8 \
-            -PprobeMaximumTileZ=23 \
-            -PprobeRequiredCoverage=SURFACE_POOL@water,RIFFLE@water,CASCADE@water,WATERFALL@water,UNDERGROUND_POOL@water,UNDERGROUND_DROP@water,COASTAL_GROTTO@water,MOUTH@water,SINKHOLE@water,INLAND_GROTTO@water,DEEP_POOL@deep_lava \
-            -PprobeStudio=true
-          "$iris_root/gradlew" --no-daemon -p "$iris_root" :probe:generationOrderProbe \
-            -PprobePack="$candidate_root" \
-            -PprobeDimension="$PACK_DIMENSION" \
-            -PprobeSeed=77 \
-            -PprobeMinimumChunkX=2048 \
-            -PprobeMaximumChunkX=2051 \
-            -PprobeMinimumChunkZ=2048 \
-            -PprobeMaximumChunkZ=2051 \
-            -PprobeParallelism=4 \
-            -PprobeShuffleSeed=1337 \
-            -PprobeMulticore=false \
-            -PprobeStudio=true
-
       - name: Publish immutable stable release
         if: steps.release.outputs.requested == 'true' && (github.event_name == 'push' || inputs.dry_run != true)
         shell: bash
@@ -140,60 +87,42 @@ jobs:
         run: |
           set -euo pipefail
 
-          if gh api "repos/${GITHUB_REPOSITORY}/git/ref/tags/${RELEASE_TAG}" >/dev/null 2>&1; then
-            git fetch --quiet --force origin \
-              "+refs/tags/${RELEASE_TAG}:refs/tags/${RELEASE_TAG}"
-            tagged_sha="$(git rev-list -n1 "refs/tags/${RELEASE_TAG}")"
-
-            if [[ "$tagged_sha" != "$ARCHIVE_SHA" ]]; then
-              echo "Release tag $RELEASE_TAG already points to $tagged_sha, not $ARCHIVE_SHA" >&2
-              exit 1
-            fi
-          else
-            gh api \
-              --method POST \
-              "repos/${GITHUB_REPOSITORY}/git/refs" \
-              -f ref="refs/tags/${RELEASE_TAG}" \
-              -f sha="$ARCHIVE_SHA" \
-              >/dev/null
+          if gh api "repos/${GITHUB_REPOSITORY}/git/ref/tags/${RELEASE_TAG}" >/dev/null 2>&1 \
+            || gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "Release $RELEASE_TAG already exists; increment the pack version before publishing again." >&2
+            exit 1
           fi
 
-          release_notes="Stable ${PACK_TITLE} pack ${PACK_VERSION} from exact commit ${ARCHIVE_SHA}. Asset SHA-256: ${ASSET_SHA256}."
-
-          if gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
-            existing_asset="$(gh release view "$RELEASE_TAG" \
-              --repo "$GITHUB_REPOSITORY" \
-              --json assets \
-              --jq ".assets[] | select(.name == \"${ASSET_PATH}\") | .name")"
-
-            if [[ -n "$existing_asset" ]]; then
-              existing_dir="${RUNNER_TEMP}/existing-${RELEASE_TAG}"
-              mkdir -p "$existing_dir"
-              gh release download "$RELEASE_TAG" \
-                --repo "$GITHUB_REPOSITORY" \
-                --pattern "$ASSET_PATH" \
-                --dir "$existing_dir"
-              cmp "$ASSET_PATH" "${existing_dir}/${ASSET_PATH}"
-            else
-              gh release upload "$RELEASE_TAG" "$ASSET_PATH" \
-                --repo "$GITHUB_REPOSITORY"
+          previous_tag="$(gh api "repos/${GITHUB_REPOSITORY}/releases?per_page=100" \
+            --jq ".[] | select(.draft == false and .prerelease == false and .tag_name != \"${RELEASE_TAG}\") | .tag_name" \
+            | head -n 1)"
+          notes_file="${RUNNER_TEMP}/release-notes.md"
+          {
+            echo "Archive of ${PACK_TITLE} ${PACK_VERSION} from commit \`${ARCHIVE_SHA}\`."
+            echo
+            if [[ -n "$previous_tag" ]]; then
+              git fetch --quiet origin "refs/tags/${previous_tag}:refs/tags/${previous_tag}"
+              echo "## Changes since ${previous_tag}"
+              changes="$(git log --no-merges --format='- %s (%h)' "${previous_tag}..${ARCHIVE_SHA}")"
+              if [[ -n "$changes" ]]; then
+                printf '%s\n' "$changes"
+              else
+                echo "- No commit changes."
+              fi
+              echo
+              echo "[Full comparison](https://github.com/${GITHUB_REPOSITORY}/compare/${previous_tag}...${RELEASE_TAG})"
+              echo
             fi
+            echo "Asset SHA-256: \`${ASSET_SHA256}\`"
+          } > "$notes_file"
 
-            gh release edit "$RELEASE_TAG" \
-              --repo "$GITHUB_REPOSITORY" \
-              --title "$RELEASE_TITLE" \
-              --notes "$release_notes" \
-              --draft=false \
-              --prerelease=false \
-              --latest
-          else
-            gh release create "$RELEASE_TAG" "$ASSET_PATH" \
-              --repo "$GITHUB_REPOSITORY" \
-              --verify-tag \
-              --title "$RELEASE_TITLE" \
-              --notes "$release_notes" \
-              --latest
-          fi
+          gh release create "$RELEASE_TAG" "$ASSET_PATH" \
+            --repo "$GITHUB_REPOSITORY" \
+            --target "$ARCHIVE_SHA" \
+            --title "$RELEASE_TITLE" \
+            --notes-file "$notes_file" \
+            --fail-on-no-commits \
+            --latest
 
       - name: Report release candidate
         if: steps.release.outputs.requested == 'true'
