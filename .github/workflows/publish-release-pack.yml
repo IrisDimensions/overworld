@@ -94,8 +94,7 @@ jobs:
           fi
 
           previous_tag="$(gh api "repos/${GITHUB_REPOSITORY}/releases?per_page=100" \
-            --jq ".[] | select(.draft == false and .prerelease == false and .tag_name != \"${RELEASE_TAG}\") | .tag_name" \
-            | head -n 1)"
+            --jq "[.[] | select(.draft == false and .prerelease == false and .tag_name != \"${RELEASE_TAG}\") | .tag_name][0] // \"\"")"
           notes_file="${RUNNER_TEMP}/release-notes.md"
           {
             echo "Archive of ${PACK_TITLE} ${PACK_VERSION} from commit \`${ARCHIVE_SHA}\`."
