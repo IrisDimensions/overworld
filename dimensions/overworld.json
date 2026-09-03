@@ -141,6 +141,7 @@
         "minimumSurfaceCourseLength": 384,
         "minimumUndergroundCourseLength": 384,
         "maximumOutletsPerTile": 1,
+        "maximumCoastalOutletsPerTile": 2,
         "oceanOutlets": true,
         "inlandOutlets": [
           "SINKHOLE_GROTTO"
@@ -160,17 +161,37 @@
           "smoothingPasses": 2,
           "maximumTurnDegrees": 20
         },
+        "surface": {
+          "bedRoundness": 2.0,
+          "bedRoughness": 0.25,
+          "wallRoughness": 0.25,
+          "roughnessWavelength": 16
+        },
         "underground": {
           "bedRoundness": 3.0,
           "bedRoughness": 0.36,
           "wallRoughness": 0.32,
-          "roughnessWavelength": 9
+          "roughnessWavelength": 9,
+          "radialBase": 0.86,
+          "radialMinimum": 0.58,
+          "radialMaximum": 1.18,
+          "primaryLobeStrength": 0.08,
+          "detailLobeStrength": 0.06,
+          "ceilingRoughness": 0.0
         },
         "grottos": {
           "bedRoundness": 3.2,
           "bedRoughness": 0.38,
           "wallRoughness": 0.34,
-          "roughnessWavelength": 11
+          "roughnessWavelength": 11,
+          "radialBase": 0.86,
+          "radialMinimum": 0.58,
+          "radialMaximum": 1.18,
+          "primaryLobeStrength": 0.08,
+          "detailLobeStrength": 0.06,
+          "ceilingRoughness": 0.0,
+          "aspectMinimum": 0.62,
+          "aspectRange": 0.2
         },
         "drops": {
           "cascadeRunPerBlock": 2,
@@ -179,7 +200,8 @@
           "flowWidthRatio": 0.45,
           "maximumFlowDepth": 2,
           "basinWidthRatio": 1.8,
-          "maximumBasinDepth": 8
+          "maximumBasinDepth": 8,
+          "undergroundCascadeRunPerBlock": 0
         }
       },
       "surface": {
@@ -207,26 +229,104 @@
               "zoom": 320
             }
           },
-          "inset": 1,
-          "maximumIncision": 10,
+          "sink": 0,
+          "maximumIncision": 16,
           "roughness": 0.25,
-          "roughnessWavelength": 16
+          "roughnessWavelength": 16,
+          "springWidthRatio": 2.5,
+          "springLength": 24,
+          "smoothingRadius": 16,
+          "outlineMinimumRatio": 0.6,
+          "outlineMaximumRatio": 1.4,
+          "springExtraDepth": 1.0
         },
         "banks": {
-          "freeboard": 1,
           "shoreWidth": 1.5,
+          "shoreRise": 0.0,
           "blendSlope": 3.0,
+          "blendBaseWidth": 0.0,
           "minimumBlendWidth": 4,
           "maximumBlendWidth": 32,
-          "exposeCutStrata": true
+          "exposeCutStrata": true,
+          "shoreMaterial": {
+            "enabled": false,
+            "palette": {
+              "palette": [
+                {
+                  "block": "minecraft:stone"
+                }
+              ]
+            },
+            "depth": 1
+          },
+          "bankMaterial": {
+            "enabled": false,
+            "palette": {
+              "palette": [
+                {
+                  "block": "minecraft:stone"
+                }
+              ]
+            },
+            "depth": 1
+          }
+        },
+        "bed": {
+          "allowGravityBlocks": false,
+          "padding": 2,
+          "material": {
+            "enabled": false,
+            "palette": {
+              "palette": [
+                {
+                  "block": "minecraft:stone"
+                }
+              ]
+            },
+            "depth": 1
+          }
         },
         "flow": {
           "cascadeRun": 2,
-          "waterfallMinimumDrop": 6
+          "waterfallMinimumDrop": 6,
+          "waterfallThalwegFraction": 0.65,
+          "plungeBasinMinimumDrop": 2,
+          "plungeBasinLengthRatio": 2.0,
+          "plungeBasinDepth": 1
         },
         "mouths": {
-          "flareRatio": 1.6,
-          "maximumOceanApron": 8
+          "flareRatio": 2.5,
+          "maximumOceanApron": 8,
+          "inletLength": 64,
+          "inletDepth": 3,
+          "maximumIncision": 32,
+          "inletCourseFraction": 0.5,
+          "inletRampSlope": 1.0
+        },
+        "erosion": {
+          "enabled": true,
+          "smoothingRadius": 12,
+          "thalwegFraction": 0.45,
+          "blendCurve": 1.0,
+          "bedNoise": 0.5,
+          "style": "SMOOTH",
+          "terraceSteps": 4,
+          "cliffFraction": 0.5,
+          "bedProfile": "BOWL"
+        },
+        "ponds": {
+          "source": {
+            "enabled": true,
+            "minimumRadius": 6,
+            "maximumRadius": 12,
+            "depth": 3
+          },
+          "terminal": {
+            "enabled": true,
+            "minimumRadius": 4,
+            "maximumRadius": 7,
+            "depth": 3
+          }
         }
       },
       "underground": {
@@ -269,7 +369,22 @@
           }
         },
         "connectToExistingCaves": true,
-        "mouthLevelingDistance": 128
+        "mouthLevelingDistance": 128,
+        "tributaries": 1,
+        "minimumRockCover": 1,
+        "minimumFloorCover": 1,
+        "wideningSources": 8,
+        "bedMaterial": {
+          "enabled": false,
+          "palette": {
+            "palette": [
+              {
+                "block": "minecraft:stone"
+              }
+            ]
+          },
+          "depth": 1
+        }
       },
       "grottos": {
         "coastal": {
@@ -278,7 +393,17 @@
           "horizontalRadius": 12,
           "verticalRadius": 7,
           "headroom": 10,
-          "maximumVolume": 16384
+          "maximumVolume": 16384,
+          "cliffMinimumHeight": 7,
+          "cliffSlopeFactor": 0.5,
+          "seaCaves": {
+            "enabled": true,
+            "maximumPerTile": 3,
+            "minimumSpacing": 160,
+            "minimumCoastHeight": 8,
+            "depth": 12,
+            "sweepJitterDegrees": 25.0
+          }
         },
         "inland": {
           "enabled": true,
