@@ -1,115 +1,188 @@
 {
-    "name": "Frozen Spruce Plains",
-    "color": "#06405B",
-    "rarity": 1,
-    "derivative": "minecraft:snowy_taiga",
-    "vanillaDerivative": "minecraft:snowy_taiga",
-    "customDerivitives": [{
-        "category": "icy",
-        "id": "frozen_spruce_plains",
-        "waterFogColor": "#216FC4",
-        "foliageColor": "#B8D0E1",
-        "downfallType": "snow",
-        "temperature": -3,
-        "fogColor": "#A6D1FF",
-        "grassColor": "#D0E1FF"
-    }],
-    "children": ["frozen/spruce-hills"],
-    "generators": [{
-        "generator": "smooth-dunes",
-        "max": 10,
-        "min": 4
-    }],
-    "wall": {"palette": [
-        {"block": "minecraft:stone"},
-        {"block": "minecraft:andesite"}
-    ]},
-    "layers": [
+  "name": "Frozen Spruce Plains",
+  "color": "#06405B",
+  "rarity": 1,
+  "derivative": "minecraft:snowy_taiga",
+  "vanillaDerivative": "minecraft:snowy_taiga",
+  "customDerivitives": [
+    {
+      "category": "icy",
+      "id": "frozen_spruce_plains",
+      "waterFogColor": "#216FC4",
+      "foliageColor": "#B8D0E1",
+      "downfallType": "snow",
+      "temperature": -3,
+      "fogColor": "#A6D1FF",
+      "grassColor": "#D0E1FF"
+    }
+  ],
+  "children": [
+    "frozen/spruce-hills"
+  ],
+  "generators": [
+    {
+      "generator": "smooth-dunes",
+      "max": 10,
+      "min": 4
+    }
+  ],
+  "wall": {
+    "palette": [
+      {
+        "block": "minecraft:stone"
+      },
+      {
+        "block": "minecraft:andesite"
+      }
+    ]
+  },
+  "layers": [
+    {
+      "minHeight": 0,
+      "maxHeight": 1,
+      "palette": [
         {
-            "minHeight": 0,
-            "maxHeight": 1,
-            "palette": [{"block": "minecraft:snow_block"}]
+          "block": "minecraft:snow_block"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:grass_block"
+        }
+      ]
+    },
+    {
+      "minHeight": 4,
+      "maxHeight": 7,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    },
+    {
+      "minHeight": 6,
+      "maxHeight": 18,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:stone"
         },
         {
-            "minHeight": 1,
-            "maxHeight": 1,
-            "palette": [{"block": "minecraft:grass_block"}]
+          "block": "minecraft:andesite"
         },
         {
-            "minHeight": 4,
-            "maxHeight": 7,
-            "palette": [{"block": "minecraft:dirt"}]
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "chance": 0.8,
+      "snow": 1,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
         },
+        "enabled": true
+      },
+      "edit": [
         {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {"style": "STATIC"},
+          "find": [
+            {
+              "block": "minecraft:spruce_leaves"
+            }
+          ],
+          "replace": {
+            "style": {
+              "style": "PERLIN",
+              "zoom": 0.2
+            },
             "palette": [
-                {"block": "minecraft:stone"},
-                {"block": "minecraft:andesite"},
-                {"block": "minecraft:stone"}
+              {
+                "block": "minecraft:oak_leaves"
+              },
+              {
+                "block": "minecraft:dark_oak_leaves"
+              }
             ]
+          }
         }
-    ],
-
-    "objects": [{
-        "chance": 0.8,
-        "snow": 1,
-        "rotation": {
-            "yAxis": {
-                "min": 0,
-                "max": 270,
-                "interval": 90,
-                "enabled": true
-            },
-            "enabled": true
+      ],
+      "place": [
+        "trees/spruce/levergreen1",
+        "trees/spruce/levergreen1",
+        "trees/spruce/mevergreen1",
+        "trees/spruce/mevergreen2",
+        "trees/spruce/mevergreen3"
+      ],
+      "translate": {
+        "x": 0,
+        "y": -2,
+        "z": 0
+      }
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 1,
+      "variance": {
+        "style": "NOWHERE",
+        "zoom": 0.5
+      },
+      "palette": [
+        {
+          "data": {
+            "layers": 1
+          },
+          "block": "minecraft:snow"
         },
-        "edit": [{
-            "find": [{"block": "minecraft:spruce_leaves"}],
-            "replace": {
-                "style": {
-                    "style": "PERLIN",
-                    "zoom": 0.2
-                },
-                "palette": [
-                    {"block": "minecraft:oak_leaves"},
-                    {"block": "minecraft:dark_oak_leaves"}
-                ]
-            }
-        }],
-        "place": [
-            "trees/spruce/levergreen1",
-            "trees/spruce/levergreen1",
-            "trees/spruce/mevergreen1",
-            "trees/spruce/mevergreen2",
-            "trees/spruce/mevergreen3"
-        ],
-        "translate": {
-            "x": 0,
-            "y": -2,
-            "z": 0
+        {
+          "block": "minecraft:air"
+        },
+        {
+          "data": {
+            "layers": 2
+          },
+          "block": "minecraft:snow"
+        },
+        {
+          "data": {
+            "layers": 3
+          },
+          "block": "minecraft:snow"
         }
-    }],
-    "decorators": [{
-        "chance": 1,
-        "variance": {
-            "style": "NOWHERE",
-            "zoom": 0.5
-        },
-        "palette": [
-            {
-                "data": {"layers": 1},
-                "block": "minecraft:snow"
-            },
-            {"block": "minecraft:air"},
-            {
-                "data": {"layers": 2},
-                "block": "minecraft:snow"
-            },
-            {
-                "data": {"layers": 3},
-                "block": "minecraft:snow"
-            }
-        ]
-    }]
+      ]
+    }
+  ],
+  "terrain3D": {
+    "enabled": true,
+    "seed": 30101,
+    "amplitude": 10,
+    "horizontalScale": 192,
+    "verticalScale": 24,
+    "densityStyle": {
+      "style": "PERLIN"
+    },
+    "crackDepth": 0,
+    "crackWidth": 2.25,
+    "crackScale": 392,
+    "crackStyle": {
+      "style": "SIMPLEX"
+    },
+    "minimumSlope": 0.18,
+    "slopeFade": 0.3,
+    "fluidClearance": 8,
+    "fluidFade": 24
+  }
 }

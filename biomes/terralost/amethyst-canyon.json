@@ -1,424 +1,444 @@
 {
-    "name": "Amethyst Rainforest",
-    "derivative": "minecraft:jungle",
-    "vanillaDerivative": "minecraft:jungle",
-    "layers": [
+  "name": "Amethyst Rainforest",
+  "derivative": "minecraft:jungle",
+  "vanillaDerivative": "minecraft:jungle",
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 3,
+      "palette": [
         {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                {
-                    "block": "minecraft:calcite"
-                },
-                {
-                    "block": "minecraft:smooth_basalt"
-                }
-            ]
+          "block": "minecraft:calcite"
         },
         {
-            "minHeight": 2,
-            "maxHeight": 5,
-            "palette": [
-                {
-                    "block": "minecraft:tuff"
-                }
-            ]
+          "block": "minecraft:smooth_basalt"
         }
-    ],
-    "color": "#8EDEE7",
-    "rarity": 1,
-    "customDerivitives": [
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 5,
+      "palette": [
         {
-            "id": "terralost_amethyst_rainforest1",
-            "skyColor": "#CEC6FF",
-            "category": "jungle",
-            "fogColor": "#C0D8FF",
-            "humidity": 0.9,
-            "downfallType": "rain",
-            "temperature": 0.95,
-            "foliageColor": "#A57AEB",
-            "waterColor": "#43D5EE",
-            "grassColor": "#4AB400",
-            "waterFogColor": "#50533"
-        },
-        {
-            "id": "terralost_amethyst_rainforest2",
-            "skyColor": "#CEC6FF",
-            "category": "jungle",
-            "fogColor": "#C0D8FF",
-            "humidity": 0.1,
-            "downfallType": "rain",
-            "temperature": 0.45,
-            "foliageColor": "#8B45FF",
-            "waterColor": "#43D5EE",
-            "grassColor": "#4AB400",
-            "waterFogColor": "#50533"
+          "block": "minecraft:tuff"
         }
-    ],
-    "children": [
-        "terralost/amethyst-rainforest"
-    ],
-    "generators": [
+      ]
+    }
+  ],
+  "color": "#8EDEE7",
+  "rarity": 1,
+  "customDerivitives": [
+    {
+      "id": "terralost_amethyst_rainforest1",
+      "skyColor": "#CEC6FF",
+      "category": "jungle",
+      "fogColor": "#C0D8FF",
+      "humidity": 0.9,
+      "downfallType": "rain",
+      "temperature": 0.95,
+      "foliageColor": "#A57AEB",
+      "waterColor": "#43D5EE",
+      "grassColor": "#4AB400",
+      "waterFogColor": "#50533"
+    },
+    {
+      "id": "terralost_amethyst_rainforest2",
+      "skyColor": "#CEC6FF",
+      "category": "jungle",
+      "fogColor": "#C0D8FF",
+      "humidity": 0.1,
+      "downfallType": "rain",
+      "temperature": 0.45,
+      "foliageColor": "#8B45FF",
+      "waterColor": "#43D5EE",
+      "grassColor": "#4AB400",
+      "waterFogColor": "#50533"
+    }
+  ],
+  "children": [
+    "terralost/amethyst-rainforest"
+  ],
+  "generators": [
+    {
+      "min": 50,
+      "max": 70,
+      "generator": "vascular-cracked-cliffs"
+    }
+  ],
+  "objects": [
+    {
+      "mode": "MIN_HEIGHT",
+      "chance": 0.2,
+      "place": [
+        "trees/mixed/amylarge1",
+        "trees/mixed/amylarge2",
+        "trees/mixed/amylarge3",
+        "trees/mixed/amylarge4",
+        "trees/mixed/amylarge5",
+        "trees/mixed/amylarge6",
+        "trees/mixed/amylarge7",
+        "trees/mixed/amylarge8"
+      ],
+      "layers": [
         {
-            "min": 50,
-            "max": 70,
-            "generator": "vascular-cracked-cliffs"
+          "style": {
+            "style": "NOWHERE_SIMPLEX"
+          },
+          "zoom": 0.5,
+          "palette": [
+            {
+              "block": "minecraft:grass_block",
+              "weight": 8
+            },
+            {
+              "block": "minecraft:stone"
+            },
+            {
+              "block": "minecraft:coarse_dirt"
+            },
+            {
+              "block": "minecraft:diorite"
+            }
+          ]
+        },
+        {
+          "minHeight": 2,
+          "maxHeight": 4,
+          "palette": [
+            {
+              "block": "minecraft:dirt"
+            }
+          ]
+        },
+        {
+          "minHeight": 1,
+          "maxHeight": 1,
+          "palette": [
+            {
+              "block": "minecraft:stone"
+            }
+          ]
         }
-    ],
-    "objects": [
+      ],
+      "edit": [
         {
-            "mode": "MIN_HEIGHT",
-            "chance": 0.2,
-            "place": [
-                "trees/mixed/amylarge1",
-                "trees/mixed/amylarge2",
-                "trees/mixed/amylarge3",
-                "trees/mixed/amylarge4",
-                "trees/mixed/amylarge5",
-                "trees/mixed/amylarge6",
-                "trees/mixed/amylarge7",
-                "trees/mixed/amylarge8"
-            ],
-            "layers": [
-                {
-                    "style": {
-                        "style": "NOWHERE_SIMPLEX"
-                    },
-                    "zoom": 0.5,
-                    "palette": [
-                        {
-                            "block": "minecraft:grass_block",
-                            "weight": 8
-                        },
-                        {
-                            "block": "minecraft:stone"
-                        },
-                        {
-                            "block": "minecraft:coarse_dirt"
-                        },
-                        {
-                            "block": "minecraft:diorite"
-                        }
-                    ]
-                },
-                {
-                    "minHeight": 2,
-                    "maxHeight": 4,
-                    "palette": [
-                        {
-                            "block": "minecraft:dirt"
-                        }
-                    ]
-                },
-                {
-                    "minHeight": 1,
-                    "maxHeight": 1,
-                    "palette": [
-                        {
-                            "block": "minecraft:stone"
-                        }
-                    ]
-                }
-            ],
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "minecraft:dark_oak_wood"
-                        }
-                    ],
-                    "replace": {
-                        "style": {
-                            "style": "NOWHERE",
-                            "zoom": 0.02
-                        },
-                        "palette": [
-                            {
-                                "block": "minecraft:acacia_wood",
-                                "weight": 10
-                            },
-                            {
-                                "block": "minecraft:mangrove_wood"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "chance": 0.25,
-                    "find": [
-                        {
-                            "block": "minecraft:oak_leaves"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "minecraft:jungle_leaves",
-                                "weight": 10
-                            },
-                            {
-                                "block": "minecraft:flowering_azalea_leaves"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "interval": 30,
-                    "min": 0,
-                    "max": 360
-                }
+          "find": [
+            {
+              "block": "minecraft:dark_oak_wood"
             }
-        },
-        {
-            "mode": "MIN_HEIGHT",
-            "chance": 0.1,
-            "place": [
-                "trees/mixed/amymed1",
-                "trees/mixed/amymed2",
-                "trees/mixed/amymed3",
-                "trees/mixed/amymed4",
-                "trees/mixed/amymed5",
-                "trees/mixed/amymed6",
-                "trees/mixed/amymed7",
-                "trees/mixed/amymed8",
-                "trees/mixed/amymed9"
-            ],
-            "density": 2,
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "minecraft:dark_oak_wood"
-                        }
-                    ],
-                    "replace": {
-                        "style": {
-                            "style": "NOWHERE",
-                            "zoom": 0.02
-                        },
-                        "palette": [
-                            {
-                                "block": "minecraft:acacia_wood",
-                                "weight": 10
-                            },
-                            {
-                                "block": "minecraft:mangrove_wood"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "chance": 0.25,
-                    "find": [
-                        {
-                            "block": "minecraft:oak_leaves"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "minecraft:jungle_leaves",
-                                "weight": 10
-                            },
-                            {
-                                "block": "minecraft:flowering_azalea_leaves"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "interval": 45,
-                    "min": 0,
-                    "max": 360
-                }
-            }
-        },
-        {
-            "mode": "MIN_HEIGHT",
-            "chance": 0.3,
-            "place": [
-                "trees/mixed/amynormal1",
-                "trees/mixed/amynormal2",
-                "trees/mixed/amynormal3",
-                "trees/mixed/amynormal4",
-                "trees/mixed/amynormal5",
-                "trees/mixed/amynormal6",
-                "trees/mixed/amynormal7",
-                "trees/mixed/amynormal8",
-                "trees/mixed/amynormal9",
-                "trees/mixed/amynormal10",
-                "trees/mixed/amynormal11"
-            ],
-            "density": 2,
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "minecraft:dark_oak_wood"
-                        }
-                    ],
-                    "replace": {
-                        "style": {
-                            "style": "NOWHERE",
-                            "zoom": 0.02
-                        },
-                        "palette": [
-                            {
-                                "block": "minecraft:acacia_wood",
-                                "weight": 10
-                            },
-                            {
-                                "block": "minecraft:mangrove_wood"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "chance": 0.25,
-                    "find": [
-                        {
-                            "block": "minecraft:oak_leaves"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "minecraft:jungle_leaves",
-                                "weight": 10
-                            },
-                            {
-                                "block": "minecraft:flowering_azalea_leaves"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "interval": 45,
-                    "min": 0,
-                    "max": 360
-                }
-            }
-        },
-        {
-            "mode": "MIN_HEIGHT",
-            "chance": 0.3,
-            "place": [
-                "trees/mixed/amysmol1",
-                "trees/mixed/amysmol2",
-                "trees/mixed/amysmol3",
-                "trees/mixed/amysmol4",
-                "trees/mixed/amysmol5",
-                "trees/mixed/amysmol6",
-                "trees/mixed/amysmol7",
-                "trees/mixed/amysmol8",
-                "trees/mixed/amysmol9",
-                "trees/mixed/amysmol10",
-                "trees/mixed/amysmol11",
-                "trees/mixed/amysmol12"
-            ],
-            "density": 2,
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "minecraft:oak_wood"
-                        }
-                    ],
-                    "replace": {
-                        "style": {
-                            "style": "NOWHERE",
-                            "zoom": 0.02
-                        },
-                        "palette": [
-                            {
-                                "block": "minecraft:acacia_wood",
-                                "weight": 10
-                            },
-                            {
-                                "block": "minecraft:mangrove_wood"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "chance": 0.25,
-                    "find": [
-                        {
-                            "block": "minecraft:oak_leaves"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "minecraft:jungle_leaves",
-                                "weight": 10
-                            },
-                            {
-                                "block": "minecraft:flowering_azalea_leaves"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "interval": 45,
-                    "min": 0,
-                    "max": 360
-                }
-            }
-        }
-    ],
-    "decorators": [
-        {
-            "chance": 0.01,
-            "variance": {
-                "style": "STATIC"
+          ],
+          "replace": {
+            "style": {
+              "style": "NOWHERE",
+              "zoom": 0.02
             },
             "palette": [
-                {
-                    "block": "minecraft:allium"
-                }
-            ],
-            "style": {
-                "style": "STATIC"
-            }
+              {
+                "block": "minecraft:acacia_wood",
+                "weight": 10
+              },
+              {
+                "block": "minecraft:mangrove_wood"
+              }
+            ]
+          }
         },
         {
-            "chance": 0.6,
+          "chance": 0.25,
+          "find": [
+            {
+              "block": "minecraft:oak_leaves"
+            }
+          ],
+          "replace": {
+            "palette": [
+              {
+                "block": "minecraft:jungle_leaves",
+                "weight": 10
+              },
+              {
+                "block": "minecraft:flowering_azalea_leaves"
+              }
+            ]
+          }
+        }
+      ],
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "interval": 30,
+          "min": 0,
+          "max": 360
+        }
+      }
+    },
+    {
+      "mode": "MIN_HEIGHT",
+      "chance": 0.1,
+      "place": [
+        "trees/mixed/amymed1",
+        "trees/mixed/amymed2",
+        "trees/mixed/amymed3",
+        "trees/mixed/amymed4",
+        "trees/mixed/amymed5",
+        "trees/mixed/amymed6",
+        "trees/mixed/amymed7",
+        "trees/mixed/amymed8",
+        "trees/mixed/amymed9"
+      ],
+      "density": 2,
+      "edit": [
+        {
+          "find": [
+            {
+              "block": "minecraft:dark_oak_wood"
+            }
+          ],
+          "replace": {
             "style": {
-                "style": "STATIC"
+              "style": "NOWHERE",
+              "zoom": 0.02
             },
             "palette": [
-                {
-                    "block": "minecraft:tall_grass",
-                    "weight": 5
-                },
-                {
-                    "block": "minecraft:short_grass",
-                    "weight": 3
-                },
-                {
-                    "block": "minecraft:fern"
-                },
-                {
-                    "block": "minecraft:large_fern"
-                }
+              {
+                "block": "minecraft:acacia_wood",
+                "weight": 10
+              },
+              {
+                "block": "minecraft:mangrove_wood"
+              }
             ]
+          }
+        },
+        {
+          "chance": 0.25,
+          "find": [
+            {
+              "block": "minecraft:oak_leaves"
+            }
+          ],
+          "replace": {
+            "palette": [
+              {
+                "block": "minecraft:jungle_leaves",
+                "weight": 10
+              },
+              {
+                "block": "minecraft:flowering_azalea_leaves"
+              }
+            ]
+          }
         }
-    ]
+      ],
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "interval": 45,
+          "min": 0,
+          "max": 360
+        }
+      }
+    },
+    {
+      "mode": "MIN_HEIGHT",
+      "chance": 0.3,
+      "place": [
+        "trees/mixed/amynormal1",
+        "trees/mixed/amynormal2",
+        "trees/mixed/amynormal3",
+        "trees/mixed/amynormal4",
+        "trees/mixed/amynormal5",
+        "trees/mixed/amynormal6",
+        "trees/mixed/amynormal7",
+        "trees/mixed/amynormal8",
+        "trees/mixed/amynormal9",
+        "trees/mixed/amynormal10",
+        "trees/mixed/amynormal11"
+      ],
+      "density": 2,
+      "edit": [
+        {
+          "find": [
+            {
+              "block": "minecraft:dark_oak_wood"
+            }
+          ],
+          "replace": {
+            "style": {
+              "style": "NOWHERE",
+              "zoom": 0.02
+            },
+            "palette": [
+              {
+                "block": "minecraft:acacia_wood",
+                "weight": 10
+              },
+              {
+                "block": "minecraft:mangrove_wood"
+              }
+            ]
+          }
+        },
+        {
+          "chance": 0.25,
+          "find": [
+            {
+              "block": "minecraft:oak_leaves"
+            }
+          ],
+          "replace": {
+            "palette": [
+              {
+                "block": "minecraft:jungle_leaves",
+                "weight": 10
+              },
+              {
+                "block": "minecraft:flowering_azalea_leaves"
+              }
+            ]
+          }
+        }
+      ],
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "interval": 45,
+          "min": 0,
+          "max": 360
+        }
+      }
+    },
+    {
+      "mode": "MIN_HEIGHT",
+      "chance": 0.3,
+      "place": [
+        "trees/mixed/amysmol1",
+        "trees/mixed/amysmol2",
+        "trees/mixed/amysmol3",
+        "trees/mixed/amysmol4",
+        "trees/mixed/amysmol5",
+        "trees/mixed/amysmol6",
+        "trees/mixed/amysmol7",
+        "trees/mixed/amysmol8",
+        "trees/mixed/amysmol9",
+        "trees/mixed/amysmol10",
+        "trees/mixed/amysmol11",
+        "trees/mixed/amysmol12"
+      ],
+      "density": 2,
+      "edit": [
+        {
+          "find": [
+            {
+              "block": "minecraft:oak_wood"
+            }
+          ],
+          "replace": {
+            "style": {
+              "style": "NOWHERE",
+              "zoom": 0.02
+            },
+            "palette": [
+              {
+                "block": "minecraft:acacia_wood",
+                "weight": 10
+              },
+              {
+                "block": "minecraft:mangrove_wood"
+              }
+            ]
+          }
+        },
+        {
+          "chance": 0.25,
+          "find": [
+            {
+              "block": "minecraft:oak_leaves"
+            }
+          ],
+          "replace": {
+            "palette": [
+              {
+                "block": "minecraft:jungle_leaves",
+                "weight": 10
+              },
+              {
+                "block": "minecraft:flowering_azalea_leaves"
+              }
+            ]
+          }
+        }
+      ],
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "interval": 45,
+          "min": 0,
+          "max": 360
+        }
+      }
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.01,
+      "variance": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:allium"
+        }
+      ],
+      "style": {
+        "style": "STATIC"
+      }
+    },
+    {
+      "chance": 0.6,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:tall_grass",
+          "weight": 5
+        },
+        {
+          "block": "minecraft:short_grass",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:fern"
+        },
+        {
+          "block": "minecraft:large_fern"
+        }
+      ]
+    }
+  ],
+  "terrain3D": {
+    "enabled": true,
+    "seed": 30113,
+    "amplitude": 56,
+    "horizontalScale": 256,
+    "verticalScale": 32,
+    "densityStyle": {
+      "style": "IRIS_HALF"
+    },
+    "crackDepth": 14,
+    "crackWidth": 2.25,
+    "crackScale": 336,
+    "crackStyle": {
+      "style": "SIMPLEX"
+    },
+    "minimumSlope": 0.12,
+    "slopeFade": 0.28,
+    "fluidClearance": 8,
+    "fluidFade": 24
+  }
 }

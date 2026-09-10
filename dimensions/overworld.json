@@ -1,5 +1,5 @@
 {
-  "version": 4006,
+  "version": 4007,
   "name": "Overworld",
   "importedStructures": {
     "datapackOverrides": true,
@@ -65,6 +65,24 @@
               }
             ]
           }
+        }
+      },
+      {
+        "match": [
+          "minecraft:village",
+          "minecraft:pillager_outpost",
+          "minecraft:mansion",
+          "minecraft:desert_pyramid",
+          "minecraft:jungle_pyramid",
+          "minecraft:igloo",
+          "minecraft:swamp_hut",
+          "minecraft:shipwreck_beached",
+          "minecraft:ruined_portal"
+        ],
+        "terrain": {
+          "mode": "FLATTEN",
+          "horizontalPadding": 24,
+          "flattenRange": 64
         }
       }
     ]
@@ -424,6 +442,16 @@
               }
             ]
           }
+        },
+        {
+          "id": "volcanic_lava",
+          "fluidPalette": {
+            "palette": [
+              {
+                "block": "minecraft:lava"
+              }
+            ]
+          }
         }
       ]
     },
@@ -431,13 +459,47 @@
       {
         "id": "lava_pool",
         "fluidPalette": {
-          "palette": [{"block": "minecraft:lava"}]
+          "palette": [
+            {
+              "block": "minecraft:lava"
+            }
+          ]
         },
         "density": 0.75,
         "spacing": 384,
         "minimumRadius": 4,
         "maximumRadius": 7,
         "depth": 2
+      },
+      {
+        "id": "tropical_lake",
+        "fluidPalette": {
+          "palette": [
+            {
+              "block": "minecraft:water"
+            }
+          ]
+        },
+        "density": 8.0,
+        "spacing": 160,
+        "minimumRadius": 8,
+        "maximumRadius": 16,
+        "depth": 3
+      },
+      {
+        "id": "volcanic_pool",
+        "fluidPalette": {
+          "palette": [
+            {
+              "block": "minecraft:lava"
+            }
+          ]
+        },
+        "density": 6.0,
+        "spacing": 128,
+        "minimumRadius": 6,
+        "maximumRadius": 12,
+        "depth": 3
       }
     ],
     "deepFluids": [
@@ -471,12 +533,19 @@
       {
         "id": "deep_lava_small",
         "fluidPalette": {
-          "palette": [{"block": "minecraft:lava"}]
+          "palette": [
+            {
+              "block": "minecraft:lava"
+            }
+          ]
         },
         "height": {
           "min": -160,
           "max": 40,
-          "style": {"style": "IRIS", "zoom": 512}
+          "style": {
+            "style": "IRIS",
+            "zoom": 512
+          }
         },
         "density": 1.5,
         "spacing": 320,
@@ -833,7 +902,9 @@
       "minSize": 17,
       "maxSize": 17,
       "shape": "VANILLA_ELLIPSOID",
-      "surfaceReplaceableBlocks": ["minecraft:stone"],
+      "surfaceReplaceableBlocks": [
+        "minecraft:stone"
+      ],
       "perClumpSpawnChance": 0.7,
       "palette": [
         {
@@ -859,7 +930,9 @@
       "minSize": 17,
       "maxSize": 17,
       "shape": "VANILLA_ELLIPSOID",
-      "surfaceReplaceableBlocks": ["minecraft:stone"],
+      "surfaceReplaceableBlocks": [
+        "minecraft:stone"
+      ],
       "perClumpSpawnChance": 0.7,
       "discardChanceOnAirExposure": 0.5,
       "palette": [
@@ -878,7 +951,9 @@
       "minSize": 9,
       "maxSize": 9,
       "shape": "VANILLA_ELLIPSOID",
-      "surfaceReplaceableBlocks": ["minecraft:stone"],
+      "surfaceReplaceableBlocks": [
+        "minecraft:stone"
+      ],
       "perClumpSpawnChance": 0.7,
       "palette": [
         {
@@ -904,7 +979,9 @@
       "minSize": 9,
       "maxSize": 9,
       "shape": "VANILLA_ELLIPSOID",
-      "surfaceReplaceableBlocks": ["minecraft:stone"],
+      "surfaceReplaceableBlocks": [
+        "minecraft:stone"
+      ],
       "perClumpSpawnChance": 0.7,
       "palette": [
         {
@@ -922,7 +999,9 @@
       "minSize": 4,
       "maxSize": 4,
       "shape": "VANILLA_ELLIPSOID",
-      "surfaceReplaceableBlocks": ["minecraft:stone"],
+      "surfaceReplaceableBlocks": [
+        "minecraft:stone"
+      ],
       "perClumpSpawnChance": 0.7,
       "palette": [
         {
@@ -940,7 +1019,9 @@
       "minSize": 10,
       "maxSize": 10,
       "shape": "VANILLA_ELLIPSOID",
-      "surfaceReplaceableBlocks": ["minecraft:stone"],
+      "surfaceReplaceableBlocks": [
+        "minecraft:stone"
+      ],
       "perClumpSpawnChance": 0.7,
       "biomeScope": "CAVE",
       "excludedBiomes": [
@@ -965,7 +1046,9 @@
       "minSize": 20,
       "maxSize": 20,
       "shape": "VANILLA_ELLIPSOID",
-      "surfaceReplaceableBlocks": ["minecraft:stone"],
+      "surfaceReplaceableBlocks": [
+        "minecraft:stone"
+      ],
       "perClumpSpawnChance": 0.7,
       "biomeScope": "CAVE",
       "includedBiomes": [
@@ -990,7 +1073,9 @@
       "minSize": 9,
       "maxSize": 9,
       "shape": "VANILLA_ELLIPSOID",
-      "surfaceReplaceableBlocks": ["minecraft:stone"],
+      "surfaceReplaceableBlocks": [
+        "minecraft:stone"
+      ],
       "perClumpSpawnChance": 0.7,
       "discardChanceOnAirExposure": 0.5,
       "palette": [
@@ -1009,7 +1094,9 @@
       "minSize": 9,
       "maxSize": 9,
       "shape": "VANILLA_ELLIPSOID",
-      "surfaceReplaceableBlocks": ["minecraft:stone"],
+      "surfaceReplaceableBlocks": [
+        "minecraft:stone"
+      ],
       "perClumpSpawnChance": 0.7,
       "discardChanceOnAirExposure": 0.5,
       "palette": [
@@ -1036,7 +1123,9 @@
       "minSize": 9,
       "maxSize": 9,
       "shape": "VANILLA_ELLIPSOID",
-      "surfaceReplaceableBlocks": ["minecraft:stone"],
+      "surfaceReplaceableBlocks": [
+        "minecraft:stone"
+      ],
       "perClumpSpawnChance": 0.7,
       "biomeScope": "SURFACE",
       "includedBiomes": [
@@ -1068,7 +1157,9 @@
       "minSize": 8,
       "maxSize": 8,
       "shape": "VANILLA_ELLIPSOID",
-      "surfaceReplaceableBlocks": ["minecraft:stone"],
+      "surfaceReplaceableBlocks": [
+        "minecraft:stone"
+      ],
       "perClumpSpawnChance": 0.7,
       "palette": [
         {
@@ -1089,7 +1180,9 @@
       "minSize": 8,
       "maxSize": 8,
       "shape": "VANILLA_ELLIPSOID",
-      "surfaceReplaceableBlocks": ["minecraft:stone"],
+      "surfaceReplaceableBlocks": [
+        "minecraft:stone"
+      ],
       "perClumpSpawnChance": 0.7,
       "palette": [
         {
@@ -1118,7 +1211,9 @@
       "minSize": 4,
       "maxSize": 4,
       "shape": "VANILLA_ELLIPSOID",
-      "surfaceReplaceableBlocks": ["minecraft:stone"],
+      "surfaceReplaceableBlocks": [
+        "minecraft:stone"
+      ],
       "perClumpSpawnChance": 0.7,
       "discardChanceOnAirExposure": 0.5,
       "palette": [
@@ -1137,7 +1232,9 @@
       "minSize": 8,
       "maxSize": 8,
       "shape": "VANILLA_ELLIPSOID",
-      "surfaceReplaceableBlocks": ["minecraft:stone"],
+      "surfaceReplaceableBlocks": [
+        "minecraft:stone"
+      ],
       "perClumpSpawnChance": 0.7,
       "discardChanceOnAirExposure": 0.5,
       "palette": [
@@ -1157,7 +1254,9 @@
       "minSize": 12,
       "maxSize": 12,
       "shape": "VANILLA_ELLIPSOID",
-      "surfaceReplaceableBlocks": ["minecraft:stone"],
+      "surfaceReplaceableBlocks": [
+        "minecraft:stone"
+      ],
       "perClumpSpawnChance": 0.7,
       "discardChanceOnAirExposure": 0.7,
       "palette": [
@@ -1176,7 +1275,9 @@
       "minSize": 8,
       "maxSize": 8,
       "shape": "VANILLA_ELLIPSOID",
-      "surfaceReplaceableBlocks": ["minecraft:stone"],
+      "surfaceReplaceableBlocks": [
+        "minecraft:stone"
+      ],
       "perClumpSpawnChance": 0.7,
       "discardChanceOnAirExposure": 1.0,
       "palette": [
@@ -1195,7 +1296,9 @@
       "minSize": 7,
       "maxSize": 7,
       "shape": "VANILLA_ELLIPSOID",
-      "surfaceReplaceableBlocks": ["minecraft:stone"],
+      "surfaceReplaceableBlocks": [
+        "minecraft:stone"
+      ],
       "perClumpSpawnChance": 0.7,
       "palette": [
         {
@@ -1213,7 +1316,9 @@
       "minSize": 7,
       "maxSize": 7,
       "shape": "VANILLA_ELLIPSOID",
-      "surfaceReplaceableBlocks": ["minecraft:stone"],
+      "surfaceReplaceableBlocks": [
+        "minecraft:stone"
+      ],
       "perClumpSpawnChance": 0.7,
       "discardChanceOnAirExposure": 1.0,
       "palette": [
@@ -1232,7 +1337,9 @@
       "minSize": 3,
       "maxSize": 3,
       "shape": "VANILLA_ELLIPSOID",
-      "surfaceReplaceableBlocks": ["minecraft:stone"],
+      "surfaceReplaceableBlocks": [
+        "minecraft:stone"
+      ],
       "perClumpSpawnChance": 0.7,
       "biomeScope": "SURFACE",
       "includedBiomes": [

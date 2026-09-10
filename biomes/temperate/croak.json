@@ -1,252 +1,297 @@
 {
-    "name": "Croak",
-    "derivative": "minecraft:plains",
-    "vanillaDerivative": "minecraft:plains",
-    "rarity": 1,
-     "layers": [
+  "name": "Croak",
+  "derivative": "minecraft:plains",
+  "vanillaDerivative": "minecraft:plains",
+  "rarity": 1,
+  "layers": [
+    {
+      "palette": [
         {
+          "block": "minecraft:grass_block"
+        }
+      ]
+    },
+    {
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ],
+      "maxHeight": 3,
+      "minHeight": 2
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.01,
+      "stackMin": 2,
+      "stackMax": 6,
+      "absoluteMaxStack": 6,
+      "palette": [
+        {
+          "block": "minecraft:pointed_dripstone",
+          "data": {
+            "vertical_direction": "up"
+          }
+        }
+      ]
+    },
+    {
+      "stackMin": 1,
+      "stackMax": 7,
+      "chance": 0.005,
+      "forcePlace": false,
+      "variance": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "data": {
+            "stage": 0,
+            "age": 0,
+            "leaves": "none"
+          },
+          "block": "minecraft:bamboo"
+        },
+        {
+          "data": {
+            "stage": 1,
+            "age": 0,
+            "leaves": "none"
+          },
+          "block": "minecraft:bamboo"
+        },
+        {
+          "data": {
+            "stage": 0,
+            "age": 1,
+            "leaves": "none"
+          },
+          "block": "minecraft:bamboo"
+        },
+        {
+          "data": {
+            "stage": 1,
+            "age": 1,
+            "leaves": "none"
+          },
+          "block": "minecraft:bamboo"
+        },
+        {
+          "data": {
+            "stage": 0,
+            "age": 0,
+            "leaves": "small"
+          },
+          "block": "minecraft:bamboo"
+        },
+        {
+          "data": {
+            "stage": 1,
+            "age": 0,
+            "leaves": "small"
+          },
+          "block": "minecraft:bamboo"
+        },
+        {
+          "data": {
+            "stage": 0,
+            "age": 1,
+            "leaves": "small"
+          },
+          "block": "minecraft:bamboo"
+        },
+        {
+          "data": {
+            "stage": 1,
+            "age": 1,
+            "leaves": "small"
+          },
+          "block": "minecraft:bamboo"
+        },
+        {
+          "data": {
+            "stage": 0,
+            "age": 0,
+            "leaves": "large"
+          },
+          "block": "minecraft:bamboo"
+        },
+        {
+          "data": {
+            "stage": 1,
+            "age": 0,
+            "leaves": "large"
+          },
+          "block": "minecraft:bamboo"
+        },
+        {
+          "data": {
+            "stage": 0,
+            "age": 1,
+            "leaves": "large"
+          },
+          "block": "minecraft:bamboo"
+        },
+        {
+          "data": {
+            "stage": 1,
+            "age": 1,
+            "leaves": "large"
+          },
+          "block": "minecraft:bamboo"
+        }
+      ],
+      "style": {
+        "style": "STATIC"
+      }
+    },
+    {
+      "palette": [
+        {
+          "block": "minecraft:short_grass",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:tall_grass",
+          "weight": 1
+        }
+      ],
+      "style": {
+        "style": "STATIC",
+        "zoom": 1
+      },
+      "chance": 0.2
+    },
+    {
+      "palette": [
+        {
+          "block": "minecraft:red_tulip",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:dandelion",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:oxeye_daisy",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:air",
+          "weight": 70
+        }
+      ],
+      "style": {
+        "style": "CELLULAR",
+        "zoom": 0.4
+      },
+      "chance": 0.2
+    },
+    "snippet/decorator/leaf",
+    "snippet/decorator/bush"
+  ],
+  "objects": [
+    {
+      "place": [
+        "trees/oak/croak1",
+        "trees/oak/croak2",
+        "trees/oak/croak3",
+        "trees/oak/croak4",
+        "trees/oak/croak5",
+        "trees/oak/croak6",
+        "trees/oak/croak7",
+        "trees/oak/croak8",
+        "trees/oak/croak9",
+        "trees/oak/croak10",
+        "trees/oak/croak11",
+        "trees/oak/croak12",
+        "trees/oak/croak13",
+        "trees/oak/croak14",
+        "trees/oak/croak15",
+        "trees/oak/croak16",
+        "trees/oak/croak17",
+        "trees/oak/croak18",
+        "trees/oak/croak19"
+      ],
+      "edit": [
+        {
+          "find": [
+            {
+              "block": "minecraft:oak_log"
+            }
+          ],
+          "replace": {
             "palette": [
-                {
-                    "block": "minecraft:grass_block"
-                }
+              {
+                "block": "minecraft:oak_wood"
+              }
             ]
-        },
-         {
-            "palette": [
-                {
-                    "block": "minecraft:dirt"
-                }
-            ],
-            "maxHeight": 3,
-            "minHeight": 2
+          }
         }
-    ],
-    "decorators": [
-         {
-            "chance": 0.010,
-            "stackMin": 2,
-            "stackMax": 6,
-            "absoluteMaxStack": 6,
-            "palette": [{
-                "block": "minecraft:pointed_dripstone",
-                "data": {"vertical_direction": "up"}
-            }]
+      ],
+      "mode": "MIN_HEIGHT",
+      "chance": 0.49,
+      "density": 2,
+      "carvingSupport": "SURFACE_ONLY",
+      "rotation": {
+        "yAxis": {
+          "max": 270,
+          "min": 0,
+          "interval": 90,
+          "enabled": true
         },
-         {
-            "stackMin": 1,
-            "stackMax": 7,
-            "chance": 0.005,
-            "forcePlace": false,
-            "variance": {"style": "STATIC"},
-            "palette": [
-                {
-                    "data": {
-                        "stage": 0,
-                        "age": 0,
-                        "leaves": "none"
-                    },
-                    "block": "minecraft:bamboo"
-                },
-                {
-                    "data": {
-                        "stage": 1,
-                        "age": 0,
-                        "leaves": "none"
-                    },
-                    "block": "minecraft:bamboo"
-                },
-                {
-                    "data": {
-                        "stage": 0,
-                        "age": 1,
-                        "leaves": "none"
-                    },
-                    "block": "minecraft:bamboo"
-                },
-                {
-                    "data": {
-                        "stage": 1,
-                        "age": 1,
-                        "leaves": "none"
-                    },
-                    "block": "minecraft:bamboo"
-                },
-                {
-                    "data": {
-                        "stage": 0,
-                        "age": 0,
-                        "leaves": "small"
-                    },
-                    "block": "minecraft:bamboo"
-                },
-                {
-                    "data": {
-                        "stage": 1,
-                        "age": 0,
-                        "leaves": "small"
-                    },
-                    "block": "minecraft:bamboo"
-                },
-                {
-                    "data": {
-                        "stage": 0,
-                        "age": 1,
-                        "leaves": "small"
-                    },
-                    "block": "minecraft:bamboo"
-                },
-                {
-                    "data": {
-                        "stage": 1,
-                        "age": 1,
-                        "leaves": "small"
-                    },
-                    "block": "minecraft:bamboo"
-                },
-                {
-                    "data": {
-                        "stage": 0,
-                        "age": 0,
-                        "leaves": "large"
-                    },
-                    "block": "minecraft:bamboo"
-                },
-                {
-                    "data": {
-                        "stage": 1,
-                        "age": 0,
-                        "leaves": "large"
-                    },
-                    "block": "minecraft:bamboo"
-                },
-                {
-                    "data": {
-                        "stage": 0,
-                        "age": 1,
-                        "leaves": "large"
-                    },
-                    "block": "minecraft:bamboo"
-                },
-                {
-                    "data": {
-                        "stage": 1,
-                        "age": 1,
-                        "leaves": "large"
-                    },
-                    "block": "minecraft:bamboo"
-                }
-            ],
-            "style": {"style": "STATIC"}
+        "enabled": true
+      }
+    },
+    {
+      "place": [
+        "clutter/arbusto1",
+        "clutter/arbusto2",
+        "clutter/arbusto3",
+        "clutter/arbusto4",
+        "clutter/arbusto5"
+      ],
+      "mode": "PAINT",
+      "chance": 0.5,
+      "density": 2,
+      "carvingSupport": "SURFACE_ONLY",
+      "rotation": {
+        "zAxis": {
+          "max": 360,
+          "min": 0,
+          "interval": 90,
+          "enabled": true
         },
-        {
-            "palette": [
-                {"block": "minecraft:short_grass", "weight": 2},
-                {"block": "minecraft:tall_grass", "weight": 1}
-
-                ],
-                "style":{
-                    "style": "STATIC",
-                    "zoom": 1
-                    },
-
-            "chance": 0.2
-        },
-         {
-            "palette": [
-                {"block": "minecraft:red_tulip", "weight": 2},
-                {"block": "minecraft:dandelion", "weight": 2},
-                {"block": "minecraft:oxeye_daisy", "weight": 2},
-                {"block": "minecraft:air", "weight": 70}
-
-                ],
-                "style":{
-                    "style": "CELLULAR",
-                    "zoom": 0.4
-
-                    },
-
-            "chance": 0.2
-        },
-        "snippet/decorator/leaf",
-         "snippet/decorator/bush"
-    ],
-    "objects": [
-        {
-            "place": [
-                "trees/oak/croak1",
-                "trees/oak/croak2",
-                "trees/oak/croak3",
-                "trees/oak/croak4",
-                "trees/oak/croak5",
-                "trees/oak/croak6",
-                "trees/oak/croak7",
-                "trees/oak/croak8",
-                "trees/oak/croak9",
-                "trees/oak/croak10",
-                "trees/oak/croak11",
-                "trees/oak/croak12",
-                "trees/oak/croak13",
-                "trees/oak/croak14",
-                "trees/oak/croak15",
-                "trees/oak/croak16",
-                "trees/oak/croak17",
-                "trees/oak/croak18",
-                "trees/oak/croak19"
-
-
-            ],
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:oak_log"}],
-                    "replace":{"palette": [{"block": "minecraft:oak_wood"}]}
-                }
-            ],
-            "mode": "MIN_HEIGHT",
-            "chance": 0.49,
-            "density": 2,
-            "carvingSupport": "SURFACE_ONLY",
-            "rotation":{
-              "yAxis":
-                {
-                    "max": 270,
-                    "min": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-
-            }
-        },
-          {
-            "place": [
-                "clutter/arbusto1",
-                "clutter/arbusto2",
-                "clutter/arbusto3",
-                "clutter/arbusto4",
-                "clutter/arbusto5"
-            ],
-            "mode": "PAINT",
-            "chance": 0.5,
-            "density": 2,
-            "carvingSupport": "SURFACE_ONLY",
-            "rotation":{
-                "zAxis":
-                {
-                    "max": 360,
-                    "min": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-
-            }
-        }
-    ],
-    "generators": [
-        {
-            "generator": "highplains",
-            "min": 20,
-            "max": 35
-        }
-    ]
+        "enabled": true
+      }
+    }
+  ],
+  "generators": [
+    {
+      "generator": "highplains",
+      "min": 20,
+      "max": 35
+    }
+  ],
+  "terrain3D": {
+    "enabled": true,
+    "seed": 30103,
+    "amplitude": 22,
+    "horizontalScale": 256,
+    "verticalScale": 30,
+    "densityStyle": {
+      "style": "PERLIN"
+    },
+    "crackDepth": 0,
+    "crackWidth": 2,
+    "crackScale": 416,
+    "crackStyle": {
+      "style": "SIMPLEX"
+    },
+    "minimumSlope": 0.18,
+    "slopeFade": 0.32,
+    "fluidClearance": 8,
+    "fluidFade": 24
+  }
 }

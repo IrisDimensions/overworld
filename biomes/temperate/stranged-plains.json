@@ -1,222 +1,242 @@
 {
-    "name": "Stranged Plains",
-    "color": "#318A0A",
-    "rarity": 5,
-    "derivative": "minecraft:plains",
-    "vanillaDerivative": "minecraft:plains",
-    "customDerivitives": [
-        {
-            "id": "estrangedplains",
-            "category": "plains",
-            "humidity": 0.45,
-            "temperature": 0.875,
-            "grassColor": "#b9bf4e"
-        }
-    ],
-    "generators": [
-        {
-            "min": 4,
-            "max": 10,
-            "generator": "plain"
-        }
-    ],
-    "wall": {
-        "palette": [
-            {
-                "block": "minecraft:stone"
-            },
-            {
-                "block": "minecraft:andesite"
-            }
-        ]
-    },
-    "layers": [
-        {
-            "palette": [
-                {
-                    "block": "minecraft:grass_block"
-                }
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 2,
-            "palette": [
-                {
-                    "block": "minecraft:dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                {
-                    "block": "minecraft:dirt"
-                },
-                {
-                    "block": "minecraft:coarse_dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "minecraft:dirt"
-                },
-                {
-                    "block": "minecraft:stone"
-                }
-            ]
-        }
-    ],
-    "objects": [
-        {
-            "mode": "PAINT",
-            "chance": 0.00975,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "clutter/camp1",
-                "clutter/camp3",
-                "clutter/camp4",
-                "clutter/camp5"
-            ]
-        },
-        {
-            "chance": 0.01,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "trees/oak/hoakgeneric3",
-                "trees/oak/hoakgeneric4",
-                "trees/oak/hoakgeneric5",
-                "trees/oak/hoakgeneric6",
-                "trees/oak/hoakgeneric7",
-                "trees/oak/hoakgeneric8",
-                "trees/oak/hoakgeneric9",
-                "trees/oak/hoakgeneric1",
-                "trees/oak/shoakgeneric3",
-                "trees/oak/shoakgeneric4",
-                "trees/oak/shoakgeneric5",
-                "trees/oak/shoakgeneric6",
-                "trees/oak/shoakgeneric7",
-                "trees/oak/shoakgeneric8",
-                "trees/oak/shoakgeneric9",
-                "trees/oak/shoakgeneric1",
-                "trees/oak/shoakgeneric2"
-            ]
-        },
-        {
-            "chance": 2e-07,
-            "mode": "PAINT",
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "void/void",
-                "void/void",
-                "void/void",
-                "trees/mixed/smoakog80"
-            ],
-            "translate": {
-                "x": 0,
-                "y": -5,
-                "z": 0
-            }
-        },
-        {
-            "place": [
-                "trees/oak/generic1",
-                "trees/oak/generic2",
-                "trees/oak/generic3",
-                "trees/oak/generic4",
-                "trees/oak/generic5",
-                "trees/oak/generic6"
-            ],
-            "chance": 0.07,
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "interval": 90,
-                    "min": -360,
-                    "max": 360
-                }
-            }
-        }
-    ],
-    "decorators": [
-        {
-            "chance": 0.36,
-            "forceBlock": {
-                "block": "minecraft:farmland",
-                "data": {
-                    "moisture": 7
-                }
-            },
-            "style": {
-                "style": "NOWHERE",
-                "zoom": 0.2
-            },
-            "palette": [
-                {
-                    "data": {
-                        "age": 7
-                    },
-                    "block": "minecraft:wheat"
-                }
-            ],
-            "forcePlace": false
-        },
-        {
-            "chance": 0.4,
-            "style": {
-                "style": "NOWHERE",
-                "zoom": 0.4
-            },
-            "palette": [
-                {
-                    "block": "minecraft:short_grass",
-                    "weight": 4
-                },
-                {
-                    "block": "minecraft:tall_grass",
-                    "weight": 1
-                }
-            ],
-            "forcePlace": false
-        },
-        "snippet/decorator/bush"
-    ],
-    "childStyle": {
-        "style": "NOWHERE",
-        "zoom": 0.5,
-        "exponent": 2
+  "name": "Stranged Plains",
+  "color": "#318A0A",
+  "rarity": 5,
+  "derivative": "minecraft:plains",
+  "vanillaDerivative": "minecraft:plains",
+  "customDerivitives": [
+    {
+      "id": "estrangedplains",
+      "category": "plains",
+      "humidity": 0.45,
+      "temperature": 0.875,
+      "grassColor": "#b9bf4e"
     }
+  ],
+  "generators": [
+    {
+      "min": 4,
+      "max": 10,
+      "generator": "plain"
+    }
+  ],
+  "wall": {
+    "palette": [
+      {
+        "block": "minecraft:stone"
+      },
+      {
+        "block": "minecraft:andesite"
+      }
+    ]
+  },
+  "layers": [
+    {
+      "palette": [
+        {
+          "block": "minecraft:grass_block"
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "block": "minecraft:coarse_dirt"
+        }
+      ]
+    },
+    {
+      "minHeight": 6,
+      "maxHeight": 18,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "mode": "PAINT",
+      "chance": 0.00975,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "clutter/camp1",
+        "clutter/camp3",
+        "clutter/camp4",
+        "clutter/camp5"
+      ]
+    },
+    {
+      "chance": 0.01,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "trees/oak/hoakgeneric3",
+        "trees/oak/hoakgeneric4",
+        "trees/oak/hoakgeneric5",
+        "trees/oak/hoakgeneric6",
+        "trees/oak/hoakgeneric7",
+        "trees/oak/hoakgeneric8",
+        "trees/oak/hoakgeneric9",
+        "trees/oak/hoakgeneric1",
+        "trees/oak/shoakgeneric3",
+        "trees/oak/shoakgeneric4",
+        "trees/oak/shoakgeneric5",
+        "trees/oak/shoakgeneric6",
+        "trees/oak/shoakgeneric7",
+        "trees/oak/shoakgeneric8",
+        "trees/oak/shoakgeneric9",
+        "trees/oak/shoakgeneric1",
+        "trees/oak/shoakgeneric2"
+      ]
+    },
+    {
+      "chance": 2e-07,
+      "mode": "PAINT",
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "void/void",
+        "void/void",
+        "void/void",
+        "trees/mixed/smoakog80"
+      ],
+      "translate": {
+        "x": 0,
+        "y": -5,
+        "z": 0
+      }
+    },
+    {
+      "place": [
+        "trees/oak/generic1",
+        "trees/oak/generic2",
+        "trees/oak/generic3",
+        "trees/oak/generic4",
+        "trees/oak/generic5",
+        "trees/oak/generic6"
+      ],
+      "chance": 0.07,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "interval": 90,
+          "min": -360,
+          "max": 360
+        }
+      }
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.36,
+      "forceBlock": {
+        "block": "minecraft:farmland",
+        "data": {
+          "moisture": 7
+        }
+      },
+      "style": {
+        "style": "NOWHERE",
+        "zoom": 0.2
+      },
+      "palette": [
+        {
+          "data": {
+            "age": 7
+          },
+          "block": "minecraft:wheat"
+        }
+      ],
+      "forcePlace": false
+    },
+    {
+      "chance": 0.4,
+      "style": {
+        "style": "NOWHERE",
+        "zoom": 0.4
+      },
+      "palette": [
+        {
+          "block": "minecraft:short_grass",
+          "weight": 4
+        },
+        {
+          "block": "minecraft:tall_grass",
+          "weight": 1
+        }
+      ],
+      "forcePlace": false
+    },
+    "snippet/decorator/bush"
+  ],
+  "childStyle": {
+    "style": "NOWHERE",
+    "zoom": 0.5,
+    "exponent": 2
+  },
+  "terrain3D": {
+    "enabled": true,
+    "seed": 30101,
+    "amplitude": 10,
+    "horizontalScale": 192,
+    "verticalScale": 24,
+    "densityStyle": {
+      "style": "PERLIN"
+    },
+    "crackDepth": 0,
+    "crackWidth": 2.25,
+    "crackScale": 392,
+    "crackStyle": {
+      "style": "SIMPLEX"
+    },
+    "minimumSlope": 0.18,
+    "slopeFade": 0.3,
+    "fluidClearance": 8,
+    "fluidFade": 24
+  }
 }

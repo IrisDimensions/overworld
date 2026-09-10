@@ -1,144 +1,233 @@
 {
-    "riverPolicy": {
-        "placement": "PREFERRED_HEADWATER",
-        "routing": "PREFER",
-        "outletAdmission": false,
-        "profiles": [
-            "water"
-        ],
-        "surfaceBiomes": [
-            "mountain/sea/river",
-            "mountain/sea/river-soft"
-        ],
-        "widthMultiplier": 0.85,
-        "depthMultiplier": 0.9,
-        "routingMultiplier": 0.7
-    },
-    "name": "Mountain",
-    "color": "#6E7D85",
-    "rarity": 1,
-    "derivative": "minecraft:windswept_hills",
-    "vanillaDerivative": "minecraft:windswept_hills",
-    "children": ["mountain/mountain-extended"],
-    "generators": [{
-        "min": 73,
-        "max": 145,
-        "generator": "mountain"
-    }],
-    "wall": {
-        "style": {"style": "STATIC"},
-        "palette": [
-            {"block": "minecraft:stone"},
-            {"block": "minecraft:andesite"},
-            {"block": "minecraft:stone"}
-        ]
-    },
-    "layers": [
-        {
-            "minHeight": 1,
-            "maxHeight": 1,
-            "slopeCondition": {
-                "minimumSlope": 0,
-                "maximumSlope": 2.6
-            },
-            "palette": [{"block": "minecraft:grass_block"}]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 4,
-            "slopeCondition": {"minimumSlope": 3.95},
-            "palette": [
-                {"block": "minecraft:gravel"},
-                {"block": "minecraft:cyan_terracotta"}
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 3,
-            "palette": [
-                {"block": "minecraft:stone"},
-                {"block": "minecraft:andesite"},
-                {"block": "minecraft:gravel"}
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {"style": "STATIC"},
-            "palette": [
-                {"block": "minecraft:stone"},
-                {"block": "minecraft:andesite"},
-                {"block": "minecraft:stone"}
-            ]
-        }
+  "riverPolicy": {
+    "placement": "PREFERRED_HEADWATER",
+    "routing": "PREFER",
+    "outletAdmission": false,
+    "profiles": [
+      "water"
     ],
-
-    "decorators": [
-        {
-            "chance": 0.2,
-            "variance": {
-                "style": "CELLULAR",
-                "zoom": 0.3,
-                "fracture": {
-                    "style": "SIMPLEX",
-                    "zoom": 0.2,
-                    "multiplier": 10
-                }
-            },
-            "style": {
-                "style": "TRIOCTAVE_SIMPLEX",
-                "zoom": 0.3,
-                "fracture": {
-                    "style": "STATIC",
-                    "multiplier": 8
-                }
-            },
-            "palette": [
-                {"block": "minecraft:dandelion"},
-                {"block": "minecraft:poppy"},
-                {"block": "minecraft:blue_orchid"},
-                {"block": "minecraft:allium"},
-                {"block": "minecraft:azure_bluet"},
-                {"block": "minecraft:red_tulip"},
-                {"block": "minecraft:orange_tulip"},
-                {"block": "minecraft:white_tulip"},
-                {"block": "minecraft:pink_tulip"},
-                {"block": "minecraft:oxeye_daisy"},
-                {"block": "minecraft:cornflower"},
-                {"block": "minecraft:lily_of_the_valley"}
-            ]
-        },
-        {
-            "chance": 0.01,
-            "palette": [{"block": "minecraft:tall_grass"}]
-        },
-        {
-            "chance": 0.5,
-            "palette": [{"block": "minecraft:short_grass"}]
-        },
-        "snippet/decorator/leaf"
+    "surfaceBiomes": [
+      "mountain/sea/river",
+      "mountain/sea/river-soft"
     ],
-    "slab": {
-        "style": {"style": "STATIC"},
-        "palette": [
-            {
-                "data": {
-                    "waterlogged": false,
-                    "type": "bottom"
-                },
-                "block": "minecraft:stone_slab"
-            },
-            {
-                "data": {
-                    "waterlogged": false,
-                    "type": "bottom"
-                },
-                "block": "minecraft:cobblestone_slab"
-            },
-            {
-                "weight": 2,
-                "block": "minecraft:air"
-            }
-        ]
+    "widthMultiplier": 0.85,
+    "depthMultiplier": 0.9,
+    "routingMultiplier": 0.7
+  },
+  "name": "Mountain",
+  "color": "#6E7D85",
+  "rarity": 1,
+  "derivative": "minecraft:windswept_hills",
+  "vanillaDerivative": "minecraft:windswept_hills",
+  "children": [
+    "mountain/mountain-extended"
+  ],
+  "generators": [
+    {
+      "min": 73,
+      "max": 145,
+      "generator": "mountain"
     }
+  ],
+  "wall": {
+    "style": {
+      "style": "STATIC"
+    },
+    "palette": [
+      {
+        "block": "minecraft:stone"
+      },
+      {
+        "block": "minecraft:andesite"
+      },
+      {
+        "block": "minecraft:stone"
+      }
+    ]
+  },
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 2.6
+      },
+      "palette": [
+        {
+          "block": "minecraft:grass_block"
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 4,
+      "slopeCondition": {
+        "minimumSlope": 3.95
+      },
+      "palette": [
+        {
+          "block": "minecraft:gravel"
+        },
+        {
+          "block": "minecraft:cyan_terracotta"
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:andesite"
+        },
+        {
+          "block": "minecraft:gravel"
+        }
+      ]
+    },
+    {
+      "minHeight": 6,
+      "maxHeight": 18,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:andesite"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.2,
+      "variance": {
+        "style": "CELLULAR",
+        "zoom": 0.3,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.2,
+          "multiplier": 10
+        }
+      },
+      "style": {
+        "style": "TRIOCTAVE_SIMPLEX",
+        "zoom": 0.3,
+        "fracture": {
+          "style": "STATIC",
+          "multiplier": 8
+        }
+      },
+      "palette": [
+        {
+          "block": "minecraft:dandelion"
+        },
+        {
+          "block": "minecraft:poppy"
+        },
+        {
+          "block": "minecraft:blue_orchid"
+        },
+        {
+          "block": "minecraft:allium"
+        },
+        {
+          "block": "minecraft:azure_bluet"
+        },
+        {
+          "block": "minecraft:red_tulip"
+        },
+        {
+          "block": "minecraft:orange_tulip"
+        },
+        {
+          "block": "minecraft:white_tulip"
+        },
+        {
+          "block": "minecraft:pink_tulip"
+        },
+        {
+          "block": "minecraft:oxeye_daisy"
+        },
+        {
+          "block": "minecraft:cornflower"
+        },
+        {
+          "block": "minecraft:lily_of_the_valley"
+        }
+      ]
+    },
+    {
+      "chance": 0.01,
+      "palette": [
+        {
+          "block": "minecraft:tall_grass"
+        }
+      ]
+    },
+    {
+      "chance": 0.5,
+      "palette": [
+        {
+          "block": "minecraft:short_grass"
+        }
+      ]
+    },
+    "snippet/decorator/leaf"
+  ],
+  "slab": {
+    "style": {
+      "style": "STATIC"
+    },
+    "palette": [
+      {
+        "data": {
+          "waterlogged": false,
+          "type": "bottom"
+        },
+        "block": "minecraft:stone_slab"
+      },
+      {
+        "data": {
+          "waterlogged": false,
+          "type": "bottom"
+        },
+        "block": "minecraft:cobblestone_slab"
+      },
+      {
+        "weight": 2,
+        "block": "minecraft:air"
+      }
+    ]
+  },
+  "terrain3D": {
+    "enabled": true,
+    "seed": 30109,
+    "amplitude": 52,
+    "horizontalScale": 256,
+    "verticalScale": 36,
+    "densityStyle": {
+      "style": "IRIS_HALF"
+    },
+    "crackDepth": 11,
+    "crackWidth": 2.25,
+    "crackScale": 416,
+    "crackStyle": {
+      "style": "SIMPLEX"
+    },
+    "minimumSlope": 0.18,
+    "slopeFade": 0.32,
+    "fluidClearance": 8,
+    "fluidFade": 24
+  }
 }

@@ -1,414 +1,564 @@
 {
-    "name": "Tundra Redwood Cliffs",
-    "color": "#32B9C8",
-    "rarity": 3,
-    "derivative": "minecraft:taiga",
-    "vanillaDerivative": "minecraft:dark_forest",
-    "customDerivitives": [{
-        "category": "forest",
-        "id": "tundra_redwood_cliffs",
-        "grassColor": "#A17E3C",
-        "waterColor": "#80B4C6",
-        "waterFogColor": "#80B4C6",
-        "fogColor": "#8091C6"
-    }],
-    "generators": [
-        {
-            "generator": "smooth-dunes",
-            "min": 97,
-            "max": 132
-        },
-        {
-            "generator": "mountain",
-            "max": 14,
-            "min": 8
-        }
-    ],
-    "wall": {"palette": [
-        {"block": "minecraft:coarse_dirt"},
-        {"block": "minecraft:dirt"},
-        {"block": "minecraft:stone"},
-        {"block": "minecraft:dirt"}
-    ]},
-    "layers": [
-        {
-            "style": {
-                "style": "SIMPLEX",
-                "fracture": {
-                    "style": "NOWHERE",
-                    "zoom": 0.35,
-                    "multiplier": 23
-                }
-            },
-            "zoom": 0.7,
-            "palette": [
-                {"block": "minecraft:coarse_dirt"},
-                {"block": "minecraft:grass_block"},
-                {"block": "minecraft:podzol"},
-                {"block": "minecraft:podzol"},
-                {"block": "minecraft:grass_block"},
-                {"block": "minecraft:coarse_dirt"}
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 2,
-            "palette": [{"block": "minecraft:dirt"}]
-        },
-        {
-            "style": {"style": "STATIC"},
-            "minHeight": 1,
-            "maxHeight": 1,
-            "palette": [
-                {"block": "minecraft:dirt"},
-                {"block": "minecraft:stone"}
-            ]
-        }
-    ],
-    "objects": [
-        {
-            "mode": "PAINT",
-            "place": [
-                "clutter/boulder1",
-                "clutter/boulder2",
-                "clutter/boulder3",
-                "clutter/boulder4",
-                "clutter/boulder5",
-                "clutter/boulder6",
-                "clutter/boulder7",
-                "clutter/boulder8",
-                "clutter/boulder9",
-                "clutter/boulder10"
-            ],
-            "chance": 0.4,
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "interval": 90,
-                    "min": -360,
-                    "max": 360
-                }
-            },
-            "translate": {
-                "x": 0,
-                "y": -3,
-                "z": 0
-            }
-        },
-        {
-            "mode": "PAINT",
-            "place": [
-                "clutter/sbush1",
-                "clutter/sbush2",
-                "clutter/sbush3"
-            ],
-            "chance": 0.6,
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "interval": 90,
-                    "min": -360,
-                    "max": 360
-                }
-            }
-        },
-        {
-            "chance": 0.35,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "trees/mixed/tredwood1",
-                "trees/mixed/tredwood2",
-                "trees/mixed/tredwood3",
-                "trees/mixed/tredwood4",
-                "trees/mixed/tredwood5",
-                "trees/mixed/tredwood6",
-                "trees/mixed/tredwood7",
-                "trees/mixed/tredwood8",
-                "trees/mixed/tredwood9",
-                "trees/mixed/tredwood10"
-            ],
-            "translate": {
-                "x": 0,
-                "y": -12,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.3,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "xAxis": {
-                    "min": -9,
-                    "max": 9,
-                    "interval": 1,
-                    "enabled": true
-                },
-                "zAxis": {
-                    "min": -9,
-                    "max": 9,
-                    "interval": 1,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "trees/spruce/sup-pine-1",
-                "trees/spruce/sup-pine-2",
-                "trees/spruce/sup-pine-3",
-                "trees/spruce/sup-pine-4",
-                "trees/spruce/sup-pine-5",
-                "trees/spruce/sup-pine-6",
-                "trees/spruce/sup-pine-7",
-                "trees/spruce/sup-pine-8",
-                "trees/spruce/sup-pine-9",
-                "trees/spruce/sup-pine-10",
-                "trees/spruce/sup-pine-11",
-                "trees/spruce/sup-pine-12"
-            ],
-            "translate": {
-                "x": 0,
-                "y": -6,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.32,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "mode": "PAINT",
-            "place": [
-                "clutter/srock1",
-                "clutter/srock2"
-            ],
-            "translate": {
-                "x": 0,
-                "y": -10,
-                "yRandom": 1,
-                "z": 0
-            },
-            "edit": [{
-                "find": [{"block": "minecraft:polished_diorite"}],
-                "replace": {"palette": [{"block": "minecraft:diorite"}]}
-            }]
-        },
-        {
-            "chance": 0.45,
-            "edit": [{
-                "find": [{"block": "minecraft:oak_leaves"}],
-                "replace": {"palette": [{"block": "minecraft:birch_leaves"}]}
-            }],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "trees/mixed/tredwoodsmol1",
-                "trees/mixed/tredwoodsmol2",
-                "trees/mixed/tredwoodsmol3",
-                "trees/mixed/tredwoodsmol1",
-                "trees/mixed/tredwoodsmol2",
-                "trees/mixed/tredwoodsmol3",
-                "trees/mixed/tredwoodsmol4",
-                "trees/mixed/tredwoodsmol5"
-            ],
-            "translate": {
-                "x": 0,
-                "y": -2,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.35,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "clutter/spruceclutt1",
-                "clutter/spruceclutt2",
-                "clutter/spruceclutt3",
-                "clutter/spruceclutt4",
-                "clutter/spruceclutt5"
-            ],
-            "translate": {
-                "x": 0,
-                "y": -8,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.15,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "clutter/rshrub1",
-                "clutter/rshrub2"
-            ],
-            "translate": {
-                "x": 0,
-                "y": -3,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.01,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "trees/mixed/tredwoodbee1",
-                "trees/mixed/tredwoodbee2",
-                "trees/mixed/tredwoodbee3",
-                "trees/mixed/tredwoodbee4"
-            ],
-            "translate": {
-                "x": 0,
-                "y": -8,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.075,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "clutter/stump1",
-                "clutter/stump2",
-                "clutter/stump3",
-                "clutter/stump4",
-                "clutter/stump5",
-                "clutter/stump6"
-            ],
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:oak_log"}],
-                    "replace": {"palette": [{"block": "minecraft:spruce_log"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:oak_wood"}],
-                    "replace": {"palette": [{"block": "minecraft:spruce_wood"}]}
-                }
-            ],
-            "mode": "PAINT"
-        }
-    ],
-    "decorators": [
-        {
-            "chance": 0.003,
-            "variance": {"style": "STATIC"},
-            "zoom": 1,
-            "palette": [
-                {"block": "minecraft:white_tulip"},
-                {"block": "minecraft:cornflower"},
-                {"block": "minecraft:blue_orchid"},
-                {"block": "minecraft:lily_of_the_valley"}
-            ],
-            "style": {"style": "STATIC"}
-        },
-        {
-            "chance": 0.01,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.3,
-            "palette": [
-                {
-                    "data": {"age": 0},
-                    "block": "minecraft:sweet_berry_bush"
-                },
-                {
-                    "data": {"age": 1},
-                    "block": "minecraft:sweet_berry_bush"
-                },
-                {
-                    "data": {"age": 2},
-                    "block": "minecraft:sweet_berry_bush"
-                },
-                {
-                    "data": {"age": 3},
-                    "block": "minecraft:sweet_berry_bush"
-                }
-            ],
-            "style": {"style": "STATIC"}
-        },
-        {
-            "chance": 0.06,
-            "palette": [{"block": "minecraft:tall_grass"}]
-        },
-        {
-            "chance": 0.25,
-            "palette": [{"block": "minecraft:short_grass"}]
-        },
-        {
-            "chance": 0.06,
-            "palette": [{"block": "minecraft:fern"}]
-        },
-        {
-            "chance": 0.06,
-            "palette": [{"block": "minecraft:brown_mushroom"}]
-        },
-        {
-            "chance": 0.06,
-            "palette": [{"block": "minecraft:red_mushroom"}]
-        },
-        {
-            "chance": 0.1,
-            "palette": [{"block": "minecraft:large_fern"}]
-        },
-        {
-            "chance": 0.05,
-            "palette": [{"block": "minecraft:cobblestone_slab"}]
-        },
-        "snippet/decorator/leaf"
+  "name": "Tundra Redwood Cliffs",
+  "color": "#32B9C8",
+  "rarity": 3,
+  "derivative": "minecraft:taiga",
+  "vanillaDerivative": "minecraft:dark_forest",
+  "customDerivitives": [
+    {
+      "category": "forest",
+      "id": "tundra_redwood_cliffs",
+      "grassColor": "#A17E3C",
+      "waterColor": "#80B4C6",
+      "waterFogColor": "#80B4C6",
+      "fogColor": "#8091C6"
+    }
+  ],
+  "generators": [
+    {
+      "generator": "smooth-dunes",
+      "min": 97,
+      "max": 132
+    },
+    {
+      "generator": "mountain",
+      "max": 14,
+      "min": 8
+    }
+  ],
+  "wall": {
+    "palette": [
+      {
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "block": "minecraft:dirt"
+      },
+      {
+        "block": "minecraft:stone"
+      },
+      {
+        "block": "minecraft:dirt"
+      }
     ]
+  },
+  "layers": [
+    {
+      "style": {
+        "style": "SIMPLEX",
+        "fracture": {
+          "style": "NOWHERE",
+          "zoom": 0.35,
+          "multiplier": 23
+        }
+      },
+      "zoom": 0.7,
+      "palette": [
+        {
+          "block": "minecraft:coarse_dirt"
+        },
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:podzol"
+        },
+        {
+          "block": "minecraft:podzol"
+        },
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:coarse_dirt"
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    },
+    {
+      "style": {
+        "style": "STATIC"
+      },
+      "minHeight": 1,
+      "maxHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "mode": "PAINT",
+      "place": [
+        "clutter/boulder1",
+        "clutter/boulder2",
+        "clutter/boulder3",
+        "clutter/boulder4",
+        "clutter/boulder5",
+        "clutter/boulder6",
+        "clutter/boulder7",
+        "clutter/boulder8",
+        "clutter/boulder9",
+        "clutter/boulder10"
+      ],
+      "chance": 0.4,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "interval": 90,
+          "min": -360,
+          "max": 360
+        }
+      },
+      "translate": {
+        "x": 0,
+        "y": -3,
+        "z": 0
+      }
+    },
+    {
+      "mode": "PAINT",
+      "place": [
+        "clutter/sbush1",
+        "clutter/sbush2",
+        "clutter/sbush3"
+      ],
+      "chance": 0.6,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "interval": 90,
+          "min": -360,
+          "max": 360
+        }
+      }
+    },
+    {
+      "chance": 0.35,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "trees/mixed/tredwood1",
+        "trees/mixed/tredwood2",
+        "trees/mixed/tredwood3",
+        "trees/mixed/tredwood4",
+        "trees/mixed/tredwood5",
+        "trees/mixed/tredwood6",
+        "trees/mixed/tredwood7",
+        "trees/mixed/tredwood8",
+        "trees/mixed/tredwood9",
+        "trees/mixed/tredwood10"
+      ],
+      "translate": {
+        "x": 0,
+        "y": -12,
+        "z": 0
+      }
+    },
+    {
+      "chance": 0.3,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "xAxis": {
+          "min": -9,
+          "max": 9,
+          "interval": 1,
+          "enabled": true
+        },
+        "zAxis": {
+          "min": -9,
+          "max": 9,
+          "interval": 1,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "trees/spruce/sup-pine-1",
+        "trees/spruce/sup-pine-2",
+        "trees/spruce/sup-pine-3",
+        "trees/spruce/sup-pine-4",
+        "trees/spruce/sup-pine-5",
+        "trees/spruce/sup-pine-6",
+        "trees/spruce/sup-pine-7",
+        "trees/spruce/sup-pine-8",
+        "trees/spruce/sup-pine-9",
+        "trees/spruce/sup-pine-10",
+        "trees/spruce/sup-pine-11",
+        "trees/spruce/sup-pine-12"
+      ],
+      "translate": {
+        "x": 0,
+        "y": -6,
+        "z": 0
+      }
+    },
+    {
+      "chance": 0.32,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "mode": "PAINT",
+      "place": [
+        "clutter/srock1",
+        "clutter/srock2"
+      ],
+      "translate": {
+        "x": 0,
+        "y": -10,
+        "yRandom": 1,
+        "z": 0
+      },
+      "edit": [
+        {
+          "find": [
+            {
+              "block": "minecraft:polished_diorite"
+            }
+          ],
+          "replace": {
+            "palette": [
+              {
+                "block": "minecraft:diorite"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "chance": 0.45,
+      "edit": [
+        {
+          "find": [
+            {
+              "block": "minecraft:oak_leaves"
+            }
+          ],
+          "replace": {
+            "palette": [
+              {
+                "block": "minecraft:birch_leaves"
+              }
+            ]
+          }
+        }
+      ],
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "trees/mixed/tredwoodsmol1",
+        "trees/mixed/tredwoodsmol2",
+        "trees/mixed/tredwoodsmol3",
+        "trees/mixed/tredwoodsmol1",
+        "trees/mixed/tredwoodsmol2",
+        "trees/mixed/tredwoodsmol3",
+        "trees/mixed/tredwoodsmol4",
+        "trees/mixed/tredwoodsmol5"
+      ],
+      "translate": {
+        "x": 0,
+        "y": -2,
+        "z": 0
+      }
+    },
+    {
+      "chance": 0.35,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "clutter/spruceclutt1",
+        "clutter/spruceclutt2",
+        "clutter/spruceclutt3",
+        "clutter/spruceclutt4",
+        "clutter/spruceclutt5"
+      ],
+      "translate": {
+        "x": 0,
+        "y": -8,
+        "z": 0
+      }
+    },
+    {
+      "chance": 0.15,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "clutter/rshrub1",
+        "clutter/rshrub2"
+      ],
+      "translate": {
+        "x": 0,
+        "y": -3,
+        "z": 0
+      }
+    },
+    {
+      "chance": 0.01,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "trees/mixed/tredwoodbee1",
+        "trees/mixed/tredwoodbee2",
+        "trees/mixed/tredwoodbee3",
+        "trees/mixed/tredwoodbee4"
+      ],
+      "translate": {
+        "x": 0,
+        "y": -8,
+        "z": 0
+      }
+    },
+    {
+      "chance": 0.075,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "clutter/stump1",
+        "clutter/stump2",
+        "clutter/stump3",
+        "clutter/stump4",
+        "clutter/stump5",
+        "clutter/stump6"
+      ],
+      "edit": [
+        {
+          "find": [
+            {
+              "block": "minecraft:oak_log"
+            }
+          ],
+          "replace": {
+            "palette": [
+              {
+                "block": "minecraft:spruce_log"
+              }
+            ]
+          }
+        },
+        {
+          "find": [
+            {
+              "block": "minecraft:oak_wood"
+            }
+          ],
+          "replace": {
+            "palette": [
+              {
+                "block": "minecraft:spruce_wood"
+              }
+            ]
+          }
+        }
+      ],
+      "mode": "PAINT"
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.003,
+      "variance": {
+        "style": "STATIC"
+      },
+      "zoom": 1,
+      "palette": [
+        {
+          "block": "minecraft:white_tulip"
+        },
+        {
+          "block": "minecraft:cornflower"
+        },
+        {
+          "block": "minecraft:blue_orchid"
+        },
+        {
+          "block": "minecraft:lily_of_the_valley"
+        }
+      ],
+      "style": {
+        "style": "STATIC"
+      }
+    },
+    {
+      "chance": 0.01,
+      "variance": {
+        "style": "STATIC"
+      },
+      "zoom": 0.3,
+      "palette": [
+        {
+          "data": {
+            "age": 0
+          },
+          "block": "minecraft:sweet_berry_bush"
+        },
+        {
+          "data": {
+            "age": 1
+          },
+          "block": "minecraft:sweet_berry_bush"
+        },
+        {
+          "data": {
+            "age": 2
+          },
+          "block": "minecraft:sweet_berry_bush"
+        },
+        {
+          "data": {
+            "age": 3
+          },
+          "block": "minecraft:sweet_berry_bush"
+        }
+      ],
+      "style": {
+        "style": "STATIC"
+      }
+    },
+    {
+      "chance": 0.06,
+      "palette": [
+        {
+          "block": "minecraft:tall_grass"
+        }
+      ]
+    },
+    {
+      "chance": 0.25,
+      "palette": [
+        {
+          "block": "minecraft:short_grass"
+        }
+      ]
+    },
+    {
+      "chance": 0.06,
+      "palette": [
+        {
+          "block": "minecraft:fern"
+        }
+      ]
+    },
+    {
+      "chance": 0.06,
+      "palette": [
+        {
+          "block": "minecraft:brown_mushroom"
+        }
+      ]
+    },
+    {
+      "chance": 0.06,
+      "palette": [
+        {
+          "block": "minecraft:red_mushroom"
+        }
+      ]
+    },
+    {
+      "chance": 0.1,
+      "palette": [
+        {
+          "block": "minecraft:large_fern"
+        }
+      ]
+    },
+    {
+      "chance": 0.05,
+      "palette": [
+        {
+          "block": "minecraft:cobblestone_slab"
+        }
+      ]
+    },
+    "snippet/decorator/leaf"
+  ],
+  "terrain3D": {
+    "enabled": true,
+    "seed": 30113,
+    "amplitude": 56,
+    "horizontalScale": 224,
+    "verticalScale": 30,
+    "densityStyle": {
+      "style": "IRIS_HALF"
+    },
+    "crackDepth": 14,
+    "crackWidth": 2.25,
+    "crackScale": 336,
+    "crackStyle": {
+      "style": "SIMPLEX"
+    },
+    "minimumSlope": 0.12,
+    "slopeFade": 0.28,
+    "fluidClearance": 8,
+    "fluidFade": 24
+  }
 }

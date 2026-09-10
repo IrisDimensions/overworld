@@ -1,101 +1,177 @@
 {
-    "name": "Mesa Cliffs",
-    "color": "#EE8658",
-    "rarity": 1,
-    "derivative": "minecraft:windswept_savanna",
-    "vanillaDerivative": "minecraft:eroded_badlands",
-    "generators": [
-        {
-            "min": 9,
-            "max": 30,
-            "generator": "mountain"
-        },
-        {
-            "min": 41,
-            "max": 110,
-            "generator": "plain-cliffs"
-        }
-    ],
-    "wall": {
-        "style": {"style": "NOWHERE"},
-        "zoom": 0.25,
-        "palette": [
-            {"block": "minecraft:brown_terracotta"},
-            {"block": "minecraft:gray_terracotta"},
-            {"block": "minecraft:black_terracotta"}
-        ]
+  "name": "Mesa Cliffs",
+  "color": "#EE8658",
+  "rarity": 1,
+  "derivative": "minecraft:windswept_savanna",
+  "vanillaDerivative": "minecraft:eroded_badlands",
+  "generators": [
+    {
+      "min": 9,
+      "max": 30,
+      "generator": "mountain"
     },
-    "layers": [
+    {
+      "min": 41,
+      "max": 110,
+      "generator": "plain-cliffs"
+    }
+  ],
+  "wall": {
+    "style": {
+      "style": "NOWHERE"
+    },
+    "zoom": 0.25,
+    "palette": [
+      {
+        "block": "minecraft:brown_terracotta"
+      },
+      {
+        "block": "minecraft:gray_terracotta"
+      },
+      {
+        "block": "minecraft:black_terracotta"
+      }
+    ]
+  },
+  "layers": [
+    {
+      "minHeight": 4,
+      "maxHeight": 2,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
         {
-            "minHeight": 4,
-            "maxHeight": 2,
-            "style": {"style": "STATIC"},
-            "palette": [{"block": "minecraft:terracotta"}]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 3,
-            "style": {"style": "STATIC"},
-            "palette": [{"block": "minecraft:brown_terracotta"}]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 3,
-            "style": {"style": "STATIC"},
-            "palette": [{"block": "minecraft:gray_terracotta"}]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 3,
-            "style": {"style": "STATIC"},
-            "palette": [{"block": "minecraft:black_terracotta"}]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 3,
-            "style": {"style": "STATIC"},
-            "palette": [{"block": "minecraft:gray_terracotta"}]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 3,
-            "style": {"style": "STATIC"},
-            "palette": [{"block": "minecraft:brown_terracotta"}]
+          "block": "minecraft:terracotta"
         }
-    ],
-    "decorators": [
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
         {
-            "chance": 0.009,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.3,
-            "palette": [
-                {
-                    "data": {
-                        "face": "floor",
-                        "powered": false,
-                        "facing": "east"
-                    },
-                    "block": "minecraft:stone_button"
-                },
-                {
-                    "data": {
-                        "face": "floor",
-                        "powered": false,
-                        "facing": "south"
-                    },
-                    "block": "minecraft:stone_button"
-                }
-            ],
-            "style": {"style": "STATIC"}
+          "block": "minecraft:brown_terracotta"
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:gray_terracotta"
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:black_terracotta"
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:gray_terracotta"
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:brown_terracotta"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.009,
+      "variance": {
+        "style": "STATIC"
+      },
+      "zoom": 0.3,
+      "palette": [
+        {
+          "data": {
+            "face": "floor",
+            "powered": false,
+            "facing": "east"
+          },
+          "block": "minecraft:stone_button"
         },
         {
-            "chance": 0.01,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.3,
-            "palette": [{"block": "minecraft:dead_bush"}],
-            "style": {"style": "STATIC"}
-        },
-        "snippet/decorator/dry_grass"
-    ],
-    "lockLayers": true
+          "data": {
+            "face": "floor",
+            "powered": false,
+            "facing": "south"
+          },
+          "block": "minecraft:stone_button"
+        }
+      ],
+      "style": {
+        "style": "STATIC"
+      }
+    },
+    {
+      "chance": 0.01,
+      "variance": {
+        "style": "STATIC"
+      },
+      "zoom": 0.3,
+      "palette": [
+        {
+          "block": "minecraft:dead_bush"
+        }
+      ],
+      "style": {
+        "style": "STATIC"
+      }
+    },
+    "snippet/decorator/dry_grass"
+  ],
+  "lockLayers": true,
+  "terrain3D": {
+    "enabled": true,
+    "seed": 30119,
+    "amplitude": 48,
+    "horizontalScale": 256,
+    "verticalScale": 30,
+    "densityStyle": {
+      "style": "NOWHERE"
+    },
+    "crackDepth": 12,
+    "crackWidth": 2,
+    "crackScale": 392,
+    "crackStyle": {
+      "style": "PERLIN"
+    },
+    "minimumSlope": 0.14,
+    "slopeFade": 0.28,
+    "fluidClearance": 8,
+    "fluidFade": 24
+  }
 }

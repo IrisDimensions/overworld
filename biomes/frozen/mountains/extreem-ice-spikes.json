@@ -1,49 +1,76 @@
 {
-    "name": "Glacial",
-    "color": "#6E7D85",
-    "rarity": 12,
-    "derivative": "minecraft:frozen_peaks",
-    "vanillaDerivative": "minecraft:frozen_peaks",
-    "generators": [
-         {
-        "min": 23,
-        "max": 225,
-        "generator": "spikes"
-    }],
-    "wall":{
-         "minHeight": 1,
-            "maxHeight": 1,
-            "slopeCondition": {
-                "minimumSlope": 0,
-                "maximumSlope": 2.6
-            },
-             "style":{
-                "style": "IRIS",
-                "zoom": 0.1
-            },
-            "palette": [
-                {"block": "minecraft:blue_ice"},
-                {"block": "minecraft:packed_ice"}
-
-                ]
+  "name": "Glacial",
+  "color": "#6E7D85",
+  "rarity": 12,
+  "derivative": "minecraft:frozen_peaks",
+  "vanillaDerivative": "minecraft:frozen_peaks",
+  "generators": [
+    {
+      "min": 23,
+      "max": 225,
+      "generator": "spikes"
+    }
+  ],
+  "wall": {
+    "minHeight": 1,
+    "maxHeight": 1,
+    "slopeCondition": {
+      "minimumSlope": 0,
+      "maximumSlope": 2.6
     },
-    "layers": [
-        {
-            "minHeight": 1,
-            "maxHeight": 1,
-            "slopeCondition": {
-                "minimumSlope": 0,
-                "maximumSlope": 2.6
-            },
-            "style":{
-                "style": "IRIS",
-                "zoom": 0.1
-            },
-           "palette": [
-                {"block": "minecraft:blue_ice"},
-                {"block": "minecraft:packed_ice"}
-
-                ]
-        }
+    "style": {
+      "style": "IRIS",
+      "zoom": 0.1
+    },
+    "palette": [
+      {
+        "block": "minecraft:blue_ice"
+      },
+      {
+        "block": "minecraft:packed_ice"
+      }
     ]
+  },
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 2.6
+      },
+      "style": {
+        "style": "IRIS",
+        "zoom": 0.1
+      },
+      "palette": [
+        {
+          "block": "minecraft:blue_ice"
+        },
+        {
+          "block": "minecraft:packed_ice"
+        }
+      ]
+    }
+  ],
+  "terrain3D": {
+    "enabled": true,
+    "seed": 30133,
+    "amplitude": 48,
+    "horizontalScale": 264,
+    "verticalScale": 36,
+    "densityStyle": {
+      "style": "SIMPLEX"
+    },
+    "crackDepth": 12,
+    "crackWidth": 2.25,
+    "crackScale": 416,
+    "crackStyle": {
+      "style": "SIMPLEX"
+    },
+    "minimumSlope": 0.18,
+    "slopeFade": 0.32,
+    "fluidClearance": 8,
+    "fluidFade": 24
+  }
 }

@@ -1,267 +1,287 @@
 {
-    "name": "Mountain Plains",
-    "color": "#4E5A61",
-    "rarity": 1,
-    "derivative": "minecraft:old_growth_spruce_taiga",
-    "vanillaDerivative": "minecraft:old_growth_spruce_taiga",
-    "children": [
-        "mountain/plain-extended",
-        "mountain/mplain-extended"
-    ],
-    "generators": [
-        {
-            "generator": "mountain",
-            "max": 53,
-            "min": 45
-        }
-    ],
-    "wall": {
-        "palette": [
-            {
-                "block": "minecraft:stone"
-            },
-            {
-                "block": "minecraft:andesite"
-            },
-            {
-                "block": "minecraft:gravel"
-            },
-            {
-                "block": "minecraft:cyan_terracotta"
-            }
-        ]
-    },
-    "layers": [
-        {
-            "minHeight": 1,
-            "maxHeight": 1,
-            "slopeCondition": {
-                "minimumSlope": 0,
-                "maximumSlope": 3.3
-            },
-            "palette": [
-                {
-                    "block": "minecraft:grass_block"
-                }
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 4,
-            "slopeCondition": {
-                "minimumSlope": 4
-            },
-            "palette": [
-                {
-                    "block": "minecraft:gravel"
-                },
-                {
-                    "block": "minecraft:cyan_terracotta"
-                }
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 4,
-            "slopeCondition": {
-                "minimumSlope": 4
-            },
-            "palette": [
-                {
-                    "block": "minecraft:stone"
-                },
-                {
-                    "block": "minecraft:stone"
-                },
-                {
-                    "block": "minecraft:cobblestone"
-                }
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 1,
-            "slopeCondition": {
-                "minimumSlope": 0,
-                "maximumSlope": 4
-            },
-            "palette": [
-                {
-                    "block": "minecraft:grass_block"
-                }
-            ]
-        },
-        {
-            "minHeight": 3,
-            "maxHeight": 3,
-            "slopeCondition": {
-                "minimumSlope": 0,
-                "maximumSlope": 3
-            },
-            "palette": [
-                {
-                    "block": "minecraft:dirt"
-                }
-            ]
-        }
-    ],
-    "objects": [
-        {
-            "mode": "CENTER_HEIGHT",
-            "chance": 0.05,
-            "place": [
-                "trees/sproak/sp1",
-                "trees/sproak/sp2",
-                "trees/sproak/sp3",
-                "trees/sproak/sp4",
-                "trees/sproak/sp5",
-                "trees/sproak/sp6"
-            ]
-        },
-        {
-            "mode": "PAINT",
-            "chance": 0.1,
-            "place": [
-                "clutter/sbush1",
-                "clutter/sbush2",
-                "clutter/sbush3"
-            ]
-        },
-        {
-            "mode": "PAINT",
-            "chance": 0.1,
-            "place": [
-                "clutter/sbush1",
-                "clutter/sbush2",
-                "clutter/sbush3"
-            ]
-        },
-        {
-            "mode": "PAINT",
-            "chance": 0.1,
-            "place": [
-                "clutter/sbush1",
-                "clutter/sbush2",
-                "clutter/sbush3"
-            ]
-        }
-    ],
-    "decorators": [
-        {
-            "chance": 0.2,
-            "variance": {
-                "style": "CELLULAR",
-                "zoom": 0.3,
-                "fracture": {
-                    "style": "SIMPLEX",
-                    "zoom": 0.2,
-                    "multiplier": 10
-                }
-            },
-            "style": {
-                "style": "TRIOCTAVE_SIMPLEX",
-                "zoom": 0.3,
-                "fracture": {
-                    "style": "STATIC",
-                    "multiplier": 8
-                }
-            },
-            "palette": [
-                {
-                    "block": "minecraft:dandelion"
-                },
-                {
-                    "block": "minecraft:poppy"
-                },
-                {
-                    "block": "minecraft:blue_orchid"
-                },
-                {
-                    "block": "minecraft:allium"
-                },
-                {
-                    "block": "minecraft:azure_bluet"
-                },
-                {
-                    "block": "minecraft:red_tulip"
-                },
-                {
-                    "block": "minecraft:orange_tulip"
-                },
-                {
-                    "block": "minecraft:white_tulip"
-                },
-                {
-                    "block": "minecraft:pink_tulip"
-                },
-                {
-                    "block": "minecraft:oxeye_daisy"
-                },
-                {
-                    "block": "minecraft:cornflower"
-                },
-                {
-                    "block": "minecraft:lily_of_the_valley"
-                }
-            ]
-        },
-        {
-            "chance": 0.01,
-            "palette": [
-                {
-                    "block": "minecraft:tall_grass"
-                }
-            ]
-        },
-        {
-            "chance": 0.5,
-            "palette": [
-                {
-                    "block": "minecraft:short_grass"
-                }
-            ]
-        },
-        {
-            "forceBlock": {
-                "block": "minecraft:farmland",
-                "data": {
-                    "moisture": 7
-                }
-            },
-            "slopeCondition": {
-                "maximumSlope": 3.3
-            },
-            "variance": {
-                "style": "CELLULAR",
-                "zoom": 0.3,
-                "fracture": {
-                    "style": "SIMPLEX",
-                    "zoom": 0.2,
-                    "multiplier": 10
-                }
-            },
-            "style": {
-                "style": "TRIOCTAVE_SIMPLEX",
-                "zoom": 0.3,
-                "fracture": {
-                    "style": "STATIC",
-                    "multiplier": 8
-                }
-            },
-            "chance": 0.2,
-            "palette": [
-                {
-                    "block": "minecraft:wheat",
-                    "data": {
-                        "age": 7
-                    }
-                }
-            ]
-        },
-        "snippet/decorator/bush"
-    ],
-    "childStyle": {
-        "style": "IRIS_DOUBLE",
-        "zoom": 10
+  "name": "Mountain Plains",
+  "color": "#4E5A61",
+  "rarity": 1,
+  "derivative": "minecraft:old_growth_spruce_taiga",
+  "vanillaDerivative": "minecraft:old_growth_spruce_taiga",
+  "children": [
+    "mountain/plain-extended",
+    "mountain/mplain-extended"
+  ],
+  "generators": [
+    {
+      "generator": "mountain",
+      "max": 53,
+      "min": 45
     }
+  ],
+  "wall": {
+    "palette": [
+      {
+        "block": "minecraft:stone"
+      },
+      {
+        "block": "minecraft:andesite"
+      },
+      {
+        "block": "minecraft:gravel"
+      },
+      {
+        "block": "minecraft:cyan_terracotta"
+      }
+    ]
+  },
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 3.3
+      },
+      "palette": [
+        {
+          "block": "minecraft:grass_block"
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 4,
+      "slopeCondition": {
+        "minimumSlope": 4
+      },
+      "palette": [
+        {
+          "block": "minecraft:gravel"
+        },
+        {
+          "block": "minecraft:cyan_terracotta"
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 4,
+      "slopeCondition": {
+        "minimumSlope": 4
+      },
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:cobblestone"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 4
+      },
+      "palette": [
+        {
+          "block": "minecraft:grass_block"
+        }
+      ]
+    },
+    {
+      "minHeight": 3,
+      "maxHeight": 3,
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 3
+      },
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "mode": "CENTER_HEIGHT",
+      "chance": 0.05,
+      "place": [
+        "trees/sproak/sp1",
+        "trees/sproak/sp2",
+        "trees/sproak/sp3",
+        "trees/sproak/sp4",
+        "trees/sproak/sp5",
+        "trees/sproak/sp6"
+      ]
+    },
+    {
+      "mode": "PAINT",
+      "chance": 0.1,
+      "place": [
+        "clutter/sbush1",
+        "clutter/sbush2",
+        "clutter/sbush3"
+      ]
+    },
+    {
+      "mode": "PAINT",
+      "chance": 0.1,
+      "place": [
+        "clutter/sbush1",
+        "clutter/sbush2",
+        "clutter/sbush3"
+      ]
+    },
+    {
+      "mode": "PAINT",
+      "chance": 0.1,
+      "place": [
+        "clutter/sbush1",
+        "clutter/sbush2",
+        "clutter/sbush3"
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.2,
+      "variance": {
+        "style": "CELLULAR",
+        "zoom": 0.3,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.2,
+          "multiplier": 10
+        }
+      },
+      "style": {
+        "style": "TRIOCTAVE_SIMPLEX",
+        "zoom": 0.3,
+        "fracture": {
+          "style": "STATIC",
+          "multiplier": 8
+        }
+      },
+      "palette": [
+        {
+          "block": "minecraft:dandelion"
+        },
+        {
+          "block": "minecraft:poppy"
+        },
+        {
+          "block": "minecraft:blue_orchid"
+        },
+        {
+          "block": "minecraft:allium"
+        },
+        {
+          "block": "minecraft:azure_bluet"
+        },
+        {
+          "block": "minecraft:red_tulip"
+        },
+        {
+          "block": "minecraft:orange_tulip"
+        },
+        {
+          "block": "minecraft:white_tulip"
+        },
+        {
+          "block": "minecraft:pink_tulip"
+        },
+        {
+          "block": "minecraft:oxeye_daisy"
+        },
+        {
+          "block": "minecraft:cornflower"
+        },
+        {
+          "block": "minecraft:lily_of_the_valley"
+        }
+      ]
+    },
+    {
+      "chance": 0.01,
+      "palette": [
+        {
+          "block": "minecraft:tall_grass"
+        }
+      ]
+    },
+    {
+      "chance": 0.5,
+      "palette": [
+        {
+          "block": "minecraft:short_grass"
+        }
+      ]
+    },
+    {
+      "forceBlock": {
+        "block": "minecraft:farmland",
+        "data": {
+          "moisture": 7
+        }
+      },
+      "slopeCondition": {
+        "maximumSlope": 3.3
+      },
+      "variance": {
+        "style": "CELLULAR",
+        "zoom": 0.3,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.2,
+          "multiplier": 10
+        }
+      },
+      "style": {
+        "style": "TRIOCTAVE_SIMPLEX",
+        "zoom": 0.3,
+        "fracture": {
+          "style": "STATIC",
+          "multiplier": 8
+        }
+      },
+      "chance": 0.2,
+      "palette": [
+        {
+          "block": "minecraft:wheat",
+          "data": {
+            "age": 7
+          }
+        }
+      ]
+    },
+    "snippet/decorator/bush"
+  ],
+  "childStyle": {
+    "style": "IRIS_DOUBLE",
+    "zoom": 10
+  },
+  "terrain3D": {
+    "enabled": true,
+    "seed": 30103,
+    "amplitude": 22,
+    "horizontalScale": 256,
+    "verticalScale": 30,
+    "densityStyle": {
+      "style": "PERLIN"
+    },
+    "crackDepth": 0,
+    "crackWidth": 2,
+    "crackScale": 416,
+    "crackStyle": {
+      "style": "SIMPLEX"
+    },
+    "minimumSlope": 0.18,
+    "slopeFade": 0.32,
+    "fluidClearance": 8,
+    "fluidFade": 24
+  }
 }

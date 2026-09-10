@@ -1,85 +1,117 @@
 {
-    "proceduralObjects": "snippet/procedural-objects/frozen/magical-ice-spikes-biome",
-    "name": "Ice Spikes",
-    "color": "#4E5A61",
-    "rarity": 1,
-    "derivative": "minecraft:snowy_plains",
-    "vanillaDerivative": "minecraft:snowy_plains",
-    "customDerivitives": [
-        {
-            "category": "taiga",
-            "foliageColor": "#194569",
-            "id": "winter_mountain_forest1",
-            "grassColor": "#FFFAFA"
-
-        },
-         {
-            "category": "taiga",
-            "foliageColor": "#5F84A2",
-            "id": "winter_mountain_forest2",
-            "grassColor": "#FFFAFA"
-
-        },
-         {
-            "category": "taiga",
-            "foliageColor": "#91AEC4",
-            "id": "winter_mountain_forest3",
-            "grassColor": "#FFFAFA"
-
-        }
-    ],
-    "generators": [
-         {
-            "generator": "mountain",
-            "max": 43,
-            "min": 15
-        },
-        {
-            "generator": "highplains",
-            "max": 50,
-            "min": 40
-        }
-    ],
-    "wall": {
-        "palette": [
-            {
-                "block": "minecraft:stone"
-            },
-            {
-                "block": "minecraft:andesite"
-            },
-            {
-                "block": "minecraft:gravel"
-            }
-        ]
+  "proceduralObjects": "snippet/procedural-objects/frozen/magical-ice-spikes-biome",
+  "name": "Ice Spikes",
+  "color": "#4E5A61",
+  "rarity": 1,
+  "derivative": "minecraft:snowy_plains",
+  "vanillaDerivative": "minecraft:snowy_plains",
+  "customDerivitives": [
+    {
+      "category": "taiga",
+      "foliageColor": "#194569",
+      "id": "winter_mountain_forest1",
+      "grassColor": "#FFFAFA"
     },
-    "layers": [
-        {
-            "minHeight": 1,
-            "maxHeight": 1,
-            "slopeCondition": {
-                "minimumSlope": 0,
-                "maximumSlope": 3.3
-            },
-            "palette": [{"block": "minecraft:snow_block"}]
-        },
-        {
-            "minHeight": 3,
-            "maxHeight": 3,
-            "slopeCondition": {
-                "minimumSlope": 0,
-                "maximumSlope": 3
-            },
-            "palette": [{"block": "minecraft:dirt"}]
-        },
-        {
-            "minHeight": 3,
-            "maxHeight": 3,
-            "slopeCondition": {
-                "minimumSlope": 0,
-                "maximumSlope": 3
-            },
-            "palette": [{"block": "minecraft:dirt"}, {"block": "minecraft:stone"}]
-        }
+    {
+      "category": "taiga",
+      "foliageColor": "#5F84A2",
+      "id": "winter_mountain_forest2",
+      "grassColor": "#FFFAFA"
+    },
+    {
+      "category": "taiga",
+      "foliageColor": "#91AEC4",
+      "id": "winter_mountain_forest3",
+      "grassColor": "#FFFAFA"
+    }
+  ],
+  "generators": [
+    {
+      "generator": "mountain",
+      "max": 43,
+      "min": 15
+    },
+    {
+      "generator": "highplains",
+      "max": 50,
+      "min": 40
+    }
+  ],
+  "wall": {
+    "palette": [
+      {
+        "block": "minecraft:stone"
+      },
+      {
+        "block": "minecraft:andesite"
+      },
+      {
+        "block": "minecraft:gravel"
+      }
     ]
+  },
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 3.3
+      },
+      "palette": [
+        {
+          "block": "minecraft:snow_block"
+        }
+      ]
+    },
+    {
+      "minHeight": 3,
+      "maxHeight": 3,
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 3
+      },
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    },
+    {
+      "minHeight": 3,
+      "maxHeight": 3,
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 3
+      },
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  ],
+  "terrain3D": {
+    "enabled": true,
+    "seed": 30133,
+    "amplitude": 48,
+    "horizontalScale": 264,
+    "verticalScale": 36,
+    "densityStyle": {
+      "style": "SIMPLEX"
+    },
+    "crackDepth": 12,
+    "crackWidth": 2.25,
+    "crackScale": 416,
+    "crackStyle": {
+      "style": "SIMPLEX"
+    },
+    "minimumSlope": 0.18,
+    "slopeFade": 0.32,
+    "fluidClearance": 8,
+    "fluidFade": 24
+  }
 }

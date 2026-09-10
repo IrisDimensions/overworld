@@ -1,207 +1,227 @@
 {
-    "name": "Mesa",
-    "color": "#CA5F30",
-    "rarity": 2,
-    "derivative": "minecraft:badlands",
-    "vanillaDerivative": "minecraft:badlands",
-    "biomeScatter": [
-        "minecraft:badlands",
-        "minecraft:eroded_badlands",
-        "minecraft:eroded_badlands"
-    ],
-    "children": [
-        "mesa/valleys",
-        "mesa/dark",
-        "mesa/red",
-        "mesa/blue",
-        "mesa/dark",
-        "mesa/green",
-        "mesa/red",
-        "mesa/yellow",
-        "mesa/blue"
-    ],
-    "generators": [
-        {
-            "min": 50,
-            "max": 70,
-            "generator": "highplains"
-        },
-        {
-            "min": 95,
-            "max": 190,
-            "generator": "highplains"
-        }
-    ],
-    "biomeStyle": {
-        "style": "SIMPLEX"
+  "name": "Mesa",
+  "color": "#CA5F30",
+  "rarity": 2,
+  "derivative": "minecraft:badlands",
+  "vanillaDerivative": "minecraft:badlands",
+  "biomeScatter": [
+    "minecraft:badlands",
+    "minecraft:eroded_badlands",
+    "minecraft:eroded_badlands"
+  ],
+  "children": [
+    "mesa/valleys",
+    "mesa/dark",
+    "mesa/red",
+    "mesa/blue",
+    "mesa/dark",
+    "mesa/green",
+    "mesa/red",
+    "mesa/yellow",
+    "mesa/blue"
+  ],
+  "generators": [
+    {
+      "min": 50,
+      "max": 70,
+      "generator": "highplains"
     },
-    "layers": [
+    {
+      "min": 95,
+      "max": 190,
+      "generator": "highplains"
+    }
+  ],
+  "biomeStyle": {
+    "style": "SIMPLEX"
+  },
+  "layers": [
+    {
+      "style": {
+        "style": "NOWHERE"
+      },
+      "zoom": 0.6,
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
         {
-            "style": {
-                "style": "NOWHERE"
-            },
-            "zoom": 0.6,
-            "minHeight": 2,
-            "maxHeight": 3,
-            "palette": [
-                {
-                    "weight": 1,
-                    "block": "minecraft:clay"
-                },
-                {
-                    "weight": 1,
-                    "block": "minecraft:light_gray_concrete_powder"
-                },
-                {
-                    "weight": 1,
-                    "block": "minecraft:andesite"
-                },
-                {
-                    "weight": 1,
-                    "block": "minecraft:stone"
-                },
-                {
-                    "weight": 1,
-                    "block": "minecraft:light_gray_concrete"
-                },
-                {
-                    "weight": 6,
-                    "block": "minecraft:orange_terracotta"
-                },
-                {
-                    "weight": 4,
-                    "block": "minecraft:terracotta"
-                },
-                {
-                    "weight": 4,
-                    "block": "minecraft:light_gray_terracotta"
-                }
-            ]
+          "weight": 1,
+          "block": "minecraft:clay"
         },
         {
-            "minHeight": 2,
-            "maxHeight": 3,
-            "palette": [
-                {
-                    "block": "minecraft:light_gray_terracotta"
-                }
-            ]
+          "weight": 1,
+          "block": "minecraft:light_gray_concrete_powder"
         },
         {
-            "minHeight": 2,
-            "maxHeight": 3,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "weight": 1,
-                    "block": "minecraft:terracotta"
-                },
-                {
-                    "weight": 1,
-                    "block": "minecraft:light_gray_terracotta"
-                }
-            ]
+          "weight": 1,
+          "block": "minecraft:andesite"
         },
         {
-            "minHeight": 2,
-            "maxHeight": 3,
-            "palette": [
-                {
-                    "block": "minecraft:terracotta"
-                }
-            ]
+          "weight": 1,
+          "block": "minecraft:stone"
         },
         {
-            "minHeight": 2,
-            "maxHeight": 3,
-            "palette": [
-                {
-                    "block": "minecraft:orange_terracotta"
-                }
-            ]
+          "weight": 1,
+          "block": "minecraft:light_gray_concrete"
         },
         {
-            "minHeight": 3,
-            "maxHeight": 4,
-            "palette": [
-                {
-                    "block": "minecraft:terracotta"
-                }
-            ]
+          "weight": 6,
+          "block": "minecraft:orange_terracotta"
         },
         {
-            "minHeight": 2,
-            "maxHeight": 3,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "weight": 1,
-                    "block": "minecraft:terracotta"
-                },
-                {
-                    "weight": 1,
-                    "block": "minecraft:light_gray_terracotta"
-                }
-            ]
+          "weight": 4,
+          "block": "minecraft:terracotta"
         },
         {
-            "minHeight": 1,
-            "maxHeight": 1,
-            "palette": [
-                {
-                    "block": "minecraft:light_gray_terracotta"
-                }
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 1,
-            "palette": [
-                {
-                    "block": "minecraft:terracotta"
-                }
-            ]
+          "weight": 4,
+          "block": "minecraft:light_gray_terracotta"
         }
-    ],
-    "decorators": [
-        {
-            "chance": 0.009,
-            "variance": {
-                "style": "STATIC"
-            },
-            "zoom": 0.3,
-            "palette": [
-                {
-                    "data": {
-                        "face": "floor",
-                        "powered": false,
-                        "facing": "east"
-                    },
-                    "block": "minecraft:stone_button"
-                },
-                {
-                    "data": {
-                        "face": "floor",
-                        "powered": false,
-                        "facing": "south"
-                    },
-                    "block": "minecraft:stone_button"
-                }
-            ],
-            "style": {
-                "style": "STATIC"
-            }
-        },
-        "snippet/decorator/dry_grass"
-    ],
-    "childStyle": {
-        "style": "NOWHERE_CELLULAR",
-        "zoom": 1.2,
-        "exponent": 1.3
+      ]
     },
-    "childShrinkFactor": 1
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:light_gray_terracotta"
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "weight": 1,
+          "block": "minecraft:terracotta"
+        },
+        {
+          "weight": 1,
+          "block": "minecraft:light_gray_terracotta"
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:terracotta"
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:orange_terracotta"
+        }
+      ]
+    },
+    {
+      "minHeight": 3,
+      "maxHeight": 4,
+      "palette": [
+        {
+          "block": "minecraft:terracotta"
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "weight": 1,
+          "block": "minecraft:terracotta"
+        },
+        {
+          "weight": 1,
+          "block": "minecraft:light_gray_terracotta"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:light_gray_terracotta"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:terracotta"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.009,
+      "variance": {
+        "style": "STATIC"
+      },
+      "zoom": 0.3,
+      "palette": [
+        {
+          "data": {
+            "face": "floor",
+            "powered": false,
+            "facing": "east"
+          },
+          "block": "minecraft:stone_button"
+        },
+        {
+          "data": {
+            "face": "floor",
+            "powered": false,
+            "facing": "south"
+          },
+          "block": "minecraft:stone_button"
+        }
+      ],
+      "style": {
+        "style": "STATIC"
+      }
+    },
+    "snippet/decorator/dry_grass"
+  ],
+  "childStyle": {
+    "style": "NOWHERE_CELLULAR",
+    "zoom": 1.2,
+    "exponent": 1.3
+  },
+  "childShrinkFactor": 1,
+  "terrain3D": {
+    "enabled": true,
+    "seed": 30119,
+    "amplitude": 48,
+    "horizontalScale": 256,
+    "verticalScale": 30,
+    "densityStyle": {
+      "style": "NOWHERE"
+    },
+    "crackDepth": 12,
+    "crackWidth": 2,
+    "crackScale": 392,
+    "crackStyle": {
+      "style": "PERLIN"
+    },
+    "minimumSlope": 0.14,
+    "slopeFade": 0.28,
+    "fluidClearance": 8,
+    "fluidFade": 24
+  }
 }

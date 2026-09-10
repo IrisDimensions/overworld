@@ -1,52 +1,104 @@
 {
-    "name": "Mountain Cliffs",
-    "color": "#D4DEE3",
-    "rarity": 3,
-    "derivative": "minecraft:old_growth_spruce_taiga",
-    "vanillaDerivative": "minecraft:old_growth_spruce_taiga",
-    "children": ["mountain/cliffs-extended"],
-    "generators": [{
-        "min": 26,
-        "max": 90,
-        "generator": "cracked-cliffs"
-    }],
-    "wall": {
-        "style": {"style": "STATIC"},
-        "palette": [
-            {"block": "minecraft:stone"},
-            {"block": "minecraft:andesite"},
-            {"block": "minecraft:gravel"},
-            {"block": "minecraft:cyan_terracotta"}
-        ]
+  "name": "Mountain Cliffs",
+  "color": "#D4DEE3",
+  "rarity": 3,
+  "derivative": "minecraft:old_growth_spruce_taiga",
+  "vanillaDerivative": "minecraft:old_growth_spruce_taiga",
+  "children": [
+    "mountain/cliffs-extended"
+  ],
+  "generators": [
+    {
+      "min": 26,
+      "max": 90,
+      "generator": "cracked-cliffs"
+    }
+  ],
+  "wall": {
+    "style": {
+      "style": "STATIC"
     },
-    "layers": [
-        {
-            "minHeight": 1,
-            "maxHeight": 1,
-            "slopeCondition": {
-                "minimumSlope": 0,
-                "maximumSlope": 2.6
-            },
-            "palette": [{"block": "minecraft:grass_block"}]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 2,
-            "slopeCondition": {"minimumSlope": 3.95},
-            "palette": [
-                {"block": "minecraft:gravel"},
-                {"block": "minecraft:cyan_terracotta"}
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {"style": "STATIC"},
-            "palette": [
-                {"block": "minecraft:stone"},
-                {"block": "minecraft:andesite"},
-                {"block": "minecraft:stone"}
-            ]
-        }
+    "palette": [
+      {
+        "block": "minecraft:stone"
+      },
+      {
+        "block": "minecraft:andesite"
+      },
+      {
+        "block": "minecraft:gravel"
+      },
+      {
+        "block": "minecraft:cyan_terracotta"
+      }
     ]
+  },
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 2.6
+      },
+      "palette": [
+        {
+          "block": "minecraft:grass_block"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 2,
+      "slopeCondition": {
+        "minimumSlope": 3.95
+      },
+      "palette": [
+        {
+          "block": "minecraft:gravel"
+        },
+        {
+          "block": "minecraft:cyan_terracotta"
+        }
+      ]
+    },
+    {
+      "minHeight": 6,
+      "maxHeight": 18,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        },
+        {
+          "block": "minecraft:andesite"
+        },
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  ],
+  "terrain3D": {
+    "enabled": true,
+    "seed": 30113,
+    "amplitude": 56,
+    "horizontalScale": 224,
+    "verticalScale": 30,
+    "densityStyle": {
+      "style": "IRIS_HALF"
+    },
+    "crackDepth": 14,
+    "crackWidth": 2.25,
+    "crackScale": 336,
+    "crackStyle": {
+      "style": "SIMPLEX"
+    },
+    "minimumSlope": 0.12,
+    "slopeFade": 0.28,
+    "fluidClearance": 8,
+    "fluidFade": 24
+  }
 }

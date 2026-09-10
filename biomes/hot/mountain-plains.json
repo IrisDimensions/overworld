@@ -1,46 +1,100 @@
 {
-    "name": "Hot Mountain Plains",
-    "color": "#C9A429",
-    "rarity": 1,
-    "derivative": "minecraft:desert",
-    "vanillaDerivative": "minecraft:desert",
-    "generators": [{
-        "generator": "smooth-dunes",
-        "max": 59,
-        "min": 66
-    }],
-    "wall": {"palette": [{"block": "minecraft:gray_terracotta"}]},
-    "layers": [
+  "name": "Hot Mountain Plains",
+  "color": "#C9A429",
+  "rarity": 1,
+  "derivative": "minecraft:desert",
+  "vanillaDerivative": "minecraft:desert",
+  "generators": [
+    {
+      "generator": "smooth-dunes",
+      "max": 59,
+      "min": 66
+    }
+  ],
+  "wall": {
+    "palette": [
+      {
+        "block": "minecraft:gray_terracotta"
+      }
+    ]
+  },
+  "layers": [
+    {
+      "minHeight": 4,
+      "maxHeight": 6,
+      "palette": [
         {
-            "minHeight": 4,
-            "maxHeight": 6,
-            "palette": [{"block": "minecraft:red_sand"}]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 23,
-            "palette": [{"block": "minecraft:red_sandstone"}]
+          "block": "minecraft:red_sand"
         }
-    ],
-    "decorators": [        {
-            "chance": 0.0005,
-            "variance": {"style": "STATIC"},
-            "stackMax": 5,
-            "style": {"style": "STATIC"},
-            "palette": [{"block": "minecraft:cactus"}],
-            "stackMin": 1
-        },
-         {
-            "chance": 0.0005,
-            "variance": {"style": "STATIC"},
-            "stackMax": 5,
-            "style": {"style": "STATIC"},
-            "palette": [{"block": "minecraft:cactus"}],
-             "topPalette": [
-                {
-                    "block": "minecraft:cactus_flower"
-                }
-            ],
-            "stackMin": 1
-        }]
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 23,
+      "palette": [
+        {
+          "block": "minecraft:red_sandstone"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.0005,
+      "variance": {
+        "style": "STATIC"
+      },
+      "stackMax": 5,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:cactus"
+        }
+      ],
+      "stackMin": 1
+    },
+    {
+      "chance": 0.0005,
+      "variance": {
+        "style": "STATIC"
+      },
+      "stackMax": 5,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:cactus"
+        }
+      ],
+      "topPalette": [
+        {
+          "block": "minecraft:cactus_flower"
+        }
+      ],
+      "stackMin": 1
+    }
+  ],
+  "terrain3D": {
+    "enabled": true,
+    "seed": 30187,
+    "amplitude": 26,
+    "horizontalScale": 256,
+    "verticalScale": 30,
+    "densityStyle": {
+      "style": "NOWHERE"
+    },
+    "crackDepth": 7,
+    "crackWidth": 2,
+    "crackScale": 416,
+    "crackStyle": {
+      "style": "PERLIN"
+    },
+    "minimumSlope": 0.24,
+    "slopeFade": 0.32,
+    "fluidClearance": 8,
+    "fluidFade": 24
+  }
 }

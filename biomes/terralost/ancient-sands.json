@@ -1,173 +1,193 @@
 {
-    "name": "Ancient Sands",
-    "color": "#DBD155",
-    "rarity": 1,
-    "derivative": "minecraft:desert",
-    "vanillaDerivative": "minecraft:desert",
-    "generators": [
+  "name": "Ancient Sands",
+  "color": "#DBD155",
+  "rarity": 1,
+  "derivative": "minecraft:desert",
+  "vanillaDerivative": "minecraft:desert",
+  "generators": [
+    {
+      "generator": "smooth-dunes",
+      "max": 35,
+      "min": 30
+    },
+    {
+      "generator": "mountain",
+      "max": 20,
+      "min": 0
+    },
+    {
+      "generator": "rare-hills",
+      "max": 20,
+      "min": 0
+    }
+  ],
+  "customDerivitives": [
+    {
+      "category": "desert",
+      "id": "terralost_ancientsands",
+      "temperature": 2,
+      "humidity": 0,
+      "downfallType": "none",
+      "skyColor": "#857769",
+      "fogColor": "#BB9B9D",
+      "waterColor": "#77E0F7",
+      "waterFogColor": "#50533"
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 3,
+      "maxHeight": 10,
+      "style": {
+        "style": "FRACTAL_SMOKE",
+        "zoom": 0.05
+      },
+      "palette": [
         {
-            "generator": "smooth-dunes",
-            "max": 35,
-            "min": 30
+          "block": "minecraft:orange_terracotta"
         },
         {
-            "generator": "mountain",
-            "max": 20,
-            "min": 0
+          "block": "minecraft:red_sand"
         },
         {
-            "generator": "rare-hills",
-            "max": 20,
-            "min": 0
+          "block": "minecraft:sandstone"
+        },
+        {
+          "block": "minecraft:sand"
         }
-    ],
-    "customDerivitives": [
+      ]
+    },
+    {
+      "minHeight": 5,
+      "maxHeight": 5,
+      "zoom": 0.7,
+      "palette": [
         {
-            "category": "desert",
-            "id": "terralost_ancientsands",
-            "temperature": 2,
-            "humidity": 0,
-            "downfallType": "none",
-            "skyColor": "#857769",
-            "fogColor": "#BB9B9D",
-            "waterColor": "#77E0F7",
-            "waterFogColor": "#50533"
+          "block": "minecraft:red_sand"
         }
-    ],
-    "layers": [
+      ]
+    },
+    {
+      "minHeight": 3,
+      "maxHeight": 10,
+      "slopeCondition": {
+        "minimumSlope": 4.5,
+        "maximumSlope": 20
+      },
+      "palette": [
         {
-            "minHeight": 3,
-            "maxHeight": 10,
-            "style": {
-                "style": "FRACTAL_SMOKE",
-                "zoom": 0.05
-            },
-            "palette": [
-                {
-                    "block": "minecraft:orange_terracotta"
-                },
-                {
-                    "block": "minecraft:red_sand"
-                },
-                {
-                    "block": "minecraft:sandstone"
-                },
-                {
-                    "block": "minecraft:sand"
-                }
-            ]
-        },
-        {
-            "minHeight": 5,
-            "maxHeight": 5,
-            "zoom": 0.7,
-            "palette": [
-                {
-                    "block": "minecraft:red_sand"
-                }
-            ]
-        },
-        {
-            "minHeight": 3,
-            "maxHeight": 10,
-            "slopeCondition": {
-                "minimumSlope": 4.5,
-                "maximumSlope": 20
-            },
-            "palette": [
-                {
-                    "block": "minecraft:sandstone"
-                }
-            ]
-        },
-        {
-            "minHeight": 5,
-            "maxHeight": 5,
-            "zoom": 0.7,
-            "palette": [
-                {
-                    "weight": 1,
-                    "block": "minecraft:sand"
-                }
-            ]
+          "block": "minecraft:sandstone"
         }
-    ],
-    "objects": [
+      ]
+    },
+    {
+      "minHeight": 5,
+      "maxHeight": 5,
+      "zoom": 0.7,
+      "palette": [
         {
-            "chance": 0.0014,
-            "mode": "MIN_HEIGHT",
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "clutter/rsphinx1",
-                "clutter/rbrksphinx1"
-            ],
-            "translate": {
-                "x": 0,
-                "y": -2,
-                "z": 0
-            }
+          "weight": 1,
+          "block": "minecraft:sand"
         }
-    ],
-    "decorators": [
-        {
-            "chance": 0.002,
-            "variance": {
-                "style": "STATIC"
-            },
-            "stackMax": 5,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "minecraft:cactus"
-                }
-            ],
-            "heightVariance": {
-                "style": "STATIC"
-            },
-            "stackMin": 1
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "chance": 0.0014,
+      "mode": "MIN_HEIGHT",
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
         },
+        "enabled": true
+      },
+      "place": [
+        "clutter/rsphinx1",
+        "clutter/rbrksphinx1"
+      ],
+      "translate": {
+        "x": 0,
+        "y": -2,
+        "z": 0
+      }
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.002,
+      "variance": {
+        "style": "STATIC"
+      },
+      "stackMax": 5,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
         {
-            "chance": 0.002,
-            "variance": {
-                "style": "STATIC"
-            },
-            "stackMax": 5,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "minecraft:cactus"
-                }
-            ],
-            "topPalette": [
-                {
-                    "block": "minecraft:cactus_flower",
-                    "weight": 1
-                }
-            ],
-            "heightVariance": {
-                "style": "STATIC"
-            },
-            "stackMin": 1
-        },
-        {
-            "chance": 0.005,
-            "palette": [
-                {
-                    "block": "minecraft:dead_bush"
-                }
-            ]
+          "block": "minecraft:cactus"
         }
-    ]
+      ],
+      "heightVariance": {
+        "style": "STATIC"
+      },
+      "stackMin": 1
+    },
+    {
+      "chance": 0.002,
+      "variance": {
+        "style": "STATIC"
+      },
+      "stackMax": 5,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:cactus"
+        }
+      ],
+      "topPalette": [
+        {
+          "block": "minecraft:cactus_flower",
+          "weight": 1
+        }
+      ],
+      "heightVariance": {
+        "style": "STATIC"
+      },
+      "stackMin": 1
+    },
+    {
+      "chance": 0.005,
+      "palette": [
+        {
+          "block": "minecraft:dead_bush"
+        }
+      ]
+    }
+  ],
+  "terrain3D": {
+    "enabled": true,
+    "seed": 30187,
+    "amplitude": 26,
+    "horizontalScale": 256,
+    "verticalScale": 30,
+    "densityStyle": {
+      "style": "NOWHERE"
+    },
+    "crackDepth": 7,
+    "crackWidth": 2,
+    "crackScale": 416,
+    "crackStyle": {
+      "style": "PERLIN"
+    },
+    "minimumSlope": 0.24,
+    "slopeFade": 0.32,
+    "fluidClearance": 8,
+    "fluidFade": 24
+  }
 }

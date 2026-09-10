@@ -1,350 +1,370 @@
 {
-    "name": "Wooded Badlands",
-    "color": "#B09765",
-    "rarity": 1,
-    "derivative": "minecraft:wooded_badlands",
-    "vanillaDerivative": "minecraft:wooded_badlands",
-    "generators": [
+  "name": "Wooded Badlands",
+  "color": "#B09765",
+  "rarity": 1,
+  "derivative": "minecraft:wooded_badlands",
+  "vanillaDerivative": "minecraft:wooded_badlands",
+  "generators": [
+    {
+      "min": 20,
+      "max": 75,
+      "generator": "mountain"
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "slopeCondition": {
+        "minimumSlope": 2,
+        "maximumSlope": 10
+      },
+      "palette": [
         {
-            "min": 20,
-            "max": 75,
-            "generator": "mountain"
+          "block": "minecraft:terracotta"
         }
-    ],
-    "layers": [
+      ]
+    },
+    {
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 2
+      },
+      "style": {
+        "style": "NOWHERE",
+        "fracture": {
+          "style": "STATIC",
+          "multiplier": 4,
+          "axialFracturing": true
+        },
+        "zoom": 1.4
+      },
+      "zoom": 0.9,
+      "minHeight": 1,
+      "maxHeight": 1,
+      "palette": [
         {
-            "minHeight": 1,
-            "maxHeight": 1,
-            "slopeCondition": {
-                "minimumSlope": 2,
-                "maximumSlope": 10
-            },
-            "palette": [
-                {
-                    "block": "minecraft:terracotta"
-                }
-            ]
+          "weight": 3,
+          "block": "minecraft:red_sand"
         },
         {
-            "slopeCondition": {
-                "minimumSlope": 0,
-                "maximumSlope": 2
-            },
-            "style": {
-                "style": "NOWHERE",
-                "fracture": {
-                    "style": "STATIC",
-                    "multiplier": 4,
-                    "axialFracturing": true
-                },
-                "zoom": 1.4
-            },
-            "zoom": 0.9,
-            "minHeight": 1,
-            "maxHeight": 1,
-            "palette": [
-                {
-                    "weight": 3,
-                    "block": "minecraft:red_sand"
-                },
-                {
-                    "weight": 2,
-                    "block": "minecraft:orange_terracotta"
-                },
-                {
-                    "weight": 7,
-                    "block": "minecraft:grass_block"
-                }
-            ]
+          "weight": 2,
+          "block": "minecraft:orange_terracotta"
         },
         {
-            "minHeight": 1,
-            "maxHeight": 1,
-            "palette": [
-                {
-                    "block": "minecraft:light_gray_terracotta"
-                }
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 1,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "weight": 1,
-                    "block": "minecraft:terracotta"
-                },
-                {
-                    "weight": 1,
-                    "block": "minecraft:light_gray_terracotta"
-                }
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 1,
-            "palette": [
-                {
-                    "block": "minecraft:terracotta"
-                }
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 2,
-            "palette": [
-                {
-                    "block": "minecraft:orange_terracotta"
-                }
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 1,
-            "palette": [
-                {
-                    "block": "minecraft:terracotta"
-                }
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 1,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "weight": 1,
-                    "block": "minecraft:terracotta"
-                },
-                {
-                    "weight": 1,
-                    "block": "minecraft:light_gray_terracotta"
-                }
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 1,
-            "palette": [
-                {
-                    "block": "minecraft:light_gray_terracotta"
-                }
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 1,
-            "palette": [
-                {
-                    "block": "minecraft:terracotta"
-                }
-            ]
+          "weight": 7,
+          "block": "minecraft:grass_block"
         }
-    ],
-    "objects": [
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "palette": [
         {
-            "place": [
-                "trees/acacia/vexed1",
-                "trees/acacia/vexed2",
-                "trees/acacia/vexed3"
-            ],
-            "chance": 0.4,
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "minecraft:acacia_planks"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "minecraft:acacia_wood",
-                                "data": {
-                                    "axis": "y"
-                                }
-                            }
-                        ]
-                    }
-                }
-            ]
+          "block": "minecraft:light_gray_terracotta"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "weight": 1,
+          "block": "minecraft:terracotta"
         },
         {
-            "chance": 0.00175,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "clutter/camp1"
-            ]
+          "weight": 1,
+          "block": "minecraft:light_gray_terracotta"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:terracotta"
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:orange_terracotta"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:terracotta"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "weight": 1,
+          "block": "minecraft:terracotta"
         },
         {
-            "mode": "PAINT",
-            "chance": 0.005,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "clutter/bincluster1"
-            ]
-        },
+          "weight": 1,
+          "block": "minecraft:light_gray_terracotta"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "palette": [
         {
-            "chance": 0.07,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "trees/acacia/savannad1",
-                "trees/acacia/savannad2",
-                "trees/acacia/savannad3"
-            ]
-        },
+          "block": "minecraft:light_gray_terracotta"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "palette": [
         {
-            "chance": 0.2,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "trees/acacia/savannaf1",
-                "trees/acacia/savannaf2",
-                "trees/acacia/savannaf3",
-                "trees/acacia/savannaf4",
-                "trees/acacia/savannaf5",
-                "trees/acacia/savannaf6",
-                "trees/acacia/savannaf7",
-                "trees/acacia/savannaf8",
-                "trees/acacia/savannaf9",
-                "trees/acacia/savannaf10",
-                "trees/acacia/savannaf11",
-                "trees/acacia/savannaf13",
-                "trees/acacia/savannaf14"
-            ],
-            "translate": {
-                "x": 0,
-                "y": -1,
-                "z": 0
+          "block": "minecraft:terracotta"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "place": [
+        "trees/acacia/vexed1",
+        "trees/acacia/vexed2",
+        "trees/acacia/vexed3"
+      ],
+      "chance": 0.4,
+      "edit": [
+        {
+          "find": [
+            {
+              "block": "minecraft:acacia_planks"
             }
-        },
-        {
-            "chance": 0.04,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "trees/acacia/savannas1",
-                "trees/acacia/savannas2",
-                "trees/acacia/savannas3",
-                "trees/acacia/savannas4",
-                "trees/acacia/savannas5",
-                "trees/acacia/savannas6",
-                "trees/acacia/savannas7",
-                "trees/acacia/savannas8",
-                "trees/acacia/savannas9",
-                "trees/acacia/savannas10",
-                "trees/acacia/savannas11",
-                "trees/acacia/savannas12"
+          ],
+          "replace": {
+            "palette": [
+              {
+                "block": "minecraft:acacia_wood",
+                "data": {
+                  "axis": "y"
+                }
+              }
             ]
+          }
         }
-    ],
-    "decorators": [
-        {
-            "chance": 0.189,
-            "variance": {
-                "style": "CELLULAR",
-                "zoom": 0.3,
-                "fracture": {
-                    "style": "SIMPLEX",
-                    "zoom": 0.2,
-                    "multiplier": 10
-                }
-            },
-            "style": {
-                "style": "SIMPLEX",
-                "zoom": 0.3,
-                "fracture": {
-                    "style": "STATIC",
-                    "multiplier": 8
-                }
-            },
-            "palette": [
-                {
-                    "block": "minecraft:white_tulip"
-                },
-                {
-                    "block": "minecraft:red_tulip"
-                },
-                {
-                    "block": "minecraft:orange_tulip"
-                },
-                {
-                    "block": "minecraft:dandelion"
-                },
-                {
-                    "block": "minecraft:poppy"
-                }
-            ]
+      ]
+    },
+    {
+      "chance": 0.00175,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
         },
-        {
-            "chance": 0.01,
-            "palette": [
-                {
-                    "block": "minecraft:tall_grass"
-                }
-            ]
+        "enabled": true
+      },
+      "place": [
+        "clutter/camp1"
+      ]
+    },
+    {
+      "mode": "PAINT",
+      "chance": 0.005,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
         },
-        {
-            "chance": 0.5,
-            "palette": [
-                {
-                    "block": "minecraft:short_grass"
-                }
-            ]
+        "enabled": true
+      },
+      "place": [
+        "clutter/bincluster1"
+      ]
+    },
+    {
+      "chance": 0.07,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
         },
-        "snippet/decorator/dry_grass"
-    ],
-    "customDerivitives": [
-        {
-            "category": "mesa",
-            "id": "wooded_badlands",
-            "grassColor": "#90814D",
-            "foliageColor": "#9E814D",
-            "waterColor": "#4E7F81",
-            "downfallType": "none"
+        "enabled": true
+      },
+      "place": [
+        "trees/acacia/savannad1",
+        "trees/acacia/savannad2",
+        "trees/acacia/savannad3"
+      ]
+    },
+    {
+      "chance": 0.2,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "trees/acacia/savannaf1",
+        "trees/acacia/savannaf2",
+        "trees/acacia/savannaf3",
+        "trees/acacia/savannaf4",
+        "trees/acacia/savannaf5",
+        "trees/acacia/savannaf6",
+        "trees/acacia/savannaf7",
+        "trees/acacia/savannaf8",
+        "trees/acacia/savannaf9",
+        "trees/acacia/savannaf10",
+        "trees/acacia/savannaf11",
+        "trees/acacia/savannaf13",
+        "trees/acacia/savannaf14"
+      ],
+      "translate": {
+        "x": 0,
+        "y": -1,
+        "z": 0
+      }
+    },
+    {
+      "chance": 0.04,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "trees/acacia/savannas1",
+        "trees/acacia/savannas2",
+        "trees/acacia/savannas3",
+        "trees/acacia/savannas4",
+        "trees/acacia/savannas5",
+        "trees/acacia/savannas6",
+        "trees/acacia/savannas7",
+        "trees/acacia/savannas8",
+        "trees/acacia/savannas9",
+        "trees/acacia/savannas10",
+        "trees/acacia/savannas11",
+        "trees/acacia/savannas12"
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.189,
+      "variance": {
+        "style": "CELLULAR",
+        "zoom": 0.3,
+        "fracture": {
+          "style": "SIMPLEX",
+          "zoom": 0.2,
+          "multiplier": 10
         }
-    ]
+      },
+      "style": {
+        "style": "SIMPLEX",
+        "zoom": 0.3,
+        "fracture": {
+          "style": "STATIC",
+          "multiplier": 8
+        }
+      },
+      "palette": [
+        {
+          "block": "minecraft:white_tulip"
+        },
+        {
+          "block": "minecraft:red_tulip"
+        },
+        {
+          "block": "minecraft:orange_tulip"
+        },
+        {
+          "block": "minecraft:dandelion"
+        },
+        {
+          "block": "minecraft:poppy"
+        }
+      ]
+    },
+    {
+      "chance": 0.01,
+      "palette": [
+        {
+          "block": "minecraft:tall_grass"
+        }
+      ]
+    },
+    {
+      "chance": 0.5,
+      "palette": [
+        {
+          "block": "minecraft:short_grass"
+        }
+      ]
+    },
+    "snippet/decorator/dry_grass"
+  ],
+  "customDerivitives": [
+    {
+      "category": "mesa",
+      "id": "wooded_badlands",
+      "grassColor": "#90814D",
+      "foliageColor": "#9E814D",
+      "waterColor": "#4E7F81",
+      "downfallType": "none"
+    }
+  ],
+  "terrain3D": {
+    "enabled": true,
+    "seed": 30119,
+    "amplitude": 48,
+    "horizontalScale": 256,
+    "verticalScale": 30,
+    "densityStyle": {
+      "style": "NOWHERE"
+    },
+    "crackDepth": 12,
+    "crackWidth": 2,
+    "crackScale": 392,
+    "crackStyle": {
+      "style": "PERLIN"
+    },
+    "minimumSlope": 0.14,
+    "slopeFade": 0.28,
+    "fluidClearance": 8,
+    "fluidFade": 24
+  }
 }

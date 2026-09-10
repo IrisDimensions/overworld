@@ -1,127 +1,175 @@
 {
-    "name": "Tropical Volcanic Plains",
-    "color": "#AE1313",
-    "rarity": 1,
-    "derivative": "minecraft:the_void",
-    "vanillaDerivative": "minecraft:the_void",
-    "customDerivitives": [
-        {
-            "category": "jungle",
-            "id": "tropical_volcanic_plains",
-            "grassColor": "#9BC20D",
-            "foliageColor": "#9CD320",
-            "fogColor": "#DD793C",
-            "downfallType": "none"
-        }
-    ],
-    "children": [
-        "tropical/volcanoes"
-    ],
-    "generators": [
-        {
-            "min": 120,
-            "max": 190,
-            "generator": "mountain"
-        }
-    ],
-    "layers": [
-        {
-            "style": {
-                "style": "SIMPLEX",
-                "fracture": {
-                    "style": "GLOB",
-                    "zoom": 0.2,
-                    "multiplier": 40
-                }
-            },
-            "zoom": 0.8,
-            "minHeight": 1,
-            "maxHeight": 5,
-            "palette": [
-                {
-                    "weight": 1,
-                    "block": "minecraft:magma_block"
-                },
-                {
-                    "weight": 3,
-                    "block": "minecraft:basalt"
-                },
-                {
-                    "weight": 1,
-                    "block": "minecraft:magma_block"
-                },
-                {
-                    "block": "minecraft:tuff"
-                }
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 2,
-            "palette": [
-                {
-                    "block": "minecraft:basalt",
-                    "data": {
-                        "axis": "x"
-                    }
-                },
-                {
-                    "block": "minecraft:basalt",
-                    "data": {
-                        "axis": "y"
-                    }
-                },
-                {
-                    "block": "minecraft:basalt",
-                    "data": {
-                        "axis": "z"
-                    }
-                }
-            ]
-        },
-        {
-            "minHeight": 3,
-            "maxHeight": 10,
-            "palette": [
-                {
-                    "block": "minecraft:blackstone"
-                }
-            ]
-        }
-    ],
-    "objects": [
-        {
-            "chance": 0.001,
-            "density": 1,
-            "carvingSupport": "SURFACE_ONLY",
-            "mode": "CENTER_HEIGHT",
-            "slopeCondition": {
-                "maximumSlope": 0.75
-            },
-            "translate": {
-                "y": -2
-            },
-            "place": [
-                "clutter/lava-basin-1"
-            ]
-        }
-    ],
-    "childStyle": {
+  "name": "Tropical Volcanic Plains",
+  "color": "#AE1313",
+  "rarity": 1,
+  "derivative": "minecraft:the_void",
+  "vanillaDerivative": "minecraft:the_void",
+  "customDerivitives": [
+    {
+      "category": "jungle",
+      "id": "tropical_volcanic_plains",
+      "grassColor": "#9BC20D",
+      "foliageColor": "#9CD320",
+      "fogColor": "#DD793C",
+      "downfallType": "none"
+    }
+  ],
+  "children": [
+    "tropical/volcanoes"
+  ],
+  "generators": [
+    {
+      "min": 120,
+      "max": 190,
+      "generator": "mountain"
+    }
+  ],
+  "layers": [
+    {
+      "style": {
         "style": "SIMPLEX",
-        "zoom": 1.3,
-        "exponent": 1.9
-    },
-    "effects": [
-        {
-            "particleAltX": 0.001,
-            "particleAltY": 0.13885,
-            "particleAltZ": 0.001,
-            "chance": 1,
-            "particleEffect": "CAMPFIRE_SIGNAL_SMOKE",
-            "particleOffset": 0,
-            "interval": 200,
-            "particleCount": 0
+        "fracture": {
+          "style": "GLOB",
+          "zoom": 0.2,
+          "multiplier": 40
         }
+      },
+      "zoom": 0.8,
+      "minHeight": 1,
+      "maxHeight": 5,
+      "palette": [
+        {
+          "weight": 1,
+          "block": "minecraft:magma_block"
+        },
+        {
+          "weight": 3,
+          "block": "minecraft:basalt"
+        },
+        {
+          "weight": 1,
+          "block": "minecraft:magma_block"
+        },
+        {
+          "block": "minecraft:tuff"
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:basalt",
+          "data": {
+            "axis": "x"
+          }
+        },
+        {
+          "block": "minecraft:basalt",
+          "data": {
+            "axis": "y"
+          }
+        },
+        {
+          "block": "minecraft:basalt",
+          "data": {
+            "axis": "z"
+          }
+        }
+      ]
+    },
+    {
+      "minHeight": 3,
+      "maxHeight": 10,
+      "palette": [
+        {
+          "block": "minecraft:blackstone"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "chance": 0.001,
+      "density": 1,
+      "carvingSupport": "SURFACE_ONLY",
+      "mode": "CENTER_HEIGHT",
+      "slopeCondition": {
+        "maximumSlope": 0.75
+      },
+      "translate": {
+        "y": -2
+      },
+      "place": [
+        "clutter/lava-basin-1"
+      ]
+    }
+  ],
+  "childStyle": {
+    "style": "SIMPLEX",
+    "zoom": 1.3,
+    "exponent": 1.9
+  },
+  "effects": [
+    {
+      "particleAltX": 0.001,
+      "particleAltY": 0.13885,
+      "particleAltZ": 0.001,
+      "chance": 1,
+      "particleEffect": "CAMPFIRE_SIGNAL_SMOKE",
+      "particleOffset": 0,
+      "interval": 200,
+      "particleCount": 0
+    }
+  ],
+  "childShrinkFactor": 1,
+  "terrain3D": {
+    "enabled": true,
+    "seed": 30137,
+    "amplitude": 44,
+    "horizontalScale": 192,
+    "verticalScale": 24,
+    "densityStyle": {
+      "style": "HEXAGON"
+    },
+    "crackDepth": 9,
+    "crackWidth": 2,
+    "crackScale": 336,
+    "crackStyle": {
+      "style": "SIMPLEX"
+    },
+    "minimumSlope": 0.22,
+    "slopeFade": 0.3,
+    "fluidClearance": 8,
+    "fluidFade": 24
+  },
+  "riverPolicy": {
+    "placement": "PREFERRED_HEADWATER",
+    "routing": "PREFER",
+    "outletAdmission": true,
+    "profiles": [
+      "volcanic_lava"
     ],
-    "childShrinkFactor": 1
+    "surfaceBiomes": [],
+    "mouthBiomes": [],
+    "shoreBiomes": [],
+    "bankBiomes": [],
+    "floodedCaveBiomes": [],
+    "surfacePools": [
+      "volcanic_pool"
+    ],
+    "surfaceSourceDensity": 6.0,
+    "surfaceSourceSpacing": 128,
+    "surfaceTributaries": 2,
+    "surfaceInlandOutlets": 3,
+    "surfaceCoastalOutlets": 0,
+    "widthMultiplier": 0.5,
+    "depthMultiplier": 1.25,
+    "routingMultiplier": 0.5,
+    "bankMultiplier": 1.0,
+    "shoreWidth": 1.0,
+    "surfaceMinimumCourseLength": 128,
+    "surfaceMaximumIncision": 24
+  }
 }

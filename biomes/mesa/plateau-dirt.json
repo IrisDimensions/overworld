@@ -1,138 +1,158 @@
 {
-    "name": "Mesa Plateau Dirt",
-    "color": "#BD5122",
-    "rarity": 1,
-    "derivative": "minecraft:badlands",
-    "vanillaDerivative": "minecraft:badlands",
-    "biomeScatter": [
-        "minecraft:badlands"
-    ],
-    "generators": [
+  "name": "Mesa Plateau Dirt",
+  "color": "#BD5122",
+  "rarity": 1,
+  "derivative": "minecraft:badlands",
+  "vanillaDerivative": "minecraft:badlands",
+  "biomeScatter": [
+    "minecraft:badlands"
+  ],
+  "generators": [
+    {
+      "min": 73,
+      "max": 98,
+      "generator": "cracked-cliffs"
+    }
+  ],
+  "biomeStyle": {
+    "style": "SIMPLEX"
+  },
+  "layers": [
+    {
+      "minHeight": 5,
+      "maxHeight": 5,
+      "style": {
+        "style": "CELLULAR"
+      },
+      "zoom": 0.7,
+      "palette": [
         {
-            "min": 73,
-            "max": 98,
-            "generator": "cracked-cliffs"
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:coarse_dirt"
+        },
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "block": "minecraft:grass_block"
         }
-    ],
-    "biomeStyle": {
-        "style": "SIMPLEX"
+      ]
     },
-    "layers": [
+    {
+      "minHeight": 3,
+      "maxHeight": 8,
+      "palette": [
         {
-            "minHeight": 5,
-            "maxHeight": 5,
-            "style": {
-                "style": "CELLULAR"
-            },
-            "zoom": 0.7,
-            "palette": [
-                {
-                    "block": "minecraft:grass_block"
-                },
-                {
-                    "block": "minecraft:coarse_dirt"
-                },
-                {
-                    "block": "minecraft:dirt"
-                },
-                {
-                    "block": "minecraft:grass_block"
-                }
-            ]
-        },
-        {
-            "minHeight": 3,
-            "maxHeight": 8,
-            "palette": [
-                {
-                    "block": "minecraft:terracotta"
-                }
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 8,
-            "palette": [
-                {
-                    "block": "minecraft:orange_terracotta"
-                }
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 8,
-            "palette": [
-                {
-                    "block": "minecraft:white_terracotta"
-                }
-            ]
-        },
-        {
-            "minHeight": 4,
-            "maxHeight": 8,
-            "palette": [
-                {
-                    "block": "minecraft:terracotta"
-                }
-            ]
-        },
-        {
-            "minHeight": 3,
-            "maxHeight": 8,
-            "palette": [
-                {
-                    "block": "minecraft:yellow_terracotta"
-                }
-            ]
-        },
-        {
-            "minHeight": 3,
-            "maxHeight": 8,
-            "palette": [
-                {
-                    "block": "minecraft:brown_terracotta"
-                }
-            ]
+          "block": "minecraft:terracotta"
         }
-    ],
-    "objects": [
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 8,
+      "palette": [
         {
-            "place": [
-                "trees/acacia/vexed1",
-                "trees/acacia/vexed2",
-                "trees/acacia/vexed3"
-            ],
-            "chance": 0.2,
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "minecraft:acacia_planks"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "minecraft:acacia_wood",
-                                "data": {
-                                    "axis": "y"
-                                }
-                            }
-                        ]
-                    }
-                }
-            ]
+          "block": "minecraft:orange_terracotta"
         }
-    ],
-    "decorators": [
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 8,
+      "palette": [
         {
-            "chance": 0.05,
+          "block": "minecraft:white_terracotta"
+        }
+      ]
+    },
+    {
+      "minHeight": 4,
+      "maxHeight": 8,
+      "palette": [
+        {
+          "block": "minecraft:terracotta"
+        }
+      ]
+    },
+    {
+      "minHeight": 3,
+      "maxHeight": 8,
+      "palette": [
+        {
+          "block": "minecraft:yellow_terracotta"
+        }
+      ]
+    },
+    {
+      "minHeight": 3,
+      "maxHeight": 8,
+      "palette": [
+        {
+          "block": "minecraft:brown_terracotta"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "place": [
+        "trees/acacia/vexed1",
+        "trees/acacia/vexed2",
+        "trees/acacia/vexed3"
+      ],
+      "chance": 0.2,
+      "edit": [
+        {
+          "find": [
+            {
+              "block": "minecraft:acacia_planks"
+            }
+          ],
+          "replace": {
             "palette": [
-                {
-                    "block": "minecraft:tall_grass"
+              {
+                "block": "minecraft:acacia_wood",
+                "data": {
+                  "axis": "y"
                 }
+              }
             ]
+          }
         }
-    ],
-    "lockLayers": true
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.05,
+      "palette": [
+        {
+          "block": "minecraft:tall_grass"
+        }
+      ]
+    }
+  ],
+  "lockLayers": true,
+  "terrain3D": {
+    "enabled": true,
+    "seed": 30119,
+    "amplitude": 48,
+    "horizontalScale": 256,
+    "verticalScale": 30,
+    "densityStyle": {
+      "style": "NOWHERE"
+    },
+    "crackDepth": 12,
+    "crackWidth": 2,
+    "crackScale": 392,
+    "crackStyle": {
+      "style": "PERLIN"
+    },
+    "minimumSlope": 0.14,
+    "slopeFade": 0.28,
+    "fluidClearance": 8,
+    "fluidFade": 24
+  }
 }

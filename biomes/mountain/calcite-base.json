@@ -1,52 +1,72 @@
 {
-    "name": "Calcite Peaks",
-    "color": "#6E7D85",
-    "rarity": 1,
-    "derivative": "minecraft:windswept_hills",
-    "vanillaDerivative": "minecraft:windswept_hills",
-    "generators": [
-        {
-            "min": 143,
-            "max": 220,
-            "generator": "mountain"
-        }
-    ],
-    "wall": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            {
-                "block": "minecraft:stone"
-            }
-        ]
+  "name": "Calcite Peaks",
+  "color": "#6E7D85",
+  "rarity": 1,
+  "derivative": "minecraft:windswept_hills",
+  "vanillaDerivative": "minecraft:windswept_hills",
+  "generators": [
+    {
+      "min": 143,
+      "max": 220,
+      "generator": "mountain"
+    }
+  ],
+  "wall": {
+    "style": {
+      "style": "STATIC"
     },
-    "layers": [
-        {
-            "minHeight": 2,
-            "maxHeight": 2,
-            "slopeCondition": {
-                "minimumSlope": 0,
-                "maximumSlope": 3.6
-            },
-            "palette": [
-                {
-                    "block": "minecraft:grass_block"
-                }
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 2,
-            "slopeCondition": {
-                "minimumSlope": 3.6,
-                "maximumSlope": 13.6
-            },
-            "palette": [
-                {
-                    "block": "minecraft:calcite"
-                }
-            ]
-        }
+    "palette": [
+      {
+        "block": "minecraft:stone"
+      }
     ]
+  },
+  "layers": [
+    {
+      "minHeight": 2,
+      "maxHeight": 2,
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 3.6
+      },
+      "palette": [
+        {
+          "block": "minecraft:grass_block"
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 2,
+      "slopeCondition": {
+        "minimumSlope": 3.6,
+        "maximumSlope": 13.6
+      },
+      "palette": [
+        {
+          "block": "minecraft:calcite"
+        }
+      ]
+    }
+  ],
+  "terrain3D": {
+    "enabled": true,
+    "seed": 30109,
+    "amplitude": 52,
+    "horizontalScale": 256,
+    "verticalScale": 36,
+    "densityStyle": {
+      "style": "IRIS_HALF"
+    },
+    "crackDepth": 11,
+    "crackWidth": 2.25,
+    "crackScale": 416,
+    "crackStyle": {
+      "style": "SIMPLEX"
+    },
+    "minimumSlope": 0.18,
+    "slopeFade": 0.32,
+    "fluidClearance": 8,
+    "fluidFade": 24
+  }
 }
