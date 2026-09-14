@@ -344,46 +344,24 @@
                 "name": "frostspar",
                 "chance": 0.2,
                 "density": 1,
-                "variants": 5,
+                "variants": 12,
                 "seed": 9202,
-                "mode": "PAINT",
+                "mode": "ORGANIC_STILT",
                 "carvingSupport": "CARVING_ONLY",
                 "growthSurface": "FLOOR",
                 "block": "minecraft:quartz_block",
-                "blockPalette": {
-                    "style": {
-                        "style": "CELLULAR",
-                        "zoom": 0.3
-                    },
-                    "palette": [
-                        {
-                            "block": "minecraft:quartz_block",
-                            "weight": 4
-                        },
-                        {
-                            "block": "minecraft:tinted_glass",
-                            "weight": 2
-                        },
-                        {
-                            "block": "minecraft:packed_ice",
-                            "weight": 1
-                        }
-                    ]
-                },
-                "glow": true,
-                "glowBlock": "minecraft:glowstone",
                 "baseBlock": "minecraft:calcite",
-                "baseRadius": 2,
-                "baseNoise": 0.3,
-                "shardCountMin": 4,
-                "shardCountMax": 7,
-                "shardLengthMin": 4,
-                "shardLengthMax": 8,
-                "shardBaseRadius": 1.5,
-                "shardTaper": 0.85,
-                "spreadAngle": 40,
-                "distribution": "RANDOM",
-                "jitter": 0.35,
+                "baseRadius": 1.5,
+                "baseNoise": 0.12,
+                "shardCountMin": 3,
+                "shardCountMax": 5,
+                "shardLengthMin": 5,
+                "shardLengthMax": 9,
+                "shardBaseRadius": 1.8,
+                "shardTaper": 0.5,
+                "spreadAngle": 28,
+                "distribution": "GOLDEN_ANGLE",
+                "jitter": 0.1,
                 "rotation": {
                     "enabled": true,
                     "yAxis": {
@@ -392,6 +370,16 @@
                         "max": 360,
                         "interval": 90
                     }
+                },
+                "tipBlock": "minecraft:calcite",
+                "tipChance": 0.3,
+                "stiltSettings": {
+                    "organicMaxScan": 48,
+                    "organicJitter": 0,
+                    "organicScratch": 0
+                },
+                "translate": {
+                    "y": -1
                 }
             }
         ]
@@ -492,7 +480,7 @@
         "defaultObjectPlaceMode": "ORGANIC_STILT",
         "anchorScanStep": 1,
         "anchorSearchAttempts": 12,
-        "allowFluid": true,
+        "allowFluid": false,
         "fluidMinDepthBelowSurface": 20,
         "fluidRequiresFloor": true,
         "allowLava": true,
