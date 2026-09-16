@@ -1,5 +1,5 @@
 {
-  "version": 4009,
+  "version": 4010,
   "name": "Overworld",
   "importedStructures": {
     "datapackOverrides": true,
@@ -167,7 +167,18 @@
         "valleyPreference": 1.5,
         "uphillPenalty": 24.0,
         "slopePenalty": 2.0,
-        "confluenceAttraction": 0.2
+        "confluenceAttraction": 0.2,
+        "regional": {
+          "enabled": false,
+          "sampleSpacing": 256,
+          "minimumLength": 2048,
+          "maximumTrunks": 2,
+          "maximumCachedBasins": 8,
+          "maximumCachedStations": 131072,
+          "coastalChannels": true,
+          "coastalChannelChance": 0.25,
+          "maximumCoastalIncision": 8
+        }
       },
       "geometry": {
         "meanders": {
@@ -220,6 +231,13 @@
           "basinWidthRatio": 1.8,
           "maximumBasinDepth": 8,
           "undergroundCascadeRunPerBlock": 0
+        },
+        "banks3D": {
+          "enabled": false,
+          "amplitude": 8,
+          "horizontalScale": 48,
+          "verticalScale": 8,
+          "maximumOverhang": 8
         }
       },
       "surface": {
@@ -265,17 +283,22 @@
           "blendBaseWidth": 0.0,
           "minimumBlendWidth": 4,
           "maximumBlendWidth": 32,
+          "excavation": {
+            "maximumDepth": 16,
+            "maximumWidth": 40,
+            "maximumVolumePerBlock": 1024
+          },
           "exposeCutStrata": true,
           "shoreMaterial": {
-            "enabled": false,
+            "enabled": true,
             "palette": {
               "palette": [
                 {
-                  "block": "minecraft:stone"
+                  "block": "minecraft:sand"
                 }
               ]
             },
-            "depth": 1
+            "depth": 2
           },
           "bankMaterial": {
             "enabled": false,
@@ -290,7 +313,7 @@
           }
         },
         "bed": {
-          "allowGravityBlocks": false,
+          "allowGravityBlocks": true,
           "padding": 2,
           "material": {
             "enabled": false,
