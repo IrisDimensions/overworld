@@ -1,0 +1,741 @@
+{
+  "name": "Golden Poplar Grove",
+  "color": "#D2B648",
+  "rarity": 3,
+  "derivative": "minecraft:birch_forest",
+  "vanillaDerivative": "minecraft:birch_forest",
+  "customDerivitives": [
+    {
+      "id": "temperate_golden_poplar_grove",
+      "category": "forest",
+      "temperature": 0.7,
+      "humidity": 0.65,
+      "downfallType": "rain",
+      "grassColor": "#91AD52",
+      "foliageColor": "#D0B440",
+      "waterColor": "#668B94",
+      "waterFogColor": "#294650",
+      "fogColor": "#BCC9C4",
+      "skyColor": "#83ADF0"
+    }
+  ],
+  "generators": [
+    {
+      "min": 5,
+      "max": 12,
+      "generator": "highplains"
+    },
+    {
+      "min": 0,
+      "max": 50,
+      "generator": "rare-hills"
+    }
+  ],
+  "biomeStyle": {
+    "style": "SIMPLEX"
+  },
+  "terrain3D": {
+    "enabled": true,
+    "seed": 30107,
+    "amplitude": 30,
+    "horizontalScale": 280,
+    "verticalScale": 36,
+    "densityStyle": {
+      "style": "PERLIN"
+    },
+    "crackDepth": 0,
+    "crackWidth": 2.25,
+    "crackScale": 448,
+    "crackStyle": {
+      "style": "SIMPLEX"
+    },
+    "minimumSlope": 0.2,
+    "slopeFade": 0.35,
+    "fluidClearance": 8,
+    "fluidFade": 24
+  },
+  "wall": {
+    "style": {
+      "style": "STATIC"
+    },
+    "palette": [
+      {
+        "block": "minecraft:stone"
+      },
+      {
+        "block": "minecraft:andesite"
+      },
+      {
+        "block": "minecraft:stone"
+      }
+    ]
+  },
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "style": {
+        "style": "SIMPLEX",
+        "zoom": 0.6
+      },
+      "zoom": 0.8,
+      "palette": [
+        {
+          "block": "minecraft:grass_block",
+          "weight": 8
+        },
+        {
+          "block": "minecraft:coarse_dirt",
+          "weight": 1
+        },
+        {
+          "block": "minecraft:podzol",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 4,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:dirt",
+          "weight": 4
+        },
+        {
+          "block": "minecraft:coarse_dirt",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "minHeight": 6,
+      "maxHeight": 18,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:stone",
+          "weight": 4
+        },
+        {
+          "block": "minecraft:andesite",
+          "weight": 1
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "place": [
+        "trees/poplar/young-yellow",
+        "trees/poplar/young-yellow",
+        "trees/poplar/mature-yellow",
+        "trees/poplar/mature-yellow",
+        "trees/poplar/mature-yellow",
+        "trees/poplar/mature-yellow",
+        "trees/poplar/leaning-yellow",
+        "trees/poplar/forked-yellow",
+        "trees/poplar/broken-yellow"
+      ],
+      "chance": 0.8,
+      "density": 2,
+      "mode": "CENTER_STILT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "carvingSupport": "SURFACE_ONLY",
+      "surfaceSupportBuffer": 1,
+      "surfaceSupportDepth": 2,
+      "slopeCondition": {
+        "maximumSlope": 1.5
+      },
+      "stiltSettings": {
+        "yMax": 4,
+        "overStilt": 1,
+        "yRand": 0,
+        "exclude": [
+          "minecraft:yellow_poplar_leaves",
+          "minecraft:orange_poplar_leaves",
+          "minecraft:red_poplar_leaves",
+          "minecraft:shelf_mushroom"
+        ]
+      }
+    },
+    {
+      "place": [
+        "trees/poplar/fallen-1",
+        "trees/poplar/fallen-2"
+      ],
+      "chance": 0.08,
+      "density": 1,
+      "mode": "STILT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": 1
+      },
+      "carvingSupport": "SURFACE_ONLY",
+      "surfaceSupportBuffer": 0,
+      "surfaceSupportDepth": 2,
+      "slopeCondition": {
+        "maximumSlope": 0.4
+      },
+      "stiltSettings": {
+        "yMax": 4,
+        "overStilt": 1,
+        "yRand": 0,
+        "exclude": [
+          "minecraft:yellow_poplar_leaves",
+          "minecraft:orange_poplar_leaves",
+          "minecraft:red_poplar_leaves",
+          "minecraft:shelf_mushroom"
+        ]
+      }
+    },
+    {
+      "place": [
+        "trees/poplar/stump-1",
+        "trees/poplar/stump-2"
+      ],
+      "chance": 0.07,
+      "density": 1,
+      "mode": "CENTER_STILT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "carvingSupport": "SURFACE_ONLY",
+      "surfaceSupportBuffer": 1,
+      "surfaceSupportDepth": 2,
+      "slopeCondition": {
+        "maximumSlope": 1.5
+      },
+      "stiltSettings": {
+        "yMax": 4,
+        "overStilt": 1,
+        "yRand": 0,
+        "exclude": [
+          "minecraft:yellow_poplar_leaves",
+          "minecraft:orange_poplar_leaves",
+          "minecraft:red_poplar_leaves",
+          "minecraft:shelf_mushroom"
+        ]
+      }
+    },
+    {
+      "chance": 0.07,
+      "density": 1,
+      "place": [
+        "clutter/stoneclutt5",
+        "clutter/stoneclutt6",
+        "clutter/stoneclutt7"
+      ],
+      "mode": "CENTER_HEIGHT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -2
+      },
+      "carvingSupport": "SURFACE_ONLY",
+      "surfaceSupportBuffer": 1,
+      "surfaceSupportDepth": 2,
+      "slopeCondition": {
+        "maximumSlope": 1.5
+      }
+    }
+  ],
+  "proceduralObjects": {
+    "trees": [
+      {
+        "name": "temperate-golden-poplar-grove-young",
+        "chance": 0.15,
+        "density": 1,
+        "variants": 16,
+        "seed": 263000,
+        "plausible": true,
+        "mode": "CENTER_STILT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 270,
+            "interval": 90
+          }
+        },
+        "carvingSupport": "SURFACE_ONLY",
+        "trunk": "minecraft:poplar_log",
+        "leaves": "minecraft:yellow_poplar_leaves",
+        "profile": "POPLAR",
+        "heightMin": 6,
+        "heightMax": 9,
+        "trunkWidth": 1,
+        "roots": true,
+        "rootStyle": "TAPROOT",
+        "rootDepth": 2,
+        "rootFlare": 1.5,
+        "stiltSettings": {
+          "yMax": 4,
+          "overStilt": 1,
+          "yRand": 0,
+          "exclude": [
+            "minecraft:yellow_poplar_leaves",
+            "minecraft:orange_poplar_leaves",
+            "minecraft:red_poplar_leaves",
+            "minecraft:shelf_mushroom"
+          ]
+        },
+        "canopy": {
+          "crownStretchX": 1.1,
+          "crownStretchZ": 0.9
+        }
+      },
+      {
+        "name": "temperate-golden-poplar-grove-mature",
+        "chance": 0.28,
+        "density": 1,
+        "variants": 16,
+        "seed": 263001,
+        "plausible": true,
+        "mode": "CENTER_STILT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 270,
+            "interval": 90
+          }
+        },
+        "carvingSupport": "SURFACE_ONLY",
+        "trunk": "minecraft:poplar_log",
+        "leaves": "minecraft:yellow_poplar_leaves",
+        "profile": "POPLAR",
+        "heightMin": 10,
+        "heightMax": 15,
+        "trunkWidth": 1,
+        "roots": true,
+        "rootStyle": "BUTTRESS",
+        "rootDepth": 2,
+        "rootFlare": 1.5,
+        "stiltSettings": {
+          "yMax": 4,
+          "overStilt": 1,
+          "yRand": 0,
+          "exclude": [
+            "minecraft:yellow_poplar_leaves",
+            "minecraft:orange_poplar_leaves",
+            "minecraft:red_poplar_leaves",
+            "minecraft:shelf_mushroom"
+          ]
+        },
+        "canopy": {
+          "crownStretchX": 1.1,
+          "crownStretchZ": 0.9,
+          "branches": {
+            "probabilityFunction": "TOP_HEAVY",
+            "probabilityExponent": 2,
+            "lengthFunction": "LINEAR",
+            "lengthBase": 1,
+            "lengthCrown": 3,
+            "azimuthMode": "RANDOM",
+            "elevation": 40,
+            "branchDepth": 0,
+            "leafStartUp": true,
+            "clusterRadius": 3,
+            "clusterMode": "TRIMMED"
+          }
+        },
+        "decorators": [
+          {
+            "target": "TRUNK_SURFACE",
+            "block": "minecraft:shelf_mushroom[age=1,facing=north]",
+            "chance": 0.035,
+            "axisAware": true
+          }
+        ]
+      },
+      {
+        "name": "temperate-golden-poplar-grove-leaning",
+        "chance": 0.12,
+        "density": 1,
+        "variants": 16,
+        "seed": 263002,
+        "plausible": true,
+        "mode": "CENTER_STILT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 270,
+            "interval": 90
+          }
+        },
+        "carvingSupport": "SURFACE_ONLY",
+        "trunk": "minecraft:poplar_log",
+        "leaves": "minecraft:yellow_poplar_leaves",
+        "profile": "POPLAR",
+        "heightMin": 9,
+        "heightMax": 13,
+        "trunkWidth": 1,
+        "roots": true,
+        "rootStyle": "BUTTRESS",
+        "rootDepth": 2,
+        "rootFlare": 1.5,
+        "stiltSettings": {
+          "yMax": 4,
+          "overStilt": 1,
+          "yRand": 0,
+          "exclude": [
+            "minecraft:yellow_poplar_leaves",
+            "minecraft:orange_poplar_leaves",
+            "minecraft:red_poplar_leaves",
+            "minecraft:shelf_mushroom"
+          ]
+        },
+        "canopy": {
+          "crownStretchX": 1.1,
+          "crownStretchZ": 0.9,
+          "branches": {
+            "probabilityFunction": "TOP_HEAVY",
+            "probabilityExponent": 2,
+            "lengthFunction": "LINEAR",
+            "lengthBase": 1,
+            "lengthCrown": 3,
+            "azimuthMode": "RANDOM",
+            "elevation": 40,
+            "branchDepth": 0,
+            "leafStartUp": true,
+            "clusterRadius": 3,
+            "clusterMode": "TRIMMED"
+          }
+        },
+        "leanAngle": 12,
+        "leanAzimuth": 25,
+        "trunkCurve": "SIGMOID",
+        "curveSteepness": 5
+      },
+      {
+        "name": "temperate-golden-poplar-grove-forked",
+        "chance": 0.1,
+        "density": 1,
+        "variants": 16,
+        "seed": 263003,
+        "plausible": true,
+        "mode": "CENTER_STILT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 270,
+            "interval": 90
+          }
+        },
+        "carvingSupport": "SURFACE_ONLY",
+        "trunk": "minecraft:poplar_log",
+        "leaves": "minecraft:yellow_poplar_leaves",
+        "profile": "POPLAR",
+        "heightMin": 11,
+        "heightMax": 16,
+        "trunkWidth": 1,
+        "roots": true,
+        "rootStyle": "BUTTRESS",
+        "rootDepth": 2,
+        "rootFlare": 1.5,
+        "stiltSettings": {
+          "yMax": 4,
+          "overStilt": 1,
+          "yRand": 0,
+          "exclude": [
+            "minecraft:yellow_poplar_leaves",
+            "minecraft:orange_poplar_leaves",
+            "minecraft:red_poplar_leaves",
+            "minecraft:shelf_mushroom"
+          ]
+        },
+        "canopy": {
+          "crownStretchX": 1.1,
+          "crownStretchZ": 0.9,
+          "branches": {
+            "probabilityFunction": "TOP_HEAVY",
+            "probabilityExponent": 3,
+            "lengthFunction": "LINEAR",
+            "lengthBase": 1,
+            "lengthCrown": 3,
+            "azimuthMode": "RANDOM",
+            "elevation": 40,
+            "branchDepth": 0,
+            "leafStartUp": true,
+            "clusterRadius": 2,
+            "clusterMode": "TRIMMED"
+          }
+        },
+        "trunkForks": 2,
+        "forkHeight": 0.45,
+        "forkAngle": 16,
+        "decorators": [
+          {
+            "target": "TRUNK_SURFACE",
+            "block": "minecraft:shelf_mushroom[age=1,facing=north]",
+            "chance": 0.035,
+            "axisAware": true
+          }
+        ]
+      }
+    ]
+  },
+  "decorators": [
+    {
+      "chance": 0.13,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "segment_amount": 1,
+            "facing": "north"
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "segment_amount": 1,
+            "facing": "south"
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "segment_amount": 1,
+            "facing": "east"
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "segment_amount": 1,
+            "facing": "west"
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "segment_amount": 2,
+            "facing": "north"
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "segment_amount": 2,
+            "facing": "south"
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "segment_amount": 2,
+            "facing": "east"
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "segment_amount": 2,
+            "facing": "west"
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "segment_amount": 3,
+            "facing": "north"
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "segment_amount": 3,
+            "facing": "south"
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "segment_amount": 3,
+            "facing": "east"
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "segment_amount": 3,
+            "facing": "west"
+          }
+        }
+      ],
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:coarse_dirt"
+        },
+        {
+          "block": "minecraft:podzol"
+        }
+      ],
+      "variance": {
+        "style": "VASCULAR",
+        "zoom": 0.3
+      }
+    },
+    {
+      "chance": 0.025,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:red_shrub"
+        }
+      ],
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:coarse_dirt"
+        },
+        {
+          "block": "minecraft:podzol"
+        }
+      ]
+    },
+    {
+      "chance": 0.04,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:fern"
+        }
+      ],
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:coarse_dirt"
+        },
+        {
+          "block": "minecraft:podzol"
+        }
+      ]
+    },
+    {
+      "chance": 0.23,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:short_grass"
+        }
+      ],
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:coarse_dirt"
+        },
+        {
+          "block": "minecraft:podzol"
+        }
+      ]
+    },
+    {
+      "chance": 0.02,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:dandelion"
+        },
+        {
+          "block": "minecraft:oxeye_daisy"
+        },
+        {
+          "block": "minecraft:azure_bluet"
+        }
+      ],
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        }
+      ]
+    },
+    {
+      "chance": 0.006,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:brown_mushroom"
+        },
+        {
+          "block": "minecraft:red_mushroom"
+        }
+      ],
+      "whitelist": [
+        {
+          "block": "minecraft:podzol"
+        }
+      ]
+    }
+  ]
+}

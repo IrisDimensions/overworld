@@ -1,0 +1,760 @@
+{
+  "name": "Russet Poplar Woods",
+  "color": "#A2472E",
+  "rarity": 3,
+  "derivative": "minecraft:old_growth_spruce_taiga",
+  "vanillaDerivative": "minecraft:taiga",
+  "customDerivitives": [
+    {
+      "id": "tundra_russet_poplar_woods",
+      "category": "forest",
+      "temperature": 0.45,
+      "humidity": 0.65,
+      "downfallType": "rain",
+      "grassColor": "#7F984B",
+      "foliageColor": "#AA472D",
+      "waterColor": "#668B94",
+      "waterFogColor": "#294650",
+      "fogColor": "#BCC9C4",
+      "skyColor": "#83ADF0"
+    }
+  ],
+  "generators": [
+    {
+      "max": 42,
+      "min": 34,
+      "generator": "plain"
+    }
+  ],
+  "biomeStyle": {
+    "style": "SIMPLEX"
+  },
+  "terrain3D": {
+    "enabled": true,
+    "seed": 30103,
+    "amplitude": 22,
+    "horizontalScale": 256,
+    "verticalScale": 30,
+    "densityStyle": {
+      "style": "PERLIN"
+    },
+    "crackDepth": 0,
+    "crackWidth": 2,
+    "crackScale": 416,
+    "crackStyle": {
+      "style": "SIMPLEX"
+    },
+    "minimumSlope": 0.18,
+    "slopeFade": 0.32,
+    "fluidClearance": 8,
+    "fluidFade": 24
+  },
+  "wall": {
+    "style": {
+      "style": "STATIC"
+    },
+    "palette": [
+      {
+        "block": "minecraft:stone"
+      },
+      {
+        "block": "minecraft:andesite"
+      },
+      {
+        "block": "minecraft:stone"
+      }
+    ]
+  },
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "style": {
+        "style": "SIMPLEX",
+        "zoom": 0.6
+      },
+      "zoom": 0.8,
+      "palette": [
+        {
+          "block": "minecraft:grass_block",
+          "weight": 4
+        },
+        {
+          "block": "minecraft:coarse_dirt",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:podzol",
+          "weight": 4
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 4,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:dirt",
+          "weight": 4
+        },
+        {
+          "block": "minecraft:coarse_dirt",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "minHeight": 6,
+      "maxHeight": 18,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:stone",
+          "weight": 4
+        },
+        {
+          "block": "minecraft:andesite",
+          "weight": 1
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "place": [
+        "trees/poplar/young-red",
+        "trees/poplar/young-red",
+        "trees/poplar/mature-red",
+        "trees/poplar/mature-red",
+        "trees/poplar/mature-red",
+        "trees/poplar/mature-red",
+        "trees/poplar/leaning-red",
+        "trees/poplar/forked-red",
+        "trees/poplar/broken-red",
+        "trees/poplar/young-red",
+        "trees/poplar/young-red",
+        "trees/poplar/mature-red",
+        "trees/poplar/mature-red",
+        "trees/poplar/mature-red",
+        "trees/poplar/mature-red",
+        "trees/poplar/leaning-red",
+        "trees/poplar/forked-red",
+        "trees/poplar/broken-red",
+        "trees/poplar/young-red",
+        "trees/poplar/young-red",
+        "trees/poplar/mature-red",
+        "trees/poplar/mature-red",
+        "trees/poplar/mature-red",
+        "trees/poplar/mature-red",
+        "trees/poplar/leaning-red",
+        "trees/poplar/forked-red",
+        "trees/poplar/broken-red",
+        "trees/poplar/young-orange",
+        "trees/poplar/young-orange",
+        "trees/poplar/mature-orange",
+        "trees/poplar/mature-orange",
+        "trees/poplar/mature-orange",
+        "trees/poplar/mature-orange",
+        "trees/poplar/leaning-orange",
+        "trees/poplar/forked-orange",
+        "trees/poplar/broken-orange"
+      ],
+      "chance": 0.9,
+      "density": 2,
+      "mode": "CENTER_STILT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "carvingSupport": "SURFACE_ONLY",
+      "surfaceSupportBuffer": 1,
+      "surfaceSupportDepth": 2,
+      "slopeCondition": {
+        "maximumSlope": 1.5
+      },
+      "stiltSettings": {
+        "yMax": 4,
+        "overStilt": 1,
+        "yRand": 0,
+        "exclude": [
+          "minecraft:yellow_poplar_leaves",
+          "minecraft:orange_poplar_leaves",
+          "minecraft:red_poplar_leaves",
+          "minecraft:shelf_mushroom"
+        ]
+      }
+    },
+    {
+      "place": [
+        "trees/poplar/fallen-1",
+        "trees/poplar/fallen-2"
+      ],
+      "chance": 0.11,
+      "density": 1,
+      "mode": "STILT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": 1
+      },
+      "carvingSupport": "SURFACE_ONLY",
+      "surfaceSupportBuffer": 0,
+      "surfaceSupportDepth": 2,
+      "slopeCondition": {
+        "maximumSlope": 0.4
+      },
+      "stiltSettings": {
+        "yMax": 4,
+        "overStilt": 1,
+        "yRand": 0,
+        "exclude": [
+          "minecraft:yellow_poplar_leaves",
+          "minecraft:orange_poplar_leaves",
+          "minecraft:red_poplar_leaves",
+          "minecraft:shelf_mushroom"
+        ]
+      }
+    },
+    {
+      "place": [
+        "trees/poplar/stump-1",
+        "trees/poplar/stump-2"
+      ],
+      "chance": 0.07,
+      "density": 1,
+      "mode": "CENTER_STILT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -1
+      },
+      "carvingSupport": "SURFACE_ONLY",
+      "surfaceSupportBuffer": 1,
+      "surfaceSupportDepth": 2,
+      "slopeCondition": {
+        "maximumSlope": 1.5
+      },
+      "stiltSettings": {
+        "yMax": 4,
+        "overStilt": 1,
+        "yRand": 0,
+        "exclude": [
+          "minecraft:yellow_poplar_leaves",
+          "minecraft:orange_poplar_leaves",
+          "minecraft:red_poplar_leaves",
+          "minecraft:shelf_mushroom"
+        ]
+      }
+    },
+    {
+      "chance": 0.14,
+      "density": 1,
+      "place": [
+        "clutter/stoneclutt5",
+        "clutter/stoneclutt6",
+        "clutter/stoneclutt7"
+      ],
+      "mode": "CENTER_HEIGHT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "min": 0,
+          "max": 270,
+          "interval": 90
+        }
+      },
+      "translate": {
+        "y": -2
+      },
+      "carvingSupport": "SURFACE_ONLY",
+      "surfaceSupportBuffer": 1,
+      "surfaceSupportDepth": 2,
+      "slopeCondition": {
+        "maximumSlope": 1.5
+      }
+    }
+  ],
+  "proceduralObjects": {
+    "trees": [
+      {
+        "name": "tundra-russet-poplar-woods-young",
+        "chance": 0.12,
+        "density": 1,
+        "variants": 16,
+        "seed": 263200,
+        "plausible": true,
+        "mode": "CENTER_STILT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 270,
+            "interval": 90
+          }
+        },
+        "carvingSupport": "SURFACE_ONLY",
+        "trunk": "minecraft:poplar_log",
+        "leaves": "minecraft:red_poplar_leaves",
+        "profile": "POPLAR",
+        "heightMin": 6,
+        "heightMax": 9,
+        "trunkWidth": 1,
+        "roots": true,
+        "rootStyle": "TAPROOT",
+        "rootDepth": 2,
+        "rootFlare": 1.5,
+        "stiltSettings": {
+          "yMax": 4,
+          "overStilt": 1,
+          "yRand": 0,
+          "exclude": [
+            "minecraft:yellow_poplar_leaves",
+            "minecraft:orange_poplar_leaves",
+            "minecraft:red_poplar_leaves",
+            "minecraft:shelf_mushroom"
+          ]
+        },
+        "canopy": {
+          "crownStretchX": 1.1,
+          "crownStretchZ": 0.9
+        }
+      },
+      {
+        "name": "tundra-russet-poplar-woods-mature",
+        "chance": 0.3,
+        "density": 1,
+        "variants": 16,
+        "seed": 263201,
+        "plausible": true,
+        "mode": "CENTER_STILT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 270,
+            "interval": 90
+          }
+        },
+        "carvingSupport": "SURFACE_ONLY",
+        "trunk": "minecraft:poplar_log",
+        "leaves": "minecraft:red_poplar_leaves",
+        "profile": "POPLAR",
+        "heightMin": 10,
+        "heightMax": 15,
+        "trunkWidth": 1,
+        "roots": true,
+        "rootStyle": "BUTTRESS",
+        "rootDepth": 2,
+        "rootFlare": 1.5,
+        "stiltSettings": {
+          "yMax": 4,
+          "overStilt": 1,
+          "yRand": 0,
+          "exclude": [
+            "minecraft:yellow_poplar_leaves",
+            "minecraft:orange_poplar_leaves",
+            "minecraft:red_poplar_leaves",
+            "minecraft:shelf_mushroom"
+          ]
+        },
+        "canopy": {
+          "crownStretchX": 1.1,
+          "crownStretchZ": 0.9,
+          "branches": {
+            "probabilityFunction": "TOP_HEAVY",
+            "probabilityExponent": 2,
+            "lengthFunction": "LINEAR",
+            "lengthBase": 1,
+            "lengthCrown": 3,
+            "azimuthMode": "RANDOM",
+            "elevation": 40,
+            "branchDepth": 0,
+            "leafStartUp": true,
+            "clusterRadius": 3,
+            "clusterMode": "TRIMMED"
+          }
+        },
+        "decorators": [
+          {
+            "target": "TRUNK_SURFACE",
+            "block": "minecraft:shelf_mushroom[age=1,facing=north]",
+            "chance": 0.035,
+            "axisAware": true
+          }
+        ]
+      },
+      {
+        "name": "tundra-russet-poplar-woods-leaning",
+        "chance": 0.15,
+        "density": 1,
+        "variants": 16,
+        "seed": 263102,
+        "plausible": true,
+        "mode": "CENTER_STILT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 270,
+            "interval": 90
+          }
+        },
+        "carvingSupport": "SURFACE_ONLY",
+        "trunk": "minecraft:poplar_log",
+        "leaves": "minecraft:orange_poplar_leaves",
+        "profile": "POPLAR",
+        "heightMin": 9,
+        "heightMax": 13,
+        "trunkWidth": 1,
+        "roots": true,
+        "rootStyle": "BUTTRESS",
+        "rootDepth": 2,
+        "rootFlare": 1.5,
+        "stiltSettings": {
+          "yMax": 4,
+          "overStilt": 1,
+          "yRand": 0,
+          "exclude": [
+            "minecraft:yellow_poplar_leaves",
+            "minecraft:orange_poplar_leaves",
+            "minecraft:red_poplar_leaves",
+            "minecraft:shelf_mushroom"
+          ]
+        },
+        "canopy": {
+          "crownStretchX": 1.1,
+          "crownStretchZ": 0.9,
+          "branches": {
+            "probabilityFunction": "TOP_HEAVY",
+            "probabilityExponent": 2,
+            "lengthFunction": "LINEAR",
+            "lengthBase": 1,
+            "lengthCrown": 3,
+            "azimuthMode": "RANDOM",
+            "elevation": 40,
+            "branchDepth": 0,
+            "leafStartUp": true,
+            "clusterRadius": 3,
+            "clusterMode": "TRIMMED"
+          }
+        },
+        "leanAngle": 12,
+        "leanAzimuth": 25,
+        "trunkCurve": "SIGMOID",
+        "curveSteepness": 5
+      },
+      {
+        "name": "tundra-russet-poplar-woods-forked",
+        "chance": 0.08,
+        "density": 1,
+        "variants": 16,
+        "seed": 263203,
+        "plausible": true,
+        "mode": "CENTER_STILT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 270,
+            "interval": 90
+          }
+        },
+        "carvingSupport": "SURFACE_ONLY",
+        "trunk": "minecraft:poplar_log",
+        "leaves": "minecraft:red_poplar_leaves",
+        "profile": "POPLAR",
+        "heightMin": 11,
+        "heightMax": 16,
+        "trunkWidth": 1,
+        "roots": true,
+        "rootStyle": "BUTTRESS",
+        "rootDepth": 2,
+        "rootFlare": 1.5,
+        "stiltSettings": {
+          "yMax": 4,
+          "overStilt": 1,
+          "yRand": 0,
+          "exclude": [
+            "minecraft:yellow_poplar_leaves",
+            "minecraft:orange_poplar_leaves",
+            "minecraft:red_poplar_leaves",
+            "minecraft:shelf_mushroom"
+          ]
+        },
+        "canopy": {
+          "crownStretchX": 1.1,
+          "crownStretchZ": 0.9,
+          "branches": {
+            "probabilityFunction": "TOP_HEAVY",
+            "probabilityExponent": 3,
+            "lengthFunction": "LINEAR",
+            "lengthBase": 1,
+            "lengthCrown": 3,
+            "azimuthMode": "RANDOM",
+            "elevation": 40,
+            "branchDepth": 0,
+            "leafStartUp": true,
+            "clusterRadius": 2,
+            "clusterMode": "TRIMMED"
+          }
+        },
+        "trunkForks": 2,
+        "forkHeight": 0.45,
+        "forkAngle": 16,
+        "decorators": [
+          {
+            "target": "TRUNK_SURFACE",
+            "block": "minecraft:shelf_mushroom[age=1,facing=north]",
+            "chance": 0.035,
+            "axisAware": true
+          }
+        ]
+      }
+    ]
+  },
+  "decorators": [
+    {
+      "chance": 0.21,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "segment_amount": 1,
+            "facing": "north"
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "segment_amount": 1,
+            "facing": "south"
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "segment_amount": 1,
+            "facing": "east"
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "segment_amount": 1,
+            "facing": "west"
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "segment_amount": 2,
+            "facing": "north"
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "segment_amount": 2,
+            "facing": "south"
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "segment_amount": 2,
+            "facing": "east"
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "segment_amount": 2,
+            "facing": "west"
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "segment_amount": 3,
+            "facing": "north"
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "segment_amount": 3,
+            "facing": "south"
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "segment_amount": 3,
+            "facing": "east"
+          }
+        },
+        {
+          "block": "minecraft:leaf_litter",
+          "data": {
+            "segment_amount": 3,
+            "facing": "west"
+          }
+        }
+      ],
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:coarse_dirt"
+        },
+        {
+          "block": "minecraft:podzol"
+        }
+      ],
+      "variance": {
+        "style": "VASCULAR",
+        "zoom": 0.3
+      }
+    },
+    {
+      "chance": 0.04,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:red_shrub"
+        }
+      ],
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:coarse_dirt"
+        },
+        {
+          "block": "minecraft:podzol"
+        }
+      ]
+    },
+    {
+      "chance": 0.17,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:fern"
+        }
+      ],
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:coarse_dirt"
+        },
+        {
+          "block": "minecraft:podzol"
+        }
+      ]
+    },
+    {
+      "chance": 0.12,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:short_grass"
+        }
+      ],
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        },
+        {
+          "block": "minecraft:coarse_dirt"
+        },
+        {
+          "block": "minecraft:podzol"
+        }
+      ]
+    },
+    {
+      "chance": 0.005,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:lily_of_the_valley"
+        },
+        {
+          "block": "minecraft:cornflower"
+        }
+      ],
+      "whitelist": [
+        {
+          "block": "minecraft:grass_block"
+        }
+      ]
+    },
+    {
+      "chance": 0.018,
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:brown_mushroom"
+        },
+        {
+          "block": "minecraft:red_mushroom"
+        }
+      ],
+      "whitelist": [
+        {
+          "block": "minecraft:podzol"
+        }
+      ]
+    }
+  ]
+}
