@@ -35,22 +35,7 @@
   "biomeStyle": {
     "style": "SIMPLEX"
   },
-  "wall": {
-    "style": {
-      "style": "STATIC"
-    },
-    "palette": [
-      {
-        "block": "minecraft:stone"
-      },
-      {
-        "block": "minecraft:andesite"
-      },
-      {
-        "block": "minecraft:stone"
-      }
-    ]
-  },
+  "wall": "snippet/biome-palette/wall/stone-andesite",
   "layers": [
     {
       "style": {
@@ -78,36 +63,8 @@
         }
       ]
     },
-    {
-      "minHeight": 1,
-      "maxHeight": 3,
-      "palette": [
-        {
-          "block": "minecraft:dirt"
-        },
-        {
-          "block": "minecraft:coarse_dirt"
-        }
-      ]
-    },
-    {
-      "minHeight": 6,
-      "maxHeight": 18,
-      "style": {
-        "style": "STATIC"
-      },
-      "palette": [
-        {
-          "block": "minecraft:stone"
-        },
-        {
-          "block": "minecraft:andesite"
-        },
-        {
-          "block": "minecraft:stone"
-        }
-      ]
-    }
+    "snippet/biome-palette/soil/dirt-coarse-1-3",
+    "snippet/biome-palette/stone/andesite-blend-6-18"
   ],
   "objects": [
     {
@@ -123,48 +80,9 @@
       ],
       "chance": 0.8,
       "edit": [
-        {
-          "find": [
-            {
-              "block": "minecraft:jungle_leaves"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:oak_leaves"
-              }
-            ]
-          }
-        },
-        {
-          "find": [
-            {
-              "block": "minecraft:jungle_wood"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:dark_oak_wood"
-              }
-            ]
-          }
-        },
-        {
-          "find": [
-            {
-              "block": "minecraft:jungle_log"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:dark_oak_wood"
-              }
-            ]
-          }
-        }
+        "snippet/object-block-replacer/leaves/jungle-to-oak",
+        "snippet/object-block-replacer/wood/jungle-to-dark-oak",
+        "snippet/object-block-replacer/wood/jungle-log-to-dark-oak-wood"
       ],
       "rotation": {
         "enabled": true,
@@ -179,36 +97,11 @@
         "y": -3
       }
     },
-    {
-      "chance": 0.35,
-      "density": 2,
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "clutter/oakclutt1",
-        "clutter/oakclutt2",
-        "clutter/oakclutt3"
-      ],
-      "translate": {
-        "x": 0,
-        "y": -2,
-        "z": 0
-      }
-    }
+    "snippet/object-placer/clutter/oakclutt-c0-35-d2"
   ],
   "decorators": [
     {
       "chance": 0.003,
-      "variance": {
-        "style": "STATIC"
-      },
       "zoom": 0.02,
       "palette": [
         {
@@ -217,16 +110,10 @@
         {
           "block": "minecraft:red_mushroom"
         }
-      ],
-      "style": {
-        "style": "STATIC"
-      }
+      ]
     },
     {
       "chance": 0.122,
-      "variance": {
-        "style": "STATIC"
-      },
       "zoom": 0.2,
       "palette": [
         {
@@ -235,16 +122,10 @@
         {
           "block": "minecraft:tall_grass"
         }
-      ],
-      "style": {
-        "style": "STATIC"
-      }
+      ]
     },
     {
       "chance": 0.142,
-      "variance": {
-        "style": "STATIC"
-      },
       "zoom": 0.3,
       "palette": [
         {
@@ -253,10 +134,7 @@
         {
           "block": "minecraft:fern"
         }
-      ],
-      "style": {
-        "style": "STATIC"
-      }
+      ]
     }
   ],
   "terrain3D": {

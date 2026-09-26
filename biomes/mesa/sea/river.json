@@ -1,50 +1,76 @@
 {
-    "riverPolicy": {
-        "placement": "TRANSIT_ONLY",
-        "routing": "PREFER",
-        "outletAdmission": false,
-        "profiles": [
-            "water"
-        ]
-    },
-    "name": "Mesa River",
-    "color": "#41C3FF",
-    "derivative": "minecraft:desert",
-    "vanillaDerivative": "minecraft:river",
-    "generators": [{
-        "min": -32,
-        "max": -10,
-        "generator": "mountain"
-    }],
-    "layers": [
-        {
-            "style": {"style": "NOWHERE"},
+  "riverPolicy": {
+    "placement": "TRANSIT_ONLY",
+    "routing": "PREFER",
+    "outletAdmission": false,
+    "profiles": [
+      "water"
+    ]
+  },
+  "name": "Mesa River",
+  "color": "#41C3FF",
+  "derivative": "minecraft:desert",
+  "vanillaDerivative": "minecraft:river",
+  "generators": [
+    {
+      "min": -32,
+      "max": -10,
+      "generator": "mountain"
+    }
+  ],
+  "layers": [
+    {
+      "style": {
+        "style": "NOWHERE"
+      },
       "zoom": 8,
-            "palette": [
-                {"block": "minecraft:red_sand"},
-                {"block": "minecraft:orange_terracotta"}
-            ]
+      "palette": [
+        {
+          "block": "minecraft:red_sand"
         },
         {
-            "minHeight": 2,
-            "maxHeight": 3,
-            "style": {"style": "IRIS"},
-            "zoom": 12,
-            "palette": [
-                {"block": "minecraft:red_sand"},
-                {"block": "minecraft:terracotta"},
-                {"block": "minecraft:gravel"},
-                {"block": "minecraft:red_sand"},
-                {"block": "minecraft:dirt"},
-                {
-                    "weight": 2,
-                    "block": "minecraft:red_sand"
-                }
-            ]
+          "block": "minecraft:orange_terracotta"
         }
-    ],
-    "decorators": [{
-        "chance": 0.2,
-        "palette": [{"block": "minecraft:seagrass"}]
-    }]
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "style": {
+        "style": "IRIS"
+      },
+      "zoom": 12,
+      "palette": [
+        {
+          "block": "minecraft:red_sand"
+        },
+        {
+          "block": "minecraft:terracotta"
+        },
+        {
+          "block": "minecraft:gravel"
+        },
+        {
+          "block": "minecraft:red_sand"
+        },
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "weight": 2,
+          "block": "minecraft:red_sand"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.2,
+      "palette": [
+        {
+          "block": "minecraft:seagrass"
+        }
+      ]
+    }
+  ]
 }

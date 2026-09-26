@@ -31,22 +31,7 @@
   "biomeStyle": {
     "style": "SIMPLEX"
   },
-  "wall": {
-    "style": {
-      "style": "STATIC"
-    },
-    "palette": [
-      {
-        "block": "minecraft:stone"
-      },
-      {
-        "block": "minecraft:andesite"
-      },
-      {
-        "block": "minecraft:stone"
-      }
-    ]
-  },
+  "wall": "snippet/biome-palette/wall/stone-andesite",
   "layers": [
     {
       "minHeight": 3,
@@ -76,9 +61,6 @@
       ]
     },
     {
-      "style": {
-        "style": "STATIC"
-      },
       "zoom": 0.75,
       "palette": [
         {
@@ -95,180 +77,29 @@
         }
       ]
     },
-    {
-      "minHeight": 6,
-      "maxHeight": 18,
-      "style": {
-        "style": "STATIC"
-      },
-      "palette": [
-        {
-          "block": "minecraft:stone"
-        },
-        {
-          "block": "minecraft:andesite"
-        },
-        {
-          "block": "minecraft:stone"
-        }
-      ]
-    }
+    "snippet/biome-palette/stone/andesite-blend-6-18"
   ],
   "objects": [
-    {
-      "chance": 0.00175,
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "clutter/camp1"
-      ]
-    },
-    {
-      "mode": "PAINT",
-      "chance": 0.005,
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "clutter/bincluster1"
-      ]
-    },
-    {
-      "chance": 0.07,
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "trees/acacia/savannad1",
-        "trees/acacia/savannad2",
-        "trees/acacia/savannad3"
-      ]
-    },
-    {
-      "chance": 0.2,
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "trees/acacia/savannaf1",
-        "trees/acacia/savannaf2",
-        "trees/acacia/savannaf3",
-        "trees/acacia/savannaf4",
-        "trees/acacia/savannaf5",
-        "trees/acacia/savannaf6",
-        "trees/acacia/savannaf7",
-        "trees/acacia/savannaf8",
-        "trees/acacia/savannaf9",
-        "trees/acacia/savannaf10",
-        "trees/acacia/savannaf11",
-        "trees/acacia/savannaf13",
-        "trees/acacia/savannaf14"
-      ],
-      "translate": {
-        "x": 0,
-        "y": -1,
-        "z": 0
-      }
-    },
-    {
-      "chance": 0.04,
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "trees/acacia/savannas1",
-        "trees/acacia/savannas2",
-        "trees/acacia/savannas3",
-        "trees/acacia/savannas4",
-        "trees/acacia/savannas5",
-        "trees/acacia/savannas6",
-        "trees/acacia/savannas7",
-        "trees/acacia/savannas8",
-        "trees/acacia/savannas9",
-        "trees/acacia/savannas10",
-        "trees/acacia/savannas11",
-        "trees/acacia/savannas12"
-      ]
-    },
-    {
-      "chance": 0.1,
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "clutter/savrock1",
-        "clutter/savrock2",
-        "clutter/savrock3",
-        "clutter/savrock4",
-        "clutter/savrock5",
-        "clutter/savrock6",
-        "clutter/savrock7",
-        "clutter/savrock8"
-      ]
-    }
+    "snippet/object-placer/clutter/camp-c0-00175",
+    "snippet/object-placer/clutter/bincluster-paint-c0-005",
+    "snippet/object-placer/trees/acacia-savannad-c0-07",
+    "snippet/object-placer/trees/acacia-savannaf-c0-2",
+    "snippet/object-placer/trees/acacia-savannas-c0-04",
+    "snippet/object-placer/clutter/savrock-c0-1"
   ],
   "decorators": [
     {
       "chance": 0.001,
-      "variance": {
-        "style": "STATIC"
-      },
       "zoom": 0.3,
       "palette": [
         {
           "block": "minecraft:dead_bush"
         }
-      ],
-      "style": {
-        "style": "STATIC"
-      }
+      ]
     },
     {
       "chance": 0.0005,
-      "variance": {
-        "style": "STATIC"
-      },
       "stackMax": 2,
-      "style": {
-        "style": "STATIC"
-      },
       "palette": [
         {
           "block": "minecraft:cactus"
@@ -276,81 +107,30 @@
       ],
       "stackMin": 1
     },
-    {
-      "chance": 0.0005,
-      "variance": {
-        "style": "STATIC"
-      },
-      "stackMax": 2,
-      "style": {
-        "style": "STATIC"
-      },
-      "palette": [
-        {
-          "block": "minecraft:cactus"
-        }
-      ],
-      "topPalette": [
-        {
-          "block": "minecraft:cactus_flower"
-        }
-      ],
-      "stackMin": 1
-    },
+    "snippet/decorator/plants/cactus-flowering-max2-c0-0005",
     {
       "chance": 0.3,
-      "variance": {
-        "style": "STATIC"
-      },
       "zoom": 0.3,
       "palette": [
         {
           "block": "minecraft:short_grass"
         }
-      ],
-      "style": {
-        "style": "STATIC"
-      }
+      ]
     },
     {
       "chance": 0.01,
-      "variance": {
-        "style": "STATIC"
-      },
       "zoom": 0.3,
       "palette": [
         {
           "block": "minecraft:tall_grass"
         }
-      ],
-      "style": {
-        "style": "STATIC"
-      }
+      ]
     },
-    "snippet/decorator/dry_grass"
+    "snippet/decorator/grass/dry-grass"
   ],
   "biomeSkyScatter": [
     "minecraft:desert",
     "minecraft:savanna"
   ],
-  "terrain3D": {
-    "enabled": true,
-    "seed": 30101,
-    "amplitude": 10,
-    "horizontalScale": 192,
-    "verticalScale": 24,
-    "densityStyle": {
-      "style": "PERLIN"
-    },
-    "crackDepth": 0,
-    "crackWidth": 2.25,
-    "crackScale": 392,
-    "crackStyle": {
-      "style": "SIMPLEX"
-    },
-    "minimumSlope": 0.18,
-    "slopeFade": 0.3,
-    "fluidClearance": 8,
-    "fluidFade": 24
-  }
+  "terrain3D": "snippet/terrain-3d/rolling/amp10-perlin-crack392"
 }

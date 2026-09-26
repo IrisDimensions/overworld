@@ -32,65 +32,11 @@
       "min": 1
     }
   ],
-  "wall": {
-    "palette": [
-      {
-        "block": "minecraft:stone"
-      },
-      {
-        "block": "minecraft:andesite"
-      },
-      {
-        "block": "minecraft:gravel"
-      },
-      {
-        "block": "minecraft:cyan_terracotta"
-      }
-    ]
-  },
+  "wall": "snippet/biome-palette/wall/stone-andesite-gravel-cyan-terracotta",
   "layers": [
-    {
-      "minHeight": 1,
-      "maxHeight": 1,
-      "slopeCondition": {
-        "minimumSlope": 0,
-        "maximumSlope": 3.3
-      },
-      "palette": [
-        {
-          "block": "minecraft:snow_block"
-        }
-      ]
-    },
-    {
-      "minHeight": 3,
-      "maxHeight": 3,
-      "slopeCondition": {
-        "minimumSlope": 0,
-        "maximumSlope": 3
-      },
-      "palette": [
-        {
-          "block": "minecraft:dirt"
-        }
-      ]
-    },
-    {
-      "minHeight": 3,
-      "maxHeight": 3,
-      "slopeCondition": {
-        "minimumSlope": 0,
-        "maximumSlope": 3
-      },
-      "palette": [
-        {
-          "block": "minecraft:dirt"
-        },
-        {
-          "block": "minecraft:stone"
-        }
-      ]
-    }
+    "snippet/biome-palette/snow/top-1-1-flat3-3",
+    "snippet/biome-palette/soil/dirt-3-3-flat3",
+    "snippet/biome-palette/soil/dirt-stone-3-3-flat3"
   ],
   "objects": [
     {
@@ -102,94 +48,10 @@
         "clutter/sbush3"
       ]
     },
-    {
-      "mode": "PAINT",
-      "chance": 0.055,
-      "place": [
-        "clutter/stone1",
-        "clutter/stone2",
-        "clutter/stone3",
-        "clutter/stone4",
-        "clutter/stone5",
-        "clutter/stone6",
-        "clutter/stone7",
-        "clutter/stoneboulder1",
-        "clutter/stoneboulder2",
-        "clutter/stoneboulder3",
-        "clutter/stoneboulder4",
-        "clutter/stoneboulder5",
-        "clutter/stoneboulder6",
-        "clutter/stoneboulder7",
-        "clutter/stoneboulder8",
-        "clutter/stoneboulder9",
-        "clutter/stoneboulder10",
-        "clutter/stoneboulder11",
-        "clutter/stoneboulder12",
-        "clutter/stoneboulder13",
-        "clutter/stoneboulder14",
-        "clutter/stoneboulder15"
-      ]
-    }
+    "snippet/object-placer/clutter/stone-stoneboulder-paint-c0-055"
   ],
   "decorators": [
-    {
-      "chance": 0.2,
-      "variance": {
-        "style": "CELLULAR",
-        "zoom": 0.25,
-        "fracture": {
-          "style": "SIMPLEX",
-          "zoom": 0.2,
-          "multiplier": 10
-        }
-      },
-      "style": {
-        "style": "SIMPLEX",
-        "zoom": 0.2,
-        "fracture": {
-          "style": "STATIC",
-          "multiplier": 8
-        }
-      },
-      "palette": [
-        {
-          "block": "minecraft:dandelion"
-        },
-        {
-          "block": "minecraft:poppy"
-        },
-        {
-          "block": "minecraft:blue_orchid"
-        },
-        {
-          "block": "minecraft:allium"
-        },
-        {
-          "block": "minecraft:azure_bluet"
-        },
-        {
-          "block": "minecraft:red_tulip"
-        },
-        {
-          "block": "minecraft:orange_tulip"
-        },
-        {
-          "block": "minecraft:white_tulip"
-        },
-        {
-          "block": "minecraft:pink_tulip"
-        },
-        {
-          "block": "minecraft:oxeye_daisy"
-        },
-        {
-          "block": "minecraft:cornflower"
-        },
-        {
-          "block": "minecraft:lily_of_the_valley"
-        }
-      ]
-    },
+    "snippet/decorator/flowers/meadow-mix-c0-2-simplex-z0-2",
     {
       "chance": 0.01,
       "palette": [
@@ -206,48 +68,7 @@
         }
       ]
     },
-    {
-      "chance": 0.02,
-      "palette": [
-        {
-          "block": "minecraft:sweet_berry_bush",
-          "data": {
-            "age": 2
-          }
-        },
-        {
-          "block": "minecraft:sweet_berry_bush",
-          "data": {
-            "age": 1
-          }
-        },
-        {
-          "block": "minecraft:sweet_berry_bush",
-          "data": {
-            "age": 0
-          }
-        }
-      ]
-    }
+    "snippet/decorator/shrubs/sweet-berry-young-c0-02"
   ],
-  "terrain3D": {
-    "enabled": true,
-    "seed": 30103,
-    "amplitude": 22,
-    "horizontalScale": 256,
-    "verticalScale": 30,
-    "densityStyle": {
-      "style": "PERLIN"
-    },
-    "crackDepth": 0,
-    "crackWidth": 2,
-    "crackScale": 416,
-    "crackStyle": {
-      "style": "SIMPLEX"
-    },
-    "minimumSlope": 0.18,
-    "slopeFade": 0.32,
-    "fluidClearance": 8,
-    "fluidFade": 24
-  }
+  "terrain3D": "snippet/terrain-3d/hilly/amp22-perlin-crack416"
 }

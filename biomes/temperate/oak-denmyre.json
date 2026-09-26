@@ -11,22 +11,7 @@
       "generator": "plain"
     }
   ],
-  "wall": {
-    "style": {
-      "style": "STATIC"
-    },
-    "palette": [
-      {
-        "block": "minecraft:stone"
-      },
-      {
-        "block": "minecraft:andesite"
-      },
-      {
-        "block": "minecraft:stone"
-      }
-    ]
-  },
+  "wall": "snippet/biome-palette/wall/stone-andesite",
   "layers": [
     {
       "style": {
@@ -54,42 +39,10 @@
         }
       ]
     },
-    {
-      "minHeight": 6,
-      "maxHeight": 18,
-      "style": {
-        "style": "STATIC"
-      },
-      "palette": [
-        {
-          "block": "minecraft:stone"
-        },
-        {
-          "block": "minecraft:andesite"
-        },
-        {
-          "block": "minecraft:stone"
-        }
-      ]
-    }
+    "snippet/biome-palette/stone/andesite-blend-6-18"
   ],
   "objects": [
-    {
-      "mode": "PAINT",
-      "chance": 0.00975,
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "clutter/camp1"
-      ]
-    },
+    "snippet/object-placer/clutter/camp-paint-c0-00975-set1",
     {
       "chance": 0.2,
       "density": 2,
@@ -195,37 +148,11 @@
         }
       }
     },
-    {
-      "chance": 0.008,
-      "mode": "PAINT",
-      "place": [
-        "clutter/pumpkins1",
-        "clutter/pumpkins2",
-        "clutter/pumpkins3",
-        "clutter/pumpkins4",
-        "clutter/pumpkins5",
-        "clutter/pumpkins6"
-      ],
-      "rotation": {
-        "enabled": true,
-        "yAxis": {
-          "enabled": true,
-          "max": 360,
-          "min": 0,
-          "interval": 90
-        }
-      },
-      "translate": {
-        "y": 1
-      }
-    }
+    "snippet/object-placer/clutter/pumpkins-paint-c0-008"
   ],
   "decorators": [
     {
       "chance": 0.07,
-      "variance": {
-        "style": "STATIC"
-      },
       "zoom": 0.2,
       "palette": [
         {
@@ -246,9 +173,6 @@
     },
     {
       "chance": 0.8,
-      "variance": {
-        "style": "STATIC"
-      },
       "zoom": 0.2,
       "palette": [
         {
@@ -259,9 +183,6 @@
     },
     {
       "chance": 0.03,
-      "variance": {
-        "style": "STATIC"
-      },
       "zoom": 0.2,
       "palette": [
         {
@@ -271,9 +192,6 @@
     },
     {
       "chance": 0.02,
-      "variance": {
-        "style": "STATIC"
-      },
       "zoom": 0.2,
       "palette": [
         {
@@ -283,9 +201,6 @@
     },
     {
       "chance": 0.03,
-      "variance": {
-        "style": "STATIC"
-      },
       "zoom": 0.2,
       "palette": [
         {
@@ -295,9 +210,6 @@
     },
     {
       "chance": 0.05,
-      "variance": {
-        "style": "STATIC"
-      },
       "zoom": 0.2,
       "palette": [
         {
@@ -308,9 +220,6 @@
     },
     {
       "chance": 0.05,
-      "variance": {
-        "style": "STATIC"
-      },
       "zoom": 0.2,
       "palette": [
         {
@@ -321,9 +230,6 @@
     },
     {
       "chance": 0.03,
-      "variance": {
-        "style": "STATIC"
-      },
       "zoom": 0.2,
       "palette": [
         {
@@ -331,27 +237,8 @@
         }
       ]
     },
-    "snippet/decorator/leaf",
-    "snippet/decorator/bush"
+    "snippet/decorator/plants/leaf-litter",
+    "snippet/decorator/shrubs/bush"
   ],
-  "terrain3D": {
-    "enabled": true,
-    "seed": 30101,
-    "amplitude": 10,
-    "horizontalScale": 192,
-    "verticalScale": 24,
-    "densityStyle": {
-      "style": "PERLIN"
-    },
-    "crackDepth": 0,
-    "crackWidth": 2.25,
-    "crackScale": 392,
-    "crackStyle": {
-      "style": "SIMPLEX"
-    },
-    "minimumSlope": 0.18,
-    "slopeFade": 0.3,
-    "fluidClearance": 8,
-    "fluidFade": 24
-  }
+  "terrain3D": "snippet/terrain-3d/rolling/amp10-perlin-crack392"
 }

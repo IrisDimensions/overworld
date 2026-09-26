@@ -26,9 +26,6 @@
     }
   ],
   "wall": {
-    "style": {
-      "style": "STATIC"
-    },
     "palette": [
       {
         "block": "minecraft:crimson_hyphae"
@@ -47,70 +44,16 @@
         }
       ]
     },
-    {
-      "minHeight": 8,
-      "maxHeight": 9,
-      "palette": [
-        {
-          "block": "minecraft:dirt"
-        },
-        {
-          "block": "minecraft:coarse_dirt"
-        }
-      ]
-    },
-    {
-      "minHeight": 6,
-      "maxHeight": 18,
-      "style": {
-        "style": "STATIC"
-      },
-      "palette": [
-        {
-          "block": "minecraft:stone"
-        },
-        {
-          "block": "minecraft:andesite"
-        },
-        {
-          "block": "minecraft:stone"
-        }
-      ]
-    }
+    "snippet/biome-palette/soil/dirt-coarse-8-9",
+    "snippet/biome-palette/stone/andesite-blend-6-18"
   ],
   "objects": [
     {
       "chance": 0.21,
       "density": 2,
       "edit": [
-        {
-          "find": [
-            {
-              "block": "minecraft:brown_mushroom_block"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:crimson_hyphae"
-              }
-            ]
-          }
-        },
-        {
-          "find": [
-            {
-              "block": "minecraft:red_mushroom_block"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:nether_wart_block"
-              }
-            ]
-          }
-        }
+        "snippet/object-block-replacer/mushroom/brown-block-to-crimson-hyphae",
+        "snippet/object-block-replacer/mushroom/red-block-to-nether-wart"
       ],
       "rotation": {
         "yAxis": {
@@ -140,366 +83,35 @@
         "z": 0
       }
     },
-    {
-      "chance": 0.21,
-      "density": 2,
-      "edit": [
-        {
-          "find": [
-            {
-              "block": "minecraft:red_mushroom_block"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:crimson_hyphae"
-              }
-            ]
-          }
-        },
-        {
-          "find": [
-            {
-              "block": "minecraft:brown_mushroom_block"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:nether_wart_block"
-              }
-            ]
-          }
-        }
-      ],
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "trees/mushroom/mushclut1",
-        "trees/mushroom/mushclut2",
-        "trees/mushroom/mushclut3",
-        "trees/mushroom/mushclut4",
-        "trees/mushroom/mushclut5",
-        "trees/mushroom/mushclut6",
-        "trees/mushroom/mushclut7",
-        "trees/mushroom/mushclut8",
-        "trees/mushroom/mushclut9",
-        "trees/mushroom/mushclut10"
-      ],
-      "translate": {
-        "x": 0,
-        "y": -1,
-        "z": 0
-      }
-    },
-    {
-      "chance": 0.5,
-      "density": 2,
-      "edit": [
-        {
-          "find": [
-            {
-              "block": "minecraft:brown_mushroom_block"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:crimson_hyphae"
-              }
-            ]
-          }
-        },
-        {
-          "find": [
-            {
-              "block": "minecraft:red_mushroom_block"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:nether_wart_block"
-              }
-            ]
-          }
-        }
-      ],
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "trees/mushroom/redgeneric1",
-        "trees/mushroom/redgeneric2",
-        "trees/mushroom/browngeneric1",
-        "trees/mushroom/browngeneric2",
-        "trees/mushroom/redgeneric3",
-        "trees/mushroom/redgeneric4",
-        "trees/mushroom/redgeneric5",
-        "trees/mushroom/redgeneric6",
-        "trees/mushroom/redgeneric7",
-        "trees/mushroom/redgeneric8",
-        "trees/mushroom/redgeneric9",
-        "trees/mushroom/redgeneric10"
-      ],
-      "translate": {
-        "x": 0,
-        "y": -1,
-        "z": 0
-      }
-    },
-    {
-      "chance": 0.5,
-      "density": 2,
-      "edit": [
-        {
-          "find": [
-            {
-              "block": "minecraft:red_mushroom_block"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:crimson_hyphae"
-              }
-            ]
-          }
-        },
-        {
-          "find": [
-            {
-              "block": "minecraft:brown_mushroom_block"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:nether_wart_block"
-              }
-            ]
-          }
-        }
-      ],
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "trees/mushroom/redgeneric1",
-        "trees/mushroom/redgeneric2",
-        "trees/mushroom/browngeneric1",
-        "trees/mushroom/browngeneric2",
-        "trees/mushroom/redgeneric3",
-        "trees/mushroom/redgeneric4",
-        "trees/mushroom/redgeneric5",
-        "trees/mushroom/redgeneric6",
-        "trees/mushroom/redgeneric7",
-        "trees/mushroom/redgeneric8",
-        "trees/mushroom/redgeneric9",
-        "trees/mushroom/redgeneric10"
-      ],
-      "translate": {
-        "x": 0,
-        "y": -1,
-        "z": 0
-      }
-    },
-    {
-      "chance": 0.1,
-      "density": 1,
-      "edit": [
-        {
-          "find": [
-            {
-              "block": "minecraft:red_mushroom_block"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:crimson_hyphae"
-              }
-            ]
-          }
-        },
-        {
-          "find": [
-            {
-              "block": "minecraft:brown_mushroom_block"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:nether_wart_block"
-              }
-            ]
-          }
-        }
-      ],
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "trees/mushroom/smolshroom1",
-        "trees/mushroom/smolshroom2",
-        "trees/mushroom/smolshroom3",
-        "trees/mushroom/smolshroom4",
-        "trees/mushroom/smolshroom5"
-      ],
-      "translate": {
-        "x": 0,
-        "y": -1,
-        "z": 0
-      }
-    },
-    {
-      "chance": 0.1,
-      "density": 1,
-      "edit": [
-        {
-          "find": [
-            {
-              "block": "minecraft:brown_mushroom_block"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:crimson_hyphae"
-              }
-            ]
-          }
-        },
-        {
-          "find": [
-            {
-              "block": "minecraft:red_mushroom_block"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:nether_wart_block"
-              }
-            ]
-          }
-        }
-      ],
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "trees/mushroom/smolshroom1",
-        "trees/mushroom/smolshroom2",
-        "trees/mushroom/smolshroom3",
-        "trees/mushroom/smolshroom4",
-        "trees/mushroom/smolshroom5"
-      ],
-      "translate": {
-        "x": 0,
-        "y": -1,
-        "z": 0
-      }
-    }
+    "snippet/object-placer/trees/mushroom-mushclut-c0-21-d2-crimson-red-hyphae",
+    "snippet/object-placer/trees/mushroom-brown-red-c0-5-d2-crimson-brown-hyphae",
+    "snippet/object-placer/trees/mushroom-brown-red-c0-5-d2-crimson-red-hyphae",
+    "snippet/object-placer/trees/mushroom-smolshroom-c0-1-d1-crimson-red-hyphae",
+    "snippet/object-placer/trees/mushroom-smolshroom-c0-1-d1-crimson-brown-hyphae"
   ],
   "decorators": [
-    {
-      "chance": 0.009,
-      "variance": {
-        "style": "STATIC"
-      },
-      "zoom": 0.3,
-      "palette": [
-        {
-          "data": {
-            "face": "floor",
-            "powered": false,
-            "facing": "east"
-          },
-          "block": "minecraft:polished_blackstone_button"
-        },
-        {
-          "data": {
-            "face": "floor",
-            "powered": false,
-            "facing": "south"
-          },
-          "block": "minecraft:crimson_button"
-        }
-      ],
-      "style": {
-        "style": "STATIC"
-      }
-    },
+    "snippet/decorator/pebbles/blackstone-crimson-c0-009",
     {
       "chance": 0.05,
-      "variance": {
-        "style": "STATIC"
-      },
       "zoom": 0.3,
       "palette": [
         {
           "block": "minecraft:crimson_fungus"
         }
-      ],
-      "style": {
-        "style": "STATIC"
-      }
+      ]
     },
     {
       "chance": 0.11,
-      "variance": {
-        "style": "STATIC"
-      },
       "zoom": 0.3,
       "palette": [
         {
           "block": "minecraft:crimson_roots"
         }
-      ],
-      "style": {
-        "style": "STATIC"
-      }
+      ]
     }
   ],
   "childShrinkFactor": 2.4,
   "slab": {
-    "style": {
-      "style": "STATIC"
-    },
     "palette": [
       {
         "weight": 4,
@@ -518,24 +130,5 @@
       }
     ]
   },
-  "terrain3D": {
-    "enabled": true,
-    "seed": 30139,
-    "amplitude": 22,
-    "horizontalScale": 128,
-    "verticalScale": 40,
-    "densityStyle": {
-      "style": "NOWHERE"
-    },
-    "crackDepth": 0,
-    "crackWidth": 2.25,
-    "crackScale": 448,
-    "crackStyle": {
-      "style": "SIMPLEX"
-    },
-    "minimumSlope": 0.24,
-    "slopeFade": 0.36,
-    "fluidClearance": 8,
-    "fluidFade": 24
-  }
+  "terrain3D": "snippet/terrain-3d/hilly/amp22-nowhere-crack448"
 }

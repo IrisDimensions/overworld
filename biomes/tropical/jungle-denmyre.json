@@ -11,27 +11,9 @@
       "generator": "plain"
     }
   ],
-  "wall": {
-    "style": {
-      "style": "STATIC"
-    },
-    "palette": [
-      {
-        "block": "minecraft:stone"
-      },
-      {
-        "block": "minecraft:andesite"
-      },
-      {
-        "block": "minecraft:stone"
-      }
-    ]
-  },
+  "wall": "snippet/biome-palette/wall/stone-andesite",
   "layers": [
     {
-      "style": {
-        "style": "STATIC"
-      },
       "zoom": 0.01,
       "palette": [
         {
@@ -55,24 +37,7 @@
         }
       ]
     },
-    {
-      "minHeight": 6,
-      "maxHeight": 18,
-      "style": {
-        "style": "STATIC"
-      },
-      "palette": [
-        {
-          "block": "minecraft:stone"
-        },
-        {
-          "block": "minecraft:andesite"
-        },
-        {
-          "block": "minecraft:stone"
-        }
-      ]
-    }
+    "snippet/biome-palette/stone/andesite-blend-6-18"
   ],
   "objects": [
     {
@@ -163,20 +128,7 @@
     {
       "chance": 0.5,
       "edit": [
-        {
-          "find": [
-            {
-              "block": "minecraft:birch_leaves"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:jungle_leaves"
-              }
-            ]
-          }
-        },
+        "snippet/object-block-replacer/leaves/birch-to-jungle",
         {
           "find": [
             {
@@ -238,60 +190,22 @@
   "decorators": [
     {
       "chance": 0.4,
-      "variance": {
-        "style": "STATIC"
-      },
       "zoom": 0.3,
       "palette": [
         {
           "block": "minecraft:short_grass"
         }
-      ],
-      "style": {
-        "style": "STATIC"
-      }
+      ]
     },
-    {
-      "chance": 0.003,
-      "variance": {
-        "style": "STATIC"
-      },
-      "palette": [
-        {
-          "data": {
-            "face": "floor",
-            "powered": false,
-            "facing": "east"
-          },
-          "block": "minecraft:stone_button"
-        },
-        {
-          "data": {
-            "face": "floor",
-            "powered": false,
-            "facing": "south"
-          },
-          "block": "minecraft:stone_button"
-        }
-      ],
-      "style": {
-        "style": "STATIC"
-      }
-    },
+    "snippet/decorator/pebbles/stone-c0-003",
     {
       "chance": 0.017,
-      "variance": {
-        "style": "STATIC"
-      },
       "zoom": 0.3,
       "palette": [
         {
           "block": "minecraft:tall_grass"
         }
-      ],
-      "style": {
-        "style": "STATIC"
-      }
+      ]
     }
   ],
   "effects": [
@@ -306,24 +220,5 @@
       "particleCount": 0
     }
   ],
-  "terrain3D": {
-    "enabled": true,
-    "seed": 30101,
-    "amplitude": 10,
-    "horizontalScale": 192,
-    "verticalScale": 24,
-    "densityStyle": {
-      "style": "PERLIN"
-    },
-    "crackDepth": 0,
-    "crackWidth": 2.25,
-    "crackScale": 392,
-    "crackStyle": {
-      "style": "SIMPLEX"
-    },
-    "minimumSlope": 0.18,
-    "slopeFade": 0.3,
-    "fluidClearance": 8,
-    "fluidFade": 24
-  }
+  "terrain3D": "snippet/terrain-3d/rolling/amp10-perlin-crack392"
 }

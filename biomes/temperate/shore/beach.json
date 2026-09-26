@@ -1,130 +1,78 @@
 {
-    "name": "Temperate Beach",
-    "color": "#EDFF00",
-    "rarity": 1,
-    "derivative": "minecraft:beach",
-    "vanillaDerivative": "minecraft:beach",
-    "generators": [{
-        "min": -5,
-        "max": 1,
-        "generator": "plain"
-    }],
-    "layers": [
-        {
-            "minHeight": 3,
-            "maxHeight": 6,
-            "palette": [{"block": "minecraft:sand"}]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [{"block": "minecraft:sandstone"}]
-        }
-    ],
-    "objects": [{
-        "mode": "PAINT",
-        "chance": 0.0025,
-        "rotation": {
-            "yAxis": {
-                "min": 0,
-                "max": 270,
-                "interval": 90,
-                "enabled": true
-            },
-            "enabled": true
-        },
-        "place": ["clutter/bincluster1"]
-    }],
-    "decorators": [
-        {
-            "chance": 0.009,
-            "palette": [{
-                "data": {
-                    "eggs": 1,
-                    "hatch": 0
-                },
-                "block": "minecraft:turtle_egg"
-            }]
-        },
-        {
-            "chance": 0.005,
-            "palette": [{
-                "data": {
-                    "eggs": 2,
-                    "hatch": 0
-                },
-                "block": "minecraft:turtle_egg"
-            }]
-        },
-        {
-            "chance": 0.002,
-            "palette": [{
-                "data": {
-                    "eggs": 3,
-                    "hatch": 0
-                },
-                "block": "minecraft:turtle_egg"
-            }]
-        },
-        {
-            "chance": 0.003,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.3,
-            "palette": [
-                {
-                    "data": {
-                        "face": "floor",
-                        "powered": false,
-                        "facing": "east"
-                    },
-                    "block": "minecraft:stone_button"
-                },
-                {"block": "minecraft:air"},
-                {
-                    "data": {
-                        "face": "floor",
-                        "powered": false,
-                        "facing": "south"
-                    },
-                    "block": "minecraft:stone_button"
-                }
-            ],
-            "style": {"style": "STATIC"}
-        },
-        {
-            "partOf": "SHORE_LINE",
-            "chance": 0.18,
-            "stackMin": 1,
-            "stackMax": 4,
-            "palette": [{"block": "minecraft:sugar_cane"}],
-            "style": {
-                "style": "NOWHERE",
-                "zoom": 0.65
-            },
-            "heightVariance": {"style": "STATIC"}
-        }
-    ],
-    "slab": {
-        "style": {"style": "STATIC"},
-        "palette": [
-            {
-                "data": {
-                    "waterlogged": false,
-                    "type": "bottom"
-                },
-                "block": "minecraft:sandstone_slab"
-            },
-            {
-                "data": {
-                    "waterlogged": false,
-                    "type": "bottom"
-                },
-                "block": "minecraft:smooth_sandstone_slab"
-            },
-            {
-                "weight": 2,
-                "block": "minecraft:air"
-            }
-        ]
+  "name": "Temperate Beach",
+  "color": "#EDFF00",
+  "rarity": 1,
+  "derivative": "minecraft:beach",
+  "vanillaDerivative": "minecraft:beach",
+  "generators": [
+    {
+      "min": -5,
+      "max": 1,
+      "generator": "plain"
     }
+  ],
+  "layers": [
+    {
+      "minHeight": 3,
+      "maxHeight": 6,
+      "palette": [
+        {
+          "block": "minecraft:sand"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:sandstone"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    "snippet/object-placer/clutter/bincluster-paint-c0-0025"
+  ],
+  "decorators": [
+    {
+      "chance": 0.009,
+      "palette": [
+        {
+          "data": {
+            "eggs": 1,
+            "hatch": 0
+          },
+          "block": "minecraft:turtle_egg"
+        }
+      ]
+    },
+    {
+      "chance": 0.005,
+      "palette": [
+        {
+          "data": {
+            "eggs": 2,
+            "hatch": 0
+          },
+          "block": "minecraft:turtle_egg"
+        }
+      ]
+    },
+    {
+      "chance": 0.002,
+      "palette": [
+        {
+          "data": {
+            "eggs": 3,
+            "hatch": 0
+          },
+          "block": "minecraft:turtle_egg"
+        }
+      ]
+    },
+    "snippet/decorator/pebbles/stone-gapped-c0-003",
+    "snippet/decorator/plants/sugar-cane-shore-c0-18"
+  ],
+  "slab": "snippet/biome-palette/slab/sandstone-sparse"
 }

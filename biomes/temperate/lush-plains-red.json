@@ -41,24 +41,10 @@
         }
       ]
     },
-    {
-      "minHeight": 1,
-      "maxHeight": 3,
-      "palette": [
-        {
-          "block": "minecraft:dirt"
-        },
-        {
-          "block": "minecraft:coarse_dirt"
-        }
-      ]
-    },
+    "snippet/biome-palette/soil/dirt-coarse-1-3",
     {
       "minHeight": 6,
       "maxHeight": 18,
-      "style": {
-        "style": "STATIC"
-      },
       "palette": [
         {
           "block": "minecraft:dirt"
@@ -70,127 +56,14 @@
     }
   ],
   "objects": [
-    {
-      "mode": "PAINT",
-      "chance": 0.009,
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "clutter/camp1",
-        "clutter/camp3",
-        "clutter/camp4",
-        "clutter/camp5",
-        "clutter/camp2"
-      ]
-    },
-    {
-      "chance": 0.01,
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "trees/oak/hoakgeneric3",
-        "trees/oak/hoakgeneric4",
-        "trees/oak/hoakgeneric5",
-        "trees/oak/hoakgeneric6",
-        "trees/oak/hoakgeneric7",
-        "trees/oak/hoakgeneric8",
-        "trees/oak/hoakgeneric9",
-        "trees/oak/hoakgeneric1",
-        "trees/oak/shoakgeneric3",
-        "trees/oak/shoakgeneric4",
-        "trees/oak/shoakgeneric5",
-        "trees/oak/shoakgeneric6",
-        "trees/oak/shoakgeneric7",
-        "trees/oak/shoakgeneric8",
-        "trees/oak/shoakgeneric9",
-        "trees/oak/shoakgeneric1",
-        "trees/oak/shoakgeneric2",
-        "trees/oak/generic1",
-        "trees/oak/generic2",
-        "trees/oak/generic3",
-        "trees/oak/generic4",
-        "trees/oak/generic5",
-        "trees/oak/generic6"
-      ]
-    },
-    {
-      "chance": 0.004,
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "clutter/obelisk1",
-        "clutter/obelisk2",
-        "clutter/obelisk3",
-        "clutter/obelisk4",
-        "clutter/obelisk5",
-        "clutter/obelisk6",
-        "clutter/obelisk7",
-        "clutter/genericpeak1",
-        "clutter/genericpeak2",
-        "clutter/genericpeak3",
-        "clutter/genericpeak5",
-        "clutter/genericpeak6",
-        "clutter/statue-villager-plains"
-      ]
-    },
-    {
-      "chance": 0.004,
-      "mode": "PAINT",
-      "place": [
-        "clutter/pumpkins1",
-        "clutter/pumpkins2",
-        "clutter/pumpkins3",
-        "clutter/pumpkins4",
-        "clutter/pumpkins5",
-        "clutter/pumpkins6",
-        "clutter/melons1",
-        "clutter/melons2",
-        "clutter/melons3",
-        "clutter/melons4",
-        "clutter/melons5",
-        "clutter/melons6"
-      ],
-      "rotation": {
-        "enabled": true,
-        "yAxis": {
-          "enabled": true,
-          "max": 360,
-          "min": 0,
-          "interval": 90
-        }
-      },
-      "translate": {
-        "y": 1
-      }
-    }
+    "snippet/object-placer/clutter/camp-paint-c0-009",
+    "snippet/object-placer/trees/oak-hoak-shoak-generic-c0-01",
+    "snippet/object-placer/clutter/obelisk-genericpeak-statue-c0-004",
+    "snippet/object-placer/clutter/pumpkins-melons-paint-c0-004"
   ],
   "decorators": [
     {
       "chance": 0.04,
-      "style": {
-        "style": "STATIC"
-      },
       "palette": [
         {
           "block": "minecraft:rose_bush",
@@ -234,26 +107,7 @@
         }
       ]
     },
-    "snippet/decorator/bush"
+    "snippet/decorator/shrubs/bush"
   ],
-  "terrain3D": {
-    "enabled": true,
-    "seed": 30101,
-    "amplitude": 10,
-    "horizontalScale": 192,
-    "verticalScale": 24,
-    "densityStyle": {
-      "style": "PERLIN"
-    },
-    "crackDepth": 0,
-    "crackWidth": 2.25,
-    "crackScale": 392,
-    "crackStyle": {
-      "style": "SIMPLEX"
-    },
-    "minimumSlope": 0.18,
-    "slopeFade": 0.3,
-    "fluidClearance": 8,
-    "fluidFade": 24
-  }
+  "terrain3D": "snippet/terrain-3d/rolling/amp10-perlin-crack392"
 }

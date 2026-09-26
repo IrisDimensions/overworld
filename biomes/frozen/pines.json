@@ -47,22 +47,7 @@
   "biomeStyle": {
     "style": "SIMPLEX"
   },
-  "wall": {
-    "style": {
-      "style": "STATIC"
-    },
-    "palette": [
-      {
-        "block": "minecraft:stone"
-      },
-      {
-        "block": "minecraft:andesite"
-      },
-      {
-        "block": "minecraft:stone"
-      }
-    ]
-  },
+  "wall": "snippet/biome-palette/wall/stone-andesite",
   "layers": [
     {
       "minHeight": 0,
@@ -100,24 +85,7 @@
         }
       ]
     },
-    {
-      "minHeight": 6,
-      "maxHeight": 18,
-      "style": {
-        "style": "STATIC"
-      },
-      "palette": [
-        {
-          "block": "minecraft:stone"
-        },
-        {
-          "block": "minecraft:andesite"
-        },
-        {
-          "block": "minecraft:stone"
-        }
-      ]
-    }
+    "snippet/biome-palette/stone/andesite-blend-6-18"
   ],
   "objects": [
     {
@@ -125,27 +93,7 @@
       "density": 1,
       "snow": 1,
       "edit": [
-        {
-          "find": [
-            {
-              "block": "minecraft:spruce_leaves"
-            }
-          ],
-          "replace": {
-            "style": {
-              "style": "PERLIN",
-              "zoom": 0.2
-            },
-            "palette": [
-              {
-                "block": "minecraft:oak_leaves"
-              },
-              {
-                "block": "minecraft:dark_oak_leaves"
-              }
-            ]
-          }
-        }
+        "snippet/object-block-replacer/leaves/spruce-to-oak-dark-oak-perlin"
       ],
       "rotation": {
         "yAxis": {
@@ -171,44 +119,8 @@
     }
   ],
   "decorators": [
-    {
-      "chance": 1,
-      "variance": {
-        "style": "NOWHERE",
-        "zoom": 0.23
-      },
-      "palette": [
-        {
-          "data": {
-            "layers": 1
-          },
-          "block": "minecraft:snow"
-        },
-        {
-          "block": "minecraft:air"
-        }
-      ]
-    }
+    "snippet/decorator/snow/patchy-layer-c1"
   ],
   "childShrinkFactor": 20,
-  "terrain3D": {
-    "enabled": true,
-    "seed": 30103,
-    "amplitude": 18,
-    "horizontalScale": 160,
-    "verticalScale": 40,
-    "densityStyle": {
-      "style": "SIMPLEX"
-    },
-    "crackDepth": 0,
-    "crackWidth": 2,
-    "crackScale": 416,
-    "crackStyle": {
-      "style": "SIMPLEX"
-    },
-    "minimumSlope": 0.28,
-    "slopeFade": 0.4,
-    "fluidClearance": 8,
-    "fluidFade": 24
-  }
+  "terrain3D": "snippet/terrain-3d/hilly/amp18-simplex-crack416"
 }

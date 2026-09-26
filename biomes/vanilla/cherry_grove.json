@@ -90,46 +90,8 @@
     }
   ],
   "objects": [
-    {
-      "place": [
-        "clutter/amethyst-cluster1",
-        "clutter/amethyst-cluster2",
-        "clutter/amethyst-cluster3",
-        "clutter/amethyst-cluster4",
-        "clutter/amethyst-cluster5"
-      ],
-      "chance": 0.12,
-      "mode": "CENTER_HEIGHT",
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      }
-    },
-    {
-      "place": [
-        "clutter/stoneboulder1",
-        "clutter/stoneboulder2",
-        "clutter/stoneboulder3",
-        "clutter/stoneboulder4",
-        "clutter/stoneboulder5"
-      ],
-      "chance": 0.05,
-      "mode": "CENTER_HEIGHT",
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      }
-    }
+    "snippet/object-placer/clutter/amethyst-cluster-center-c0-12",
+    "snippet/object-placer/clutter/stoneboulder-center-c0-05"
   ],
   "decorators": [
     {
@@ -220,71 +182,7 @@
       "objectShrinkFactor": 1.0,
       "topObjectMode": "REPLACE",
       "topObjectOverrides": [
-        {
-          "place": [
-            "clutter/amethyst-cluster1",
-            "clutter/amethyst-cluster2",
-            "clutter/amethyst-cluster3",
-            "clutter/amethyst-cluster4",
-            "clutter/amethyst-cluster5"
-          ],
-          "chance": 0.8,
-          "mode": "CENTER_HEIGHT",
-          "density": 10,
-          "rotation": {
-            "yAxis": {
-              "min": 0,
-              "max": 270,
-              "interval": 90,
-              "enabled": true
-            },
-            "enabled": true
-          },
-          "edit": [
-            {
-              "find": [
-                {
-                  "block": "minecraft:ice"
-                }
-              ],
-              "replace": {
-                "palette": [
-                  {
-                    "block": "minecraft:glass"
-                  }
-                ]
-              }
-            },
-            {
-              "find": [
-                {
-                  "block": "minecraft:packed_ice"
-                }
-              ],
-              "replace": {
-                "palette": [
-                  {
-                    "block": "minecraft:light_blue_stained_glass"
-                  }
-                ]
-              }
-            },
-            {
-              "find": [
-                {
-                  "block": "minecraft:blue_ice"
-                }
-              ],
-              "replace": {
-                "palette": [
-                  {
-                    "block": "minecraft:tinted_glass"
-                  }
-                ]
-              }
-            }
-          ]
-        }
+        "snippet/object-placer/clutter/amethyst-cluster-center-c0-8-d10-glass"
       ],
       "bottomObjectMode": "REPLACE",
       "bottomObjectOverrides": []
@@ -300,24 +198,5 @@
       "downfallType": "none"
     }
   ],
-  "terrain3D": {
-    "enabled": true,
-    "seed": 30101,
-    "amplitude": 10,
-    "horizontalScale": 192,
-    "verticalScale": 24,
-    "densityStyle": {
-      "style": "PERLIN"
-    },
-    "crackDepth": 0,
-    "crackWidth": 2.25,
-    "crackScale": 392,
-    "crackStyle": {
-      "style": "SIMPLEX"
-    },
-    "minimumSlope": 0.18,
-    "slopeFade": 0.3,
-    "fluidClearance": 8,
-    "fluidFade": 24
-  }
+  "terrain3D": "snippet/terrain-3d/rolling/amp10-perlin-crack392"
 }

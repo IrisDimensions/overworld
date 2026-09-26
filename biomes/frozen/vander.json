@@ -44,22 +44,7 @@
   "biomeStyle": {
     "style": "SIMPLEX"
   },
-  "wall": {
-    "style": {
-      "style": "STATIC"
-    },
-    "palette": [
-      {
-        "block": "minecraft:stone"
-      },
-      {
-        "block": "minecraft:andesite"
-      },
-      {
-        "block": "minecraft:stone"
-      }
-    ]
-  },
+  "wall": "snippet/biome-palette/wall/stone-andesite",
   "layers": [
     {
       "maxHeight": 3,
@@ -87,24 +72,7 @@
         }
       ]
     },
-    {
-      "minHeight": 6,
-      "maxHeight": 18,
-      "style": {
-        "style": "STATIC"
-      },
-      "palette": [
-        {
-          "block": "minecraft:stone"
-        },
-        {
-          "block": "minecraft:andesite"
-        },
-        {
-          "block": "minecraft:stone"
-        }
-      ]
-    }
+    "snippet/biome-palette/stone/andesite-blend-6-18"
   ],
   "objects": [
     {
@@ -137,20 +105,7 @@
         "z": 0
       },
       "edit": [
-        {
-          "find": [
-            {
-              "block": "minecraft:white_stained_glass"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:ice"
-              }
-            ]
-          }
-        }
+        "snippet/object-block-replacer/ice/white-stained-glass-to-ice"
       ]
     },
     {
@@ -201,20 +156,7 @@
             ]
           }
         },
-        {
-          "find": [
-            {
-              "block": "minecraft:oak_wood"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:dark_oak_wood"
-              }
-            ]
-          }
-        },
+        "snippet/object-block-replacer/wood/oak-to-dark-oak",
         {
           "find": [
             {
@@ -229,27 +171,7 @@
             ]
           }
         },
-        {
-          "find": [
-            {
-              "block": "minecraft:spruce_leaves"
-            }
-          ],
-          "replace": {
-            "style": {
-              "style": "PERLIN",
-              "zoom": 0.2
-            },
-            "palette": [
-              {
-                "block": "minecraft:oak_leaves"
-              },
-              {
-                "block": "minecraft:dark_oak_leaves"
-              }
-            ]
-          }
-        }
+        "snippet/object-block-replacer/leaves/spruce-to-oak-dark-oak-perlin"
       ],
       "rotation": {
         "yAxis": {
@@ -304,24 +226,5 @@
     }
   ],
   "childShrinkFactor": 20,
-  "terrain3D": {
-    "enabled": true,
-    "seed": 30103,
-    "amplitude": 18,
-    "horizontalScale": 160,
-    "verticalScale": 40,
-    "densityStyle": {
-      "style": "SIMPLEX"
-    },
-    "crackDepth": 0,
-    "crackWidth": 2,
-    "crackScale": 416,
-    "crackStyle": {
-      "style": "SIMPLEX"
-    },
-    "minimumSlope": 0.28,
-    "slopeFade": 0.4,
-    "fluidClearance": 8,
-    "fluidFade": 24
-  }
+  "terrain3D": "snippet/terrain-3d/hilly/amp18-simplex-crack416"
 }

@@ -24,19 +24,7 @@
       "min": 0
     }
   ],
-  "wall": {
-    "palette": [
-      {
-        "block": "minecraft:stone"
-      },
-      {
-        "block": "minecraft:andesite"
-      },
-      {
-        "block": "minecraft:cobblestone"
-      }
-    ]
-  },
+  "wall": "snippet/biome-palette/wall/stone-andesite-cobble",
   "layers": [
     {
       "palette": [
@@ -260,27 +248,8 @@
         }
       ]
     },
-    "snippet/decorator/leaf",
-    "snippet/decorator/bush"
+    "snippet/decorator/plants/leaf-litter",
+    "snippet/decorator/shrubs/bush"
   ],
-  "terrain3D": {
-    "enabled": true,
-    "seed": 30101,
-    "amplitude": 10,
-    "horizontalScale": 192,
-    "verticalScale": 24,
-    "densityStyle": {
-      "style": "PERLIN"
-    },
-    "crackDepth": 0,
-    "crackWidth": 2.25,
-    "crackScale": 392,
-    "crackStyle": {
-      "style": "SIMPLEX"
-    },
-    "minimumSlope": 0.18,
-    "slopeFade": 0.3,
-    "fluidClearance": 8,
-    "fluidFade": 24
-  }
+  "terrain3D": "snippet/terrain-3d/rolling/amp10-perlin-crack392"
 }

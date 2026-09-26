@@ -1,242 +1,196 @@
 {
-    "riverPolicy": {
-        "placement": "TRANSIT_ONLY",
-        "routing": "PREFER",
-        "outletAdmission": false,
-        "profiles": [
-            "water"
-        ]
+  "riverPolicy": {
+    "placement": "TRANSIT_ONLY",
+    "routing": "PREFER",
+    "outletAdmission": false,
+    "profiles": [
+      "water"
+    ]
+  },
+  "name": "Tundra River Rocky",
+  "color": "#4939DF",
+  "derivative": "minecraft:lukewarm_ocean",
+  "vanillaDerivative": "minecraft:lukewarm_ocean",
+  "generators": [
+    {
+      "min": -41,
+      "max": -7,
+      "generator": "plain"
+    }
+  ],
+  "wall": {
+    "style": {
+      "style": "NOWHERE"
     },
-    "name": "Tundra River Rocky",
-    "color": "#4939DF",
-    "derivative": "minecraft:lukewarm_ocean",
-    "vanillaDerivative": "minecraft:lukewarm_ocean",
-    "generators": [
-        {
-            "min": -41,
-            "max": -7,
-            "generator": "plain"
-        }
-    ],
-    "wall": {
-        "style": {
-            "style": "NOWHERE"
-        },
-        "palette": [
-            {
-                "block": "minecraft:clay"
-            },
-            {
-                "block": "minecraft:cobblestone"
-            },
-            {
-                "block": "minecraft:stone"
-            },
-            {
-                "block": "minecraft:andesite"
-            }
-        ]
-    },
-    "layers": [
-        {
-            "minHeight": 2,
-            "maxHeight": 3,
+    "palette": [
+      {
+        "block": "minecraft:clay"
+      },
+      {
+        "block": "minecraft:cobblestone"
+      },
+      {
+        "block": "minecraft:stone"
+      },
+      {
+        "block": "minecraft:andesite"
+      }
+    ]
+  },
+  "layers": [
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
       "style": {
         "style": "IRIS"
       },
       "zoom": 8,
-            "palette": [
-                {
-                    "block": "minecraft:stone"
-                },
-                {
-                    "block": "minecraft:clay"
-                },
-                {
-                    "block": "minecraft:cobblestone"
-                },
-                {
-                    "block": "minecraft:gravel"
-                },
-                {
-                    "block": "minecraft:cobblestone"
-                },
-                {
-                    "block": "minecraft:dirt"
-                },
-                {
-                    "block": "minecraft:cobblestone"
-                },
-                {
-                    "block": "minecraft:andesite"
-                }
-            ]
+      "palette": [
+        {
+          "block": "minecraft:stone"
         },
         {
-            "palette": [
-                {
-                    "block": "minecraft:dirt"
-                }
-            ]
+          "block": "minecraft:clay"
         },
         {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "style": {
-                "style": "IRIS"
-            },
-            "zoom": 12,
-            "palette": [
-                {
-                    "weight": 2,
-                    "block": "minecraft:dirt"
-                },
-                {
-                    "block": "minecraft:coarse_dirt"
-                }
-            ]
+          "block": "minecraft:cobblestone"
+        },
+        {
+          "block": "minecraft:gravel"
+        },
+        {
+          "block": "minecraft:cobblestone"
+        },
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "block": "minecraft:cobblestone"
+        },
+        {
+          "block": "minecraft:andesite"
         }
-    ],
-    "objects": [
+      ]
+    },
+    {
+      "palette": [
         {
-            "chance": 0.67,
-            "edit": [
-                {
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "minecraft:cave_air"
-                            }
-                        ]
-                    },
-                    "find": [
-                        {
-                            "block": "minecraft:water"
-                        }
-                    ]
-                }
-            ],
-            "mode": "PAINT",
-            "underwater": true,
-            "place": [
-                "clutter/cobblespike"
+          "block": "minecraft:dirt"
+        }
+      ]
+    },
+    "snippet/biome-palette/soil/dirt2-coarse-iris-1-3"
+  ],
+  "objects": [
+    {
+      "chance": 0.67,
+      "edit": [
+        {
+          "replace": {
+            "palette": [
+              {
+                "block": "minecraft:cave_air"
+              }
             ]
-        },
-        {
-            "chance": 0.009,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "underwater": true,
-            "place": [
-                "clutter/substat1",
-                "clutter/substat2",
-                "clutter/substat3",
-                "clutter/substat4",
-                "clutter/substat5"
-            ],
-            "translate": {
-                "x": 0,
-                "y": 2,
-                "z": 0
-            }
-        }
-    ],
-    "decorators": [
-        {
-            "chance": 0.0006,
-            "variance": {
-                "style": "STATIC"
-            },
-            "zoom": 1,
-            "palette": [
-                {
-                    "block": "minecraft:soul_sand"
-                },
-                {
-                    "block": "minecraft:magma_block"
-                }
-            ],
-            "style": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "chance": 0.07,
-            "variance": {
-                "style": "STATIC"
-            },
-            "zoom": 5,
-            "palette": [
-                {
-                    "block": "minecraft:seagrass"
-                }
-            ],
-            "style": {
-                "style": "STATIC"
-            }
-        },
-        {
-            "chance": 0.055,
-            "variance": {
-                "style": "STATIC"
-            },
-            "stackMax": 9,
-            "zoom": 1,
-            "palette": [
-                {
-                    "block": "minecraft:kelp_plant"
-                }
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "heightVariance": {
-                "style": "STATIC"
-            },
-            "stackMin": 1
-        },
-        {
-            "chance": 0.001,
-            "variance": {
-                "style": "STATIC"
-            },
-            "zoom": 1,
-            "palette": [
-                {
-                    "data": {
-                        "waterlogged": true,
-                        "pickles": 1
-                    },
-                    "block": "minecraft:sea_pickle"
-                }
-            ],
-            "style": {
-                "style": "STATIC"
-            }
-        }
-    ],
-    "slab": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
+          },
+          "find": [
             {
-                "data": {
-                    "waterlogged": false,
-                    "type": "bottom"
-                },
-                "block": "minecraft:cobblestone_slab"
-            },
-            {
-                "block": "minecraft:air"
+              "block": "minecraft:water"
             }
-        ]
+          ]
+        }
+      ],
+      "mode": "PAINT",
+      "underwater": true,
+      "place": [
+        "clutter/cobblespike"
+      ]
+    },
+    {
+      "chance": 0.009,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "underwater": true,
+      "place": [
+        "clutter/substat1",
+        "clutter/substat2",
+        "clutter/substat3",
+        "clutter/substat4",
+        "clutter/substat5"
+      ],
+      "translate": {
+        "x": 0,
+        "y": 2,
+        "z": 0
+      }
     }
+  ],
+  "decorators": [
+    {
+      "chance": 0.0006,
+      "zoom": 1,
+      "palette": [
+        {
+          "block": "minecraft:soul_sand"
+        },
+        {
+          "block": "minecraft:magma_block"
+        }
+      ]
+    },
+    {
+      "chance": 0.07,
+      "zoom": 5,
+      "palette": [
+        {
+          "block": "minecraft:seagrass"
+        }
+      ]
+    },
+    {
+      "chance": 0.055,
+      "stackMax": 9,
+      "zoom": 1,
+      "palette": [
+        {
+          "block": "minecraft:kelp_plant"
+        }
+      ],
+      "stackMin": 1
+    },
+    {
+      "chance": 0.001,
+      "zoom": 1,
+      "palette": [
+        {
+          "data": {
+            "waterlogged": true,
+            "pickles": 1
+          },
+          "block": "minecraft:sea_pickle"
+        }
+      ]
+    }
+  ],
+  "slab": {
+    "palette": [
+      {
+        "data": {
+          "waterlogged": false,
+          "type": "bottom"
+        },
+        "block": "minecraft:cobblestone_slab"
+      },
+      {
+        "block": "minecraft:air"
+      }
+    ]
+  }
 }

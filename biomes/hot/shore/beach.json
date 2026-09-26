@@ -1,113 +1,121 @@
 {
-    "name": "Hot Beach",
-    "color": "#E6DD70",
-    "rarity": 1,
-    "derivative": "minecraft:warm_ocean",
-    "vanillaDerivative": "minecraft:desert",
-    "customDerivitives": [{
-        "foliageColor": "#b8945a",
-        "category": "beach",
-        "downfallType": "none",
-        "humidity": 0,
-        "temperature": 0.95,
-        "id": "hot_beach"
-    }],
-    "generators": [{
-        "min": 0,
-        "max": 1,
-        "generator": "plain"
-    }],
-    "wall": {
-        "style": {"style": "STATIC"},
-        "palette": [
-            {"block": "minecraft:smooth_sandstone"},
-            {"block": "minecraft:sand"},
-            {"block": "minecraft:smooth_sandstone"}
-        ]
-    },
-    "layers": [
-        {
-            "minHeight": 3,
-            "maxHeight": 6,
-            "palette": [{"block": "minecraft:sand"}]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [{"block": "minecraft:dirt"}]
-        }
-    ],
-    "objects": [{
-        "density": 3,
-        "mode": "MIN_HEIGHT",
-        "chance": 0.25,
-        "place": [
-            "trees/jungle/palm1",
-            "trees/jungle/palm2",
-            "trees/jungle/palm3",
-            "trees/jungle/palm4",
-            "trees/jungle/palm6",
-            "trees/jungle/palm7"
-        ]
-    }],
-    "decorators": [
-        {
-            "chance": 0.01,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.3,
-            "palette": [
-                {
-                    "data": {
-                        "face": "floor",
-                        "powered": false,
-                        "facing": "east"
-                    },
-                    "block": "minecraft:jungle_button"
-                },
-                {
-                    "data": {
-                        "eggs": 1,
-                        "hatch": 0
-                    },
-                    "block": "minecraft:turtle_egg"
-                },
-                {
-                    "data": {
-                        "eggs": 2,
-                        "hatch": 0
-                    },
-                    "block": "minecraft:turtle_egg"
-                },
-                {
-                    "data": {
-                        "eggs": 3,
-                        "hatch": 0
-                    },
-                    "block": "minecraft:turtle_egg"
-                },
-                {"block": "minecraft:air"},
-                {
-                    "data": {
-                        "face": "floor",
-                        "powered": false,
-                        "facing": "south"
-                    },
-                    "block": "minecraft:jungle_button"
-                }
-            ],
-            "style": {"style": "STATIC"}
-        },
-        {
-            "partOf": "SHORE_LINE",
-            "chance": 0.18,
-            "stackMin": 1,
-            "stackMax": 4,
-            "palette": [{"block": "minecraft:sugar_cane"}],
-            "style": {
-                "style": "NOWHERE",
-                "zoom": 0.65
-            },
-            "heightVariance": {"style": "STATIC"}
-        }
+  "name": "Hot Beach",
+  "color": "#E6DD70",
+  "rarity": 1,
+  "derivative": "minecraft:warm_ocean",
+  "vanillaDerivative": "minecraft:desert",
+  "customDerivitives": [
+    {
+      "foliageColor": "#b8945a",
+      "category": "beach",
+      "downfallType": "none",
+      "humidity": 0,
+      "temperature": 0.95,
+      "id": "hot_beach"
+    }
+  ],
+  "generators": [
+    {
+      "min": 0,
+      "max": 1,
+      "generator": "plain"
+    }
+  ],
+  "wall": {
+    "palette": [
+      {
+        "block": "minecraft:smooth_sandstone"
+      },
+      {
+        "block": "minecraft:sand"
+      },
+      {
+        "block": "minecraft:smooth_sandstone"
+      }
     ]
+  },
+  "layers": [
+    {
+      "minHeight": 3,
+      "maxHeight": 6,
+      "palette": [
+        {
+          "block": "minecraft:sand"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "density": 3,
+      "mode": "MIN_HEIGHT",
+      "chance": 0.25,
+      "place": [
+        "trees/jungle/palm1",
+        "trees/jungle/palm2",
+        "trees/jungle/palm3",
+        "trees/jungle/palm4",
+        "trees/jungle/palm6",
+        "trees/jungle/palm7"
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.01,
+      "zoom": 0.3,
+      "palette": [
+        {
+          "data": {
+            "face": "floor",
+            "powered": false,
+            "facing": "east"
+          },
+          "block": "minecraft:jungle_button"
+        },
+        {
+          "data": {
+            "eggs": 1,
+            "hatch": 0
+          },
+          "block": "minecraft:turtle_egg"
+        },
+        {
+          "data": {
+            "eggs": 2,
+            "hatch": 0
+          },
+          "block": "minecraft:turtle_egg"
+        },
+        {
+          "data": {
+            "eggs": 3,
+            "hatch": 0
+          },
+          "block": "minecraft:turtle_egg"
+        },
+        {
+          "block": "minecraft:air"
+        },
+        {
+          "data": {
+            "face": "floor",
+            "powered": false,
+            "facing": "south"
+          },
+          "block": "minecraft:jungle_button"
+        }
+      ]
+    },
+    "snippet/decorator/plants/sugar-cane-shore-c0-18"
+  ]
 }

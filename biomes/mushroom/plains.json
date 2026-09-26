@@ -22,22 +22,7 @@
       "generator": "plain"
     }
   ],
-  "wall": {
-    "style": {
-      "style": "STATIC"
-    },
-    "palette": [
-      {
-        "block": "minecraft:stone"
-      },
-      {
-        "block": "minecraft:andesite"
-      },
-      {
-        "block": "minecraft:stone"
-      }
-    ]
-  },
+  "wall": "snippet/biome-palette/wall/stone-andesite",
   "layers": [
     {
       "zoom": 0.3,
@@ -55,215 +40,19 @@
         }
       ]
     },
-    {
-      "minHeight": 2,
-      "maxHeight": 4,
-      "palette": [
-        {
-          "block": "minecraft:dirt"
-        },
-        {
-          "block": "minecraft:coarse_dirt"
-        }
-      ]
-    },
-    {
-      "minHeight": 6,
-      "maxHeight": 18,
-      "style": {
-        "style": "STATIC"
-      },
-      "palette": [
-        {
-          "block": "minecraft:stone"
-        },
-        {
-          "block": "minecraft:andesite"
-        },
-        {
-          "block": "minecraft:stone"
-        }
-      ]
-    }
+    "snippet/biome-palette/soil/dirt-coarse-2-4",
+    "snippet/biome-palette/stone/andesite-blend-6-18"
   ],
   "objects": [
-    {
-      "chance": 0.08,
-      "density": 2,
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "trees/mushroom/mushclut1",
-        "trees/mushroom/mushclut2",
-        "trees/mushroom/mushclut3",
-        "trees/mushroom/mushclut4",
-        "trees/mushroom/mushclut5",
-        "trees/mushroom/mushclut6",
-        "trees/mushroom/mushclut7",
-        "trees/mushroom/mushclut8",
-        "trees/mushroom/mushclut9",
-        "trees/mushroom/mushclut10"
-      ],
-      "translate": {
-        "x": 0,
-        "y": -1,
-        "z": 0
-      }
-    },
-    {
-      "chance": 0.08,
-      "density": 2,
-      "edit": [
-        {
-          "find": [
-            {
-              "block": "minecraft:red_mushroom_block"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:brown_mushroom_block"
-              }
-            ]
-          }
-        }
-      ],
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "trees/mushroom/mushclut1",
-        "trees/mushroom/mushclut2",
-        "trees/mushroom/mushclut3",
-        "trees/mushroom/mushclut4",
-        "trees/mushroom/mushclut5",
-        "trees/mushroom/mushclut6",
-        "trees/mushroom/mushclut7",
-        "trees/mushroom/mushclut8",
-        "trees/mushroom/mushclut9",
-        "trees/mushroom/mushclut10"
-      ],
-      "translate": {
-        "x": 0,
-        "y": -1,
-        "z": 0
-      }
-    },
-    {
-      "chance": 0.025,
-      "density": 1,
-      "edit": [
-        {
-          "find": [
-            {
-              "block": "minecraft:red_mushroom_block"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:brown_mushroom_block"
-              }
-            ]
-          }
-        }
-      ],
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "trees/mushroom/smolshroom1",
-        "trees/mushroom/smolshroom2",
-        "trees/mushroom/smolshroom3",
-        "trees/mushroom/smolshroom4",
-        "trees/mushroom/smolshroom5"
-      ],
-      "translate": {
-        "x": 0,
-        "y": -1,
-        "z": 0
-      }
-    },
-    {
-      "chance": 0.1,
-      "density": 1,
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "trees/mushroom/smolshroom1",
-        "trees/mushroom/smolshroom2",
-        "trees/mushroom/smolshroom3",
-        "trees/mushroom/smolshroom4",
-        "trees/mushroom/smolshroom5"
-      ],
-      "translate": {
-        "x": 0,
-        "y": -1,
-        "z": 0
-      }
-    }
+    "snippet/object-placer/trees/mushroom-mushclut-c0-08-d2",
+    "snippet/object-placer/trees/mushroom-mushclut-c0-08-d2-brown-caps",
+    "snippet/object-placer/trees/mushroom-smolshroom-c0-025-d1-brown-caps",
+    "snippet/object-placer/trees/mushroom-smolshroom-c0-1-d1"
   ],
   "decorators": [
-    {
-      "chance": 0.005,
-      "variance": {
-        "style": "STATIC"
-      },
-      "zoom": 0.3,
-      "palette": [
-        {
-          "data": {
-            "face": "floor",
-            "powered": false,
-            "facing": "east"
-          },
-          "block": "minecraft:stone_button"
-        },
-        {
-          "data": {
-            "face": "floor",
-            "powered": false,
-            "facing": "south"
-          },
-          "block": "minecraft:stone_button"
-        }
-      ],
-      "style": {
-        "style": "STATIC"
-      }
-    },
+    "snippet/decorator/pebbles/stone-c0-005",
     {
       "chance": 0.007,
-      "variance": {
-        "style": "STATIC"
-      },
       "zoom": 0.3,
       "palette": [
         {
@@ -272,16 +61,10 @@
         {
           "block": "minecraft:brown_mushroom"
         }
-      ],
-      "style": {
-        "style": "STATIC"
-      }
+      ]
     }
   ],
   "slab": {
-    "style": {
-      "style": "STATIC"
-    },
     "palette": [
       {
         "weight": 2,
@@ -301,24 +84,5 @@
       }
     ]
   },
-  "terrain3D": {
-    "enabled": true,
-    "seed": 30101,
-    "amplitude": 10,
-    "horizontalScale": 192,
-    "verticalScale": 24,
-    "densityStyle": {
-      "style": "PERLIN"
-    },
-    "crackDepth": 0,
-    "crackWidth": 2.25,
-    "crackScale": 392,
-    "crackStyle": {
-      "style": "SIMPLEX"
-    },
-    "minimumSlope": 0.18,
-    "slopeFade": 0.3,
-    "fluidClearance": 8,
-    "fluidFade": 24
-  }
+  "terrain3D": "snippet/terrain-3d/rolling/amp10-perlin-crack392"
 }

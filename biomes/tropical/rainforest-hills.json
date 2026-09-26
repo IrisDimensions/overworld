@@ -11,35 +11,7 @@
       "generator": "plain-cliffs"
     }
   ],
-  "wall": {
-    "style": {
-      "style": "NOWHERE"
-    },
-    "zoom": 0.1,
-    "palette": [
-      {
-        "block": "minecraft:stripped_jungle_wood"
-      },
-      {
-        "block": "minecraft:jungle_leaves"
-      },
-      {
-        "block": "minecraft:stripped_jungle_wood"
-      },
-      {
-        "block": "minecraft:jungle_leaves"
-      },
-      {
-        "block": "minecraft:stripped_jungle_wood"
-      },
-      {
-        "block": "minecraft:jungle_leaves"
-      },
-      {
-        "block": "minecraft:stripped_jungle_wood"
-      }
-    ]
-  },
+  "wall": "snippet/biome-palette/wall/jungle-wood-leaves",
   "layers": [
     {
       "palette": [
@@ -57,42 +29,10 @@
         }
       ]
     },
-    {
-      "minHeight": 6,
-      "maxHeight": 18,
-      "style": {
-        "style": "STATIC"
-      },
-      "palette": [
-        {
-          "block": "minecraft:stone"
-        },
-        {
-          "block": "minecraft:andesite"
-        },
-        {
-          "block": "minecraft:stone"
-        }
-      ]
-    }
+    "snippet/biome-palette/stone/andesite-blend-6-18"
   ],
   "objects": [
-    {
-      "mode": "PAINT",
-      "chance": 0.0025,
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "clutter/bincluster1"
-      ]
-    },
+    "snippet/object-placer/clutter/bincluster-paint-c0-0025",
     {
       "chance": 0.7,
       "density": 2,
@@ -274,9 +214,6 @@
     },
     {
       "chance": 0.25,
-      "variance": {
-        "style": "STATIC"
-      },
       "stackMax": 1,
       "zoom": 10,
       "palette": [
@@ -287,69 +224,36 @@
           "block": "minecraft:tall_grass"
         }
       ],
-      "style": {
-        "style": "STATIC"
-      },
-      "heightVariance": {
-        "style": "STATIC"
-      },
       "stackMin": 1
     },
     {
       "chance": 0.05,
-      "variance": {
-        "style": "STATIC"
-      },
       "stackMax": 1,
       "palette": [
         {
           "block": "minecraft:jungle_sapling"
         }
       ],
-      "style": {
-        "style": "STATIC"
-      },
-      "heightVariance": {
-        "style": "STATIC"
-      },
       "stackMin": 1
     },
     {
       "chance": 0.1,
-      "variance": {
-        "style": "STATIC"
-      },
       "stackMax": 1,
       "palette": [
         {
           "block": "minecraft:fern"
         }
       ],
-      "style": {
-        "style": "STATIC"
-      },
-      "heightVariance": {
-        "style": "STATIC"
-      },
       "stackMin": 1
     },
     {
       "chance": 0.1,
-      "variance": {
-        "style": "STATIC"
-      },
       "stackMax": 1,
       "palette": [
         {
           "block": "minecraft:dead_bush"
         }
       ],
-      "style": {
-        "style": "STATIC"
-      },
-      "heightVariance": {
-        "style": "STATIC"
-      },
       "stackMin": 1
     }
   ],

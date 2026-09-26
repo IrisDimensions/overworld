@@ -1,222 +1,217 @@
 {
-    "name": "Swamp Denmyre",
-    "color": "#82A30B",
-    "rarity": 1,
-    "derivative": "minecraft:swamp",
-    "vanillaDerivative": "minecraft:dark_forest",
-    "generators": [{
-        "min": 4,
-        "max": 7,
-        "generator": "plain"
-    }],
-    "wall": {
-        "style": {"style": "STATIC"},
-        "palette": [
-            {"block": "minecraft:stone"},
-            {"block": "minecraft:andesite"},
-            {"block": "minecraft:stone"}
-        ]
-    },
-    "layers": [
-        {
-            "style": {"style": "FLAT"},
-            "palette": [{"block": "minecraft:grass_block"}]
-        },
-        {"palette": [{"block": "minecraft:dirt"}]},
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [{"block": "minecraft:coarse_dirt"}]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {"style": "STATIC"},
-            "palette": [
-                {"block": "minecraft:stone"},
-                {"block": "minecraft:andesite"},
-                {"block": "minecraft:stone"}
-            ]
-        }
-    ],
-
-    "objects": [
-        {
-            "mode": "PAINT",
-            "chance": 0.0025,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": ["clutter/bincluster1"]
-        },
-        {
-            "chance": 0.7,
-            "density": 2,
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:acacia_planks"}],
-                    "replace": {"palette": [{"block": "minecraft:stripped_dark_oak_wood"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:acacia_leaves"}],
-                    "replace": {"palette": [{"block": "minecraft:dark_oak_leaves"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:acacia_fence"}],
-                    "replace": {"palette": [{"block": "minecraft:dark_oak_fence"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:acacia_wood"}],
-                    "replace": {"palette": [{"block": "minecraft:dark_oak_wood"}]}
-                }
-            ],
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "trees/acacia/denmyre1",
-                "trees/acacia/denmyre2",
-                "trees/acacia/denmyre3",
-                "trees/acacia/denmyre4",
-                "trees/acacia/denmyre5",
-                "trees/acacia/denmyre6",
-                "trees/acacia/denmyre7"
-            ],
-            "translate": {
-                "x": 0,
-                "y": -1,
-                "z": 0
-            }
-        },
-        {
-            "chance": 0.001,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "clutter/obelisk1",
-                "clutter/obelisk2",
-                "clutter/obelisk3",
-                "clutter/obelisk4",
-                "clutter/obelisk5",
-                "clutter/obelisk6",
-                "clutter/obelisk7"
-            ]
-        },
-        {
-            "chance": 0.3,
-            "edit": [
-                {
-                    "find": [{"block": "minecraft:spruce_leaves"}],
-                    "replace": {"palette": [{"block": "minecraft:dark_oak_leaves"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:birch_leaves"}],
-                    "replace": {"palette": [{"block": "minecraft:dark_oak_leaves"}]}
-                },
-                {
-                    "find": [{"block": "minecraft:dark_oak_fence"}],
-                    "replace": {"palette": [{"block": "minecraft:dark_oak_leaves"}]}
-                }
-            ],
-            "density": 2,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "clutter/oakdenclutt1",
-                "clutter/oakdenclutt2",
-                "clutter/oakdenclutt3",
-                "clutter/oakdenclutt4",
-                "clutter/oakdenclutt5",
-                "clutter/oakdenclutt6",
-                "clutter/oakdenclutt7",
-                "clutter/oakdenclutt8",
-                "clutter/oakdenclutt9",
-                "clutter/oakdenclutt10"
-            ],
-            "translate": {
-                "x": 0,
-                "y": -1,
-                "z": 0
-            }
-        }
-    ],
-    "decorators": [
-        {
-            "chance": 0.01,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.01,
-            "palette": [
-                {"block": "minecraft:dead_bush"},
-                {"block": "minecraft:brown_mushroom"}
-            ],
-            "style": {"style": "STATIC"}
-        },
-        {
-            "chance": 0.4,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.3,
-            "palette": [{"block": "minecraft:short_grass"}],
-            "style": {"style": "STATIC"}
-        },
-        {
-            "chance": 0.003,
-            "variance": {"style": "STATIC"},
-            "zoom": 1,
-            "palette": [
-                {
-                    "data": {
-                        "face": "floor",
-                        "powered": false,
-                        "facing": "east"
-                    },
-                    "block": "minecraft:dark_oak_button"
-                },
-                {
-                    "data": {
-                        "face": "floor",
-                        "powered": false,
-                        "facing": "south"
-                    },
-                    "block": "minecraft:dark_oak_button"
-                }
-            ],
-            "style": {"style": "STATIC"}
-        },
-        {
-            "chance": 0.017,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.3,
-            "palette": [{"block": "minecraft:tall_grass"}],
-            "style": {"style": "STATIC"}
-        }
-    ],
-    "terrain3D": {
-        "enabled": false
+  "name": "Swamp Denmyre",
+  "color": "#82A30B",
+  "rarity": 1,
+  "derivative": "minecraft:swamp",
+  "vanillaDerivative": "minecraft:dark_forest",
+  "generators": [
+    {
+      "min": 4,
+      "max": 7,
+      "generator": "plain"
     }
+  ],
+  "wall": "snippet/biome-palette/wall/stone-andesite",
+  "layers": [
+    {
+      "style": {
+        "style": "FLAT"
+      },
+      "palette": [
+        {
+          "block": "minecraft:grass_block"
+        }
+      ]
+    },
+    {
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:coarse_dirt"
+        }
+      ]
+    },
+    "snippet/biome-palette/stone/andesite-blend-6-18"
+  ],
+  "objects": [
+    "snippet/object-placer/clutter/bincluster-paint-c0-0025",
+    {
+      "chance": 0.7,
+      "density": 2,
+      "edit": [
+        {
+          "find": [
+            {
+              "block": "minecraft:acacia_planks"
+            }
+          ],
+          "replace": {
+            "palette": [
+              {
+                "block": "minecraft:stripped_dark_oak_wood"
+              }
+            ]
+          }
+        },
+        {
+          "find": [
+            {
+              "block": "minecraft:acacia_leaves"
+            }
+          ],
+          "replace": {
+            "palette": [
+              {
+                "block": "minecraft:dark_oak_leaves"
+              }
+            ]
+          }
+        },
+        {
+          "find": [
+            {
+              "block": "minecraft:acacia_fence"
+            }
+          ],
+          "replace": {
+            "palette": [
+              {
+                "block": "minecraft:dark_oak_fence"
+              }
+            ]
+          }
+        },
+        {
+          "find": [
+            {
+              "block": "minecraft:acacia_wood"
+            }
+          ],
+          "replace": {
+            "palette": [
+              {
+                "block": "minecraft:dark_oak_wood"
+              }
+            ]
+          }
+        }
+      ],
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "trees/acacia/denmyre1",
+        "trees/acacia/denmyre2",
+        "trees/acacia/denmyre3",
+        "trees/acacia/denmyre4",
+        "trees/acacia/denmyre5",
+        "trees/acacia/denmyre6",
+        "trees/acacia/denmyre7"
+      ],
+      "translate": {
+        "x": 0,
+        "y": -1,
+        "z": 0
+      }
+    },
+    "snippet/object-placer/clutter/obelisk-c0-001",
+    {
+      "chance": 0.3,
+      "edit": [
+        {
+          "find": [
+            {
+              "block": "minecraft:spruce_leaves"
+            }
+          ],
+          "replace": {
+            "palette": [
+              {
+                "block": "minecraft:dark_oak_leaves"
+              }
+            ]
+          }
+        },
+        "snippet/object-block-replacer/leaves/birch-to-dark-oak",
+        "snippet/object-block-replacer/leaves/dark-oak-fence-to-dark-oak"
+      ],
+      "density": 2,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "clutter/oakdenclutt1",
+        "clutter/oakdenclutt2",
+        "clutter/oakdenclutt3",
+        "clutter/oakdenclutt4",
+        "clutter/oakdenclutt5",
+        "clutter/oakdenclutt6",
+        "clutter/oakdenclutt7",
+        "clutter/oakdenclutt8",
+        "clutter/oakdenclutt9",
+        "clutter/oakdenclutt10"
+      ],
+      "translate": {
+        "x": 0,
+        "y": -1,
+        "z": 0
+      }
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.01,
+      "zoom": 0.01,
+      "palette": [
+        {
+          "block": "minecraft:dead_bush"
+        },
+        {
+          "block": "minecraft:brown_mushroom"
+        }
+      ]
+    },
+    {
+      "chance": 0.4,
+      "zoom": 0.3,
+      "palette": [
+        {
+          "block": "minecraft:short_grass"
+        }
+      ]
+    },
+    "snippet/decorator/twigs/dark-oak-c0-003",
+    {
+      "chance": 0.017,
+      "zoom": 0.3,
+      "palette": [
+        {
+          "block": "minecraft:tall_grass"
+        }
+      ]
+    }
+  ],
+  "terrain3D": {
+    "enabled": false
+  }
 }

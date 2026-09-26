@@ -30,22 +30,7 @@
   "biomeStyle": {
     "style": "SIMPLEX"
   },
-  "wall": {
-    "style": {
-      "style": "STATIC"
-    },
-    "palette": [
-      {
-        "block": "minecraft:stone"
-      },
-      {
-        "block": "minecraft:andesite"
-      },
-      {
-        "block": "minecraft:stone"
-      }
-    ]
-  },
+  "wall": "snippet/biome-palette/wall/stone-andesite",
   "layers": [
     {
       "palette": [
@@ -61,36 +46,8 @@
         }
       ]
     },
-    {
-      "minHeight": 1,
-      "maxHeight": 3,
-      "palette": [
-        {
-          "block": "minecraft:dirt"
-        },
-        {
-          "block": "minecraft:coarse_dirt"
-        }
-      ]
-    },
-    {
-      "minHeight": 6,
-      "maxHeight": 18,
-      "style": {
-        "style": "STATIC"
-      },
-      "palette": [
-        {
-          "block": "minecraft:stone"
-        },
-        {
-          "block": "minecraft:andesite"
-        },
-        {
-          "block": "minecraft:stone"
-        }
-      ]
-    }
+    "snippet/biome-palette/soil/dirt-coarse-1-3",
+    "snippet/biome-palette/stone/andesite-blend-6-18"
   ],
   "objects": [
     {
@@ -104,74 +61,10 @@
         "y": -1
       }
     },
-    {
-      "chance": 0.001,
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "clutter/obelisk1",
-        "clutter/obelisk2",
-        "clutter/obelisk3",
-        "clutter/obelisk4",
-        "clutter/obelisk5",
-        "clutter/obelisk6",
-        "clutter/obelisk7"
-      ]
-    },
-    {
-      "chance": 0.001,
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "clutter/camp1",
-        "clutter/bincluster1"
-      ]
-    },
-    {
-      "mode": "PAINT",
-      "chance": 0.0025,
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "clutter/bincluster1"
-      ]
-    },
-    {
-      "chance": 0.00375,
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "clutter/camp1"
-      ]
-    },
+    "snippet/object-placer/clutter/obelisk-c0-001",
+    "snippet/object-placer/clutter/camp-bincluster-c0-001",
+    "snippet/object-placer/clutter/bincluster-paint-c0-0025",
+    "snippet/object-placer/clutter/camp-c0-00375",
     {
       "chance": 0.4,
       "density": 2,
@@ -198,91 +91,9 @@
         "trees/jungle/lgeneric3"
       ]
     },
-    {
-      "chance": 0.45,
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "trees/jungle/sgeneric1",
-        "trees/jungle/sgeneric2",
-        "trees/jungle/sgeneric3",
-        "trees/jungle/sgeneric4"
-      ],
-      "mode": "ORGANIC_STILT",
-      "stiltSettings": {
-        "organicScratch": 1,
-        "organicJitter": 6,
-        "enabled": true,
-        "minHeight": 1,
-        "maxHeight": 3
-      }
-    },
-    {
-      "chance": 0.06,
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "clutter/boulder1",
-        "clutter/boulder2",
-        "clutter/boulder4",
-        "clutter/boulder5",
-        "clutter/boulder6",
-        "clutter/boulder7",
-        "clutter/boulder8"
-      ],
-      "mode": "PAINT"
-    },
-    {
-      "chance": 0.01,
-      "mode": "PAINT",
-      "density": 3,
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "trees/jungle/largegeneric1",
-        "trees/jungle/largegeneric2",
-        "trees/jungle/largegeneric3",
-        "trees/jungle/largegeneric4",
-        "trees/jungle/largegeneric5"
-      ],
-      "edit": [
-        {
-          "find": [
-            {
-              "block": "minecraft:vine"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:air"
-              }
-            ]
-          }
-        }
-      ]
-    }
+    "snippet/object-placer/trees/jungle-sgeneric-organic-stilt-c0-45",
+    "snippet/object-placer/clutter/boulder-paint-c0-06",
+    "snippet/object-placer/trees/jungle-largegeneric-paint-c0-01-d3-no-vine"
   ],
   "decorators": [
     {
@@ -304,20 +115,7 @@
         }
       ]
     },
-    {
-      "chance": 0.003,
-      "palette": [
-        {
-          "block": "minecraft:oxeye_daisy"
-        },
-        {
-          "block": "minecraft:pink_tulip"
-        },
-        {
-          "block": "minecraft:lily_of_the_valley"
-        }
-      ]
-    },
+    "snippet/decorator/flowers/oxeye-tulip-lily-c0-003",
     {
       "chance": 0.02,
       "palette": [
@@ -332,60 +130,9 @@
         }
       ]
     },
-    {
-      "chance": 0.01,
-      "variance": {
-        "style": "NOWHERE"
-      },
-      "zoom": 0.5,
-      "palette": [
-        {
-          "data": {
-            "age": 7
-          },
-          "block": "minecraft:potatoes"
-        }
-      ],
-      "style": {
-        "style": "NOWHERE"
-      }
-    },
-    {
-      "chance": 0.01,
-      "variance": {
-        "style": "NOWHERE"
-      },
-      "zoom": 0.5,
-      "palette": [
-        {
-          "data": {
-            "age": 7
-          },
-          "block": "minecraft:carrots"
-        }
-      ],
-      "style": {
-        "style": "NOWHERE"
-      }
-    },
-    {
-      "chance": 0.01,
-      "variance": {
-        "style": "NOWHERE"
-      },
-      "zoom": 0.5,
-      "palette": [
-        {
-          "data": {
-            "age": 3
-          },
-          "block": "minecraft:beetroots"
-        }
-      ],
-      "style": {
-        "style": "NOWHERE"
-      }
-    }
+    "snippet/decorator/crops/potatoes-c0-01",
+    "snippet/decorator/crops/carrots-c0-01",
+    "snippet/decorator/crops/beetroots-c0-01"
   ],
   "effects": [
     {
@@ -397,24 +144,5 @@
       "particleCount": 5
     }
   ],
-  "terrain3D": {
-    "enabled": true,
-    "seed": 30101,
-    "amplitude": 10,
-    "horizontalScale": 192,
-    "verticalScale": 24,
-    "densityStyle": {
-      "style": "PERLIN"
-    },
-    "crackDepth": 0,
-    "crackWidth": 2.25,
-    "crackScale": 392,
-    "crackStyle": {
-      "style": "SIMPLEX"
-    },
-    "minimumSlope": 0.18,
-    "slopeFade": 0.3,
-    "fluidClearance": 8,
-    "fluidFade": 24
-  }
+  "terrain3D": "snippet/terrain-3d/rolling/amp10-perlin-crack392"
 }

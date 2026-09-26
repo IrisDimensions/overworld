@@ -1,117 +1,124 @@
 {
-    "name": "Swamp Beach",
-    "color": "#55A300",
-    "rarity": 1,
-    "derivative": "minecraft:swamp",
-    "vanillaDerivative": "minecraft:beach",
-    "generators": [{
-        "min": -5,
-        "max": 1,
-        "generator": "plain"
-    }],
-    "layers": [{
-        "minHeight": 3,
-        "maxHeight": 6,
-        "style": {"style": "NOWHERE"},
-        "zoom": 0.2,
-        "palette": [
-            {"block": "minecraft:coarse_dirt"},
-            {"block": "minecraft:mud"}
-        ]
-    }],
-    "objects": [{
-        "place": [
-            "trees/jungle/lgeneric1",
-            "trees/jungle/lgeneric2",
-            "trees/jungle/lgeneric3",
-            "trees/jungle/lgeneric4",
-            "trees/jungle/lgeneric5",
-            "trees/jungle/lgeneric7",
-            "trees/jungle/lgeneric8",
-            "trees/jungle/lgeneric9"
-        ],
-        "chance": 0.24,
-        "density": 3,
-        "edit": [
-            {
-                "find": [{"block": "minecraft:jungle_leaves"}],
-                "replace": {"palette": [{"block": "minecraft:oak_leaves"}]}
-            },
-            {
-                "find": [{"block": "minecraft:jungle_wood"}],
-                "replace": {"palette": [{"block": "minecraft:dark_oak_wood"}]}
-            },
-            {
-                "find": [{"block": "minecraft:jungle_log"}],
-                "replace": {"palette": [{"block": "minecraft:dark_oak_wood"}]}
-            }
-        ],
-        "rotation": {
-            "enabled": true,
-            "yAxis": {
-                "enabled": true,
-                "interval": 90,
-                "min": 0,
-                "max": 270
-            }
-        },
-        "translate": {"y": -3}
-    }],
-    "decorators": [
+  "name": "Swamp Beach",
+  "color": "#55A300",
+  "rarity": 1,
+  "derivative": "minecraft:swamp",
+  "vanillaDerivative": "minecraft:beach",
+  "generators": [
+    {
+      "min": -5,
+      "max": 1,
+      "generator": "plain"
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 3,
+      "maxHeight": 6,
+      "style": {
+        "style": "NOWHERE"
+      },
+      "zoom": 0.2,
+      "palette": [
         {
-            "chance": 0.004,
-            "palette": [
-                {
-                    "weight": 6,
-                    "data": {
-                        "eggs": 1,
-                        "hatch": 0
-                    },
-                    "block": "minecraft:turtle_egg"
-                },
-                {
-                    "weight": 3,
-                    "data": {
-                        "eggs": 2,
-                        "hatch": 0
-                    },
-                    "block": "minecraft:turtle_egg"
-                },
-                {
-                    "data": {
-                        "eggs": 3,
-                        "hatch": 0
-                    },
-                    "block": "minecraft:turtle_egg"
-                }
-            ]
+          "block": "minecraft:coarse_dirt"
         },
         {
-            "chance": 0.01,
-            "variance": {"style": "STATIC"},
-            "zoom": 0.3,
-            "palette": [
-                {
-                    "data": {
-                        "face": "floor",
-                        "powered": false,
-                        "facing": "east"
-                    },
-                    "block": "minecraft:dark_oak_button"
-                },
-                {"block": "minecraft:air"}
-            ],
-            "style": {"style": "STATIC"}
+          "block": "minecraft:mud"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "place": [
+        "trees/jungle/lgeneric1",
+        "trees/jungle/lgeneric2",
+        "trees/jungle/lgeneric3",
+        "trees/jungle/lgeneric4",
+        "trees/jungle/lgeneric5",
+        "trees/jungle/lgeneric7",
+        "trees/jungle/lgeneric8",
+        "trees/jungle/lgeneric9"
+      ],
+      "chance": 0.24,
+      "density": 3,
+      "edit": [
+        "snippet/object-block-replacer/leaves/jungle-to-oak",
+        "snippet/object-block-replacer/wood/jungle-to-dark-oak",
+        "snippet/object-block-replacer/wood/jungle-log-to-dark-oak-wood"
+      ],
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "interval": 90,
+          "min": 0,
+          "max": 270
+        }
+      },
+      "translate": {
+        "y": -3
+      }
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.004,
+      "palette": [
+        {
+          "weight": 6,
+          "data": {
+            "eggs": 1,
+            "hatch": 0
+          },
+          "block": "minecraft:turtle_egg"
         },
         {
-            "partOf": "SHORE_LINE",
-            "chance": 0.29,
-            "stackMin": 1,
-            "stackMax": 4,
-            "palette": [{"block": "minecraft:sugar_cane"}],
-            "style": {"style": "STATIC"},
-            "heightVariance": {"style": "STATIC"}
+          "weight": 3,
+          "data": {
+            "eggs": 2,
+            "hatch": 0
+          },
+          "block": "minecraft:turtle_egg"
         },
-        "snippet/decorator/firefly-bush"
-    ]
+        {
+          "data": {
+            "eggs": 3,
+            "hatch": 0
+          },
+          "block": "minecraft:turtle_egg"
+        }
+      ]
+    },
+    {
+      "chance": 0.01,
+      "zoom": 0.3,
+      "palette": [
+        {
+          "data": {
+            "face": "floor",
+            "powered": false,
+            "facing": "east"
+          },
+          "block": "minecraft:dark_oak_button"
+        },
+        {
+          "block": "minecraft:air"
+        }
+      ]
+    },
+    {
+      "partOf": "SHORE_LINE",
+      "chance": 0.29,
+      "stackMin": 1,
+      "stackMax": 4,
+      "palette": [
+        {
+          "block": "minecraft:sugar_cane"
+        }
+      ]
+    },
+    "snippet/decorator/shrubs/firefly-bush"
+  ]
 }

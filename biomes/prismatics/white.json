@@ -26,9 +26,6 @@
     }
   ],
   "wall": {
-    "style": {
-      "style": "STATIC"
-    },
     "palette": [
       {
         "block": "minecraft:white_concrete"
@@ -39,9 +36,6 @@
     {
       "minHeight": 2,
       "maxHeight": 3,
-      "style": {
-        "style": "STATIC"
-      },
       "palette": [
         {
           "block": "minecraft:white_concrete_powder"
@@ -51,9 +45,6 @@
     {
       "minHeight": 4,
       "maxHeight": 8,
-      "style": {
-        "style": "STATIC"
-      },
       "palette": [
         {
           "block": "minecraft:white_concrete"
@@ -88,34 +79,8 @@
         "clutter/concretelith7"
       ],
       "edit": [
-        {
-          "find": [
-            {
-              "block": "minecraft:black_concrete"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:white_concrete"
-              }
-            ]
-          }
-        },
-        {
-          "find": [
-            {
-              "block": "minecraft:black_concrete_powder"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:white_concrete_powder"
-              }
-            ]
-          }
-        }
+        "snippet/object-block-replacer/concrete/black-to-white",
+        "snippet/object-block-replacer/concrete/black-powder-to-white-powder"
       ]
     },
     {
@@ -144,34 +109,8 @@
         "clutter/concretelith7"
       ],
       "edit": [
-        {
-          "find": [
-            {
-              "block": "minecraft:black_concrete"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:white_concrete"
-              }
-            ]
-          }
-        },
-        {
-          "find": [
-            {
-              "block": "minecraft:black_concrete_powder"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:white_concrete_powder"
-              }
-            ]
-          }
-        }
+        "snippet/object-block-replacer/concrete/black-to-white",
+        "snippet/object-block-replacer/concrete/black-powder-to-white-powder"
       ],
       "scale": {
         "minimumScale": 0.5,
@@ -206,34 +145,8 @@
         "clutter/concretelith7"
       ],
       "edit": [
-        {
-          "find": [
-            {
-              "block": "minecraft:black_concrete"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:white_concrete"
-              }
-            ]
-          }
-        },
-        {
-          "find": [
-            {
-              "block": "minecraft:black_concrete_powder"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:white_concrete_powder"
-              }
-            ]
-          }
-        }
+        "snippet/object-block-replacer/concrete/black-to-white",
+        "snippet/object-block-replacer/concrete/black-powder-to-white-powder"
       ],
       "scale": {
         "minimumScale": 2.0,
@@ -242,133 +155,9 @@
         "interpolation": "TRILINEAR"
       }
     },
-    {
-      "chance": 0.006,
-      "density": 1,
-      "bottom": true,
-      "rotation": {
-        "enabled": true,
-        "yAxis": {
-          "enabled": true,
-          "min": 0,
-          "max": 270,
-          "interval": 90
-        }
-      },
-      "translate": {
-        "y": -15,
-        "yRandom": 10
-      },
-      "place": [
-        "clutter/bone1",
-        "clutter/bone2",
-        "clutter/bone3",
-        "clutter/bone4",
-        "clutter/bone5",
-        "clutter/bone6",
-        "clutter/bone7"
-      ],
-      "edit": [
-        {
-          "find": [
-            {
-              "block": "minecraft:bone_block"
-            }
-          ],
-          "chance": 0.2,
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:air"
-              },
-              {
-                "block": "minecraft:white_concrete_powder"
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "chance": 0.003,
-      "density": 1,
-      "bottom": true,
-      "rotation": {
-        "enabled": true,
-        "yAxis": {
-          "enabled": true,
-          "min": 0,
-          "max": 270,
-          "interval": 90
-        }
-      },
-      "translate": {
-        "y": -15,
-        "yRandom": 10
-      },
-      "place": [
-        "clutter/bonespire1",
-        "clutter/bonespire2",
-        "clutter/bonespire3",
-        "clutter/bonespire4",
-        "clutter/bonespire5",
-        "clutter/bonespire6",
-        "clutter/bonespire7",
-        "clutter/bonespire8",
-        "clutter/bonespire9",
-        "clutter/bonespire10",
-        "clutter/bonespire11",
-        "clutter/bonespire12",
-        "clutter/bonespire13",
-        "clutter/bonespire14",
-        "clutter/bonespire15",
-        "clutter/bonespire16",
-        "clutter/bonespire17",
-        "clutter/bonespire18",
-        "clutter/bonespire19",
-        "clutter/bonespire20"
-      ],
-      "edit": [
-        {
-          "find": [
-            {
-              "block": "minecraft:bone_block"
-            }
-          ],
-          "chance": 0.2,
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:air"
-              },
-              {
-                "block": "minecraft:white_concrete_powder"
-              }
-            ]
-          }
-        }
-      ]
-    }
+    "snippet/object-placer/clutter/bone-c0-006-d1-weathered",
+    "snippet/object-placer/clutter/bonespire-c0-003-d1-weathered"
   ],
   "lockLayers": true,
-  "terrain3D": {
-    "enabled": true,
-    "seed": 30161,
-    "amplitude": 32,
-    "horizontalScale": 144,
-    "verticalScale": 24,
-    "densityStyle": {
-      "style": "HEXAGON"
-    },
-    "crackDepth": 4,
-    "crackWidth": 2,
-    "crackScale": 392,
-    "crackStyle": {
-      "style": "SIMPLEX"
-    },
-    "minimumSlope": 0.16,
-    "slopeFade": 0.3,
-    "fluidClearance": 8,
-    "fluidFade": 24
-  }
+  "terrain3D": "snippet/terrain-3d/rugged/amp32-hexagon-crack392"
 }

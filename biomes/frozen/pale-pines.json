@@ -195,44 +195,10 @@
         "z": 0
       }
     },
-    {
-      "chance": 0.1,
-      "density": 1,
-      "rotation": {
-        "enabled": true,
-        "yAxis": {
-          "enabled": true,
-          "min": 0,
-          "max": 270,
-          "interval": 90
-        }
-      },
-      "place": [
-        "vanilla/trees/pale_oak_creaking",
-        "vanilla/trees/pale_oak_creaking_2",
-        "vanilla/trees/pale_oak_creaking_3"
-      ]
-    }
+    "snippet/object-placer/trees/pale-oak-creaking-c0-1-d1"
   ],
   "decorators": [
-    {
-      "chance": 1,
-      "variance": {
-        "style": "NOWHERE",
-        "zoom": 0.23
-      },
-      "palette": [
-        {
-          "block": "minecraft:snow",
-          "data": {
-            "layers": 1
-          }
-        },
-        {
-          "block": "minecraft:air"
-        }
-      ]
-    },
+    "snippet/decorator/snow/patchy-layer-c1",
     {
       "chance": 0.12,
       "palette": [
@@ -247,24 +213,5 @@
       ]
     }
   ],
-  "terrain3D": {
-    "enabled": true,
-    "seed": 30103,
-    "amplitude": 18,
-    "horizontalScale": 160,
-    "verticalScale": 40,
-    "densityStyle": {
-      "style": "SIMPLEX"
-    },
-    "crackDepth": 0,
-    "crackWidth": 2,
-    "crackScale": 416,
-    "crackStyle": {
-      "style": "SIMPLEX"
-    },
-    "minimumSlope": 0.28,
-    "slopeFade": 0.4,
-    "fluidClearance": 8,
-    "fluidFade": 24
-  }
+  "terrain3D": "snippet/terrain-3d/hilly/amp18-simplex-crack416"
 }

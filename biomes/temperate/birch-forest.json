@@ -24,42 +24,9 @@
   "biomeStyle": {
     "style": "SIMPLEX"
   },
-  "wall": {
-    "style": {
-      "style": "STATIC"
-    },
-    "palette": [
-      {
-        "block": "minecraft:stone"
-      },
-      {
-        "block": "minecraft:andesite"
-      },
-      {
-        "block": "minecraft:stone"
-      }
-    ]
-  },
+  "wall": "snippet/biome-palette/wall/stone-andesite",
   "layers": [
-    {
-      "style": {
-        "style": "STATIC"
-      },
-      "zoom": 0.656,
-      "palette": [
-        {
-          "weight": 19,
-          "block": "minecraft:grass_block"
-        },
-        {
-          "block": "minecraft:gravel"
-        },
-        {
-          "weight": 19,
-          "block": "minecraft:grass_block"
-        }
-      ]
-    },
+    "snippet/biome-palette/grass/gravel-flecks",
     {
       "palette": [
         {
@@ -67,70 +34,12 @@
         }
       ]
     },
-    {
-      "minHeight": 1,
-      "maxHeight": 3,
-      "palette": [
-        {
-          "block": "minecraft:dirt"
-        },
-        {
-          "block": "minecraft:coarse_dirt"
-        }
-      ]
-    },
-    {
-      "minHeight": 6,
-      "maxHeight": 18,
-      "style": {
-        "style": "STATIC"
-      },
-      "palette": [
-        {
-          "block": "minecraft:stone"
-        },
-        {
-          "block": "minecraft:andesite"
-        },
-        {
-          "block": "minecraft:stone"
-        }
-      ]
-    }
+    "snippet/biome-palette/soil/dirt-coarse-1-3",
+    "snippet/biome-palette/stone/andesite-blend-6-18"
   ],
   "objects": [
-    {
-      "mode": "PAINT",
-      "chance": 0.0025,
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "clutter/bincluster1"
-      ]
-    },
-    {
-      "mode": "PAINT",
-      "chance": 0.00375,
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "clutter/camp1"
-      ]
-    },
+    "snippet/object-placer/clutter/bincluster-paint-c0-0025",
+    "snippet/object-placer/clutter/camp-paint-c0-00375",
     {
       "chance": 0.29,
       "density": 3,
@@ -157,158 +66,36 @@
         "trees/birch/antioch13"
       ]
     },
-    {
-      "chance": 0.08,
-      "density": 4,
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "trees/birch/forest1",
-        "trees/birch/forest2",
-        "trees/birch/forest3",
-        "trees/birch/forest4"
-      ]
-    },
-    {
-      "chance": 0.08,
-      "density": 2,
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "trees/birch/antioch3b",
-        "trees/birch/antioch4b",
-        "trees/birch/antioch5b",
-        "trees/birch/antioch6b"
-      ]
-    },
-    {
-      "chance": 0.008,
-      "mode": "PAINT",
-      "place": [
-        "clutter/pumpkins1",
-        "clutter/pumpkins2",
-        "clutter/pumpkins3",
-        "clutter/pumpkins4",
-        "clutter/pumpkins5",
-        "clutter/pumpkins6"
-      ],
-      "rotation": {
-        "enabled": true,
-        "yAxis": {
-          "enabled": true,
-          "max": 360,
-          "min": 0,
-          "interval": 90
-        }
-      },
-      "translate": {
-        "y": 1
-      }
-    }
+    "snippet/object-placer/trees/birch-forest-c0-08-d4",
+    "snippet/object-placer/trees/birch-antioch-b-c0-08-d2",
+    "snippet/object-placer/clutter/pumpkins-paint-c0-008"
   ],
   "decorators": [
-    {
-      "chance": 0.03,
-      "variance": {
-        "style": "STATIC"
-      },
-      "zoom": 0.1,
-      "palette": [
-        {
-          "block": "minecraft:allium"
-        },
-        {
-          "block": "minecraft:poppy"
-        },
-        {
-          "block": "minecraft:dandelion"
-        },
-        {
-          "block": "minecraft:azure_bluet"
-        },
-        {
-          "block": "minecraft:pink_tulip"
-        },
-        {
-          "block": "minecraft:cornflower"
-        },
-        {
-          "block": "minecraft:lily_of_the_valley"
-        }
-      ],
-      "style": {
-        "style": "STATIC"
-      }
-    },
+    "snippet/decorator/flowers/allium-mix-c0-03",
     {
       "chance": 0.4,
-      "variance": {
-        "style": "STATIC"
-      },
       "zoom": 0.3,
       "palette": [
         {
           "block": "minecraft:short_grass"
         }
-      ],
-      "style": {
-        "style": "STATIC"
-      }
+      ]
     },
     {
       "chance": 0.017,
-      "variance": {
-        "style": "STATIC"
-      },
       "zoom": 0.3,
       "palette": [
         {
           "block": "minecraft:tall_grass"
         }
-      ],
-      "style": {
-        "style": "STATIC"
-      }
+      ]
     },
-    "snippet/decorator/wildflowers",
-    "snippet/decorator/bush"
+    "snippet/decorator/flowers/wildflowers",
+    "snippet/decorator/shrubs/bush"
   ],
   "childStyle": {
     "style": "NOWHERE_SIMPLEX",
     "zoom": 5
   },
-  "terrain3D": {
-    "enabled": true,
-    "seed": 30107,
-    "amplitude": 30,
-    "horizontalScale": 280,
-    "verticalScale": 36,
-    "densityStyle": {
-      "style": "PERLIN"
-    },
-    "crackDepth": 0,
-    "crackWidth": 2.25,
-    "crackScale": 448,
-    "crackStyle": {
-      "style": "SIMPLEX"
-    },
-    "minimumSlope": 0.2,
-    "slopeFade": 0.35,
-    "fluidClearance": 8,
-    "fluidFade": 24
-  }
+  "terrain3D": "snippet/terrain-3d/rugged/amp30-perlin-crack448"
 }

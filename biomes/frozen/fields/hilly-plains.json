@@ -1,107 +1,56 @@
 {
-    "proceduralObjects": "snippet/procedural-objects/frozen/magical-ice-surface",
-    "name": "Hilly Plains",
-    "color": "#4E5A61",
-    "rarity": 1,
-    "derivative": "minecraft:snowy_plains",
-    "vanillaDerivative": "minecraft:snowy_plains",
-    "customDerivitives": [
-        {
-            "category": "taiga",
-            "foliageColor": "#194569",
-            "id": "winter_mountain_forest1",
-            "grassColor": "#FFFAFA"
-        },
-        {
-            "category": "taiga",
-            "foliageColor": "#5F84A2",
-            "id": "winter_mountain_forest2",
-            "grassColor": "#FFFAFA"
-        },
-        {
-            "category": "taiga",
-            "foliageColor": "#91AEC4",
-            "id": "winter_mountain_forest3",
-            "grassColor": "#FFFAFA"
-        }
-    ],
-    "generators": [
-        {
-            "generator": "prototype/rivers",
-            "max": 10,
-            "min": -5
-        }
-    ],
-    "wall": {
-        "palette": [
-            {
-                "block": "minecraft:stone"
-            },
-            {
-                "block": "minecraft:andesite"
-            },
-            {
-                "block": "minecraft:gravel"
-            }
-        ]
+  "proceduralObjects": "snippet/procedural-objects/frozen/magical-ice-surface",
+  "name": "Hilly Plains",
+  "color": "#4E5A61",
+  "rarity": 1,
+  "derivative": "minecraft:snowy_plains",
+  "vanillaDerivative": "minecraft:snowy_plains",
+  "customDerivitives": [
+    {
+      "category": "taiga",
+      "foliageColor": "#194569",
+      "id": "winter_mountain_forest1",
+      "grassColor": "#FFFAFA"
     },
-    "layers": [
-        {
-            "minHeight": 1,
-            "maxHeight": 1,
-            "slopeCondition": {
-                "minimumSlope": 0,
-                "maximumSlope": 3.3
-            },
-            "palette": [
-                {
-                    "block": "minecraft:snow_block"
-                }
-            ]
-        },
-        {
-            "minHeight": 3,
-            "maxHeight": 3,
-            "slopeCondition": {
-                "minimumSlope": 0,
-                "maximumSlope": 3
-            },
-            "palette": [
-                {
-                    "block": "minecraft:dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 3,
-            "maxHeight": 3,
-            "slopeCondition": {
-                "minimumSlope": 0,
-                "maximumSlope": 3
-            },
-            "palette": [
-                {
-                    "block": "minecraft:dirt"
-                },
-                {
-                    "block": "minecraft:stone"
-                }
-            ]
-        }
-    ],
-    "objects": [
-        {
-            "mode": "PAINT",
-            "chance": 0.1,
-            "place": [
-                "clutter/sbush1",
-                "clutter/sbush2",
-                "clutter/sbush3"
-            ],
-            "snow": 0.25
-        }
-    ],
-    "terrain3D": {
-        "enabled": false
+    {
+      "category": "taiga",
+      "foliageColor": "#5F84A2",
+      "id": "winter_mountain_forest2",
+      "grassColor": "#FFFAFA"
+    },
+    {
+      "category": "taiga",
+      "foliageColor": "#91AEC4",
+      "id": "winter_mountain_forest3",
+      "grassColor": "#FFFAFA"
     }
+  ],
+  "generators": [
+    {
+      "generator": "prototype/rivers",
+      "max": 10,
+      "min": -5
+    }
+  ],
+  "wall": "snippet/biome-palette/wall/stone-andesite-gravel",
+  "layers": [
+    "snippet/biome-palette/snow/top-1-1-flat3-3",
+    "snippet/biome-palette/soil/dirt-3-3-flat3",
+    "snippet/biome-palette/soil/dirt-stone-3-3-flat3"
+  ],
+  "objects": [
+    {
+      "mode": "PAINT",
+      "chance": 0.1,
+      "place": [
+        "clutter/sbush1",
+        "clutter/sbush2",
+        "clutter/sbush3"
+      ],
+      "snow": 0.25
+    }
+  ],
+  "terrain3D": {
+    "enabled": false
+  }
 }

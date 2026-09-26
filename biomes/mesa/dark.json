@@ -42,9 +42,6 @@
     {
       "minHeight": 2,
       "maxHeight": 3,
-      "style": {
-        "style": "STATIC"
-      },
       "palette": [
         {
           "block": "minecraft:terracotta"
@@ -54,9 +51,6 @@
     {
       "minHeight": 2,
       "maxHeight": 3,
-      "style": {
-        "style": "STATIC"
-      },
       "palette": [
         {
           "block": "minecraft:brown_terracotta"
@@ -66,9 +60,6 @@
     {
       "minHeight": 2,
       "maxHeight": 3,
-      "style": {
-        "style": "STATIC"
-      },
       "palette": [
         {
           "block": "minecraft:gray_terracotta"
@@ -78,9 +69,6 @@
     {
       "minHeight": 2,
       "maxHeight": 3,
-      "style": {
-        "style": "STATIC"
-      },
       "palette": [
         {
           "block": "minecraft:black_terracotta"
@@ -90,9 +78,6 @@
     {
       "minHeight": 2,
       "maxHeight": 3,
-      "style": {
-        "style": "STATIC"
-      },
       "palette": [
         {
           "block": "minecraft:gray_terracotta"
@@ -102,9 +87,6 @@
     {
       "minHeight": 2,
       "maxHeight": 3,
-      "style": {
-        "style": "STATIC"
-      },
       "palette": [
         {
           "block": "minecraft:brown_terracotta"
@@ -113,71 +95,19 @@
     }
   ],
   "decorators": [
-    {
-      "chance": 0.009,
-      "variance": {
-        "style": "STATIC"
-      },
-      "zoom": 0.3,
-      "palette": [
-        {
-          "data": {
-            "face": "floor",
-            "powered": false,
-            "facing": "east"
-          },
-          "block": "minecraft:stone_button"
-        },
-        {
-          "data": {
-            "face": "floor",
-            "powered": false,
-            "facing": "south"
-          },
-          "block": "minecraft:stone_button"
-        }
-      ],
-      "style": {
-        "style": "STATIC"
-      }
-    },
+    "snippet/decorator/pebbles/stone-c0-009",
     {
       "chance": 0.01,
-      "variance": {
-        "style": "STATIC"
-      },
       "zoom": 0.3,
       "palette": [
         {
           "block": "minecraft:dead_bush"
         }
-      ],
-      "style": {
-        "style": "STATIC"
-      }
+      ]
     },
-    "snippet/decorator/dry_grass"
+    "snippet/decorator/grass/dry-grass"
   ],
   "childShrinkFactor": 0.35,
   "lockLayers": true,
-  "terrain3D": {
-    "enabled": true,
-    "seed": 30119,
-    "amplitude": 38,
-    "horizontalScale": 176,
-    "verticalScale": 44,
-    "densityStyle": {
-      "style": "PERLIN"
-    },
-    "crackDepth": 4,
-    "crackWidth": 2,
-    "crackScale": 392,
-    "crackStyle": {
-      "style": "PERLIN"
-    },
-    "minimumSlope": 0.28,
-    "slopeFade": 0.4,
-    "fluidClearance": 8,
-    "fluidFade": 24
-  }
+  "terrain3D": "snippet/terrain-3d/rugged/amp38-perlin-crack392"
 }

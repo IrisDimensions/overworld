@@ -1,114 +1,114 @@
 {
-    "name": "Ocean",
-    "color": "#5244D5",
-    "derivative": "minecraft:ocean",
-    "vanillaDerivative": "minecraft:ocean",
-    "generators": [
+  "name": "Ocean",
+  "color": "#5244D5",
+  "derivative": "minecraft:ocean",
+  "vanillaDerivative": "minecraft:ocean",
+  "generators": [
+    {
+      "generator": "mountain",
+      "max": -35,
+      "min": -60
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 2,
+      "maxHeight": 2,
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 3
+      },
+      "style": {
+        "style": "FRACTAL_FBM_IRIS"
+      },
+      "zoom": 0.6,
+      "palette": [
         {
-            "generator": "mountain",
-            "max": -35,
-            "min": -60
-        }
-    ],
-    "layers": [
-        {
-            "minHeight": 2,
-            "maxHeight": 2,
-            "slopeCondition": {
-                "minimumSlope": 0,
-                "maximumSlope": 3
-            },
-            "style": {
-                "style": "FRACTAL_FBM_IRIS"
-            },
-            "zoom": 0.6,
-            "palette": [
-                {
-                    "block": "minecraft:sand"
-                },
-                {
-                    "block": "minecraft:clay"
-                },
-                {
-                    "block": "minecraft:sand"
-                },
-                {
-                    "block": "minecraft:gravel"
-                },
-                {
-                    "block": "minecraft:sand"
-                },
-                {
-                    "block": "minecraft:dirt"
-                },
-                {
-                    "weight": 2,
-                    "block": "minecraft:sand"
-                }
-            ]
+          "block": "minecraft:sand"
         },
         {
-            "minHeight": 2,
-            "maxHeight": 10,
-            "palette": [
-                {
-                    "block": "minecraft:gravel"
-                }
-            ]
-        }
-    ],
-    "decorators": [
-        {
-            "chance": 0.02,
-            "palette": [
-                {
-                    "block": "minecraft:kelp_plant"
-                }
-            ],
-            "stackMin": 2,
-            "stackMax": 6
+          "block": "minecraft:clay"
         },
         {
-            "chance": 0.05,
-            "palette": [
-                {
-                    "block": "minecraft:seagrass"
-                }
-            ]
+          "block": "minecraft:sand"
         },
         {
-            "chance": 0.05,
-            "palette": [
-                {
-                    "block": "minecraft:tall_seagrass",
-                    "data": {
-                        "half": "lower"
-                    }
-                }
-            ],
-            "topPalette": [
-                {
-                    "block": "minecraft:tall_seagrass",
-                    "data": {
-                        "half": "upper"
-                    }
-                }
-            ]
+          "block": "minecraft:gravel"
+        },
+        {
+          "block": "minecraft:sand"
+        },
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "weight": 2,
+          "block": "minecraft:sand"
         }
-    ],
-    "childStyle": {
-        "style": "SIMPLEX",
-        "zoom": 2,
-        "fracture": {
-            "style": "SIMPLEX",
-            "zoom": 0.8,
-            "multiplier": 50,
-            "fracture": {
-                "style": "CELLULAR",
-                "zoom": 0.3,
-                "multiplier": 25
-            }
-        }
+      ]
     },
-    "childShrinkFactor": 1
+    {
+      "minHeight": 2,
+      "maxHeight": 10,
+      "palette": [
+        {
+          "block": "minecraft:gravel"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.02,
+      "palette": [
+        {
+          "block": "minecraft:kelp_plant"
+        }
+      ],
+      "stackMin": 2,
+      "stackMax": 6
+    },
+    {
+      "chance": 0.05,
+      "palette": [
+        {
+          "block": "minecraft:seagrass"
+        }
+      ]
+    },
+    {
+      "chance": 0.05,
+      "palette": [
+        {
+          "block": "minecraft:tall_seagrass",
+          "data": {
+            "half": "lower"
+          }
+        }
+      ],
+      "topPalette": [
+        {
+          "block": "minecraft:tall_seagrass",
+          "data": {
+            "half": "upper"
+          }
+        }
+      ]
+    }
+  ],
+  "childStyle": {
+    "style": "SIMPLEX",
+    "zoom": 2,
+    "fracture": {
+      "style": "SIMPLEX",
+      "zoom": 0.8,
+      "multiplier": 50,
+      "fracture": {
+        "style": "CELLULAR",
+        "zoom": 0.3,
+        "multiplier": 25
+      }
+    }
+  },
+  "childShrinkFactor": 1
 }

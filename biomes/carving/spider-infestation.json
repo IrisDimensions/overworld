@@ -1,215 +1,165 @@
 {
-    "name": "Spider Infestation",
-    "derivative": "minecraft:deep_dark",
-    "vanillaDerivative": "minecraft:deep_dark",
-    "wall": {
-        "palette": [
-            {
-                "block": "minecraft:tuff"
-            }
-        ]
+  "name": "Spider Infestation",
+  "derivative": "minecraft:deep_dark",
+  "vanillaDerivative": "minecraft:deep_dark",
+  "wall": {
+    "palette": [
+      {
+        "block": "minecraft:tuff"
+      }
+    ]
+  },
+  "layers": [
+    {
+      "maxHeight": 1,
+      "minHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:calcite"
+        },
+        {
+          "block": "minecraft:bone_block"
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.2,
+      "scaleStack": true,
+      "stackMin": 30,
+      "stackMax": 60,
+      "partOf": "CEILING",
+      "absoluteMaxStack": 5,
+      "palette": [
+        {
+          "block": "minecraft:cobweb"
+        }
+      ]
+    }
+  ],
+  "caveCeilingLayers": [
+    {
+      "maxHeight": 1,
+      "minHeight": 1,
+      "palette": [
+        {
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "chance": 0.21,
+      "density": 4,
+      "carvingSupport": "CARVING_ONLY",
+      "caveAnchorMode": "PROFILE_DEFAULT",
+      "translate": {
+        "y": -1
+      },
+      "place": [
+        "clutter/stoneclutt4",
+        "clutter/stoneclutt5"
+      ],
+      "bottom": true,
+      "force": true,
+      "scale": {
+        "size": 0.75
+      }
     },
-    "layers": [
-        {
-            "maxHeight": 1,
-            "minHeight": 1,
-            "palette": [
-                {
-                    "block": "minecraft:calcite"
-                },
-                {
-                    "block": "minecraft:bone_block"
-                }
-            ]
-        }
-    ],
-    "decorators": [
-        {
-            "chance": 0.2,
-            "scaleStack": true,
-            "stackMin": 30,
-            "stackMax": 60,
-            "partOf": "CEILING",
-            "absoluteMaxStack": 5,
-            "palette": [
-                {
-                    "block": "minecraft:cobweb"
-                }
-            ]
-        }
-    ],
-    "caveCeilingLayers": [
-        {
-            "maxHeight": 1,
-            "minHeight": 1,
-            "palette": [
-                {
-                    "block": "minecraft:stone"
-                }
-            ]
-        }
-    ],
-    "objects": [
-        {
-            "chance": 0.21,
-            "density": 4,
-            "carvingSupport": "CARVING_ONLY",
-            "caveAnchorMode": "PROFILE_DEFAULT",
-            "translate": {
-                "y": -1
-            },
-            "place": [
-                "clutter/stoneclutt4",
-                "clutter/stoneclutt5"
-            ],
-            "bottom": true,
-            "force": true,
-            "scale": {
-                "size": 0.75
-            }
-        },
-        {
-            "chance": 0.165,
-            "density": 4,
-            "carvingSupport": "CARVING_ONLY",
-            "caveAnchorMode": "PROFILE_DEFAULT",
-            "translate": {
-                "y": -1
-            },
-            "place": [
-                "clutter/stoneclutt1",
-                "clutter/stoneclutt2",
-                "clutter/stoneclutt3",
-                "clutter/stoneclutt4",
-                "clutter/stoneclutt5",
-                "clutter/rock1",
-                "clutter/rock2",
-                "clutter/rock3",
-                "clutter/boulder1",
-                "clutter/boulder2",
-                "clutter/boulder3"
-            ],
-            "bottom": true,
-            "force": true,
-            "scale": {
-                "size": 0.75
-            }
-        },
-        {
-            "chance": 0.0972,
-            "density": 4,
-            "carvingSupport": "CARVING_ONLY",
-            "caveAnchorMode": "PROFILE_DEFAULT",
-            "translate": {
-                "y": -1
-            },
-            "place": [
-                "clutter/stoneclutt5",
-                "clutter/stoneclutt6",
-                "clutter/stoneclutt7",
-                "clutter/rock2",
-                "clutter/rock3",
-                "clutter/rock4",
-                "clutter/boulder13",
-                "clutter/boulder14",
-                "clutter/boulder15"
-            ],
-            "bottom": true,
-            "force": true,
-            "scale": {
-                "size": 0.75
-            }
-        }
-    ],
-    "caveProfile": {
-        "enabled": true,
-        "verticalRange": {
-            "min": 6,
-            "max": 640
-        },
-        "baseDensityStyle": {
-            "style": "SIMPLEX_VASCULAR",
-            "zoom": 0.82
-        },
-        "detailDensityStyle": {
-            "style": "VASCULAR_THIN",
-            "zoom": 1.1
-        },
-        "warpStyle": {
-            "style": "SIMPLEX",
-            "zoom": 0.46
-        },
-        "baseWeight": 0.92,
-        "detailWeight": 0.08,
-        "warpStrength": 0.22,
-        "densityThreshold": {
-            "min": -0.17,
-            "max": -0.1,
-            "style": {
-                "style": "SIMPLEX",
-                "zoom": 0.72
-            }
-        },
-        "thresholdBias": 0.16,
-        "sampleStep": 2,
-        "surfaceClearance": 8,
-        "allowSurfaceBreak": false,
-        "surfaceBreakStyle": {
-            "style": "SIMPLEX",
-            "zoom": 0.9
-        },
-        "surfaceBreakNoiseThreshold": 0.9,
-        "surfaceBreakDepth": 8,
-        "surfaceBreakThresholdBoost": 0.0,
-        "objectMinDepthBelowSurface": 18,
-        "defaultObjectAnchor": "FLOOR",
-        "defaultObjectPlaceMode": "ORGANIC_STILT",
-        "anchorScanStep": 1,
-        "anchorSearchAttempts": 18,
-        "allowFluid": false,
-        "fluidMinDepthBelowSurface": 22,
-        "fluidRequiresFloor": true,
-        "allowLava": true,
-        "modules": [
-            {
-                "style": {
-                    "style": "SIMPLEX_VASCULAR",
-                    "zoom": 1.18
-                },
-                "weight": 0.08,
-                "threshold": 0.02,
-                "verticalRange": {
-                    "min": 10,
-                    "max": 620
-                },
-                "invert": false
-            },
-            {
-                "style": {
-                    "style": "CELLULAR_BILINEAR",
-                    "zoom": 1.52
-                },
-                "weight": 0.03,
-                "threshold": 0.18,
-                "verticalRange": {
-                    "min": 20,
-                    "max": 520
-                },
-                "invert": false
-            }
-        ],
-        "verticalEdgeFade": 40,
-        "verticalEdgeFadeStrength": 0.28,
-        "minCarveCells": 8,
-        "recoveryThresholdBoost": 0.07
+    "snippet/object-placer/clutter/stoneclutt-rock-boulder-carve-c0-165-d4",
+    "snippet/object-placer/clutter/stoneclutt-rock-boulder-carve-c0-0972-d4-set5-7"
+  ],
+  "caveProfile": {
+    "enabled": true,
+    "verticalRange": {
+      "min": 6,
+      "max": 640
     },
-    "caveMinDepthBelowSurface": 10,
-    "children": [
-        "carving/spider-infestation-child"
-    ],
-    "childStyle": {
+    "baseDensityStyle": {
+      "style": "SIMPLEX_VASCULAR",
+      "zoom": 0.82
+    },
+    "detailDensityStyle": {
+      "style": "VASCULAR_THIN",
+      "zoom": 1.1
+    },
+    "warpStyle": {
+      "style": "SIMPLEX",
+      "zoom": 0.46
+    },
+    "baseWeight": 0.92,
+    "detailWeight": 0.08,
+    "warpStrength": 0.22,
+    "densityThreshold": {
+      "min": -0.17,
+      "max": -0.1,
+      "style": {
         "style": "SIMPLEX",
-        "zoom": 0.86
+        "zoom": 0.72
+      }
     },
-    "childShrinkFactor": 1.3
+    "thresholdBias": 0.16,
+    "sampleStep": 2,
+    "surfaceClearance": 8,
+    "allowSurfaceBreak": false,
+    "surfaceBreakStyle": {
+      "style": "SIMPLEX",
+      "zoom": 0.9
+    },
+    "surfaceBreakNoiseThreshold": 0.9,
+    "surfaceBreakDepth": 8,
+    "surfaceBreakThresholdBoost": 0.0,
+    "objectMinDepthBelowSurface": 18,
+    "defaultObjectAnchor": "FLOOR",
+    "defaultObjectPlaceMode": "ORGANIC_STILT",
+    "anchorScanStep": 1,
+    "anchorSearchAttempts": 18,
+    "allowFluid": false,
+    "fluidMinDepthBelowSurface": 22,
+    "fluidRequiresFloor": true,
+    "allowLava": true,
+    "modules": [
+      {
+        "style": {
+          "style": "SIMPLEX_VASCULAR",
+          "zoom": 1.18
+        },
+        "weight": 0.08,
+        "threshold": 0.02,
+        "verticalRange": {
+          "min": 10,
+          "max": 620
+        },
+        "invert": false
+      },
+      {
+        "style": {
+          "style": "CELLULAR_BILINEAR",
+          "zoom": 1.52
+        },
+        "weight": 0.03,
+        "threshold": 0.18,
+        "verticalRange": {
+          "min": 20,
+          "max": 520
+        },
+        "invert": false
+      }
+    ],
+    "verticalEdgeFade": 40,
+    "verticalEdgeFadeStrength": 0.28,
+    "minCarveCells": 8,
+    "recoveryThresholdBoost": 0.07
+  },
+  "caveMinDepthBelowSurface": 10,
+  "children": [
+    "carving/spider-infestation-child"
+  ],
+  "childStyle": {
+    "style": "SIMPLEX",
+    "zoom": 0.86
+  },
+  "childShrinkFactor": 1.3
 }

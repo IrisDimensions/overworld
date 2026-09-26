@@ -1,494 +1,444 @@
 {
-    "name": "Estranged",
-    "color": "#B26BE8",
-    "rarity": 1,
-    "riverPolicy": {
-        "placement": "NATURAL",
-        "routing": "ALLOW",
-        "outletAdmission": true,
-        "profiles": [
-            "water"
-        ],
-        "surfaceBiomes": [
-            "temperate/sea/river",
-            "mountain/sea/river-soft"
-        ],
-        "mouthBiomes": [
-            "ocean/dark-depth-ocean",
-            "ocean/rich-oceans"
-        ],
-        "shoreBiomes": [
-            "temperate/shore/beach",
-            "temperate/shore/oak-beach",
-            "ocean/shore/beach"
-        ],
-        "bankBiomes": [
-            "estranged/weeping-mire",
-            "estranged/stiltroot-shallows"
-        ],
-        "floodedCaveBiomes": [
-            "carving/chalk-gardens",
-            "carving/moss-pillars"
-        ],
-        "widthMultiplier": 0.9,
-        "depthMultiplier": 0.9,
-        "routingMultiplier": 0.9
-    },
-    "proceduralObjects": {
-        "formations": [
-            {
-                "name": "obelisk-spire",
-                "chance": 0.04,
-                "density": 1,
-                "variants": 4,
-                "seed": 9001,
-                "mode": "PAINT",
-                "form": "SPIRE",
-                "block": "minecraft:stone",
-                "blockPalette": {
-                    "style": {
-                        "style": "SIMPLEX",
-                        "zoom": 0.6
-                    },
-                    "zoom": 2,
-                    "palette": [
-                        {
-                            "block": "minecraft:stone",
-                            "weight": 4
-                        },
-                        {
-                            "block": "minecraft:andesite",
-                            "weight": 2
-                        },
-                        {
-                            "block": "minecraft:tuff",
-                            "weight": 2
-                        },
-                        {
-                            "block": "minecraft:deepslate",
-                            "weight": 1
-                        }
-                    ]
-                },
-                "strataPalette": {
-                    "style": {
-                        "style": "STATIC"
-                    },
-                    "palette": [
-                        {
-                            "block": "minecraft:calcite"
-                        },
-                        {
-                            "block": "minecraft:tuff"
-                        }
-                    ]
-                },
-                "strataThickness": 2,
-                "heightMin": 14,
-                "heightMax": 26,
-                "baseWidthMin": 3,
-                "baseWidthMax": 5,
-                "topWidth": 1,
-                "profile": "TAPER",
-                "roughness": 0.35,
-                "jitter": 0.3,
-                "rotation": {
-                    "enabled": true,
-                    "yAxis": {
-                        "enabled": true,
-                        "min": 0,
-                        "max": 360,
-                        "interval": 90
-                    }
-                }
-            },
-            {
-                "name": "boulder",
-                "translate": {
-                    "y": -3
-                },
-                "chance": 0.1,
-                "density": 2,
-                "variants": 6,
-                "seed": 9003,
-                "mode": "PAINT",
-                "form": "BOULDER",
-                "block": "minecraft:mossy_cobblestone",
-                "blockPalette": {
-                    "style": {
-                        "style": "CELLULAR",
-                        "zoom": 0.4
-                    },
-                    "palette": [
-                        {
-                            "block": "minecraft:stone",
-                            "weight": 3
-                        },
-                        {
-                            "block": "minecraft:mossy_cobblestone",
-                            "weight": 2
-                        },
-                        {
-                            "block": "minecraft:andesite",
-                            "weight": 2
-                        },
-                        {
-                            "block": "minecraft:cobblestone",
-                            "weight": 1
-                        }
-                    ]
-                },
-                "heightMin": 3,
-                "heightMax": 6,
-                "baseWidthMin": 3,
-                "baseWidthMax": 6,
-                "roughness": 0.4,
-                "jitter": 0.4,
-                "rotation": {
-                    "enabled": true,
-                    "yAxis": {
-                        "enabled": true,
-                        "min": 0,
-                        "max": 360,
-                        "interval": 90
-                    }
-                }
-            }
-        ],
-        "ruins": [
-            {
-                "name": "ruined-pillar",
-                "chance": 0.06,
-                "density": 1,
-                "variants": 5,
-                "seed": 9101,
-                "form": "PILLAR",
-                "mode": "MIN_HEIGHT",
-                "block": "minecraft:stone_bricks",
-                "blockPalette": {
-                    "style": {
-                        "style": "STATIC"
-                    },
-                    "palette": [
-                        {
-                            "block": "minecraft:stone_bricks",
-                            "weight": 4
-                        },
-                        {
-                            "block": "minecraft:cracked_stone_bricks",
-                            "weight": 2
-                        },
-                        {
-                            "block": "minecraft:cobblestone",
-                            "weight": 1
-                        }
-                    ]
-                },
-                "weatheringPalette": {
-                    "style": {
-                        "style": "STATIC"
-                    },
-                    "palette": [
-                        {
-                            "block": "minecraft:mossy_stone_bricks"
-                        },
-                        {
-                            "block": "minecraft:mossy_cobblestone"
-                        }
-                    ]
-                },
-                "mossiness": 0.4,
-                "weatheringScale": 0.5,
-                "erosion": 0.3,
-                "erosionScale": 0.6,
-                "buriedFraction": 0.2,
-                "heightMin": 5,
-                "heightMax": 11,
-                "widthMin": 1,
-                "widthMax": 2,
-                "lengthMin": 1,
-                "lengthMax": 2,
-                "rotation": {
-                    "enabled": true,
-                    "yAxis": {
-                        "enabled": true,
-                        "min": 0,
-                        "max": 360,
-                        "interval": 90
-                    }
-                },
-                "accents": [
-                    {
-                        "target": "TOP",
-                        "block": "minecraft:vine",
-                        "chance": 0.3,
-                        "scatterRadius": 1
-                    }
-                ]
-            },
-            {
-                "name": "ruined-wall",
-                "chance": 0.035,
-                "density": 1,
-                "variants": 5,
-                "seed": 9102,
-                "form": "WALL",
-                "mode": "MIN_HEIGHT",
-                "block": "minecraft:cobblestone",
-                "blockPalette": {
-                    "style": {
-                        "style": "STATIC"
-                    },
-                    "palette": [
-                        {
-                            "block": "minecraft:cobblestone",
-                            "weight": 4
-                        },
-                        {
-                            "block": "minecraft:stone_bricks",
-                            "weight": 2
-                        },
-                        {
-                            "block": "minecraft:mossy_cobblestone",
-                            "weight": 2
-                        }
-                    ]
-                },
-                "weatheringPalette": {
-                    "style": {
-                        "style": "STATIC"
-                    },
-                    "palette": [
-                        {
-                            "block": "minecraft:mossy_cobblestone"
-                        },
-                        {
-                            "block": "minecraft:mossy_stone_bricks"
-                        }
-                    ]
-                },
-                "mossiness": 0.5,
-                "erosion": 0.4,
-                "buriedFraction": 0.25,
-                "heightMin": 3,
-                "heightMax": 6,
-                "widthMin": 4,
-                "widthMax": 8,
-                "lengthMin": 1,
-                "lengthMax": 1,
-                "rotation": {
-                    "enabled": true,
-                    "yAxis": {
-                        "enabled": true,
-                        "min": 0,
-                        "max": 360,
-                        "interval": 90
-                    }
-                }
-            }
-        ],
-        "crystals": [
-            {
-                "name": "amethyst-cluster",
-                "chance": 0.03,
-                "density": 2,
-                "variants": 6,
-                "seed": 9201,
-                "mode": "PAINT",
-                "carvingSupport": "CARVING_ONLY",
-                "growthSurface": "FLOOR",
-                "block": "minecraft:amethyst_block",
-                "blockPalette": {
-                    "style": {
-                        "style": "CELLULAR",
-                        "zoom": 0.3
-                    },
-                    "palette": [
-                        {
-                            "block": "minecraft:amethyst_block",
-                            "weight": 5
-                        },
-                        {
-                            "block": "minecraft:calcite",
-                            "weight": 2
-                        }
-                    ]
-                },
-                "tipBlock": "minecraft:amethyst_cluster",
-                "tipChance": 0.6,
-                "baseBlock": "minecraft:budding_amethyst",
-                "baseRadius": 2.5,
-                "baseNoise": 0.4,
-                "shardCountMin": 5,
-                "shardCountMax": 9,
-                "shardLengthMin": 3,
-                "shardLengthMax": 6,
-                "shardBaseRadius": 1.5,
-                "shardTaper": 0.8,
-                "spreadAngle": 55,
-                "distribution": "GOLDEN_ANGLE",
-                "jitter": 0.3,
-                "rotation": {
-                    "enabled": true,
-                    "yAxis": {
-                        "enabled": true,
-                        "min": 0,
-                        "max": 360,
-                        "interval": 90
-                    }
-                }
-            },
-            {
-                "name": "frostspar",
-                "chance": 0.2,
-                "density": 1,
-                "variants": 12,
-                "seed": 9202,
-                "mode": "ORGANIC_STILT",
-                "carvingSupport": "CARVING_ONLY",
-                "growthSurface": "FLOOR",
-                "block": "minecraft:quartz_block",
-                "baseBlock": "minecraft:calcite",
-                "baseRadius": 1.5,
-                "baseNoise": 0.12,
-                "shardCountMin": 3,
-                "shardCountMax": 5,
-                "shardLengthMin": 5,
-                "shardLengthMax": 9,
-                "shardBaseRadius": 1.8,
-                "shardTaper": 0.5,
-                "spreadAngle": 28,
-                "distribution": "GOLDEN_ANGLE",
-                "jitter": 0.1,
-                "rotation": {
-                    "enabled": true,
-                    "yAxis": {
-                        "enabled": true,
-                        "min": 0,
-                        "max": 360,
-                        "interval": 90
-                    }
-                },
-                "tipBlock": "minecraft:calcite",
-                "tipChance": 0.3,
-                "stiltSettings": {
-                    "organicMaxScan": 48,
-                    "organicJitter": 0,
-                    "organicScratch": 0
-                },
-                "translate": {
-                    "y": -1
-                }
-            }
-        ]
-    },
-    "landBiomes": [
-        "estranged/baobab-grove",
-        "estranged/slinky-spires",
-        "estranged/weeping-mire",
-        "estranged/emberbark-woods",
-        "estranged/bonsai",
-        "estranged/spindlewood",
-        "estranged/mistveil-swamp",
-        "estranged/birchglass-heath",
-        "estranged/snarlwood-thicket",
-        "estranged/pallid-necropolis",
-        "estranged/stiltroot-shallows",
-        "estranged/skyreach-pines",
-        "estranged/bloomspire-orchard",
-        "estranged/candlewood-grove",
-        "estranged/taxodium"
+  "name": "Estranged",
+  "color": "#B26BE8",
+  "rarity": 1,
+  "riverPolicy": {
+    "placement": "NATURAL",
+    "routing": "ALLOW",
+    "outletAdmission": true,
+    "profiles": [
+      "water"
     ],
-    "caveBiomes": [
-        "carving/rocky-cavebiome",
-        "carving/deep",
-        "carving/drip",
-        "carving/chalk-gardens",
-        "carving/moss-pillars",
-        "carving/sulfur"
+    "surfaceBiomes": [
+      "temperate/sea/river",
+      "mountain/sea/river-soft"
+    ],
+    "mouthBiomes": [
+      "ocean/dark-depth-ocean",
+      "ocean/rich-oceans"
     ],
     "shoreBiomes": [
-        "temperate/shore/beach",
-        "temperate/shore/oak-beach"
+      "temperate/shore/beach",
+      "temperate/shore/oak-beach",
+      "ocean/shore/beach"
     ],
-    "seaBiomeZoom": 6,
-    "seaBiomes": [
-        "ocean/deep",
-        "ocean/dark-depth-ocean",
-        "ocean/rich-oceans",
-        "temperate/sea/ocean",
-        "temperate/sea/ocean-deep",
-        "ocean/warm"
+    "bankBiomes": [
+      "estranged/weeping-mire",
+      "estranged/stiltroot-shallows"
     ],
-    "shoreBiomeZoom": 2.5,
-    "landBiomeZoom": 3.5,
-    "shoreHeightMin": 0.75,
-    "shoreHeightMax": 2.25,
-    "shoreHeightZoom": 3.2,
-    "loot": {
-        "mode": "FALLBACK",
-        "multiplier": 0.5,
-        "tables": [
-            "temperate/clutter",
-            "cave/clutter"
-        ]
-    },
-    "caveProfile": {
-        "enabled": true,
-        "verticalRange": {
-            "min": 6,
-            "max": 120
-        },
-        "baseDensityStyle": {
+    "floodedCaveBiomes": [
+      "carving/chalk-gardens",
+      "carving/moss-pillars"
+    ],
+    "widthMultiplier": 0.9,
+    "depthMultiplier": 0.9,
+    "routingMultiplier": 0.9
+  },
+  "proceduralObjects": {
+    "formations": [
+      {
+        "name": "obelisk-spire",
+        "chance": 0.04,
+        "density": 1,
+        "variants": 4,
+        "seed": 9001,
+        "mode": "PAINT",
+        "form": "SPIRE",
+        "block": "minecraft:stone",
+        "blockPalette": {
+          "style": {
             "style": "SIMPLEX",
-            "zoom": 0.7
-        },
-        "detailDensityStyle": {
-            "style": "SIMPLEX",
-            "zoom": 0.5
-        },
-        "warpStyle": {
-            "style": "SIMPLEX",
-            "zoom": 0.5
-        },
-        "baseWeight": 1,
-        "detailWeight": 0,
-        "warpStrength": 0,
-        "densityThreshold": {
-            "min": -0.12,
-            "max": -0.06,
-            "style": {
-                "style": "SIMPLEX",
-                "zoom": 0.5
+            "zoom": 0.6
+          },
+          "zoom": 2,
+          "palette": [
+            {
+              "block": "minecraft:stone",
+              "weight": 4
+            },
+            {
+              "block": "minecraft:andesite",
+              "weight": 2
+            },
+            {
+              "block": "minecraft:tuff",
+              "weight": 2
+            },
+            {
+              "block": "minecraft:deepslate",
+              "weight": 1
             }
+          ]
         },
-        "thresholdBias": 0.08,
-        "sampleStep": 3,
-        "surfaceClearance": 12,
-        "allowSurfaceBreak": false,
-        "surfaceBreakStyle": {
-            "style": "SIMPLEX",
-            "zoom": 0.88
+        "strataPalette": {
+          "style": {
+            "style": "STATIC"
+          },
+          "palette": [
+            {
+              "block": "minecraft:calcite"
+            },
+            {
+              "block": "minecraft:tuff"
+            }
+          ]
         },
-        "surfaceBreakNoiseThreshold": 0.99,
-        "surfaceBreakDepth": 4,
-        "surfaceBreakThresholdBoost": 0.02,
-        "objectMinDepthBelowSurface": 14,
-        "defaultObjectAnchor": "FLOOR",
-        "defaultObjectPlaceMode": "ORGANIC_STILT",
-        "anchorScanStep": 1,
-        "anchorSearchAttempts": 12,
-        "allowFluid": false,
-        "fluidMinDepthBelowSurface": 20,
-        "fluidRequiresFloor": true,
-        "allowLava": true,
-        "modules": []
-    },
-    "caveBiomeZoom": 3.3,
-    "entitySpawners": [
-        "temperate/cave",
-        "temperate/hostile",
-        "temperate/passive",
-        "temperate/water"
+        "strataThickness": 2,
+        "heightMin": 14,
+        "heightMax": 26,
+        "baseWidthMin": 3,
+        "baseWidthMax": 5,
+        "topWidth": 1,
+        "profile": "TAPER",
+        "roughness": 0.35,
+        "jitter": 0.3,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        }
+      },
+      {
+        "name": "boulder",
+        "translate": {
+          "y": -3
+        },
+        "chance": 0.1,
+        "density": 2,
+        "variants": 6,
+        "seed": 9003,
+        "mode": "PAINT",
+        "form": "BOULDER",
+        "block": "minecraft:mossy_cobblestone",
+        "blockPalette": {
+          "style": {
+            "style": "CELLULAR",
+            "zoom": 0.4
+          },
+          "palette": [
+            {
+              "block": "minecraft:stone",
+              "weight": 3
+            },
+            {
+              "block": "minecraft:mossy_cobblestone",
+              "weight": 2
+            },
+            {
+              "block": "minecraft:andesite",
+              "weight": 2
+            },
+            {
+              "block": "minecraft:cobblestone",
+              "weight": 1
+            }
+          ]
+        },
+        "heightMin": 3,
+        "heightMax": 6,
+        "baseWidthMin": 3,
+        "baseWidthMax": 6,
+        "roughness": 0.4,
+        "jitter": 0.4,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        }
+      }
+    ],
+    "ruins": [
+      {
+        "name": "ruined-pillar",
+        "chance": 0.06,
+        "density": 1,
+        "variants": 5,
+        "seed": 9101,
+        "form": "PILLAR",
+        "mode": "MIN_HEIGHT",
+        "block": "minecraft:stone_bricks",
+        "blockPalette": {
+          "style": {
+            "style": "STATIC"
+          },
+          "palette": [
+            {
+              "block": "minecraft:stone_bricks",
+              "weight": 4
+            },
+            {
+              "block": "minecraft:cracked_stone_bricks",
+              "weight": 2
+            },
+            {
+              "block": "minecraft:cobblestone",
+              "weight": 1
+            }
+          ]
+        },
+        "weatheringPalette": {
+          "style": {
+            "style": "STATIC"
+          },
+          "palette": [
+            {
+              "block": "minecraft:mossy_stone_bricks"
+            },
+            {
+              "block": "minecraft:mossy_cobblestone"
+            }
+          ]
+        },
+        "mossiness": 0.4,
+        "weatheringScale": 0.5,
+        "erosion": 0.3,
+        "erosionScale": 0.6,
+        "buriedFraction": 0.2,
+        "heightMin": 5,
+        "heightMax": 11,
+        "widthMin": 1,
+        "widthMax": 2,
+        "lengthMin": 1,
+        "lengthMax": 2,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "accents": [
+          {
+            "target": "TOP",
+            "block": "minecraft:vine",
+            "chance": 0.3,
+            "scatterRadius": 1
+          }
+        ]
+      },
+      {
+        "name": "ruined-wall",
+        "chance": 0.035,
+        "density": 1,
+        "variants": 5,
+        "seed": 9102,
+        "form": "WALL",
+        "mode": "MIN_HEIGHT",
+        "block": "minecraft:cobblestone",
+        "blockPalette": {
+          "style": {
+            "style": "STATIC"
+          },
+          "palette": [
+            {
+              "block": "minecraft:cobblestone",
+              "weight": 4
+            },
+            {
+              "block": "minecraft:stone_bricks",
+              "weight": 2
+            },
+            {
+              "block": "minecraft:mossy_cobblestone",
+              "weight": 2
+            }
+          ]
+        },
+        "weatheringPalette": {
+          "style": {
+            "style": "STATIC"
+          },
+          "palette": [
+            {
+              "block": "minecraft:mossy_cobblestone"
+            },
+            {
+              "block": "minecraft:mossy_stone_bricks"
+            }
+          ]
+        },
+        "mossiness": 0.5,
+        "erosion": 0.4,
+        "buriedFraction": 0.25,
+        "heightMin": 3,
+        "heightMax": 6,
+        "widthMin": 4,
+        "widthMax": 8,
+        "lengthMin": 1,
+        "lengthMax": 1,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        }
+      }
+    ],
+    "crystals": [
+      {
+        "name": "amethyst-cluster",
+        "chance": 0.03,
+        "density": 2,
+        "variants": 6,
+        "seed": 9201,
+        "mode": "PAINT",
+        "carvingSupport": "CARVING_ONLY",
+        "growthSurface": "FLOOR",
+        "block": "minecraft:amethyst_block",
+        "blockPalette": {
+          "style": {
+            "style": "CELLULAR",
+            "zoom": 0.3
+          },
+          "palette": [
+            {
+              "block": "minecraft:amethyst_block",
+              "weight": 5
+            },
+            {
+              "block": "minecraft:calcite",
+              "weight": 2
+            }
+          ]
+        },
+        "tipBlock": "minecraft:amethyst_cluster",
+        "tipChance": 0.6,
+        "baseBlock": "minecraft:budding_amethyst",
+        "baseRadius": 2.5,
+        "baseNoise": 0.4,
+        "shardCountMin": 5,
+        "shardCountMax": 9,
+        "shardLengthMin": 3,
+        "shardLengthMax": 6,
+        "shardBaseRadius": 1.5,
+        "shardTaper": 0.8,
+        "spreadAngle": 55,
+        "distribution": "GOLDEN_ANGLE",
+        "jitter": 0.3,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        }
+      },
+      {
+        "name": "frostspar",
+        "chance": 0.2,
+        "density": 1,
+        "variants": 12,
+        "seed": 9202,
+        "mode": "ORGANIC_STILT",
+        "carvingSupport": "CARVING_ONLY",
+        "growthSurface": "FLOOR",
+        "block": "minecraft:quartz_block",
+        "baseBlock": "minecraft:calcite",
+        "baseRadius": 1.5,
+        "baseNoise": 0.12,
+        "shardCountMin": 3,
+        "shardCountMax": 5,
+        "shardLengthMin": 5,
+        "shardLengthMax": 9,
+        "shardBaseRadius": 1.8,
+        "shardTaper": 0.5,
+        "spreadAngle": 28,
+        "distribution": "GOLDEN_ANGLE",
+        "jitter": 0.1,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        },
+        "tipBlock": "minecraft:calcite",
+        "tipChance": 0.3,
+        "stiltSettings": {
+          "organicMaxScan": 48,
+          "organicJitter": 0,
+          "organicScratch": 0
+        },
+        "translate": {
+          "y": -1
+        }
+      }
     ]
+  },
+  "landBiomes": [
+    "estranged/baobab-grove",
+    "estranged/slinky-spires",
+    "estranged/weeping-mire",
+    "estranged/emberbark-woods",
+    "estranged/bonsai",
+    "estranged/spindlewood",
+    "estranged/mistveil-swamp",
+    "estranged/birchglass-heath",
+    "estranged/snarlwood-thicket",
+    "estranged/pallid-necropolis",
+    "estranged/stiltroot-shallows",
+    "estranged/skyreach-pines",
+    "estranged/bloomspire-orchard",
+    "estranged/candlewood-grove",
+    "estranged/taxodium"
+  ],
+  "caveBiomes": [
+    "carving/rocky-cavebiome",
+    "carving/deep",
+    "carving/drip",
+    "carving/chalk-gardens",
+    "carving/moss-pillars",
+    "carving/sulfur"
+  ],
+  "shoreBiomes": [
+    "temperate/shore/beach",
+    "temperate/shore/oak-beach"
+  ],
+  "seaBiomeZoom": 6,
+  "seaBiomes": [
+    "ocean/deep",
+    "ocean/dark-depth-ocean",
+    "ocean/rich-oceans",
+    "temperate/sea/ocean",
+    "temperate/sea/ocean-deep",
+    "ocean/warm"
+  ],
+  "shoreBiomeZoom": 2.5,
+  "landBiomeZoom": 3.5,
+  "shoreHeightMin": 0.75,
+  "shoreHeightMax": 2.25,
+  "shoreHeightZoom": 3.2,
+  "loot": {
+    "mode": "FALLBACK",
+    "multiplier": 0.5,
+    "tables": [
+      "temperate/clutter",
+      "cave/clutter"
+    ]
+  },
+  "caveProfile": "snippet/cave-profile/shallow/sealed-tunnels",
+  "caveBiomeZoom": 3.3,
+  "entitySpawners": [
+    "temperate/cave",
+    "temperate/hostile",
+    "temperate/passive",
+    "temperate/water"
+  ]
 }

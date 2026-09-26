@@ -26,35 +26,7 @@
       "generator": "mountain"
     }
   ],
-  "wall": {
-    "style": {
-      "style": "NOWHERE"
-    },
-    "zoom": 0.1,
-    "palette": [
-      {
-        "block": "minecraft:stripped_jungle_wood"
-      },
-      {
-        "block": "minecraft:jungle_leaves"
-      },
-      {
-        "block": "minecraft:stripped_jungle_wood"
-      },
-      {
-        "block": "minecraft:jungle_leaves"
-      },
-      {
-        "block": "minecraft:stripped_jungle_wood"
-      },
-      {
-        "block": "minecraft:jungle_leaves"
-      },
-      {
-        "block": "minecraft:stripped_jungle_wood"
-      }
-    ]
-  },
+  "wall": "snippet/biome-palette/wall/jungle-wood-leaves",
   "layers": [
     {
       "palette": [
@@ -72,57 +44,11 @@
         }
       ]
     },
-    {
-      "minHeight": 6,
-      "maxHeight": 18,
-      "style": {
-        "style": "STATIC"
-      },
-      "palette": [
-        {
-          "block": "minecraft:stone"
-        },
-        {
-          "block": "minecraft:andesite"
-        },
-        {
-          "block": "minecraft:stone"
-        }
-      ]
-    }
+    "snippet/biome-palette/stone/andesite-blend-6-18"
   ],
   "objects": [
-    {
-      "mode": "PAINT",
-      "chance": 0.0025,
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "clutter/bincluster1"
-      ]
-    },
-    {
-      "chance": 0.00375,
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "clutter/camp1"
-      ]
-    },
+    "snippet/object-placer/clutter/bincluster-paint-c0-0025",
+    "snippet/object-placer/clutter/camp-c0-00375",
     {
       "chance": 0.4,
       "density": 2,
@@ -154,152 +80,15 @@
         "z": 0
       }
     },
-    {
-      "chance": 0.45,
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "trees/jungle/sgeneric1",
-        "trees/jungle/sgeneric2",
-        "trees/jungle/sgeneric3",
-        "trees/jungle/sgeneric4"
-      ],
-      "mode": "ORGANIC_STILT",
-      "stiltSettings": {
-        "organicScratch": 1,
-        "organicJitter": 6,
-        "enabled": true,
-        "minHeight": 1,
-        "maxHeight": 3
-      }
-    },
-    {
-      "chance": 0.06,
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "clutter/boulder1",
-        "clutter/boulder2",
-        "clutter/boulder4",
-        "clutter/boulder5",
-        "clutter/boulder6",
-        "clutter/boulder7",
-        "clutter/boulder8"
-      ],
-      "mode": "PAINT"
-    },
-    {
-      "chance": 0.01,
-      "mode": "PAINT",
-      "density": 3,
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "trees/jungle/largegeneric1",
-        "trees/jungle/largegeneric2",
-        "trees/jungle/largegeneric3",
-        "trees/jungle/largegeneric4",
-        "trees/jungle/largegeneric5"
-      ],
-      "edit": [
-        {
-          "find": [
-            {
-              "block": "minecraft:vine"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:air"
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "chance": 0.008,
-      "mode": "PAINT",
-      "place": [
-        "clutter/melons1",
-        "clutter/melons2",
-        "clutter/melons3",
-        "clutter/melons4",
-        "clutter/melons5",
-        "clutter/melons6"
-      ],
-      "rotation": {
-        "enabled": true,
-        "yAxis": {
-          "enabled": true,
-          "max": 360,
-          "min": 0,
-          "interval": 90
-        }
-      }
-    }
+    "snippet/object-placer/trees/jungle-sgeneric-organic-stilt-c0-45",
+    "snippet/object-placer/clutter/boulder-paint-c0-06",
+    "snippet/object-placer/trees/jungle-largegeneric-paint-c0-01-d3-no-vine",
+    "snippet/object-placer/clutter/melons-paint-c0-008"
   ],
   "decorators": [
-    {
-      "chance": 0.45,
-      "variance": {
-        "style": "NOWHERE"
-      },
-      "zoom": 0.1,
-      "palette": [
-        {
-          "block": "minecraft:jungle_leaves"
-        },
-        {
-          "block": "minecraft:tall_grass"
-        },
-        {
-          "block": "minecraft:short_grass"
-        },
-        {
-          "block": "minecraft:jungle_leaves"
-        },
-        {
-          "block": "minecraft:short_grass"
-        },
-        {
-          "block": "minecraft:jungle_leaves"
-        }
-      ],
-      "style": {
-        "style": "FRACTAL_BILLOW_IRIS",
-        "fracture": {
-          "style": "STATIC"
-        }
-      }
-    },
+    "snippet/decorator/grass/jungle-undergrowth-c0-45",
     {
       "chance": 0.003,
-      "variance": {
-        "style": "STATIC"
-      },
       "palette": [
         {
           "data": {
@@ -318,18 +107,12 @@
           "block": "minecraft:stone_button"
         }
       ],
-      "style": {
-        "style": "STATIC"
-      },
       "heightVariance": {
         "style": "NOWHERE"
       }
     },
     {
       "chance": 0.5,
-      "variance": {
-        "style": "STATIC"
-      },
       "zoom": 10,
       "palette": [
         {
@@ -338,13 +121,7 @@
         {
           "block": "minecraft:tall_grass"
         }
-      ],
-      "style": {
-        "style": "STATIC"
-      },
-      "heightVariance": {
-        "style": "STATIC"
-      }
+      ]
     }
   ],
   "effects": [
@@ -359,24 +136,5 @@
       "particleCount": 3
     }
   ],
-  "terrain3D": {
-    "enabled": true,
-    "seed": 30103,
-    "amplitude": 18,
-    "horizontalScale": 160,
-    "verticalScale": 40,
-    "densityStyle": {
-      "style": "NOWHERE"
-    },
-    "crackDepth": 0,
-    "crackWidth": 2,
-    "crackScale": 416,
-    "crackStyle": {
-      "style": "SIMPLEX"
-    },
-    "minimumSlope": 0.28,
-    "slopeFade": 0.4,
-    "fluidClearance": 8,
-    "fluidFade": 24
-  }
+  "terrain3D": "snippet/terrain-3d/hilly/amp18-nowhere-crack416"
 }

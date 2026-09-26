@@ -24,27 +24,9 @@
   "biomeStyle": {
     "style": "SIMPLEX"
   },
-  "wall": {
-    "style": {
-      "style": "STATIC"
-    },
-    "palette": [
-      {
-        "block": "minecraft:stone"
-      },
-      {
-        "block": "minecraft:andesite"
-      },
-      {
-        "block": "minecraft:stone"
-      }
-    ]
-  },
+  "wall": "snippet/biome-palette/wall/stone-andesite",
   "layers": [
     {
-      "style": {
-        "style": "STATIC"
-      },
       "zoom": 0.256,
       "palette": [
         {
@@ -67,36 +49,8 @@
         }
       ]
     },
-    {
-      "minHeight": 1,
-      "maxHeight": 3,
-      "palette": [
-        {
-          "block": "minecraft:dirt"
-        },
-        {
-          "block": "minecraft:coarse_dirt"
-        }
-      ]
-    },
-    {
-      "minHeight": 6,
-      "maxHeight": 18,
-      "style": {
-        "style": "STATIC"
-      },
-      "palette": [
-        {
-          "block": "minecraft:stone"
-        },
-        {
-          "block": "minecraft:andesite"
-        },
-        {
-          "block": "minecraft:stone"
-        }
-      ]
-    }
+    "snippet/biome-palette/soil/dirt-coarse-1-3",
+    "snippet/biome-palette/stone/andesite-blend-6-18"
   ],
   "objects": [
     {
@@ -128,9 +82,6 @@
   "decorators": [
     {
       "chance": 0.003,
-      "variance": {
-        "style": "STATIC"
-      },
       "zoom": 0.02,
       "palette": [
         {
@@ -145,16 +96,10 @@
         {
           "block": "minecraft:lily_of_the_valley"
         }
-      ],
-      "style": {
-        "style": "STATIC"
-      }
+      ]
     },
     {
       "chance": 0.02,
-      "variance": {
-        "style": "STATIC"
-      },
       "zoom": 0.1,
       "palette": [
         {
@@ -169,16 +114,10 @@
         {
           "block": "minecraft:rose_bush"
         }
-      ],
-      "style": {
-        "style": "STATIC"
-      }
+      ]
     },
     {
       "chance": 0.122,
-      "variance": {
-        "style": "STATIC"
-      },
       "zoom": 0.2,
       "palette": [
         {
@@ -187,16 +126,10 @@
         {
           "block": "minecraft:tall_grass"
         }
-      ],
-      "style": {
-        "style": "STATIC"
-      }
+      ]
     },
     {
       "chance": 0.142,
-      "variance": {
-        "style": "STATIC"
-      },
       "zoom": 0.3,
       "palette": [
         {
@@ -205,10 +138,7 @@
         {
           "block": "minecraft:fern"
         }
-      ],
-      "style": {
-        "style": "STATIC"
-      }
+      ]
     }
   ],
   "terrain3D": {

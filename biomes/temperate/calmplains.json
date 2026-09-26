@@ -1,299 +1,210 @@
 {
-    "name": "Calm Plains",
-    "derivative": "minecraft:plains",
-    "vanillaDerivative": "minecraft:plains",
-    "layers": [
+  "name": "Calm Plains",
+  "derivative": "minecraft:plains",
+  "vanillaDerivative": "minecraft:plains",
+  "layers": [
+    {
+      "palette": [
         {
-            "palette": [
-                {
-                    "block": "minecraft:grass_block"
-                }
-            ],
-            "maxHeight": 1,
-            "slopeCondition": {
-                "maximumSlope": 4
-            }
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 2,
-            "palette": [
-                {
-                    "block": "minecraft:dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                {
-                    "block": "minecraft:dirt"
-                },
-                {
-                    "block": "minecraft:coarse_dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "block": "minecraft:dirt"
-                },
-                {
-                    "block": "minecraft:stone"
-                }
-            ]
+          "block": "minecraft:grass_block"
         }
-    ],
-    "wall": {
-        "palette": [
-            {
-                "block": "minecraft:andesite"
-            },
-            {
-                "block": "minecraft:stone"
-            },
-            {
-                "block": "minecraft:cobblestone"
-            }
-        ]
+      ],
+      "maxHeight": 1,
+      "slopeCondition": {
+        "maximumSlope": 4
+      }
     },
-    "objects": [
+    {
+      "minHeight": 2,
+      "maxHeight": 2,
+      "palette": [
         {
-            "place": [
-                "trees/mixed/pollup1",
-                "trees/mixed/pollup2",
-                "trees/mixed/pollup4",
-                "trees/mixed/pollup5",
-                "trees/mixed/pollup6",
-                "trees/mixed/pollup7",
-                "trees/mixed/pollup8",
-                "trees/mixed/pollup9",
-                "trees/mixed/pollup10",
-                "trees/mixed/pollup11",
-                "trees/mixed/pollup12",
-                "trees/mixed/pollup13"
-            ],
-            "carvingSupport": "SURFACE_ONLY",
-            "chance": 1,
-            "mode": "CENTER_STILT",
-            "stiltSettings": {
-                "yMax": 4,
-                "yRand": 1
-            },
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            }
+          "block": "minecraft:dirt"
         }
-    ],
-    "decorators": [
+      ]
+    },
+    "snippet/biome-palette/soil/dirt-coarse-1-3",
+    {
+      "minHeight": 6,
+      "maxHeight": 18,
+      "palette": [
         {
-            "chance": 0.2,
-            "variance": {
-                "style": "CELLULAR",
-                "zoom": 0.25,
-                "fracture": {
-                    "style": "SIMPLEX",
-                    "zoom": 0.2,
-                    "multiplier": 10
-                }
-            },
-            "style": {
-                "style": "SIMPLEX",
-                "zoom": 0.2,
-                "fracture": {
-                    "style": "STATIC",
-                    "multiplier": 8
-                }
-            },
-            "palette": [
-                {
-                    "block": "minecraft:dandelion"
-                },
-                {
-                    "block": "minecraft:poppy"
-                },
-                {
-                    "block": "minecraft:blue_orchid"
-                },
-                {
-                    "block": "minecraft:allium"
-                },
-                {
-                    "block": "minecraft:azure_bluet"
-                },
-                {
-                    "block": "minecraft:red_tulip"
-                },
-                {
-                    "block": "minecraft:orange_tulip"
-                },
-                {
-                    "block": "minecraft:white_tulip"
-                },
-                {
-                    "block": "minecraft:pink_tulip"
-                },
-                {
-                    "block": "minecraft:oxeye_daisy"
-                },
-                {
-                    "block": "minecraft:cornflower"
-                },
-                {
-                    "block": "minecraft:lily_of_the_valley"
-                }
-            ]
+          "block": "minecraft:dirt"
         },
         {
-            "chance": 0.01,
-            "palette": [
-                {
-                    "block": "minecraft:tall_grass"
-                }
-            ]
-        },
-        {
-            "chance": 0.5,
-            "palette": [
-                {
-                    "block": "minecraft:short_grass"
-                }
-            ]
-        },
-        {
-            "stackMin": 1,
-            "stackMax": 7,
-            "chance": 0.015,
-            "forcePlace": false,
-            "variance": {
-                "style": "STATIC"
-            },
-            "palette": [
-                {
-                    "data": {
-                        "stage": 0,
-                        "age": 0,
-                        "leaves": "none"
-                    },
-                    "block": "minecraft:bamboo"
-                },
-                {
-                    "data": {
-                        "stage": 1,
-                        "age": 0,
-                        "leaves": "none"
-                    },
-                    "block": "minecraft:bamboo"
-                },
-                {
-                    "data": {
-                        "stage": 0,
-                        "age": 1,
-                        "leaves": "none"
-                    },
-                    "block": "minecraft:bamboo"
-                },
-                {
-                    "data": {
-                        "stage": 1,
-                        "age": 1,
-                        "leaves": "none"
-                    },
-                    "block": "minecraft:bamboo"
-                },
-                {
-                    "data": {
-                        "stage": 0,
-                        "age": 0,
-                        "leaves": "small"
-                    },
-                    "block": "minecraft:bamboo"
-                },
-                {
-                    "data": {
-                        "stage": 1,
-                        "age": 0,
-                        "leaves": "small"
-                    },
-                    "block": "minecraft:bamboo"
-                },
-                {
-                    "data": {
-                        "stage": 0,
-                        "age": 1,
-                        "leaves": "small"
-                    },
-                    "block": "minecraft:bamboo"
-                },
-                {
-                    "data": {
-                        "stage": 1,
-                        "age": 1,
-                        "leaves": "small"
-                    },
-                    "block": "minecraft:bamboo"
-                },
-                {
-                    "data": {
-                        "stage": 0,
-                        "age": 0,
-                        "leaves": "large"
-                    },
-                    "block": "minecraft:bamboo"
-                },
-                {
-                    "data": {
-                        "stage": 1,
-                        "age": 0,
-                        "leaves": "large"
-                    },
-                    "block": "minecraft:bamboo"
-                },
-                {
-                    "data": {
-                        "stage": 0,
-                        "age": 1,
-                        "leaves": "large"
-                    },
-                    "block": "minecraft:bamboo"
-                },
-                {
-                    "data": {
-                        "stage": 1,
-                        "age": 1,
-                        "leaves": "large"
-                    },
-                    "block": "minecraft:bamboo"
-                }
-            ],
-            "style": {
-                "style": "STATIC"
-            }
-        },
-        "snippet/decorator/leaf",
-        "snippet/decorator/bush"
-    ],
-    "generators": [
-        {
-            "generator": "mountain",
-            "max": 10,
-            "min": -15
+          "block": "minecraft:stone"
         }
-    ],
-    "terrain3D": {
-        "enabled": false
+      ]
     }
+  ],
+  "wall": "snippet/biome-palette/wall/andesite-stone-cobble",
+  "objects": [
+    {
+      "place": [
+        "trees/mixed/pollup1",
+        "trees/mixed/pollup2",
+        "trees/mixed/pollup4",
+        "trees/mixed/pollup5",
+        "trees/mixed/pollup6",
+        "trees/mixed/pollup7",
+        "trees/mixed/pollup8",
+        "trees/mixed/pollup9",
+        "trees/mixed/pollup10",
+        "trees/mixed/pollup11",
+        "trees/mixed/pollup12",
+        "trees/mixed/pollup13"
+      ],
+      "carvingSupport": "SURFACE_ONLY",
+      "chance": 1,
+      "mode": "CENTER_STILT",
+      "stiltSettings": {
+        "yMax": 4,
+        "yRand": 1
+      },
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      }
+    }
+  ],
+  "decorators": [
+    "snippet/decorator/flowers/meadow-mix-c0-2-simplex-z0-2",
+    {
+      "chance": 0.01,
+      "palette": [
+        {
+          "block": "minecraft:tall_grass"
+        }
+      ]
+    },
+    {
+      "chance": 0.5,
+      "palette": [
+        {
+          "block": "minecraft:short_grass"
+        }
+      ]
+    },
+    {
+      "stackMin": 1,
+      "stackMax": 7,
+      "chance": 0.015,
+      "forcePlace": false,
+      "palette": [
+        {
+          "data": {
+            "stage": 0,
+            "age": 0,
+            "leaves": "none"
+          },
+          "block": "minecraft:bamboo"
+        },
+        {
+          "data": {
+            "stage": 1,
+            "age": 0,
+            "leaves": "none"
+          },
+          "block": "minecraft:bamboo"
+        },
+        {
+          "data": {
+            "stage": 0,
+            "age": 1,
+            "leaves": "none"
+          },
+          "block": "minecraft:bamboo"
+        },
+        {
+          "data": {
+            "stage": 1,
+            "age": 1,
+            "leaves": "none"
+          },
+          "block": "minecraft:bamboo"
+        },
+        {
+          "data": {
+            "stage": 0,
+            "age": 0,
+            "leaves": "small"
+          },
+          "block": "minecraft:bamboo"
+        },
+        {
+          "data": {
+            "stage": 1,
+            "age": 0,
+            "leaves": "small"
+          },
+          "block": "minecraft:bamboo"
+        },
+        {
+          "data": {
+            "stage": 0,
+            "age": 1,
+            "leaves": "small"
+          },
+          "block": "minecraft:bamboo"
+        },
+        {
+          "data": {
+            "stage": 1,
+            "age": 1,
+            "leaves": "small"
+          },
+          "block": "minecraft:bamboo"
+        },
+        {
+          "data": {
+            "stage": 0,
+            "age": 0,
+            "leaves": "large"
+          },
+          "block": "minecraft:bamboo"
+        },
+        {
+          "data": {
+            "stage": 1,
+            "age": 0,
+            "leaves": "large"
+          },
+          "block": "minecraft:bamboo"
+        },
+        {
+          "data": {
+            "stage": 0,
+            "age": 1,
+            "leaves": "large"
+          },
+          "block": "minecraft:bamboo"
+        },
+        {
+          "data": {
+            "stage": 1,
+            "age": 1,
+            "leaves": "large"
+          },
+          "block": "minecraft:bamboo"
+        }
+      ]
+    },
+    "snippet/decorator/plants/leaf-litter",
+    "snippet/decorator/shrubs/bush"
+  ],
+  "generators": [
+    {
+      "generator": "mountain",
+      "max": 10,
+      "min": -15
+    }
+  ],
+  "terrain3D": {
+    "enabled": false
+  }
 }

@@ -1,81 +1,92 @@
 {
-    "name": "Tropical Submerged Volcanic",
-    "color": "#C60A0A",
-    "rarity": 1,
-    "derivative": "minecraft:warm_ocean",
-    "vanillaDerivative": "minecraft:warm_ocean",
-    "generators": [{
-        "min": -24,
-        "max": -3,
-        "generator": "canyon-steep"
-    }],
-    "layers": [
+  "name": "Tropical Submerged Volcanic",
+  "color": "#C60A0A",
+  "rarity": 1,
+  "derivative": "minecraft:warm_ocean",
+  "vanillaDerivative": "minecraft:warm_ocean",
+  "generators": [
+    {
+      "min": -24,
+      "max": -3,
+      "generator": "canyon-steep"
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 2,
+      "maxHeight": 4,
+      "zoom": 0.33,
+      "palette": [
         {
-            "minHeight": 2,
-            "maxHeight": 4,
-            "style": {"style": "STATIC"},
-            "zoom": 0.33,
-            "palette": [
-                {
-                    "data": {"axis": "x"},
-                    "block": "minecraft:basalt"
-                },
-                {
-                    "data": {"axis": "y"},
-                    "block": "minecraft:basalt"
-                },
-                {
-                    "data": {"axis": "z"},
-                    "block": "minecraft:basalt"
-                },
-                {"block": "minecraft:magma_block"},
-                {
-                    "data": {"axis": "x"},
-                    "block": "minecraft:basalt"
-                },
-                {
-                    "data": {"axis": "y"},
-                    "block": "minecraft:basalt"
-                },
-                {
-                    "data": {"axis": "z"},
-                    "block": "minecraft:basalt"
-                },
-                {"block": "minecraft:tuff"}
-            ]
+          "data": {
+            "axis": "x"
+          },
+          "block": "minecraft:basalt"
         },
         {
-            "minHeight": 6,
-            "maxHeight": 18,
-            "style": {"style": "STATIC"},
-            "palette": [
-                {"block": "minecraft:stone"},
-                {"block": "minecraft:andesite"},
-                {"block": "minecraft:stone"}
-            ]
+          "data": {
+            "axis": "y"
+          },
+          "block": "minecraft:basalt"
+        },
+        {
+          "data": {
+            "axis": "z"
+          },
+          "block": "minecraft:basalt"
+        },
+        {
+          "block": "minecraft:magma_block"
+        },
+        {
+          "data": {
+            "axis": "x"
+          },
+          "block": "minecraft:basalt"
+        },
+        {
+          "data": {
+            "axis": "y"
+          },
+          "block": "minecraft:basalt"
+        },
+        {
+          "data": {
+            "axis": "z"
+          },
+          "block": "minecraft:basalt"
+        },
+        {
+          "block": "minecraft:tuff"
         }
-    ],
-    "effects": [{
-        "particleAltX": 0.001,
-        "particleAltY": 0.13885,
-        "particleAltZ": 0.001,
-        "chance": 1,
-        "particleEffect": "CAMPFIRE_SIGNAL_SMOKE",
-        "particleOffset": 0,
-        "interval": 150,
-        "particleCount": 0
-    }],
-    "slab": {
-        "style": {"style": "STATIC"},
-        "palette": [
-            {
-                "data": {
-                    "waterlogged": false,
-                    "type": "bottom"
-                },
-                "block": "minecraft:blackstone_slab"
-            },
-            {"block": "minecraft:air"}
-        ]
+      ]
+    },
+    "snippet/biome-palette/stone/andesite-blend-6-18"
+  ],
+  "effects": [
+    {
+      "particleAltX": 0.001,
+      "particleAltY": 0.13885,
+      "particleAltZ": 0.001,
+      "chance": 1,
+      "particleEffect": "CAMPFIRE_SIGNAL_SMOKE",
+      "particleOffset": 0,
+      "interval": 150,
+      "particleCount": 0
     }
+  ],
+  "slab": {
+    "palette": [
+      {
+        "data": {
+          "waterlogged": false,
+          "type": "bottom"
+        },
+        "block": "minecraft:blackstone_slab"
+      },
+      {
+        "block": "minecraft:air"
+      }
+    ]
+  }
 }

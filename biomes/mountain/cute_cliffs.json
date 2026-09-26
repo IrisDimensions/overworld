@@ -19,141 +19,15 @@
       "generator": "mountain"
     }
   ],
-  "wall": {
-    "style": {
-      "style": "STATIC"
-    },
-    "palette": [
-      {
-        "block": "minecraft:stone"
-      },
-      {
-        "block": "minecraft:andesite"
-      },
-      {
-        "block": "minecraft:stone"
-      }
-    ]
-  },
+  "wall": "snippet/biome-palette/wall/stone-andesite",
   "layers": [
-    {
-      "minHeight": 1,
-      "maxHeight": 1,
-      "slopeCondition": {
-        "minimumSlope": 0,
-        "maximumSlope": 2.6
-      },
-      "palette": [
-        {
-          "block": "minecraft:grass_block"
-        }
-      ]
-    },
-    {
-      "minHeight": 2,
-      "maxHeight": 4,
-      "slopeCondition": {
-        "minimumSlope": 3.95
-      },
-      "palette": [
-        {
-          "block": "minecraft:gravel"
-        }
-      ]
-    },
-    {
-      "minHeight": 2,
-      "maxHeight": 3,
-      "palette": [
-        {
-          "block": "minecraft:stone"
-        },
-        {
-          "block": "minecraft:andesite"
-        },
-        {
-          "block": "minecraft:gravel"
-        }
-      ]
-    },
-    {
-      "minHeight": 6,
-      "maxHeight": 18,
-      "style": {
-        "style": "STATIC"
-      },
-      "palette": [
-        {
-          "block": "minecraft:stone"
-        },
-        {
-          "block": "minecraft:andesite"
-        },
-        {
-          "block": "minecraft:stone"
-        }
-      ]
-    }
+    "snippet/biome-palette/grass/top-1-1-flat2-6",
+    "snippet/biome-palette/gravel/plain-2-4-steep3-95",
+    "snippet/biome-palette/stone/andesite-gravel-2-3",
+    "snippet/biome-palette/stone/andesite-blend-6-18"
   ],
   "decorators": [
-    {
-      "chance": 0.2,
-      "variance": {
-        "style": "CELLULAR",
-        "zoom": 0.3,
-        "fracture": {
-          "style": "SIMPLEX",
-          "zoom": 0.2,
-          "multiplier": 10
-        }
-      },
-      "style": {
-        "style": "TRIOCTAVE_SIMPLEX",
-        "zoom": 0.3,
-        "fracture": {
-          "style": "STATIC",
-          "multiplier": 8
-        }
-      },
-      "palette": [
-        {
-          "block": "minecraft:dandelion"
-        },
-        {
-          "block": "minecraft:poppy"
-        },
-        {
-          "block": "minecraft:blue_orchid"
-        },
-        {
-          "block": "minecraft:allium"
-        },
-        {
-          "block": "minecraft:azure_bluet"
-        },
-        {
-          "block": "minecraft:red_tulip"
-        },
-        {
-          "block": "minecraft:orange_tulip"
-        },
-        {
-          "block": "minecraft:white_tulip"
-        },
-        {
-          "block": "minecraft:pink_tulip"
-        },
-        {
-          "block": "minecraft:oxeye_daisy"
-        },
-        {
-          "block": "minecraft:cornflower"
-        },
-        {
-          "block": "minecraft:lily_of_the_valley"
-        }
-      ]
-    },
+    "snippet/decorator/flowers/meadow-mix-c0-2-trioctave-z0-3",
     {
       "chance": 0.01,
       "palette": [
@@ -171,31 +45,7 @@
       ]
     }
   ],
-  "slab": {
-    "style": {
-      "style": "STATIC"
-    },
-    "palette": [
-      {
-        "data": {
-          "waterlogged": false,
-          "type": "bottom"
-        },
-        "block": "minecraft:stone_slab"
-      },
-      {
-        "data": {
-          "waterlogged": false,
-          "type": "bottom"
-        },
-        "block": "minecraft:cobblestone_slab"
-      },
-      {
-        "weight": 2,
-        "block": "minecraft:air"
-      }
-    ]
-  },
+  "slab": "snippet/biome-palette/slab/stone-cobble-sparse",
   "terrain3D": {
     "enabled": true,
     "seed": 30113,

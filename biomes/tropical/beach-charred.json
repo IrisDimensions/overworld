@@ -1,103 +1,111 @@
 {
-    "name": "Tropical Beach Charred",
-    "color": "#64E8B4",
-    "rarity": 1,
-    "derivative": "minecraft:desert",
-    "vanillaDerivative": "minecraft:beach",
-    "generators": [{
-        "min": -3,
-        "max": 3,
-        "generator": "plain"
-    }],
-    "wall": {"palette": [{"block": "minecraft:smooth_sandstone"}]},
-    "layers": [
-        {
-            "minHeight": 3,
-            "maxHeight": 6,
-            "palette": [{"block": "minecraft:black_concrete_powder"}]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [{"block": "minecraft:dirt"}]
-        }
-    ],
-    "objects": [{
-        "chance": 0.66,
-        "density": 2,
-        "edit": [{
-            "find": [{"block": "minecraft:player_wall_head"}],
-            "replace": {"palette": [{"block": "minecraft:air"}]}
-        }],
-        "rotation": {
-            "yAxis": {
-                "min": 0,
-                "max": 270,
-                "interval": 90,
-                "enabled": true
-            },
-            "enabled": true
-        },
-        "place": [
-            "trees/jungle/palm1",
-            "trees/jungle/palm2",
-            "trees/jungle/palm3",
-            "trees/jungle/palm12",
-            "trees/jungle/palm11",
-            "trees/jungle/palm10",
-            "trees/jungle/palm9"
-        ]
-
-    }],
-    "decorators": [{
-        "chance": 0.01,
-        "variance": {"style": "STATIC"},
-        "zoom": 0.3,
-        "palette": [
-            {
-                "data": {
-                    "face": "floor",
-                    "powered": false,
-                    "facing": "east"
-                },
-                "block": "minecraft:jungle_button"
-            },
-            {"block": "minecraft:air"},
-            {
-                "data": {
-                    "face": "floor",
-                    "powered": false,
-                    "facing": "south"
-                },
-                "block": "minecraft:jungle_button"
-            }
-        ],
-        "style": {"style": "STATIC"}
-    }],
-    "effects": [{
-        "particleAltX": 0.301,
-        "particleAltY": -0.33885,
-        "particleAltZ": 0.301,
-        "chance": 1,
-        "particleEffect": "LARGE_SMOKE",
-        "particleOffset": 0,
-        "interval": 550,
-        "particleCount": 0
-    }],
-    "slab": {
-        "style": {"style": "STATIC"},
-        "palette": [
-            {
-                "data": {
-                    "waterlogged": false,
-                    "type": "bottom"
-                },
-                "block": "minecraft:blackstone_slab"
-            },
-            {
-                "weight": 1,
-                "block": "minecraft:air"
-            }
-        ]
+  "name": "Tropical Beach Charred",
+  "color": "#64E8B4",
+  "rarity": 1,
+  "derivative": "minecraft:desert",
+  "vanillaDerivative": "minecraft:beach",
+  "generators": [
+    {
+      "min": -3,
+      "max": 3,
+      "generator": "plain"
     }
+  ],
+  "wall": {
+    "palette": [
+      {
+        "block": "minecraft:smooth_sandstone"
+      }
+    ]
+  },
+  "layers": [
+    {
+      "minHeight": 3,
+      "maxHeight": 6,
+      "palette": [
+        {
+          "block": "minecraft:black_concrete_powder"
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 3,
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "chance": 0.66,
+      "density": 2,
+      "edit": [
+        {
+          "find": [
+            {
+              "block": "minecraft:player_wall_head"
+            }
+          ],
+          "replace": {
+            "palette": [
+              {
+                "block": "minecraft:air"
+              }
+            ]
+          }
+        }
+      ],
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "trees/jungle/palm1",
+        "trees/jungle/palm2",
+        "trees/jungle/palm3",
+        "trees/jungle/palm12",
+        "trees/jungle/palm11",
+        "trees/jungle/palm10",
+        "trees/jungle/palm9"
+      ]
+    }
+  ],
+  "decorators": [
+    "snippet/decorator/twigs/jungle-c0-01"
+  ],
+  "effects": [
+    {
+      "particleAltX": 0.301,
+      "particleAltY": -0.33885,
+      "particleAltZ": 0.301,
+      "chance": 1,
+      "particleEffect": "LARGE_SMOKE",
+      "particleOffset": 0,
+      "interval": 550,
+      "particleCount": 0
+    }
+  ],
+  "slab": {
+    "palette": [
+      {
+        "data": {
+          "waterlogged": false,
+          "type": "bottom"
+        },
+        "block": "minecraft:blackstone_slab"
+      },
+      {
+        "weight": 1,
+        "block": "minecraft:air"
+      }
+    ]
+  }
 }

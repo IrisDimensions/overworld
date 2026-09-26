@@ -1,271 +1,273 @@
 {
-    "name": "Ocean Warm",
-    "proceduralObjects": {
-        "coral": [
+  "name": "Ocean Warm",
+  "proceduralObjects": {
+    "coral": [
+      {
+        "name": "reef-branch",
+        "chance": 0.7,
+        "density": 4,
+        "variants": 8,
+        "seed": 9411,
+        "underwater": true,
+        "waterlogged": true,
+        "form": "BRANCHING",
+        "block": "minecraft:fire_coral_block",
+        "blockPalette": {
+          "style": {
+            "style": "CELLULAR",
+            "zoom": 0.3
+          },
+          "palette": [
             {
-                "name": "reef-branch",
-                "chance": 0.7,
-                "density": 4,
-                "variants": 8,
-                "seed": 9411,
-                "underwater": true,
-                "waterlogged": true,
-                "form": "BRANCHING",
-                "block": "minecraft:fire_coral_block",
-                "blockPalette": {
-                    "style": {"style": "CELLULAR", "zoom": 0.3},
-                    "palette": [
-                        {"block": "minecraft:fire_coral_block", "weight": 3},
-                        {"block": "minecraft:tube_coral_block", "weight": 2},
-                        {"block": "minecraft:bubble_coral_block", "weight": 2},
-                        {"block": "minecraft:horn_coral_block", "weight": 2},
-                        {"block": "minecraft:brain_coral_block", "weight": 2}
-                    ]
-                },
-                "tipBlock": "minecraft:sea_pickle",
-                "tipChance": 0.5,
-                "heightMin": 4,
-                "heightMax": 8,
-                "spread": 1.1,
-                "sway": 0.45,
-                "branchCount": 6,
-                "branchLength": 4,
-                "branchElevation": 40,
-                "branchAzimuth": "GOLDEN_ANGLE",
-                "subBranches": true,
-                "subBranchCount": 2,
-                "subBranchScale": 0.6,
-                "tipClusterRadius": 1,
-                "rotation": {"enabled": true, "yAxis": {"enabled": true, "min": 0, "max": 360, "interval": 90}}
+              "block": "minecraft:fire_coral_block",
+              "weight": 3
             },
             {
-                "name": "reef-brain",
-                "chance": 0.45,
-                "density": 3,
-                "variants": 5,
-                "seed": 9412,
-                "underwater": true,
-                "waterlogged": true,
-                "form": "BRAIN",
-                "block": "minecraft:brain_coral_block",
-                "blockPalette": {
-                    "style": {"style": "CELLULAR", "zoom": 0.35},
-                    "palette": [
-                        {"block": "minecraft:brain_coral_block", "weight": 3},
-                        {"block": "minecraft:bubble_coral_block", "weight": 2}
-                    ]
-                },
-                "brainRadius": 4,
-                "brainRoughness": 0.4,
-                "rotation": {"enabled": true, "yAxis": {"enabled": true, "min": 0, "max": 360, "interval": 90}}
+              "block": "minecraft:tube_coral_block",
+              "weight": 2
             },
             {
-                "name": "reef-fan",
-                "chance": 0.4,
-                "density": 3,
-                "variants": 5,
-                "seed": 9413,
-                "underwater": true,
-                "waterlogged": true,
-                "form": "FAN",
-                "block": "minecraft:horn_coral_block",
-                "blockPalette": {
-                    "style": {"style": "CELLULAR", "zoom": 0.3},
-                    "palette": [
-                        {"block": "minecraft:horn_coral_block", "weight": 3},
-                        {"block": "minecraft:fire_coral_block", "weight": 2}
-                    ]
-                },
-                "heightMin": 3,
-                "heightMax": 6,
-                "fanWidth": 5,
-                "sway": 0.3,
-                "rotation": {"enabled": true, "yAxis": {"enabled": true, "min": 0, "max": 360, "interval": 90}}
+              "block": "minecraft:bubble_coral_block",
+              "weight": 2
+            },
+            {
+              "block": "minecraft:horn_coral_block",
+              "weight": 2
+            },
+            {
+              "block": "minecraft:brain_coral_block",
+              "weight": 2
             }
-        ]
-    },
-    "color": "#382CAA",
-    "derivative": "minecraft:warm_ocean",
-    "vanillaDerivative": "minecraft:warm_ocean",
-    "children": [
-        "ocean/warm-bottom"
-    ],
-    "generators": [
-        {
-            "min": -32,
-            "max": -10,
-            "generator": "mountain"
+          ]
+        },
+        "tipBlock": "minecraft:sea_pickle",
+        "tipChance": 0.5,
+        "heightMin": 4,
+        "heightMax": 8,
+        "spread": 1.1,
+        "sway": 0.45,
+        "branchCount": 6,
+        "branchLength": 4,
+        "branchElevation": 40,
+        "branchAzimuth": "GOLDEN_ANGLE",
+        "subBranches": true,
+        "subBranchCount": 2,
+        "subBranchScale": 0.6,
+        "tipClusterRadius": 1,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
         }
-    ],
-    "layers": [
-        {
-            "minHeight": 2,
-            "maxHeight": 10,
-            "style": {
-                "style": "FRACTAL_FBM_IRIS"
+      },
+      {
+        "name": "reef-brain",
+        "chance": 0.45,
+        "density": 3,
+        "variants": 5,
+        "seed": 9412,
+        "underwater": true,
+        "waterlogged": true,
+        "form": "BRAIN",
+        "block": "minecraft:brain_coral_block",
+        "blockPalette": {
+          "style": {
+            "style": "CELLULAR",
+            "zoom": 0.35
+          },
+          "palette": [
+            {
+              "block": "minecraft:brain_coral_block",
+              "weight": 3
             },
-            "zoom": 0.6,
-            "palette": [
-                {
-                    "block": "minecraft:sand"
-                },
-                {
-                    "block": "minecraft:clay"
-                },
-                {
-                    "block": "minecraft:sand"
-                },
-                {
-                    "block": "minecraft:gravel"
-                },
-                {
-                    "block": "minecraft:sand"
-                },
-                {
-                    "block": "minecraft:dirt"
-                },
-                {
-                    "weight": 2,
-                    "block": "minecraft:sand"
-                }
-            ]
-        }
-    ],
-    "objects": [
-        {
-            "place": [
-                "clutter/coralpink1",
-                "clutter/coralpink2",
-                "clutter/coralpink3",
-                "clutter/coralpink4",
-                "clutter/coralpurp1",
-                "clutter/coralpurp2",
-                "clutter/coralpurp3",
-                "clutter/coralred1",
-                "clutter/coralby1",
-                "clutter/coralby2",
-                "clutter/coralby3",
-                "clutter/coralby4"
-            ],
-            "chance": 0.51,
-            "density": 2,
-            "underwater": true,
-            "mode": "CENTER_HEIGHT",
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "interval": 90,
-                    "max": 360,
-                    "min": -360
-                }
+            {
+              "block": "minecraft:bubble_coral_block",
+              "weight": 2
             }
+          ]
         },
-        {
-            "place": [
-                "clutter/stonedirtsetter1",
-                "clutter/stonedirtsetter2",
-                "clutter/stonedirtsetter3",
-                "clutter/stonedirtsetter4",
-                "clutter/stonedirtsetter5",
-                "clutter/stonedirtsetter6",
-                "clutter/stonedirtsetter7"
-            ],
-            "chance": 0.5,
-            "density": 2,
-            "underwater": true,
-            "mode": "CENTER_HEIGHT",
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "interval": 90,
-                    "max": 360,
-                    "min": -360
-                }
+        "brainRadius": 4,
+        "brainRoughness": 0.4,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
+        }
+      },
+      {
+        "name": "reef-fan",
+        "chance": 0.4,
+        "density": 3,
+        "variants": 5,
+        "seed": 9413,
+        "underwater": true,
+        "waterlogged": true,
+        "form": "FAN",
+        "block": "minecraft:horn_coral_block",
+        "blockPalette": {
+          "style": {
+            "style": "CELLULAR",
+            "zoom": 0.3
+          },
+          "palette": [
+            {
+              "block": "minecraft:horn_coral_block",
+              "weight": 3
             },
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "minecraft:stone"
-                        },
-                        {
-                            "block": "minecraft:dirt"
-                        }
-                    ],
-                    "replace": {
-                        "palette": [
-                            {
-                                "block": "minecraft:brain_coral_block"
-                            },
-                            {
-                                "block": "minecraft:horn_coral_block"
-                            },
-                            {
-                                "block": "minecraft:tube_coral_block"
-                            },
-                            {
-                                "block": "minecraft:fire_coral_block"
-                            },
-                            {
-                                "block": "minecraft:bubble_coral_block"
-                            }
-                        ],
-                        "style": {
-                            "style": "CELLULAR"
-                        },
-                        "zoom": 0.07
-                    }
-                }
-            ]
+            {
+              "block": "minecraft:fire_coral_block",
+              "weight": 2
+            }
+          ]
+        },
+        "heightMin": 3,
+        "heightMax": 6,
+        "fanWidth": 5,
+        "sway": 0.3,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 90
+          }
         }
-    ],
-    "decorators": [
+      }
+    ]
+  },
+  "color": "#382CAA",
+  "derivative": "minecraft:warm_ocean",
+  "vanillaDerivative": "minecraft:warm_ocean",
+  "children": [
+    "ocean/warm-bottom"
+  ],
+  "generators": [
+    {
+      "min": -32,
+      "max": -10,
+      "generator": "mountain"
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 2,
+      "maxHeight": 10,
+      "style": {
+        "style": "FRACTAL_FBM_IRIS"
+      },
+      "zoom": 0.6,
+      "palette": [
         {
-            "chance": 0.02,
-            "palette": [
-                {
-                    "block": "minecraft:kelp_plant"
-                }
-            ],
-            "stackMin": 2,
-            "stackMax": 6,
-            "partOf": "SEA_FLOOR"
+          "block": "minecraft:sand"
         },
         {
-            "chance": 0.05,
-            "palette": [
-                {
-                    "block": "minecraft:seagrass"
-                }
-            ]
+          "block": "minecraft:clay"
         },
         {
-            "chance": 0.05,
-            "palette": [
-                {
-                    "block": "minecraft:tall_seagrass",
-                    "data": {
-                        "half": "lower"
-                    }
-                }
-            ],
-            "topPalette": [
-                {
-                    "block": "minecraft:tall_seagrass",
-                    "data": {
-                        "half": "upper"
-                    }
-                }
-            ],
-            "partOf": "SEA_FLOOR"
+          "block": "minecraft:sand"
+        },
+        {
+          "block": "minecraft:gravel"
+        },
+        {
+          "block": "minecraft:sand"
+        },
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "weight": 2,
+          "block": "minecraft:sand"
         }
-    ],
-    "childStyle": {
-        "style": "GLOB",
-        "zoom": 1,
-        "exponent": 1.3
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "place": [
+        "clutter/coralpink1",
+        "clutter/coralpink2",
+        "clutter/coralpink3",
+        "clutter/coralpink4",
+        "clutter/coralpurp1",
+        "clutter/coralpurp2",
+        "clutter/coralpurp3",
+        "clutter/coralred1",
+        "clutter/coralby1",
+        "clutter/coralby2",
+        "clutter/coralby3",
+        "clutter/coralby4"
+      ],
+      "chance": 0.51,
+      "density": 2,
+      "underwater": true,
+      "mode": "CENTER_HEIGHT",
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "interval": 90,
+          "max": 360,
+          "min": -360
+        }
+      }
     },
-    "childShrinkFactor": 1
+    "snippet/object-placer/clutter/stonedirtsetter-center-c0-5-d2-coral-mix"
+  ],
+  "decorators": [
+    {
+      "chance": 0.02,
+      "palette": [
+        {
+          "block": "minecraft:kelp_plant"
+        }
+      ],
+      "stackMin": 2,
+      "stackMax": 6,
+      "partOf": "SEA_FLOOR"
+    },
+    {
+      "chance": 0.05,
+      "palette": [
+        {
+          "block": "minecraft:seagrass"
+        }
+      ]
+    },
+    {
+      "chance": 0.05,
+      "palette": [
+        {
+          "block": "minecraft:tall_seagrass",
+          "data": {
+            "half": "lower"
+          }
+        }
+      ],
+      "topPalette": [
+        {
+          "block": "minecraft:tall_seagrass",
+          "data": {
+            "half": "upper"
+          }
+        }
+      ],
+      "partOf": "SEA_FLOOR"
+    }
+  ],
+  "childStyle": {
+    "style": "GLOB",
+    "zoom": 1,
+    "exponent": 1.3
+  },
+  "childShrinkFactor": 1
 }

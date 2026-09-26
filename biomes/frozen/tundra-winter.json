@@ -48,25 +48,7 @@
     "style": "STATIC",
     "zoom": 1
   },
-  "wall": {
-    "style": {
-      "style": "NOWHERE"
-    },
-    "palette": [
-      {
-        "block": "minecraft:diorite"
-      },
-      {
-        "block": "minecraft:diorite"
-      },
-      {
-        "block": "minecraft:stone"
-      },
-      {
-        "block": "minecraft:stone"
-      }
-    ]
-  },
+  "wall": "snippet/biome-palette/wall/diorite-stone",
   "layers": [
     {
       "style": {
@@ -100,9 +82,6 @@
       ]
     },
     {
-      "style": {
-        "style": "STATIC"
-      },
       "minHeight": 1,
       "maxHeight": 1,
       "palette": [
@@ -179,33 +158,7 @@
         "enabled": true
       },
       "edit": [
-        {
-          "find": [
-            {
-              "block": "minecraft:birch_leaves"
-            },
-            {
-              "block": "minecraft:spruce_leaves"
-            }
-          ],
-          "exact": false,
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:jungle_leaves"
-              },
-              {
-                "block": "minecraft:acacia_leaves"
-              },
-              {
-                "block": "minecraft:oak_leaves"
-              },
-              {
-                "block": "minecraft:dark_oak_leaves"
-              }
-            ]
-          }
-        }
+        "snippet/object-block-replacer/leaves/birch-spruce-to-jungle-acacia-oak-dark-oak"
       ],
       "place": [
         "trees/mixed/tredwood1",
@@ -225,45 +178,7 @@
         "z": 0
       }
     },
-    {
-      "chance": 0.32,
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "mode": "PAINT",
-      "place": [
-        "clutter/srock1",
-        "clutter/srock2"
-      ],
-      "translate": {
-        "x": 0,
-        "y": -10,
-        "yRandom": 1,
-        "z": 0
-      },
-      "edit": [
-        {
-          "find": [
-            {
-              "block": "minecraft:polished_diorite"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:diorite"
-              }
-            ]
-          }
-        }
-      ]
-    },
+    "snippet/object-placer/clutter/srock-paint-c0-32-diorite",
     {
       "chance": 0.45,
       "density": 1,
@@ -277,33 +192,7 @@
         "enabled": true
       },
       "edit": [
-        {
-          "find": [
-            {
-              "block": "minecraft:birch_leaves"
-            },
-            {
-              "block": "minecraft:spruce_leaves"
-            }
-          ],
-          "exact": false,
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:jungle_leaves"
-              },
-              {
-                "block": "minecraft:acacia_leaves"
-              },
-              {
-                "block": "minecraft:oak_leaves"
-              },
-              {
-                "block": "minecraft:dark_oak_leaves"
-              }
-            ]
-          }
-        }
+        "snippet/object-block-replacer/leaves/birch-spruce-to-jungle-acacia-oak-dark-oak"
       ],
       "place": [
         "trees/mixed/tredwoodsmol1",
@@ -334,33 +223,7 @@
         "enabled": true
       },
       "edit": [
-        {
-          "find": [
-            {
-              "block": "minecraft:birch_leaves"
-            },
-            {
-              "block": "minecraft:spruce_leaves"
-            }
-          ],
-          "exact": false,
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:jungle_leaves"
-              },
-              {
-                "block": "minecraft:acacia_leaves"
-              },
-              {
-                "block": "minecraft:oak_leaves"
-              },
-              {
-                "block": "minecraft:dark_oak_leaves"
-              }
-            ]
-          }
-        }
+        "snippet/object-block-replacer/leaves/birch-spruce-to-jungle-acacia-oak-dark-oak"
       ],
       "place": [
         "clutter/spruceclutt1",
@@ -375,245 +238,14 @@
         "z": 0
       }
     },
-    {
-      "chance": 0.15,
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "edit": [
-        {
-          "find": [
-            {
-              "block": "minecraft:birch_leaves"
-            },
-            {
-              "block": "minecraft:spruce_leaves"
-            }
-          ],
-          "exact": false,
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:jungle_leaves"
-              },
-              {
-                "block": "minecraft:acacia_leaves"
-              },
-              {
-                "block": "minecraft:oak_leaves"
-              },
-              {
-                "block": "minecraft:dark_oak_leaves"
-              }
-            ]
-          }
-        }
-      ],
-      "place": [
-        "clutter/rshrub1",
-        "clutter/rshrub2"
-      ],
-      "translate": {
-        "x": 0,
-        "y": -3,
-        "z": 0
-      }
-    },
-    {
-      "chance": 0.01,
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "trees/mixed/tredwoodbee1",
-        "trees/mixed/tredwoodbee2",
-        "trees/mixed/tredwoodbee3",
-        "trees/mixed/tredwoodbee4"
-      ],
-      "edit": [
-        {
-          "find": [
-            {
-              "block": "minecraft:birch_leaves"
-            },
-            {
-              "block": "minecraft:spruce_leaves"
-            }
-          ],
-          "exact": false,
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:jungle_leaves"
-              },
-              {
-                "block": "minecraft:acacia_leaves"
-              },
-              {
-                "block": "minecraft:oak_leaves"
-              },
-              {
-                "block": "minecraft:dark_oak_leaves"
-              }
-            ]
-          }
-        }
-      ],
-      "translate": {
-        "x": 0,
-        "y": -8,
-        "z": 0
-      }
-    },
-    {
-      "chance": 0.075,
-      "rotation": {
-        "yAxis": {
-          "min": 0,
-          "max": 270,
-          "interval": 90,
-          "enabled": true
-        },
-        "enabled": true
-      },
-      "place": [
-        "clutter/stump1",
-        "clutter/stump2",
-        "clutter/stump3",
-        "clutter/stump4",
-        "clutter/stump5",
-        "clutter/stump6"
-      ],
-      "edit": [
-        {
-          "find": [
-            {
-              "block": "minecraft:oak_log"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:spruce_log"
-              }
-            ]
-          }
-        },
-        {
-          "find": [
-            {
-              "block": "minecraft:oak_wood"
-            }
-          ],
-          "replace": {
-            "palette": [
-              {
-                "block": "minecraft:spruce_wood"
-              }
-            ]
-          }
-        }
-      ],
-      "mode": "PAINT"
-    },
-    {
-      "chance": 0.008,
-      "mode": "PAINT",
-      "place": [
-        "clutter/pumpkins1",
-        "clutter/pumpkins2",
-        "clutter/pumpkins3",
-        "clutter/pumpkins4",
-        "clutter/pumpkins5",
-        "clutter/pumpkins6"
-      ],
-      "rotation": {
-        "enabled": true,
-        "yAxis": {
-          "enabled": true,
-          "max": 360,
-          "min": 0,
-          "interval": 90
-        }
-      },
-      "translate": {
-        "y": 1
-      }
-    }
+    "snippet/object-placer/clutter/rshrub-c0-15-mixed-leaves",
+    "snippet/object-placer/trees/mixed-tredwoodbee-c0-01-mixed-leaves",
+    "snippet/object-placer/clutter/stump-paint-c0-075-spruce",
+    "snippet/object-placer/clutter/pumpkins-paint-c0-008"
   ],
   "decorators": [
-    {
-      "chance": 0.003,
-      "variance": {
-        "style": "STATIC"
-      },
-      "zoom": 1,
-      "palette": [
-        {
-          "block": "minecraft:white_tulip"
-        },
-        {
-          "block": "minecraft:cornflower"
-        },
-        {
-          "block": "minecraft:blue_orchid"
-        },
-        {
-          "block": "minecraft:lily_of_the_valley"
-        }
-      ],
-      "style": {
-        "style": "STATIC"
-      }
-    },
-    {
-      "chance": 0.01,
-      "variance": {
-        "style": "STATIC"
-      },
-      "zoom": 0.3,
-      "palette": [
-        {
-          "data": {
-            "age": 0
-          },
-          "block": "minecraft:sweet_berry_bush"
-        },
-        {
-          "data": {
-            "age": 1
-          },
-          "block": "minecraft:sweet_berry_bush"
-        },
-        {
-          "data": {
-            "age": 2
-          },
-          "block": "minecraft:sweet_berry_bush"
-        },
-        {
-          "data": {
-            "age": 3
-          },
-          "block": "minecraft:sweet_berry_bush"
-        }
-      ],
-      "style": {
-        "style": "STATIC"
-      }
-    },
+    "snippet/decorator/flowers/cool-mix-c0-003-z1",
+    "snippet/decorator/shrubs/sweet-berry-c0-01",
     {
       "chance": 0.25,
       "palette": [
@@ -688,24 +320,5 @@
     }
   ],
   "childShrinkFactor": 2.4,
-  "terrain3D": {
-    "enabled": true,
-    "seed": 30107,
-    "amplitude": 24,
-    "horizontalScale": 160,
-    "verticalScale": 44,
-    "densityStyle": {
-      "style": "SIMPLEX"
-    },
-    "crackDepth": 0,
-    "crackWidth": 2.25,
-    "crackScale": 448,
-    "crackStyle": {
-      "style": "SIMPLEX"
-    },
-    "minimumSlope": 0.3,
-    "slopeFade": 0.4,
-    "fluidClearance": 8,
-    "fluidFade": 24
-  }
+  "terrain3D": "snippet/terrain-3d/hilly/amp24-simplex-crack448"
 }

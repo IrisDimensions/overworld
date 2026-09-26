@@ -1,192 +1,93 @@
 {
-    "name": "Temperate Ocean Deep",
-    "color": "#416DFF",
-    "derivative": "minecraft:deep_ocean",
-    "vanillaDerivative": "minecraft:deep_ocean",
-    "generators": [
-        {
-            "min": -72,
-            "max": -40,
-            "generator": "mountain"
-        }
-    ],
-    "layers": [
-        {
-            "minHeight": 2,
-            "maxHeight": 3,
-            "style": {
-                "style": "FRACTAL_FBM_IRIS"
-            },
-            "zoom": 0.725,
-            "palette": [
-                {
-                    "block": "minecraft:sand"
-                },
-                {
-                    "block": "minecraft:clay"
-                },
-                {
-                    "block": "minecraft:sand"
-                },
-                {
-                    "block": "minecraft:gravel"
-                },
-                {
-                    "block": "minecraft:sand"
-                },
-                {
-                    "block": "minecraft:dirt"
-                },
-                {
-                    "weight": 2,
-                    "block": "minecraft:sand"
-                }
-            ]
-        },
-        {
-            "palette": [
-                {
-                    "block": "minecraft:dirt"
-                }
-            ]
-        },
-        {
-            "minHeight": 1,
-            "maxHeight": 3,
-            "palette": [
-                {
-                    "weight": 2,
-                    "block": "minecraft:dirt"
-                },
-                {
-                    "block": "minecraft:coarse_dirt"
-                }
-            ]
-        }
-    ],
-    "objects": [
-        {
-            "chance": 0.01,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "underwater": true,
-            "place": [
-                "clutter/substat1",
-                "clutter/substat2",
-                "clutter/substat3",
-                "clutter/substat4",
-                "clutter/substat5"
-            ]
-        }
-    ],
-    "decorators": [
-        {
-            "chance": 0.0006,
-            "variance": {
-                "style": "STATIC"
-            },
-            "zoom": 1,
-            "palette": [
-                {
-                    "block": "minecraft:soul_sand"
-                },
-                {
-                    "block": "minecraft:magma_block"
-                }
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "partOf": "SEA_FLOOR"
-        },
-        {
-            "chance": 0.07,
-            "variance": {
-                "style": "STATIC"
-            },
-            "zoom": 5,
-            "palette": [
-                {
-                    "block": "minecraft:seagrass"
-                }
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "partOf": "SEA_FLOOR"
-        },
-        {
-            "chance": 0.013,
-            "variance": {
-                "style": "STATIC"
-            },
-            "stackMax": 6,
-            "zoom": 1,
-            "palette": [
-                {
-                    "block": "minecraft:kelp_plant"
-                }
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "heightVariance": {
-                "style": "NOWHERE"
-            },
-            "stackMin": 2,
-            "partOf": "SEA_FLOOR"
-        },
-        {
-            "chance": 0.001,
-            "variance": {
-                "style": "STATIC"
-            },
-            "zoom": 1,
-            "palette": [
-                {
-                    "data": {
-                        "waterlogged": true,
-                        "pickles": 1
-                    },
-                    "block": "minecraft:sea_pickle"
-                }
-            ],
-            "style": {
-                "style": "STATIC"
-            },
-            "partOf": "SEA_FLOOR"
-        }
-    ],
-    "slab": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            {
-                "data": {
-                    "waterlogged": false,
-                    "type": "bottom"
-                },
-                "block": "minecraft:sandstone_slab"
-            },
-            {
-                "data": {
-                    "waterlogged": false,
-                    "type": "bottom"
-                },
-                "block": "minecraft:smooth_sandstone_slab"
-            },
-            {
-                "weight": 2,
-                "block": "minecraft:air"
-            }
-        ]
+  "name": "Temperate Ocean Deep",
+  "color": "#416DFF",
+  "derivative": "minecraft:deep_ocean",
+  "vanillaDerivative": "minecraft:deep_ocean",
+  "generators": [
+    {
+      "min": -72,
+      "max": -40,
+      "generator": "mountain"
     }
+  ],
+  "layers": [
+    {
+      "minHeight": 2,
+      "maxHeight": 3,
+      "style": {
+        "style": "FRACTAL_FBM_IRIS"
+      },
+      "zoom": 0.725,
+      "palette": [
+        {
+          "block": "minecraft:sand"
+        },
+        {
+          "block": "minecraft:clay"
+        },
+        {
+          "block": "minecraft:sand"
+        },
+        {
+          "block": "minecraft:gravel"
+        },
+        {
+          "block": "minecraft:sand"
+        },
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "weight": 2,
+          "block": "minecraft:sand"
+        }
+      ]
+    },
+    {
+      "palette": [
+        {
+          "block": "minecraft:dirt"
+        }
+      ]
+    },
+    "snippet/biome-palette/soil/dirt2-coarse-1-3"
+  ],
+  "objects": [
+    {
+      "chance": 0.01,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "underwater": true,
+      "place": [
+        "clutter/substat1",
+        "clutter/substat2",
+        "clutter/substat3",
+        "clutter/substat4",
+        "clutter/substat5"
+      ]
+    }
+  ],
+  "decorators": [
+    "snippet/decorator/sea/soul-sand-magma-c0-0006",
+    {
+      "chance": 0.07,
+      "zoom": 5,
+      "palette": [
+        {
+          "block": "minecraft:seagrass"
+        }
+      ],
+      "partOf": "SEA_FLOOR"
+    },
+    "snippet/decorator/sea/kelp-seafloor-c0-013",
+    "snippet/decorator/sea/sea-pickle-c0-001"
+  ],
+  "slab": "snippet/biome-palette/slab/sandstone-sparse"
 }

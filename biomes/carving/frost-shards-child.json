@@ -1,185 +1,162 @@
 {
-    "proceduralObjects": "snippet/procedural-objects/frozen/magical-ice-cave",
-    "name": "Frost Shards Child",
-    "derivative": "minecraft:dripstone_caves",
-    "vanillaDerivative": "minecraft:dripstone_caves",
-    "wall": {
+  "proceduralObjects": "snippet/procedural-objects/frozen/magical-ice-cave",
+  "name": "Frost Shards Child",
+  "derivative": "minecraft:dripstone_caves",
+  "vanillaDerivative": "minecraft:dripstone_caves",
+  "wall": {
+    "style": {
+      "style": "SIMPLEX",
+      "zoom": 0.7
+    },
+    "palette": [
+      {
+        "block": "minecraft:deepslate",
+        "weight": 12
+      },
+      {
+        "block": "minecraft:packed_ice",
+        "weight": 13
+      },
+      {
+        "block": "minecraft:calcite",
+        "weight": 8
+      },
+      {
+        "block": "minecraft:tuff",
+        "weight": 2
+      }
+    ]
+  },
+  "layers": [
+    {
+      "style": {
+        "style": "CELLULAR"
+      },
+      "minHeight": 1,
+      "maxHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:snow_block",
+          "weight": 10
+        },
+        {
+          "block": "minecraft:packed_ice",
+          "weight": 12
+        },
+        {
+          "block": "minecraft:ice",
+          "weight": 3
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.035,
+      "partOf": "CEILING",
+      "stackMin": 1,
+      "stackMax": 2,
+      "palette": [
+        {
+          "block": "minecraft:pointed_dripstone"
+        }
+      ]
+    },
+    {
+      "chance": 0.0345,
+      "stackMin": 1,
+      "stackMax": 1,
+      "palette": [
+        {
+          "block": "minecraft:glow_lichen"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    "snippet/object-placer/clutter/rock-boulder-carve-c0-13122-d6-size0-375"
+  ],
+  "caveProfile": {
+    "enabled": true,
+    "verticalRange": {
+      "min": 6,
+      "max": 620
+    },
+    "baseDensityStyle": {
+      "style": "FRACTAL_BILLOW_SIMPLEX",
+      "zoom": 0.607
+    },
+    "detailDensityStyle": {
+      "style": "FRACTAL_BILLOW_SIMPLEX",
+      "zoom": 0.717
+    },
+    "warpStyle": {
+      "style": "SIMPLEX",
+      "zoom": 0.38
+    },
+    "baseWeight": 0.81,
+    "detailWeight": 0.145,
+    "warpStrength": 0.3128,
+    "densityThreshold": {
+      "min": -0.155,
+      "max": -0.052,
+      "style": {
+        "style": "PERLIN_IRIS",
+        "zoom": 0.829
+      }
+    },
+    "thresholdBias": 0.14,
+    "sampleStep": 2,
+    "surfaceClearance": 7,
+    "allowSurfaceBreak": true,
+    "surfaceBreakStyle": {
+      "style": "SIMPLEX_VASCULAR",
+      "zoom": 0.81
+    },
+    "surfaceBreakNoiseThreshold": 0.68,
+    "surfaceBreakDepth": 12,
+    "surfaceBreakThresholdBoost": 0.1,
+    "objectMinDepthBelowSurface": 18,
+    "defaultObjectAnchor": "FLOOR",
+    "defaultObjectPlaceMode": "ORGANIC_STILT",
+    "anchorScanStep": 1,
+    "anchorSearchAttempts": 18,
+    "allowFluid": false,
+    "fluidMinDepthBelowSurface": 22,
+    "fluidRequiresFloor": true,
+    "allowLava": true,
+    "modules": [
+      {
         "style": {
-            "style": "SIMPLEX",
-            "zoom": 0.7
+          "style": "SIMPLEX_VASCULAR",
+          "zoom": 1.254
         },
-        "palette": [
-            {
-                "block": "minecraft:deepslate",
-                "weight": 12
-            },
-            {
-                "block": "minecraft:packed_ice",
-                "weight": 13
-            },
-            {
-                "block": "minecraft:calcite",
-                "weight": 8
-            },
-            {
-                "block": "minecraft:tuff",
-                "weight": 2
-            }
-        ]
-    },
-    "layers": [
-        {
-            "style": {
-                "style": "CELLULAR"
-            },
-            "minHeight": 1,
-            "maxHeight": 2,
-            "palette": [
-                {
-                    "block": "minecraft:snow_block",
-                    "weight": 10
-                },
-                {
-                    "block": "minecraft:packed_ice",
-                    "weight": 12
-                },
-                {
-                    "block": "minecraft:ice",
-                    "weight": 3
-                }
-            ]
-        }
-    ],
-    "decorators": [
-        {
-            "chance": 0.035,
-            "partOf": "CEILING",
-            "stackMin": 1,
-            "stackMax": 2,
-            "palette": [
-                {
-                    "block": "minecraft:pointed_dripstone"
-                }
-            ]
-        },
-        {
-            "chance": 0.0345,
-            "stackMin": 1,
-            "stackMax": 1,
-            "palette": [
-                {
-                    "block": "minecraft:glow_lichen"
-                }
-            ]
-        }
-    ],
-    "objects": [
-        {
-            "chance": 0.13122,
-            "density": 6,
-            "carvingSupport": "CARVING_ONLY",
-            "caveAnchorMode": "PROFILE_DEFAULT",
-            "translate": {
-                "y": -1
-            },
-            "place": [
-                "clutter/rock1",
-                "clutter/rock2",
-                "clutter/rock3",
-                "clutter/rock4",
-                "clutter/boulder1",
-                "clutter/boulder2",
-                "clutter/boulder3",
-                "clutter/boulder4"
-            ],
-            "bottom": true,
-            "force": true,
-            "scale": {
-                "size": 0.375
-            }
-        }
-    ],
-    "caveProfile": {
-        "enabled": true,
+        "weight": 0.07,
+        "threshold": 0.05,
         "verticalRange": {
-            "min": 6,
-            "max": 620
+          "min": 10,
+          "max": 600
         },
-        "baseDensityStyle": {
-            "style": "FRACTAL_BILLOW_SIMPLEX",
-            "zoom": 0.607
+        "invert": false
+      },
+      {
+        "style": {
+          "style": "FRACTAL_BILLOW_SIMPLEX",
+          "zoom": 0.246
         },
-        "detailDensityStyle": {
-            "style": "FRACTAL_BILLOW_SIMPLEX",
-            "zoom": 0.717
+        "weight": 0.04,
+        "threshold": 0.08,
+        "verticalRange": {
+          "min": 8,
+          "max": 260
         },
-        "warpStyle": {
-            "style": "SIMPLEX",
-            "zoom": 0.38
-        },
-        "baseWeight": 0.81,
-        "detailWeight": 0.145,
-        "warpStrength": 0.3128,
-        "densityThreshold": {
-            "min": -0.155,
-            "max": -0.052,
-            "style": {
-                "style": "PERLIN_IRIS",
-                "zoom": 0.829
-            }
-        },
-        "thresholdBias": 0.14,
-        "sampleStep": 2,
-        "surfaceClearance": 7,
-        "allowSurfaceBreak": true,
-        "surfaceBreakStyle": {
-            "style": "SIMPLEX_VASCULAR",
-            "zoom": 0.81
-        },
-        "surfaceBreakNoiseThreshold": 0.68,
-        "surfaceBreakDepth": 12,
-        "surfaceBreakThresholdBoost": 0.1,
-        "objectMinDepthBelowSurface": 18,
-        "defaultObjectAnchor": "FLOOR",
-        "defaultObjectPlaceMode": "ORGANIC_STILT",
-        "anchorScanStep": 1,
-        "anchorSearchAttempts": 18,
-        "allowFluid": false,
-        "fluidMinDepthBelowSurface": 22,
-        "fluidRequiresFloor": true,
-        "allowLava": true,
-        "modules": [
-            {
-                "style": {
-                    "style": "SIMPLEX_VASCULAR",
-                    "zoom": 1.254
-                },
-                "weight": 0.07,
-                "threshold": 0.05,
-                "verticalRange": {
-                    "min": 10,
-                    "max": 600
-                },
-                "invert": false
-            },
-            {
-                "style": {
-                    "style": "FRACTAL_BILLOW_SIMPLEX",
-                    "zoom": 0.246
-                },
-                "weight": 0.04,
-                "threshold": 0.08,
-                "verticalRange": {
-                    "min": 8,
-                    "max": 260
-                },
-                "invert": true
-            }
-        ],
-        "verticalEdgeFade": 24,
-        "verticalEdgeFadeStrength": 0.17,
-        "minCarveCells": 20,
-        "recoveryThresholdBoost": 0.07
-    },
-    "caveMinDepthBelowSurface": 10
+        "invert": true
+      }
+    ],
+    "verticalEdgeFade": 24,
+    "verticalEdgeFadeStrength": 0.17,
+    "minCarveCells": 20,
+    "recoveryThresholdBoost": 0.07
+  },
+  "caveMinDepthBelowSurface": 10
 }

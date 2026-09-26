@@ -1,233 +1,151 @@
 {
-    "name": "Deepdark City Expanse",
-    "derivative": "minecraft:deep_dark",
-    "vanillaDerivative": "minecraft:deep_dark",
-    "wall": {
-        "style": {
-            "style": "STATIC"
-        },
-        "palette": [
-            {
-                "block": "minecraft:deepslate",
-                "weight": 3
-            }
-        ]
-    },
-    "caveCeilingLayers": [
+  "name": "Deepdark City Expanse",
+  "derivative": "minecraft:deep_dark",
+  "vanillaDerivative": "minecraft:deep_dark",
+  "wall": {
+    "palette": [
+      {
+        "block": "minecraft:deepslate",
+        "weight": 3
+      }
+    ]
+  },
+  "caveCeilingLayers": [
+    {
+      "palette": [
         {
-            "palette": [
-                {
-                    "block": "minecraft:deepslate"
-                }
-            ]
+          "block": "minecraft:deepslate"
         }
-    ],
-    "layers": [
-        {
-            "style": {
-                "style": "STATIC"
-            },
-            "maxHeight": 2,
-            "minHeight": 2,
-            "palette": [
-                {
-                    "block": "minecraft:sculk",
-                    "weight": 3
-                }
-            ]
-        }
-    ],
-    "decorators": [
-        {
-            "chance": 0.05,
-            "palette": [
-                {
-                    "block": "minecraft:sculk_sensor",
-                    "weight": 180
-                },
-                {
-                    "block": "minecraft:sculk_catalyst",
-                    "weight": 2
-                },
-                {
-                    "block": "minecraft:sculk_shrieker",
-                    "weight": 1
-                }
-            ]
-        }
-    ],
-    "objects": [
-        {
-            "chance": 0.235719,
-            "density": 4,
-            "carvingSupport": "CARVING_ONLY",
-            "caveAnchorMode": "PROFILE_DEFAULT",
-            "translate": {
-                "y": -1
-            },
-            "place": [
-                "clutter/stoneclutt1",
-                "clutter/stoneclutt2",
-                "clutter/stoneclutt3",
-                "clutter/stoneclutt4",
-                "clutter/stoneclutt5",
-                "clutter/stoneclutt6",
-                "clutter/stoneclutt7",
-                "clutter/rock1",
-                "clutter/rock2",
-                "clutter/rock3",
-                "clutter/boulder1",
-                "clutter/boulder2",
-                "clutter/boulder3",
-                "clutter/boulder4"
-            ],
-            "bottom": true,
-            "force": true,
-            "scale": {
-                "size": 0.75
-            }
-        },
-        {
-            "chance": 0.138858,
-            "density": 4,
-            "carvingSupport": "CARVING_ONLY",
-            "caveAnchorMode": "PROFILE_DEFAULT",
-            "translate": {
-                "y": -1
-            },
-            "place": [
-                "clutter/rock1",
-                "clutter/rock2",
-                "clutter/rock3",
-                "clutter/rock4",
-                "clutter/boulder1",
-                "clutter/boulder2",
-                "clutter/boulder3",
-                "clutter/boulder4"
-            ],
-            "bottom": true,
-            "force": true,
-            "scale": {
-                "size": 0.75
-            }
-        },
-        {
-            "chance": 0.138858,
-            "density": 4,
-            "carvingSupport": "CARVING_ONLY",
-            "caveAnchorMode": "PROFILE_DEFAULT",
-            "translate": {
-                "y": -1
-            },
-            "place": [
-                "clutter/stoneclutt3",
-                "clutter/stoneclutt4",
-                "clutter/stoneclutt5",
-                "clutter/rock1",
-                "clutter/rock2",
-                "clutter/rock3",
-                "clutter/boulder7",
-                "clutter/boulder8",
-                "clutter/boulder9"
-            ],
-            "bottom": true,
-            "force": true,
-            "scale": {
-                "size": 0.75
-            }
-        }
-    ],
-    "caveMinDepthBelowSurface": 60,
-    "caveProfile": {
-        "enabled": true,
-        "verticalRange": {
-            "min": 6,
-            "max": 81
-        },
-        "baseDensityStyle": {
-            "style": "PERLIN_IRIS",
-            "zoom": 0.9
-        },
-        "detailDensityStyle": {
-            "style": "FRACTAL_FBM_SIMPLEX",
-            "zoom": 0.5
-        },
-        "warpStyle": {
-            "style": "SIMPLEX",
-            "zoom": 0.58
-        },
-        "baseWeight": 0.92,
-        "detailWeight": 0.07,
-        "warpStrength": 0.06,
-        "densityThreshold": {
-            "min": -0.08,
-            "max": 0.0,
-            "style": {
-                "style": "SIMPLEX",
-                "zoom": 0.6
-            }
-        },
-        "thresholdBias": 0.06,
-        "sampleStep": 2,
-        "surfaceClearance": 14,
-        "allowSurfaceBreak": false,
-        "surfaceBreakStyle": {
-            "style": "SIMPLEX",
-            "zoom": 1.0
-        },
-        "surfaceBreakNoiseThreshold": 0.9,
-        "surfaceBreakDepth": 8,
-        "surfaceBreakThresholdBoost": 0.0,
-        "objectMinDepthBelowSurface": 40,
-        "defaultObjectAnchor": "FLOOR",
-        "defaultObjectPlaceMode": "ORGANIC_STILT",
-        "anchorScanStep": 1,
-        "anchorSearchAttempts": 28,
-        "allowFluid": false,
-        "fluidMinDepthBelowSurface": 30,
-        "fluidRequiresFloor": true,
-        "allowLava": false,
-        "modules": [
-            {
-                "style": {
-                    "style": "SIMPLEX_VASCULAR",
-                    "zoom": 0.9
-                },
-                "weight": 0.08,
-                "threshold": 0.03,
-                "verticalRange": {
-                    "min": 16,
-                    "max": 81
-                },
-                "invert": false
-            },
-            {
-                "style": {
-                    "style": "FRACTAL_BILLOW_SIMPLEX",
-                    "zoom": 0.46
-                },
-                "weight": 0.05,
-                "threshold": 0.02,
-                "verticalRange": {
-                    "min": 6,
-                    "max": 81
-                },
-                "invert": true
-            }
-        ],
-        "verticalEdgeFade": 48,
-        "verticalEdgeFadeStrength": 0.3,
-        "minCarveCells": 10,
-        "recoveryThresholdBoost": 0.06
-    },
-    "children": [
-        "carving/city-basin",
-        "carving/dark-depths",
-        "carving/standard-deepdark-child"
-    ],
-    "childShrinkFactor": 1.42,
-    "childStyle": {
-        "style": "PERLIN_IRIS",
-        "zoom": 1.34
+      ]
     }
+  ],
+  "layers": [
+    {
+      "maxHeight": 2,
+      "minHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:sculk",
+          "weight": 3
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.05,
+      "palette": [
+        {
+          "block": "minecraft:sculk_sensor",
+          "weight": 180
+        },
+        {
+          "block": "minecraft:sculk_catalyst",
+          "weight": 2
+        },
+        {
+          "block": "minecraft:sculk_shrieker",
+          "weight": 1
+        }
+      ]
+    }
+  ],
+  "objects": [
+    "snippet/object-placer/clutter/stoneclutt-rock-boulder-carve-c0-235719-d4",
+    "snippet/object-placer/clutter/rock-boulder-carve-c0-138858-d4-size0-75",
+    "snippet/object-placer/clutter/stoneclutt-rock-boulder-carve-c0-138858-d4"
+  ],
+  "caveMinDepthBelowSurface": 60,
+  "caveProfile": {
+    "enabled": true,
+    "verticalRange": {
+      "min": 6,
+      "max": 81
+    },
+    "baseDensityStyle": {
+      "style": "PERLIN_IRIS",
+      "zoom": 0.9
+    },
+    "detailDensityStyle": {
+      "style": "FRACTAL_FBM_SIMPLEX",
+      "zoom": 0.5
+    },
+    "warpStyle": {
+      "style": "SIMPLEX",
+      "zoom": 0.58
+    },
+    "baseWeight": 0.92,
+    "detailWeight": 0.07,
+    "warpStrength": 0.06,
+    "densityThreshold": {
+      "min": -0.08,
+      "max": 0.0,
+      "style": {
+        "style": "SIMPLEX",
+        "zoom": 0.6
+      }
+    },
+    "thresholdBias": 0.06,
+    "sampleStep": 2,
+    "surfaceClearance": 14,
+    "allowSurfaceBreak": false,
+    "surfaceBreakStyle": {
+      "style": "SIMPLEX",
+      "zoom": 1.0
+    },
+    "surfaceBreakNoiseThreshold": 0.9,
+    "surfaceBreakDepth": 8,
+    "surfaceBreakThresholdBoost": 0.0,
+    "objectMinDepthBelowSurface": 40,
+    "defaultObjectAnchor": "FLOOR",
+    "defaultObjectPlaceMode": "ORGANIC_STILT",
+    "anchorScanStep": 1,
+    "anchorSearchAttempts": 28,
+    "allowFluid": false,
+    "fluidMinDepthBelowSurface": 30,
+    "fluidRequiresFloor": true,
+    "allowLava": false,
+    "modules": [
+      {
+        "style": {
+          "style": "SIMPLEX_VASCULAR",
+          "zoom": 0.9
+        },
+        "weight": 0.08,
+        "threshold": 0.03,
+        "verticalRange": {
+          "min": 16,
+          "max": 81
+        },
+        "invert": false
+      },
+      {
+        "style": {
+          "style": "FRACTAL_BILLOW_SIMPLEX",
+          "zoom": 0.46
+        },
+        "weight": 0.05,
+        "threshold": 0.02,
+        "verticalRange": {
+          "min": 6,
+          "max": 81
+        },
+        "invert": true
+      }
+    ],
+    "verticalEdgeFade": 48,
+    "verticalEdgeFadeStrength": 0.3,
+    "minCarveCells": 10,
+    "recoveryThresholdBoost": 0.06
+  },
+  "children": [
+    "carving/city-basin",
+    "carving/dark-depths",
+    "carving/standard-deepdark-child"
+  ],
+  "childShrinkFactor": 1.42,
+  "childStyle": {
+    "style": "PERLIN_IRIS",
+    "zoom": 1.34
+  }
 }

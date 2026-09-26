@@ -1,142 +1,142 @@
 {
-    "riverPolicy": {
-        "placement": "TRANSIT_ONLY",
-        "routing": "PREFER",
-        "outletAdmission": false,
-        "profiles": [
-            "water"
-        ]
-    },
-    "name": "Tropical River Steep",
-    "color": "#5341FF",
-    "derivative": "minecraft:warm_ocean",
-    "vanillaDerivative": "minecraft:warm_ocean",
-    "generators": [
-        {
-            "min": -32,
-            "max": -10,
-            "generator": "mountain"
-        }
-    ],
-    "layers": [
-        {
-            "minHeight": 2,
-            "maxHeight": 2,
-            "slopeCondition": {
-                "minimumSlope": 0,
-                "maximumSlope": 3
-            },
-            "style": {
-                "style": "FRACTAL_FBM_IRIS"
-            },
-      "zoom": 8,
-            "palette": [
-                {
-                    "block": "minecraft:sand"
-                },
-                {
-                    "block": "minecraft:clay"
-                },
-                {
-                    "block": "minecraft:sand"
-                },
-                {
-                    "block": "minecraft:gravel"
-                },
-                {
-                    "block": "minecraft:sand"
-                },
-                {
-                    "block": "minecraft:dirt"
-                },
-                {
-                    "weight": 2,
-                    "block": "minecraft:sand"
-                }
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 2,
-            "palette": [
-                {
-                    "block": "minecraft:gravel"
-                }
-            ]
-        }
-    ],
-    "objects": [
-        {
-            "place": [
-                "clutter/ellipsoid1"
-            ],
-            "chance": 0.5,
-            "underwater": true,
-            "mode": "CENTER_HEIGHT",
-            "edit": [
-                {
-                    "find": [
-                        {
-                            "block": "minecraft:clay"
-                        }
-                    ],
-                    "replace": {
-                        "style": {
-                            "style": "GLOB",
-                            "zoom": 0.02
-                        },
-                        "palette": [
-                            {
-                                "weight": 2,
-                                "block": "minecraft:clay"
-                            },
-                            {
-                                "weight": 1,
-                                "block": "minecraft:cave_air"
-                            }
-                        ]
-                    }
-                }
-            ]
-        }
-    ],
-    "decorators": [
-        {
-            "chance": 0.1,
-            "palette": [
-                {
-                    "block": "minecraft:kelp_plant"
-                }
-            ],
-            "stackMin": 4,
-            "stackMax": 10
-        },
-        {
-            "chance": 0.05,
-            "palette": [
-                {
-                    "block": "minecraft:seagrass"
-                }
-            ]
-        },
-        {
-            "chance": 0.05,
-            "palette": [
-                {
-                    "block": "minecraft:tall_seagrass",
-                    "data": {
-                        "half": "lower"
-                    }
-                }
-            ],
-            "topPalette": [
-                {
-                    "block": "minecraft:tall_seagrass",
-                    "data": {
-                        "half": "upper"
-                    }
-                }
-            ]
-        }
+  "riverPolicy": {
+    "placement": "TRANSIT_ONLY",
+    "routing": "PREFER",
+    "outletAdmission": false,
+    "profiles": [
+      "water"
     ]
+  },
+  "name": "Tropical River Steep",
+  "color": "#5341FF",
+  "derivative": "minecraft:warm_ocean",
+  "vanillaDerivative": "minecraft:warm_ocean",
+  "generators": [
+    {
+      "min": -32,
+      "max": -10,
+      "generator": "mountain"
+    }
+  ],
+  "layers": [
+    {
+      "minHeight": 2,
+      "maxHeight": 2,
+      "slopeCondition": {
+        "minimumSlope": 0,
+        "maximumSlope": 3
+      },
+      "style": {
+        "style": "FRACTAL_FBM_IRIS"
+      },
+      "zoom": 8,
+      "palette": [
+        {
+          "block": "minecraft:sand"
+        },
+        {
+          "block": "minecraft:clay"
+        },
+        {
+          "block": "minecraft:sand"
+        },
+        {
+          "block": "minecraft:gravel"
+        },
+        {
+          "block": "minecraft:sand"
+        },
+        {
+          "block": "minecraft:dirt"
+        },
+        {
+          "weight": 2,
+          "block": "minecraft:sand"
+        }
+      ]
+    },
+    {
+      "minHeight": 2,
+      "maxHeight": 2,
+      "palette": [
+        {
+          "block": "minecraft:gravel"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "place": [
+        "clutter/ellipsoid1"
+      ],
+      "chance": 0.5,
+      "underwater": true,
+      "mode": "CENTER_HEIGHT",
+      "edit": [
+        {
+          "find": [
+            {
+              "block": "minecraft:clay"
+            }
+          ],
+          "replace": {
+            "style": {
+              "style": "GLOB",
+              "zoom": 0.02
+            },
+            "palette": [
+              {
+                "weight": 2,
+                "block": "minecraft:clay"
+              },
+              {
+                "weight": 1,
+                "block": "minecraft:cave_air"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "chance": 0.1,
+      "palette": [
+        {
+          "block": "minecraft:kelp_plant"
+        }
+      ],
+      "stackMin": 4,
+      "stackMax": 10
+    },
+    {
+      "chance": 0.05,
+      "palette": [
+        {
+          "block": "minecraft:seagrass"
+        }
+      ]
+    },
+    {
+      "chance": 0.05,
+      "palette": [
+        {
+          "block": "minecraft:tall_seagrass",
+          "data": {
+            "half": "lower"
+          }
+        }
+      ],
+      "topPalette": [
+        {
+          "block": "minecraft:tall_seagrass",
+          "data": {
+            "half": "upper"
+          }
+        }
+      ]
+    }
+  ]
 }

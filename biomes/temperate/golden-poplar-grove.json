@@ -34,42 +34,8 @@
   "biomeStyle": {
     "style": "SIMPLEX"
   },
-  "terrain3D": {
-    "enabled": true,
-    "seed": 30107,
-    "amplitude": 30,
-    "horizontalScale": 280,
-    "verticalScale": 36,
-    "densityStyle": {
-      "style": "PERLIN"
-    },
-    "crackDepth": 0,
-    "crackWidth": 2.25,
-    "crackScale": 448,
-    "crackStyle": {
-      "style": "SIMPLEX"
-    },
-    "minimumSlope": 0.2,
-    "slopeFade": 0.35,
-    "fluidClearance": 8,
-    "fluidFade": 24
-  },
-  "wall": {
-    "style": {
-      "style": "STATIC"
-    },
-    "palette": [
-      {
-        "block": "minecraft:stone"
-      },
-      {
-        "block": "minecraft:andesite"
-      },
-      {
-        "block": "minecraft:stone"
-      }
-    ]
-  },
+  "terrain3D": "snippet/terrain-3d/rugged/amp30-perlin-crack448",
+  "wall": "snippet/biome-palette/wall/stone-andesite",
   "layers": [
     {
       "minHeight": 1,
@@ -94,40 +60,8 @@
         }
       ]
     },
-    {
-      "minHeight": 2,
-      "maxHeight": 4,
-      "style": {
-        "style": "STATIC"
-      },
-      "palette": [
-        {
-          "block": "minecraft:dirt",
-          "weight": 4
-        },
-        {
-          "block": "minecraft:coarse_dirt",
-          "weight": 1
-        }
-      ]
-    },
-    {
-      "minHeight": 6,
-      "maxHeight": 18,
-      "style": {
-        "style": "STATIC"
-      },
-      "palette": [
-        {
-          "block": "minecraft:stone",
-          "weight": 4
-        },
-        {
-          "block": "minecraft:andesite",
-          "weight": 1
-        }
-      ]
-    }
+    "snippet/biome-palette/soil/dirt4-coarse-2-4",
+    "snippet/biome-palette/stone/stone4-andesite-6-18"
   ],
   "objects": [
     {
@@ -175,82 +109,8 @@
         ]
       }
     },
-    {
-      "place": [
-        "trees/poplar/fallen-1",
-        "trees/poplar/fallen-2"
-      ],
-      "chance": 0.08,
-      "density": 1,
-      "mode": "STILT",
-      "rotation": {
-        "enabled": true,
-        "yAxis": {
-          "enabled": true,
-          "min": 0,
-          "max": 270,
-          "interval": 90
-        }
-      },
-      "translate": {
-        "y": 1
-      },
-      "carvingSupport": "SURFACE_ONLY",
-      "surfaceSupportBuffer": 0,
-      "surfaceSupportDepth": 2,
-      "slopeCondition": {
-        "maximumSlope": 0.4
-      },
-      "stiltSettings": {
-        "yMax": 4,
-        "overStilt": 1,
-        "yRand": 0,
-        "exclude": [
-          "minecraft:yellow_poplar_leaves",
-          "minecraft:orange_poplar_leaves",
-          "minecraft:red_poplar_leaves",
-          "minecraft:shelf_mushroom"
-        ]
-      }
-    },
-    {
-      "place": [
-        "trees/poplar/stump-1",
-        "trees/poplar/stump-2"
-      ],
-      "chance": 0.07,
-      "density": 1,
-      "mode": "CENTER_STILT",
-      "rotation": {
-        "enabled": true,
-        "yAxis": {
-          "enabled": true,
-          "min": 0,
-          "max": 270,
-          "interval": 90
-        }
-      },
-      "translate": {
-        "y": -1
-      },
-      "carvingSupport": "SURFACE_ONLY",
-      "surfaceSupportBuffer": 1,
-      "surfaceSupportDepth": 2,
-      "slopeCondition": {
-        "maximumSlope": 1.5
-      },
-      "stiltSettings": {
-        "yMax": 4,
-        "overStilt": 1,
-        "yRand": 0,
-        "exclude": [
-          "minecraft:yellow_poplar_leaves",
-          "minecraft:orange_poplar_leaves",
-          "minecraft:red_poplar_leaves",
-          "minecraft:shelf_mushroom"
-        ]
-      }
-    },
+    "snippet/object-placer/trees/poplar-fallen-stilt-c0-08-d1",
+    "snippet/object-placer/trees/poplar-stump-center-stilt-c0-07-d1",
     {
       "chance": 0.07,
       "density": 1,
@@ -525,9 +385,6 @@
   "decorators": [
     {
       "chance": 0.13,
-      "style": {
-        "style": "STATIC"
-      },
       "palette": [
         {
           "block": "minecraft:leaf_litter",
@@ -632,9 +489,6 @@
     },
     {
       "chance": 0.025,
-      "style": {
-        "style": "STATIC"
-      },
       "palette": [
         {
           "block": "minecraft:red_shrub"
@@ -654,9 +508,6 @@
     },
     {
       "chance": 0.04,
-      "style": {
-        "style": "STATIC"
-      },
       "palette": [
         {
           "block": "minecraft:fern"
@@ -676,9 +527,6 @@
     },
     {
       "chance": 0.23,
-      "style": {
-        "style": "STATIC"
-      },
       "palette": [
         {
           "block": "minecraft:short_grass"
@@ -698,9 +546,6 @@
     },
     {
       "chance": 0.02,
-      "style": {
-        "style": "STATIC"
-      },
       "palette": [
         {
           "block": "minecraft:dandelion"
@@ -720,9 +565,6 @@
     },
     {
       "chance": 0.006,
-      "style": {
-        "style": "STATIC"
-      },
       "palette": [
         {
           "block": "minecraft:brown_mushroom"

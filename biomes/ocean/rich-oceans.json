@@ -1,92 +1,38 @@
 {
-    "name": "Rich oceans",
-    "color": "#5C4DEA",
-    "derivative": "minecraft:deep_ocean",
-    "vanillaDerivative": "minecraft:deep_ocean",
-    "generators": [
+  "name": "Rich oceans",
+  "color": "#5C4DEA",
+  "derivative": "minecraft:deep_ocean",
+  "vanillaDerivative": "minecraft:deep_ocean",
+  "generators": [
+    {
+      "generator": "smooth-dunes",
+      "max": -40,
+      "min": -60
+    }
+  ],
+  "layers": [
+    "snippet/biome-palette/sand/clay-gravel-dirt-2-2-flat3",
+    {
+      "minHeight": 2,
+      "maxHeight": 10,
+      "palette": [
         {
-            "generator": "smooth-dunes",
-            "max": -40,
-            "min": -60
+          "block": "minecraft:gravel"
         }
-    ],
-    "layers": [
+      ]
+    }
+  ],
+  "objects": [],
+  "decorators": [
+    {
+      "chance": 0.2,
+      "partOf": "SEA_FLOOR",
+      "palette": [
         {
-            "minHeight": 2,
-            "maxHeight": 2,
-            "slopeCondition": {
-                "minimumSlope": 0,
-                "maximumSlope": 3
-            },
-            "style": {
-                "style": "NOWHERE"
-            },
-            "zoom": 0.6,
-            "palette": [
-                {
-                    "block": "minecraft:sand"
-                },
-                {
-                    "block": "minecraft:clay"
-                },
-                {
-                    "block": "minecraft:sand"
-                },
-                {
-                    "block": "minecraft:gravel"
-                },
-                {
-                    "block": "minecraft:sand"
-                },
-                {
-                    "block": "minecraft:dirt"
-                },
-                {
-                    "weight": 2,
-                    "block": "minecraft:sand"
-                }
-            ]
-        },
-        {
-            "minHeight": 2,
-            "maxHeight": 10,
-            "palette": [
-                {
-                    "block": "minecraft:gravel"
-                }
-            ]
+          "block": "minecraft:seagrass"
         }
-    ],
-    "objects": [],
-    "decorators": [
-        {
-            "chance": 0.2,
-            "partOf": "SEA_FLOOR",
-            "palette": [
-                {
-                    "block": "minecraft:seagrass"
-                }
-            ]
-        },
-        {
-            "chance": 0.2,
-            "palette": [
-                {
-                    "block": "minecraft:tall_seagrass",
-                    "data": {
-                        "half": "lower"
-                    }
-                }
-            ],
-            "topPalette": [
-                {
-                    "block": "minecraft:tall_seagrass",
-                    "data": {
-                        "half": "upper"
-                    }
-                }
-            ],
-            "partOf": "SEA_FLOOR"
-        }
-    ]
+      ]
+    },
+    "snippet/decorator/sea/tall-seagrass-c0-2"
+  ]
 }
