@@ -173,5 +173,75 @@
         "size": 0.6
       }
     }
-  ]
+  ],
+  "proceduralObjects": {
+    "crystals": [
+      {
+        "name": "flux-hanging-crystal",
+        "seed": 2604161,
+        "chance": 0.09,
+        "density": 1,
+        "variants": 20,
+        "carvingSupport": "CARVING_ONLY",
+        "mode": "CEILING_HANG",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 45
+          }
+        },
+        "growthSurface": "FLOOR",
+        "block": "minecraft:amethyst_block",
+        "baseBlock": "minecraft:budding_amethyst",
+        "baseRadius": 1.2,
+        "baseNoise": 0.36,
+        "shardCountMin": 2,
+        "shardCountMax": 4,
+        "shardLengthMin": 2,
+        "shardLengthMax": 4,
+        "shardBaseRadius": 0.7,
+        "shardTaper": 0.95,
+        "spreadAngle": 46,
+        "jitter": 0.2,
+        "glow": false,
+        "tipChance": 0.12
+      }
+    ],
+    "formations": [
+      {
+        "name": "flux-mineral-fissure",
+        "seed": 2604162,
+        "form": "FISSURE",
+        "block": "minecraft:calcite",
+        "chance": 0.055,
+        "density": 1,
+        "variants": 20,
+        "carvingSupport": "CARVING_ONLY",
+        "mode": "ORGANIC_STILT",
+        "surfaceSupportBuffer": 0,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 45
+          }
+        },
+        "heightMin": 3,
+        "heightMax": 5,
+        "baseWidthMin": 1,
+        "baseWidthMax": 2,
+        "topWidth": 0,
+        "roughness": 0.32,
+        "jitter": 0.04,
+        "roomHeightFraction": 0,
+        "fractureCount": 2,
+        "fractureSeparation": 1
+      }
+    ]
+  }
 }

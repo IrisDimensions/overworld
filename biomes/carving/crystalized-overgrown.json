@@ -36,28 +36,80 @@
       ]
     },
     {
-      "chance": 0.2,
-      "scaleStack": true,
-      "stackMin": 10,
-      "stackMax": 20,
       "partOf": "CEILING",
-      "absoluteMaxStack": 5,
+      "chance": 0.13,
+      "style": {
+        "style": "SIMPLEX",
+        "zoom": 0.32
+      },
+      "scaleStack": true,
+      "stackMin": 15,
+      "stackMax": 35,
+      "absoluteMaxStack": 10,
       "palette": [
         {
-          "block": "minecraft:jungle_leaves"
+          "block": "minecraft:azalea_leaves",
+          "data": {
+            "persistent": true
+          }
+        }
+      ]
+    },
+    {
+      "partOf": "CEILING",
+      "chance": 0.0845,
+      "style": {
+        "style": "PERLIN_IRIS",
+        "zoom": 0.38
+      },
+      "scaleStack": true,
+      "stackMin": 10,
+      "stackMax": 30,
+      "absoluteMaxStack": 12,
+      "palette": [
+        {
+          "block": "minecraft:cave_vines_plant",
+          "data": {
+            "berries": false
+          }
+        }
+      ],
+      "topPalette": [
+        {
+          "block": "minecraft:cave_vines",
+          "data": {
+            "berries": true
+          }
         }
       ]
     }
   ],
   "caveCeilingLayers": [
     {
-      "maxHeight": 1,
-      "minHeight": 1,
+      "style": {
+        "style": "SIMPLEX",
+        "zoom": 0.42
+      },
+      "zoom": 2,
       "palette": [
         {
-          "block": "minecraft:jungle_leaves"
+          "block": "minecraft:moss_block",
+          "weight": 5
+        },
+        {
+          "block": "minecraft:azalea_leaves",
+          "weight": 3,
+          "data": {
+            "persistent": true
+          }
+        },
+        {
+          "block": "minecraft:amethyst_block",
+          "weight": 2
         }
-      ]
+      ],
+      "minHeight": 1,
+      "maxHeight": 1
     }
   ],
   "objects": [
@@ -75,5 +127,76 @@
     "style": "PERLIN_IRIS",
     "zoom": 1.02
   },
-  "childShrinkFactor": 1.42
+  "childShrinkFactor": 1.42,
+  "proceduralObjects": {
+    "crystals": [
+      {
+        "name": "crystalized-overgrown-canopy-crystal",
+        "seed": 2604150,
+        "chance": 0.16,
+        "density": 2,
+        "variants": 10,
+        "carvingSupport": "CARVING_ONLY",
+        "mode": "CEILING_HANG",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 45
+          }
+        },
+        "growthSurface": "FLOOR",
+        "block": "minecraft:amethyst_block",
+        "baseBlock": "minecraft:budding_amethyst",
+        "baseRadius": 1.2,
+        "baseNoise": 0.28,
+        "shardCountMin": 3,
+        "shardCountMax": 6,
+        "shardLengthMin": 3,
+        "shardLengthMax": 6,
+        "shardBaseRadius": 0.7,
+        "shardTaper": 0.95,
+        "spreadAngle": 32,
+        "jitter": 0.2,
+        "glow": true,
+        "glowBlock": "minecraft:sea_lantern",
+        "tipChance": 0.12
+      }
+    ],
+    "formations": [
+      {
+        "name": "crystalized-overgrown-root-overhang",
+        "seed": 2604152,
+        "form": "OVERHANG",
+        "block": "minecraft:moss_block",
+        "chance": 0.07,
+        "density": 1,
+        "variants": 10,
+        "carvingSupport": "CARVING_ONLY",
+        "mode": "CEILING_HANG",
+        "surfaceSupportBuffer": 0,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 45
+          }
+        },
+        "heightMin": 5,
+        "heightMax": 10,
+        "baseWidthMin": 1,
+        "baseWidthMax": 2,
+        "topWidth": 0,
+        "roughness": 0.2,
+        "jitter": 0.035,
+        "roomHeightFraction": 0.18,
+        "overhangReach": 4,
+        "overhangDrop": 2
+      }
+    ]
+  }
 }

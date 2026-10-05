@@ -1,0 +1,373 @@
+{
+  "name": "Travertine Gardens",
+  "derivative": "minecraft:lush_caves",
+  "vanillaDerivative": "minecraft:lush_caves",
+  "color": "#C8D3A0",
+  "wall": {
+    "style": {
+      "style": "PERLIN_IRIS",
+      "zoom": 1
+    },
+    "zoom": 6,
+    "palette": [
+      {
+        "block": "minecraft:calcite",
+        "weight": 9
+      },
+      {
+        "block": "minecraft:dripstone_block",
+        "weight": 3
+      },
+      {
+        "block": "minecraft:clay",
+        "weight": 2
+      }
+    ]
+  },
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 1,
+      "style": {
+        "style": "PERLIN_IRIS",
+        "zoom": 1
+      },
+      "zoom": 5,
+      "palette": [
+        {
+          "block": "minecraft:calcite",
+          "weight": 6
+        },
+        {
+          "block": "minecraft:moss_block",
+          "weight": 4
+        },
+        {
+          "block": "minecraft:clay",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:rooted_dirt",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "minHeight": 1,
+      "maxHeight": 2,
+      "style": {
+        "style": "PERLIN_IRIS",
+        "zoom": 1
+      },
+      "zoom": 6,
+      "palette": [
+        {
+          "block": "minecraft:calcite",
+          "weight": 8
+        },
+        {
+          "block": "minecraft:dripstone_block",
+          "weight": 2
+        }
+      ]
+    }
+  ],
+  "caveCeilingLayers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 2,
+      "style": {
+        "style": "PERLIN_IRIS",
+        "zoom": 1
+      },
+      "zoom": 6,
+      "palette": [
+        {
+          "block": "minecraft:calcite",
+          "weight": 8
+        },
+        {
+          "block": "minecraft:dripstone_block",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:clay",
+          "weight": 1
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "partOf": "NONE",
+      "chance": 0.56,
+      "style": {
+        "style": "SIMPLEX",
+        "zoom": 4
+      },
+      "stackMin": 1,
+      "stackMax": 1,
+      "absoluteMaxStack": 1,
+      "palette": [
+        {
+          "block": "minecraft:moss_carpet",
+          "weight": 5
+        },
+        {
+          "block": "minecraft:short_grass",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:fern",
+          "weight": 2
+        }
+      ],
+      "forceBlock": {
+        "block": "minecraft:moss_block"
+      }
+    },
+    {
+      "partOf": "NONE",
+      "chance": 0.075,
+      "style": {
+        "style": "STATIC",
+        "zoom": 1
+      },
+      "stackMin": 1,
+      "stackMax": 1,
+      "absoluteMaxStack": 1,
+      "palette": [
+        {
+          "block": "minecraft:azalea",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:flowering_azalea",
+          "weight": 1
+        }
+      ],
+      "forceBlock": {
+        "block": "minecraft:moss_block"
+      }
+    },
+    {
+      "partOf": "NONE",
+      "chance": 0.055,
+      "style": {
+        "style": "STATIC",
+        "zoom": 1
+      },
+      "stackMin": 1,
+      "stackMax": 1,
+      "absoluteMaxStack": 1,
+      "palette": [
+        {
+          "block": "minecraft:big_dripleaf",
+          "weight": 1
+        }
+      ],
+      "forceBlock": {
+        "block": "minecraft:clay"
+      }
+    },
+    {
+      "partOf": "NONE",
+      "chance": 0.12,
+      "style": {
+        "style": "STATIC",
+        "zoom": 1
+      },
+      "stackMin": 1,
+      "stackMax": 1,
+      "absoluteMaxStack": 1,
+      "palette": [
+        {
+          "block": "minecraft:brown_mushroom",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:red_mushroom",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "partOf": "NONE",
+      "chance": 0.09,
+      "style": {
+        "style": "STATIC",
+        "zoom": 1
+      },
+      "stackMin": 1,
+      "stackMax": 2,
+      "absoluteMaxStack": 2,
+      "palette": [
+        {
+          "block": "minecraft:pointed_dripstone",
+          "weight": 1,
+          "data": {
+            "vertical_direction": "up"
+          }
+        }
+      ],
+      "heightVariance": {
+        "style": "STATIC"
+      }
+    },
+    {
+      "partOf": "NONE",
+      "chance": 0.11,
+      "style": {
+        "style": "STATIC",
+        "zoom": 1
+      },
+      "stackMin": 1,
+      "stackMax": 1,
+      "absoluteMaxStack": 1,
+      "palette": [
+        {
+          "block": "minecraft:glow_lichen",
+          "weight": 1,
+          "data": {
+            "down": true
+          }
+        }
+      ]
+    },
+    {
+      "partOf": "CEILING",
+      "chance": 0.32,
+      "style": {
+        "style": "STATIC",
+        "zoom": 1
+      },
+      "stackMin": 1,
+      "stackMax": 7,
+      "absoluteMaxStack": 7,
+      "palette": [
+        {
+          "block": "minecraft:cave_vines_plant",
+          "weight": 1,
+          "data": {
+            "berries": false
+          }
+        }
+      ],
+      "heightVariance": {
+        "style": "STATIC"
+      },
+      "topPalette": [
+        {
+          "block": "minecraft:cave_vines",
+          "weight": 1,
+          "data": {
+            "berries": true
+          }
+        }
+      ]
+    },
+    {
+      "partOf": "CEILING",
+      "chance": 0.24,
+      "style": {
+        "style": "STATIC",
+        "zoom": 1
+      },
+      "stackMin": 1,
+      "stackMax": 1,
+      "absoluteMaxStack": 1,
+      "palette": [
+        {
+          "block": "minecraft:hanging_roots",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "partOf": "CEILING",
+      "chance": 0.22,
+      "style": {
+        "style": "STATIC",
+        "zoom": 1
+      },
+      "stackMin": 1,
+      "stackMax": 4,
+      "absoluteMaxStack": 4,
+      "palette": [
+        {
+          "block": "minecraft:pointed_dripstone",
+          "weight": 1,
+          "data": {
+            "vertical_direction": "down"
+          }
+        }
+      ],
+      "heightVariance": {
+        "style": "STATIC"
+      }
+    },
+    {
+      "partOf": "CEILING",
+      "chance": 0.23,
+      "style": {
+        "style": "STATIC",
+        "zoom": 1
+      },
+      "stackMin": 1,
+      "stackMax": 1,
+      "absoluteMaxStack": 1,
+      "palette": [
+        {
+          "block": "minecraft:glow_lichen",
+          "weight": 1,
+          "data": {
+            "up": true
+          }
+        }
+      ]
+    },
+    {
+      "partOf": "CEILING",
+      "chance": 0.025,
+      "style": {
+        "style": "STATIC",
+        "zoom": 1
+      },
+      "stackMin": 1,
+      "stackMax": 1,
+      "absoluteMaxStack": 1,
+      "palette": [
+        {
+          "block": "minecraft:spore_blossom",
+          "weight": 1
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": "snippet/procedural-objects/carving/travertine-gardens",
+  "caveProfile": "snippet/cave-profile/carving/travertine-gardens",
+  "caveMinDepthBelowSurface": 8,
+  "entitySpawners": [
+    "carving/travertine-gardens"
+  ],
+  "customDerivitives": [
+    {
+      "id": "travertine_gardens",
+      "category": "plains",
+      "temperature": 0.6,
+      "humidity": 0.8,
+      "downfallType": "none",
+      "skyColor": "#A0B8B3",
+      "fogColor": "#A7B69A",
+      "waterColor": "#4AA6A4",
+      "waterFogColor": "#284D45",
+      "grassColor": "#6D9445",
+      "foliageColor": "#80A152",
+      "ambientParticle": {
+        "particle": "minecraft:spore_blossom_air",
+        "rarity": 60
+      },
+      "spawns": []
+    }
+  ]
+}

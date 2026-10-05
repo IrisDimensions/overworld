@@ -1,0 +1,576 @@
+{
+  "name": "Ember Vaults",
+  "derivative": "minecraft:dripstone_caves",
+  "vanillaDerivative": "minecraft:dripstone_caves",
+  "rarity": 2,
+  "caveMinDepthBelowSurface": 28,
+  "caveProfile": {
+    "enabled": true,
+    "verticalRange": {
+      "min": 12,
+      "max": 620
+    },
+    "baseDensityStyle": {
+      "style": "PERLIN_IRIS",
+      "zoom": 0.54
+    },
+    "detailDensityStyle": {
+      "style": "SIMPLEX",
+      "zoom": 0.66
+    },
+    "warpStyle": {
+      "style": "FRACTAL_WATER",
+      "zoom": 0.46
+    },
+    "baseWeight": 0.9,
+    "detailWeight": 0.12,
+    "warpStrength": 0.28,
+    "densityThreshold": {
+      "min": -0.12,
+      "max": -0.03,
+      "style": {
+        "style": "SIMPLEX",
+        "zoom": 0.72
+      }
+    },
+    "thresholdBias": 0.11,
+    "sampleStep": 2,
+    "surfaceClearance": 18,
+    "allowSurfaceBreak": false,
+    "objectMinDepthBelowSurface": 28,
+    "defaultObjectAnchor": "FLOOR",
+    "defaultObjectPlaceMode": "ORGANIC_STILT",
+    "anchorScanStep": 1,
+    "anchorSearchAttempts": 24,
+    "allowFluid": false,
+    "fluidMinDepthBelowSurface": 28,
+    "fluidRequiresFloor": true,
+    "allowLava": true,
+    "modules": [
+      {
+        "style": {
+          "style": "SIMPLEX_VASCULAR",
+          "zoom": 1.02
+        },
+        "weight": 0.09,
+        "threshold": 0.02,
+        "verticalRange": {
+          "min": 20,
+          "max": 620
+        },
+        "invert": false
+      },
+      {
+        "style": {
+          "style": "CELLULAR_BILINEAR",
+          "zoom": 1.32
+        },
+        "weight": 0.04,
+        "threshold": 0.14,
+        "verticalRange": {
+          "min": 40,
+          "max": 620
+        },
+        "invert": false
+      },
+      {
+        "style": {
+          "style": "FRACTAL_FBM_SIMPLEX",
+          "zoom": 0.26
+        },
+        "weight": 0.04,
+        "threshold": 0.09,
+        "verticalRange": {
+          "min": 12,
+          "max": 260
+        },
+        "invert": true
+      }
+    ],
+    "verticalEdgeFade": 28,
+    "verticalEdgeFadeStrength": 0.17
+  },
+  "wall": {
+    "style": {
+      "style": "PERLIN_IRIS",
+      "zoom": 1
+    },
+    "zoom": 6,
+    "palette": [
+      {
+        "block": "minecraft:smooth_basalt",
+        "weight": 8
+      },
+      {
+        "block": "minecraft:deepslate",
+        "weight": 6
+      },
+      {
+        "block": "minecraft:red_terracotta",
+        "weight": 2
+      },
+      {
+        "block": "minecraft:magma_block",
+        "weight": 1
+      }
+    ]
+  },
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 2,
+      "style": {
+        "style": "PERLIN_IRIS",
+        "zoom": 1
+      },
+      "zoom": 5,
+      "palette": [
+        {
+          "block": "minecraft:deepslate",
+          "weight": 7
+        },
+        {
+          "block": "minecraft:smooth_basalt",
+          "weight": 5
+        },
+        {
+          "block": "minecraft:gravel",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:red_terracotta",
+          "weight": 1
+        }
+      ]
+    }
+  ],
+  "caveCeilingLayers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 2,
+      "style": {
+        "style": "PERLIN_IRIS",
+        "zoom": 1
+      },
+      "zoom": 6,
+      "palette": [
+        {
+          "block": "minecraft:smooth_basalt",
+          "weight": 9
+        },
+        {
+          "block": "minecraft:deepslate",
+          "weight": 5
+        },
+        {
+          "block": "minecraft:magma_block",
+          "weight": 1
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "partOf": "NONE",
+      "chance": 0.19,
+      "style": {
+        "style": "STATIC",
+        "zoom": 1
+      },
+      "stackMin": 1,
+      "stackMax": 1,
+      "absoluteMaxStack": 1,
+      "palette": [
+        {
+          "block": "minecraft:brown_mushroom",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:red_mushroom",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "partOf": "NONE",
+      "chance": 0.43,
+      "style": {
+        "style": "SIMPLEX",
+        "zoom": 4
+      },
+      "stackMin": 1,
+      "stackMax": 1,
+      "absoluteMaxStack": 1,
+      "palette": [
+        {
+          "block": "minecraft:crimson_roots",
+          "weight": 4
+        },
+        {
+          "block": "minecraft:crimson_fungus",
+          "weight": 1
+        }
+      ],
+      "forceBlock": {
+        "block": "minecraft:crimson_nylium"
+      }
+    },
+    {
+      "partOf": "NONE",
+      "chance": 0.11,
+      "style": {
+        "style": "STATIC",
+        "zoom": 1
+      },
+      "stackMin": 1,
+      "stackMax": 1,
+      "absoluteMaxStack": 1,
+      "palette": [
+        {
+          "block": "minecraft:dead_bush",
+          "weight": 1
+        }
+      ],
+      "forceBlock": {
+        "block": "minecraft:red_terracotta"
+      }
+    },
+    {
+      "partOf": "NONE",
+      "chance": 0.13,
+      "style": {
+        "style": "STATIC",
+        "zoom": 1
+      },
+      "stackMin": 1,
+      "stackMax": 1,
+      "absoluteMaxStack": 1,
+      "palette": [
+        {
+          "block": "minecraft:glow_lichen",
+          "weight": 1,
+          "data": {
+            "down": true
+          }
+        }
+      ]
+    },
+    {
+      "partOf": "NONE",
+      "chance": 0.025,
+      "style": {
+        "style": "STATIC",
+        "zoom": 1
+      },
+      "stackMin": 1,
+      "stackMax": 1,
+      "absoluteMaxStack": 1,
+      "palette": [
+        {
+          "block": "minecraft:magma_block",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "partOf": "CEILING",
+      "chance": 0.24,
+      "style": {
+        "style": "STATIC",
+        "zoom": 1
+      },
+      "stackMin": 1,
+      "stackMax": 7,
+      "absoluteMaxStack": 7,
+      "palette": [
+        {
+          "block": "minecraft:weeping_vines_plant",
+          "weight": 1
+        }
+      ],
+      "heightVariance": {
+        "style": "STATIC"
+      },
+      "topPalette": [
+        {
+          "block": "minecraft:weeping_vines",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "partOf": "CEILING",
+      "chance": 0.14,
+      "style": {
+        "style": "STATIC",
+        "zoom": 1
+      },
+      "stackMin": 1,
+      "stackMax": 1,
+      "absoluteMaxStack": 1,
+      "palette": [
+        {
+          "block": "minecraft:glow_lichen",
+          "weight": 1,
+          "data": {
+            "up": true
+          }
+        }
+      ]
+    },
+    {
+      "partOf": "CEILING",
+      "chance": 0.018,
+      "style": {
+        "style": "STATIC",
+        "zoom": 1
+      },
+      "stackMin": 1,
+      "stackMax": 1,
+      "absoluteMaxStack": 1,
+      "palette": [
+        {
+          "block": "minecraft:shroomlight",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "partOf": "CEILING",
+      "chance": 0.1,
+      "style": {
+        "style": "STATIC",
+        "zoom": 1
+      },
+      "stackMin": 1,
+      "stackMax": 3,
+      "absoluteMaxStack": 3,
+      "palette": [
+        {
+          "block": "minecraft:pointed_dripstone",
+          "weight": 1,
+          "data": {
+            "vertical_direction": "down"
+          }
+        }
+      ],
+      "heightVariance": {
+        "style": "STATIC"
+      }
+    }
+  ],
+  "proceduralObjects": {
+    "formations": [
+      {
+        "name": "ember-fallen-scree",
+        "seed": 2610404,
+        "chance": 0.85,
+        "density": 3,
+        "variants": 24,
+        "carvingSupport": "CARVING_ONLY",
+        "mode": "ORGANIC_STILT",
+        "surfaceSupportBuffer": 0,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 30
+          }
+        },
+        "form": "BOULDER",
+        "block": "minecraft:smooth_basalt",
+        "blockPalette": {
+          "style": {
+            "style": "PERLIN_IRIS",
+            "zoom": 1
+          },
+          "zoom": 3.2,
+          "palette": [
+            {
+              "block": "minecraft:smooth_basalt",
+              "weight": 6
+            },
+            {
+              "block": "minecraft:deepslate",
+              "weight": 4
+            },
+            {
+              "block": "minecraft:red_terracotta",
+              "weight": 1
+            }
+          ]
+        },
+        "heightMin": 3,
+        "heightMax": 4,
+        "baseWidthMin": 1,
+        "baseWidthMax": 2,
+        "roomHeightFraction": 0,
+        "roughness": 0.68,
+        "jitter": 0.09,
+        "translate": {
+          "y": -1
+        },
+        "stiltSettings": {
+          "organicMaxScan": 3,
+          "organicJitter": 0,
+          "organicScratch": 0
+        }
+      },
+      {
+        "name": "ember-cinder-fragments",
+        "seed": 2610405,
+        "chance": 0.85,
+        "density": 2,
+        "variants": 24,
+        "carvingSupport": "CARVING_ONLY",
+        "mode": "ORGANIC_STILT",
+        "surfaceSupportBuffer": 0,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 30
+          }
+        },
+        "form": "BOULDER",
+        "block": "minecraft:deepslate",
+        "blockPalette": {
+          "style": {
+            "style": "PERLIN_IRIS",
+            "zoom": 1
+          },
+          "zoom": 3.2,
+          "palette": [
+            {
+              "block": "minecraft:deepslate",
+              "weight": 8
+            },
+            {
+              "block": "minecraft:magma_block",
+              "weight": 1
+            }
+          ]
+        },
+        "heightMin": 3,
+        "heightMax": 4,
+        "baseWidthMin": 1,
+        "baseWidthMax": 1,
+        "roomHeightFraction": 0,
+        "roughness": 0.68,
+        "jitter": 0.09,
+        "translate": {
+          "y": -1
+        },
+        "stiltSettings": {
+          "organicMaxScan": 3,
+          "organicJitter": 0,
+          "organicScratch": 0
+        }
+      }
+    ],
+    "fungi": [
+      {
+        "name": "ember-cinder-fungi",
+        "seed": 708101,
+        "chance": 0.7,
+        "density": 2,
+        "variants": 24,
+        "carvingSupport": "CARVING_ONLY",
+        "mode": "ORGANIC_STILT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 30
+          }
+        },
+        "stem": "minecraft:mushroom_stem",
+        "cap": "minecraft:red_mushroom_block",
+        "stemHeightMin": 2,
+        "stemHeightMax": 4,
+        "stemWidth": 1,
+        "stemCurve": 13,
+        "stemLeanAzimuth": 27,
+        "stemWaveAmplitude": 0.65,
+        "stemWavePeriods": 0.7,
+        "capShape": "FLAT",
+        "capRadiusMin": 1,
+        "capRadiusMax": 2,
+        "capThickness": 1,
+        "capSquish": 0.6,
+        "capDroop": 14,
+        "capOverhang": 0.8,
+        "gillBlock": "minecraft:shroomlight",
+        "gillChance": 0.13,
+        "stiltSettings": {
+          "organicMaxScan": 5,
+          "organicJitter": 0,
+          "organicScratch": 0
+        }
+      },
+      {
+        "name": "ember-small-shelf-fungi",
+        "seed": 708102,
+        "chance": 0.55,
+        "density": 2,
+        "variants": 24,
+        "carvingSupport": "CARVING_ONLY",
+        "mode": "ORGANIC_STILT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 30
+          }
+        },
+        "stem": "minecraft:mushroom_stem",
+        "cap": "minecraft:brown_mushroom_block",
+        "stemHeightMin": 1,
+        "stemHeightMax": 2,
+        "stemWidth": 1,
+        "stemCurve": 13,
+        "stemLeanAzimuth": 27,
+        "stemWaveAmplitude": 0.65,
+        "stemWavePeriods": 0.7,
+        "capShape": "FUNNEL",
+        "capRadiusMin": 1,
+        "capRadiusMax": 2,
+        "capThickness": 1,
+        "capSquish": 0.6,
+        "capDroop": 14,
+        "capOverhang": 0.8,
+        "gillBlock": "minecraft:shroomlight",
+        "gillChance": 0.13,
+        "stiltSettings": {
+          "organicMaxScan": 5,
+          "organicJitter": 0,
+          "organicScratch": 0
+        }
+      }
+    ]
+  },
+  "entitySpawners": [
+    "carving/ember-vaults"
+  ],
+  "customDerivitives": [
+    {
+      "id": "ember_vaults",
+      "category": "none",
+      "temperature": 0.95,
+      "humidity": 0.1,
+      "downfallType": "none",
+      "fogColor": "#352026",
+      "waterColor": "#652a22",
+      "waterFogColor": "#301818",
+      "skyColor": "#482729"
+    }
+  ]
+}

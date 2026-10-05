@@ -1,0 +1,568 @@
+{
+  "name": "Ochre Hollows",
+  "derivative": "minecraft:dripstone_caves",
+  "vanillaDerivative": "minecraft:dripstone_caves",
+  "rarity": 3,
+  "caveMinDepthBelowSurface": 28,
+  "caveProfile": {
+    "enabled": true,
+    "verticalRange": {
+      "min": 12,
+      "max": 620
+    },
+    "baseDensityStyle": {
+      "style": "PERLIN_IRIS",
+      "zoom": 0.68
+    },
+    "detailDensityStyle": {
+      "style": "SIMPLEX",
+      "zoom": 0.5
+    },
+    "warpStyle": {
+      "style": "FRACTAL_WATER",
+      "zoom": 0.46
+    },
+    "baseWeight": 0.9,
+    "detailWeight": 0.12,
+    "warpStrength": 0.34,
+    "densityThreshold": {
+      "min": -0.12,
+      "max": -0.03,
+      "style": {
+        "style": "SIMPLEX",
+        "zoom": 0.72
+      }
+    },
+    "thresholdBias": 0.11,
+    "sampleStep": 2,
+    "surfaceClearance": 18,
+    "allowSurfaceBreak": false,
+    "objectMinDepthBelowSurface": 28,
+    "defaultObjectAnchor": "FLOOR",
+    "defaultObjectPlaceMode": "ORGANIC_STILT",
+    "anchorScanStep": 1,
+    "anchorSearchAttempts": 24,
+    "allowFluid": false,
+    "fluidMinDepthBelowSurface": 28,
+    "fluidRequiresFloor": true,
+    "allowLava": true,
+    "modules": [
+      {
+        "style": {
+          "style": "SIMPLEX_VASCULAR",
+          "zoom": 1.02
+        },
+        "weight": 0.09,
+        "threshold": 0.02,
+        "verticalRange": {
+          "min": 20,
+          "max": 620
+        },
+        "invert": false
+      },
+      {
+        "style": {
+          "style": "CELLULAR_BILINEAR",
+          "zoom": 1.32
+        },
+        "weight": 0.04,
+        "threshold": 0.14,
+        "verticalRange": {
+          "min": 40,
+          "max": 620
+        },
+        "invert": false
+      },
+      {
+        "style": {
+          "style": "FRACTAL_FBM_SIMPLEX",
+          "zoom": 0.26
+        },
+        "weight": 0.04,
+        "threshold": 0.09,
+        "verticalRange": {
+          "min": 12,
+          "max": 260
+        },
+        "invert": true
+      }
+    ],
+    "verticalEdgeFade": 28,
+    "verticalEdgeFadeStrength": 0.17
+  },
+  "wall": {
+    "style": {
+      "style": "PERLIN_IRIS",
+      "zoom": 1
+    },
+    "zoom": 6,
+    "palette": [
+      {
+        "block": "minecraft:dripstone_block",
+        "weight": 9
+      },
+      {
+        "block": "minecraft:terracotta",
+        "weight": 5
+      },
+      {
+        "block": "minecraft:orange_terracotta",
+        "weight": 2
+      },
+      {
+        "block": "minecraft:smooth_basalt",
+        "weight": 1
+      }
+    ]
+  },
+  "layers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 2,
+      "style": {
+        "style": "PERLIN_IRIS",
+        "zoom": 1
+      },
+      "zoom": 5,
+      "palette": [
+        {
+          "block": "minecraft:dripstone_block",
+          "weight": 7
+        },
+        {
+          "block": "minecraft:gravel",
+          "weight": 4
+        },
+        {
+          "block": "minecraft:terracotta",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:magma_block",
+          "weight": 1
+        }
+      ]
+    }
+  ],
+  "caveCeilingLayers": [
+    {
+      "minHeight": 1,
+      "maxHeight": 2,
+      "style": {
+        "style": "PERLIN_IRIS",
+        "zoom": 1
+      },
+      "zoom": 6,
+      "palette": [
+        {
+          "block": "minecraft:dripstone_block",
+          "weight": 8
+        },
+        {
+          "block": "minecraft:terracotta",
+          "weight": 4
+        },
+        {
+          "block": "minecraft:orange_terracotta",
+          "weight": 1
+        }
+      ]
+    }
+  ],
+  "decorators": [
+    {
+      "partOf": "NONE",
+      "chance": 0.23,
+      "style": {
+        "style": "STATIC",
+        "zoom": 1
+      },
+      "stackMin": 1,
+      "stackMax": 3,
+      "absoluteMaxStack": 3,
+      "palette": [
+        {
+          "block": "minecraft:pointed_dripstone",
+          "weight": 1,
+          "data": {
+            "vertical_direction": "up"
+          }
+        }
+      ],
+      "heightVariance": {
+        "style": "STATIC"
+      }
+    },
+    {
+      "partOf": "NONE",
+      "chance": 0.16,
+      "style": {
+        "style": "STATIC",
+        "zoom": 1
+      },
+      "stackMin": 1,
+      "stackMax": 1,
+      "absoluteMaxStack": 1,
+      "palette": [
+        {
+          "block": "minecraft:brown_mushroom",
+          "weight": 3
+        },
+        {
+          "block": "minecraft:red_mushroom",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "partOf": "NONE",
+      "chance": 0.12,
+      "style": {
+        "style": "STATIC",
+        "zoom": 1
+      },
+      "stackMin": 1,
+      "stackMax": 1,
+      "absoluteMaxStack": 1,
+      "palette": [
+        {
+          "block": "minecraft:dead_bush",
+          "weight": 1
+        }
+      ],
+      "forceBlock": {
+        "block": "minecraft:terracotta"
+      }
+    },
+    {
+      "partOf": "NONE",
+      "chance": 0.14,
+      "style": {
+        "style": "STATIC",
+        "zoom": 1
+      },
+      "stackMin": 1,
+      "stackMax": 1,
+      "absoluteMaxStack": 1,
+      "palette": [
+        {
+          "block": "minecraft:glow_lichen",
+          "weight": 1,
+          "data": {
+            "down": true
+          }
+        }
+      ]
+    },
+    {
+      "partOf": "CEILING",
+      "chance": 0.32,
+      "style": {
+        "style": "STATIC",
+        "zoom": 1
+      },
+      "stackMin": 1,
+      "stackMax": 5,
+      "absoluteMaxStack": 5,
+      "palette": [
+        {
+          "block": "minecraft:pointed_dripstone",
+          "weight": 1,
+          "data": {
+            "vertical_direction": "down"
+          }
+        }
+      ],
+      "heightVariance": {
+        "style": "STATIC"
+      }
+    },
+    {
+      "partOf": "CEILING",
+      "chance": 0.19,
+      "style": {
+        "style": "STATIC",
+        "zoom": 1
+      },
+      "stackMin": 1,
+      "stackMax": 1,
+      "absoluteMaxStack": 1,
+      "palette": [
+        {
+          "block": "minecraft:glow_lichen",
+          "weight": 1,
+          "data": {
+            "up": true
+          }
+        }
+      ]
+    },
+    {
+      "partOf": "CEILING",
+      "chance": 0.12,
+      "style": {
+        "style": "STATIC",
+        "zoom": 1
+      },
+      "stackMin": 1,
+      "stackMax": 1,
+      "absoluteMaxStack": 1,
+      "palette": [
+        {
+          "block": "minecraft:hanging_roots",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "partOf": "CEILING",
+      "chance": 0.1,
+      "style": {
+        "style": "STATIC",
+        "zoom": 1
+      },
+      "stackMin": 1,
+      "stackMax": 5,
+      "absoluteMaxStack": 5,
+      "palette": [
+        {
+          "block": "minecraft:weeping_vines_plant",
+          "weight": 1
+        }
+      ],
+      "heightVariance": {
+        "style": "STATIC"
+      },
+      "topPalette": [
+        {
+          "block": "minecraft:weeping_vines",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "partOf": "CEILING",
+      "chance": 0.018,
+      "style": {
+        "style": "STATIC",
+        "zoom": 1
+      },
+      "stackMin": 1,
+      "stackMax": 1,
+      "absoluteMaxStack": 1,
+      "palette": [
+        {
+          "block": "minecraft:shroomlight",
+          "weight": 1
+        }
+      ]
+    }
+  ],
+  "proceduralObjects": {
+    "formations": [
+      {
+        "name": "ochre-fallen-mineral",
+        "seed": 2610401,
+        "chance": 0.85,
+        "density": 3,
+        "variants": 24,
+        "carvingSupport": "CARVING_ONLY",
+        "mode": "ORGANIC_STILT",
+        "surfaceSupportBuffer": 0,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 30
+          }
+        },
+        "form": "BOULDER",
+        "block": "minecraft:dripstone_block",
+        "blockPalette": {
+          "style": {
+            "style": "PERLIN_IRIS",
+            "zoom": 1
+          },
+          "zoom": 3.2,
+          "palette": [
+            {
+              "block": "minecraft:dripstone_block",
+              "weight": 7
+            },
+            {
+              "block": "minecraft:terracotta",
+              "weight": 3
+            }
+          ]
+        },
+        "heightMin": 3,
+        "heightMax": 4,
+        "baseWidthMin": 1,
+        "baseWidthMax": 2,
+        "roomHeightFraction": 0,
+        "roughness": 0.68,
+        "jitter": 0.09,
+        "translate": {
+          "y": -1
+        },
+        "stiltSettings": {
+          "organicMaxScan": 3,
+          "organicJitter": 0,
+          "organicScratch": 0
+        }
+      },
+      {
+        "name": "ochre-weathered-drips",
+        "seed": 2610402,
+        "chance": 0.8,
+        "density": 2,
+        "variants": 24,
+        "carvingSupport": "CARVING_ONLY",
+        "mode": "CEILING_HANG",
+        "surfaceSupportBuffer": 0,
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 30
+          }
+        },
+        "form": "SPIRE",
+        "block": "minecraft:dripstone_block",
+        "blockPalette": {
+          "style": {
+            "style": "PERLIN_IRIS",
+            "zoom": 1
+          },
+          "zoom": 3.2,
+          "palette": [
+            {
+              "block": "minecraft:dripstone_block",
+              "weight": 8
+            },
+            {
+              "block": "minecraft:terracotta",
+              "weight": 2
+            }
+          ]
+        },
+        "heightMin": 3,
+        "heightMax": 5,
+        "baseWidthMin": 1,
+        "baseWidthMax": 2,
+        "roomHeightFraction": 0,
+        "roughness": 0.68,
+        "jitter": 0.09,
+        "topWidth": 0,
+        "profile": "TAPER",
+        "lean": 9,
+        "leanAzimuth": 33
+      }
+    ],
+    "fungi": [
+      {
+        "name": "ochre-mineral-fungi",
+        "seed": 708201,
+        "chance": 0.65,
+        "density": 2,
+        "variants": 24,
+        "carvingSupport": "CARVING_ONLY",
+        "mode": "ORGANIC_STILT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 30
+          }
+        },
+        "stem": "minecraft:mushroom_stem",
+        "cap": "minecraft:brown_mushroom_block",
+        "stemHeightMin": 1,
+        "stemHeightMax": 2,
+        "stemWidth": 1,
+        "stemCurve": 13,
+        "stemLeanAzimuth": 27,
+        "stemWaveAmplitude": 0.65,
+        "stemWavePeriods": 0.7,
+        "capShape": "FUNNEL",
+        "capRadiusMin": 1,
+        "capRadiusMax": 2,
+        "capThickness": 1,
+        "capSquish": 0.6,
+        "capDroop": 14,
+        "capOverhang": 0.8,
+        "gillBlock": "minecraft:shroomlight",
+        "gillChance": 0.13,
+        "stiltSettings": {
+          "organicMaxScan": 5,
+          "organicJitter": 0,
+          "organicScratch": 0
+        }
+      }
+    ],
+    "crystals": [
+      {
+        "name": "ochre-mineral-flowers",
+        "seed": 708202,
+        "chance": 0.6,
+        "density": 2,
+        "variants": 24,
+        "carvingSupport": "CARVING_ONLY",
+        "mode": "ORGANIC_STILT",
+        "rotation": {
+          "enabled": true,
+          "yAxis": {
+            "enabled": true,
+            "min": 0,
+            "max": 360,
+            "interval": 30
+          }
+        },
+        "growthSurface": "FLOOR",
+        "block": "minecraft:calcite",
+        "baseBlock": "minecraft:dripstone_block",
+        "baseRadius": 0.8,
+        "baseNoise": 0.6,
+        "shardCountMin": 2,
+        "shardCountMax": 4,
+        "shardLengthMin": 2,
+        "shardLengthMax": 4,
+        "shardBaseRadius": 0.6,
+        "shardTaper": 1,
+        "spreadAngle": 48,
+        "distribution": "RANDOM",
+        "jitter": 0.65,
+        "glow": false,
+        "glowBlock": "minecraft:glowstone",
+        "tipChance": 0.16,
+        "stiltSettings": {
+          "organicMaxScan": 5,
+          "organicJitter": 0,
+          "organicScratch": 0
+        }
+      }
+    ]
+  },
+  "entitySpawners": [
+    "carving/lava-lamp"
+  ],
+  "customDerivitives": [
+    {
+      "id": "lava_lamp",
+      "category": "none",
+      "temperature": 1.1,
+      "humidity": 0.0,
+      "downfallType": "none",
+      "fogColor": "#795c36",
+      "waterColor": "#8a4824",
+      "waterFogColor": "#462618",
+      "skyColor": "#694428"
+    }
+  ]
+}
