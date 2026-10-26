@@ -153,6 +153,7 @@
   ],
   "hydrology": {
     "enabled": true,
+    "density": 0.5,
     "drainage": {
       "fillEpsilon": 0.001,
       "breachDepth": 24,
@@ -176,7 +177,96 @@
         "bankBand": 8,
         "bankStyle": "SMOOTH",
         "deltas": false,
-        "fluid": "water"
+        "fluid": "water",
+        "materials": {
+          "bed": {
+            "style": {
+              "style": "SIMPLEX",
+              "zoom": 0.125
+            },
+            "zoom": 1,
+            "palette": [
+              {
+                "block": "minecraft:gravel",
+                "weight": 4
+              },
+              {
+                "block": "minecraft:sand",
+                "weight": 3
+              },
+              {
+                "block": "minecraft:clay",
+                "weight": 2
+              },
+              {
+                "block": "minecraft:coarse_dirt",
+                "weight": 1
+              }
+            ]
+          }
+        },
+        "decorators": [
+          {
+            "partOf": "SEA_FLOOR",
+            "chance": 0.18,
+            "style": {
+              "style": "STATIC"
+            },
+            "palette": [
+              {
+                "block": "minecraft:seagrass"
+              }
+            ]
+          },
+          {
+            "partOf": "SEA_FLOOR",
+            "chance": 0.035,
+            "style": {
+              "style": "STATIC"
+            },
+            "palette": [
+              {
+                "block": "minecraft:tall_seagrass",
+                "data": {
+                  "half": "lower"
+                }
+              }
+            ],
+            "topPalette": [
+              {
+                "block": "minecraft:tall_seagrass",
+                "data": {
+                  "half": "upper"
+                }
+              }
+            ]
+          },
+          {
+            "partOf": "SEA_FLOOR",
+            "chance": 0.02,
+            "style": {
+              "style": "STATIC"
+            },
+            "stackMin": 2,
+            "stackMax": 3,
+            "heightVariance": {
+              "style": "STATIC"
+            },
+            "palette": [
+              {
+                "block": "minecraft:kelp_plant"
+              }
+            ],
+            "topPalette": [
+              {
+                "block": "minecraft:kelp",
+                "data": {
+                  "age": "25"
+                }
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "river",
@@ -193,7 +283,96 @@
         "bankBand": 32,
         "bankStyle": "SMOOTH",
         "deltas": false,
-        "fluid": "water"
+        "fluid": "water",
+        "materials": {
+          "bed": {
+            "style": {
+              "style": "SIMPLEX",
+              "zoom": 0.125
+            },
+            "zoom": 1,
+            "palette": [
+              {
+                "block": "minecraft:gravel",
+                "weight": 4
+              },
+              {
+                "block": "minecraft:sand",
+                "weight": 3
+              },
+              {
+                "block": "minecraft:clay",
+                "weight": 2
+              },
+              {
+                "block": "minecraft:coarse_dirt",
+                "weight": 1
+              }
+            ]
+          }
+        },
+        "decorators": [
+          {
+            "partOf": "SEA_FLOOR",
+            "chance": 0.22,
+            "style": {
+              "style": "STATIC"
+            },
+            "palette": [
+              {
+                "block": "minecraft:seagrass"
+              }
+            ]
+          },
+          {
+            "partOf": "SEA_FLOOR",
+            "chance": 0.05,
+            "style": {
+              "style": "STATIC"
+            },
+            "palette": [
+              {
+                "block": "minecraft:tall_seagrass",
+                "data": {
+                  "half": "lower"
+                }
+              }
+            ],
+            "topPalette": [
+              {
+                "block": "minecraft:tall_seagrass",
+                "data": {
+                  "half": "upper"
+                }
+              }
+            ]
+          },
+          {
+            "partOf": "SEA_FLOOR",
+            "chance": 0.035,
+            "style": {
+              "style": "STATIC"
+            },
+            "stackMin": 2,
+            "stackMax": 4,
+            "heightVariance": {
+              "style": "STATIC"
+            },
+            "palette": [
+              {
+                "block": "minecraft:kelp_plant"
+              }
+            ],
+            "topPalette": [
+              {
+                "block": "minecraft:kelp",
+                "data": {
+                  "age": "25"
+                }
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "major",
@@ -210,7 +389,96 @@
         "bankBand": 48,
         "bankStyle": "SMOOTH",
         "deltas": true,
-        "fluid": "water"
+        "fluid": "water",
+        "materials": {
+          "bed": {
+            "style": {
+              "style": "SIMPLEX",
+              "zoom": 0.125
+            },
+            "zoom": 1,
+            "palette": [
+              {
+                "block": "minecraft:gravel",
+                "weight": 4
+              },
+              {
+                "block": "minecraft:sand",
+                "weight": 3
+              },
+              {
+                "block": "minecraft:clay",
+                "weight": 2
+              },
+              {
+                "block": "minecraft:coarse_dirt",
+                "weight": 1
+              }
+            ]
+          }
+        },
+        "decorators": [
+          {
+            "partOf": "SEA_FLOOR",
+            "chance": 0.22,
+            "style": {
+              "style": "STATIC"
+            },
+            "palette": [
+              {
+                "block": "minecraft:seagrass"
+              }
+            ]
+          },
+          {
+            "partOf": "SEA_FLOOR",
+            "chance": 0.06,
+            "style": {
+              "style": "STATIC"
+            },
+            "palette": [
+              {
+                "block": "minecraft:tall_seagrass",
+                "data": {
+                  "half": "lower"
+                }
+              }
+            ],
+            "topPalette": [
+              {
+                "block": "minecraft:tall_seagrass",
+                "data": {
+                  "half": "upper"
+                }
+              }
+            ]
+          },
+          {
+            "partOf": "SEA_FLOOR",
+            "chance": 0.045,
+            "style": {
+              "style": "STATIC"
+            },
+            "stackMin": 2,
+            "stackMax": 5,
+            "heightVariance": {
+              "style": "STATIC"
+            },
+            "palette": [
+              {
+                "block": "minecraft:kelp_plant"
+              }
+            ],
+            "topPalette": [
+              {
+                "block": "minecraft:kelp",
+                "data": {
+                  "age": "25"
+                }
+              }
+            ]
+          }
+        ]
       }
     ],
     "ponds": {
@@ -254,7 +522,96 @@
         "taper": 14,
         "maxDepth": 8
       },
-      "fluid": "water"
+      "fluid": "water",
+      "materials": {
+        "bed": {
+          "style": {
+            "style": "SIMPLEX",
+            "zoom": 0.125
+          },
+          "zoom": 1,
+          "palette": [
+            {
+              "block": "minecraft:gravel",
+              "weight": 4
+            },
+            {
+              "block": "minecraft:sand",
+              "weight": 3
+            },
+            {
+              "block": "minecraft:clay",
+              "weight": 2
+            },
+            {
+              "block": "minecraft:coarse_dirt",
+              "weight": 1
+            }
+          ]
+        }
+      },
+      "decorators": [
+        {
+          "partOf": "SEA_FLOOR",
+          "chance": 0.25,
+          "style": {
+            "style": "STATIC"
+          },
+          "palette": [
+            {
+              "block": "minecraft:seagrass"
+            }
+          ]
+        },
+        {
+          "partOf": "SEA_FLOOR",
+          "chance": 0.07,
+          "style": {
+            "style": "STATIC"
+          },
+          "palette": [
+            {
+              "block": "minecraft:tall_seagrass",
+              "data": {
+                "half": "lower"
+              }
+            }
+          ],
+          "topPalette": [
+            {
+              "block": "minecraft:tall_seagrass",
+              "data": {
+                "half": "upper"
+              }
+            }
+          ]
+        },
+        {
+          "partOf": "SEA_FLOOR",
+          "chance": 0.04,
+          "style": {
+            "style": "STATIC"
+          },
+          "stackMin": 2,
+          "stackMax": 5,
+          "heightVariance": {
+            "style": "STATIC"
+          },
+          "palette": [
+            {
+              "block": "minecraft:kelp_plant"
+            }
+          ],
+          "topPalette": [
+            {
+              "block": "minecraft:kelp",
+              "data": {
+                "age": "25"
+              }
+            }
+          ]
+        }
+      ]
     },
     "lakes": {
       "enabled": true,
