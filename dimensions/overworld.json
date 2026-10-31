@@ -9,7 +9,7 @@
   "environment": "NORMAL",
   "dimensionAngleDeg": 69,
   "fluidHeight": 50,
-  "version": 4020,
+  "version": 4021,
   "name": "Overworld",
   "importedStructures": {
     "datapackOverrides": true,
@@ -154,6 +154,16 @@
   "hydrology": {
     "enabled": true,
     "density": 0.5,
+    "climate": {
+      "enabled": true,
+      "style": {
+        "style": "SIMPLEX",
+        "zoom": 24
+      },
+      "dryness": 0.5,
+      "transition": 0.15,
+      "dryRainfall": 0.0
+    },
     "drainage": {
       "fillEpsilon": 0.001,
       "breachDepth": 24,
