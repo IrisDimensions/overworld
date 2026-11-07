@@ -9,7 +9,7 @@
   "environment": "NORMAL",
   "dimensionAngleDeg": 69,
   "fluidHeight": 50,
-  "version": 4021,
+  "version": 4022,
   "name": "Overworld",
   "importedStructures": {
     "datapackOverrides": true,
@@ -168,7 +168,7 @@
       "fillEpsilon": 0.001,
       "breachDepth": 24,
       "wetnessThinning": true,
-      "minimumHeadKeep": 0.6,
+      "minHeadKeep": 0.6,
       "saturationCatchment": 4194304
     },
     "tiers": [
@@ -183,10 +183,9 @@
         "depthRatio": 0.4,
         "inset": 1,
         "cascades": true,
-        "waterfallMinimumDrop": 6,
+        "waterfallMinDrop": 6,
         "bankBand": 8,
         "bankStyle": "SMOOTH",
-        "deltas": false,
         "fluid": "water",
         "materials": {
           "bed": {
@@ -289,10 +288,9 @@
         "depthRatio": 0.45,
         "inset": 2,
         "cascades": true,
-        "waterfallMinimumDrop": 6,
+        "waterfallMinDrop": 6,
         "bankBand": 32,
         "bankStyle": "SMOOTH",
-        "deltas": false,
         "fluid": "water",
         "materials": {
           "bed": {
@@ -395,10 +393,9 @@
         "depthRatio": 0.5,
         "inset": 3,
         "cascades": true,
-        "waterfallMinimumDrop": 8,
+        "waterfallMinDrop": 8,
         "bankBand": 48,
         "bankStyle": "SMOOTH",
-        "deltas": true,
         "fluid": "water",
         "materials": {
           "bed": {
@@ -525,7 +522,7 @@
         1,
         2
       ],
-      "climateDrawdown": 3,
+      "dryDrawdown": 3,
       "shore": {
         "roundness": 0.5,
         "shelf": 6,
@@ -637,30 +634,7 @@
     },
     "underground": {
       "seaInlets": {
-        "enabled": true,
-        "spacing": 160,
-        "minimumCliffHeight": 8,
-        "length": [
-          64,
-          256
-        ],
-        "halfWidth": [
-          2.0,
-          5.0
-        ],
-        "depth": [
-          2,
-          5
-        ],
-        "headroom": [
-          4,
-          10
-        ],
-        "roofClearance": 6,
-        "chamberRadius": [
-          6,
-          12
-        ]
+        "enabled": true
       },
       "cavePools": {
         "enabled": true,
@@ -693,6 +667,17 @@
           "palette": [
             {
               "block": "minecraft:lava"
+            }
+          ]
+        },
+        "seam": "crust"
+      },
+      {
+        "name": "crust",
+        "palette": {
+          "palette": [
+            {
+              "block": "minecraft:obsidian"
             }
           ]
         }
